@@ -389,7 +389,8 @@
   (org-cite-activate-processor 'citar)
   (citar-bibliography '("~/Documents/Org/references.bib"))
   (citar-notes-paths '("~/Documents/Org/Notes/References/"))
-  (citar-library-paths '("~/Documents/Zotero/storage/")))
+  (citar-library-paths '("C:/Users/Marcelo/Zotero/storage/"))
+  (citar-file-open-function #'find-file))
 
 ;; ── Org-cite ───────────────────────────────────────
 (after! org
