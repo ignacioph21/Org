@@ -1,0 +1,190 @@
+#+TITLE: Journal Week 21
+#+OPTIONS: toc:2
+
+* Table of Contents :TOC:
+- [[#2026-05-18][2026-05-18]]
+  - [[#1101][[11:01]]]
+  - [[#1136][[11:36]]]
+- [[#2026-05-19][2026-05-19]]
+  - [[#0941][[09:41]]]
+  - [[#1138][[11:38]]]
+  - [[#1218][[12:18]]]
+  - [[#1337][[13:37]]]
+  - [[#1341][[13:41]]]
+  - [[#1357][[13:57]]]
+  - [[#1458][[14:58]]]
+- [[#2026-05-21][2026-05-21]]
+  - [[#0848][[08:48]]]
+  - [[#0905][[09:05]]]
+  - [[#1104][[11:04]]]
+  - [[#1210][[12:10]]]
+  - [[#1615][[16:15]]]
+- [[#2026-05-23][2026-05-23]]
+  - [[#1604][[16:04]]]
+  - [[#1615-1][[16:15]]]
+
+* 2026-05-18
+
+** [11:01]
+Estaría bueno comparar las PDFs de la vertical, para la cual hay modelos, con [[https://arxiv.org/abs/1512.07760][este artículo.]]
+En nuestro caso, al tener pocas partículas tenemos, en el caso de las de 39, una PDF[y] plana en 100 rpm y con un pico grande en 50 rpm para la mitad inferior del Von Karman.
+
+Además calculé los histogramas de visita (con los mismo filtros que uso para el análisis de las velocidades) en ambos casos.
+
+Para las de 50 rpm:
+#+ATTR_ORG: :width 800
+[[file:~/Sedimentacion-Von-Karman/Resultados/Partículas-39/Visitas_50rpm.png]]
+
+Para las de 100 rpm:
+#+ATTR_ORG: :width 800
+[[file:~/Sedimentacion-Von-Karman/Resultados/Partículas-39/Visitas_100rpm.png]]
+
+** [11:36] :ATTACH:
+:PROPERTIES:
+:ID:       761f5ac5-3d93-48e2-bc96-d7b8c8a2d38e
+:END:
+Alargué el tiemop final para las de 100 rpm hasta el frame 3900 en lugar de el 900 que usé para el de antes.
+#+ATTR_ORG: :width 800
+[[file:~/Sedimentacion-Von-Karman/Resultados/Partículas-39/Visitas_100rpm_largo.png]]
+
+* 2026-05-19
+
+**** [08:57]
+Ayer tuvimos la reunión con Martín, en general lo que mostramos estuvo bastante bien, y cerramos qué tendríamos que llevar todos listo para la siguiente reunióm en dos semanas. Vamos a normalizar todo por Urms_{}_{} del flujo.
+Las PDFS que mostramos fueron:
+
+Para las de *50 rpm*:
+
+#+ATTR_ORG: :width 800
+[[file:~/Sedimentacion-Von-Karman/Resultados/Partículas-39/Vs_50rpm.png]]
+
+#+ATTR_ORG: :width 800
+[[file:~/Sedimentacion-Von-Karman/Resultados/Partículas-39/Us_50rpm.png]]
+
+
+#+ATTR_ORG: :width 800
+[[file:~/Sedimentacion-Von-Karman/Resultados/Partículas-39/Ws_50rpm.png]]
+
+Y para las de *100 rpm*:
+#+ATTR_ORG: :width 800
+[[file:~/Sedimentacion-Von-Karman/Resultados/Partículas-39/Vs_100rpm.png]]
+
+#+ATTR_ORG: :width 800
+[[file:~/Sedimentacion-Von-Karman/Resultados/Partículas-39/Us_100rpm.png]]
+
+
+#+ATTR_ORG: :width 800
+[[file:~/Sedimentacion-Von-Karman/Resultados/Partículas-39/Ws_100rpm.png]]
+
+Además, los valores medios fueron (en cm/s):
+
+|-------------------+---------+---------|
+|                   |  50 rpm | 100 rpm |
+|-------------------+---------+---------|
+| \langle V_y \rangle            | -10.685 |  -7.777 |
+| \langle U_y \rangle            |   1.746 |  0.1515 |
+| \langle W_y \equiv V_y - U_y\rangle |  -8.642 |  -9.500 |
+|-------------------+---------+---------|
+Tengo que poner el eje y de los gráficos de S_2 también en escala logarítmica.
+
+** [09:41]
+Ya está la rampa (de la cual nos dieron las piezas el Viernes de la semana pasada) pegada. Usamos silicona.
+La idea sería en estos días, tal vez hoy, empezar a hacer pruebas en la cuba.
+
+** [11:38]
+Ya estoy analizando las mediciones para las partćiulas grandes. Unifiqué todo el código de segmentación con Hough en uno solo. Para evitar copiarme las imaǵenes las estoy analizando directo del disco, con lo cual incorporé el =np.fliplr(im)= en el caso de la cámara 2.
+
+** [12:18]
+Las de 50 rpm ya se analizaron todas, estoy terminando con el matcheo. Por otro lado voy analizando la segmentación de las de 100 rpm. Iba a analizar solo los rangos donde caen las partículas individuales para ahorrar tiempo pero por consistencia lo voy a correr en el video entero.
+
+Además, hice el código que junta varios de trayectorias en un único pickle, que se llama =joint_tracks.py=.
+
+** [13:37]
+Me queda solo analizar la 100_117_13_03, con lo de bk voy a rremplazar las imágenes paar asegurarme de que están bien.
+
+** [13:41]
+Al revisar las imágenes resulta que está bien, se puede ignorar lo del =_bk=.
+
+** [13:57]
+A modo de resumen mi flujo de trabajo es el siguiente:
+- Segmento las imágenes de ambas cámaras usando la Transformada de Hough y obtengo los =template_1_blobs= y =template_2_blobs= para cada cámara.
+- Hago el matching usando MyPTV y obtengo el =particles_template=.
+- Hago el tracking usando MyPTV y obtengo el =trajectories_template=.
+- Opcionalmente se puede correr el algoritmo de =stitcing= de ser necesario.
+- Si son varios runs por tipo de partícula y forzado los uno en un solo =trajectories_template_pickle.pkl=. Si es uno solo lo paso a =.pkl= usando el código de =myptv2pkl.py=.
+- Corro el filtro Gaussiano para calcular las velocidades de las trayectorias usando el =rgf2.py=. Acá se incorpora la rotación en la dirección =y= de 34.5°.
+- Analizo las velocidades obtenidas.
+
+** [14:58]
+Estaba analizando las trayectorias de 100_117_13_01 y aparentemente solo detectó la caída de la primer partćiula, aunque había dos. Habría que chequear esto.
+
+* 2026-05-21
+
+** [08:48]
+Acabo de intalar los íconos de la pestaña de incio de Doom Emacs mediante ~M-x nerd-icons-install-fonts~.
+
+** [09:05]
+Estoy siguiendo las intrucciones de [[https://www.youtube.com/watch?v=IK25r7jOr4c]] para instalar Doom Emacs en Windows directamente.
+- Descargar todos los programas pertinentes.
+  - Descargar Emacs del repositorio FTP: [[https://ftp.wayne.edu/gnu/emacs/windows/emacs-30/]]. Es el installer.exe de la versión 30.2 (la más reciente).
+  - Descargar ripgrep del repo oficial: [[https://github.com/BurntSushi/ripgrep/releases]]. Para windows-gnu.
+  - Descargar fd del repo oficial: [[https://github.com/sharkdp/fd/releases]]. Para windows-gnu.
+  - Ya tenía descargado git de antes.
+- Intalar Emacs Vanilla con el instalador.
+- Extraer fd y ripgrep. Renombrarlos como =fd= y =ripgrep= y moverlos a =Archivos de programa=, que es donde se instaló Emacs.
+- Agregar una nueva =environment variable= llamada =HOME= que se dirija a =C:/Users/Marcelo=.
+- Agregar al =Path=:
+  - =C:\Program Files\Emacs\emacs-30.2\bin=
+  - =C:\Program Files\fd=
+  - =C:\Program Files\ripgrep=
+- Correr en la consola =git bash=:
+  - =git clone https://github.com/hlissner/doom-emacs ~/.emacs.d=
+  - =cd ~/.emacs.d/bin=
+  - =./doom install= Tardó 1 hora y 13 segunda en instalarse.
+  - =./doom sync= Si todo funcionó correctamente.
+- Agregar al PATH =C:\Users\Marcelo\.emacs.d\bin=.
+- Quedaría instalar las fuentes con =nerd-icons-install-fots= y copiar el config.el y demás del WSL a Windows, usando symlinks para poder seguir usando el de WSL cuando sea necesario para editar el Journal.
+
+** [11:04]
+Ya montamos la rampa en la cuba, ahora se está terminando de llenar.
+Para el forzado uso
+
+[[file:~/Pruebas/Forzado_olas.png]]
+
+** [12:10]
+Estuvimos haciendo varias pruebas y logramos hacer que rompa tipo spilling. Para esto bajamos la altura de agua del =1 cm= que estaba sobre la parte plana a =0.35 cm=. Además, usamos un impulso de =8 cm= durante =1 s= aproximadamente, con 15/20 s de espera después.
+
+Lo que notamos es que si es demasiado rápido se vuelve un poco contraproducente porque empieza a salpicar agua y no se concentra tanto la onda. Además hay rebotes, incluso dejándolo descansar 20 segundos.
+
+La idea ahora es probar con una rampa que suba suavemente al principio para poder concentrar más agua sin que llegue a salpicar.
+
+** [16:15]
+Probando con una subida tipo =tanh= y con una caída tipo lineal en =15 s= logramos ver mejor la rompiente tipo =spilling=.
+Juega mucho en que se forme:
+- La profundidad que está sumergida la paleta del motor. SI está muy poco sumergido salpica mucho y si está muy sumergido se genera una onda larga.
+- La distancia del motor a la rampa: Pareciera que cuanto más lejos, y más tiempo para formarse la onda, mejor se ve después.
+- La carrera del motor y el tiempo de esa carrera.
+- Ahora tiré el homing a =130 mm= para poder dar carrera de hasta =10 cm= en tiempos de =0.5 s=.
+- SI llega a salpicar la impulsión se rompe la onda y por lo general manda varias más chicas que disminuyen el efecto de la rompiente.
+A mejorar:
+- LA onda llega a la altura de la pared de PLA (y toca el perfil que lo sostiene).
+- Al tirar la playa muy para atrá el peso por flotación hace que pandee, habría que incorporar otro perfil de 2020 para sostenerlo en la punta.
+- Además la cuba está inclinada, entonces al tirarlo para atrá deja de estar todo sumergido. AGregamos agua de la canilla, aproximadamente 1/2 mm.
+
+Además se llegan a formar si hay mucha agua o la impulsión es muy suave los Precursores de Sommerfeld, con mucha repetibilidad.
+Para cuantificar:
+- Hay que calcular el número de Iribarren y ver si corresponde con el tipo de rompiente que vemos.
+- Calcular el volumen de agua desplazado para saber la altura de la ola y planificar una pared más alta.
+- Probablemente hacer la zona plana del final más larga para colocar ahí el sensor, ya que rompen muy cerca de que esta comience.
+
+Hay una diferencia notable entre la primer ola, generada con el agua calma, y lo que sucede luego cuando ya hay rebotes y demás. Una idea interesante sería poner un motor con paleta del otro lado, con este sistema tipo /noise cancelling/ y un lazo de control, utilizando uno de los sesnores.
+
+* 2026-05-23
+
+** [16:04]
+Ya tengo algo configurado Doom Emacs en Windows. Un par de cosas relevantes:
+- Hay que correr desde =git bash= el siguiente comando para que sea verboso el =sync=: =winpty bash /c/Users/Marcelo/.emacs.d/bin/doom sync=.
+- Para cambiar los keybindings hace falta recargar Emacs completo, además de hacer el =sync=.
+
+** [16:15]
+Estoy tratando de configurar para poder pegar imágenes desde el clipboard y explorador de archivos.

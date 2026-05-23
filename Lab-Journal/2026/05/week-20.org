@@ -1,0 +1,70 @@
+#+TITLE: Journal Week 20
+#+OPTIONS: toc:2
+
+* Table of Contents :TOC:
+- [[#2026-05-15][2026-05-15]]
+  - [[#1046][[10:46]]]
+  - [[#1137][[11:37]]]
+  - [[#1333][[13:33]]]
+  - [[#1353][[13:53]]]
+  - [[#1434][[14:34]]]
+  - [[#1514][[15:14]]]
+  - [[#1536][[15:36]]]
+  - [[#1618][[16:18]]]
+- [[#2026-05-16][2026-05-16]]
+  - [[#1610][[16:10]]]
+  - [[#1641][[16:41]]]
+
+* 2026-05-15
+
+
+** [10:46]
+El diario ya funciona como querría. Se genera un archivo semanal con cualquiera de los comandos de ser necesario y al escribir tengo la opción de hacerlo:
+
+    |-----------+----------------+----------------------------------------------------------------------------------------------------|
+    | Comando   | Acción         | Descripción                                                                                        |
+    |-----------+----------------+----------------------------------------------------------------------------------------------------|
+    | ~SPC n j o~ | Abrir Journal  | Abre el Journal con el cursor en el día actual.                                                    |
+    | ~SPC n j j~ | Entrada rápida | Permite hacer una entrada con el TimeStamp del momento.                                            |
+    | ~SPC n j c~ | Captura rápida | Similar a la entrada rápida pero desde el buffer actual, y deja referencia al mismo en el Journal. |
+    |-----------+----------------+----------------------------------------------------------------------------------------------------|
+    Y deberían ser consistente entre sí los comandos. 
+
+
+** [11:37]
+Puedo previsualizar latex en los archivos .org utilizando la instalación de MikTeX de Windows, al hacerle pensar al WSL que está instalado en Ubuntu.
+Esto es una prueba de latex:    $a^b$   y   $\sum_a^b$.
+
+** [13:33]
+Voy a empezar a analizar las mediciones para las partículas chicas en 100 rpm. Ya estoy flippeando las imágenes de la cámara 2 en el Pendrive, como con las demás.
+
+** [13:53]
+Lo que hace tan lento al flippeo de las imágenes preciera ser el hecho de que después de flippearlas las vuelve a escribir al Pendrive, y pienso que ese es el cuello de botella.
+
+
+** [14:34]
+Ya arreglé la 6141 que tenía 0 kb y continué con el flippeo que se había detenido momentáneamente. En la Compu del Labo estaba bien.
+Ahora estoy copiando las fotos de la cámara 1 al Pendrive para poder analizarlas.
+
+** [15:14]
+Esta es la forma de mostrar imágenes. El comando para recargar es ~C-c C-x C-v~.
+#+ATTR_ORG: :width 400
+[[file:~/Pruebas/frame_0105.png]]
+
+** [15:36]
+Para que se muestre la imagen inline hay que evitar poner una descripción al link, tiene que estar crudo.
+
+Se están analizando los frames para las partículas chicas en 100 rpm, con exactamente los mismos parámetros que usé para el caso de 50 rpm.
+
+** [16:18]
+Ya hice la segmentación para la cam1 y ahora se está haciendo para la cam2.
+
+* 2026-05-16
+
+** [16:10]
+Al apretar ~C-z~ se entra en el modo de cursor naranja. Esto significa que se sale del /Normal State/ de Vim y se entra en el /Emacs State/.
+
+** [16:41]
+ Estuve aprendiendo sobre cómo funciona la /literate programming/ en Org Mode utilizando Babel.
+  [[file:~/Pruebas/literate-programming.org][Literate Programming]]
+

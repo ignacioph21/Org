@@ -1,0 +1,277 @@
+;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+
+;; Place your private configuration here! Remember, you do not need to run 'doom
+;; sync' after modifying this file!
+
+
+;; Some functionality uses this to identify you, e.g. GPG configuration, email
+;; clients, file templates and snippets. It is optional.
+;; (setq user-full-name "John Doe"
+;;       user-mail-address "john@doe.com")
+
+;; Doom exposes five (optional) variables for controlling fonts in Doom:
+;;
+;; - `doom-font' -- the primary font to use
+;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
+;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
+;;   presentations or streaming.
+;; - `doom-symbol-font' -- for symbols
+;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
+;;
+;; See 'C-h v doom-font' for documentation and more examples of what they
+;; accept. For example:
+;;
+;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
+;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+;;
+;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
+;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
+;; refresh your font settings. If Emacs still can't find your font, it likely
+;; wasn't installed correctly. Font issues are rarely Doom issues!
+
+;; There are two ways to load a theme. Both assume the theme is installed and
+;; available. You can either set `doom-theme' or manually load a theme with the
+;; `load-theme' function. This is the default:
+(setq doom-theme 'doom-one)
+
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type t)
+
+;; If you use `org' and don't want your org files in the default location below,
+;; change `org-directory'. It must be set before org loads!(after! org
+
+
+
+;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+
+;; ============================================================
+;; 🧠 JOURNAL SYSTEM (literate config)
+;;
+;; Goal:
+;; - Fast log entries (SPC n j j)
+;; - Contextual org-capture entries (SPC n j c)
+;; - Automatic structure:
+;;     ~/Org/Journal/YYYY/MM/week-XX.org
+;; - Daily headings auto-created
+;; ============================================================
+
+
+;; ============================================================
+;; 🔧 BASIC SETUP
+;; ============================================================
+
+(use-package! toc-org
+  :hook (org-mode . toc-org-mode))
+
+(require 'org)
+(require 'org-capture)
+(require 'subr-x)
+
+
+;; ============================================================
+;; 📁 JOURNAL FILE STRUCTURE
+;;
+;; Format:
+;;   ~/Org/Journal/YYYY/MM/week-XX.org
+;; ============================================================
+
+(setq org-directory "~/org/")
+
+(defun my/journal--week-file ()
+  "Return path of current week journal file, creating dirs if needed."
+  (let* ((year (format-time-string "%Y"))
+         (month (format-time-string "%m"))
+         (week (format-time-string "%V"))
+         (dir (expand-file-name (concat year "/" month) org-directory))
+         (file (expand-file-name (format "week-%s.org" week) dir)))
+    (unless (file-directory-p dir)
+      (make-directory dir t))
+    file))
+
+
+(defun my/journal--ensure-file ()
+  "Create weekly journal file if it doesn't exist."
+  (let ((file (my/journal--week-file)))
+    (unless (file-exists-p file)
+      (with-temp-file file
+        (insert (format "#+TITLE: Journal Week %s\n#+OPTIONS: toc:2\n\n* Table of Contents :TOC:\n\n"
+                        (format-time-string "%V")))))
+    file))
+
+
+;; ============================================================
+;; 📅 DAILY HEADING MANAGEMENT
+;;
+;; Each day is a top-level heading:
+;;   * 2026-05-15
+;; ============================================================
+
+(defun my/journal--goto-day ()
+  "Jump to today's heading or create it if missing."
+  (let ((day (format-time-string "%Y-%m-%d")))
+    (goto-char (point-min))
+    (unless (re-search-forward (concat "^\\* " day) nil t)
+      (goto-char (point-max))
+      (insert (format "\n* %s\n" day)))
+    (re-search-backward (concat "^\\* " day))))
+
+
+;; ============================================================
+;; ⚡ 1. FAST ENTRY (LOG STYLE)
+;;
+;; Key: SPC n j j
+;; Behavior:
+;; - Opens journal
+;; - Appends timestamped line
+;; ============================================================
+
+(defun my/journal-add-entry ()
+  "Fast journal entry (no capture, just append)."
+  (interactive)
+  (my/journal-open)
+  (my/journal--goto-day)
+  (goto-char (point-max))
+  (insert (format "\n** [%s] \n" (format-time-string "%H:%M")))
+  (save-buffer))
+
+
+;; ============================================================
+;; 📌 ORG-CAPTURE ENTRY (CONTEXTUAL)
+;;
+;; Key: SPC n j c
+;; Uses same daily heading logic as fast entries.
+;; ============================================================
+
+(defun my/journal-capture-target ()
+  "Target location for journal captures."
+  (set-buffer (find-file-noselect (my/journal--ensure-file)))
+  (my/journal--goto-day)
+  (goto-char (point-max)))
+
+(setq org-capture-templates
+      `(
+        ("j" "Journal capture (context)"
+         plain
+         (file+function
+          my/journal--week-file
+          my/journal-capture-target)
+         "** [%<%H:%M>] \n %?\n  %a\n"
+         :empty-lines 1)))
+
+(defun my/journal-capture ()
+  "Org-capture journal entry with context."
+  (interactive)
+  (org-capture nil "j"))
+
+
+(defun my/journal-open ()
+  "Open weekly journal and jump to today."
+  (interactive)
+  (find-file (my/journal--ensure-file))
+  (my/journal--goto-day))
+
+(after! org
+  (defun my/refresh-agenda-files ()
+    (setq org-agenda-files
+          (directory-files-recursively org-directory "\\.org$")))
+  (my/refresh-agenda-files)
+  (add-hook 'org-agenda-mode-hook #'my/refresh-agenda-files))
+
+(after! org
+  (setq org-todo-keywords
+        '((sequence
+           "TODO(t)"
+           "NEXT(n)"
+           "WAIT(w)"
+           "|"
+           "DONE(d)"
+           "CANCELLED(c)"))))
+
+
+;; ============================================================
+;; ⌨️ KEYBINDINGS (DOOM LEADER)
+;;
+;; Namespace:
+;;   SPC n j
+;; ============================================================
+
+(map! :leader
+      (:prefix ("n j" . "journal")
+       :desc "Fast journal entry" "j" #'my/journal-add-entry
+       :desc "Open journal" "o" #'my/journal-open
+       :desc "Capture journal entry" "c" #'my/journal-capture))
+
+(after! org
+  (setq org-startup-with-inline-images t))
+
+(after! org
+  (setq org-image-actual-width '(400)))
+
+(after! org
+  (require 'org-download)
+
+  ;; Carpeta donde guardar imágenes
+  (setq org-download-image-dir "./assets")
+
+  ;; Mostrar imágenes inline automáticamente
+  (setq org-startup-with-inline-images t)
+
+  ;; Método de pegado
+  (setq org-download-screenshot-method "powershell.exe -command \"Get-Clipboard -Format Image\"")
+)
+;; Whenever you reconfigure a package, make sure to wrap your config in an
+;; `with-eval-after-load' block, otherwise Doom's defaults may override your
+;; settings. E.g.
+;;
+;;   (with-eval-after-load 'PACKAGE
+;;     (setq x y))
+;;
+;; The exceptions to this rule:
+;;
+;;   - Setting file/directory variables (like `org-directory')
+;;   - Setting variables which explicitly tell you to set them before their
+;;     package is loaded (see 'C-h v VARIABLE' to look them up).
+;;   - Setting doom variables (which start with 'doom-' or '+').
+;;
+;; Here are some additional functions/macros that will help you configure Doom.
+;;
+;; - `load!' for loading external *.el files relative to this one
+;; - `add-load-path!' for adding directories to the `load-path', relative to
+;;   this file. Emacs searches the `load-path' when you load packages with
+;;   `require' or `use-package'.
+;; - `map!' for binding new keys
+;;
+;; To get information about any of these functions/macros, move the cursor over
+;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
+;; This will open documentation for it, including demos of how they are used.
+;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
+;; etc).
+;;
+;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
+;; they are implemented.
+
+
+(use-package! pyvenv
+  :config
+  (pyvenv-mode 1))
+
+(after! pyvenv
+  (setenv "WORKON_HOME" "/home/ignacio/miniconda3/envs")
+  (setq pyvenv-workon-home "/home/ignacio/miniconda3/envs"))
+
+(after! python
+  (setq python-shell-interpreter "ipython"
+        python-shell-interpreter-args "-i --simple-prompt --no-color-info"))
+
+
+(after! org
+  (setq org-preview-latex-default-process 'dvisvgm))
+
+;; (use-package! org-fragtog
+;;   :after org
+;;   :hook (org-mode . my/org-fragtog-setup))
+
+;; (defun my/org-fragtog-setup ()
+;;   (org-latex-preview '(16))
+;;   (org-fragtog-mode 1))
