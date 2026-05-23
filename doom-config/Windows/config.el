@@ -351,3 +351,59 @@
 ;; (defun my/org-fragtog-setup ()
 ;;   (org-latex-preview '(16))
 ;;   (org-fragtog-mode 1))
+
+
+;; Guardar sesión automáticamente
+(after! desktop
+  (setq desktop-auto-save-timeout 30)  ;; guarda cada 30 segundos
+  (desktop-save-mode 1))
+
+;; Historial de comandos
+(use-package! savehist
+  :init
+  (setq savehist-additional-variables
+        '(extended-command-history search-ring regexp-search-ring))
+  (savehist-mode 1))
+
+;; Archivos recientes — guardar periódicamente
+(after! recentf
+  (setq recentf-max-saved-items 100)
+  (run-at-time nil (* 2 60) #'recentf-save-list))
+
+
+
+
+
+
+(after! org-roam
+  (setq org-roam-directory "~/Documents/Org/"))
+
+(after! oc
+  (setq org-cite-global-bibliography '("~/Documents/Org/references.bib")))
+
+(use-package! citar
+  :after oc
+  :custom
+  (org-cite-insert-processor 'citar)
+  (org-cite-follow-processor 'citar)
+  (org-cite-activate-processor 'citar)
+  (citar-bibliography '("~/Documents/Org/references.bib"))
+  (citar-notes-paths '("~/Documents/Org/Notes/References/"))
+  (citar-library-paths '("~/Documents/Zotero/storage/")))
+
+;; ── Org-cite ───────────────────────────────────────
+(after! org
+  (setq org-cite-global-bibliography '("~/Documents/Org/references.bib")
+        org-cite-insert-processor 'citar
+        org-cite-follow-processor 'citar
+        org-cite-activate-processor 'citar))
+
+;; ── Org-noter ──────────────────────────────────────
+(after! org-noter
+  (setq org-noter-always-create-frame nil
+        org-noter-hide-other-headings nil
+        org-noter-notes-window-location 'other-window))
+
+(after! org-noter
+  (setq org-noter-supported-modes
+        '(doc-view-mode pdf-view-mode)))
