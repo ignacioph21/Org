@@ -191,5 +191,7 @@ Ya tengo algo configurado Doom Emacs en Windows. Un par de cosas relevantes:
 Estoy tratando de configurar para poder pegar imágenes desde el clipboard y explorador de archivos.
 
 
-[cite:@berhanuCapillaryWaveTurbulence2020]
 ** [19:18]
+Ya tengo también configurado el paquete =citar= para la integración con Zotero.
+
+[cite:@berhanuCapillaryWaveTurbulence2020]
