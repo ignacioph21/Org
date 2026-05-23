@@ -375,36 +375,39 @@
 
 
 
+;; ── Org-roam ───────────────────────────────────────
 (after! org-roam
   (setq org-roam-directory "~/Documents/Org/"))
 
+;; ── Citar + Org-cite ───────────────────────────────
 (after! oc
-  (setq org-cite-global-bibliography '("~/Documents/Org/references.bib")))
-
-(use-package! citar
-  :after oc
-  :custom
-  (org-cite-insert-processor 'citar)
-  (org-cite-follow-processor 'citar)
-  (org-cite-activate-processor 'citar)
-  (citar-bibliography '("~/Documents/Org/references.bib"))
-  (citar-notes-paths '("~/Documents/Org/Notes/References/"))
-  (citar-library-paths '("C:/Users/Marcelo/Zotero/storage/"))
-  (citar-file-open-function #'find-file))
-
-;; ── Org-cite ───────────────────────────────────────
-(after! org
   (setq org-cite-global-bibliography '("~/Documents/Org/references.bib")
         org-cite-insert-processor 'citar
         org-cite-follow-processor 'citar
         org-cite-activate-processor 'citar))
 
+(use-package! citar
+  :after oc
+  :custom
+  (citar-bibliography '("~/Documents/Org/references.bib"))
+  (citar-notes-paths '("~/Documents/Org/Notes/References/"))
+  (citar-library-paths '("C:/Users/Marcelo/Zotero/storage/"))
+  (citar-file-open-function #'find-file))
+
+;; ── Citar-org-roam ─────────────────────────────────
+(after! citar-org-roam
+  (setq citar-org-roam-notes-path "~/Documents/Org/Notes/References/")
+  (setq citar-org-roam-note-title-template "${author} - ${title}")
+  (setq citar-org-roam-capture-template
+        '("n" "nota" plain
+          ":PROPERTIES:\n:NOTER_DOCUMENT: ${file}\n:END:\n\n%?"
+          :target (file+head "${citekey}.org"
+                             "#+TITLE: ${author} - ${title}\n")
+          :unnarrowed t)))
+
 ;; ── Org-noter ──────────────────────────────────────
 (after! org-noter
   (setq org-noter-always-create-frame nil
         org-noter-hide-other-headings nil
-        org-noter-notes-window-location 'other-window))
-
-(after! org-noter
-  (setq org-noter-supported-modes
-        '(doc-view-mode pdf-view-mode)))
+        org-noter-notes-window-location 'other-window
+        org-noter-supported-modes '(doc-view-mode pdf-view-mode)))
