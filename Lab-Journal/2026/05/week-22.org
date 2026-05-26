@@ -11,6 +11,7 @@
   - [[#1034][[10:34]]]
   - [[#1110][[11:10]]]
   - [[#1358][[13:58]]]
+  - [[#1459][[14:59]]]
 
 * 2026-05-26
 
@@ -82,3 +83,9 @@ Ya analicé las mediciones con tres sensores donde la caída es lineal:
 La cuestión me parece que va a seguir siendo el tema de la calibración distinta entre los sensores. Si pudiésemos mandar una onda de altura constante se podría calibrar con eso.
 
 La altura 1 se corresponde al más lejano, la 2 al intermedio y la 3 al más cercano a la paleta. La distancia entre 1 y 2 es mayor a la que hay entre 2 y 3, lo cual es congruente con el tiempo entre el pico principal de un sensor al siguiente, si asumimos una velocidad de propagación aproximadamente constante de las ondas.
+
+** [14:59]
+Los espectros para las tres series temporales son los siguientes.
+
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_26/espectros-varios-lineal.png]]
