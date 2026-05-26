@@ -23,6 +23,9 @@
   - [[#1604][[16:04]]]
   - [[#1615-1][[16:15]]]
   - [[#1918][[19:18]]]
+  - [[#2007][[20:07]]]
+- [[#2026-05-24][2026-05-24]]
+  - [[#1206][[12:06]]]
 
 * 2026-05-18
 
@@ -195,3 +198,14 @@ Estoy tratando de configurar para poder pegar imágenes desde el clipboard y exp
 Ya tengo también configurado el paquete =citar= para la integración con Zotero.
 
 [cite:@berhanuCapillaryWaveTurbulence2020]
+
+** [20:07]
+Con Magit, que se llama ~SPC g g~ puedo manejar github para el directorio de =~\Org=.
+
+* 2026-05-24
+
+** [12:06]
+Ya compilé epdfinfo utilizando =MSYS2= siguiendo la guía de Claude y ChatGPT. Está todo más o menos funcionando as intended.
+La idea es que usando =citar-open-files= puedo buscar por mi =references.bib= un paper y abrirlo con epdfinfo.
+Luego puedo iniciar =org-noter= y crear una nota asociada a ese pdf, que se guarda en =~\Documents\Org\Notes\References=.  En este modo puedo seleccionar en el pdf y utilizar =org-noter-insert-note= para generar una cita con esa quote.
+Por ejemplo, lo estuve probando con: [cite:@bonnetonTurbulenceTypeBurgers2022].

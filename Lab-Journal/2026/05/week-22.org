@@ -1,0 +1,49 @@
+#+TITLE: Journal Week 22
+#+OPTIONS: toc:2
+
+* Table of Contents :TOC:
+- [[#2026-05-26][2026-05-26]]
+  - [[#0853][[08:53]]]
+  - [[#0920][[09:20]]]
+  - [[#0936][[09:36]]]
+
+* 2026-05-26
+
+** [08:53]
+Estoy empezado a analizar las mediciones de la semana pasada con la rampa en la cuba grande del Laboratorio.
+
+El Viernes pasado había llegado a analizar la medición del sensor posterior a la rompiente para el forzado con decaimiento lineal, cuya serie temporal fue la siguiente:
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_26/Serie_completa_un_Sensor.png]]
+
+Y el zoom para uno de los segmentos de 15 segundos (que se repite) es:
+
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_26/Serie_completa_un_Sensor_zoom.png]]
+
+La PSD usando Welch con ventanas de 20 segundos es el siguiente:
+
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_26/Espectro_un_sensor.png]]
+
+Con la lineal naranja de pendiente $f^{-2}$. Aunque a diferencia de lo predicho por [cite:@bonnetonEnergyDissipationSpectra2023] la cola resulta distinta a una caída exponencial, y se ven las pendientes de WWT.
+
+A modo de comparación, la serie temporal que usa Bonneton, que es tomada de una gran facility, medida por van Noorloos en [cite:@vannoorloosEnergyTransferShort] se ve así:
+
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_26/serie-temporal-van-Noorloos-2003.png]]
+
+** [09:20]
+La serie temporal para el sensor posterior a la rompiente bajo el forzado con decaimiento de una segunda tangente hiperbólica es la siguiente:
+
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_26/serie-temporal-tanh-ambas.png]]
+
+En general resulta bastante parecida a la de la caída lineal.
+
+
+** [09:36]
+El espectro en este caso es el siguiente:
+
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_26/Espectro_un_sensor_tanhs_ambas.png]]

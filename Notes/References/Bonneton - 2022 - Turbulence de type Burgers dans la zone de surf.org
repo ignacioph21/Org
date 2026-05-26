@@ -1,0 +1,24 @@
+* Bonneton - 2022 - Turbulence de type Burgers dans la zone de surf
+:PROPERTIES:
+:NOTER_DOCUMENT: ../../../../Zotero/storage/MZEPZA6C/Bonneton - 2022 - Turbulence de type Burgers dans la zone de surf.pdf
+:NOTER_PAGE: 1
+:END:
+
+** Espectro de energía:
+:PROPERTIES:
+:NOTER_PAGE: (5 0.5851780558229066 . 0.6959183673469388)
+:END:
+Acá Bonneton propone un espectro de energía para las ondas en la inner surf zone que va como una $csch^2(\omega)$.
+
+
+
+
+** Datos experimentales
+:PROPERTIES:
+:NOTER_PAGE: 5
+:END:
+
+#+BEGIN_QUOTE
+Afin de tester la validité de ce modèle nous nous sommes appuyés sur l’expérience en laboratoire C3
+de van Noorloos [16].
+#+END_QUOTE
