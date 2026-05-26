@@ -8,6 +8,8 @@
   - [[#0936][[09:36]]]
   - [[#0948][[09:48]]]
   - [[#0956][[09:56]]]
+  - [[#1034][[10:34]]]
+  - [[#1110][[11:10]]]
 
 * 2026-05-26
 
@@ -62,3 +64,10 @@ Y su espectro asociado:
 
 #+ATTR_ORG: :width 600
 [[file:Assets/Day_26/Espectro_un_sensor_sins.png]]
+
+
+** [10:34]
+La idea ahora va a ser resolver la Ecuación de Burgers para saber cuán larga tiene que ser la señal para que el espectro esté convergido y tenga la forma de $csch^2(\omega)$. Para esto usamos la Ecuación (2.3) de [cite:@bonnetonEnergyDissipationSpectra2023].
+
+** [11:10]
+Para que Fede pueda medir mañana saqué la rampa y los sensores, aunque quedaron todas las posiciones marcadas. Además, desplazamos horizontalmente el motor hacia adentro, pero en la misma posición donde ya estaba. Una cosa a sumar a los cambios de la rampa es que ésta se llenó completamente de agua, abría que poner un desagote o algo por el estilo.
