@@ -6,6 +6,8 @@
   - [[#0853][[08:53]]]
   - [[#0920][[09:20]]]
   - [[#0936][[09:36]]]
+  - [[#0948][[09:48]]]
+  - [[#0956][[09:56]]]
 
 * 2026-05-26
 
@@ -47,3 +49,16 @@ El espectro en este caso es el siguiente:
 
 #+ATTR_ORG: :width 600
 [[file:Assets/Day_26/Espectro_un_sensor_tanhs_ambas.png]]
+
+** [09:48]
+Una idea para el canal podría ser directamente una pecera de 10 cm de ancho con una tercera placa de vidrio en el medio que se pueda mover para regular el ancho utilizable.
+
+** [09:56]
+A continuación los resultados para el forzado con una función senoidal de =7 cm= de carrera y =1 s= de periodo.
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_26/serie-temporal-rompiente-sins.png]]
+
+Y su espectro asociado:
+
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_26/Espectro_un_sensor_sins.png]]
