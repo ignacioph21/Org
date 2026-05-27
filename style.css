@@ -225,3 +225,27 @@ hr {
   padding-top: 0.5rem;
   margin-top: 2rem;
 }
+
+
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 999;
+  cursor: zoom-out;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  border-radius: 4px;
+  cursor: zoom-out;
+}
