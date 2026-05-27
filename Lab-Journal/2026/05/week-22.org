@@ -14,6 +14,7 @@
   - [[#1459][[14:59]]]
 - [[#2026-05-27][2026-05-27]]
   - [[#1020][[10:20]]]
+  - [[#1218][[12:18]]]
 
 * 2026-05-26
 
@@ -112,3 +113,6 @@ Con un espectro asociado (en distintas posiciones hasta la mitad) que sigue la L
 [[file:Assets/Day_27/Burgers-espetros-num_ricos.png]]
 
 Donde la línea punteada representa el $csch^2(f)$ y la lineal es la aproximación a $f\ll1$.
+
+** [12:18]
+Estoy intentando configurar =org-pusblish= para poder exportar todo el Lab-Journal como =.html= y tenerlo público online mediante las =Github Pages=.
