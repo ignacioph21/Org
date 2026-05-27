@@ -19,6 +19,7 @@
   - [[#1429][[14:29]]]
   - [[#1439][[14:39]]]
   - [[#1445][[14:45]]]
+  - [[#1618][[16:18]]]
 
 * 2026-05-26
 
@@ -134,3 +135,6 @@ Cambié la estructura de un =/Assets= por mes a un único =/Org/Assets=.
 
 ** [14:45]
 Ya renombré todas las imágenes del diario hasta ahora con la nueva estructura.
+
+** [16:18]
+Ya casi está funcionando as intended, con =CSS= incluido.
