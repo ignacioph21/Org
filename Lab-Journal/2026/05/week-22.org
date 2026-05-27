@@ -21,6 +21,7 @@
   - [[#1445][[14:45]]]
   - [[#1618][[16:18]]]
   - [[#1713][[17:13]]]
+  - [[#1717][[17:17]]]
 
 * 2026-05-26
 
@@ -150,4 +151,7 @@ Una última prueba de que funciona correctamente con la nueva estructura de arch
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/05/Day_27/prueba-de-funcionamiento-correcto-im_genes-absolutas.png]]
 
-Para actualizar la página es =SPC n j e= de momento, por =export=.
+Para actualizar la página es ~SPC n j e~ de momento, por =export=.
+
+** [17:17]
+Está funcionando bien, pero para que cargue todo bien al actualizarse hay que hacer un =hard refresh= utilizando ~C-R~ en la página.
