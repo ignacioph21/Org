@@ -22,6 +22,7 @@
   - [[#1618][[16:18]]]
   - [[#1713][[17:13]]]
   - [[#1717][[17:17]]]
+  - [[#1727][[17:27]]]
 
 * 2026-05-26
 
@@ -155,3 +156,6 @@ Para actualizar la página es ~SPC n j e~ de momento, por =export=.
 
 ** [17:17]
 Está funcionando bien, pero para que cargue todo bien al actualizarse hay que hacer un =hard refresh= utilizando ~C-R~ en la página.
+
+** [17:27]
+Para poder indexar el contenido de las entradas y buscar entre ellas necesido utilizar el paquete =pagefind= mediante =node.js=.

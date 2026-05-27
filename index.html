@@ -5,17 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lab Journal</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link href="/Lab-Journal-html/_pagefind/pagefind-ui.css" rel="stylesheet" />
+  <script src="/Lab-Journal-html/_pagefind/pagefind-ui.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: #282c34; color: #bbc2cf; font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace; }
     .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
     h1 { font-size: 1.4rem; font-weight: 500; color: #51afef; margin-bottom: 0.25rem; letter-spacing: 0.02em; }
     .subtitle { font-size: 0.8rem; color: #5b6268; margin-bottom: 2rem; }
-    .search-wrap { position: relative; margin-bottom: 2rem; }
-    .search-wrap i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #5b6268; font-size: 16px; }
-    #search { width: 100%; background: #21242b; border: 1px solid #3f444a; border-radius: 6px; padding: 8px 12px 8px 36px; color: #bbc2cf; font-family: inherit; font-size: 0.85rem; outline: none; }
-    #search:focus { border-color: #51afef; }
-    #search::placeholder { color: #5b6268; }
+
+    /* tabs */
+    .tabs { display: flex; gap: 0; margin-bottom: 1.5rem; border-bottom: 1px solid #3f444a; }
+    .tab { padding: 8px 16px; font-size: 0.85rem; cursor: pointer; color: #5b6268; border-bottom: 2px solid transparent; margin-bottom: -1px; font-family: inherit; background: none; border-top: none; border-left: none; border-right: none; }
+    .tab.active { color: #51afef; border-bottom-color: #51afef; }
+    .tab:hover { color: #bbc2cf; }
+
+    /* panels */
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    /* index tree */
     .year-block { margin-bottom: 1.5rem; }
     details { background: #21242b; border: 1px solid #3f444a; border-radius: 6px; overflow: hidden; margin-bottom: 0.5rem; }
     summary { padding: 10px 14px; cursor: pointer; font-size: 0.85rem; color: #c678dd; font-weight: 500; list-style: none; display: flex; align-items: center; gap: 8px; user-select: none; }
@@ -29,18 +38,41 @@
     .entry-link:hover { background: #2c313a; color: #eceff4; }
     .entry-link i { color: #5b6268; font-size: 14px; flex-shrink: 0; }
     .no-results { text-align: center; color: #5b6268; font-size: 0.85rem; padding: 2rem; }
-    .highlight { color: #ecbe7b; }
+
+    /* pagefind overrides */
+    .pagefind-ui { --pagefind-ui-scale: 0.85; --pagefind-ui-primary: #51afef; --pagefind-ui-text: #bbc2cf; --pagefind-ui-background: #21242b; --pagefind-ui-border: #3f444a; --pagefind-ui-tag: #3f444a; --pagefind-ui-border-width: 1px; --pagefind-ui-border-radius: 6px; --pagefind-ui-image-border-radius: 4px; --pagefind-ui-font: 'JetBrains Mono', 'Fira Code', monospace; }
+    .pagefind-ui__search-input { background: #21242b !important; color: #bbc2cf !important; border-color: #3f444a !important; font-family: inherit !important; }
+    .pagefind-ui__search-input:focus { border-color: #51afef !important; outline: none !important; }
+    .pagefind-ui__result { border-color: #3f444a !important; background: #21242b !important; border-radius: 6px !important; margin-bottom: 0.75rem !important; }
+    .pagefind-ui__result-title a { color: #51afef !important; }
+    .pagefind-ui__result-excerpt { color: #8a95a3 !important; }
+    .pagefind-ui__button { background: #21242b !important; color: #bbc2cf !important; border-color: #3f444a !important; font-family: inherit !important; }
+    .pagefind-ui__button:hover { border-color: #51afef !important; color: #51afef !important; }
+    .pagefind-ui__search-clear { color: #5b6268 !important; }
+    .pagefind-ui__message { color: #5b6268 !important; font-size: 0.8rem !important; }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Lab Journal</h1>
     <div class="subtitle">Indice de entradas</div>
-    <div class="search-wrap">
-      <i class="ti ti-search" aria-hidden="true"></i>
-      <input id="search" type="text" placeholder="Buscar entrada..." autocomplete="off" />
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('index')">
+        <i class="ti ti-layout-list" aria-hidden="true"></i> Indice
+      </button>
+      <button class="tab" onclick="showTab('search')">
+        <i class="ti ti-search" aria-hidden="true"></i> Buscar
+      </button>
     </div>
-    <div id="tree"></div>
+
+    <div id="panel-index" class="panel active">
+      <div id="tree"></div>
+    </div>
+
+    <div id="panel-search" class="panel">
+      <div id="pagefind-search"></div>
+    </div>
   </div>
 
   <script>
@@ -50,16 +82,27 @@
       '09':'Septiembre','10':'Octubre','11':'Noviembre','12':'Diciembre'
     };
 
+    var searchInitialized = false;
+
+    function showTab(name) {
+      document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelector('.tab[onclick="showTab(\'' + name + '\')"]').classList.add('active');
+      document.getElementById('panel-' + name).classList.add('active');
+
+      if (name === 'search' && !searchInitialized) {
+        new PagefindUI({ element: '#pagefind-search', showImages: false, translations: { placeholder: 'Buscar en el journal...' } });
+        searchInitialized = true;
+      }
+    }
+
     function loadIndex() {
       return fetch('search-index.json').then(function(res) { return res.json(); });
     }
 
-    function buildTree(entries, query) {
-      var q = query.toLowerCase().trim();
-      var filtered = q ? entries.filter(function(e) { return e.title.toLowerCase().includes(q); }) : entries;
-
+    function buildTree(entries) {
       var tree = {};
-      filtered.forEach(function(e) {
+      entries.forEach(function(e) {
         if (!tree[e.year]) tree[e.year] = {};
         if (!tree[e.year][e.month]) tree[e.year][e.month] = [];
         tree[e.year][e.month].push(e);
@@ -68,8 +111,8 @@
       var container = document.getElementById('tree');
       container.innerHTML = '';
 
-      if (filtered.length === 0) {
-        container.innerHTML = '<div class="no-results">No se encontraron entradas.</div>';
+      if (entries.length === 0) {
+        container.innerHTML = '<div class="no-results">No hay entradas.</div>';
         return;
       }
 
@@ -106,10 +149,7 @@
             var a = document.createElement('a');
             a.className = 'entry-link';
             a.href = e.url;
-            var titleHtml = q
-              ? e.title.replace(new RegExp('(' + q + ')', 'gi'), '<span class="highlight">$1</span>')
-              : e.title;
-            a.innerHTML = '<i class="ti ti-file-text" aria-hidden="true"></i>' + titleHtml;
+            a.innerHTML = '<i class="ti ti-file-text" aria-hidden="true"></i>' + e.title;
             monthDetails.appendChild(a);
           });
 
@@ -122,16 +162,10 @@
       });
     }
 
-    var allEntries = [];
     loadIndex().then(function(data) {
-      allEntries = data;
-      buildTree(allEntries, '');
+      buildTree(data);
     }).catch(function() {
       document.getElementById('tree').innerHTML = '<div class="no-results">No se pudo cargar el indice.</div>';
-    });
-
-    document.getElementById('search').addEventListener('input', function(e) {
-      buildTree(allEntries, e.target.value);
     });
   </script>
 </body>
