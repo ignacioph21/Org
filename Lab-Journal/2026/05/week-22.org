@@ -99,6 +99,8 @@ Sigo con la solución numérica a la Ecuación de Burgers. Una cosa que pensé a
 
 Al iniciar con un estado aleatorio y dejarlo evolucionar obtenemos lo siguiente:
 
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_27/Burgers-series-espaciales-numéricas.png]]
 
 La serie temporal en el centro es la siguiente:
 
