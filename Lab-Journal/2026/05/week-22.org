@@ -15,6 +15,7 @@
 - [[#2026-05-27][2026-05-27]]
   - [[#1020][[10:20]]]
   - [[#1218][[12:18]]]
+  - [[#1246][[12:46]]]
 
 * 2026-05-26
 
@@ -116,3 +117,8 @@ Donde la línea punteada representa el $csch^2(f)$ y la lineal es la aproximaci�
 
 ** [12:18]
 Estoy intentando configurar =org-pusblish= para poder exportar todo el Lab-Journal como =.html= y tenerlo público online mediante las =Github Pages=.
+
+** [12:46]
+Ya pareciera estar funcionando, lo siguiente es una prueba para ver si las nuevas imágenes se atualizan bien, sin duplciarlas.
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_27/prueba-update-Pages.png]]
