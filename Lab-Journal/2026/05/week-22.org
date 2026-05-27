@@ -145,3 +145,9 @@ Ya está funcionando correctamente el Journal virtual. Solo faltaría corregir:
 - Hay dos Table of contents.
 - Las citas aprecieran estar rotas.
 - Poder buscar entre todas las entradas.
+
+Una última prueba de que funciona correctamente con la nueva estructura de archivos:
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/05/Day_27/prueba-de-funcionamiento-correcto-im_genes-absolutas.png]]
+
+Para actualizar la página es =SPC n j e= de momento, por =export=.
