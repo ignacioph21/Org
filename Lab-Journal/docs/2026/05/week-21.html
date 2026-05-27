@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Journal Week 21</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-c:before { content: 'C'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'JavaScript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Journal Week 21</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org71600da">Table of Contents&nbsp;&nbsp;&nbsp<span class="tag"><span class="TOC">TOC</span></span></a></li>
+<li><a href="#orgec7f12e">2026-05-18</a>
+<ul>
+<li><a href="#org87b8f9c">[11:01]</a></li>
+<li><a href="#org305db27">[11:36]&nbsp;&nbsp;&nbsp<span class="tag"><span class="ATTACH">ATTACH</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org484b02d">2026-05-19</a>
+<ul>
+<li><a href="#org697f000">[09:41]</a></li>
+<li><a href="#org995cbfb">[11:38]</a></li>
+<li><a href="#orgb24c31f">[12:18]</a></li>
+<li><a href="#orgb1f3751">[13:37]</a></li>
+<li><a href="#org7904826">[13:41]</a></li>
+<li><a href="#org65d3b47">[13:57]</a></li>
+<li><a href="#org519f1f4">[14:58]</a></li>
+</ul>
+</li>
+<li><a href="#org0548e0f">2026-05-21</a>
+<ul>
+<li><a href="#org9e09893">[08:48]</a></li>
+<li><a href="#orgf216533">[09:05]</a></li>
+<li><a href="#org19e62e6">[11:04]</a></li>
+<li><a href="#org7294296">[12:10]</a></li>
+<li><a href="#org4197ad6">[16:15]</a></li>
+</ul>
+</li>
+<li><a href="#org497456b">2026-05-23</a>
+<ul>
+<li><a href="#org7cd011d">[16:04]</a></li>
+<li><a href="#orgdf8e5b0">[16:15]</a></li>
+<li><a href="#orga6d6ad0">[19:18]</a></li>
+<li><a href="#org0cc9533">[20:07]</a></li>
+</ul>
+</li>
+<li><a href="#org69fd7fc">2026-05-24</a>
+<ul>
+<li><a href="#orgc76dcd6">[12:06]</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org71600da" class="outline-2">
+<h2 id="org71600da">Table of Contents&nbsp;&nbsp;&nbsp<span class="tag"><span class="TOC">TOC</span></span></h2>
+<div class="outline-text-2" id="text-org71600da">
+<ul class="org-ul">
+<li><ul class="org-ul">
+<li>]</li>
+<li>]</li>
+</ul></li>
+<li><ul class="org-ul">
+<li>]</li>
+<li>]</li>
+<li>]</li>
+<li>]</li>
+<li>]</li>
+<li>]</li>
+<li>]</li>
+</ul></li>
+<li><ul class="org-ul">
+<li>]</li>
+<li>]</li>
+<li>]</li>
+<li>]</li>
+<li>]</li>
+</ul></li>
+<li><ul class="org-ul">
+<li>]</li>
+<li>]</li>
+<li>]</li>
+<li>]</li>
+</ul></li>
+<li><ul class="org-ul">
+<li>]</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgec7f12e" class="outline-2">
+<h2 id="orgec7f12e">2026-05-18</h2>
+<div class="outline-text-2" id="text-orgec7f12e">
+</div>
+<div id="outline-container-org87b8f9c" class="outline-3">
+<h3 id="org87b8f9c">[11:01]</h3>
+<div class="outline-text-3" id="text-org87b8f9c">
+<p>
+Estaría bueno comparar las PDFs de la vertical, para la cual hay modelos, con <a href="https://arxiv.org/abs/1512.07760">este artículo.</a>
+En nuestro caso, al tener pocas partículas tenemos, en el caso de las de 39, una PDF[y] plana en 100 rpm y con un pico grande en 50 rpm para la mitad inferior del Von Karman.
+</p>
+
+<p>
+Además calculé los histogramas de visita (con los mismo filtros que uso para el análisis de las velocidades) en ambos casos.
+</p>
+
+<p>
+Para las de 50 rpm:
+</p>
+
+<div id="orgcf973db" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Sedimentacion-Von-Karman/Resultados/Partículas-39/Visitas_50rpm.png" alt="Visitas_50rpm.png" />
+</p>
+</div>
+
+<p>
+Para las de 100 rpm:
+</p>
+
+<div id="orge9077ca" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Sedimentacion-Von-Karman/Resultados/Partículas-39/Visitas_100rpm.png" alt="Visitas_100rpm.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org305db27" class="outline-3">
+<h3 id="org305db27">[11:36]&nbsp;&nbsp;&nbsp<span class="tag"><span class="ATTACH">ATTACH</span></span></h3>
+<div class="outline-text-3" id="text-org305db27">
+<p>
+Alargué el tiemop final para las de 100 rpm hasta el frame 3900 en lugar de el 900 que usé para el de antes.
+</p>
+
+<div id="org3db7138" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Sedimentacion-Von-Karman/Resultados/Partículas-39/Visitas_100rpm_largo.png" alt="Visitas_100rpm_largo.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org484b02d" class="outline-2">
+<h2 id="org484b02d">2026-05-19</h2>
+<div class="outline-text-2" id="text-org484b02d">
+</div>
+<ul class="org-ul">
+<li><a id="org5ca5b3c"></a>[08:57]<br />
+<div class="outline-text-5" id="text-org5ca5b3c">
+<p>
+Ayer tuvimos la reunión con Martín, en general lo que mostramos estuvo bastante bien, y cerramos qué tendríamos que llevar todos listo para la siguiente reunióm en dos semanas. Vamos a normalizar todo por Urms<sub>nil</sub><sub>nil</sub> del flujo.
+Las PDFS que mostramos fueron:
+</p>
+
+<p>
+Para las de <b>50 rpm</b>:
+</p>
+
+
+<div id="orgf0b5ff8" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Sedimentacion-Von-Karman/Resultados/Partículas-39/Vs_50rpm.png" alt="Vs_50rpm.png" />
+</p>
+</div>
+
+
+<div id="orgbdd2dfd" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Sedimentacion-Von-Karman/Resultados/Partículas-39/Us_50rpm.png" alt="Us_50rpm.png" />
+</p>
+</div>
+
+
+
+<div id="orgd5052e9" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Sedimentacion-Von-Karman/Resultados/Partículas-39/Ws_50rpm.png" alt="Ws_50rpm.png" />
+</p>
+</div>
+
+<p>
+Y para las de <b>100 rpm</b>:
+</p>
+
+<div id="org61df73a" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Sedimentacion-Von-Karman/Resultados/Partículas-39/Vs_100rpm.png" alt="Vs_100rpm.png" />
+</p>
+</div>
+
+
+<div id="org70d97ab" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Sedimentacion-Von-Karman/Resultados/Partículas-39/Us_100rpm.png" alt="Us_100rpm.png" />
+</p>
+</div>
+
+
+
+<div id="org31ffc4d" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Sedimentacion-Von-Karman/Resultados/Partículas-39/Ws_100rpm.png" alt="Ws_100rpm.png" />
+</p>
+</div>
+
+<p>
+Además, los valores medios fueron (en cm/s):
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&nbsp;</th>
+<th scope="col" class="org-right">50 rpm</th>
+<th scope="col" class="org-right">100 rpm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&lang; V<sub>y</sub> &rang;</td>
+<td class="org-right">-10.685</td>
+<td class="org-right">-7.777</td>
+</tr>
+
+<tr>
+<td class="org-left">&lang; U<sub>y</sub> &rang;</td>
+<td class="org-right">1.746</td>
+<td class="org-right">0.1515</td>
+</tr>
+
+<tr>
+<td class="org-left">&lang; W<sub>y</sub> &equiv; V<sub>y</sub> - U<sub>y&rang;</sub></td>
+<td class="org-right">-8.642</td>
+<td class="org-right">-9.500</td>
+</tr>
+</tbody>
+</table>
+<p>
+Tengo que poner el eje y de los gráficos de S<sub>2</sub> también en escala logarítmica.
+</p>
+</div>
+</li>
+</ul>
+<div id="outline-container-org697f000" class="outline-3">
+<h3 id="org697f000">[09:41]</h3>
+<div class="outline-text-3" id="text-org697f000">
+<p>
+Ya está la rampa (de la cual nos dieron las piezas el Viernes de la semana pasada) pegada. Usamos silicona.
+La idea sería en estos días, tal vez hoy, empezar a hacer pruebas en la cuba.
+</p>
+</div>
+</div>
+<div id="outline-container-org995cbfb" class="outline-3">
+<h3 id="org995cbfb">[11:38]</h3>
+<div class="outline-text-3" id="text-org995cbfb">
+<p>
+Ya estoy analizando las mediciones para las partćiulas grandes. Unifiqué todo el código de segmentación con Hough en uno solo. Para evitar copiarme las imaǵenes las estoy analizando directo del disco, con lo cual incorporé el <code>np.fliplr(im)</code> en el caso de la cámara 2.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb24c31f" class="outline-3">
+<h3 id="orgb24c31f">[12:18]</h3>
+<div class="outline-text-3" id="text-orgb24c31f">
+<p>
+Las de 50 rpm ya se analizaron todas, estoy terminando con el matcheo. Por otro lado voy analizando la segmentación de las de 100 rpm. Iba a analizar solo los rangos donde caen las partículas individuales para ahorrar tiempo pero por consistencia lo voy a correr en el video entero.
+</p>
+
+<p>
+Además, hice el código que junta varios de trayectorias en un único pickle, que se llama <code>joint_tracks.py</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb1f3751" class="outline-3">
+<h3 id="orgb1f3751">[13:37]</h3>
+<div class="outline-text-3" id="text-orgb1f3751">
+<p>
+Me queda solo analizar la 100<sub>117</sub><sub>13</sub><sub>03</sub>, con lo de bk voy a rremplazar las imágenes paar asegurarme de que están bien.
+</p>
+</div>
+</div>
+<div id="outline-container-org7904826" class="outline-3">
+<h3 id="org7904826">[13:41]</h3>
+<div class="outline-text-3" id="text-org7904826">
+<p>
+Al revisar las imágenes resulta que está bien, se puede ignorar lo del <code>_bk</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org65d3b47" class="outline-3">
+<h3 id="org65d3b47">[13:57]</h3>
+<div class="outline-text-3" id="text-org65d3b47">
+<p>
+A modo de resumen mi flujo de trabajo es el siguiente:
+</p>
+<ul class="org-ul">
+<li>Segmento las imágenes de ambas cámaras usando la Transformada de Hough y obtengo los <code>template_1_blobs</code> y <code>template_2_blobs</code> para cada cámara.</li>
+<li>Hago el matching usando MyPTV y obtengo el <code>particles_template</code>.</li>
+<li>Hago el tracking usando MyPTV y obtengo el <code>trajectories_template</code>.</li>
+<li>Opcionalmente se puede correr el algoritmo de <code>stitcing</code> de ser necesario.</li>
+<li>Si son varios runs por tipo de partícula y forzado los uno en un solo <code>trajectories_template_pickle.pkl</code>. Si es uno solo lo paso a <code>.pkl</code> usando el código de <code>myptv2pkl.py</code>.</li>
+<li>Corro el filtro Gaussiano para calcular las velocidades de las trayectorias usando el <code>rgf2.py</code>. Acá se incorpora la rotación en la dirección <code>y</code> de 34.5°.</li>
+<li>Analizo las velocidades obtenidas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org519f1f4" class="outline-3">
+<h3 id="org519f1f4">[14:58]</h3>
+<div class="outline-text-3" id="text-org519f1f4">
+<p>
+Estaba analizando las trayectorias de 100<sub>117</sub><sub>13</sub><sub>01</sub> y aparentemente solo detectó la caída de la primer partćiula, aunque había dos. Habría que chequear esto.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0548e0f" class="outline-2">
+<h2 id="org0548e0f">2026-05-21</h2>
+<div class="outline-text-2" id="text-org0548e0f">
+</div>
+<div id="outline-container-org9e09893" class="outline-3">
+<h3 id="org9e09893">[08:48]</h3>
+<div class="outline-text-3" id="text-org9e09893">
+<p>
+Acabo de intalar los íconos de la pestaña de incio de Doom Emacs mediante <code>M-x nerd-icons-install-fonts</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf216533" class="outline-3">
+<h3 id="orgf216533">[09:05]</h3>
+<div class="outline-text-3" id="text-orgf216533">
+<p>
+Estoy siguiendo las intrucciones de <a href="https://www.youtube.com/watch?v=IK25r7jOr4c">https://www.youtube.com/watch?v=IK25r7jOr4c</a> para instalar Doom Emacs en Windows directamente.
+</p>
+<ul class="org-ul">
+<li>Descargar todos los programas pertinentes.
+<ul class="org-ul">
+<li>Descargar Emacs del repositorio FTP: <a href="https://ftp.wayne.edu/gnu/emacs/windows/emacs-30/">https://ftp.wayne.edu/gnu/emacs/windows/emacs-30/</a>. Es el installer.exe de la versión 30.2 (la más reciente).</li>
+<li>Descargar ripgrep del repo oficial: <a href="https://github.com/BurntSushi/ripgrep/releases">https://github.com/BurntSushi/ripgrep/releases</a>. Para windows-gnu.</li>
+<li>Descargar fd del repo oficial: <a href="https://github.com/sharkdp/fd/releases">https://github.com/sharkdp/fd/releases</a>. Para windows-gnu.</li>
+<li>Ya tenía descargado git de antes.</li>
+</ul></li>
+<li>Intalar Emacs Vanilla con el instalador.</li>
+<li>Extraer fd y ripgrep. Renombrarlos como <code>fd</code> y <code>ripgrep</code> y moverlos a <code>Archivos de programa</code>, que es donde se instaló Emacs.</li>
+<li>Agregar una nueva <code>environment variable</code> llamada <code>HOME</code> que se dirija a <code>C:/Users/Marcelo</code>.</li>
+<li>Agregar al <code>Path</code>:
+<ul class="org-ul">
+<li><code>C:\Program Files\Emacs\emacs-30.2\bin</code></li>
+<li><code>C:\Program Files\fd</code></li>
+<li><code>C:\Program Files\ripgrep</code></li>
+</ul></li>
+<li>Correr en la consola <code>git bash</code>:
+<ul class="org-ul">
+<li><code>git clone https://github.com/hlissner/doom-emacs ~/.emacs.d</code></li>
+<li><code>cd ~/.emacs.d/bin</code></li>
+<li><code>./doom install</code> Tardó 1 hora y 13 segunda en instalarse.</li>
+<li><code>./doom sync</code> Si todo funcionó correctamente.</li>
+</ul></li>
+<li>Agregar al PATH <code>C:\Users\Marcelo\.emacs.d\bin</code>.</li>
+<li>Quedaría instalar las fuentes con <code>nerd-icons-install-fots</code> y copiar el config.el y demás del WSL a Windows, usando symlinks para poder seguir usando el de WSL cuando sea necesario para editar el Journal.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org19e62e6" class="outline-3">
+<h3 id="org19e62e6">[11:04]</h3>
+<div class="outline-text-3" id="text-org19e62e6">
+<p>
+Ya montamos la rampa en la cuba, ahora se está terminando de llenar.
+Para el forzado uso
+</p>
+
+
+<div id="org08bdb8d" class="figure">
+<p><img src="file:///c:/Users/Marcelo/Pruebas/Forzado_olas.png" alt="Forzado_olas.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7294296" class="outline-3">
+<h3 id="org7294296">[12:10]</h3>
+<div class="outline-text-3" id="text-org7294296">
+<p>
+Estuvimos haciendo varias pruebas y logramos hacer que rompa tipo spilling. Para esto bajamos la altura de agua del <code>1 cm</code> que estaba sobre la parte plana a <code>0.35 cm</code>. Además, usamos un impulso de <code>8 cm</code> durante <code>1 s</code> aproximadamente, con 15/20 s de espera después.
+</p>
+
+<p>
+Lo que notamos es que si es demasiado rápido se vuelve un poco contraproducente porque empieza a salpicar agua y no se concentra tanto la onda. Además hay rebotes, incluso dejándolo descansar 20 segundos.
+</p>
+
+<p>
+La idea ahora es probar con una rampa que suba suavemente al principio para poder concentrar más agua sin que llegue a salpicar.
+</p>
+</div>
+</div>
+<div id="outline-container-org4197ad6" class="outline-3">
+<h3 id="org4197ad6">[16:15]</h3>
+<div class="outline-text-3" id="text-org4197ad6">
+<p>
+Probando con una subida tipo <code>tanh</code> y con una caída tipo lineal en <code>15 s</code> logramos ver mejor la rompiente tipo <code>spilling</code>.
+Juega mucho en que se forme:
+</p>
+<ul class="org-ul">
+<li>La profundidad que está sumergida la paleta del motor. SI está muy poco sumergido salpica mucho y si está muy sumergido se genera una onda larga.</li>
+<li>La distancia del motor a la rampa: Pareciera que cuanto más lejos, y más tiempo para formarse la onda, mejor se ve después.</li>
+<li>La carrera del motor y el tiempo de esa carrera.</li>
+<li>Ahora tiré el homing a <code>130 mm</code> para poder dar carrera de hasta <code>10 cm</code> en tiempos de <code>0.5 s</code>.</li>
+<li>SI llega a salpicar la impulsión se rompe la onda y por lo general manda varias más chicas que disminuyen el efecto de la rompiente.</li>
+</ul>
+<p>
+A mejorar:
+</p>
+<ul class="org-ul">
+<li>LA onda llega a la altura de la pared de PLA (y toca el perfil que lo sostiene).</li>
+<li>Al tirar la playa muy para atrá el peso por flotación hace que pandee, habría que incorporar otro perfil de 2020 para sostenerlo en la punta.</li>
+<li>Además la cuba está inclinada, entonces al tirarlo para atrá deja de estar todo sumergido. AGregamos agua de la canilla, aproximadamente 1/2 mm.</li>
+</ul>
+
+<p>
+Además se llegan a formar si hay mucha agua o la impulsión es muy suave los Precursores de Sommerfeld, con mucha repetibilidad.
+Para cuantificar:
+</p>
+<ul class="org-ul">
+<li>Hay que calcular el número de Iribarren y ver si corresponde con el tipo de rompiente que vemos.</li>
+<li>Calcular el volumen de agua desplazado para saber la altura de la ola y planificar una pared más alta.</li>
+<li>Probablemente hacer la zona plana del final más larga para colocar ahí el sensor, ya que rompen muy cerca de que esta comience.</li>
+</ul>
+
+<p>
+Hay una diferencia notable entre la primer ola, generada con el agua calma, y lo que sucede luego cuando ya hay rebotes y demás. Una idea interesante sería poner un motor con paleta del otro lado, con este sistema tipo <i>noise cancelling</i> y un lazo de control, utilizando uno de los sesnores.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org497456b" class="outline-2">
+<h2 id="org497456b">2026-05-23</h2>
+<div class="outline-text-2" id="text-org497456b">
+</div>
+<div id="outline-container-org7cd011d" class="outline-3">
+<h3 id="org7cd011d">[16:04]</h3>
+<div class="outline-text-3" id="text-org7cd011d">
+<p>
+Ya tengo algo configurado Doom Emacs en Windows. Un par de cosas relevantes:
+</p>
+<ul class="org-ul">
+<li>Hay que correr desde <code>git bash</code> el siguiente comando para que sea verboso el <code>sync</code>: <code>winpty bash /c/Users/Marcelo/.emacs.d/bin/doom sync</code>.</li>
+<li>Para cambiar los keybindings hace falta recargar Emacs completo, además de hacer el <code>sync</code>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdf8e5b0" class="outline-3">
+<h3 id="orgdf8e5b0">[16:15]</h3>
+<div class="outline-text-3" id="text-orgdf8e5b0">
+<p>
+Estoy tratando de configurar para poder pegar imágenes desde el clipboard y explorador de archivos.
+</p>
+</div>
+</div>
+<div id="outline-container-orga6d6ad0" class="outline-3">
+<h3 id="orga6d6ad0">[19:18]</h3>
+<div class="outline-text-3" id="text-orga6d6ad0">
+<p>
+Ya tengo también configurado el paquete <code>citar</code> para la integración con Zotero.
+</p>
+
+<p>
+(NO_ITEM_DATA:berhanuCapillaryWaveTurbulence2020)
+</p>
+</div>
+</div>
+<div id="outline-container-org0cc9533" class="outline-3">
+<h3 id="org0cc9533">[20:07]</h3>
+<div class="outline-text-3" id="text-org0cc9533">
+<p>
+Con Magit, que se llama <code>SPC g g</code> puedo manejar github para el directorio de <code>~\Org</code>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org69fd7fc" class="outline-2">
+<h2 id="org69fd7fc">2026-05-24</h2>
+<div class="outline-text-2" id="text-org69fd7fc">
+</div>
+<div id="outline-container-orgc76dcd6" class="outline-3">
+<h3 id="orgc76dcd6">[12:06]</h3>
+<div class="outline-text-3" id="text-orgc76dcd6">
+<p>
+Ya compilé epdfinfo utilizando <code>MSYS2</code> siguiendo la guía de Claude y ChatGPT. Está todo más o menos funcionando as intended.
+La idea es que usando <code>citar-open-files</code> puedo buscar por mi <code>references.bib</code> un paper y abrirlo con epdfinfo.
+Luego puedo iniciar <code>org-noter</code> y crear una nota asociada a ese pdf, que se guarda en <code>~\Documents\Org\Notes\References</code>.  En este modo puedo seleccionar en el pdf y utilizar <code>org-noter-insert-note</code> para generar una cita con esa quote.
+Por ejemplo, lo estuve probando con: (NO_ITEM_DATA:bonnetonTurbulenceTypeBurgers2022).
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
