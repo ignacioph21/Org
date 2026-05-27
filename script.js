@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
   var overlay = document.createElement('div');
   overlay.id = 'lightbox';
   overlay.innerHTML = '<img id="lightbox-img" src="" />';
@@ -18,4 +18,4 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') overlay.classList.remove('active');
   });
-});
+};
