@@ -1,0 +1,227 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Base ── */
+body {
+  background: #282c34;
+  color: #bbc2cf;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ── Layout ── */
+#content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+#postamble {
+  display: none;
+}
+
+#preamble {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0;
+}
+
+/* ── Headings ── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 2rem 0 0.75rem;
+}
+
+h1 { font-size: 1.5rem; color: #51afef; }
+h2 { font-size: 1.2rem; color: #c678dd; border-bottom: 1px solid #3f444a; padding-bottom: 0.3rem; }
+h3 { font-size: 1rem; color: #98be65; }
+h4 { font-size: 0.95rem; color: #ecbe7b; }
+h5, h6 { font-size: 0.9rem; color: #bbc2cf; }
+
+/* ── Title block ── */
+#org-div-home-and-up { display: none; }
+
+.title {
+  font-size: 1.6rem;
+  color: #51afef;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #5b6268;
+  margin-bottom: 2rem;
+}
+
+/* ── Timestamps ── */
+.timestamp, .timestamp-wrapper {
+  color: #ecbe7b;
+  font-size: 0.85rem;
+}
+
+/* ── Links ── */
+a { color: #51afef; text-decoration: none; }
+a:hover { text-decoration: underline; color: #7ec8e3; }
+a:visited { color: #a9a1e1; }
+
+/* ── Paragraphs ── */
+p { margin: 0.75rem 0; }
+
+/* ── Lists ── */
+ul, ol {
+  margin: 0.75rem 0 0.75rem 1.5rem;
+}
+
+li { margin: 0.25rem 0; }
+
+/* ── Code ── */
+code {
+  background: #21242b;
+  color: #98be65;
+  font-family: inherit;
+  font-size: 0.88em;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  border: 1px solid #3f444a;
+}
+
+pre {
+  background: #21242b;
+  border: 1px solid #3f444a;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.88em;
+  color: #bbc2cf;
+}
+
+/* org src block label */
+.org-src-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+/* ── Blockquote ── */
+blockquote {
+  border-left: 3px solid #c678dd;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: #8a95a3;
+  background: #21242b;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ── Table ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+th {
+  background: #21242b;
+  color: #c678dd;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #3f444a;
+  text-align: left;
+}
+
+td {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #3f444a;
+  color: #bbc2cf;
+}
+
+tr:nth-child(even) td { background: #21242b; }
+
+/* ── Images ── */
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* ── Figures ── */
+.figure {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.figure p {
+  font-size: 0.8rem;
+  color: #5b6268;
+  margin-top: 0.4rem;
+}
+
+/* ── TOC ── */
+#table-of-contents {
+  background: #21242b;
+  border: 1px solid #3f444a;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 0.88rem;
+}
+
+#table-of-contents h2 {
+  font-size: 0.8rem;
+  color: #5b6268;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  margin: 0 0 0.75rem;
+}
+
+#table-of-contents ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+#table-of-contents li { margin: 0.2rem 0; }
+#table-of-contents a { color: #bbc2cf; }
+#table-of-contents a:hover { color: #51afef; }
+
+/* ── Outline / drawer ── */
+.outline-2, .outline-3, .outline-4 {
+  margin-top: 1.5rem;
+}
+
+/* ── Tags ── */
+.tag {
+  font-size: 0.75rem;
+  background: #3f444a;
+  color: #5b6268;
+  padding: 0.1em 0.5em;
+  border-radius: 4px;
+  margin-left: 0.4rem;
+}
+
+/* ── Horizontal rule ── */
+hr {
+  border: none;
+  border-top: 1px solid #3f444a;
+  margin: 2rem 0;
+}
+
+/* ── Footnotes ── */
+.footdef {
+  font-size: 0.82rem;
+  color: #5b6268;
+  border-top: 1px solid #3f444a;
+  padding-top: 0.5rem;
+  margin-top: 2rem;
+}
