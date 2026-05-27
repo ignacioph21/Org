@@ -12,6 +12,8 @@
   - [[#1110][[11:10]]]
   - [[#1358][[13:58]]]
   - [[#1459][[14:59]]]
+- [[#2026-05-27][2026-05-27]]
+  - [[#1020][[10:20]]]
 
 * 2026-05-26
 
@@ -89,3 +91,22 @@ Los espectros para las tres series temporales son los siguientes.
 
 #+ATTR_ORG: :width 600
 [[file:Assets/Day_26/espectros-varios-lineal.png]]
+
+* 2026-05-27
+
+** [10:20]
+Sigo con la solución numérica a la Ecuación de Burgers. Una cosa que pensé ayer es que los estados $v(x, t_0)$ se parecen mucho a los estados que medimos para $\eta(x_0, t)$ después de la rompiente.
+
+Al iniciar con un estado aleatorio y dejarlo evolucionar obtenemos lo siguiente:
+
+
+La serie temporal en el centro es la siguiente:
+
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_27/Burgers-serie-temporal-numérica.png]]
+
+Con un espectro asociado (en distintas posiciones hasta la mitad) que sigue la Ley predicha por Bonneton:
+#+ATTR_ORG: :width 600
+[[file:Assets/Day_27/Burgers-espetros-num_ricos.png]]
+
+Donde la línea punteada representa el $csch^2(f)$ y la lineal es la aproximación a $f\ll1$.
