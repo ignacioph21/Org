@@ -243,9 +243,9 @@ hr {
 }
 
 #lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  width: auto;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  width: auto !important;
   border-radius: 4px;
   cursor: zoom-out;
 }
