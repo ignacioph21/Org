@@ -16,6 +16,9 @@
   - [[#1020][[10:20]]]
   - [[#1218][[12:18]]]
   - [[#1246][[12:46]]]
+  - [[#1429][[14:29]]]
+  - [[#1439][[14:39]]]
+  - [[#1445][[14:45]]]
 
 * 2026-05-26
 
@@ -24,30 +27,30 @@ Estoy empezado a analizar las mediciones de la semana pasada con la rampa en la 
 
 El Viernes pasado había llegado a analizar la medición del sensor posterior a la rompiente para el forzado con decaimiento lineal, cuya serie temporal fue la siguiente:
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/Serie_completa_un_Sensor.png]]
+[[file:../../../Assets/2026/05/Day_26/Serie_completa_un_Sensor.png]]
 
 Y el zoom para uno de los segmentos de 15 segundos (que se repite) es:
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/Serie_completa_un_Sensor_zoom.png]]
+[[file:../../../Assets/2026/05/Day_26/Serie_completa_un_Sensor_zoom.png]]
 
 La PSD usando Welch con ventanas de 20 segundos es el siguiente:
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/Espectro_un_sensor.png]]
+[[file:../../../Assets/2026/05/Day_26/Espectro_un_sensor.png]]
 
 Con la lineal naranja de pendiente $f^{-2}$. Aunque a diferencia de lo predicho por [cite:@bonnetonEnergyDissipationSpectra2023] la cola resulta distinta a una caída exponencial, y se ven las pendientes de WWT.
 
 A modo de comparación, la serie temporal que usa Bonneton, que es tomada de una gran facility, medida por van Noorloos en [cite:@vannoorloosEnergyTransferShort] se ve así:
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/serie-temporal-van-Noorloos-2003.png]]
+[[file:../../../Assets/2026/05/Day_26/serie-temporal-van-Noorloos-2003.png]]
 
 ** [09:20]
 La serie temporal para el sensor posterior a la rompiente bajo el forzado con decaimiento de una segunda tangente hiperbólica es la siguiente:
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/serie-temporal-tanh-ambas.png]]
+[[file:../../../Assets/2026/05/Day_26/serie-temporal-tanh-ambas.png]]
 
 En general resulta bastante parecida a la de la caída lineal.
 
@@ -56,7 +59,7 @@ En general resulta bastante parecida a la de la caída lineal.
 El espectro en este caso es el siguiente:
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/Espectro_un_sensor_tanhs_ambas.png]]
+[[file:../../../Assets/2026/05/Day_26/Espectro_un_sensor_tanhs_ambas.png]]
 
 ** [09:48]
 Una idea para el canal podría ser directamente una pecera de 10 cm de ancho con una tercera placa de vidrio en el medio que se pueda mover para regular el ancho utilizable.
@@ -64,12 +67,12 @@ Una idea para el canal podría ser directamente una pecera de 10 cm de ancho con
 ** [09:56]
 A continuación los resultados para el forzado con una función senoidal de =7 cm= de carrera y =1 s= de periodo.
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/serie-temporal-rompiente-sins.png]]
+[[file:../../../Assets/2026/05/Day_26/serie-temporal-rompiente-sins.png]]
 
 Y su espectro asociado:
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/Espectro_un_sensor_sins.png]]
+[[file:../../../Assets/2026/05/Day_26/Espectro_un_sensor_sins.png]]
 
 
 ** [10:34]
@@ -82,7 +85,7 @@ Para que Fede pueda medir mañana saqué la rampa y los sensores, aunque quedaro
 Ya analicé las mediciones con tres sensores donde la caída es lineal:
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/Varios-sensores-lineal.png]]
+[[file:../../../Assets/2026/05/Day_26/Varios-sensores-lineal.png]]
 
 La cuestión me parece que va a seguir siendo el tema de la calibración distinta entre los sensores. Si pudiésemos mandar una onda de altura constante se podría calibrar con eso.
 
@@ -92,7 +95,7 @@ La altura 1 se corresponde al más lejano, la 2 al intermedio y la 3 al más cer
 Los espectros para las tres series temporales son los siguientes.
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_26/espectros-varios-lineal.png]]
+[[file:../../../Assets/2026/05/Day_26/espectros-varios-lineal.png]]
 
 * 2026-05-27
 
@@ -102,16 +105,16 @@ Sigo con la solución numérica a la Ecuación de Burgers. Una cosa que pensé a
 Al iniciar con un estado aleatorio y dejarlo evolucionar obtenemos lo siguiente:
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_27/Burgers-series-espaciales-numéricas.png]]
+[[file:../../../Assets/2026/05/Day_27/Burgers-series-espaciales-numéricas.png]]
 
 La serie temporal en el centro es la siguiente:
 
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_27/Burgers-serie-temporal-numérica.png]]
+[[file:../../../Assets/2026/05/Day_27/Burgers-serie-temporal-numérica.png]]
 
 Con un espectro asociado (en distintas posiciones hasta la mitad) que sigue la Ley predicha por Bonneton:
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_27/Burgers-espetros-num_ricos.png]]
+[[file:../../../Assets/2026/05/Day_27/Burgers-espetros-num_ricos.png]]
 
 Donde la línea punteada representa el $csch^2(f)$ y la lineal es la aproximación a $f\ll1$.
 
@@ -121,4 +124,13 @@ Estoy intentando configurar =org-pusblish= para poder exportar todo el Lab-Journ
 ** [12:46]
 Ya pareciera estar funcionando, lo siguiente es una prueba para ver si las nuevas imágenes se atualizan bien, sin duplciarlas.
 #+ATTR_ORG: :width 600
-[[file:Assets/Day_27/prueba-update-Pages.png]]
+[[file:../../../Assets/2026/05/Day_27/prueba-update-Pages.png]]
+
+** [14:29]
+Pareciera ser que las soluciones de la Ecuación de Burgers tienen un signo menos.
+
+** [14:39]
+Cambié la estructura de un =/Assets= por mes a un único =/Org/Assets=.
+
+** [14:45]
+Ya renombré todas las imágenes del diario hasta ahora con la nueva estructura.
