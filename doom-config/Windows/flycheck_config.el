@@ -190,6 +190,21 @@
 
 
 ;; ============================================================
+;; Automatic git commit and push.
+;; ============================================================
+
+
+(defun my/journal-sync ()
+  (interactive)
+  (async-shell-command
+   "git add . && git commit -m \"Auto commit of Lab-Journal\" && git push"))
+
+(defun my/journal-push ()
+  (interactive)
+  (async-shell-command
+   "git push"))
+
+;; ============================================================
 ;; ⌨️ KEYBINDINGS (DOOM LEADER)
 ;;
 ;; Namespace:
@@ -200,7 +215,10 @@
         (:prefix ("n j" . "journal")
         :desc "Fast journal entry" "j" #'my/journal-add-entry
         :desc "Open journal" "o" #'my/journal-open
-        :desc "Capture journal entry" "c" #'my/journal-capture)))
+        :desc "Capture journal entry" "c" #'my/journal-capture
+        :desc "Journal sync" "g" #'my/journal-sync
+        :desc "Journal push" "p" #'my/journal-push
+        :desc "Export Lab Journal" "e" #'my/lab-journal-export-and-push)))
 
 
 (let ((imagemagick-path "C:/Program Files/ImageMagick-7.1.2-Q16-HDRI")
@@ -341,6 +359,27 @@
         python-shell-interpreter-args "-i --simple-prompt --no-color-info"))
 
 
+;; Al correr Ipython el encoding por defecto es 'cp1252' y hace cosas raras con los tildes.
+
+(set-language-environment "UTF-8")
+(prefer-coding-system 'utf-8)
+
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+
+(setenv "PYTHONUTF8" "1")
+(setenv "IPYTHONIOENCODING" "utf-8")
+
+
+
+
+
+
+
+
+
 (after! org
   (setq org-preview-latex-default-process 'dvisvgm))
 
@@ -429,3 +468,122 @@
   (setq pdf-info-epdfinfo-program "C:\\msys64\\mingw64\\bin\\epdfinfo.exe")
   (setq-default pdf-view-display-size 'fit-page)
   (pdf-tools-install :no-query))
+
+
+
+
+;;; ─────────────────────────────────────────────────────────────
+;;; Exportaciones
+;;; ─────────────────────────────────────────────────────────────
+
+;; Para ignorar los links a las fechas en las toc al exportar el Journal.
+
+(after! org
+  (setq org-export-with-broken-links t))
+
+;; Ahora para exportar automáticamente a Git Pages con Org-publish :
+
+(after! org
+
+  (require 'ox-publish)
+
+
+  (setq org-publish-project-alist
+        '(
+
+          ("lab-journal-org"
+
+           :base-directory "~/Documents/Org/Lab-Journal/"
+           :base-extension "org"
+
+           :publishing-directory "~/Documents/Org/docs/"
+
+           :recursive t
+
+           :publishing-function org-html-publish-to-html
+
+           :with-author nil
+           :with-creator nil
+           :with-toc t
+           :section-numbers nil
+           :time-stamp-file nil
+
+           :auto-sitemap t
+           :sitemap-filename "index.org"
+           :sitemap-title "Lab Journal"
+
+           :sitemap-style list
+           :sitemap-sort-files anti-chronologically
+
+           :exclude ".*index.org")
+
+          ("lab-journal-assets"
+
+           :base-directory "~/Documents/Org/Lab-Journal/"
+
+           :base-extension
+           "png\\|jpg\\|jpeg\\|gif\\|svg\\|pdf\\|mp4"
+
+           :publishing-directory "~/Documents/Org/docs/"
+
+           :recursive t
+
+           :publishing-function
+           org-publish-attachment)
+
+          ("lab-journal"
+
+           :components
+           ("lab-journal-org"
+            "lab-journal-assets"))))
+
+  (defun my/lab-journal-export-and-push ()
+    (interactive)
+
+    (save-some-buffers t)
+
+    ;; rebuild sitemap + incremental publish
+    (org-publish "lab-journal")
+
+    (async-shell-command
+     (concat
+      "cd ~/Documents/Org && "
+      "git add . && "
+      "git diff --cached --quiet || "
+      "(git commit -m \"Auto export for the Lab Journal.\" && git push)")))
+
+  (map! :leader
+        :prefix ("n j" . "journal")
+
+        :desc "Export Lab Journal"
+        "e" #'my/lab-journal-export-and-push)
+
+  (defun my/lab-journal-full-rebuild ()
+    (interactive)
+
+    (org-publish-remove-all-timestamps)
+
+    (org-publish "lab-journal" t))
+
+  (map! :leader
+        :prefix ("n j" . "journal")
+
+        :desc "Full rebuild Lab Journal"
+        "R" #'my/lab-journal-full-rebuild))
+
+;; (defun my/lab-journal-export-and-push ()
+;;   (interactive)
+
+;;   ;; guardar buffers
+;;   (save-some-buffers t)
+
+;;   ;; export incremental
+;;   (org-publish "lab-journal")
+
+;;   ;; git push
+;;   (async-shell-command
+;;    (concat
+;;     "cd ~/Documents/Org/Lab-Journal && "
+;;     "git add . && "
+;;     "git commit -m \"Auto export for the Lab Journal.\" && "
+;;     "git push")))
