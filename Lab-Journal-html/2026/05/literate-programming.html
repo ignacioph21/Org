@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Literate Programming</title>
+<meta name="generator" content="Org Mode" />
+<link rel='stylesheet' href='../../../style.css' />
+<script defer src='../../../script.js'></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Literate Programming</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org394c0ad">Ejecución básica de código.</a></li>
+<li><a href="#orgf522946">Properties</a></li>
+<li><a href="#org281e66c">Sesiones</a></li>
+<li><a href="#orgbc18e70">Código inline</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org394c0ad" class="outline-2">
+<h2 id="org394c0ad">Ejecución básica de código.</h2>
+<div class="outline-text-2" id="text-org394c0ad">
+<p>
+Para crear un bloque de código en archivos <code>.org</code> hacemos <code>&lt;s TAB</code> e introducimos el lenguaje, que en este caso es Python.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><code><span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Hello World!"</span>)
+</code></pre>
+</div>
+
+<p>
+Para correr el código del bloque correspondiente se usa <code>C-c C-c</code>. EL resultado que se imprima dependerá del <i>header-arg</i> que se utilice en cada caso. Por ejemplo, si es <code>output</code> el resultado será el texto impreso en la consola mediante los <code>prints</code>.
+</p>
+
+
+<p>
+Mientras que si es <code>value</code> (que de momento está puesto por defecto) será lo último que se devuelva con <code>return</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><code><span style="color: #51afef;">return</span> 5
+</code></pre>
+</div>
+
+<p>
+Además, es importante configurar bien el <code>pyvenv</code> ya que tengo configurado por defecto que Python se ejecute con <code>Ipython</code> que, de momento, solo se encuentra instalado en el <code>myptv</code> de <code>miniconda3</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf522946" class="outline-2">
+<h2 id="orgf522946">Properties</h2>
+<div class="outline-text-2" id="text-orgf522946">
+<p>
+Se puede configurar que todo el archivo tenga por defecto la salida de <code>output</code> usando el <code>Property</code> al inicio del archivo.
+</p>
+</div>
+</div>
+<div id="outline-container-org281e66c" class="outline-2">
+<h2 id="org281e66c">Sesiones</h2>
+<div class="outline-text-2" id="text-org281e66c">
+<p>
+Además, es posible configurar una sesión de Python para que se ejecute de fondo, pudiendo así recordar lo ejecutado en bloque anteriores, en comparación a que sean independientes. De esta forma se tendría casi un equivalente a un <i>Jupyter Notebook</i>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><code><span style="color: #dcaeea;">a</span> <span style="color: #51afef;">=</span> 5
+</code></pre>
+</div>
+
+<p>
+Y el siguiente bloque usa ese resultado.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><code><span style="color: #c678dd;">print</span>(a)
+</code></pre>
+</div>
+
+<p>
+Para esto se usa el <code>header-args</code> de <code>:session</code>. Además se pueden usar distintas sesiones nombrándolas, por ejemplo, <code>:session *py*</code> es una sesión llamada <code>py</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbc18e70" class="outline-2">
+<h2 id="orgbc18e70">Código inline</h2>
+<div class="outline-text-2" id="text-orgbc18e70">
+<p>
+Se puede ejecutar codigo inline utilizando: <code>Hello World!</code>.
+Otro ejemplo: <code>100</code>.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

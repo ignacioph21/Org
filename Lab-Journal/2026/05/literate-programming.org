@@ -1,0 +1,51 @@
+#+title: Literate Programming
+#+PROPERTY: header-args:python :results output :session
+
+* Ejecución básica de código.
+Para crear un bloque de código en archivos =.org= hacemos ~<s TAB~ e introducimos el lenguaje, que en este caso es Python.
+
+#+begin_src python
+print("Hello World!")
+#+end_src
+
+#+RESULTS:
+: Hello World!
+
+Para correr el código del bloque correspondiente se usa ~C-c C-c~. EL resultado que se imprima dependerá del /header-arg/ que se utilice en cada caso. Por ejemplo, si es =output= el resultado será el texto impreso en la consola mediante los =prints=.
+
+
+Mientras que si es =value= (que de momento está puesto por defecto) será lo último que se devuelva con =return=:
+
+#+begin_src python :results value
+return 5
+#+end_src
+
+#+RESULTS:
+
+Además, es importante configurar bien el =pyvenv= ya que tengo configurado por defecto que Python se ejecute con =Ipython= que, de momento, solo se encuentra instalado en el =myptv= de =miniconda3=.
+
+* Properties
+Se puede configurar que todo el archivo tenga por defecto la salida de =output= usando el =Property= al inicio del archivo.
+
+
+* Sesiones
+Además, es posible configurar una sesión de Python para que se ejecute de fondo, pudiendo así recordar lo ejecutado en bloque anteriores, en comparación a que sean independientes. De esta forma se tendría casi un equivalente a un /Jupyter Notebook/.
+
+#+begin_src python :results none
+a = 5
+#+end_src
+
+Y el siguiente bloque usa ese resultado.
+
+#+begin_src python
+print(a)
+#+end_src
+
+#+RESULTS:
+: 5
+
+Para esto se usa el =header-args= de =:session=. Además se pueden usar distintas sesiones nombrándolas, por ejemplo, =:session *py*= es una sesión llamada =py=.
+
+* Código inline
+Se puede ejecutar codigo inline utilizando: src_python{print("Hello World!")} {{{results(=Hello World!=)}}}.
+Otro ejemplo: src_python[:results value]{10**2}.

@@ -210,4 +210,4 @@ Para el de subida y bajada como tangentes hiperbólicas queda:
 Ahora me surge la duda de si las oscilaciones en el primer sensor respecto al motor (channel 3) son algo físico, al estilo de los precursores de Sommerfeld, o un artefacto del sensor.
 
 ** [13:31]
-Para pegar en la línea de comando de vim es con ~Shift Insert~. A
+Para pegar en la línea de comando de vim es con ~Shift Insert~.

@@ -1,7 +1,7 @@
 #+TITLE: Journal Week 20
 #+OPTIONS: toc:2
 
-* Table of Contents :TOC:noexport:
+* Table of Contents :TOC:noexport: 
 - [[#2026-05-15][2026-05-15]]
   - [[#1046][[10:46]]]
   - [[#1137][[11:37]]]
@@ -49,7 +49,7 @@ Ahora estoy copiando las fotos de la cámara 1 al Pendrive para poder analizarla
 ** [15:14]
 Esta es la forma de mostrar imágenes. El comando para recargar es ~C-c C-x C-v~.
 #+ATTR_ORG: :width 400
-[[file:~/Pruebas/frame_0105.png]]
+[[file:../../../Assets/2026/05/Day_13/frame_0105.png]]
 
 ** [15:36]
 Para que se muestre la imagen inline hay que evitar poner una descripción al link, tiene que estar crudo.
@@ -66,5 +66,4 @@ Al apretar ~C-z~ se entra en el modo de cursor naranja. Esto significa que se sa
 
 ** [16:41]
  Estuve aprendiendo sobre cómo funciona la /literate programming/ en Org Mode utilizando Babel.
-  [[file:~/Pruebas/literate-programming.org][Literate Programming]]
-
+  [[file:literate-programming.org][Literate Programming]]

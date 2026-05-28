@@ -159,7 +159,7 @@ Estoy siguiendo las intrucciones de [[https://www.youtube.com/watch?v=IK25r7jOr4
 Ya montamos la rampa en la cuba, ahora se está terminando de llenar.
 Para el forzado uso
 
-[[file:/../../../Assets/2026/05/Day_18/Forzado_olas.png]]
+[[file:../../../Assets/2026/05/Day_21/Forzado_olas.png]]
 
 ** [12:10]
 Estuvimos haciendo varias pruebas y logramos hacer que rompa tipo spilling. Para esto bajamos la altura de agua del =1 cm= que estaba sobre la parte plana a =0.35 cm=. Además, usamos un impulso de =8 cm= durante =1 s= aproximadamente, con 15/20 s de espera después.
