@@ -1,5 +1,5 @@
 #+TITLE: Journal Week 22
-#+OPTIONS: toc:2
+#+OPTIONS: toc:nil
 
 * Table of Contents :TOC:
 - [[#2026-05-26][2026-05-26]]
@@ -172,3 +172,7 @@ Sigo configurando la Github Page del cuaderno. Idea próxima son botones de sigu
 Ya funciona la búsqueda mediante Pagefind. Lo que conflictuaba era que por la configuración de =Jekyll= en =Github Pages= ignora los direcotrios que empiezan con underscore, entonces ignoraba mi =_pagefind= dentro de =Lab-Journal-html=.
 
 Puedo buscar coincidencias exactas en el buscador utilizando comillas como en Google. Sin comillas las busca en la misma página sin más hasta donde entiendo.
+
+También se puede buscar:
+- =-palabra= excluye la palabra.
+- =pal*= busca como prefijo.
