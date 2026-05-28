@@ -23,6 +23,8 @@
   - [[#1713][[17:13]]]
   - [[#1717][[17:17]]]
   - [[#1727][[17:27]]]
+- [[#2026-05-28][2026-05-28]]
+  - [[#0831][[08:31]]]
 
 * 2026-05-26
 
@@ -159,3 +161,8 @@ Está funcionando bien, pero para que cargue todo bien al actualizarse hay que h
 
 ** [17:27]
 Para poder indexar el contenido de las entradas y buscar entre ellas necesido utilizar el paquete =pagefind= mediante =node.js=.
+
+* 2026-05-28
+
+** [08:31]
+Sigo configurando la Github Page del cuaderno. Idea próxima son botones de siguiente y anterior para navegar más sencillamente entre entradas.

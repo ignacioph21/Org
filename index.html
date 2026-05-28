@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lab Journal</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link href="/Lab-Journal-html/_pagefind/pagefind-ui.css" rel="stylesheet" />
-  <script src="/Lab-Journal-html/_pagefind/pagefind-ui.js"></script>
+  <link href="Lab-Journal-html/_pagefind/pagefind-ui.css" rel="stylesheet" />
+  <script src="Lab-Journal-html/_pagefind/pagefind-ui.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: #282c34; color: #bbc2cf; font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace; }
@@ -91,7 +91,7 @@
       document.getElementById('panel-' + name).classList.add('active');
 
       if (name === 'search' && !searchInitialized) {
-        new PagefindUI({ element: '#pagefind-search', bundlePath: '/Lab-Journal-html/_pagefind/', showImages: false, translations: { placeholder: 'Buscar en el journal...' } });
+        new PagefindUI({ element: '#pagefind-search', bundlePath: 'Lab-Journal-html/_pagefind/', showImages: false, translations: { placeholder: 'Buscar en el journal...' } });
         searchInitialized = true;
       }
     }
