@@ -1,7 +1,7 @@
 #+TITLE: Journal Week 22
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:2
 
-* Table of Contents :TOC:
+* Table of Contents :TOC:noexport:
 - [[#2026-05-26][2026-05-26]]
   - [[#0853][[08:53]]]
   - [[#0920][[09:20]]]
