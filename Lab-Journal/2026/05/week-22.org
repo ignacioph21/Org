@@ -31,6 +31,8 @@
   - [[#0857][[08:57]]]
   - [[#0956-1][[09:56]]]
   - [[#1140][[11:40]]]
+  - [[#1318][[13:18]]]
+  - [[#1331][[13:31]]]
 
 * Referencias:
 #+PRINT_BIBLIOGRAPHY:
@@ -194,3 +196,18 @@ Ajuste (en log(PSD)) con el modelo de $A/f_0^2\;csch^2(f/f_0)$ los espectros de 
 
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/05/Day_28/espectros-tanhs-lineal-ajustes.png]]
+
+** [13:18]
+Para el forzado sinusoidal los resultados son los siguientes:
+
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/05/Day_28/todos-sins-alturas.png]]
+
+Para el de subida y bajada como tangentes hiperbólicas queda:
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/05/Day_28/todos-tanhs-ambas.png]]
+
+Ahora me surge la duda de si las oscilaciones en el primer sensor respecto al motor (channel 3) son algo físico, al estilo de los precursores de Sommerfeld, o un artefacto del sensor.
+
+** [13:31]
+Para pegar en la línea de comando de vim es con ~Shift Insert~. A
