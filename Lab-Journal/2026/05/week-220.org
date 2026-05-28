@@ -1,7 +1,10 @@
 #+TITLE: Journal Week 22
 #+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ~/Documents/Org/references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
 
 * Table of Contents :TOC:noexport:
+- [[#referencias][Referencias:]]
 - [[#2026-05-26][2026-05-26]]
   - [[#0853][[08:53]]]
   - [[#0920][[09:20]]]
@@ -26,6 +29,9 @@
 - [[#2026-05-28][2026-05-28]]
   - [[#0831][[08:31]]]
   - [[#0857][[08:57]]]
+
+* Referencias:
+#+PRINT_BIBLIOGRAPHY:
 
 * 2026-05-26
 
@@ -177,5 +183,4 @@ También se puede buscar:
 - =-palabra= excluye la palabra.
 - =pal*= busca como prefijo.
 
-  [cite:@bonnetonTurbulenceTypeBurgers2022]
-  [cite:@bonnetonTurbulenceTypeBurgers2022]
+
