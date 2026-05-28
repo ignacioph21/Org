@@ -25,6 +25,7 @@
   - [[#1727][[17:27]]]
 - [[#2026-05-28][2026-05-28]]
   - [[#0831][[08:31]]]
+  - [[#0857][[08:57]]]
 
 * 2026-05-26
 
@@ -166,3 +167,6 @@ Para poder indexar el contenido de las entradas y buscar entre ellas necesido ut
 
 ** [08:31]
 Sigo configurando la Github Page del cuaderno. Idea próxima son botones de siguiente y anterior para navegar más sencillamente entre entradas.
+
+** [08:57]
+Ya funciona la búsqueda mediante Pagefind. Lo que conflictuaba era que por la configuración de =Jekyll= en =Github Pages= ignora los direcotrios que empiezan con underscore, entonces ignoraba mi =_pagefind= dentro de =Lab-Journal-html=.
