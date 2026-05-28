@@ -170,3 +170,5 @@ Sigo configurando la Github Page del cuaderno. Idea próxima son botones de sigu
 
 ** [08:57]
 Ya funciona la búsqueda mediante Pagefind. Lo que conflictuaba era que por la configuración de =Jekyll= en =Github Pages= ignora los direcotrios que empiezan con underscore, entonces ignoraba mi =_pagefind= dentro de =Lab-Journal-html=.
+
+Puedo buscar coincidencias exactas en el buscador utilizando comillas como en Google. Sin comillas las busca en la misma página sin más hasta donde entiendo.
