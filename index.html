@@ -91,7 +91,7 @@
       document.getElementById('panel-' + name).classList.add('active');
 
       if (name === 'search' && !searchInitialized) {
-        new PagefindUI({ element: '#pagefind-search', bundlePath: 'Lab-Journal-html/pagefind/', showImages: false, translations: { placeholder: 'Buscar en el journal...' } });
+        new PagefindUI({ element: '#pagefind-search', bundlePath: '/Org/Lab-Journal-html/pagefind/', showImages: false, translations: { placeholder: 'Buscar en el journal...' } });
         searchInitialized = true;
       }
     }
