@@ -193,16 +193,16 @@
 ;; Automatic git commit and push.
 ;; ============================================================
 
-
 (defun my/journal-sync ()
   (interactive)
-  (async-shell-command
-   "git add . && git commit -m \"Auto commit of Lab-Journal\" && git push"))
+  (let ((default-directory "~/Documents/Org/"))
+    (async-shell-command
+     "git add . && git commit -m \"Auto commit of Lab-Journal\" && git push")))
 
 (defun my/journal-push ()
   (interactive)
-  (async-shell-command
-   "git push"))
+  (let ((default-directory "~/Documents/Org/"))
+    (async-shell-command "git push")))
 
 ;; ============================================================
 ;; ⌨️ KEYBINDINGS (DOOM LEADER)
@@ -240,15 +240,27 @@
   ;; --------------------------------------------------
   ;; Assets directory: .../Lab-Journal/YYYY/MM/Assets/DD/
   ;; --------------------------------------------------
-  (defun my/org-download-dir ()
-    "Assets/DD folder next to current journal file."
-    (when buffer-file-name
-      (let* ((base-dir (file-name-directory buffer-file-name))
-             (day (format-time-string "Day_%d"))
-             (assets-dir (expand-file-name (concat "Assets/" day) base-dir)))
-        (unless (file-directory-p assets-dir)
-          (make-directory assets-dir t))
-        assets-dir)))
+  ;; (defun my/org-download-dir ()
+  ;;   "Assets/DD folder next to current journal file."
+  ;;   (when buffer-file-name
+  ;;     (let* ((base-dir (file-name-directory buffer-file-name))
+  ;;            (day (format-time-string "Day_%d"))
+  ;;            (assets-dir (expand-file-name (concat "Assets/" day) base-dir)))
+  ;;       (unless (file-directory-p assets-dir)
+  ;;         (make-directory assets-dir t))
+  ;;       assets-dir)))
+;; --------------------------------------------------
+;; Assets directory:
+;; ~/Documents/Org/Assets/Lab-Journal/YYYY/MM/Day_DD/
+;; --------------------------------------------------
+
+(defun my/org-download-dir ()
+  (let ((dir (expand-file-name
+              (format-time-string
+               "~/Documents/Org/Assets/%Y/%m/Day_%d"))))
+    (make-directory dir t)
+    dir))
+
 
   ;; --------------------------------------------------
   ;; Paste image: captura manual con magick, inserta link
@@ -484,106 +496,95 @@
 ;; Ahora para exportar automáticamente a Git Pages con Org-publish :
 
 (after! org
-
   (require 'ox-publish)
-
-
   (setq org-publish-project-alist
         '(
-
-          ("lab-journal-org"
-
+          ("lab-journal"
            :base-directory "~/Documents/Org/Lab-Journal/"
            :base-extension "org"
-
-           :publishing-directory "~/Documents/Org/docs/"
-
+           :publishing-directory "~/Documents/Org/Lab-Journal-html/"
            :recursive t
-
            :publishing-function org-html-publish-to-html
-
            :with-author nil
            :with-creator nil
            :with-toc t
            :section-numbers nil
            :time-stamp-file nil
-
+           :html-head-include-default-style nil
+           :html-head-include-scripts nil
+           :html-head "<link rel='stylesheet' href='../../../style.css' />
+<script defer src='../../../script.js'></script>"
            :auto-sitemap t
            :sitemap-filename "index.org"
            :sitemap-title "Lab Journal"
-
            :sitemap-style list
-           :sitemap-sort-files anti-chronologically
+           :sitemap-sort-files anti-chronologically)))
 
-           :exclude ".*index.org")
-
-          ("lab-journal-assets"
-
-           :base-directory "~/Documents/Org/Lab-Journal/"
-
-           :base-extension
-           "png\\|jpg\\|jpeg\\|gif\\|svg\\|pdf\\|mp4"
-
-           :publishing-directory "~/Documents/Org/docs/"
-
-           :recursive t
-
-           :publishing-function
-           org-publish-attachment)
-
-          ("lab-journal"
-
-           :components
-           ("lab-journal-org"
-            "lab-journal-assets"))))
+  (defun my/lab-journal-generate-index ()
+    "Genera search-index.json en el root del repo."
+    (let* ((docs-dir (expand-file-name "~/Documents/Org/Lab-Journal-html/"))
+           (output-file (expand-file-name "~/Documents/Org/search-index.json"))
+           (files (directory-files-recursively docs-dir "\\.html$"))
+           (entries
+            (delq nil
+                  (mapcar
+                   (lambda (file)
+                     (let* ((rel (file-relative-name file (expand-file-name "~/Documents/Org/")))
+                            (parts (split-string rel "/"))
+                            (year  (and (>= (length parts) 4) (nth 1 parts)))
+                            (month (and (>= (length parts) 4) (nth 2 parts)))
+                            (name  (file-name-sans-extension (file-name-nondirectory file)))
+                            (title (replace-regexp-in-string "[-_]" " " name)))
+                       (when (and year month
+                                  (not (string= name "index")))
+                         (format "{\"title\":\"%s\",\"url\":\"%s\",\"year\":\"%s\",\"month\":\"%s\"}"
+                                 title rel year month))))
+                   files))))
+      (with-temp-file output-file
+        (insert "[" (mapconcat #'identity entries ",") "]"))))
 
   (defun my/lab-journal-export-and-push ()
     (interactive)
-
     (save-some-buffers t)
-
-    ;; rebuild sitemap + incremental publish
     (org-publish "lab-journal")
-
+    (my/lab-journal-generate-index)
     (async-shell-command
-     (concat
-      "cd ~/Documents/Org && "
-      "git add . && "
-      "git diff --cached --quiet || "
-      "(git commit -m \"Auto export for the Lab Journal.\" && git push)")))
-
-  (map! :leader
-        :prefix ("n j" . "journal")
-
-        :desc "Export Lab Journal"
-        "e" #'my/lab-journal-export-and-push)
+    (concat
+    "cd C:/Users/Marcelo/Documents/Org && "
+    "npx pagefind --site Lab-Journal-html --output-path Lab-Journal-html/pagefind && "
+    "git add . && "
+    "git diff --cached --quiet || "
+    "(git commit -m \"Auto export for the Lab Journal.\" && git push)")))
 
   (defun my/lab-journal-full-rebuild ()
     (interactive)
-
     (org-publish-remove-all-timestamps)
+    (org-publish "lab-journal" t)
+    (my/lab-journal-generate-index)
+    (async-shell-command
+    "cd C:/Users/Marcelo/Documents/Org && npx pagefind --site Lab-Journal-html --output-path Lab-Journal-html/pagefind"))
 
-    (org-publish "lab-journal" t))
-
-  (map! :leader
+(map! :leader
         :prefix ("n j" . "journal")
-
+        :desc "Export Lab Journal"
+        "e" #'my/lab-journal-export-and-push
         :desc "Full rebuild Lab Journal"
         "R" #'my/lab-journal-full-rebuild))
 
-;; (defun my/lab-journal-export-and-push ()
-;;   (interactive)
+(defun my/org-export-fix-timestamp-links (text backend info)
+  "Convierte links de timestamp a texto plano al exportar."
+  (when (org-export-derived-backend-p backend 'html)
+    (replace-regexp-in-string
+     "<a href=\"[^\"]*\">\\(\\[[0-9:]\\+\\]\\)</a>"
+     "\\1"
+     text)))
 
-;;   ;; guardar buffers
-;;   (save-some-buffers t)
+(add-hook 'org-export-filter-final-output-functions
+          #'my/org-export-fix-timestamp-links)
 
-;;   ;; export incremental
-;;   (org-publish "lab-journal")
-
-;;   ;; git push
-;;   (async-shell-command
-;;    (concat
-;;     "cd ~/Documents/Org/Lab-Journal && "
-;;     "git add . && "
-;;     "git commit -m \"Auto export for the Lab Journal.\" && "
-;;     "git push")))
+(after! org
+  (require 'oc-csl)
+  (setq org-cite-export-processors
+        '((html . (csl "chicago-author-date.csl"))
+          (t    . (csl "chicago-author-date.csl"))))
+  (setq org-cite-csl-styles-dir "~/Zotero/styles/"))
