@@ -1,12 +1,50 @@
+#+title: Config
+
+* Tablo of Contents :toc:
+- [[#general-emacs-config][General Emacs Config]]
+- [[#doom-emacs-config][Doom Emacs Config]]
+- [[#meta][Meta]]
+  - [[#ripgrep][Ripgrep]]
+  - [[#fd][Fd]]
+  - [[#nerd-fonts][Nerd fonts]]
+  - [[#zotero][Zotero]]
+  - [[#image-magick][Image Magick]]
+  - [[#msys2-y-pdftools][Msys2 y pdftools]]
+  - [[#nodejs-y-pagefind][Node.js y Pagefind]]
+- [[#python][Python]]
+- [[#org][Org]]
+  - [[#org-agenda][Org-Agenda]]
+  - [[#org-journal][Org-Journal]]
+  - [[#org-download][Org-Download]]
+  - [[#org-noter][Org-noter]]
+  - [[#org-publish][Org-Publish]]
+  - [[#latex-preview][Latex Preview]]
+- [[#biblio][Biblio]]
+
+* General Emacs Config
+
+#+begin_src emacs-lisp
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 ;; ¡ Hola, Mundo !
+#+end_src
 
+Lo ideal es que por defecto la ventana se abra maximizada.
+
+#+begin_src emacs-lisp
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
+#+end_src
 
+* Doom Emacs Config
+#+begin_src emacs-lisp
 (setq doom-theme 'doom-one)
+#+end_src
 
+#+begin_src emacs-lisp
 (setq display-line-numbers-type t)
+#+end_src
 
+
+#+begin_src emacs-lisp
 ;; Guardar sesión automáticamente
 (after! desktop
   (setq desktop-auto-save-timeout 30)  ;; guarda cada 30 segundos
@@ -23,7 +61,19 @@
 (after! recentf
   (setq recentf-max-saved-items 100)
   (run-at-time nil (* 2 60) #'recentf-save-list))
+#+end_src
 
+* Meta
+** Ripgrep
+** Fd
+** Nerd fonts
+** Zotero
+** Image Magick
+** Msys2 y pdftools
+** Node.js y Pagefind
+
+* Python
+#+begin_src emacs-lisp
 (use-package! pyvenv
   :config
   (pyvenv-mode 1))
@@ -32,6 +82,11 @@
 (after! python
   (setq python-shell-interpreter "ipython"
         python-shell-interpreter-args "-i --simple-prompt --no-color-info"))
+
+#+end_src
+
+
+#+begin_src emacs-lisp
 
 ;; Al correr Ipython el encoding por defecto es 'cp1252' y hace cosas raras con los tildes.
 
@@ -45,7 +100,10 @@
 
 (setenv "PYTHONUTF8" "1")
 (setenv "IPYTHONIOENCODING" "utf-8")
+#+end_src
 
+* Org
+#+begin_src emacs-lisp
 ;; ============================================================
 ;; 🔧 BASIC SETUP
 ;; ============================================================
@@ -56,9 +114,14 @@
 (require 'org)
 (require 'org-capture)
 (require 'subr-x)
+#+end_src
 
+#+begin_src emacs-lisp
 (setq org-directory "~/Documents/Org/")
+#+end_src
 
+** Org-Agenda
+#+begin_src emacs-lisp
 (after! org
   (defun my/refresh-agenda-files ()
     (setq org-agenda-files
@@ -76,6 +139,11 @@
            "DONE(d)"
            "CANCELLED(c)"))))
 
+
+#+end_src
+
+** Org-Journal
+#+begin_src emacs-lisp
 ;; ============================================================
 ;; 🧠 JOURNAL SYSTEM (literate config)
 ;;
@@ -333,6 +401,12 @@
         :desc "Paste clipboard image" "i p" #'my/org-download-clipboard
         :desc "Copy image/s from Explorer" "i f" #'my/org-copy-images-from-explorer))
 
+#+end_src
+
+** Org-Download
+** Org-noter
+** Org-Publish
+#+begin_src emacs-lisp
 ;;; ─────────────────────────────────────────────────────────────
 ;;; Exportaciones
 ;;; ─────────────────────────────────────────────────────────────
@@ -439,6 +513,11 @@
           (t    . (csl "chicago-author-date.csl"))))
   (setq org-cite-csl-styles-dir "c:/Users/Marcelo/Zotero/styles/"))
 
+
+#+end_src
+
+** Latex Preview
+#+begin_src emacs-lisp
 (after! org
   (setq org-preview-latex-default-process 'dvisvgm))
 
@@ -449,7 +528,11 @@
 ;; (defun my/org-fragtog-setup ()
 ;;   (org-latex-preview '(16))
 ;;   (org-fragtog-mode 1))
+#+end_src
 
+* Biblio
+
+#+begin_src emacs-lisp
 (setq org-roam-directory "~/Documents/Org")
 
 (after! citar
@@ -507,3 +590,8 @@
   (setq pdf-info-epdfinfo-program "C:\\msys64\\mingw64\\bin\\epdfinfo.exe")
   (setq-default pdf-view-display-size 'fit-page)
   (pdf-tools-install :no-query))
+
+
+
+
+#+end_src
