@@ -1,7 +1,10 @@
 #+TITLE: Journal Week 21
 #+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
 
-* Table of Contents :TOC:
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias:]]
 - [[#2026-05-18][2026-05-18]]
   - [[#1101][[11:01]]]
   - [[#1136][[11:36]]]
@@ -26,6 +29,9 @@
   - [[#2007][[20:07]]]
 - [[#2026-05-24][2026-05-24]]
   - [[#1206][[12:06]]]
+
+* Referencias:
+#+PRINT_BIBLIOGRAPHY:
 
 * 2026-05-18
 
