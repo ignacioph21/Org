@@ -29,6 +29,8 @@
 - [[#2026-05-28][2026-05-28]]
   - [[#0831][[08:31]]]
   - [[#0857][[08:57]]]
+  - [[#0956-1][[09:56]]]
+  - [[#1140][[11:40]]]
 
 * Referencias:
 #+PRINT_BIBLIOGRAPHY:
@@ -183,4 +185,12 @@ También se puede buscar:
 - =-palabra= excluye la palabra.
 - =pal*= busca como prefijo.
 
+** [09:56]
+Ya está arreglado el export de la bibliografía utilizando =org-cite=.
 
+
+** [11:40]
+Ajuste (en log(PSD)) con el modelo de $A/f_0^2\;csch^2(f/f_0)$ los espectros de las tres series temporales. Para la más cercana a la paleta claramente da otra cosa, pero la que mejor pareciera ajustar es la del medio, antes de la rompiente.
+
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/05/Day_28/espectros-tanhs-lineal-ajustes.png]]

@@ -1,0 +1,24 @@
+* Bonneton - 2007 - Modelling of periodic wave transformation in the inner surf zone
+:PROPERTIES:
+:NOTER_DOCUMENT: ../../../../Zotero/storage/XN4X5GZW/Bonneton - 2007 - Modelling of periodic wave transformation in the inner surf zone.pdf
+:NOTER_PAGE: 2
+:END:
+** Tipo de rompimiento más común.
+:PROPERTIES:
+:NOTER_PAGE: 1
+:END:
+
+#+BEGIN_QUOTE
+The dominant types of breakers in natural sandy beaches
+are spilling and plunging breakers (Galvin, 1968).
+#+END_QUOTE
+** Modelo teórico.
+:PROPERTIES:
+:NOTER_PAGE: 2
+:END:
+
+#+BEGIN_QUOTE
+The NSW equations with friction (also named Saint
+Venant equations) are a good approximation to wave
+motion in the surf zone of gently sloping beaches.
+#+END_QUOTE
