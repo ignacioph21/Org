@@ -37,6 +37,8 @@
   - [[#1151][[11:51]]]
   - [[#1214][[12:14]]]
   - [[#1224][[12:24]]]
+  - [[#1332][[13:32]]]
+  - [[#1354][[13:54]]]
 
 * Referencias:
 #+PRINT_BIBLIOGRAPHY:
@@ -238,3 +240,14 @@ Para archivos del explorador de archivos también:
 [[file:../../../Assets/2026/05/Day_31/prueba-captura-2.png]]
 
 Y esto ya estaría.
+
+** [13:32]
+Ya configuré también la previsualización de latex automática con =Org-fragtoad=. Cada vez que escriba latex entre =$$= se previsualizará. $a^b$ $\tanh(5x)$
+
+\begin{equation}
+        x = 5 y + 5
+\end{equation}
+
+
+** [13:54]
+Es bastante rápido, pero me parece que hasta que sea async voy a mantener la compilación y previsualización automática desactivada.
