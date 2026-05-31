@@ -33,6 +33,10 @@
   - [[#1140][[11:40]]]
   - [[#1318][[13:18]]]
   - [[#1331][[13:31]]]
+- [[#2026-05-31][2026-05-31]]
+  - [[#1151][[11:51]]]
+  - [[#1214][[12:14]]]
+  - [[#1224][[12:24]]]
 
 * Referencias:
 #+PRINT_BIBLIOGRAPHY:
@@ -211,3 +215,26 @@ Ahora me surge la duda de si las oscilaciones en el primer sensor respecto al mo
 
 ** [13:31]
 Para pegar en la línea de comando de vim es con ~Shift Insert~.
+
+* 2026-05-31
+
+** [11:51]
+Ya tengo funcionando el Journal en Doom Emacs en la nueva computadora del Laboratorio.
+
+** [12:14]
+ Ya está funcionando también la captura rápida. Hay que asegurarse del =after! org= o pisa la capture template la de =org=.
+  [[file:~/.config/doom/config.org::*Captura rápida][Captura rápida]]
+
+** [12:24]
+A continuación vienen las pruebas de funcionamiento del pegado de imágenes:
+
+Para captura de pantalla al final utilizamos xclip en lugar de Image Magick.
+#+ATTR_ORG: :width 400
+[[file:../../../Assets/2026/05/Day_31/prueba-captura.png]]
+
+Para archivos del explorador de archivos también:
+
+#+ATTR_ORG: :width 400
+[[file:../../../Assets/2026/05/Day_31/prueba-captura-2.png]]
+
+Y esto ya estaría.
