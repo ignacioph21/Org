@@ -39,6 +39,8 @@
   - [[#1224][[12:24]]]
   - [[#1332][[13:32]]]
   - [[#1354][[13:54]]]
+  - [[#1427][[14:27]]]
+  - [[#1452][[14:52]]]
 
 * Referencias:
 #+PRINT_BIBLIOGRAPHY:
@@ -251,3 +253,9 @@ Ya configuré también la previsualización de latex automática con =Org-fragto
 
 ** [13:54]
 Es bastante rápido, pero me parece que hasta que sea async voy a mantener la compilación y previsualización automática desactivada.
+
+** [14:27]
+Ya está configurado también =Org-publish= y =citar=.
+
+** [14:52]
+De momento ya está funcinando todo menos Python, ya que resta elegir si el manejo de entornos virtuales se realizará con =miniconda= o con otra cosa. También falta terminar de documentar las secciones de bibliografía y =Org-publish= aunque ya están bastante limpias, al menos esta última.
