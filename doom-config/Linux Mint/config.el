@@ -348,3 +348,17 @@
 
 ;; (setenv "PYTHONUTF8" "1")
 ;; (setenv "IPYTHONIOENCODING" "utf-8")
+
+(defun my-python-restart-buffer ()
+  "Interrumpe Python y reenvía el buffer."
+  (interactive)
+  (let ((proc (python-shell-get-process)))
+    (when proc
+      (interrupt-process proc)
+      (sleep-for 0.1)))
+  (python-shell-send-buffer))
+
+(with-eval-after-load 'python
+  (define-key python-mode-map
+              (kbd "<f5>")
+              #'my-python-restart-buffer))

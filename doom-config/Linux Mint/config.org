@@ -29,6 +29,7 @@
   - [[#entornos-virtuales][Entornos virtuales]]
   - [[#consola-interactiva][Consola interactiva]]
   - [[#encoding][Encoding]]
+  - [[#más-parecido-a-idle][Más parecido a IDLE]]
 
 * Meta
 Esta sección está dedicada a programas adicionales por fuera de Emacs.
@@ -131,7 +132,7 @@ cd ~/Org && npx pagefind --site Lab-Journal-html --output-path Lab-Journal-html/
 #+end_src
 
 ** Entornos virtuales y pipx
-Para manjear herramientas usamos =pipx=, que descarga los paquetes, como =ipython=, =black=, =ruff= y =jupyter= basados en el python del sistema pero en entornos aislados, y que se mantiene accesibles desde cualquier =venv=.
+Para manjear herramientas usamos =pipx=, que descarga los paquetes, como =ipython=, =black=, =ruff= y =jupyter= basados en el python del sistema pero en entornos aislados, y que se mantiene accesibles desde cualquier =venv= (en este caso para evitar que se pisen =ipython= lo bajé en el =venv= genérico).
 
 #+begin_src bash :tangle no
 sudo apt install pipx
@@ -140,7 +141,7 @@ sudo apt install pipx
 Y luego de instalar paquetes hay que agregarlos al path como:
 
 #+begin_src bash :tangle no
-pipx install ipython
+pipx install black
 pipx ensurepath
 #+end_src
 
@@ -149,6 +150,7 @@ Para manejar los =venv= de momento utilizo las propias rutinas de =python3=. O s
 #+begin_src bash :tangle no
 python3 -m venv .venv
 source .venv/bin/activate
+pip install numpy matplotlib scipy ipython
 deactivate
 #+end_src
 
@@ -831,12 +833,15 @@ Vamos a seguir el siguiente esquema:
 Sistema (Mint)
 ├── Python del sistema 3.12.3 (aislado)
 ├── pipx (accesible globalmente)
-│   ├── black
-│   └── ipython
+│   └── black
 └── Emacs
     ├── ~/.venv (activo por defecto)
+    │   └── ipython
     └── venv específicos por proyecto
 #+end_src
+
+Al intentar tener =ipython= con pipx global interfería con usar el =~/.venv= por defecto. Así que directamente tengo =ipython= instalado ahí.
+
 
 ** Consola interactiva
 Configuramos para utilizar Ipython por defecto, y así tener acceso a la consola interactiva como REPL.
@@ -861,4 +866,25 @@ Al correr Ipython el encoding por defecto es =cp1252= y hace cosas raras con los
 
 ;; (setenv "PYTHONUTF8" "1")
 ;; (setenv "IPYTHONIOENCODING" "utf-8")
+#+end_src
+Esto para Windows, en Linux Mint Cinnamon anda bien por defecto los tildes en los plots.
+
+
+** Más parecido a IDLE
+Para que se parezca más al IDLE de Python que estoy acostumbrado a usar usamos una función propia que mapea ~f5~ a interrumpir el kernel y correr el archivo:
+
+#+begin_src emacs-lisp
+(defun my-python-restart-buffer ()
+  "Interrumpe Python y reenvía el buffer."
+  (interactive)
+  (let ((proc (python-shell-get-process)))
+    (when proc
+      (interrupt-process proc)
+      (sleep-for 0.1)))
+  (python-shell-send-buffer))
+
+(with-eval-after-load 'python
+  (define-key python-mode-map
+              (kbd "<f5>")
+              #'my-python-restart-buffer))
 #+end_src
