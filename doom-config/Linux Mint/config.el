@@ -221,8 +221,9 @@
            :sitemap-filename "index.org"
            :sitemap-title "Lab Journal"
            :sitemap-style list
-           :sitemap-sort-files anti-chronologically)))
+           :sitemap-sort-files anti-chronologically))))
 
+(after! org
   (defun my/lab-journal-generate-index ()
     "Genera search-index.json en el root del repo."
     (let* ((docs-dir (expand-file-name "~/Org/Lab-Journal-html/"))
@@ -286,20 +287,6 @@
 
 (setq org-roam-directory "~/Org")
 
-(after! citar
-  ;; Tu .bib exportado por Zotero
-  (setq citar-bibliography '("~/Org/references.bib"))
-
-  ;; Donde Zotero guarda los PDFs
-  (setq citar-library-paths '("~/Zotero/storage"))
-
-  ;; Donde se crearán/guardarán las notas de org-noter
-  (setq citar-notes-paths '("~/Org/Notes/References"))
-
-  ;; Formato del nombre del archivo de nota
-  (setq citar-file-note-org-include '(org-id org-noter-document-property)));;; ─────────────────────────────────────────────────────────────
-
-
 (after! org-noter
   (setq org-noter-notes-search-path '("~/Org/Notes/References")
         org-noter-auto-save-last-location t
@@ -307,6 +294,11 @@
         org-noter-always-create-frame nil
         org-noter-kill-frame-at-session-end nil))
 
+(after! citar
+  (setq citar-bibliography '("~/Org/references.bib")) ;; Tu .bib exportado por Zotero
+  (setq citar-library-paths '("~/Zotero/storage")) ;; Donde Zotero guarda los PDFs
+  (setq citar-notes-paths '("~/Org/Notes/References")) ;; Donde se crearán/guardarán las notas de org-noter
+  (setq citar-file-note-org-include '(org-id org-noter-document-property))) ;; Formato del nombre del archivo de nota
 
 (after! (citar org-noter)
   ;; Función que crea la nota con el template correcto para org-noter
@@ -325,10 +317,8 @@
                         title title (or pdf ""))))
       (org-noter)))
 
-
   ;; Reemplaza la acción de "abrir nota" en citar por la nuestra
   (setq citar-open-note-function #'my/citar-open-noter))
-
 
 (after! citar
   (setq completion-ignore-case t))
@@ -340,12 +330,9 @@
 ;;   :config
 ;;   (pyvenv-mode 1))
 
-
 ;; (after! python
 ;;   (setq python-shell-interpreter "ipython"
 ;;         python-shell-interpreter-args "-i --simple-prompt --no-color-info"))
-
-;; Al correr Ipython el encoding por defecto es 'cp1252' y hace cosas raras con los tildes.
 
 ;; (set-language-environment "UTF-8")
 ;; (prefer-coding-system 'utf-8)

@@ -21,8 +21,13 @@
   - [[#imágenes][Imágenes]]
   - [[#latex][Latex]]
   - [[#org-publish][Org-publish]]
+  - [[#org-noter][Org-noter]]
 - [[#biblio-para-bibliografía][Biblio para bibliografía]]
+- [[#pdf-tools-1][PDF-Tools]]
 - [[#python][Python]]
+  - [[#entornos-virtuales][Entornos virtuales]]
+  - [[#consola-interactiva][Consola interactiva]]
+  - [[#encoding][Encoding]]
 
 * Meta
 Esta sección está dedicada a programas adicionales por fuera de Emacs.
@@ -584,8 +589,17 @@ Ahora para exportar automáticamente a Git Pages con Org-publish:
            :sitemap-filename "index.org"
            :sitemap-title "Lab Journal"
            :sitemap-style list
-           :sitemap-sort-files anti-chronologically)))
+           :sitemap-sort-files anti-chronologically))))
+#+end_src
 
+Esta función define el Header de los .htmls que se van a generar. Por cada archivo .org en =/Lab-Journal= se va a crear un equivalente en html en el directorio =/Lab-Journal-html=. De esta forma, al estar ambos en el root, la estructura de links relativos a los Assets es la misma. Idealmente tendríamos los Assets dentro de =/Lab-Journal-html= con los archivos org haciendo referencia a ellos y así luego sólo exponer esa carpeta en Github Pages (usando =/docs= en lugar de =/root=). En cualquiera de los dos casos la ventaja de no tener Assets dentro de =/Lab-Journal= como tenía originalmente es que así se evita la duplicación de los Assets al exportar.
+
+El Header de cada entrada html contiene la referencia al .css y .js que dan el formato y funcionamiento a la página en cada entrada. Luego, tenemos un =index.html= automático que genera =Org-publish= con las entradas en =/Lab-Journal-html=, pero al generar la página desde =/root= necesitamos además otro =index.html= que lea Github para hacer referencia al automático.
+
+Luego se ejecuta:
+
+#+begin_src emacs-lisp
+(after! org
   (defun my/lab-journal-generate-index ()
     "Genera search-index.json en el root del repo."
     (let* ((docs-dir (expand-file-name "~/Org/Lab-Journal-html/"))
@@ -608,14 +622,11 @@ Ahora para exportar automáticamente a Git Pages con Org-publish:
                    files))))
       (with-temp-file output-file
         (insert "[" (mapconcat #'identity entries ",") "]"))))
-
 #+end_src
 
-- La primera función define el Header de los .htmls que se van a generar. Por cada archivo .org en =/Lab-Journal= se va a crear un equivalente en html en el directorio =/Lab-Journal-html=. De esta forma, al estar ambos en el root, la estructura de links relativos a los Assets es la misma. Idealmente tendríamos los Assets dentro de =/Lab-Journal-html= con los archivos org haciendo referencia a ellos y así luego sólo exponer esa carpeta en Github Pages (usando =/docs= en lugar de =/root=). En cualquiera de los dos casos la ventaja de no tener Assets dentro de =/Lab-Journal= como tenía originalmente es que así se evita la duplicación de los Assets al exportar.
+Esta segunda función indexa las entradas de =/Lab-Journal-html= en un .json para poder facilitar su búsqueda posteriormente en la página web.
 
-  El Header de cada entrada html contiene la referencia al .css y .js que dan el formato y funcionamiento a la página en cada entrada. Luego, tenemos un =index.html= automático que genera =Org-publish= con las entradas en =/Lab-Journal-html=, pero al generar la página desde =/root= necesitamos además otro =index.html= que lea Github para hacer referencia al automático.
-
-- La segunda función indexa las entradas de =/Lab-Journal-html= en un .json para poder facilitar su búsqueda posteriormente en la página web.
+*** La estructura de archivos
 
 La estructura final del repositorio entonces sería:
 #+begin_src text :tangle no
@@ -632,6 +643,7 @@ Org/
 ├── index.html
 ├── style.css
 ├── script.js
+├── search-index.json
 └── references.bib
 #+end_src
 
@@ -646,7 +658,12 @@ Da el estilo general de cada entrada.
 **** script.js
 Agrega funcionalidades extra dentro de cada entrada, en este caso lo único que hace de momento es aumentar las imágenes a la ventana completa al hacerles click.
 
+**** seach-index.json
+Listado de las entradas html para la el índice y ls búsqueda en la landing page.
+
 *** Exportación de bibliografía
+Para exportar los links a la bibliografía insertados con  =citar= u =org= utilizamos los siguiente.
+
 #+begin_src emacs-lisp
 (after! org
   (require 'oc-csl)
@@ -657,8 +674,10 @@ Agrega funcionalidades extra dentro de cada entrada, en este caso lo único que 
   (setq org-cite-csl-styles-dir "~/Zotero/styles/"))
 #+end_src
 
+Aunque todavía no verifiqué si esto hace algo más por sobre lo que aclaro en los headers de los =.org=.
 
 *** Comando de actualización de la página web
+Para automatizar la publicación de la paǵina definimos los siquientes comandos. Eeeen primer lugar el siguiente corre =Org-publish= y =pagefind= y exporta todos los cambios a Github.
 #+begin_src emacs-lisp
 (defun my/lab-journal-export-and-push ()
   (interactive)
@@ -675,6 +694,7 @@ Agrega funcionalidades extra dentro de cada entrada, en este caso lo único que 
 #+end_src
 
 *** Comando de rebuild de la página web
+Esta segunda versión hace un full rebuild del proyecto por si acaso, aunque no lo exporta a Github.
 #+begin_src emacs-lisp
 (defun my/lab-journal-full-rebuild ()
   (interactive)
@@ -688,6 +708,7 @@ Agrega funcionalidades extra dentro de cada entrada, en este caso lo único que 
 #+end_src
 
 *** Keybindings
+Los keybindings correspondiente a este proceso son los siguientes:
 #+begin_src emacs-lisp
 (map! :leader
         :prefix ("n j" . "journal")
@@ -697,24 +718,19 @@ Agrega funcionalidades extra dentro de cada entrada, en este caso lo único que 
         "R" #'my/lab-journal-full-rebuild))
 #+end_src
 
-* Biblio para bibliografía
+Con las funcionalidades:
+
+|-----------+-----------------+-----------------------------------------------------------|
+| Teclas    | Acción          | Descripción                                               |
+|-----------+-----------------+-----------------------------------------------------------|
+| ~SPC n j p~ | Publica Journal | Hace =Org-publish= sobre =/Lab-Journal= + pagefind + commit . |
+| ~SPC n j R~ | Rebuild Journal | Hace rebuild con =/Org-publish= + pagefind.                 |
+|-----------+-----------------+-----------------------------------------------------------|
+** Org-noter
+Configuramos el directorio para las notas de PDFs.
 
 #+begin_src emacs-lisp
 (setq org-roam-directory "~/Org")
-
-(after! citar
-  ;; Tu .bib exportado por Zotero
-  (setq citar-bibliography '("~/Org/references.bib"))
-
-  ;; Donde Zotero guarda los PDFs
-  (setq citar-library-paths '("~/Zotero/storage"))
-
-  ;; Donde se crearán/guardarán las notas de org-noter
-  (setq citar-notes-paths '("~/Org/Notes/References"))
-
-  ;; Formato del nombre del archivo de nota
-  (setq citar-file-note-org-include '(org-id org-noter-document-property)));;; ─────────────────────────────────────────────────────────────
-
 
 (after! org-noter
   (setq org-noter-notes-search-path '("~/Org/Notes/References")
@@ -722,7 +738,17 @@ Agrega funcionalidades extra dentro de cada entrada, en este caso lo único que 
         org-noter-doc-split-fraction '(0.6 . 0.4)  ; PDF izquierda, notas derecha
         org-noter-always-create-frame nil
         org-noter-kill-frame-at-session-end nil))
+#+end_src
 
+* Biblio para bibliografía
+Esta sección es para el manejo de la bibliografía utilizando =citar= para interpretar el =references.bib= exportado automáticamente con BetterBibTeX de Zotero. Intenté utilizar el propio paquete de =citar= para la toma de notas pero de momento lo que mejor funciona es con el ODF abierto lanzar una sesión de =Org-noter=.
+
+#+begin_src emacs-lisp
+(after! citar
+  (setq citar-bibliography '("~/Org/references.bib")) ;; Tu .bib exportado por Zotero
+  (setq citar-library-paths '("~/Zotero/storage")) ;; Donde Zotero guarda los PDFs
+  (setq citar-notes-paths '("~/Org/Notes/References")) ;; Donde se crearán/guardarán las notas de org-noter
+  (setq citar-file-note-org-include '(org-id org-noter-document-property))) ;; Formato del nombre del archivo de nota
 
 (after! (citar org-noter)
   ;; Función que crea la nota con el template correcto para org-noter
@@ -741,37 +767,41 @@ Agrega funcionalidades extra dentro de cada entrada, en este caso lo único que 
                         title title (or pdf ""))))
       (org-noter)))
 
-
   ;; Reemplaza la acción de "abrir nota" en citar por la nuestra
   (setq citar-open-note-function #'my/citar-open-noter))
 
-
 (after! citar
   (setq completion-ignore-case t))
+#+end_src
 
+* PDF-Tools
+Para las PDF-Tools en Linux Mint están soportadas nativamente, así que solo configuramos que se abra ocupando la ventana completa:
+#+begin_src emacs-lisp
 (after! pdf-tools
   (setq-default pdf-view-display-size 'fit-page))
 #+end_src
 
-
 * Python
+** Entornos virtuales
+Para el manejo de entornos virtuales usamos =pyvenv= antes de correr ~M-x run-python~.
 #+begin_src emacs-lisp
 ;; (use-package! pyvenv
 ;;   :config
 ;;   (pyvenv-mode 1))
+#+end_src
+** Consola interactiva
+Configuramos para utilizar Ipython por defecto, y así tener acceso a la consola interactiva como REPL.
 
-
+#+begin_src emacs-lisp
 ;; (after! python
 ;;   (setq python-shell-interpreter "ipython"
 ;;         python-shell-interpreter-args "-i --simple-prompt --no-color-info"))
-
 #+end_src
 
+** Encoding
+Al correr Ipython el encoding por defecto es =cp1252= y hace cosas raras con los tildes.
 
 #+begin_src emacs-lisp
-
-;; Al correr Ipython el encoding por defecto es 'cp1252' y hace cosas raras con los tildes.
-
 ;; (set-language-environment "UTF-8")
 ;; (prefer-coding-system 'utf-8)
 
