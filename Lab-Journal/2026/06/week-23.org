@@ -8,6 +8,7 @@
 - [[#2026-06-01][2026-06-01]]
   - [[#0914][[09:14]]]
   - [[#1020][[10:20]]]
+  - [[#1225][[12:25]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -21,3 +22,5 @@ Aparentemente Linux tiene un dirver generíco para comunicarse con la placa ya q
 
 ** [10:20]
 Ya estaría en general terminada la configuración literaria con =config.org=. Solo queda el tema de los ambientes virtuales de Python.
+
+** [12:25]
