@@ -7,6 +7,7 @@
 - [[#referencias][Referencias]]
 - [[#2026-06-01][2026-06-01]]
   - [[#0914][[09:14]]]
+  - [[#1020][[10:20]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -17,3 +18,6 @@
 Estuve probando con Claude intentar conectarme a la placa de adquisición de IOTech desde Linux. Le pase =DaqX64.dll= y los drivers =pdaq3k.sys= y =pdaq3kld.sys=.
 
 Aparentemente Linux tiene un dirver generíco para comunicarse con la placa ya que =lsusb= la encuentra como un dispositivo de IOTech. Claude extrajo de los .sys el firmware de la placa y me dió un archivo de Python para comunicarnos pero de momento está en timeout. Recién me quedé sin tokens hasta las 13:30 pero luego jhabría que continuar probando. Durante el intento de carga del firmware interceptamos la comunicación con =tshark= y aparentemente le diálogo inicial tuvo éxito.
+
+** [10:20]
+Ya estaría en general terminada la configuración literaria con =config.org=. Solo queda el tema de los ambientes virtuales de Python.
