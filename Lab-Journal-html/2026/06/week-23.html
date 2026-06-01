@@ -17,31 +17,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8e3ef08">Referencias</a></li>
-<li><a href="#org1d8e4c5">2026-06-01</a>
+<li><a href="#org0a9798a">Referencias</a></li>
+<li><a href="#org15d0d56">2026-06-01</a>
 <ul>
-<li><a href="#org49e23d9">[09:14]</a></li>
-<li><a href="#orgc73cdc7">[10:20]</a></li>
-<li><a href="#org439a9f0">[12:25]</a></li>
+<li><a href="#org5d743b0">[09:14]</a></li>
+<li><a href="#org78ff1f1">[10:20]</a></li>
+<li><a href="#orgeacc3ef">[12:25]</a></li>
+<li><a href="#org260002b">[15:08]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8e3ef08" class="outline-2">
-<h2 id="org8e3ef08">Referencias</h2>
-<div class="outline-text-2" id="text-org8e3ef08">
+<div id="outline-container-org0a9798a" class="outline-2">
+<h2 id="org0a9798a">Referencias</h2>
+<div class="outline-text-2" id="text-org0a9798a">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org1d8e4c5" class="outline-2">
-<h2 id="org1d8e4c5">2026-06-01</h2>
-<div class="outline-text-2" id="text-org1d8e4c5">
+<div id="outline-container-org15d0d56" class="outline-2">
+<h2 id="org15d0d56">2026-06-01</h2>
+<div class="outline-text-2" id="text-org15d0d56">
 </div>
-<div id="outline-container-org49e23d9" class="outline-3">
-<h3 id="org49e23d9">[09:14]</h3>
-<div class="outline-text-3" id="text-org49e23d9">
+<div id="outline-container-org5d743b0" class="outline-3">
+<h3 id="org5d743b0">[09:14]</h3>
+<div class="outline-text-3" id="text-org5d743b0">
 <p>
 Estuve probando con Claude intentar conectarme a la placa de adquisición de IOTech desde Linux. Le pase <code>DaqX64.dll</code> y los drivers <code>pdaq3k.sys</code> y <code>pdaq3kld.sys</code>.
 </p>
@@ -51,16 +52,29 @@ Aparentemente Linux tiene un dirver generíco para comunicarse con la placa ya q
 </p>
 </div>
 </div>
-<div id="outline-container-orgc73cdc7" class="outline-3">
-<h3 id="orgc73cdc7">[10:20]</h3>
-<div class="outline-text-3" id="text-orgc73cdc7">
+<div id="outline-container-org78ff1f1" class="outline-3">
+<h3 id="org78ff1f1">[10:20]</h3>
+<div class="outline-text-3" id="text-org78ff1f1">
 <p>
 Ya estaría en general terminada la configuración literaria con <code>config.org</code>. Solo queda el tema de los ambientes virtuales de Python.
 </p>
 </div>
 </div>
-<div id="outline-container-org439a9f0" class="outline-3">
-<h3 id="org439a9f0">[12:25]</h3>
+<div id="outline-container-orgeacc3ef" class="outline-3">
+<h3 id="orgeacc3ef">[12:25]</h3>
+<div class="outline-text-3" id="text-orgeacc3ef">
+<p>
+Ya está funcionando, con un ambiente llamado <code>~/.env</code>. Que usa por defecto <code>pyvenv</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org260002b" class="outline-3">
+<h3 id="org260002b">[15:08]</h3>
+<div class="outline-text-3" id="text-org260002b">
+<p>
+Ya tengo configurado también un modo con <code>f5</code> que interrumpe la ejecución y envía el aarchivo. El modo de output <code>%xmode</code>, al printear <code>KeyboardInterrup</code> viene por defecto en verboso y printea un montón de cosas, pero se podría cambiar. Además <code>f5</code> sólo funciona si hay algo que interrumpir, pero supongo que con un if se podría corregir también.
+</p>
+</div>
 </div>
 </div>
 </div>

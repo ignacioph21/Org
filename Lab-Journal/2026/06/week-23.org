@@ -9,6 +9,7 @@
   - [[#0914][[09:14]]]
   - [[#1020][[10:20]]]
   - [[#1225][[12:25]]]
+  - [[#1508][[15:08]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -24,3 +25,7 @@ Aparentemente Linux tiene un dirver generíco para comunicarse con la placa ya q
 Ya estaría en general terminada la configuración literaria con =config.org=. Solo queda el tema de los ambientes virtuales de Python.
 
 ** [12:25]
+Ya está funcionando, con un ambiente llamado =~/.env=. Que usa por defecto =pyvenv=.
+
+** [15:08]
+Ya tengo configurado también un modo con ~f5~ que interrumpe la ejecución y envía el aarchivo. El modo de output =%xmode=, al printear =KeyboardInterrup= viene por defecto en verboso y printea un montón de cosas, pero se podría cambiar. Además ~f5~ sólo funciona si hay algo que interrumpir, pero supongo que con un if se podría corregir también.
