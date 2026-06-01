@@ -1,0 +1,785 @@
+#+title: Config
+
+* Table of Contents :toc:
+- [[#meta][Meta]]
+  - [[#zotero][Zotero]]
+  - [[#latex-con-miktex][Latex con Miktex]]
+  - [[#image-magick][Image Magick]]
+  - [[#mayúsculas-dobles][Mayúsculas dobles]]
+  - [[#xclip][Xclip]]
+  - [[#nerd-icons][Nerd icons]]
+  - [[#pdf-tools][Pdf Tools]]
+  - [[#nodejs-y-pagefind][Node.js y Pagefind]]
+- [[#general-emacs-config][General Emacs Config]]
+  - [[#servidor-de-emacs][Servidor de Emacs]]
+  - [[#ventana-maximizada-al-abrir][Ventana Maximizada al abrir.]]
+  - [[#path][Path]]
+- [[#doom-emacs-config][Doom Emacs Config]]
+- [[#org-mode][Org-Mode]]
+  - [[#org-agenda][Org-Agenda]]
+  - [[#org-journal][Org-Journal]]
+  - [[#imágenes][Imágenes]]
+  - [[#latex][Latex]]
+  - [[#org-publish][Org-publish]]
+- [[#biblio-para-bibliografía][Biblio para bibliografía]]
+- [[#python][Python]]
+
+* Meta
+Esta sección está dedicada a programas adicionales por fuera de Emacs.
+
+** Zotero
+Para manejar mi bibliografía utilizo la aplicación Zotero. Ssumada a esta utilizo los plugins de:
+- BetterBibTeX: sirve para generar archivos de bibliografía en latex que se exporten automáticamente a =~/Org= y que puedan ser utilizados por Emacs.
+- Zotmoov: sirve para mover/copiar los archivos descargados en Zotero, auqnue de momento está solo utilizado en Windows.
+
+Para sincronizar mi biblioteca uso el servicio de Zotero y para sincronizar los archivos adjuntos utilizo el servicio de WebDavs de Koofr.
+
+** Latex con Miktex
+Para poder previsualizar (o eventualmente compilar archivos =.tex=) es necesario una instalación de Latex. En general para Linux suele utilizarse TexLive, pero conociendo Miktex de Windows usaré esta opción. Tiene la ventaja de ser una instalación mucho más liviana con la posibilidad de habilitar la instalación de paquetes /on the fly/ cuando sean necesarios, manteniendo el mínimo e indispensable instalado.
+
+Para la instalación seguí las instrucciones de [[https://miktex.org/download]] para Linux Mint 22. La única particularidad es que al correr el =sudo apt-get update= tira un warning por la arquitectura "i386" de 32 bits. Se puede quitar la warning modificando con
+
+#+begin_src bash :tangle no
+sudo nano /etc/apt/sources.list.d/miktex.list
+#+end_src
+
+El contenido por lo siguiente:
+
+#+begin_src conf :tangle no
+deb [arch=amd64 signed-by=/usr/share/keyrings/miktex.gpg] https://miktex.org/download/ubuntu noble universe
+#+end_src
+
+Y realicé la instalación privada (en mi usuario) con la opción de instalar paquetes /on the fly/ habilitada. Finalizar el setup con:
+
+#+begin_src bash :tangle no
+miktexsetup finish
+initexmf --set-config-value [MPM]AutoInstall=1
+#+end_src
+
+Además de usar la =MikTeX Console= para chequear por updates de paquetes.
+
+** Image Magick
+Para poder pegar imágenes sencillamente desde el clipboard en Org-mode utilizamos Image Magick. En Linux Mint es tan sencillo como correr:
+
+#+begin_src bash :tangle no
+sudo apt install imagemagick
+#+end_src
+
+Aaparece como =convert= en vez de =magick=. Aparentemente de todos modos esto solo es necesario en Windows.
+
+** Mayúsculas dobles
+Esto es una cuestión general de Linux aparentemente, pero al poner las mayúsculas con BloqMayús demasiado rápido hay un pequeño delay en la desactivación y esto resulta en más de una letra con maypusucla. Por ejemplo, al escribir "Ya" escribiría "YA". Para solucionar esto definitivamente tengo un script que se corre al inicio que saca el delay: =/home/ignacio/.config/autostart/capslock_fix.sh=.
+
+El contenido es el siguiente:
+#+begin_src bash :tangle no
+#!/bin/bash
+
+xkbcomp -xkb "$DISPLAY" - | sed 's#key <CAPS>.*#key <CAPS> {\
+repeat=no,\
+type[group1]="ALPHABETIC",\
+symbols[group1]=[ Caps_Lock, Caps_Lock],\
+actions[group1]=[ LockMods(modifiers=Lock),\
+Private(type=3,data[0]=1,data[1]=3,data[2]=3)]\
+};\
+#' | xkbcomp -w 0 - "$DISPLAY"
+#+end_src
+
+Para que pueda ejecutarse al iniciar sesión fue necesario marcarlo como ejecutable:
+
+#+begin_src bash :tangle no
+chmod +x /home/ignacio/.config/autostart/capslock_fix.sh
+#+end_src
+
+La solución fue tomada de [[https://github.com/ACO-626/CapsLockDelay/blob/main/ACO-BloqMayusSolution][Github]]. Y está explicada en [[https://www.youtube.com/watch?v=v7XWlCFkj4A][Yutube]].
+
+** Xclip
+Para poder pegar imágenes desde el clipboard se podría utilizar xclip en lugar de Image Magick. Más allá de esto resulta indispensable para poder copiar imágenes desde el explorador de archivos. De querer hacer esto se instala con:
+
+#+begin_src bash :tangle no
+sudo apt install xclip
+#+end_src
+
+** Nerd icons
+Para poder instalar los íconos que usa Doom Emacs usamos ~M-x nerd-icons-install-fonts~.
+
+** Pdf Tools
+Para poder usar pdftools debemos correr ~M-x pdf-tools-install~. Va a pedirnos hacerlo de todas maneras al querer abrir un PDF.  Además, para poder leer =djvu= y =epub= usamos:
+
+#+begin_src bash :tangle no
+sudo apt install djvulibre-bin
+#+end_src
+
+Con los paquetes de =nov= y =djvu= en =packages.el=.
+
+** Node.js y Pagefind
+Para indexar el contenido de los htmls exportados con =Org-publish= necesitamos =pagefind= de =Node.js=. Para esto lo instalamos:
+
+#+begin_src bash :tangle no
+sudo apt install nodejs npm
+#+end_src
+
+Y luego, al correr algún comando con =pagefind= nos preguntará si lo queremos instalar. Por ejemplo:
+
+#+begin_src bash :tangle no
+cd ~/Org && npx pagefind --site Lab-Journal-html --output-path Lab-Journal-html/pagefind
+#+end_src
+
+* General Emacs Config
+La siguiente configuración fue escrita para funcionar en Linux Mint 22.3 con Cinnamon y Cinnamenu.
+
+#+begin_src emacs-lisp
+;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+#+end_src
+
+** Servidor de Emacs
+Para poder agilizar la carga de los frames de Emacs tengo configurado en las aplicaciones que se corren al inicio el lanzamiento de un =Daemon= de Emacs, de forma tal que luego cada vez que quiera abrir un frame alcance con generar un cliente, que se abre casi instantáneamente, ya que los paquetes se encuentran precargados:
+
+#+begin_src bash :tangle no
+/usr/bin/emacs --daemon
+#+end_src
+
+** Ventana Maximizada al abrir.
+Lo ideal es que por defecto la ventana se abra maximizada.
+#+begin_src emacs-lisp
+;; (add-hook 'window-setup-hook #'toggle-frame-fullscreen) ;; Se abre ocupando toda la pantalla.
+;; (set-frame-parameter nil 'fullscreen 'maximized)
+(add-to-list 'initial-frame-alist '(fullscreen . maximized)) ;; Esto funciona para el Emacs, pero se ignora para el cliente con Daemon.
+#+end_src
+
+*** Solución para Cinnamon
+Esto al final solo funciona al abrir Emacs tal cual (Sería la de GUI). Para que funcione con el cliente que abro desde el menú tuve que terminar cambiando el =Exec=. Quedó lo siguiente:
+#+begin_src conf :tangle no
+[Desktop Entry]
+Name=Emacs (Client)
+GenericName=Text Editor
+Comment=Edit text
+MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;x-scheme-handler/org-protocol;
+Exec=sh -c 'if [ -n "$*" ]; then exec /usr/bin/emacsclient --alternate-editor= --reuse-frame -F "((fullscreen . maximized))" "$@"; else exec emacsclient --alternate-editor= --create-frame -F "((fullscreen . maximized))"; fi' sh %F
+Icon=emacs
+Type=Application
+Terminal=false
+Categories=Development;TextEditor;
+StartupNotify=true
+StartupWMClass=Emacs
+Keywords=emacsclient;
+Actions=new-window;new-instance;
+
+[Desktop Action new-window]
+Name=New Window
+Exec=/usr/bin/emacsclient --alternate-editor= --create-frame -F '((fullscreen . maximized))'
+
+[Desktop Action new-instance]
+Name=New Instance
+Exec=emacs %F
+#+end_src
+
+** Path
+Aal lanzar Emacs desde el menú de aplicaciones aparentemente no se carga el PATH completo. Por esto agregamos =~/bin=.
+
+#+begin_src emacs-lisp
+(setenv "PATH" (concat (expand-file-name "~/bin") ":" (getenv "PATH")))
+(add-to-list 'exec-path (expand-file-name "~/bin"))
+#+end_src
+
+Esto es relevante ya que MikTeX para tener prioridad sobre TexLive (que resulta que también está instalado) se coloca en =~/bin= como symlink a sus ejecutables. Por ejemplo, =dvipng= vive en =~/bin= como symlink a =~/usr/bin/miktex-dvipng=, y sin agregar esto al PATH no lo encuentra. Y esto pasa por haber elegido la instalación personal en vez de system wide.
+
+* Doom Emacs Config
+#+begin_src emacs-lisp
+(setq doom-theme 'doom-one)
+#+end_src
+
+#+begin_src emacs-lisp
+(setq display-line-numbers-type t)
+#+end_src
+
+* Org-Mode
+El directorio para todos mis archviso =.org= es:
+
+#+begin_src emacs-lisp
+(setq org-directory "~/Org/")
+#+end_src
+
+Éste se encuentra sincronizado con GitHub.
+
+** Org-Agenda
+
+Para tener más libertad a la hora de definir el estado de las tareas de la agenda conviene expandir las opciones disponibles:
+#+begin_src emacs-lisp
+(after! org
+  (setq org-todo-keywords
+        '((sequence
+           "TODO(t)"
+           "NEXT(n)"
+           "WAIT(w)"
+           "|"
+           "DONE(d)"
+           "CANCELLED(c)"))))
+#+end_src
+
+Y para que =Org= parsee todos los archivos recursivamente, incluyendo las entradas del journal, en busca de tareas:
+#+begin_src emacs-lisp
+(after! org
+  (defun my/refresh-agenda-files ()
+    (setq org-agenda-files
+          (directory-files-recursively org-directory "\\.org$")))
+  (my/refresh-agenda-files)
+  (add-hook 'org-agenda-mode-hook #'my/refresh-agenda-files))
+#+end_src
+
+** Org-Journal
+Esta sección está dedicada a mi Journal diario personal. La estructura de archivos relevante al diario es la siguiente:
+
+#+begin_src text :tangle no
+Org/
+├── Lab-Journal/
+│   └── 2026/
+│        ├── 05/
+│        │   ├── week-21.org
+│        │   └── otras-notas.org
+│        └── 06/
+├── Assets/
+│   └── 2026/
+│        ├── 05/
+│        │   ├── Day_26/
+│        │   │   └── imagen.png
+│        │   └── Day_27/
+│        └── 06/
+└── references.bib
+#+end_src
+
+
+Todas las entradas, ya sea semanales o auxiliares, se encuentran dentro del directorio =Lab-Journal= en subdirectorios organizados por mes y año. Todas las imágenes insertadas se encuentran dentro de =Assets= organizadas por día, mes y año.
+
+Finalmente se encuentra el archivos de referencias bibliográficas, =references.bib=, exportado y mantenido automáticamente desde Zotero por BetterBibTeX.
+
+*** Entradas semanales
+La idea es tener una entrada =.org= en el journal por semana. Para encontrar el nombre de la entrada para la semana actual usamos:
+
+#+begin_src emacs-lisp
+(defun my/journal--week-file ()
+  (let* ((year (format-time-string "%Y"))
+         (month (format-time-string "%m"))
+         (week (format-time-string "%V"))
+         (dir (expand-file-name (concat "Lab-Journal/" year "/" month) org-directory))
+         (file (expand-file-name (format "week-%s.org" week) dir)))
+    (unless (file-directory-p dir)
+      (make-directory dir t))
+    file))
+#+end_src
+
+De ser necesario se crea la entrada, colocando el header necesario:
+
+#+begin_src emacs-lisp
+(defun my/journal--ensure-file ()
+  (let ((file (my/journal--week-file)))
+    (unless (file-exists-p file)
+      (with-temp-file file
+        (insert (format "#+TITLE: Journal Week %s\n#+OPTIONS: toc:2\n#+BIBLIOGRAPHY: ../../../references.bib\n#+CITE_EXPORT: csl chicago-author-date.csl\n\n* Table of Contents :TOC:noexport:\n\n* Referencias\n#+PRINT_BIBLIOGRAPHY:\n"
+                        (format-time-string "%V")))))
+    file))
+#+end_src
+
+La estructura del =Header= es:
+- Tïtulo: número de semana dentro del año.
+- El flag para generar una tabla de contenidos al exportar la entrada como html.
+- El path al archivo de referencias, también para la exportación a html.
+- El formato para la citas insertadas al exportar a html.
+- La tabla de contenidos que se muestra al editar en Emacs (sin exportar).
+- La sección con la bibliografía que se genera automáticamente al exportar a html.
+
+*** Entradas diarias
+Dentro de cada semana tenemos un top-level heading correspondiente a cada día, que se genera una única vez, al querer ingresar a la entrada semanal ese día mediante cualquier método.
+
+#+begin_src emacs-lisp
+(defun my/journal--goto-day ()
+  (let ((day (format-time-string "%Y-%m-%d")))
+    (goto-char (point-min))
+    (unless (re-search-forward (concat "^\\* " day) nil t)
+      (goto-char (point-max))
+      (insert (format "\n* %s\n" day)))
+    (re-search-backward (concat "^\\* " day))))
+#+end_src
+
+El formato de esta entrada es =2026-05-27=.
+
+*** Formas de agregar información a la entrada semanal
+Hay distintos métodos para acceder y agregar información a la entrada semanal.
+
+**** Entrada rápida
+Apendea al final de la entrada un sub-level heading correspondiente a la hora
+
+#+begin_src emacs-lisp
+(defun my/journal-add-entry ()
+  (interactive)
+  (my/journal-open)
+  (my/journal--goto-day)
+  (goto-char (point-max))
+  (insert (format "\n** [%s] \n" (format-time-string "%H:%M")))
+  (save-buffer))
+#+end_src
+
+Con formato =[08:10]=.
+
+**** Captura rápida
+Usando el paquete de =Org-capture= la idea es que al estar editando archivos pueda generar una entrada rápida en el diario, sin necesidad de salir del archivo, con un link que haga referencia a la posición donde me econtraba al generar esa captura. Para esto se abre un mini-buffer debejo en el cuál poder escribir la información, y se apendea como una entrada rápida con el timestamp de la hora en que se generó.
+
+#+begin_src emacs-lisp
+(defun my/journal-capture-target ()
+  "Target location for journal captures."
+  (set-buffer (find-file-noselect (my/journal--ensure-file)))
+  (my/journal--goto-day)
+  (goto-char (point-max)))
+
+(after! org
+  (setq org-capture-templates
+        (append
+         (cl-remove-if (lambda (x) (equal (car x) "j"))
+                       org-capture-templates)
+         '(("j" "Journal capture (context)"
+            plain
+            (file+function
+             my/journal--week-file
+             my/journal-capture-target)
+            "** [%<%H:%M>] \n %?\n  %a\n"
+            :empty-lines 1)))))
+
+(defun my/journal-capture ()
+  "Org-capture journal entry with context."
+  (interactive)
+  (org-capture nil "j"))
+#+end_src
+
+**** Sólo apertura
+Para simplemente acceder a la entrada diaria sin necesidad de agregar información:
+
+#+begin_src emacs-lisp
+(defun my/journal-open ()
+  "Open weekly journal and jump to today."
+  (interactive)
+  (find-file (my/journal--ensure-file))
+  (my/journal--goto-day))
+#+end_src
+
+*** Sincronización con Github
+La idea es poder sincronizar el journal rápidamente con Github, sin necesidad del detalle que permite el paquete =Magit=. Para esto definimos un template que agrega todos los cambios con un mensaje de commit automático y los pushea al repositorio:
+
+#+begin_src emacs-lisp
+(defun my/journal-sync ()
+  (interactive)
+  (let ((default-directory org-directory))
+    (async-shell-command
+     "git add . && git diff --cached --quiet || git commit -m \"Auto commit of Lab-Journal\" && git push")))
+#+end_src
+
+Además, por si acaso de que no hubiese conexión y sólo faltase realizar el pusheo se logra con =git diff --cached --quiet=.
+
+*** Keybindings
+Los keybings relacionados al journal empiezan con el prefijo de ~SPC n j~ y son los siguientes:
+
+#+begin_src emacs-lisp
+(after! org
+    (map! :leader
+        (:prefix ("n j" . "journal")
+        :desc "Fast journal entry" "j" #'my/journal-add-entry
+        :desc "Open journal" "o" #'my/journal-open
+        :desc "Capture journal entry" "c" #'my/journal-capture
+        :desc "Journal sync" "g" #'my/journal-sync)))
+#+end_src
+
+Con las funcionalidades:
+
+|-----------+-----------------------+--------------------------------------------|
+| Teclas    | Acción                | Descripción                                |
+|-----------+-----------------------+--------------------------------------------|
+| ~SPC n j j~ | Entrada rápida        | Agrega entrada rápida con timestamp.       |
+| ~SPC n j c~ | Captura rápida        | Captura con contexto via org-capture.      |
+| ~SPC n j o~ | Aapertura del journal | Abre el archivo de la semana actual.       |
+| ~SPC n j g~ | Sincronización Github | git add + commit + push del =org-directory=. |
+|-----------+-----------------------+--------------------------------------------|
+** Imágenes
+
+*** Preview de imágenes
+Queremos que se cargue automáticamente la previsualización de imágenes en =Org-mode=:
+#+begin_src emacs-lisp
+(setq org-startup-with-inline-images t)
+#+end_src
+
+Y que si no está especificado el tamaño que sea de 500 px.
+#+begin_src emacs-lisp
+(setq org-image-actual-width '(500))
+#+end_src
+
+Hay que tener en cuenta que este ajuste está en =px= con lo cual va a variar de monitor en monitor.
+
+*** Copiado de imágenes
+Esta sección la usamos para poder copiar imágenes desde el clipboard, ya sean imágenes copiadas directamente, como capturas de pantallas (totales o parciales) o referencias a imágenes copiadas desde el explorador de archivos.
+
+**** Directorio de Assets
+
+Las imágenes se pegan en =Org/Assets= y se organizan por día, mes y año.
+#+begin_src emacs-lisp
+(after! org
+  (defun my/org-download-dir ()
+  (let ((dir (expand-file-name
+              (format-time-string "%Y/%m/Day_%d")
+              (expand-file-name "Assets" org-directory))))
+      (make-directory dir t)
+      dir)))
+#+end_src
+
+**** Copiado de imágenes
+Al copiar una imagen, por ejemplo de una captura de pantalla, se puede pegar en =Org-mode= utilizando =xclip=.
+
+#+begin_src emacs-lisp
+(after! org
+  (defun my/org-download-clipboard ()
+    "Paste clipboard image into Assets folder with custom name."
+    (interactive)
+    (let* ((dir (my/org-download-dir))
+            (name (read-string "Image name: "))
+            (safe-name
+            (replace-regexp-in-string
+            "[^a-zA-Z0-9_-]" "_" name))
+            (filepath (expand-file-name (format "%s.png" safe-name) dir))
+            (width (string-to-number
+                    (read-string "Width: " "500")))
+            (result (call-process "xclip" nil `(:file ,filepath) nil
+                                "-selection" "clipboard"
+                                "-t" "image/png"
+                                "-o")))
+        (if (and (= result 0) (file-exists-p filepath))
+            (progn
+            (insert (format "#+ATTR_ORG: :width %d\n[[file:%s]]\n"
+                            width
+                            (file-relative-name filepath
+                                                (file-name-directory buffer-file-name))))
+            (org-display-inline-images))
+        (message "Error: no se pudo guardar la imagen del clipboard")))))
+#+end_src
+
+Al intentar pegarla pedirá:
+- =Image name= (sin necesidad de poner una extensión al final). Se van a borrar tildes y otros caracteres que no sean puramente alfanuméricos.
+- =Width= que por defecto será 500 px.
+
+
+**** Copiado de imágenes por referencia
+Es posible además pegar imágenes copiándolas desde el explorador de archivos, también utilizando =xclip=.
+
+#+begin_src emacs-lisp
+(after! org
+  (defun my/org-copy-images-from-files ()
+    "Copy image files from file manager clipboard into Assets folder."
+    (interactive)
+    (let* ((dir (my/org-download-dir))
+           (raw (shell-command-to-string
+                 "xclip -selection clipboard -t text/uri-list -o"))
+           (uris (cl-remove-if #'string-empty-p
+                               (split-string (string-trim raw) "\n")))
+           (_ (unless uris
+                (error "No hay archivos en el clipboard")))
+           (sources (mapcar (lambda (uri)
+                              (string-remove-prefix "file://" uri))
+                            uris)))
+      (dolist (source sources)
+        (when (file-exists-p source)
+          (let* ((name (read-string
+                        "Image name: "
+                        (file-name-sans-extension
+                         (file-name-nondirectory source))))
+                 (safe-name
+                  (replace-regexp-in-string
+                   "[^a-zA-Z0-9_-]" "_" name))
+                 (width (string-to-number
+                         (read-string "Width: " "500")))
+                 (filepath (expand-file-name
+                            (format "%s.png" safe-name) dir)))
+            (copy-file source filepath t)
+            (insert (format "#+ATTR_ORG: :width %d\n[[file:%s]]\n"
+                            width
+                            (file-relative-name
+                             filepath
+                             (file-name-directory buffer-file-name)))))))
+      (org-display-inline-images))))
+#+end_src
+
+Esta función loopea sobre todas las imágenes que se hayan copiado, aunque funciona perfectamente en el caso de una sola.
+Al intentar pegarla/s pedirá para cada una:
+- =Image name= (sin necesidad de poner una extensión al final). Toma por defecto el nombre original de la imagen. Se van a borrar tildes y otros caracteres que no sean puramente alfanuméricos.
+- =Width= que por defecto será 500 px.
+
+**** Keybindings
+Los keybindings relacionados a insertar imágenes son los siguientes:
+
+#+begin_src emacs-lisp
+(map! :leader
+    :desc "Paste clipboard image"  "i p" #'my/org-download-clipboard
+    :desc "Copy images from files" "i f" #'my/org-copy-images-from-files)
+#+end_src
+
+Con las funcionalidades:
+
+|---------+-----------------+------------------------------------------------------|
+| Teclas  | Acción          | Descripción                                          |
+|---------+-----------------+------------------------------------------------------|
+| ~SPC i p~ | Pega imágenes   | Inserta la imágen y la guarda en Assets.             |
+| ~SPC i f~ | Pega referencia | Copia imágenes por referencia a su nombre en Assets. |
+|---------+-----------------+------------------------------------------------------|
+
+** Latex
+Para la previsualización usamos =dvipng=, más rápido que =dvisvg=:
+
+#+begin_src emacs-lisp
+(after! org
+  (setq org-preview-latex-default-process 'dvipng))
+#+end_src
+
+***  Previsualización automática
+Existe la posibilidad de que al escribir latex se previsualice automáticamente, pero todavía es relativamenet lento esto con lo cual queda desactivado por ahora.
+
+#+begin_src emacs-lisp
+;; (use-package! org-fragtog
+;;    :after org
+;;    :hook (org-mode . my/org-fragtog-setup))
+
+;;  (defun my/org-fragtog-setup ()
+;;    (org-latex-preview '(16))
+;;    (org-fragtog-mode 1))
+#+end_src
+
+** Org-publish
+Para exportar automáticamente a una página web el Lab-Journal utilizamos =Org-publish=. Esta página web estática está en el =/root= de =/Org= con lo cual se puede cargar usando =Github Pages=.
+
+*** Links rotos
+Para ignorar los links a las fechas en los toc al exportar el Journal. De todas maneras al exportarse entonces aparecen como =*]=. Esto se soluciona al sacar la exportación del toc y dejando el argumento de toc 2 en el header.
+
+#+begin_src emacs-lisp
+(after! org
+  (setq org-export-with-broken-links t))
+#+end_src
+
+*** Exportación automática
+Ahora para exportar automáticamente a Git Pages con Org-publish:
+
+#+begin_src emacs-lisp
+(after! org
+  (require 'ox-publish)
+  (setq org-publish-project-alist
+        '(
+          ("lab-journal"
+           :base-directory "~/Org/Lab-Journal/"
+           :base-extension "org"
+           :publishing-directory "~/Org/Lab-Journal-html/"
+           :recursive t
+           :publishing-function org-html-publish-to-html
+           :with-author nil
+           :with-creator nil
+           :with-toc t
+           :section-numbers nil
+           :time-stamp-file nil
+           :html-head-include-default-style nil
+           :html-head-include-scripts nil
+           :html-head "<link rel='stylesheet' href='../../../style.css' />
+<script defer src='../../../script.js'></script>"
+           :auto-sitemap t
+           :sitemap-filename "index.org"
+           :sitemap-title "Lab Journal"
+           :sitemap-style list
+           :sitemap-sort-files anti-chronologically)))
+
+  (defun my/lab-journal-generate-index ()
+    "Genera search-index.json en el root del repo."
+    (let* ((docs-dir (expand-file-name "~/Org/Lab-Journal-html/"))
+           (output-file (expand-file-name "~/Org/search-index.json"))
+           (files (directory-files-recursively docs-dir "\\.html$"))
+           (entries
+            (delq nil
+                  (mapcar
+                   (lambda (file)
+                     (let* ((rel (file-relative-name file (expand-file-name "~/Org/")))
+                            (parts (split-string rel "/"))
+                            (year  (and (>= (length parts) 4) (nth 1 parts)))
+                            (month (and (>= (length parts) 4) (nth 2 parts)))
+                            (name  (file-name-sans-extension (file-name-nondirectory file)))
+                            (title (replace-regexp-in-string "[-_]" " " name)))
+                       (when (and year month
+                                  (not (string= name "index")))
+                         (format "{\"title\":\"%s\",\"url\":\"%s\",\"year\":\"%s\",\"month\":\"%s\"}"
+                                 title rel year month))))
+                   files))))
+      (with-temp-file output-file
+        (insert "[" (mapconcat #'identity entries ",") "]"))))
+
+#+end_src
+
+- La primera función define el Header de los .htmls que se van a generar. Por cada archivo .org en =/Lab-Journal= se va a crear un equivalente en html en el directorio =/Lab-Journal-html=. De esta forma, al estar ambos en el root, la estructura de links relativos a los Assets es la misma. Idealmente tendríamos los Assets dentro de =/Lab-Journal-html= con los archivos org haciendo referencia a ellos y así luego sólo exponer esa carpeta en Github Pages (usando =/docs= en lugar de =/root=). En cualquiera de los dos casos la ventaja de no tener Assets dentro de =/Lab-Journal= como tenía originalmente es que así se evita la duplicación de los Assets al exportar.
+
+  El Header de cada entrada html contiene la referencia al .css y .js que dan el formato y funcionamiento a la página en cada entrada. Luego, tenemos un =index.html= automático que genera =Org-publish= con las entradas en =/Lab-Journal-html=, pero al generar la página desde =/root= necesitamos además otro =index.html= que lea Github para hacer referencia al automático.
+
+- La segunda función indexa las entradas de =/Lab-Journal-html= en un .json para poder facilitar su búsqueda posteriormente en la página web.
+
+La estructura final del repositorio entonces sería:
+#+begin_src text :tangle no
+Org/
+├── Lab-Journal/
+│   ├── 2026/05/week-21.org
+│   └── index.org
+├── Lab-Journal-html/
+│   ├── 2026/05/week-21.html
+│   ├── pagefind/
+│   └── index.html
+├── Assets/
+│   └── 2026/05/Day_26/imagen.png
+├── index.html
+├── style.css
+├── script.js
+└── references.bib
+#+end_src
+
+Los comandos de publicación custom además indexan las entradas html usando =pagenfind= y =Node.js= para poder tener un buscador en la página. Todo el contenido de este proceso se guarda en =/Lab-Journal-html/pagefind=.
+
+**** index.html
+El =index.html= del =/root= hace referencia al =/Lab-Journal-html/index.html= generado automáticamente con =Org-publish=. Además carga el estilo del índice y el buscador en la landing page de la página. Para el buscador aprovecha la lógica del buscador propio de =pagefind=.
+
+**** style.css
+Da el estilo general de cada entrada.
+
+**** script.js
+Agrega funcionalidades extra dentro de cada entrada, en este caso lo único que hace de momento es aumentar las imágenes a la ventana completa al hacerles click.
+
+*** Exportación de bibliografía
+#+begin_src emacs-lisp
+(after! org
+  (require 'oc-csl)
+  (setq org-cite-global-bibliography '("~/Org/references.bib"))
+  (setq org-cite-export-processors
+        '((html . (csl "chicago-author-date.csl"))
+          (t    . (csl "chicago-author-date.csl"))))
+  (setq org-cite-csl-styles-dir "~/Zotero/styles/"))
+#+end_src
+
+
+*** Comando de actualización de la página web
+#+begin_src emacs-lisp
+(defun my/lab-journal-export-and-push ()
+  (interactive)
+  (save-some-buffers t)
+  (org-publish "lab-journal")
+  (my/lab-journal-generate-index)
+  (async-shell-command
+   (concat
+    "cd " (expand-file-name org-directory) " && "
+    "npx pagefind --site Lab-Journal-html --output-path Lab-Journal-html/pagefind && "
+    "git add . && "
+    "git diff --cached --quiet || "
+    "(git commit -m \"Auto export for the Lab Journal.\" && git push)")))
+#+end_src
+
+*** Comando de rebuild de la página web
+#+begin_src emacs-lisp
+(defun my/lab-journal-full-rebuild ()
+  (interactive)
+  (org-publish-remove-all-timestamps)
+  (org-publish "lab-journal" t)
+  (my/lab-journal-generate-index)
+  (async-shell-command
+   (concat
+    "cd " (expand-file-name org-directory) " && "
+    "npx pagefind --site Lab-Journal-html --output-path Lab-Journal-html/pagefind")))
+#+end_src
+
+*** Keybindings
+#+begin_src emacs-lisp
+(map! :leader
+        :prefix ("n j" . "journal")
+        :desc "Export Lab Journal"
+        "p" #'my/lab-journal-export-and-push
+        :desc "Full rebuild Lab Journal"
+        "R" #'my/lab-journal-full-rebuild))
+#+end_src
+
+* Biblio para bibliografía
+
+#+begin_src emacs-lisp
+(setq org-roam-directory "~/Org")
+
+(after! citar
+  ;; Tu .bib exportado por Zotero
+  (setq citar-bibliography '("~/Org/references.bib"))
+
+  ;; Donde Zotero guarda los PDFs
+  (setq citar-library-paths '("~/Zotero/storage"))
+
+  ;; Donde se crearán/guardarán las notas de org-noter
+  (setq citar-notes-paths '("~/Org/Notes/References"))
+
+  ;; Formato del nombre del archivo de nota
+  (setq citar-file-note-org-include '(org-id org-noter-document-property)));;; ─────────────────────────────────────────────────────────────
+
+
+(after! org-noter
+  (setq org-noter-notes-search-path '("~/Org/Notes/References")
+        org-noter-auto-save-last-location t
+        org-noter-doc-split-fraction '(0.6 . 0.4)  ; PDF izquierda, notas derecha
+        org-noter-always-create-frame nil
+        org-noter-kill-frame-at-session-end nil))
+
+
+(after! (citar org-noter)
+  ;; Función que crea la nota con el template correcto para org-noter
+  (defun my/citar-open-noter (citekey)
+    "Abre o crea una nota org-noter para CITEKEY."
+    (let* ((entry (citar-get-entry citekey))
+           (title (citar-get-value "title" entry))
+           (file  (expand-file-name
+                   (concat citekey ".org")
+                   "~/Org/Notes/References"))
+           (pdf   (car (citar-get-files citekey))))
+      (find-file file)
+      (when (= (buffer-size) 0)
+        ;; Crea el archivo con el header de org-noter si no existe
+        (insert (format "#+title: %s\n#+author: \n\n* %s\n:PROPERTIES:\n:NOTER_DOCUMENT: %s\n:END:\n\n"
+                        title title (or pdf ""))))
+      (org-noter)))
+
+
+  ;; Reemplaza la acción de "abrir nota" en citar por la nuestra
+  (setq citar-open-note-function #'my/citar-open-noter))
+
+
+(after! citar
+  (setq completion-ignore-case t))
+
+(after! pdf-tools
+  (setq-default pdf-view-display-size 'fit-page))
+#+end_src
+
+
+* Python
+#+begin_src emacs-lisp
+;; (use-package! pyvenv
+;;   :config
+;;   (pyvenv-mode 1))
+
+
+;; (after! python
+;;   (setq python-shell-interpreter "ipython"
+;;         python-shell-interpreter-args "-i --simple-prompt --no-color-info"))
+
+#+end_src
+
+
+#+begin_src emacs-lisp
+
+;; Al correr Ipython el encoding por defecto es 'cp1252' y hace cosas raras con los tildes.
+
+;; (set-language-environment "UTF-8")
+;; (prefer-coding-system 'utf-8)
+
+;; (set-default-coding-systems 'utf-8)
+;; (set-terminal-coding-system 'utf-8)
+;; (set-keyboard-coding-system 'utf-8)
+;; (set-selection-coding-system 'utf-8)
+
+;; (setenv "PYTHONUTF8" "1")
+;; (setenv "IPYTHONIOENCODING" "utf-8")
+#+end_src
