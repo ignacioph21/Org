@@ -7,6 +7,9 @@
 (setenv "PATH" (concat (expand-file-name "~/bin") ":" (getenv "PATH")))
 (add-to-list 'exec-path (expand-file-name "~/bin"))
 
+(setenv "PATH" (concat (getenv "PATH") path-separator (expand-file-name "~/.local/bin")))
+(add-to-list 'exec-path (expand-file-name "~/.local/bin"))
+
 (setq doom-theme 'doom-one)
 
 (setq display-line-numbers-type t)
@@ -326,13 +329,14 @@
 (after! pdf-tools
   (setq-default pdf-view-display-size 'fit-page))
 
-;; (use-package! pyvenv
-;;   :config
-;;   (pyvenv-mode 1))
+(use-package! pyvenv
+  :config
+  (pyvenv-mode 1)
+  (unless pyvenv-virtual-env (pyvenv-activate (expand-file-name "~/.venv"))))
 
-;; (after! python
-;;   (setq python-shell-interpreter "ipython"
-;;         python-shell-interpreter-args "-i --simple-prompt --no-color-info"))
+(after! python
+  (setq python-shell-interpreter "ipython"
+        python-shell-interpreter-args "-i --simple-prompt"))
 
 ;; (set-language-environment "UTF-8")
 ;; (prefer-coding-system 'utf-8)

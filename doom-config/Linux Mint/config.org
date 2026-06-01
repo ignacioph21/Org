@@ -10,6 +10,7 @@
   - [[#nerd-icons][Nerd icons]]
   - [[#pdf-tools][Pdf Tools]]
   - [[#nodejs-y-pagefind][Node.js y Pagefind]]
+  - [[#entornos-virtuales-y-pipx][Entornos virtuales y pipx]]
 - [[#general-emacs-config][General Emacs Config]]
   - [[#servidor-de-emacs][Servidor de Emacs]]
   - [[#ventana-maximizada-al-abrir][Ventana Maximizada al abrir.]]
@@ -129,6 +130,30 @@ Y luego, al correr algún comando con =pagefind= nos preguntará si lo queremos 
 cd ~/Org && npx pagefind --site Lab-Journal-html --output-path Lab-Journal-html/pagefind
 #+end_src
 
+** Entornos virtuales y pipx
+Para manjear herramientas usamos =pipx=, que descarga los paquetes, como =ipython=, =black=, =ruff= y =jupyter= basados en el python del sistema pero en entornos aislados, y que se mantiene accesibles desde cualquier =venv=.
+
+#+begin_src bash :tangle no
+sudo apt install pipx
+#+end_src
+
+Y luego de instalar paquetes hay que agregarlos al path como:
+
+#+begin_src bash :tangle no
+pipx install ipython
+pipx ensurepath
+#+end_src
+
+Para manejar los =venv= de momento utilizo las propias rutinas de =python3=. O sea,
+
+#+begin_src bash :tangle no
+python3 -m venv .venv
+source .venv/bin/activate
+deactivate
+#+end_src
+
+Y una vez activado utilizo =pip= normalmente para instalar paquetes como =numpy=, =matplotlib= o =scipy=. Aunque si en algún momento quiero otras versiones de Python probablemente pase a =miniconda3=.
+
 * General Emacs Config
 La siguiente configuración fue escrita para funcionar en Linux Mint 22.3 con Cinnamon y Cinnamenu.
 
@@ -187,6 +212,15 @@ Aal lanzar Emacs desde el menú de aplicaciones aparentemente no se carga el PAT
 #+end_src
 
 Esto es relevante ya que MikTeX para tener prioridad sobre TexLive (que resulta que también está instalado) se coloca en =~/bin= como symlink a sus ejecutables. Por ejemplo, =dvipng= vive en =~/bin= como symlink a =~/usr/bin/miktex-dvipng=, y sin agregar esto al PATH no lo encuentra. Y esto pasa por haber elegido la instalación personal en vez de system wide.
+
+Además, para poder usar =ipython= y =black= instalados con =pipx= hace falta incorporar lo siguiente:
+
+#+begin_src emacs-lisp
+(setenv "PATH" (concat (getenv "PATH") path-separator (expand-file-name "~/.local/bin")))
+(add-to-list 'exec-path (expand-file-name "~/.local/bin"))
+#+end_src
+
+Ya que nuevamente Emacs, por lo menos lanzado desde Cinnamenu, no lo hereda.
 
 * Doom Emacs Config
 #+begin_src emacs-lisp
@@ -785,17 +819,32 @@ Para las PDF-Tools en Linux Mint están soportadas nativamente, así que solo co
 ** Entornos virtuales
 Para el manejo de entornos virtuales usamos =pyvenv= antes de correr ~M-x run-python~.
 #+begin_src emacs-lisp
-;; (use-package! pyvenv
-;;   :config
-;;   (pyvenv-mode 1))
+(use-package! pyvenv
+  :config
+  (pyvenv-mode 1)
+  (unless pyvenv-virtual-env (pyvenv-activate (expand-file-name "~/.venv"))))
 #+end_src
+
+Vamos a seguir el siguiente esquema:
+
+#+begin_src text :tangle no
+Sistema (Mint)
+├── Python del sistema 3.12.3 (aislado)
+├── pipx (accesible globalmente)
+│   ├── black
+│   └── ipython
+└── Emacs
+    ├── ~/.venv (activo por defecto)
+    └── venv específicos por proyecto
+#+end_src
+
 ** Consola interactiva
 Configuramos para utilizar Ipython por defecto, y así tener acceso a la consola interactiva como REPL.
 
 #+begin_src emacs-lisp
-;; (after! python
-;;   (setq python-shell-interpreter "ipython"
-;;         python-shell-interpreter-args "-i --simple-prompt --no-color-info"))
+(after! python
+  (setq python-shell-interpreter "ipython"
+        python-shell-interpreter-args "-i --simple-prompt"))
 #+end_src
 
 ** Encoding
