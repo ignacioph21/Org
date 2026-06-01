@@ -10,6 +10,7 @@
   - [[#1020][[10:20]]]
   - [[#1225][[12:25]]]
   - [[#1508][[15:08]]]
+  - [[#1513][[15:13]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -29,3 +30,8 @@ Ya está funcionando, con un ambiente llamado =~/.env=. Que usa por defecto =pyv
 
 ** [15:08]
 Ya tengo configurado también un modo con ~f5~ que interrumpe la ejecución y envía el aarchivo. El modo de output =%xmode=, al printear =KeyboardInterrup= viene por defecto en verboso y printea un montón de cosas, pero se podría cambiar. Además ~f5~ sólo funciona si hay algo que interrumpir, pero supongo que con un if se podría corregir también.
+
+** [15:13]
+Queda para hacer de las mediciones del rompimiento de ola:
+- Calcular la distribución del número de Iribarren.
+- Superponer las partes repetidas y ver qué tan bien definida está la serie temporal.
