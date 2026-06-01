@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Journal Week 23</title>
+<meta name="generator" content="Org Mode" />
+<link rel='stylesheet' href='../../../style.css' />
+<script defer src='../../../script.js'></script><style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Journal Week 23</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3b6c5ea">Referencias</a></li>
+<li><a href="#org97a5204">2026-06-01</a>
+<ul>
+<li><a href="#orgb9cfe3a">[09:14]</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3b6c5ea" class="outline-2">
+<h2 id="org3b6c5ea">Referencias</h2>
+<div class="outline-text-2" id="text-org3b6c5ea">
+<div class="csl-bib-body">
+</div>
+</div>
+</div>
+<div id="outline-container-org97a5204" class="outline-2">
+<h2 id="org97a5204">2026-06-01</h2>
+<div class="outline-text-2" id="text-org97a5204">
+</div>
+<div id="outline-container-orgb9cfe3a" class="outline-3">
+<h3 id="orgb9cfe3a">[09:14]</h3>
+<div class="outline-text-3" id="text-orgb9cfe3a">
+<p>
+Estuve probando con Claude intentar conectarme a la placa de adquisición de IOTech desde Linux. Le pase <code>DaqX64.dll</code> y los drivers <code>pdaq3k.sys</code> y <code>pdaq3kld.sys</code>.
+</p>
+
+<p>
+Aparentemente Linux tiene un dirver generíco para comunicarse con la placa ya que <code>lsusb</code> la encuentra como un dispositivo de IOTech. Claude extrajo de los .sys el firmware de la placa y me dió un archivo de Python para comunicarnos pero de momento está en timeout. Recién me quedé sin tokens hasta las 13:30 pero luego jhabría que continuar probando. Durante el intento de carga del firmware interceptamos la comunicación con <code>tshark</code> y aparentemente le diálogo inicial tuvo éxito.
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
