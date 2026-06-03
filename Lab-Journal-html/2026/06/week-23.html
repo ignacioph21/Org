@@ -17,32 +17,40 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0a9798a">Referencias</a></li>
-<li><a href="#org15d0d56">2026-06-01</a>
+<li><a href="#org65d9647">Referencias</a></li>
+<li><a href="#orgef63851">2026-06-01</a>
 <ul>
-<li><a href="#org5d743b0">[09:14]</a></li>
-<li><a href="#org78ff1f1">[10:20]</a></li>
-<li><a href="#orgeacc3ef">[12:25]</a></li>
-<li><a href="#org260002b">[15:08]</a></li>
+<li><a href="#orgae47364">[09:14]</a></li>
+<li><a href="#org92dc8da">[10:20]</a></li>
+<li><a href="#orgbdccfcd">[12:25]</a></li>
+<li><a href="#org789496e">[15:08]</a></li>
+<li><a href="#org525a137">[15:13]</a></li>
+<li><a href="#orga7a9c92">[15:17]</a></li>
+</ul>
+</li>
+<li><a href="#orgc0fdb5d">2026-06-03</a>
+<ul>
+<li><a href="#orgf31da16">[09:28]</a></li>
+<li><a href="#org4bb9685">[10:13]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0a9798a" class="outline-2">
-<h2 id="org0a9798a">Referencias</h2>
-<div class="outline-text-2" id="text-org0a9798a">
+<div id="outline-container-org65d9647" class="outline-2">
+<h2 id="org65d9647">Referencias</h2>
+<div class="outline-text-2" id="text-org65d9647">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org15d0d56" class="outline-2">
-<h2 id="org15d0d56">2026-06-01</h2>
-<div class="outline-text-2" id="text-org15d0d56">
+<div id="outline-container-orgef63851" class="outline-2">
+<h2 id="orgef63851">2026-06-01</h2>
+<div class="outline-text-2" id="text-orgef63851">
 </div>
-<div id="outline-container-org5d743b0" class="outline-3">
-<h3 id="org5d743b0">[09:14]</h3>
-<div class="outline-text-3" id="text-org5d743b0">
+<div id="outline-container-orgae47364" class="outline-3">
+<h3 id="orgae47364">[09:14]</h3>
+<div class="outline-text-3" id="text-orgae47364">
 <p>
 Estuve probando con Claude intentar conectarme a la placa de adquisición de IOTech desde Linux. Le pase <code>DaqX64.dll</code> y los drivers <code>pdaq3k.sys</code> y <code>pdaq3kld.sys</code>.
 </p>
@@ -52,27 +60,77 @@ Aparentemente Linux tiene un dirver generíco para comunicarse con la placa ya q
 </p>
 </div>
 </div>
-<div id="outline-container-org78ff1f1" class="outline-3">
-<h3 id="org78ff1f1">[10:20]</h3>
-<div class="outline-text-3" id="text-org78ff1f1">
+<div id="outline-container-org92dc8da" class="outline-3">
+<h3 id="org92dc8da">[10:20]</h3>
+<div class="outline-text-3" id="text-org92dc8da">
 <p>
 Ya estaría en general terminada la configuración literaria con <code>config.org</code>. Solo queda el tema de los ambientes virtuales de Python.
 </p>
 </div>
 </div>
-<div id="outline-container-orgeacc3ef" class="outline-3">
-<h3 id="orgeacc3ef">[12:25]</h3>
-<div class="outline-text-3" id="text-orgeacc3ef">
+<div id="outline-container-orgbdccfcd" class="outline-3">
+<h3 id="orgbdccfcd">[12:25]</h3>
+<div class="outline-text-3" id="text-orgbdccfcd">
 <p>
 Ya está funcionando, con un ambiente llamado <code>~/.env</code>. Que usa por defecto <code>pyvenv</code>.
 </p>
 </div>
 </div>
-<div id="outline-container-org260002b" class="outline-3">
-<h3 id="org260002b">[15:08]</h3>
-<div class="outline-text-3" id="text-org260002b">
+<div id="outline-container-org789496e" class="outline-3">
+<h3 id="org789496e">[15:08]</h3>
+<div class="outline-text-3" id="text-org789496e">
 <p>
 Ya tengo configurado también un modo con <code>f5</code> que interrumpe la ejecución y envía el aarchivo. El modo de output <code>%xmode</code>, al printear <code>KeyboardInterrup</code> viene por defecto en verboso y printea un montón de cosas, pero se podría cambiar. Además <code>f5</code> sólo funciona si hay algo que interrumpir, pero supongo que con un if se podría corregir también.
+</p>
+</div>
+</div>
+<div id="outline-container-org525a137" class="outline-3">
+<h3 id="org525a137">[15:13]</h3>
+<div class="outline-text-3" id="text-org525a137">
+<p>
+Queda para hacer de las mediciones del rompimiento de ola:
+</p>
+<ul class="org-ul">
+<li>Calcular la distribución del número de Iribarren.</li>
+<li>Superponer las partes repetidas y ver qué tan bien definida está la serie temporal.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga7a9c92" class="outline-3">
+<h3 id="orga7a9c92">[15:17]</h3>
+<div class="outline-text-3" id="text-orga7a9c92">
+<p>
+Hay una cosa rara con los tildes. Para replicar hay que apagara BloqMáyus e inmediatamenete tocar la tecla del tilde, esto lo que produce es que se ponga diérsis en vez de tilde, por ejemplo en &ldquo;Cömo&rdquo; en lugar de &ldquo;Cómo&rdquo;.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc0fdb5d" class="outline-2">
+<h2 id="orgc0fdb5d">2026-06-03</h2>
+<div class="outline-text-2" id="text-orgc0fdb5d">
+</div>
+<div id="outline-container-orgf31da16" class="outline-3">
+<h3 id="orgf31da16">[09:28]</h3>
+<div class="outline-text-3" id="text-orgf31da16">
+<p>
+Estoy descargando Wireshark en Mi Compu con Windows para poder registrar la comunicación de la placa con la computadora, en la búsqueda de poder utilizarla en Linux.
+Para esto los pasos son:
+</p>
+<ol class="org-ol">
+<li>Abrir Wireshark</li>
+<li>Elegir USBP cap1, con la placa conectada, y seleccionar la placa.</li>
+<li>Darle a <code>start</code> para iniciar la captura.</li>
+<li>Desconectar y reconectar la placa, correr el código que le pregunta el nombre o lee un canal analógico.</li>
+<li>Detenr la captura con <code>C-e</code> o el cuadrado rojo de arriba a la izquierda (al lado de la aleta de tiburón que permite reiniciar la captura).</li>
+<li>Guardar la captura como <code>algo.pcapng</code>.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org4bb9685" class="outline-3">
+<h3 id="org4bb9685">[10:13]</h3>
+<div class="outline-text-3" id="text-org4bb9685">
+<p>
+AL conectar hoy la placa en Linux tuve que cambiar la regla udev ya que se modificó el <i>ATTR{idProduct}==&ldquo;2c01&rdquo;</i>. ESto te das cuenta al correr <code>lsusb -v</code> y al ver el número 3 diría <code>can't open device</code> si cambió algo. AL corregir esto se soluciona.
 </p>
 </div>
 </div>

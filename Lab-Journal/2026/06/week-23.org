@@ -11,6 +11,10 @@
   - [[#1225][[12:25]]]
   - [[#1508][[15:08]]]
   - [[#1513][[15:13]]]
+  - [[#1517][[15:17]]]
+- [[#2026-06-03][2026-06-03]]
+  - [[#0928][[09:28]]]
+  - [[#1013][[10:13]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -35,3 +39,21 @@ Ya tengo configurado también un modo con ~f5~ que interrumpe la ejecución y en
 Queda para hacer de las mediciones del rompimiento de ola:
 - Calcular la distribución del número de Iribarren.
 - Superponer las partes repetidas y ver qué tan bien definida está la serie temporal.
+
+** [15:17]
+Hay una cosa rara con los tildes. Para replicar hay que apagara BloqMáyus e inmediatamenete tocar la tecla del tilde, esto lo que produce es que se ponga diérsis en vez de tilde, por ejemplo en "Cömo" en lugar de "Cómo".
+
+* 2026-06-03
+
+** [09:28]
+Estoy descargando Wireshark en Mi Compu con Windows para poder registrar la comunicación de la placa con la computadora, en la búsqueda de poder utilizarla en Linux.
+Para esto los pasos son:
+1) Abrir Wireshark
+2) Elegir USBP cap1, con la placa conectada, y seleccionar la placa.
+3) Darle a =start= para iniciar la captura.
+4) Desconectar y reconectar la placa, correr el código que le pregunta el nombre o lee un canal analógico.
+5) Detenr la captura con ~C-e~ o el cuadrado rojo de arriba a la izquierda (al lado de la aleta de tiburón que permite reiniciar la captura).
+6) Guardar la captura como =algo.pcapng=.
+
+** [10:13]
+AL conectar hoy la placa en Linux tuve que cambiar la regla udev ya que se modificó el /ATTR{idProduct}=="2c01"/. ESto te das cuenta al correr =lsusb -v= y al ver el número 3 diría =can't open device= si cambió algo. AL corregir esto se soluciona.
