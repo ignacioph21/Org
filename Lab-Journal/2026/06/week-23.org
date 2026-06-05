@@ -15,6 +15,10 @@
 - [[#2026-06-03][2026-06-03]]
   - [[#0928][[09:28]]]
   - [[#1013][[10:13]]]
+- [[#2026-06-04][2026-06-04]]
+  - [[#1002][[10:02]]]
+- [[#2026-06-05][2026-06-05]]
+  - [[#0854][[08:54]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -57,3 +61,21 @@ Para esto los pasos son:
 
 ** [10:13]
 AL conectar hoy la placa en Linux tuve que cambiar la regla udev ya que se modificó el /ATTR{idProduct}=="2c01"/. ESto te das cuenta al correr =lsusb -v= y al ver el número 3 diría =can't open device= si cambió algo. AL corregir esto se soluciona.
+
+* 2026-06-04
+
+** [10:02]
+Estuvimos probando más formas de intentar hablar con la Personal DAQ desde Linux. Conseguimos verificar que dentro de la placa hay una FPGA programable vacía un, Xilinx Spartan-3 (3s400ft256), al cual envía el firmware cada vez al conectarla. Esto en Windows hace que se prenda el LED de =power=.
+
+Estamos viendo de comprar sino otra placa que esté soportada directamente en Linux. Las opciones son:
+- NI USB-6210: Estas están en Labo 4/5 y las podemos probar. Son 16 inputs SE/8 DE, 16 bit, 250 kS/s. Sale ~USD 500.
+- MCC USB-205: Son 8 inputs SE, 12 bit, 500 kS/s. Ganancia única de $\pm 10$ V. Sale USD 200.
+- MCC USB-1608GX-2AO: Son 16 inputs SE/8 DE, 16 bit, 500 kS/s. 5 rangos de ganancia. Sale USD 919.
+- MCC USB-1608G: Son 16 inputs SE/8 DE, 16 bit, 250 kS/s. 5 rangos de ganancia. Sale USD 459.
+
+* 2026-06-05
+
+** [08:54]
+Para la placa NI-USB 6210 el software compatible con Linux es NiDAQmx Base, pero este está deprecated debido a la actualización a NiDAQmx, y solo funciona en distros bastante viejos. Al bajar el  =ni-hwcfg-utility= compatible con el Ubuntu actual detecta el dispositivo pero dice que está unsupported.
+
+La alternativa sería hacer una máquina virtual de Linux liviana de alguna versión anterior solo para usar la placa ésta con Base.
