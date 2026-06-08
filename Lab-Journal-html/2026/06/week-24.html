@@ -17,39 +17,42 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5fd872f">Referencias</a></li>
-<li><a href="#org52b947d">2026-06-08</a>
+<li><a href="#orgb8fd7bb">Referencias</a></li>
+<li><a href="#orga6aa8ea">2026-06-08</a>
 <ul>
-<li><a href="#org69db825">[10:09]</a></li>
-<li><a href="#orgc5ee5fe">[13:18]</a></li>
-<li><a href="#orgffa874c">[13:53]</a></li>
+<li><a href="#org35419e2">[10:09]</a></li>
+<li><a href="#org1b5802b">[13:18]</a></li>
+<li><a href="#org93bd8bb">[13:53]</a></li>
+<li><a href="#org12a6103">[14:10]</a></li>
+<li><a href="#orgee58d03">[14:17]</a></li>
+<li><a href="#orgaa6a7ed">[14:21]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5fd872f" class="outline-2">
-<h2 id="org5fd872f">Referencias</h2>
-<div class="outline-text-2" id="text-org5fd872f">
+<div id="outline-container-orgb8fd7bb" class="outline-2">
+<h2 id="orgb8fd7bb">Referencias</h2>
+<div class="outline-text-2" id="text-orgb8fd7bb">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org52b947d" class="outline-2">
-<h2 id="org52b947d">2026-06-08</h2>
-<div class="outline-text-2" id="text-org52b947d">
+<div id="outline-container-orga6aa8ea" class="outline-2">
+<h2 id="orga6aa8ea">2026-06-08</h2>
+<div class="outline-text-2" id="text-orga6aa8ea">
 </div>
-<div id="outline-container-org69db825" class="outline-3">
-<h3 id="org69db825">[10:09]</h3>
-<div class="outline-text-3" id="text-org69db825">
+<div id="outline-container-org35419e2" class="outline-3">
+<h3 id="org35419e2">[10:09]</h3>
+<div class="outline-text-3" id="text-org35419e2">
 <p>
 Ya la semana pasada quedó instalado en la Compu de la sala (con Windows 7) el software del controlador de la placa de adquisición y Python (mediante miniforge3, con la versión que viene de base con Python 3.8 que es la más nueva compatible con Windows 7). Además, quedó descargado el software de LinMot-Talk, la versión 1 ya que la más nueva pedía actualizar el firmware de los motores.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc5ee5fe" class="outline-3">
-<h3 id="orgc5ee5fe">[13:18]</h3>
-<div class="outline-text-3" id="text-orgc5ee5fe">
+<div id="outline-container-org1b5802b" class="outline-3">
+<h3 id="org1b5802b">[13:18]</h3>
+<div class="outline-text-3" id="text-org1b5802b">
 <p>
 Cuidado, al intentar correr <code>measure_interface.py</code> desde el pendrive tiene buffer overruns constantemente, en la Compu funciona bien.
 </p>
@@ -59,16 +62,16 @@ Una cosa que noté es que con el sesnor dos desconectado pero el uno conectado s
 </p>
 </div>
 </div>
-<div id="outline-container-orgffa874c" class="outline-3">
-<h3 id="orgffa874c">[13:53]</h3>
-<div class="outline-text-3" id="text-orgffa874c">
+<div id="outline-container-org93bd8bb" class="outline-3">
+<h3 id="org93bd8bb">[13:53]</h3>
+<div class="outline-text-3" id="text-org93bd8bb">
 <p>
 Lo siguiente es la medición en simultáneo de un punico sensor al cual le conecté los tres canales:
 </p>
 
 
 
-<div id="orga5010f1" class="figure">
+<div id="org442c401" class="figure">
 <p><img src="../../../Assets/2026/06/Day_08/sensores_1_y_2_y_3.png" alt="sensores_1_y_2_y_3.png" />
 </p>
 </div>
@@ -78,10 +81,58 @@ Y a continuación desconecté el 2. Se ven unas réplicas.
 </p>
 
 
-<div id="orgb63308d" class="figure">
+<div id="orgef92e26" class="figure">
 <p><img src="../../../Assets/2026/06/Day_08/sensores_1_y_3.png" alt="sensores_1_y_3.png" />
 </p>
 </div>
+
+<p>
+Lo siguiente sería probar con varias protoboards.
+</p>
+
+<p>
+Y comparar los espectros ya que algunos parecen tener ruido de alta frecuencia más que otros.
+</p>
+</div>
+</div>
+<div id="outline-container-org12a6103" class="outline-3">
+<h3 id="org12a6103">[14:10]</h3>
+<div class="outline-text-3" id="text-org12a6103">
+<p>
+Más allá de todo igual anda bastante bien, se superponen todas las curvas:
+</p>
+
+
+<div id="org769ea47" class="figure">
+<p><img src="../../../Assets/2026/06/Day_08/todos_los_sensores_superpuestos.png" alt="todos_los_sensores_superpuestos.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgee58d03" class="outline-3">
+<h3 id="orgee58d03">[14:17]</h3>
+<div class="outline-text-3" id="text-orgee58d03">
+<p>
+Aplicandoo un filtro butterworth de frecuencia de corte 45 Hz obtenemos lo siguiente:
+</p>
+
+
+<div id="org45a703b" class="figure">
+<p><img src="../../../Assets/2026/06/Day_08/todos_los_Sensores_superpuestos_filtrados.png" alt="todos_los_Sensores_superpuestos_filtrados.png" />
+</p>
+</div>
+
+<p>
+Lo que sí hay es una amplitud ligeramente distinta, lo cual supongo a que los circuitos RLC son ligeramente distintos en la protoboard, ya que lo que debería coincidir a fin de cuentas es la altura que se relaciona con la fase por medio del factor de calidad y los valores de los capacitores.
+</p>
+</div>
+</div>
+<div id="outline-container-orgaa6a7ed" class="outline-3">
+<h3 id="orgaa6a7ed">[14:21]</h3>
+<div class="outline-text-3" id="text-orgaa6a7ed">
+<p>
+Otra idea: usar uno de los pins de output analógico del motor programado como la posición actual para medir en simultáneo con la DAQ con el sensor. Ya que todas las calibraciones previas hice correlación temporal entre las señales para alinearlas.
+</p>
 </div>
 </div>
 </div>
