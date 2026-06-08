@@ -17,32 +17,71 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgcf53aab">Referencias</a></li>
-<li><a href="#orgb97de03">2026-06-08</a>
+<li><a href="#org5fd872f">Referencias</a></li>
+<li><a href="#org52b947d">2026-06-08</a>
 <ul>
-<li><a href="#org8929cd6">[10:09]</a></li>
+<li><a href="#org69db825">[10:09]</a></li>
+<li><a href="#orgc5ee5fe">[13:18]</a></li>
+<li><a href="#orgffa874c">[13:53]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcf53aab" class="outline-2">
-<h2 id="orgcf53aab">Referencias</h2>
-<div class="outline-text-2" id="text-orgcf53aab">
+<div id="outline-container-org5fd872f" class="outline-2">
+<h2 id="org5fd872f">Referencias</h2>
+<div class="outline-text-2" id="text-org5fd872f">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-orgb97de03" class="outline-2">
-<h2 id="orgb97de03">2026-06-08</h2>
-<div class="outline-text-2" id="text-orgb97de03">
+<div id="outline-container-org52b947d" class="outline-2">
+<h2 id="org52b947d">2026-06-08</h2>
+<div class="outline-text-2" id="text-org52b947d">
 </div>
-<div id="outline-container-org8929cd6" class="outline-3">
-<h3 id="org8929cd6">[10:09]</h3>
-<div class="outline-text-3" id="text-org8929cd6">
+<div id="outline-container-org69db825" class="outline-3">
+<h3 id="org69db825">[10:09]</h3>
+<div class="outline-text-3" id="text-org69db825">
 <p>
 Ya la semana pasada quedó instalado en la Compu de la sala (con Windows 7) el software del controlador de la placa de adquisición y Python (mediante miniforge3, con la versión que viene de base con Python 3.8 que es la más nueva compatible con Windows 7). Además, quedó descargado el software de LinMot-Talk, la versión 1 ya que la más nueva pedía actualizar el firmware de los motores.
 </p>
+</div>
+</div>
+<div id="outline-container-orgc5ee5fe" class="outline-3">
+<h3 id="orgc5ee5fe">[13:18]</h3>
+<div class="outline-text-3" id="text-orgc5ee5fe">
+<p>
+Cuidado, al intentar correr <code>measure_interface.py</code> desde el pendrive tiene buffer overruns constantemente, en la Compu funciona bien.
+</p>
+
+<p>
+Una cosa que noté es que con el sesnor dos desconectado pero el uno conectado se ven en la medición del segundo rréplicas de menor amplitud en la fase. Desconozco de momento si esto se debe al graficador en tiempo real, a algo de cómo parseo los binarios que manda la placa en tiempo real o a si hay ruido real que hace que mida de todas formas.
+</p>
+</div>
+</div>
+<div id="outline-container-orgffa874c" class="outline-3">
+<h3 id="orgffa874c">[13:53]</h3>
+<div class="outline-text-3" id="text-orgffa874c">
+<p>
+Lo siguiente es la medición en simultáneo de un punico sensor al cual le conecté los tres canales:
+</p>
+
+
+
+<div id="orga5010f1" class="figure">
+<p><img src="../../../Assets/2026/06/Day_08/sensores_1_y_2_y_3.png" alt="sensores_1_y_2_y_3.png" />
+</p>
+</div>
+
+<p>
+Y a continuación desconecté el 2. Se ven unas réplicas.
+</p>
+
+
+<div id="orgb63308d" class="figure">
+<p><img src="../../../Assets/2026/06/Day_08/sensores_1_y_3.png" alt="sensores_1_y_3.png" />
+</p>
+</div>
 </div>
 </div>
 </div>

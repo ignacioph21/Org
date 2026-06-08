@@ -7,6 +7,8 @@
 - [[#referencias][Referencias]]
 - [[#2026-06-08][2026-06-08]]
   - [[#1009][[10:09]]]
+  - [[#1318][[13:18]]]
+  - [[#1353][[13:53]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -15,3 +17,20 @@
 
 ** [10:09]
 Ya la semana pasada quedó instalado en la Compu de la sala (con Windows 7) el software del controlador de la placa de adquisición y Python (mediante miniforge3, con la versión que viene de base con Python 3.8 que es la más nueva compatible con Windows 7). Además, quedó descargado el software de LinMot-Talk, la versión 1 ya que la más nueva pedía actualizar el firmware de los motores.
+
+** [13:18]
+Cuidado, al intentar correr =measure_interface.py= desde el pendrive tiene buffer overruns constantemente, en la Compu funciona bien.
+
+Una cosa que noté es que con el sesnor dos desconectado pero el uno conectado se ven en la medición del segundo rréplicas de menor amplitud en la fase. Desconozco de momento si esto se debe al graficador en tiempo real, a algo de cómo parseo los binarios que manda la placa en tiempo real o a si hay ruido real que hace que mida de todas formas.
+
+** [13:53]
+Lo siguiente es la medición en simultáneo de un punico sensor al cual le conecté los tres canales:
+
+
+#+ATTR_ORG: :width 1500
+[[file:../../../Assets/2026/06/Day_08/sensores_1_y_2_y_3.png]]
+
+Y a continuación desconecté el 2. Se ven unas réplicas.
+
+#+ATTR_ORG: :width 1500
+[[file:../../../Assets/2026/06/Day_08/sensores_1_y_3.png]]
