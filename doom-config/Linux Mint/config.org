@@ -30,6 +30,7 @@
   - [[#consola-interactiva][Consola interactiva]]
   - [[#encoding][Encoding]]
   - [[#más-parecido-a-idle][Más parecido a IDLE]]
+- [[#dired][Dired]]
 
 * Meta
 Esta sección está dedicada a programas adicionales por fuera de Emacs.
@@ -887,4 +888,21 @@ Para que se parezca más al IDLE de Python que estoy acostumbrado a usar usamos 
   (define-key python-mode-map
               (kbd "<f5>")
               #'my-python-restart-buffer))
+#+end_src
+
+* Dired
+Para que Dired reutilice el buffer actual en vez de ir abriendo y dejar abiertos varios buffers al desplazarme entre archivos.
+
+#+begin_src emacs-lisp
+(setq dired-kill-when-opening-new-dired-buffer t)
+#+end_src
+
+Y para que cierre el último buffer al abrir un archivo.
+
+#+begin_src emacs-lisp
+(after! dired
+  (put 'dired-find-alternate-file 'disabled nil)
+
+  (map! :map dired-mode-map
+        :n "RET" #'dired-find-alternate-file))
 #+end_src

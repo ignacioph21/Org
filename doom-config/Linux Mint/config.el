@@ -362,3 +362,11 @@
   (define-key python-mode-map
               (kbd "<f5>")
               #'my-python-restart-buffer))
+
+(setq dired-kill-when-opening-new-dired-buffer t)
+
+(after! dired
+  (put 'dired-find-alternate-file 'disabled nil)
+
+  (map! :map dired-mode-map
+        :n "RET" #'dired-find-alternate-file))
