@@ -9,6 +9,9 @@
   - [[#1009][[10:09]]]
   - [[#1318][[13:18]]]
   - [[#1353][[13:53]]]
+  - [[#1410][[14:10]]]
+  - [[#1417][[14:17]]]
+  - [[#1421][[14:21]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -34,3 +37,25 @@ Y a continuación desconecté el 2. Se ven unas réplicas.
 
 #+ATTR_ORG: :width 1500
 [[file:../../../Assets/2026/06/Day_08/sensores_1_y_3.png]]
+
+Lo siguiente sería probar con varias protoboards.
+
+Y comparar los espectros ya que algunos parecen tener ruido de alta frecuencia más que otros.
+
+** [14:10]
+Más allá de todo igual anda bastante bien, se superponen todas las curvas:
+
+#+ATTR_ORG: :width 1500
+[[file:../../../Assets/2026/06/Day_08/todos_los_sensores_superpuestos.png]]
+
+** [14:17]
+Aplicandoo un filtro butterworth de frecuencia de corte 45 Hz obtenemos lo siguiente:
+
+#+ATTR_ORG: :width 1500
+[[file:../../../Assets/2026/06/Day_08/todos_los_Sensores_superpuestos_filtrados.png]]
+
+Lo que sí hay es una amplitud ligeramente distinta, lo cual supongo a que los circuitos RLC son ligeramente distintos en la protoboard, ya que lo que debería coincidir a fin de cuentas es la altura que se relaciona con la fase por medio del factor de calidad y los valores de los capacitores.
+
+
+** [14:21]
+Otra idea: usar uno de los pins de output analógico del motor programado como la posición actual para medir en simultáneo con la DAQ con el sensor. Ya que todas las calibraciones previas hice correlación temporal entre las señales para alinearlas.
