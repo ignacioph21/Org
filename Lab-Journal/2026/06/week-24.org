@@ -1,0 +1,17 @@
+#+TITLE: Journal Week 24
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-06-08][2026-06-08]]
+  - [[#1009][[10:09]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-06-08
+
+** [10:09]
+Ya la semana pasada quedó instalado en la Compu de la sala (con Windows 7) el software del controlador de la placa de adquisición y Python (mediante miniforge3, con la versión que viene de base con Python 3.8 que es la más nueva compatible con Windows 7). Además, quedó descargado el software de LinMot-Talk, la versión 1 ya que la más nueva pedía actualizar el firmware de los motores.
