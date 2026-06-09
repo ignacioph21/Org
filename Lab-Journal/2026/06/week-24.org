@@ -113,3 +113,6 @@ Donde se ve el pico de 20 Hz. Hay una pendiente clara de -2 en loglog que podrí
 En cuanto al sensor usé el más corto de los nuevos, con la placa =83= y frecuencia entre 51 y 55 kHz.
 
 A parte el drift parece durar más de un minuto, o se aprecia más por medir cosas de amplitudes muy chicas.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_09/20260609_113858(1).jpg]]
