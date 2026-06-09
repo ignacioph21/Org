@@ -12,6 +12,10 @@
   - [[#1410][[14:10]]]
   - [[#1417][[14:17]]]
   - [[#1421][[14:21]]]
+  - [[#1524][[15:24]]]
+  - [[#1605][[16:05]]]
+- [[#2026-06-09][2026-06-09]]
+  - [[#0854][[08:54]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -59,3 +63,19 @@ Lo que sí hay es una amplitud ligeramente distinta, lo cual supongo a que los c
 
 ** [14:21]
 Otra idea: usar uno de los pins de output analógico del motor programado como la posición actual para medir en simultáneo con la DAQ con el sensor. Ya que todas las calibraciones previas hice correlación temporal entre las señales para alinearlas.
+
+** [15:24]
+Subí los manuales del Servo Drive E11-RS del motor y de la PersonalDaq 3001 al Github de la organización.
+
+** [16:05]
+Estoy intentando inyectar energía con un forzado en la Ecuación de Burgers numérica.
+
+* 2026-06-09
+
+** [08:54]
+La fórmula correcta para el desfasaje es $t_0 = - channel/n__{}_{}text{channels}$. Ya testeada.
+
+#+ATTR_ORG: :width 1500
+[[file:../../../Assets/2026/06/Day_09/prueba-resampleo.png]]
+
+Eso es la referencia resampleada para cada canal, siguiendo el esquema de lo que hago ahora, aunque probablemente a futuro lo más eficiente sea dejar lla referencia fija y resamplear la señal de los canales.
