@@ -16,6 +16,7 @@
   - [[#1605][[16:05]]]
 - [[#2026-06-09][2026-06-09]]
   - [[#0854][[08:54]]]
+  - [[#1019][[10:19]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -79,3 +80,11 @@ La fórmula correcta para el desfasaje es $t_0 = - channel/n__{}_{}text{channels
 [[file:../../../Assets/2026/06/Day_09/prueba-resampleo.png]]
 
 Eso es la referencia resampleada para cada canal, siguiendo el esquema de lo que hago ahora, aunque probablemente a futuro lo más eficiente sea dejar lla referencia fija y resamplear la señal de los canales.
+
+** [10:19]
+Aún desfasando correctamente la referencia en cada canal pareciera que sigue habiendo una diferencia de fase:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_09/prueba-tres-sensores-desfase-correcto.png]]
+
+Y probablemente sea porque los RLCs son disntintos. Para terminar de verificar que el desfasaje funciona correctamente lo que debería hacer es medir la misma señal en TODOS los canales, pero sospecho que es el primer caso.
