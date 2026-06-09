@@ -111,3 +111,5 @@ Con el espectro:
 Donde se ve el pico de 20 Hz. Hay una pendiente clara de -2 en loglog que podría ser por las discontinuidades en la medición.
 
 En cuanto al sensor usé el más corto de los nuevos, con la placa =83= y frecuencia entre 51 y 55 kHz.
+
+A parte el drift parece durar más de un minuto, o se aprecia más por medir cosas de amplitudes muy chicas.
