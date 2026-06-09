@@ -17,6 +17,7 @@
 - [[#2026-06-09][2026-06-09]]
   - [[#0854][[08:54]]]
   - [[#1019][[10:19]]]
+  - [[#1211][[12:11]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -88,3 +89,25 @@ Aún desfasando correctamente la referencia en cada canal pareciera que sigue ha
 [[file:../../../Assets/2026/06/Day_09/prueba-tres-sensores-desfase-correcto.png]]
 
 Y probablemente sea porque los RLCs son disntintos. Para terminar de verificar que el desfasaje funciona correctamente lo que debería hacer es medir la misma señal en TODOS los canales, pero sospecho que es el primer caso.
+
+** [12:11]
+Conectamos el sensor para usarlo en la celda de Faradat, pero hace algunas cosas raras. Tiene discontinuidades que desconozco si se deben a que está poco sumergido, a que es leche, o a que toca el fondo o las paredes.
+
+Para algo lento, de 300 mHz y 200 mVpp:
+
+#+ATTR_ORG: :width 1500
+[[file:../../../Assets/2026/06/Day_09/prueba-300mHz.png]]
+
+O será simplemente que estamos midiendo amplitudes muy chicas. Para algo con Faraday de 20 Hz y 170 mVpp:
+
+#+ATTR_ORG: :width 1500
+[[file:../../../Assets/2026/06/Day_09/prueba-20Hz.png]]
+
+Con el espectro:
+
+#+ATTR_ORG: :width 1500
+[[file:../../../Assets/2026/06/Day_09/espectro-20Hz.png]]
+
+Donde se ve el pico de 20 Hz. Hay una pendiente clara de -2 en loglog que podría ser por las discontinuidades en la medición.
+
+En cuanto al sensor usé el más corto de los nuevos, con la placa =83= y frecuencia entre 51 y 55 kHz.
