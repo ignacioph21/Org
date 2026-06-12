@@ -21,6 +21,8 @@
 - [[#2026-06-12][2026-06-12]]
   - [[#1008][[10:08]]]
   - [[#1047][[10:47]]]
+  - [[#1334][[13:34]]]
+  - [[#1359][[13:59]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -156,3 +158,9 @@ Al final, me parece que lo mejor es directamente tomar alguna implementación ya
 
 ** [10:47]
 Me parece que tener las imágenes demasiado grandes en el cuaderno hace que aparezca abstante lag al acumularse varias.
+
+** [13:34]
+Para Ornstein-Uhlenbeck lo que mejor parece funcionar es darle una condición inicial que sea $u(x, t=0) \neq 0$. Por ejemplo ruido espacial de frecuencia baja. Esto hace que se generen shocks que viajen en alguna dirección. Una idea es multiplicar eso por una ventana tipo Hanning.
+
+** [13:59]
+La otra cosa que hay que hacer es restarle su versión suavizada, ya sea por una media móvil con ventana de =t=10= o un filtro de Savitzky Golay.
