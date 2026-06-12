@@ -78,7 +78,7 @@ Estoy intentando inyectar energía con un forzado en la Ecuación de Burgers num
 * 2026-06-09
 
 ** [08:54]
-La fórmula correcta para el desfasaje es $t_{0} = - \text{channel}/n__{}_{}{\text{channels}}$. Ya testeada.
+La fórmula correcta para el desfasaje es $t_{0} = - \text{channel}/n__{}{\text{channels}}$. Ya testeada.
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_09/prueba-resampleo.png]]
