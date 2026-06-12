@@ -185,7 +185,7 @@ También calculé la energía definida como:
         E(t) = \frac{1}{2} \int_0^L u²(x, t) dx
 \end{equation}
 
-Que para la solución numérica es la sumatoria de =u²\Delta x=. El resultado es:
+Que para la solución numérica es la sumatoria de =$u²\Delta x$=. El resultado es:
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_12/Energ_a-OU.png]]
