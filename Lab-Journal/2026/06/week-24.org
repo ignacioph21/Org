@@ -108,9 +108,9 @@ Para algo lento, de 300 mHz y 200 mVpp:
 O será simplemente que estamos midiendo amplitudes muy chicas. Para algo con Faraday de 20 Hz y 170 mVpp:
 
 #+ATTR_ORG: :width 500
-[[file:../../../Assets/2026/06/Day_09/prueba-20Hz.png]]/
+[[file:../../../Assets/2026/06/Day_09/prueba-20Hz.png]]
 
-Con el espectro:
+Con el espectro: /+
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_09/espectro-20Hz.png]]
