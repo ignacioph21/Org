@@ -18,6 +18,8 @@
   - [[#0854][[08:54]]]
   - [[#1019][[10:19]]]
   - [[#1211][[12:11]]]
+- [[#2026-06-12][2026-06-12]]
+  - [[#1008][[10:08]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -116,3 +118,34 @@ A parte el drift parece durar más de un minuto, o se aprecia más por medir cos
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_09/20260609_113858(1).jpg]]
+
+* 2026-06-12
+
+** [10:08]
+*** Sedimentación
+Verifiqué que daba bien la reproyección de las partículas grandes en el Von Karman:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_12/100-117-01-2-frame399.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_12/100-117-02-1-frame699.png]]
+
+
+*** Burgers 1D forzado
+
+Sigo intentando resolver numéricamente Burgers pero con algún tipo de variación en el tiempo para poder calcular las PDFs de los incrementos. Para esto probé con una fuerza determinista en tiempo y spacio tipo:
+
+\begin{equation}
+
+        \partial_t u + u \partial_x u = \nu \partial_{xx}_{} u + f(x, t)
+
+\end{equation}
+
+O bien con diferencias finitas en tiempo y espacio y poniendo $u(x = 0, t)$ con una condición de outflow.
+
+Al final, me parece que lo mejor es directamente tomar alguna implementación ya existente de Stochatic 1D Burgers Equation. En este caso para el paquete de =pyburgers=:
+
+#+ATTR_ORG: :width 1500
+[[file:../../../Assets/2026/06/Day_12/solver-pyburgers-espacio-temporal.png]]
+
