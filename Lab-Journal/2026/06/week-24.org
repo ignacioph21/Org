@@ -25,6 +25,7 @@
   - [[#1359][[13:59]]]
   - [[#1407][[14:07]]]
   - [[#1422][[14:22]]]
+  - [[#1446][[14:46]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -198,3 +199,7 @@ Para el caso sin forzar la energía es:
 [[file:../../../Assets/2026/06/Day_12/energ_a-sin-forzar.png]]
 
 Que tiende a $E_{inf} = LU²_0/2$ donde $U_0$ es el valor medio de =u(x, t=0)=. En este caso $U_0\approx-0.91$, $L=2\pi$ y $E_{inf} = 2.628$.
+
+
+** [14:46]
+Habría que disminuir la amplitud de la fuerza del forzado probablemente.
