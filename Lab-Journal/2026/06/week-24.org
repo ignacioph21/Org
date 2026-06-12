@@ -142,7 +142,7 @@ Sigo intentando resolver numéricamente Burgers pero con algún tipo de variaci�
 
 \begin{equation}
 
-        \partial_t u + u \partial_x u = \nu \partial_{xx}_{} u + f(x, t)
+        \partial_t u + u \partial_x u = \nu \partial_{xx} u + f(x, t)
 
 \end{equation}
 
