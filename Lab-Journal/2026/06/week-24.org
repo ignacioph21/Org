@@ -164,3 +164,15 @@ Para Ornstein-Uhlenbeck lo que mejor parece funcionar es darle una condición in
 
 ** [13:59]
 La otra cosa que hay que hacer es restarle su versión suavizada, ya sea por una media móvil con ventana de =t=10= o un filtro de Savitzky Golay.
+
+*** La serie temporal:
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_12/serie-temporal-OU.png]]
+
+*** El espectro/La PSD:
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_12/espectros-forzado-OU.png]]
+
+*** Las series espaciales:
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_12/series-espaciales-OU.png]]
