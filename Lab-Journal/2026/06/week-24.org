@@ -24,6 +24,7 @@
   - [[#1334][[13:34]]]
   - [[#1359][[13:59]]]
   - [[#1407][[14:07]]]
+  - [[#1422][[14:22]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -189,3 +190,11 @@ Que para la solución numérica es la sumatoria de =$u²\Delta x$=. El resultado
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_12/Energ_a-OU.png]]
+
+** [14:22]
+Para el caso sin forzar la energía es:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_12/energ_a-sin-forzar.png]]
+
+Que tiende a $E_{inf} = LU²_0/2$ donde $U_0$ es el valor medio de =u(x, t=0)=. En este caso $U_0\approx-0.91$, $L=2\pi$ y $E_{inf} = 2.628$.
