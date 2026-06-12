@@ -20,6 +20,7 @@
   - [[#1211][[12:11]]]
 - [[#2026-06-12][2026-06-12]]
   - [[#1008][[10:08]]]
+  - [[#1047][[10:47]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -38,12 +39,12 @@ Una cosa que noté es que con el sesnor dos desconectado pero el uno conectado s
 Lo siguiente es la medición en simultáneo de un punico sensor al cual le conecté los tres canales:
 
 
-#+ATTR_ORG: :width 1500
+#+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_08/sensores_1_y_2_y_3.png]]
 
 Y a continuación desconecté el 2. Se ven unas réplicas.
 
-#+ATTR_ORG: :width 1500
+#+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_08/sensores_1_y_3.png]]
 
 Lo siguiente sería probar con varias protoboards.
@@ -53,13 +54,13 @@ Y comparar los espectros ya que algunos parecen tener ruido de alta frecuencia m
 ** [14:10]
 Más allá de todo igual anda bastante bien, se superponen todas las curvas:
 
-#+ATTR_ORG: :width 1500
+#+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_08/todos_los_sensores_superpuestos.png]]
 
 ** [14:17]
 Aplicandoo un filtro butterworth de frecuencia de corte 45 Hz obtenemos lo siguiente:
 
-#+ATTR_ORG: :width 1500
+#+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_08/todos_los_Sensores_superpuestos_filtrados.png]]
 
 Lo que sí hay es una amplitud ligeramente distinta, lo cual supongo a que los circuitos RLC son ligeramente distintos en la protoboard, ya que lo que debería coincidir a fin de cuentas es la altura que se relaciona con la fase por medio del factor de calidad y los valores de los capacitores.
@@ -79,7 +80,7 @@ Estoy intentando inyectar energía con un forzado en la Ecuación de Burgers num
 ** [08:54]
 La fórmula correcta para el desfasaje es $t_0 = - channel/n__{}_{}text{channels}$. Ya testeada.
 
-#+ATTR_ORG: :width 1500
+#+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_09/prueba-resampleo.png]]
 
 Eso es la referencia resampleada para cada canal, siguiendo el esquema de lo que hago ahora, aunque probablemente a futuro lo más eficiente sea dejar lla referencia fija y resamplear la señal de los canales.
@@ -97,17 +98,17 @@ Conectamos el sensor para usarlo en la celda de Faradat, pero hace algunas cosas
 
 Para algo lento, de 300 mHz y 200 mVpp:
 
-#+ATTR_ORG: :width 1500
+#+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_09/prueba-300mHz.png]]
 
 O será simplemente que estamos midiendo amplitudes muy chicas. Para algo con Faraday de 20 Hz y 170 mVpp:
 
-#+ATTR_ORG: :width 1500
+#+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_09/prueba-20Hz.png]]
 
 Con el espectro:
 
-#+ATTR_ORG: :width 1500
+#+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_09/espectro-20Hz.png]]
 
 Donde se ve el pico de 20 Hz. Hay una pendiente clara de -2 en loglog que podría ser por las discontinuidades en la medición.
@@ -125,8 +126,11 @@ A parte el drift parece durar más de un minuto, o se aprecia más por medir cos
 *** Sedimentación
 Verifiqué que daba bien la reproyección de las partículas grandes en el Von Karman:
 
+**** 100 - 117 - 01 - 2
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_12/100-117-01-2-frame399.png]]
+
+**** 100 - 117 - 02 - 1
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_12/100-117-02-1-frame699.png]]
@@ -144,8 +148,11 @@ Sigo intentando resolver numéricamente Burgers pero con algún tipo de variaci�
 
 O bien con diferencias finitas en tiempo y espacio y poniendo $u(x = 0, t)$ con una condición de outflow.
 
-Al final, me parece que lo mejor es directamente tomar alguna implementación ya existente de Stochatic 1D Burgers Equation. En este caso para el paquete de =pyburgers=:
+Al final, me parece que lo mejor es directamente tomar alguna implementación ya existente de Stochatic 1D Burgers Equation. En este caso para el paquete de =pyburgers= con DNS:
 
-#+ATTR_ORG: :width 1500
+#+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_12/solver-pyburgers-espacio-temporal.png]]
 
+
+** [10:47]
+Me parece que tener las imágenes demasiado graandes en el cuaderno hace que aparezca abstante lag al acumularse varias.
