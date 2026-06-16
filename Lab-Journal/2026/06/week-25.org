@@ -12,6 +12,7 @@
   - [[#0935][[09:35]]]
   - [[#0955][[09:55]]]
   - [[#1007][[10:07]]]
+  - [[#1015][[10:15]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -46,3 +47,9 @@ Lo que parece estar pasando es que hacen falta tiempos $\ŧau$s muchos más larg
 
 ** [10:07]
 Seguramente esto tenga que ver con el tiempo de correlación del forzado de Ornstein-Uhlenbeck. En este caso elegí $\tau=$2.5, lo cual es coherente con que tome un delay de ese orden para que las PDFs se vuelvan gaussianas.
+
+** [10:15]
+Efectivamente, para el forzado tan lento del experimento el tiempo de correlación es bastante más grande. Corrigiendo eso:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_16/PDFS-tanh-lineal.png]]
