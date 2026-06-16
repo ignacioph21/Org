@@ -14,6 +14,7 @@
   - [[#1007][[10:07]]]
   - [[#1015][[10:15]]]
   - [[#1021][[10:21]]]
+  - [[#1038][[10:38]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -62,3 +63,12 @@ Y esto para una ventana de 15 s, ya a partir de 10 s empiezan a dar más raras, 
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_16/PDFS-tanh-lineal-ventana-15s.png]]
+
+** [10:38]
+Ideas:
+- Para estudiar cómo se va deformando la onda a medida que avanza por la surf zone, se pueden usar wavelets con onda triangular, o separar por ondas individuales como en[cite:@powerNovelMethodTracking2015].
+- Para medir la relación de dispersión:
+  - Usar unos 5 sensores por tramos del canal.
+  - Usar un láser verde que ilumine agua teñida con rodamina para que emita en el rojo y utilizar la cámara para medir la superficie libre con un filtro.
+  - FTP por tramos.
+- Para agregar aleatoriedad al forzado meter ruido en la señal del motor. Y variar levemente el tiempo de subida del flanco delantero.
