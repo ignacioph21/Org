@@ -9,6 +9,8 @@
   - [[#0847][[08:47]]]
   - [[#0855][[08:55]]]
   - [[#0920][[09:20]]]
+  - [[#0935][[09:35]]]
+  - [[#0955][[09:55]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -26,3 +28,17 @@ Siento que lo que mejor funciona para evitar que explote la energía pero poder 
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_16/serie-convergid_.png]]
+
+** [09:35]
+Paraa una señal más larga funciona bastante mejor el tema de la media móvil.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_16/media-larga.png]]
+
+** [09:55]
+Y finalmente aquí están las PDFs de los incrementos:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_16/PDFS-incrementos-num_ricos.png]]
+
+Lo que parece estar pasando es que hacen falta tiempos $\ŧau$s muchos más largos para que se vuelvan Gaussianas.
