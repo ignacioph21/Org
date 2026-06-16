@@ -49,89 +49,98 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org663cbfe">Referencias</a></li>
-<li><a href="#org00e45dc">2026-06-16</a>
+<li><a href="#org5a1ab12">Referencias</a></li>
+<li><a href="#org33faa34">2026-06-16</a>
 <ul>
-<li><a href="#orgebcfaf8">[08:47]</a></li>
-<li><a href="#orge3f0d7a">[08:55]</a></li>
-<li><a href="#org70e7cee">[09:20]</a></li>
-<li><a href="#org6b77034">[09:35]</a></li>
-<li><a href="#org45c95f0">[09:55]</a></li>
+<li><a href="#org624a1e9">[08:47]</a></li>
+<li><a href="#org8bb7789">[08:55]</a></li>
+<li><a href="#orgabc7773">[09:20]</a></li>
+<li><a href="#orgfd8cce4">[09:35]</a></li>
+<li><a href="#orga5a0915">[09:55]</a></li>
+<li><a href="#orgf17bf12">[10:07]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org663cbfe" class="outline-2">
-<h2 id="org663cbfe">Referencias</h2>
-<div class="outline-text-2" id="text-org663cbfe">
+<div id="outline-container-org5a1ab12" class="outline-2">
+<h2 id="org5a1ab12">Referencias</h2>
+<div class="outline-text-2" id="text-org5a1ab12">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org00e45dc" class="outline-2">
-<h2 id="org00e45dc">2026-06-16</h2>
-<div class="outline-text-2" id="text-org00e45dc">
+<div id="outline-container-org33faa34" class="outline-2">
+<h2 id="org33faa34">2026-06-16</h2>
+<div class="outline-text-2" id="text-org33faa34">
 </div>
-<div id="outline-container-orgebcfaf8" class="outline-3">
-<h3 id="orgebcfaf8">[08:47]</h3>
-<div class="outline-text-3" id="text-orgebcfaf8">
+<div id="outline-container-org624a1e9" class="outline-3">
+<h3 id="org624a1e9">[08:47]</h3>
+<div class="outline-text-3" id="text-org624a1e9">
 <p>
 Sigo con la solución numérica de la Ecuación de Burgers 1D con un forzado espaciotemporal.
 </p>
 </div>
 </div>
-<div id="outline-container-orge3f0d7a" class="outline-3">
-<h3 id="orge3f0d7a">[08:55]</h3>
-<div class="outline-text-3" id="text-orge3f0d7a">
+<div id="outline-container-org8bb7789" class="outline-3">
+<h3 id="org8bb7789">[08:55]</h3>
+<div class="outline-text-3" id="text-org8bb7789">
 <p>
 Que primero avence por delante el salto o la cola de la onda de choque depende del valor de medio de \(u\). Si es negativo se mueve hacia a la izquierda en cualquier caso y si es positivo hacia la derecha, ya que la velocidad a la que se propaga la onda de choque es proporcional a \(u\).
 </p>
 </div>
 </div>
-<div id="outline-container-org70e7cee" class="outline-3">
-<h3 id="org70e7cee">[09:20]</h3>
-<div class="outline-text-3" id="text-org70e7cee">
+<div id="outline-container-orgabc7773" class="outline-3">
+<h3 id="orgabc7773">[09:20]</h3>
+<div class="outline-text-3" id="text-orgabc7773">
 <p>
 Siento que lo que mejor funciona para evitar que explote la energía pero poder tener muchas ondas de choque, es empezar con un \(E_i > 0\) y un forzado muy pequeño.
 </p>
 
 
-<div id="orgbec70fd" class="figure">
+<div id="org1ec277a" class="figure">
 <p><img src="../../../Assets/2026/06/Day_16/serie-convergid_.png" alt="serie-convergid_.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org6b77034" class="outline-3">
-<h3 id="org6b77034">[09:35]</h3>
-<div class="outline-text-3" id="text-org6b77034">
+<div id="outline-container-orgfd8cce4" class="outline-3">
+<h3 id="orgfd8cce4">[09:35]</h3>
+<div class="outline-text-3" id="text-orgfd8cce4">
 <p>
 Paraa una señal más larga funciona bastante mejor el tema de la media móvil.
 </p>
 
 
-<div id="org8b83d83" class="figure">
+<div id="org1537ef3" class="figure">
 <p><img src="../../../Assets/2026/06/Day_16/media-larga.png" alt="media-larga.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org45c95f0" class="outline-3">
-<h3 id="org45c95f0">[09:55]</h3>
-<div class="outline-text-3" id="text-org45c95f0">
+<div id="outline-container-orga5a0915" class="outline-3">
+<h3 id="orga5a0915">[09:55]</h3>
+<div class="outline-text-3" id="text-orga5a0915">
 <p>
 Y finalmente aquí están las PDFs de los incrementos:
 </p>
 
 
-<div id="org983d3f5" class="figure">
+<div id="org01997a4" class="figure">
 <p><img src="../../../Assets/2026/06/Day_16/PDFS-incrementos-num_ricos.png" alt="PDFS-incrementos-num_ricos.png" />
 </p>
 </div>
 
 <p>
 Lo que parece estar pasando es que hacen falta tiempos $\ŧau$s muchos más largos para que se vuelvan Gaussianas.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf17bf12" class="outline-3">
+<h3 id="orgf17bf12">[10:07]</h3>
+<div class="outline-text-3" id="text-orgf17bf12">
+<p>
+Seguramente esto tenga que ver con el tiempo de correlación del forzado de Ornstein-Uhlenbeck. En este caso elegí $&tau;=$2.5, lo cual es coherente con que tome un delay de ese orden para que las PDFs se vuelvan gaussianas.
 </p>
 </div>
 </div>
