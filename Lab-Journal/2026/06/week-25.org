@@ -15,6 +15,7 @@
   - [[#1015][[10:15]]]
   - [[#1021][[10:21]]]
   - [[#1038][[10:38]]]
+  - [[#1426][[14:26]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -73,3 +74,9 @@ Ideas:
   - FTP por tramos.
 - Para agregar aleatoriedad al forzado meter ruido en la señal del motor. Y variar levemente el tiempo de subida del flanco delantero.
 - Evaluar qué pasa después del csch² numéricamente al cambiar el esquema de integración temporal.
+
+** [14:26]
+Este es el diagrama espaciotemporal de la última simulación:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_16/espaciotemporal.png]]
