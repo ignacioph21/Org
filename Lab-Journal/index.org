@@ -1,5 +1,6 @@
 #+TITLE: Lab Journal
 
+- [[file:2026/06/week-25.org][Journal Week 25]]
 - [[file:2026/06/week-24.org][Journal Week 24]]
 - [[file:2026/06/week-23.org][Journal Week 23]]
 - [[file:2026/05/week-22.org][Journal Week 22]]

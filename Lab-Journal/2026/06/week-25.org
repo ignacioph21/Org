@@ -1,0 +1,28 @@
+#+TITLE: Journal Week 25
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-06-16][2026-06-16]]
+  - [[#0847][[08:47]]]
+  - [[#0855][[08:55]]]
+  - [[#0920][[09:20]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-06-16
+
+** [08:47]
+Sigo con la solución numérica de la Ecuación de Burgers 1D con un forzado espaciotemporal.
+
+** [08:55]
+Que primero avence por delante el salto o la cola de la onda de choque depende del valor de medio de $u$. Si es negativo se mueve hacia a la izquierda en cualquier caso y si es positivo hacia la derecha, ya que la velocidad a la que se propaga la onda de choque es proporcional a $u$.
+
+** [09:20]
+Siento que lo que mejor funciona para evitar que explote la energía pero poder tener muchas ondas de choque, es empezar con un $E_i > 0$ y un forzado muy pequeño.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_16/serie-convergid_.png]]
