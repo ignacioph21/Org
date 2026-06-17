@@ -22,6 +22,7 @@
   - [[#1104][[11:04]]]
   - [[#1145][[11:45]]]
   - [[#1147][[11:47]]]
+  - [[#1412][[14:12]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -145,4 +146,18 @@ Sobre el filtro de agua destilada:
 - Para que se llene el tanque de abajo hay que abrir la llave de abajo de la pileta. Abrirla poco por las dudas.
 
 ** [11:47]
-Sobre el archivo de configuración del =Command Table=: Pareciera ser una sucesión de bloques de corchetes =[...]= al estilo de JSON donde se guarda cada una de las 255 líneas de la tabla. En este caso hay solo 4 líneas llenas y 251 líneas vacías:
+Sobre el archivo de configuración del =Command Table=: Pareciera ser una sucesión de bloques de corchetes =[...]= al estilo de JSON donde se guarda cada una de las 255 líneas de la tabla. En este caso hay solo 4 líneas llenas y 251 líneas vacías.
+
+** [14:12]
+Una línea con comando es: =[A #1 42753 'Curve1' 4 1 [A 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ] 2 ]=
+Donde:
+- La =A= está siempre.
+- El =#1= o =#0= hablan de si esa línea está siendo usada.
+- El =42753= está siempre.
+- ="Curve1"= es el nombre del comando.
+- =4= es la orden o comando. Para nosotros las relevantes son:
+  + 4: ejecutar curva.
+  + 33: esperar a terminar el movimiento.
+- El =1= está siempre.
+- El primer número del array da el =Curve ID= a ejecutar, para =wait= es 0.
+- El =2= da la siguiente entrada de la =command table= a ejecutar.
