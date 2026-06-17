@@ -24,6 +24,7 @@
   - [[#1147][[11:47]]]
   - [[#1412][[14:12]]]
   - [[#1438][[14:38]]]
+  - [[#1503][[15:03]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -165,3 +166,12 @@ Donde:
 
 ** [14:38]
 Ya está funcionando el generador de curvas aleatorias. Se pueden elegir para poner hasta 127 curvas. Ahora quedaría generar las curvas en sí.
+
+** [15:03]
+Ya están las curvas:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_17/curvas-forzados-aleatoriosa.png]]
+
+Están randomizados =A=100 mm=, =\tau=750 ms= y =T=15 s=, alrededor de esos valores que fueron los que mejor funcionaron la vez pasada, con un 2 \% de ruido Gaussiano agregado.
+De momento, generé 10 curvas de 1600 puntos, suponiendo que al haber usado curvas de 16000 escala linealmente por la memoria de drive del motor.
