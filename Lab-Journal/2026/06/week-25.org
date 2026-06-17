@@ -23,6 +23,7 @@
   - [[#1145][[11:45]]]
   - [[#1147][[11:47]]]
   - [[#1412][[14:12]]]
+  - [[#1438][[14:38]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -161,3 +162,6 @@ Donde:
 - El =1= está siempre.
 - El primer número del array da el =Curve ID= a ejecutar, para =wait= es 0.
 - El =2= da la siguiente entrada de la =command table= a ejecutar.
+
+** [14:38]
+Ya está funcionando el generador de curvas aleatorias. Se pueden elegir para poner hasta 127 curvas.
