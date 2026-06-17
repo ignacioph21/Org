@@ -25,6 +25,7 @@
   - [[#1412][[14:12]]]
   - [[#1438][[14:38]]]
   - [[#1503][[15:03]]]
+  - [[#1531][[15:31]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -175,3 +176,6 @@ Ya están las curvas:
 
 Están randomizados =A=100 mm=, =\tau=750 ms= y =T=15 s=, alrededor de esos valores que fueron los que mejor funcionaron la vez pasada, con un 2 \% de ruido Gaussiano agregado.
 De momento, generé 10 curvas de 1600 puntos, suponiendo que al haber usado curvas de 16000 escala linealmente por la memoria de drive del motor.
+
+** [15:31]
+Ya dejé colocada la rampa. Se torció un poco la estructura de perfiles que la presiona hacia abajo me parece respecto de la vez pasada.
