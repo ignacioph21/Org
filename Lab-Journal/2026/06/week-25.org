@@ -101,12 +101,12 @@ Logré configurar el =Command Table= para alternar entre 2 curvas. Para poder ha
 2) En =Run Mode Selection= que se encuentra en el árbol de la izquierda hay que seleccionar =Command Table Mode=, por defecto está puesto en =Continuous Curve=.
 
 #+ATTR_ORG: :width 500
-  [[file:~/Org/Assets/2026/06/Day_17/run_mode_settings.jpg]]
+  [[file:../../../Assets/2026/06/Day_17/run_mode_settings.jpg]]
 
 3) Hay que cargar en la sección de =Command Table= de la izquierda los comandos para seleccionar las curvas:
 
 #+ATTR_ORG: :width 500
-[[file:~/Org/Assets/2026/06/Day_17/Command_Table.jpg]]
+[[file:../../../Assets/2026/06/Day_17/Command_Table.jpg]]
 
 Por ejemplo para alternar entre la curva con =ID=1= y la curva con =ID=2= e ir ciclando entre ellas se puede utilizar:
 
@@ -164,4 +164,4 @@ Donde:
 - El =2= da la siguiente entrada de la =command table= a ejecutar.
 
 ** [14:38]
-Ya está funcionando el generador de curvas aleatorias. Se pueden elegir para poner hasta 127 curvas.
+Ya está funcionando el generador de curvas aleatorias. Se pueden elegir para poner hasta 127 curvas. Ahora quedaría generar las curvas en sí.
