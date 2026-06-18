@@ -30,6 +30,7 @@
   - [[#1123][[11:23]]]
   - [[#1125][[11:25]]]
   - [[#1506][[15:06]]]
+  - [[#1547][[15:47]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -249,3 +250,6 @@ Además, una vez funcionando notamos que el motor se quejaba del ruido Gaussiano
 
 ** [15:06]
 Estamos intentando usar la Computadora con Windows 11 con un adaptador CH-340 de USB a RS232.
+
+** [15:47]
+Por otro lado conseguimos planchas de plexiglas de 3 mm x 1 m x 60 cm con las que vamos a armar placas de 15 cm de alto para tener de pared del canal.
