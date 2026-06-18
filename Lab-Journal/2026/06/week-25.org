@@ -26,6 +26,9 @@
   - [[#1438][[14:38]]]
   - [[#1503][[15:03]]]
   - [[#1531][[15:31]]]
+- [[#2026-06-18][2026-06-18]]
+  - [[#1123][[11:23]]]
+  - [[#1125][[11:25]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -179,3 +182,66 @@ De momento, generé 10 curvas de 1600 puntos, suponiendo que al haber usado curv
 
 ** [15:31]
 Ya dejé colocada la rampa. Se torció un poco la estructura de perfiles que la presiona hacia abajo me parece respecto de la vez pasada.
+
+* 2026-06-18
+
+** [11:23]
+Ya estuvimos armando un código que se encarga de subir las curvas en bulk. Para esto usamos CLAUDE para generar un =linmot_bulk_upload.py=.
+Para correrlo hace falta =pyserial= y =pandas=. Las series temporales deben ser =.csv= con una primera fila que sea ="t,x"= y luego las demás filas son los setpoints (su valor de tiempo en segundos y de posición en mm).
+
+Para poder correr el script y cargar las curvas hay que seguir los pasos:
+1) Cerrar LinMot Talk si está abierto, para liberar la comunicación con el puerto =COM3=.
+2) Desenchufar la lógica y potencia del drive.
+3) Cambiar el switch =S3.4= del costado del drive a =On=. En nuestro caso todos están en =Off= por defecto.
+
+        #+ATTR_ORG: :width 500
+        [[file:../../../Assets/2026/06/Day_18/switches.jpg]]
+
+4) Enchifar la potencia y la lógica.
+5) Correr el Script desde cmd:
+   #+begin_src text
+    conda activate pdaqenv
+    python linmot_bulk_upload.py COM3 ./Curvas_random/ --id 0x3f --baud 57600 --delete-all-curves
+   #+end_src
+
+   Con esto especificamos:
+   + El puerto al que está conetcado el drive: =COM3=
+   + El directorio que contiene los .csv a subir.
+   + El =MACID= del drive. Para esto tenemos que configurar en LinMot Talk que se defina por parámetro:
+
+        #+ATTR_ORG: :width 500
+        [[file:../../../Assets/2026/06/Day_18/MACID_source.jpg]]
+
+     Y el parámetro que usa se puede revisar acá:
+
+        #+ATTR_ORG: :width 500
+        [[file:../../../Assets/2026/06/Day_18/MACID_id.jpg]]
+
+    En este caso =003Fh= sería en hex =0x3f=.
+
+   + El =Baud Rate= de la comunicación. Esto se configura en:
+
+        #+ATTR_ORG: :width 500
+        [[file:../../../Assets/2026/06/Day_18/Baud_rate_definition.jpg]]
+
+    Que en este caso es de 57600.
+
+   + El flag que le dice que borre las curvas ya cargadas, sino appendea sobre las que ya están.
+
+6) Desenchufar la lógica y la potencia una vez que termine.
+7) Volver a poner el switch de =S3.4= en =Off= como el resto.
+8) Enchufar la potencia y la lógica.
+9) Abrir LinMot Talk y utilizar las curvas. En nuestro caso cargoms la Command Table con el orden en que se utilizan.
+
+Un punto importante es que dentro del código se convierten los valores dela  curva a pasos del motor (de 0.1$\mu$m), en formato de enteros de 32 bits que después se mandan en paquetes de 4 al drive. Para que pueda interpretar eso como milímetros después al controlar el motor desde LinMot Talk hay que mandar las unidades mediante:
+
+#+begin_src python
+struct.pack_into('<H', info, 38, 0x0005)                   # YDimUUID
+#+end_src
+
+
+** [11:25]
+Además, una vez funcionando notamos que el motor se quejaba del ruido Gaussiano, era de frecuencia de masiado alta, así que ahora uso ruido limitado en frecuencia más suave:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_18/curvas-random-suaves.png]]
