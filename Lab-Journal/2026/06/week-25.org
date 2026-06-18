@@ -29,6 +29,7 @@
 - [[#2026-06-18][2026-06-18]]
   - [[#1123][[11:23]]]
   - [[#1125][[11:25]]]
+  - [[#1506][[15:06]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -245,3 +246,6 @@ Además, una vez funcionando notamos que el motor se quejaba del ruido Gaussiano
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_18/curvas-random-suaves.png]]
+
+** [15:06]
+Estamos intentando usar la Computadora con Windows 11 con un adaptador CH-340 de USB a RS232.
