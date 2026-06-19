@@ -38,6 +38,7 @@
   - [[#1127][[11:27]]]
   - [[#1217][[12:17]]]
   - [[#1221][[12:21]]]
+  - [[#1352][[13:52]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -325,3 +326,9 @@ Lo que sí mejoró bastante son las PDFs de los incrementos para ventanas tempor
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_19/PDFs-incrementos-ventana-50-segundos.png]]
+
+** [13:52]
+Para las mediciones con los tres sensores, usando solo los primeros diez minutos para evitar el re-homeo queda.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_19/PDFs-tres-sensores-10-minutos.png]]
