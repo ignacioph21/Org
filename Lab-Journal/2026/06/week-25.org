@@ -34,6 +34,7 @@
 - [[#2026-06-19][2026-06-19]]
   - [[#1033-1][[10:33]]]
   - [[#1046][[10:46]]]
+  - [[#1058][[10:58]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -289,3 +290,6 @@ Del sensor 1 al 2 hay ~51 cm y del 2 al 3 hay ~31 cm. Algunas imágenes del setu
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_19/electrónica.jpg]]
+
+** [10:58]
+El motor después de 15 minutos prendido sigue sin calentarse así que lo voy a dejar la media hora que dura la totalidad del forzado independiente. Tomo primero para el sensor 1 solo y después para los tres.
