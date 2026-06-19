@@ -318,7 +318,7 @@ Las pendientes de esas curvas son:
 - Verde: -4
 - Roja: -2
 
-Para futuras referencias. T
+Para futuras referencias.
 
 ** [12:21]
 Lo que sí mejoró bastante son las PDFs de los incrementos para ventanas temporales largas al usar mediciones de media hora.
