@@ -332,3 +332,5 @@ Para las mediciones con los tres sensores, usando solo los primeros diez minutos
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_19/PDFs-tres-sensores-10-minutos.png]]
+
+De arriba a abajo es la distancia a la paleta (el primero es al inicio de la rampa).
