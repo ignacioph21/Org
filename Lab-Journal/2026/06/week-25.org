@@ -31,6 +31,9 @@
   - [[#1125][[11:25]]]
   - [[#1506][[15:06]]]
   - [[#1547][[15:47]]]
+- [[#2026-06-19][2026-06-19]]
+  - [[#1033-1][[10:33]]]
+  - [[#1046][[10:46]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -253,3 +256,36 @@ Estamos intentando usar la Computadora con Windows 11 con un adaptador CH-340 de
 
 ** [15:47]
 Por otro lado conseguimos planchas de plexiglas de 3 mm x 1 m x 60 cm con las que vamos a armar placas de 15 cm de alto para tener de pared del canal.
+
+* 2026-06-19
+
+** [10:33]
+Ya estamos midiendo con el nuevo esquema de diez curvas levemente distintas con ruido de frecuencia baja sumado, alternadas aleatoriamente. Un par de cosas sobre el setup:
+- Estoy usando solo agua de la canilla esta vez, con una altura que es casi la misma de la vez pasada, de 4.1 cm.
+- El sensor del canal 1 (que usamos para probar con la leche) lo tuve que volver a tensar antes de colocarlo ya que el alambre de cbre estaba muy flojo. Además cambié su orientación, en el sentido de que ahora está un poco más lejos del sensor 2 al estar colocado del otro lado del perfil chiquito.
+- El orden de los sensores es el mismo de la vez pasada.
+- Probé con la paleta de 10 cm de ancho en lugar de la de 20 cm de la vez pasada y pareciera que dejan de romper. Probablemente haya que ajustar el tipo de forzado, la distancia a la rampa y demás para optimizarla, pero de momento sigo midiendo con la de 20 cm que ufnciona igual de la vez pasada.
+- La distancia del motor al borde de la cuba es la misma, y la paleta está sumergida dejando un espacio de 1 cm antes del fondo.
+- El homing cambió a 140 mm ya que algunas de las curvas hacían que el borde del vástago tocara el servo.
+- Con el ruido de fondo pareciera que la onda rompe un poco más adelante. Acerqué aproximadamente un centímetro la rampa hacia el motor respecto de las mediciones de la vez pasada, pero las ondas más grandes llegan a romper justo antes o sobre el sensor.
+- Verifiqué con el graficador en tiempo real el correcto funcionamiento simultáneo de los tres sensores antes de empezar a medir.
+- La frecuencia de resonancia para que el sensor 1 esté centrado en $\phi=0$ rad es de $f=59.940$ kHz.
+
+
+** [10:46]
+Del sensor 1 al 2 hay ~51 cm y del 2 al 3 hay ~31 cm. Algunas imágenes del setup:
+
+*** Cuba:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_19/setup.jpg]]
+
+*** Software:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_19/graficadores.jpg]]
+
+*** Electrónica:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_19/electrónica.jpg]]
