@@ -39,6 +39,7 @@
   - [[#1217][[12:17]]]
   - [[#1221][[12:21]]]
   - [[#1352][[13:52]]]
+  - [[#1356][[13:56]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -334,3 +335,9 @@ Para las mediciones con los tres sensores, usando solo los primeros diez minutos
 [[file:../../../Assets/2026/06/Day_19/PDFs-tres-sensores-10-minutos.png]]
 
 De arriba a abajo es la distancia a la paleta (el primero es al inicio de la rampa).
+
+** [13:56]
+Los espectros dan re bien!!!
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_19/espectros-todos-los-sensores.png]]
