@@ -341,4 +341,5 @@ Los espectros dan re bien!!!
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_19/espectros-todos-los-sensores.png]]
+
 a
