@@ -310,6 +310,16 @@ Pareciera ser bastante similar al de antes. Lo que creemos que está pasando es 
 
 Además, después del csch² pareciera caer como -4 y luego de una frecuencia de corte en aproximadamente 30 Hz con un salta pasa a caer con -2. Esto se corresponde con los resulltados de Falcon para WWT con mercurio en shallow water [cite:@falconObservationDepthinducedProperties2011].
 
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_19/pendientes-espectro-un-sensor.png]]
+
+Las pendientes de esas curvas son:
+- Naranja: -2
+- Verde: -4
+- Roja: -2
+
+Para futuras referencias. T
+
 ** [12:21]
 Lo que sí mejoró bastante son las PDFs de los incrementos para ventanas temporales largas al usar mediciones de media hora.
 
