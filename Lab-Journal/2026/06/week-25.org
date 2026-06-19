@@ -36,6 +36,8 @@
   - [[#1046][[10:46]]]
   - [[#1058][[10:58]]]
   - [[#1127][[11:27]]]
+  - [[#1217][[12:17]]]
+  - [[#1221][[12:21]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -297,3 +299,19 @@ El motor después de 15 minutos prendido sigue sin calentarse así que lo voy a 
 
 ** [11:27]
 Se detuvo el motor a la mitad de la medición con los tres sensores, se fue corriendo, tal vez por el calentamiento, hasta que empezó a tocar la parte de adelante al servo.
+
+** [12:17]
+A continuación el espectro resultante para as mediciones de un único sensor, ajustado con una csch².
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_19/espectro-ventana-5s-ajustado.png]]
+
+Pareciera ser bastante similar al de antes. Lo que creemos que está pasando es que los modos transversales están agregando modos discretos en frecuencias bajas y WWT en frecuencias altas que tapan el espectro longitudinal de surf zone para ondas de choque. Para separar ambas contribuciones hay que medir con FTP, la idea es hacer con el plexiglas un canal en el centro de la cuba, con separadores arriba para evitar que pandee y además ya que estamos posiciones para sostener los sensores/alambres de cobre. Revisar [cite:@hassainiConfinementEffectsGravitycapillary2018].
+
+Además, después del csch² pareciera caer como -4 y luego de una frecuencia de corte en aproximadamente 30 Hz con un salta pasa a caer con -2. Esto se corresponde con los resulltados de Falcon para WWT con mercurio en shallow water [cite:@falconObservationDepthinducedProperties2011].
+
+** [12:21]
+Lo que sí mejoró bastante son las PDFs de los incrementos para ventanas temporales largas al usar mediciones de media hora.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_19/PDFs-incrementos-ventana-50-segundos.png]]
