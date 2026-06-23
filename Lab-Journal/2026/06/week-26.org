@@ -28,6 +28,7 @@
 
 * 2026-06-23
 
+
 ** [09:07]
 Estoy revisando qué pudo haber cambiado entre la medición con un sensor y con los tres sensores en simultáneo.  En principio una cosa que cambió seguro es que para el código del lock-in con los tres sesnores tenía la versión corregida de la función de =trim()= mientras que la de un solo sensor tenía la anterior que el factor de renormalixación le faltaba elevar al cuadrado.
 
@@ -98,7 +99,7 @@ Los ajustes lineales dan:
 Y los parámetros de los ajustes son:
 
 |---------+----------------------+--------------------+---------+---------|
-| Channel | a                    | b                  |    $R²$ |  $\chi_\nu²$ |
+| Channel | a (rad/cm)           | b (rad)            |    $R²$ |  $\chi_\nu²$ |
 |---------+----------------------+--------------------+---------+---------|
 |       1 | $(-0.0689 \pm 0.0004)$ | $(-0.135 \pm 0.002)$ | 0.99926 | 1.40017 |
 |       2 | $(-0.0746 \pm 0.0006)$ | $(0.124 \pm 0.003)$  | 0.99743 | 1.42071 |
