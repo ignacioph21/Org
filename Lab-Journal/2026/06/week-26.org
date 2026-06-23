@@ -19,6 +19,7 @@
   - [[#1044][[10:44]]]
   - [[#1100][[11:00]]]
   - [[#1107][[11:07]]]
+  - [[#1117][[11:17]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -79,3 +80,9 @@ Una cosa importante es que acá usé el lockin con =t0 = -0.5= en vez de uno dis
 
 ** [11:07]
 Con el criterio anterior las alturas fueron (en cm y con 0.025 cm de incerteza): 5.075, 4.950, 4.825, 4.675, 4.575, 4.475, 4.350.
+
+** [11:17]
+Los intervalos elegidos para calcular los promedios de fase en cada altura son los siguientes:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_23/intervalos-alturas-plateaus.png]]
