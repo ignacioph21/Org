@@ -20,6 +20,7 @@
   - [[#1100][[11:00]]]
   - [[#1107][[11:07]]]
   - [[#1117][[11:17]]]
+  - [[#1130][[11:30]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -86,3 +87,20 @@ Los intervalos elegidos para calcular los promedios de fase en cada altura son l
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_23/intervalos-alturas-plateaus.png]]
+
+** [11:30]
+Los ajustes lineales dan:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_23/ajustes-lineales-fases-alturas.png]]
+
+Y los parámetros de los ajustes son:
+
+|---------+----------------------+--------------------+---------+---------|
+| Channel | a                    | b                  |    $R²$ |  $\chi_\nu²$ |
+|---------+----------------------+--------------------+---------+---------|
+|       1 | $(-0.0689 \pm 0.0004)$ | $(-0.135 \pm 0.002)$ | 0.99926 | 1.40017 |
+|       2 | $(-0.0746 \pm 0.0006)$ | $(0.124 \pm 0.003)$  | 0.99743 | 1.42071 |
+|       3 | $(-0.0613 \pm 0.0007)$ | $(0.371 \pm 0.003)$  | 0.99875 | 1.43573 |
+|---------+----------------------+--------------------+---------+---------|
+En general dan super bien.
