@@ -1,0 +1,35 @@
+#+TITLE: Journal Week 26
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-06-23][2026-06-23]]
+  - [[#0907][[09:07]]]
+  - [[#0912][[09:12]]]
+  - [[#0914][[09:14]]]
+  - [[#0918][[09:18]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-06-23
+
+** [09:07]
+Estoy revisando qué pudo haber cambiado entre la medición con un sensor y con los tres sensores en simultáneo.  En principio una cosa que cambió seguro es que para el código del lock-in con los tres sesnores tenía la versión corregida de la función de =trim()= mientras que la de un solo sensor tenía la anterior que el factor de renormalixación le faltaba elevar al cuadrado.
+
+** [09:12]
+Ya volví a correr el lock-in, ahora con la versión de =trim()= corregida, pero al ser solo un factor multiplicativo el espectro sigue dando como daba.
+
+** [09:14]
+Así es la serie temporal para el sensor único:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_23/serie-temporal-sensor-solo.png]]
+
+** [09:18]
+Y acá están las series temporales para los tres sensores midiendo en simultáneo:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_23/series-temporales-los-tres-sensores.png]]
