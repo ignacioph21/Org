@@ -112,4 +112,4 @@ Ya calibradas las series temporales de la semana pasada con esos parámetros que
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/06/Day_23/altura-calibrada.png]]
 
-Esto debería ser altura absoluta, respecto del fondo de la cuba.
+Esto debería ser altura absoluta, respecto del fondo de la cuba. Aunque pareciera estar centrada un poco más abajo de lo que era la altura en ese momento.
