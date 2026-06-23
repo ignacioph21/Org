@@ -23,6 +23,7 @@
   - [[#1130][[11:30]]]
   - [[#1155][[11:55]]]
   - [[#1543][[15:43]]]
+  - [[#1549][[15:49]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -118,3 +119,6 @@ Esto debería ser altura absoluta, respecto del fondo de la cuba. Aunque parecie
 
 ** [15:43]
 El número de Iribarren está definido como: $\text{Ir} = \tan(\alpha) / \sqrt{S_0}$. Con $S_0$ el wave steepness en el incio de la rampa. En este caso da para el canal 3 un valor medio de $Ir \approx 0.199967$ calculandolo con el $S_0$ medio directamente bajo la aproximación de gravedad en aguas profundas. Esto s etraduciría a un rompimiento de tipo spilling.
+
+** [15:49]
+Calculando el Ir para cada onda individual y calculando su valor medio y error estándar obtenemos: Ir = $(0.2601 \pm 0.0035)$.
