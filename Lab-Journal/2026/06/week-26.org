@@ -24,6 +24,9 @@
   - [[#1155][[11:55]]]
   - [[#1543][[15:43]]]
   - [[#1549][[15:49]]]
+- [[#2026-06-24][2026-06-24]]
+  - [[#0959][[09:59]]]
+  - [[#1429][[14:29]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -122,3 +125,20 @@ El número de Iribarren está definido como: $\text{Ir} = \tan(\alpha) / \sqrt{S
 
 ** [15:49]
 Calculando el Ir para cada onda individual y calculando su valor medio y error estándar obtenemos: Ir = $(0.2601 \pm 0.0035)$.
+
+* 2026-06-24
+
+** [09:59]
+Estamos diseñando la nueva rampa que va a ir en el centro del canal con una relación de aspecto de =1:20= (más empinada que la actual de =~1:28=) con las paredes de plexiglas en los costados.
+
+** [14:29]
+Para el sensor son por cada ensamble (con esapciador):
+ - 7 tuercas M4.
+ - 5 tornillos M4x10.
+ - 4 tornillos M4x16.
+ - 2 slag (ojal) para enroscar los alambres.
+Para el espaciador solamente son:
+ - 2 tuercas M4
+ - 2 tornillos M4x16.
+
+Necesitaríamos unos 5 de sensores y unos 10 de solo esapciadores.
