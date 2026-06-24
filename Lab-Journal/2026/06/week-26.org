@@ -142,3 +142,22 @@ Para el espaciador solamente son:
  - 2 tornillos M4x16.
 
 Necesitaríamos unos 5 de sensores y unos 10 de solo esapciadores.
+
+*** [14:35]
+Volviendo al análisis del número de Iribarren tenemos para cada onda individual (incluyendo las que son muy largas temporalmente que claramente son varias):
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_24/Ondas-individuales-todas.png]]
+
+
+Y haciendo algo de zoom:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_24/Ondas-individuales.png]]
+
+Y las PDFs promedio (calculadas en ventanas de 300 ondas individuales con overlap de 150) y error estándar ajustan bastante bien por una log-normal.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/06/Day_24/pdfs-Iribarren.png]]
+
+Esto sale del paper de Tayfun [cite:@tayfunDistributionsWaveSteepness2006], ya que al ser log-normal la distribución de wave steepness, este número que va como $s^{-1/2}$ debería seguir ese mismo tipo de distribución. Faltaría adimensionalizar de alguna forma esa variable.
