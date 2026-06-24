@@ -27,6 +27,7 @@
 - [[#2026-06-24][2026-06-24]]
   - [[#0959][[09:59]]]
   - [[#1429][[14:29]]]
+  - [[#1533][[15:33]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -165,3 +166,6 @@ Esto sale del paper de Tayfun [cite:@tayfunDistributionsWaveSteepness2006], ya q
 En general todo es compatible con el tipo de breaker =spilling= que pareciera ser el que se identifica al hacer el experimento.
 
 Tal vez habría que reconstruir este histograma usando solo las ondas individuales que pertenecen al forzado fuerte (la patada cada ~15 s) que son las que se identifican como rompientes.
+
+** [15:33]
+Para conectar el plexiglás a la caja del fondo una idea es usar tornillos pasantes largos que agarren también la rampa, impresos en 3D para evitar la oxidación de los tornillos e insertes de hierro. Un modelo posible disponible en: [[https://www.printables.com/model/653654-screw-set-m3-m4-m5-m6-m7-m8-m10-iso-4017][aquí]]. á
