@@ -31,6 +31,7 @@
 - [[#2026-06-25][2026-06-25]]
   - [[#1208][[12:08]]]
   - [[#1319][[13:19]]]
+  - [[#1354][[13:54]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -183,3 +184,6 @@ Correcciones para el espaciador y sensor:
 
 ** [13:19]
 Al final para el setup decidimos que los plexi simplemente encaastren en la caja del fonodo en ranuras de 0.5 cm de profundidad, y luego la base sea una grilla de agujeros donde pueden entrar los pegs de lo que querramos pegar al fondo, al estilo de un lego. Además las piezas del fondo se conectan entre sí mediante una juntura triangular tipo pieza de rompecabezas.
+
+** [13:54]
+Estuve recién analizando las PDFs de las series temporales. Para la que está justo después de la paleta del motor pareciera que es más angosta que una Gaussiana. Luego, la del sensor intermedio pareciera ser como la distribución de Tayfun de WWT y la del sensor luego del rompimiento tiene una asimetría bastante marcada. Una cosa importante es que en todos los caso hay un pico secundario en los valores positivos correspondiente a las patadas de intervalo ~15 s que daba el motor para generar ondas grandes.
