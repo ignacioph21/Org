@@ -28,6 +28,8 @@
   - [[#0959][[09:59]]]
   - [[#1429][[14:29]]]
   - [[#1533][[15:33]]]
+- [[#2026-06-25][2026-06-25]]
+  - [[#1208][[12:08]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -169,3 +171,11 @@ Tal vez habría que reconstruir este histograma usando solo las ondas individual
 
 ** [15:33]
 Para conectar el plexiglás a la caja del fondo una idea es usar tornillos pasantes largos que agarren también la rampa, impresos en 3D para evitar la oxidación de los tornillos e insertes de hierro. Un modelo posible disponible en: [[https://www.printables.com/model/653654-screw-set-m3-m4-m5-m6-m7-m8-m10-iso-4017][aquí]]. á
+
+* 2026-06-25
+
+** [12:08]
+Correcciones para el espaciador y sensor:
+- Pasante que agarra al plexiglas darle un poco más de tolerancia.
+- Guía del espaciador más estreccha.
+- Huella para el slag.
