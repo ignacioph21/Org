@@ -16,6 +16,17 @@
 
 (setq org-directory "~/Org/")
 
+(defun ih/toggle-org-pretty-entities ()
+  "Toggle `org-pretty-entities' in current Org buffer."
+  (interactive)
+  (setq-local org-pretty-entities (not org-pretty-entities))
+  (font-lock-flush)
+  (font-lock-ensure)
+  (message "org-pretty-entities: %s" org-pretty-entities))
+
+(map! :map org-mode-map
+      "<f8>" #'ih/toggle-org-pretty-entities)
+
 (after! org
   (setq org-todo-keywords
         '((sequence
@@ -156,11 +167,13 @@
            (raw (shell-command-to-string
                  "xclip -selection clipboard -t text/uri-list -o"))
            (uris (cl-remove-if #'string-empty-p
-                               (split-string (string-trim raw) "\n")))
+                                (mapcar #'string-trim
+                                        (split-string (string-trim raw) "\n"))))
            (_ (unless uris
                 (error "No hay archivos en el clipboard")))
            (sources (mapcar (lambda (uri)
-                              (string-remove-prefix "file://" uri))
+                              (url-unhex-string
+                               (string-remove-prefix "file://" uri)))
                             uris)))
       (dolist (source sources)
         (when (file-exists-p source)
@@ -362,6 +375,8 @@
   (define-key python-mode-map
               (kbd "<f5>")
               #'my-python-restart-buffer))
+
+(setq python-shell-dedicated t)
 
 (setq dired-kill-when-opening-new-dired-buffer t)
 

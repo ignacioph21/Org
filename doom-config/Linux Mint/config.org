@@ -17,6 +17,7 @@
   - [[#path][Path]]
 - [[#doom-emacs-config][Doom Emacs Config]]
 - [[#org-mode][Org-Mode]]
+  - [[#pretty-entities][Pretty Entities]]
   - [[#org-agenda][Org-Agenda]]
   - [[#org-journal][Org-Journal]]
   - [[#imágenes][Imágenes]]
@@ -30,6 +31,7 @@
   - [[#consola-interactiva][Consola interactiva]]
   - [[#encoding][Encoding]]
   - [[#más-parecido-a-idle][Más parecido a IDLE]]
+  - [[#dedicated-shells][Dedicated shells]]
 - [[#dired][Dired]]
 
 * Meta
@@ -242,6 +244,30 @@ El directorio para todos mis archviso =.org= es:
 #+end_src
 
 Éste se encuentra sincronizado con GitHub.
+
+** Pretty Entities
+Org renderiza símbolos como sus caracteres de UTF-8, pero a veces, especialmente con subscripts y superscipts esconde símbolos y dificulta editar. Agregamos el siguiente shortcut para apagarlo temporalmente:
+
+#+begin_src emacs-lisp
+(defun ih/toggle-org-pretty-entities ()
+  "Toggle `org-pretty-entities' in current Org buffer."
+  (interactive)
+  (setq-local org-pretty-entities (not org-pretty-entities))
+  (font-lock-flush)
+  (font-lock-ensure)
+  (message "org-pretty-entities: %s" org-pretty-entities))
+
+(map! :map org-mode-map
+      "<f8>" #'ih/toggle-org-pretty-entities)
+#+end_src
+
+Con el keybinding:
+
+|-------+------------------------+-------------------------------------------------|
+| Tecla | Acción                 | Descripción                                     |
+|-------+------------------------+-------------------------------------------------|
+| ~f8~    | Toggle Pretty Entities | Toggles Org-Pretty-Entities en el buffer actual |
+|-------+------------------------+-------------------------------------------------|
 
 ** Org-Agenda
 
@@ -516,11 +542,13 @@ Es posible además pegar imágenes copiándolas desde el explorador de archivos,
            (raw (shell-command-to-string
                  "xclip -selection clipboard -t text/uri-list -o"))
            (uris (cl-remove-if #'string-empty-p
-                               (split-string (string-trim raw) "\n")))
+                                (mapcar #'string-trim
+                                        (split-string (string-trim raw) "\n"))))
            (_ (unless uris
                 (error "No hay archivos en el clipboard")))
            (sources (mapcar (lambda (uri)
-                              (string-remove-prefix "file://" uri))
+                              (url-unhex-string
+                               (string-remove-prefix "file://" uri)))
                             uris)))
       (dolist (source sources)
         (when (file-exists-p source)
@@ -888,6 +916,13 @@ Para que se parezca más al IDLE de Python que estoy acostumbrado a usar usamos 
   (define-key python-mode-map
               (kbd "<f5>")
               #'my-python-restart-buffer))
+#+end_src
+
+** Dedicated shells
+Para poder tener varios procesos de Python configuramos que se abra uno distinto por cada buffer donde corramos =run-python=.
+
+#+begin_src emacs-lisp
+(setq python-shell-dedicated t)
 #+end_src
 
 * Dired
