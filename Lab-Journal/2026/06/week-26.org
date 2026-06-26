@@ -34,6 +34,8 @@
   - [[#1354][[13:54]]]
 - [[#2026-06-26][2026-06-26]]
   - [[#1058][[10:58]]]
+  - [[#1536][[15:36]]]
+  - [[#1538][[15:38]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -194,3 +196,9 @@ Estuve recién analizando las PDFs de las series temporales. Para la que está j
 
 ** [10:58]
 Para instalar Autodesk Fusion en Linux Mint utilicé la versión de cryingfly en codeberg: [[https://codeberg.org/cryinkfly/Autodesk-Fusion-360-on-Linux][aquí]]. Y la que funcionó fue para =Open a terminal and run this command to install Autodesk Fusion with the Wine Z-window fix runtime=. La siguiente (=Open a terminal and run this command to install Autodesk Fusion with system Wine=) nunca abrió.
+
+** [15:36]
+Seguimos con el diseño del setup para el canal dentro de la cuba grande. Volvimos a la idea de tornillos de plástico ya que los bloques más grandes de la rampa al tener poca densidad harían que flote todo. Además la idea es tener hacia los laterales de las paredes del canal lugares donde colocar las pesas de hierro de forma tal que lastren toda la estructura, y en el caso de que tenga una única pared, que evite el torque de la misma.
+
+** [15:38]
+Mandamos a imprimir un tornillo M6x6 y una tuerca M6 para verificar que roscarían bien antes de seguir con el diseño.
