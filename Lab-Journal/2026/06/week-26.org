@@ -32,6 +32,8 @@
   - [[#1208][[12:08]]]
   - [[#1319][[13:19]]]
   - [[#1354][[13:54]]]
+- [[#2026-06-26][2026-06-26]]
+  - [[#1058][[10:58]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -187,3 +189,8 @@ Al final para el setup decidimos que los plexi simplemente encaastren en la caja
 
 ** [13:54]
 Estuve recién analizando las PDFs de las series temporales. Para la que está justo después de la paleta del motor pareciera que es más angosta que una Gaussiana. Luego, la del sensor intermedio pareciera ser como la distribución de Tayfun de WWT y la del sensor luego del rompimiento tiene una asimetría bastante marcada. Una cosa importante es que en todos los caso hay un pico secundario en los valores positivos correspondiente a las patadas de intervalo ~15 s que daba el motor para generar ondas grandes.
+
+* 2026-06-26
+
+** [10:58]
+Para instalar Autodesk Fusion en Linux Mint utilicé la versión de cryingfly en codeberg: [[https://codeberg.org/cryinkfly/Autodesk-Fusion-360-on-Linux][aquí]]. Y la que funcionó fue para =Open a terminal and run this command to install Autodesk Fusion with the Wine Z-window fix runtime=. La siguiente (=Open a terminal and run this command to install Autodesk Fusion with system Wine=) nunca abrió.
