@@ -1,0 +1,25 @@
+#+TITLE: Journal Week 27
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-07-01][2026-07-01]]
+  - [[#1144][[11:44]]]
+  - [[#1218][[12:18]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-07-01
+
+** [11:44]
+La idea para la graducación de la herramiento de armado de sensores es que si la línea queda completamente escondida el largo del alambre del sensor es el que dice.
+
+
+** [12:18]
+Quedó así la herramiento de ensamblado:
+
+#+ATTR_ORG: :width 200
+[[file:../../../Assets/2026/07/Day_01/herramienta-de-ensamblado-del-sensor.png]]

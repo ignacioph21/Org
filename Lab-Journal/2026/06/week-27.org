@@ -9,6 +9,8 @@
   - [[#1030][[10:30]]]
   - [[#1454][[14:54]]]
   - [[#1656][[16:56]]]
+- [[#2026-06-30][2026-06-30]]
+  - [[#1045][[10:45]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -30,3 +32,8 @@ Va a ser todo modular. Tenemos una pieza que es el fondo de la caja y otra que s
 
 ** [16:56]
 Ya hice también la rampa con relación de aspecto 1/35.
+
+* 2026-06-30
+
+** [10:45]
+Probamos rodamina (78 $\mu$m) que había en Labo 4/5 con un laser verde que brilla amarillo para iluminar la superficie libre. Hay aproximadamente 50 ml.
