@@ -8,6 +8,8 @@
 - [[#2026-07-01][2026-07-01]]
   - [[#1144][[11:44]]]
   - [[#1218][[12:18]]]
+- [[#2026-07-03][2026-07-03]]
+  - [[#1212][[12:12]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -23,3 +25,8 @@ Quedó así la herramiento de ensamblado:
 
 #+ATTR_ORG: :width 200
 [[file:../../../Assets/2026/07/Day_01/herramienta-de-ensamblado-del-sensor.png]]
+
+* 2026-07-03
+
+** [12:12]
+Los slags o lugs que tenemos son 1.5-5 (pareciera ser el diámetro del cable y el del agujero principal en mm esos números).
