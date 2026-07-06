@@ -1,0 +1,19 @@
+#+TITLE: Journal Week 28
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-07-06][2026-07-06]]
+  - [[#1512][[15:12]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-07-06
+
+** [15:12]
+Para poder cortar el acrílico con el láser de la CNC hay que mandar un boceto en formato .dxf. Ya fuimos a buscar la segunda placa de plexiglás y está el esquema hecho, faltando solamente llevar todo al taller.
+
+Además fuimos a buscar una pizarra tipo whiteboard que estaba en desuso para poder colocar todos los planos de las distintas partes del setup.

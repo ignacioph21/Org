@@ -30,3 +30,5 @@ Quedó así la herramiento de ensamblado:
 
 ** [12:12]
 Los slags o lugs que tenemos son 1.5-5 (pareciera ser el diámetro del cable y el del agujero principal en mm esos números).
+
+La familia de modeos 3D está isponible en:[[https://grabcad.com/library/cable-lug-kit-1/details?folder_id=736677]].
