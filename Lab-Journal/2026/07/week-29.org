@@ -35,4 +35,4 @@ De momento mandé a imprimir las 5 piezas del ensamblador de los sensores, para 
 ** [15:58]
 Ya está hecho el ensamblador de sensores. Hubo que lijarlo un poco para que entre bien en el indentador, pero está funcionando. Mañana la idea sería probarlo con los alambres.
 
-Además, la idea es pedir en el taller que vayan rellenando la cama de tornillos mientras hacen otras impresiones.
+Además, la idea es pedir en el taller que vayan rellenando la cama de tornillos mientras hacen otras impresiones. a
