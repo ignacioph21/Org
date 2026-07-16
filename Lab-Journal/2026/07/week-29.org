@@ -1,0 +1,21 @@
+#+TITLE: Journal Week 29
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-07-16][2026-07-16]]
+  - [[#1100][[11:00]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-07-16
+
+** [11:00]
+Ya están todas las secciones de la rampa impresas. La más grande pesa solo 89 g. Con los ajugeros más profundos para las tuercas entran bien los tornillos incluso cn el fondo viejo.
+
+También mandamos para probar una sección pequeña de polycarbonato con los mismos features que van a tener las placas más grandes, y salieron bien de la cortadora laáser. Lo único a tener en cuenta es que quema un poco los bordes, pero respeta bien las tolerancias y tamaños de los agujeros y canaletas. Además encaja bien con las partes impresas. A tener en cuenta para el futuro que las líneas de los dibujos se cortan todas, aunque sea punteadas.
+
+Tabién ya pusieron la pizarra en la pared, así que ya colgué los dibujos de todas las piezas y las intrucciones de ensamblaje.
