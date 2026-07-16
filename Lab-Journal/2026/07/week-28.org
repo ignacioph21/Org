@@ -7,6 +7,8 @@
 - [[#referencias][Referencias]]
 - [[#2026-07-06][2026-07-06]]
   - [[#1512][[15:12]]]
+- [[#2026-07-06-1][2026-07-06]]
+  - [[#1800][[18:00]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -17,3 +19,8 @@
 Para poder cortar el acrílico con el láser de la CNC hay que mandar un boceto en formato .dxf. Ya fuimos a buscar la segunda placa de plexiglás y está el esquema hecho, faltando solamente llevar todo al taller.
 
 Además fuimos a buscar una pizarra tipo whiteboard que estaba en desuso para poder colocar todos los planos de las distintas partes del setup.
+
+* 2026-07-06
+
+** [18:00]
+Estuvimos haciendo pruebas en el Von Karman, llenado más o menos hasta la mitad, y prendiendo solo el motor de abajo, para analizar qué ocurre en la superficie libre. Parece que hay varios regímenes y que se generan cosas llamadas "dimples".
