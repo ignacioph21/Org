@@ -7,6 +7,7 @@
 - [[#referencias][Referencias]]
 - [[#2026-07-16][2026-07-16]]
   - [[#1100][[11:00]]]
+  - [[#1104][[11:04]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -19,3 +20,6 @@ Ya están todas las secciones de la rampa impresas. La más grande pesa solo 89 
 También mandamos para probar una sección pequeña de polycarbonato con los mismos features que van a tener las placas más grandes, y salieron bien de la cortadora laáser. Lo único a tener en cuenta es que quema un poco los bordes, pero respeta bien las tolerancias y tamaños de los agujeros y canaletas. Además encaja bien con las partes impresas. A tener en cuenta para el futuro que las líneas de los dibujos se cortan todas, aunque sea punteadas.
 
 Tabién ya pusieron la pizarra en la pared, así que ya colgué los dibujos de todas las piezas y las intrucciones de ensamblaje.
+
+** [11:04]
+De momento mandé a imprimir las 5 piezas del ensamblador de los sensores, para poder ir montándolos mientras se fabrican el resto de las piezas. Se supone que deberían tardar las 5 juntas en la cama un total de 25 horas.
