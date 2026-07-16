@@ -10,6 +10,7 @@
 - [[#2026-07-16][2026-07-16]]
   - [[#1100][[11:00]]]
   - [[#1104][[11:04]]]
+  - [[#1558][[15:58]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -30,3 +31,8 @@ Tabién ya pusieron la pizarra en la pared, así que ya colgué los dibujos de t
 
 ** [11:04]
 De momento mandé a imprimir las 5 piezas del ensamblador de los sensores, para poder ir montándolos mientras se fabrican el resto de las piezas. Se supone que deberían tardar las 5 juntas en la cama un total de 2  horas.
+
+** [15:58]
+Ya está hecho el ensamblador de sensores. Hubo que lijarlo un poco para que entre bien en el indentador, pero está funcionando. Mañana la idea sería probarlo con los alambres.
+
+Además, la idea es pedir en el taller que vayan rellenando la cama de tornillos mientras hacen otras impresiones.
