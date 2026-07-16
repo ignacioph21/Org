@@ -22,4 +22,4 @@ También mandamos para probar una sección pequeña de polycarbonato con los mis
 Tabién ya pusieron la pizarra en la pared, así que ya colgué los dibujos de todas las piezas y las intrucciones de ensamblaje.
 
 ** [11:04]
-De momento mandé a imprimir las 5 piezas del ensamblador de los sensores, para poder ir montándolos mientras se fabrican el resto de las piezas. Se supone que deberían tardar las 5 juntas en la cama un total de 25 horas.
+De momento mandé a imprimir las 5 piezas del ensamblador de los sensores, para poder ir montándolos mientras se fabrican el resto de las piezas. Se supone que deberían tardar las 5 juntas en la cama un total de 2  horas.
