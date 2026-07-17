@@ -11,6 +11,8 @@
   - [[#1100][[11:00]]]
   - [[#1104][[11:04]]]
   - [[#1558][[15:58]]]
+- [[#2026-07-17][2026-07-17]]
+  - [[#1515][[15:15]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -36,3 +38,10 @@ De momento mandé a imprimir las 5 piezas del ensamblador de los sensores, para 
 Ya está hecho el ensamblador de sensores. Hubo que lijarlo un poco para que entre bien en el indentador, pero está funcionando. Mañana la idea sería probarlo con los alambres.
 
 Además, la idea es pedir en el taller que vayan rellenando la cama de tornillos mientras hacen otras impresiones.
+
+* 2026-07-17
+
+** [15:15]
+Ya armamos los tres cables bipolares de pin a lug y uno de los sensores de 16 cm.
+
+Estuve charlando con uno de los chicos de grupo de Tomas Seon sobre su experimento que se basa en el estudio de generación de olas. Tienen un tanque largo de 3 m con un pistón tipo neumático lineal para generar las olas. Para más referencias está:[cite:@sarlinNascentWaterWaves2025]. Pueden generar ondas tipo plungers pegadas a la paleta del motor lineal.
