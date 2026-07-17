@@ -44,4 +44,4 @@ Además, la idea es pedir en el taller que vayan rellenando la cama de tornillos
 ** [15:15]
 Ya armamos los tres cables bipolares de pin a lug y uno de los sensores de 16 cm.
 
-Estuve charlando con uno de los chicos de grupo de Tomas Seon sobre su experimento que se basa en el estudio de generación de olas. Tienen un tanque largo de 3 m con un pistón tipo neumático lineal para generar las olas. Para más referencias está:[cite:@sarlinNascentWaterWaves2025]. Pueden generar ondas tipo plungers pegadas a la paleta del motor lineal.
+Estuve charlando con uno de los chicos de grupo de Thomas Seon sobre su experimento que se basa en el estudio de generación de olas. Tienen un tanque largo de 3 m con un pistón tipo neumático lineal para generar las olas. Para más referencias está:[cite:@sarlinNascentWaterWaves2025]. Pueden generar ondas tipo plungers pegadas a la paleta del motor lineal.
