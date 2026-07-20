@@ -1,0 +1,19 @@
+#+TITLE: Journal Week 30
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-07-20][2026-07-20]]
+  - [[#1230][[12:30]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-07-20
+
+** [12:30]
+Estuve probando el sensor que armé la semana pasada con uno de los nuevos cables. Para esto instalé el software de la placa en la computadora con Windows 11 (con todos los mismos intaladores y versión de Python 3.8.8 como en Windows 7 y 10).
+
+Pareciera funcionar, por el graficador en tiempo real, correctamente. Lo que sí lo probé con un generador AFG 1022 (10 Vpp y 57.250 kHz) y sin esmaltar la punta, pero a priori parecía sin el transitorio lento y muy suave.
