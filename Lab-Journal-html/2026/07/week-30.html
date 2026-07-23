@@ -49,34 +49,37 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga423556">Referencias</a></li>
-<li><a href="#orgb8f8ab1">2026-07-20</a>
+<li><a href="#orgfd70f2f">Referencias</a></li>
+<li><a href="#org7a1af1d">2026-07-20</a>
 <ul>
-<li><a href="#org1e574d0">[12:30]</a></li>
+<li><a href="#orga8bd9bf">[12:30]</a></li>
 </ul>
 </li>
-<li><a href="#orga985d8a">2026-07-23</a>
+<li><a href="#org3fb53a3">2026-07-23</a>
 <ul>
-<li><a href="#orgbcb76a9">[10:37]</a></li>
+<li><a href="#org813aeab">[10:37]</a></li>
+<li><a href="#orgf20653b">[10:55]</a></li>
+<li><a href="#org3805ac4">[11:17]</a></li>
+<li><a href="#orgc1fd43c">[12:12]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga423556" class="outline-2">
-<h2 id="orga423556">Referencias</h2>
-<div class="outline-text-2" id="text-orga423556">
+<div id="outline-container-orgfd70f2f" class="outline-2">
+<h2 id="orgfd70f2f">Referencias</h2>
+<div class="outline-text-2" id="text-orgfd70f2f">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-orgb8f8ab1" class="outline-2">
-<h2 id="orgb8f8ab1">2026-07-20</h2>
-<div class="outline-text-2" id="text-orgb8f8ab1">
+<div id="outline-container-org7a1af1d" class="outline-2">
+<h2 id="org7a1af1d">2026-07-20</h2>
+<div class="outline-text-2" id="text-org7a1af1d">
 </div>
-<div id="outline-container-org1e574d0" class="outline-3">
-<h3 id="org1e574d0">[12:30]</h3>
-<div class="outline-text-3" id="text-org1e574d0">
+<div id="outline-container-orga8bd9bf" class="outline-3">
+<h3 id="orga8bd9bf">[12:30]</h3>
+<div class="outline-text-3" id="text-orga8bd9bf">
 <p>
 Estuve probando el sensor que armé la semana pasada con uno de los nuevos cables. Para esto instalé el software de la placa en la computadora con Windows 11 (con todos los mismos intaladores y versión de Python 3.8.8 como en Windows 7 y 10).
 </p>
@@ -87,13 +90,13 @@ Pareciera funcionar, por el graficador en tiempo real, correctamente. Lo que sí
 </div>
 </div>
 </div>
-<div id="outline-container-orga985d8a" class="outline-2">
-<h2 id="orga985d8a">2026-07-23</h2>
-<div class="outline-text-2" id="text-orga985d8a">
+<div id="outline-container-org3fb53a3" class="outline-2">
+<h2 id="org3fb53a3">2026-07-23</h2>
+<div class="outline-text-2" id="text-org3fb53a3">
 </div>
-<div id="outline-container-orgbcb76a9" class="outline-3">
-<h3 id="orgbcb76a9">[10:37]</h3>
-<div class="outline-text-3" id="text-orgbcb76a9">
+<div id="outline-container-org813aeab" class="outline-3">
+<h3 id="org813aeab">[10:37]</h3>
+<div class="outline-text-3" id="text-org813aeab">
 <p>
 El código de Claude para la DAC de la PS3K funciona bien para generar sinoidales. Las cuestiones son las siguientes,
 </p>
@@ -101,6 +104,30 @@ El código de Claude para la DAC de la PS3K funciona bien para generar sinoidale
 <li>El límite entre punto y punto es de 10 \(\mu s\), aunque para mí debería haber algo como el <code>daqh.DafSettle1us</code> del ADC para cambiar eso.</li>
 <li>El intervalo entre punto y punto es escalonado, en lugar de una interpolación suave.</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-orgf20653b" class="outline-3">
+<h3 id="orgf20653b">[10:55]</h3>
+<div class="outline-text-3" id="text-orgf20653b">
+<p>
+Al parecer Claude había hardcodeado el límite de 10 \(\mu s\), sí se puede con 1 \(\mu s\) o tal vez incluso un poco menos ya que el dispositivo reporta como frecuencia límite 1.2 MHz. Queda la cuestión de la interpolación.
+</p>
+</div>
+</div>
+<div id="outline-container-org3805ac4" class="outline-3">
+<h3 id="org3805ac4">[11:17]</h3>
+<div class="outline-text-3" id="text-org3805ac4">
+<p>
+Con un filtro pasabajos de 3 k\(\Omega\) y 560 pF se suaviza un montón.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc1fd43c" class="outline-3">
+<h3 id="orgc1fd43c">[12:12]</h3>
+<div class="outline-text-3" id="text-orgc1fd43c">
+<p>
+Ya ChatGPT armó una interfaz gráfica que funciona bastante bien con tkinter.
+</p>
 </div>
 </div>
 </div>

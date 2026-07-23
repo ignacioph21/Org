@@ -9,6 +9,9 @@
   - [[#1230][[12:30]]]
 - [[#2026-07-23][2026-07-23]]
   - [[#1037][[10:37]]]
+  - [[#1055][[10:55]]]
+  - [[#1117][[11:17]]]
+  - [[#1212][[12:12]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -26,3 +29,12 @@ Pareciera funcionar, por el graficador en tiempo real, correctamente. Lo que sí
 El código de Claude para la DAC de la PS3K funciona bien para generar sinoidales. Las cuestiones son las siguientes,
 - El límite entre punto y punto es de 10 $\mu s$, aunque para mí debería haber algo como el =daqh.DafSettle1us= del ADC para cambiar eso.
 - El intervalo entre punto y punto es escalonado, en lugar de una interpolación suave.
+
+** [10:55]
+Al parecer Claude había hardcodeado el límite de 10 $\mu s$, sí se puede con 1 $\mu s$ o tal vez incluso un poco menos ya que el dispositivo reporta como frecuencia límite 1.2 MHz. Queda la cuestión de la interpolación.
+
+** [11:17]
+Con un filtro pasabajos de 3 k$\Omega$ y 560 pF se suaviza un montón.
+
+** [12:12]
+Ya ChatGPT armó una interfaz gráfica que funciona bastante bien con tkinter.
