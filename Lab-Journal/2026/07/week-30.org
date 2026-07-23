@@ -7,6 +7,8 @@
 - [[#referencias][Referencias]]
 - [[#2026-07-20][2026-07-20]]
   - [[#1230][[12:30]]]
+- [[#2026-07-23][2026-07-23]]
+  - [[#1037][[10:37]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -17,3 +19,10 @@
 Estuve probando el sensor que armé la semana pasada con uno de los nuevos cables. Para esto instalé el software de la placa en la computadora con Windows 11 (con todos los mismos intaladores y versión de Python 3.8.8 como en Windows 7 y 10).
 
 Pareciera funcionar, por el graficador en tiempo real, correctamente. Lo que sí lo probé con un generador AFG 1022 (10 Vpp y 57.250 kHz) y sin esmaltar la punta, pero a priori parecía sin el transitorio lento y muy suave.
+
+* 2026-07-23
+
+** [10:37]
+El código de Claude para la DAC de la PS3K funciona bien para generar sinoidales. Las cuestiones son las siguientes,
+- El límite entre punto y punto es de 10 $\mu s$, aunque para mí debería haber algo como el =daqh.DafSettle1us= del ADC para cambiar eso.
+- El intervalo entre punto y punto es escalonado, en lugar de una interpolación suave.
