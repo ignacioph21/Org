@@ -49,37 +49,38 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgfd70f2f">Referencias</a></li>
-<li><a href="#org7a1af1d">2026-07-20</a>
+<li><a href="#orgc793873">Referencias</a></li>
+<li><a href="#orge4f981d">2026-07-20</a>
 <ul>
-<li><a href="#orga8bd9bf">[12:30]</a></li>
+<li><a href="#org8f56360">[12:30]</a></li>
 </ul>
 </li>
-<li><a href="#org3fb53a3">2026-07-23</a>
+<li><a href="#org7bc5d6d">2026-07-23</a>
 <ul>
-<li><a href="#org813aeab">[10:37]</a></li>
-<li><a href="#orgf20653b">[10:55]</a></li>
-<li><a href="#org3805ac4">[11:17]</a></li>
-<li><a href="#orgc1fd43c">[12:12]</a></li>
+<li><a href="#org07e4317">[10:37]</a></li>
+<li><a href="#org008f464">[10:55]</a></li>
+<li><a href="#org36f2318">[11:17]</a></li>
+<li><a href="#orgbc4bf96">[12:12]</a></li>
+<li><a href="#orgc722431">[15:26]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfd70f2f" class="outline-2">
-<h2 id="orgfd70f2f">Referencias</h2>
-<div class="outline-text-2" id="text-orgfd70f2f">
+<div id="outline-container-orgc793873" class="outline-2">
+<h2 id="orgc793873">Referencias</h2>
+<div class="outline-text-2" id="text-orgc793873">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org7a1af1d" class="outline-2">
-<h2 id="org7a1af1d">2026-07-20</h2>
-<div class="outline-text-2" id="text-org7a1af1d">
+<div id="outline-container-orge4f981d" class="outline-2">
+<h2 id="orge4f981d">2026-07-20</h2>
+<div class="outline-text-2" id="text-orge4f981d">
 </div>
-<div id="outline-container-orga8bd9bf" class="outline-3">
-<h3 id="orga8bd9bf">[12:30]</h3>
-<div class="outline-text-3" id="text-orga8bd9bf">
+<div id="outline-container-org8f56360" class="outline-3">
+<h3 id="org8f56360">[12:30]</h3>
+<div class="outline-text-3" id="text-org8f56360">
 <p>
 Estuve probando el sensor que armé la semana pasada con uno de los nuevos cables. Para esto instalé el software de la placa en la computadora con Windows 11 (con todos los mismos intaladores y versión de Python 3.8.8 como en Windows 7 y 10).
 </p>
@@ -90,13 +91,13 @@ Pareciera funcionar, por el graficador en tiempo real, correctamente. Lo que sí
 </div>
 </div>
 </div>
-<div id="outline-container-org3fb53a3" class="outline-2">
-<h2 id="org3fb53a3">2026-07-23</h2>
-<div class="outline-text-2" id="text-org3fb53a3">
+<div id="outline-container-org7bc5d6d" class="outline-2">
+<h2 id="org7bc5d6d">2026-07-23</h2>
+<div class="outline-text-2" id="text-org7bc5d6d">
 </div>
-<div id="outline-container-org813aeab" class="outline-3">
-<h3 id="org813aeab">[10:37]</h3>
-<div class="outline-text-3" id="text-org813aeab">
+<div id="outline-container-org07e4317" class="outline-3">
+<h3 id="org07e4317">[10:37]</h3>
+<div class="outline-text-3" id="text-org07e4317">
 <p>
 El código de Claude para la DAC de la PS3K funciona bien para generar sinoidales. Las cuestiones son las siguientes,
 </p>
@@ -106,28 +107,48 @@ El código de Claude para la DAC de la PS3K funciona bien para generar sinoidale
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf20653b" class="outline-3">
-<h3 id="orgf20653b">[10:55]</h3>
-<div class="outline-text-3" id="text-orgf20653b">
+<div id="outline-container-org008f464" class="outline-3">
+<h3 id="org008f464">[10:55]</h3>
+<div class="outline-text-3" id="text-org008f464">
 <p>
 Al parecer Claude había hardcodeado el límite de 10 \(\mu s\), sí se puede con 1 \(\mu s\) o tal vez incluso un poco menos ya que el dispositivo reporta como frecuencia límite 1.2 MHz. Queda la cuestión de la interpolación.
 </p>
 </div>
 </div>
-<div id="outline-container-org3805ac4" class="outline-3">
-<h3 id="org3805ac4">[11:17]</h3>
-<div class="outline-text-3" id="text-org3805ac4">
+<div id="outline-container-org36f2318" class="outline-3">
+<h3 id="org36f2318">[11:17]</h3>
+<div class="outline-text-3" id="text-org36f2318">
 <p>
 Con un filtro pasabajos de 3 k\(\Omega\) y 560 pF se suaviza un montón.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc1fd43c" class="outline-3">
-<h3 id="orgc1fd43c">[12:12]</h3>
-<div class="outline-text-3" id="text-orgc1fd43c">
+<div id="outline-container-orgbc4bf96" class="outline-3">
+<h3 id="orgbc4bf96">[12:12]</h3>
+<div class="outline-text-3" id="text-orgbc4bf96">
 <p>
 Ya ChatGPT armó una interfaz gráfica que funciona bastante bien con tkinter.
 </p>
+</div>
+</div>
+<div id="outline-container-orgc722431" class="outline-3">
+<h3 id="orgc722431">[15:26]</h3>
+<div class="outline-text-3" id="text-orgc722431">
+<p>
+Penándolo ahora un  lockin digital debería funcionar si la señal tiene componentes espectales en frecuencias más altas que la principal, ya que después igualmente se aplica un filtro pasabajos que saca los efectos de la convoloción de la señal moduladaa con las otras frecuencias.
+</p>
+
+
+<div id="org8e550e3" class="figure">
+<p><img src="../../../Assets/2026/07/Day_23/reference-lockin-other-signal.png" alt="reference-lockin-other-signal.png" />
+</p>
+</div>
+
+
+<div id="org21b734b" class="figure">
+<p><img src="../../../Assets/2026/07/Day_23/reconstruct-lockin-other-signal.png" alt="reconstruct-lockin-other-signal.png" />
+</p>
+</div>
 </div>
 </div>
 </div>

@@ -12,6 +12,7 @@
   - [[#1055][[10:55]]]
   - [[#1117][[11:17]]]
   - [[#1212][[12:12]]]
+  - [[#1526][[15:26]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -38,3 +39,12 @@ Con un filtro pasabajos de 3 k$\Omega$ y 560 pF se suaviza un montón.
 
 ** [12:12]
 Ya ChatGPT armó una interfaz gráfica que funciona bastante bien con tkinter.
+
+** [15:26]
+Penándolo ahora un  lockin digital debería funcionar si la señal tiene componentes espectales en frecuencias más altas que la principal, ya que después igualmente se aplica un filtro pasabajos que saca los efectos de la convoloción de la señal moduladaa con las otras frecuencias.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/07/Day_23/reference-lockin-other-signal.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/07/Day_23/reconstruct-lockin-other-signal.png]]
