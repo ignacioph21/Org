@@ -14,4 +14,4 @@
 * 2026-07-27
 
 ** [11:44]
-Estoy aprendiendo FTP para usarla en el futuro para la medición de las olas rompientes en el canal. Parece que tengo un código muy básico que genera los patrones deformados y los analiza, aunque de momento ignora completamente el tema del cambio de coordenadas. Un punto a tener en cuenta es que pareciera ser que en la definición de $\phi$ falta un factor $L$ multiplicando, lo que más ruido me hace es el tema de las unidades, y que entiendo que debería dar $\phi_0$ cunda $h=0$. 77
+Estoy aprendiendo FTP para usarla en el futuro para la medición de las olas rompientes en el canal. Parece que tengo un código muy básico que genera los patrones deformados y los analiza, aunque de momento ignora completamente el tema del cambio de coordenadas. Un punto a tener en cuenta es que pareciera ser que en la definición de $\phi$ falta un factor $L$ multiplicando, lo que más ruido me hace es el tema de las unidades, y que entiendo que debería dar $\phi_0$ cunda $h=0$.
