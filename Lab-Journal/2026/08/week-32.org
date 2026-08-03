@@ -1,0 +1,20 @@
+#+TITLE: Journal Week 32
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-08-03][2026-08-03]]
+  - [[#1340][[13:40]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-08-03
+
+** [13:40]
+Ya están los soportes para pesas impresos. Mandamos a imprimir una tuerca con 0.2 de toleracnia en lugar de 0.3 para verificar si está bien. El lugar de donde generamos las tuercas y tornillos desde makerworld es:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_03/generador-parametrico-tuercas-y-tornillos.png]]
