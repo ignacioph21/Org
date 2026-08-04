@@ -7,6 +7,8 @@
 - [[#referencias][Referencias]]
 - [[#2026-08-03][2026-08-03]]
   - [[#1340][[13:40]]]
+- [[#2026-08-04][2026-08-04]]
+  - [[#1443][[14:43]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -18,3 +20,8 @@ Ya están los soportes para pesas impresos. Mandamos a imprimir una tuerca con 0
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/08/Day_03/generador-parametrico-tuercas-y-tornillos.png]]
+
+* 2026-08-04
+
+** [14:43]
+Al final vamos a ir con las tuercas originales porque las nuevas quedaban muy ajustadas.
