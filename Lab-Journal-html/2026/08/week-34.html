@@ -49,36 +49,39 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc94f198">Referencias</a></li>
-<li><a href="#orgf081b36">2026-08-20</a>
+<li><a href="#org9fddf32">Referencias</a></li>
+<li><a href="#org3e2445a">2026-08-20</a>
 <ul>
-<li><a href="#org976c6f7">[09:45]</a></li>
+<li><a href="#orgbd71a29">[09:45]</a></li>
+<li><a href="#org11a002b">[11:51]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc94f198" class="outline-2">
-<h2 id="orgc94f198">Referencias</h2>
-<div class="outline-text-2" id="text-orgc94f198">
+<div id="outline-container-org9fddf32" class="outline-2">
+<h2 id="org9fddf32">Referencias</h2>
+<div class="outline-text-2" id="text-org9fddf32">
 <div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Ricard, Guillaume, and Eric Falcon. 2023. “Experimental Evidence of Random Shock-Wave Intermittency.” Prepublished September 28. <a href="https://doi.org/10.48550/arXiv.2309.16222">https://doi.org/10.48550/arXiv.2309.16222</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Angriman, Sofía, Pablo D. Mininni, and Pablo J. Cobelli. 2022. “Multitime Structure Functions and the Lagrangian Scaling of Turbulence.” <i>Physical Review Fluids</i> 7 (6): 064603. <a href="https://doi.org/10.1103/PhysRevFluids.7.064603">https://doi.org/10.1103/PhysRevFluids.7.064603</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Cho, Jungyeon. 2019. “A Technique for Removing Large-scale Variations in Regularly and Irregularly Spaced Data.” <i>The Astrophysical Journal</i> 874 (1): 75. <a href="https://doi.org/10.3847/1538-4357/ab06f3">https://doi.org/10.3847/1538-4357/ab06f3</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Ricard, Guillaume, and Eric Falcon. 2023. “Experimental Evidence of Random Shock-Wave Intermittency.” Prepublished September 28. <a href="https://doi.org/10.48550/arXiv.2309.16222">https://doi.org/10.48550/arXiv.2309.16222</a>.</div>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf081b36" class="outline-2">
-<h2 id="orgf081b36">2026-08-20</h2>
-<div class="outline-text-2" id="text-orgf081b36">
+<div id="outline-container-org3e2445a" class="outline-2">
+<h2 id="org3e2445a">2026-08-20</h2>
+<div class="outline-text-2" id="text-org3e2445a">
 </div>
-<div id="outline-container-org976c6f7" class="outline-3">
-<h3 id="org976c6f7">[09:45]</h3>
-<div class="outline-text-3" id="text-org976c6f7">
+<div id="outline-container-orgbd71a29" class="outline-3">
+<h3 id="orgbd71a29">[09:45]</h3>
+<div class="outline-text-3" id="text-orgbd71a29">
 <p>
 Mientras seguimos esperando que impriman los tornillos para poder avanzar con el setup, me puse a calcular las funciones de estructura para las mediciones últimas en la rampa prototipo. El escaleo de los exponentes da lo siguiente:
 </p>
 
 
-<div id="orgbd91a52" class="figure">
+<div id="org6380534" class="figure">
 <p><img src="../../../Assets/2026/08/Day_20/structure_function_exponents.png" alt="structure_function_exponents.png" />
 </p>
 </div>
@@ -88,8 +91,32 @@ Para el sensor después de la rompiente con \(\tau\) entre 125 y 250 ms, que se 
 </p>
 
 <p>
-Además, para las diferencias de primer orden se estancan los exponentes, muy similar a lo que le pasa a Falcon con sus exponentes en (<a href="#citeproc_bib_item_1">Ricard and Falcon 2023</a>). Ahí igualmente usa las diferencias de orden 4 ya que su espectro tiene un exponenente bastante más empinado que en nuestro caso, pero habría que discutir sobre la validez de esto. Al aumentar yo el orden de las funciones de estructura convergen desde el orden 2 pero se parecen más a lo que se esperaba para turbulencia de ondas isótropa.
+Además, para las diferencias de primer orden se estancan los exponentes, muy similar a lo que le pasa a Falcon con sus exponentes en (<a href="#citeproc_bib_item_3">Ricard and Falcon 2023</a>). Ahí igualmente usa las diferencias de orden 4 ya que su espectro tiene un exponenente bastante más empinado que en nuestro caso, pero habría que discutir sobre la validez de esto. Al aumentar yo el orden de las funciones de estructura convergen desde el orden 2 pero se parecen más a lo que se esperaba para turbulencia de ondas isótropa.
 </p>
+</div>
+</div>
+<div id="outline-container-org11a002b" class="outline-3">
+<h3 id="org11a002b">[11:51]</h3>
+<div class="outline-text-3" id="text-org11a002b">
+<p>
+Ahora implementé una función general para Sp de n puntos. Basado en (<a href="#citeproc_bib_item_2">Cho 2019</a>) y (<a href="#citeproc_bib_item_1">Angriman et al. 2022</a>).
+</p>
+
+
+<div id="org915302b" class="figure">
+<p><img src="../../../Assets/2026/08/Day_20/structure_functions_clean.png" alt="structure_functions_clean.png" />
+</p>
+</div>
+
+<p>
+Con parámetros \(c_1\) y \(c_2\), habiendo ajustado \(\zeta_p = c_1 p - \frac{c_2}{2} p²\):
+</p>
+
+
+<div id="orgbd6dcfa" class="figure">
+<p><img src="../../../Assets/2026/08/Day_20/structure_function_parameters.png" alt="structure_function_parameters.png" />
+</p>
+</div>
 </div>
 </div>
 </div>
