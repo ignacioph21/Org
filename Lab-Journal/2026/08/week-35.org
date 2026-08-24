@@ -1,0 +1,17 @@
+#+TITLE: Journal Week 35
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-08-24][2026-08-24]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-08-24
+Ya está montada la rampa con una de las paredes y estoy haceindo pruebas con el motor y la paleta más chica. Tareas pendientes:
+- Hacer separadores que se agarren a la pared de acrílico y/o a perfil.
+- Poner gráficos en un ppt para discutir.
+- Mandar a imprimir una rampa de otra pendiente.

@@ -49,24 +49,24 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org55bf2a1">Referencias</a></li>
-<li><a href="#org79fb25e">2026-08-20</a>
+<li><a href="#orga3dba01">Referencias</a></li>
+<li><a href="#org754d618">2026-08-20</a>
 <ul>
-<li><a href="#orgb75aec9">[09:45]</a></li>
-<li><a href="#orged1cbd5">[11:51]</a></li>
+<li><a href="#org65a3e72">[09:45]</a></li>
+<li><a href="#orgc73e877">[11:51]</a></li>
 </ul>
 </li>
-<li><a href="#org149d6e7">2026-08-21</a>
+<li><a href="#org5da8f1d">2026-08-21</a>
 <ul>
-<li><a href="#org52d1379">[13:59]</a></li>
+<li><a href="#org276c20c">[13:59]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org55bf2a1" class="outline-2">
-<h2 id="org55bf2a1">Referencias</h2>
-<div class="outline-text-2" id="text-org55bf2a1">
+<div id="outline-container-orga3dba01" class="outline-2">
+<h2 id="orga3dba01">Referencias</h2>
+<div class="outline-text-2" id="text-orga3dba01">
 <div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Angriman, Sofía, Pablo D. Mininni, and Pablo J. Cobelli. 2022. “Multitime Structure Functions and the Lagrangian Scaling of Turbulence.” <i>Physical Review Fluids</i> 7 (6): 064603. <a href="https://doi.org/10.1103/PhysRevFluids.7.064603">https://doi.org/10.1103/PhysRevFluids.7.064603</a>.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Cho, Jungyeon. 2019. “A Technique for Removing Large-scale Variations in Regularly and Irregularly Spaced Data.” <i>The Astrophysical Journal</i> 874 (1): 75. <a href="https://doi.org/10.3847/1538-4357/ab06f3">https://doi.org/10.3847/1538-4357/ab06f3</a>.</div>
@@ -74,25 +74,25 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org79fb25e" class="outline-2">
-<h2 id="org79fb25e">2026-08-20</h2>
-<div class="outline-text-2" id="text-org79fb25e">
+<div id="outline-container-org754d618" class="outline-2">
+<h2 id="org754d618">2026-08-20</h2>
+<div class="outline-text-2" id="text-org754d618">
 </div>
-<div id="outline-container-orgb75aec9" class="outline-3">
-<h3 id="orgb75aec9">[09:45]</h3>
-<div class="outline-text-3" id="text-orgb75aec9">
+<div id="outline-container-org65a3e72" class="outline-3">
+<h3 id="org65a3e72">[09:45]</h3>
+<div class="outline-text-3" id="text-org65a3e72">
 <p>
 Mientras seguimos esperando que impriman los tornillos para poder avanzar con el setup, me puse a calcular las funciones de estructura para las mediciones últimas en la rampa prototipo. El escaleo de los exponentes da lo siguiente:
 </p>
 
 
-<div id="org7689bd3" class="figure">
+<div id="orge322ae7" class="figure">
 <p><img src="../../../Assets/2026/08/Day_20/structure_function_exponents.png" alt="structure_function_exponents.png" />
 </p>
 </div>
 
 <p>
-Para el sensor después de la rompiente con \(\tau\) entre 125 y 250 ms, que se corresponde al rango que ajusta bien el espectro de Bonneton. Además hay varias cosas interesantes. Po run lado la pendiente inicial está cercana al valor esperado para un espectro de \(E(\omega)\sim^{-2}\), ya que sigue la regla de \(-(n+1)/2\), que en este caso da \(\zeta_p\sim1/2p\).
+Para el sensor después de la rompiente con \(\tau\) entre 125 y 250 ms, que se corresponde al rango que ajusta bien el espectro de Bonneton. Además hay varias cosas interesantes. Po run lado la pendiente inicial está cercana al valor esperado para un espectro de \(E(\omega)\sim\omega^{-2}\), ya que sigue la regla de \(-(n+1)/2\), que en este caso da \(\zeta_p\sim1/2p\).
 </p>
 
 <p>
@@ -100,15 +100,15 @@ Además, para las diferencias de primer orden se estancan los exponentes, muy si
 </p>
 </div>
 </div>
-<div id="outline-container-orged1cbd5" class="outline-3">
-<h3 id="orged1cbd5">[11:51]</h3>
-<div class="outline-text-3" id="text-orged1cbd5">
+<div id="outline-container-orgc73e877" class="outline-3">
+<h3 id="orgc73e877">[11:51]</h3>
+<div class="outline-text-3" id="text-orgc73e877">
 <p>
 Ahora implementé una función general para Sp de n puntos. Basado en (<a href="#citeproc_bib_item_2">Cho 2019</a>) y (<a href="#citeproc_bib_item_1">Angriman et al. 2022</a>).
 </p>
 
 
-<div id="org7345838" class="figure">
+<div id="orga66d103" class="figure">
 <p><img src="../../../Assets/2026/08/Day_20/structure_functions_clean.png" alt="structure_functions_clean.png" />
 </p>
 </div>
@@ -118,20 +118,20 @@ Con parámetros \(c_1\) y \(c_2\), habiendo ajustado \(\zeta_p = c_1 p - \frac{c
 </p>
 
 
-<div id="orga626b3f" class="figure">
+<div id="org4334c7b" class="figure">
 <p><img src="../../../Assets/2026/08/Day_20/structure_function_parameters.png" alt="structure_function_parameters.png" />
 </p>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org149d6e7" class="outline-2">
-<h2 id="org149d6e7">2026-08-21</h2>
-<div class="outline-text-2" id="text-org149d6e7">
+<div id="outline-container-org5da8f1d" class="outline-2">
+<h2 id="org5da8f1d">2026-08-21</h2>
+<div class="outline-text-2" id="text-org5da8f1d">
 </div>
-<div id="outline-container-org52d1379" class="outline-3">
-<h3 id="org52d1379">[13:59]</h3>
-<div class="outline-text-3" id="text-org52d1379">
+<div id="outline-container-org276c20c" class="outline-3">
+<h3 id="org276c20c">[13:59]</h3>
+<div class="outline-text-3" id="text-org276c20c">
 <p>
 ¡Ya están los tornillos!
 </p>
