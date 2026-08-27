@@ -6,6 +6,9 @@
 * Table of Contents :TOC:noexport:
 - [[#referencias][Referencias]]
 - [[#2026-08-24][2026-08-24]]
+- [[#2026-08-25][2026-08-25]]
+- [[#2026-08-27][2026-08-27]]
+  - [[#0928][[09:28]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -15,3 +18,49 @@ Ya está montada la rampa con una de las paredes y estoy haceindo pruebas con el
 - Hacer separadores que se agarren a la pared de acrílico y/o a perfil.
 - Poner gráficos en un ppt para discutir.
 - Mandar a imprimir una rampa de otra pendiente.
+
+
+* 2026-08-25
+A continuación una serie de la evolución de la ola (con la paleta chica, tanh(t) de subida y bajada, de amplitud de 10 cm, subiida de 1 s y duración total de 15 s, con $\alpha$ de 50e-3).
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/ola__.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/ola_2_5.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/ola_2_9.png]]
+
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/ola_2.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/ola_3.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/ola_4.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/ola_5.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/ola_6.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/ola_7.png]]
+
+
+* 2026-08-27
+
+** [09:28]
+Acá dejo las funciones de estructura calculadas y la kurtosis.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/structure_functions.png]]
+
+Y la kurtosis:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/08/Day_27/kurtosis.png]]
