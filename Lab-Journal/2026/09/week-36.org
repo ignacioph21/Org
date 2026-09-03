@@ -1,0 +1,20 @@
+#+TITLE: Journal Week 36
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-09-03][2026-09-03]]
+  - [[#1036][[10:36]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-09-03
+
+** [10:36]
+Acá está la convergencia al $5 \%$ del valor medio para las funciones de estructura en un punto intermedio del rango inercial.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_03/convergencia.png]]
