@@ -7,6 +7,7 @@
 - [[#referencias][Referencias]]
 - [[#2026-09-03][2026-09-03]]
   - [[#1036][[10:36]]]
+  - [[#1048][[10:48]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -18,3 +19,15 @@ Acá está la convergencia al $5 \%$ del valor medio para las funciones de estru
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_03/convergencia.png]]
+
+** [10:48]
+En el rango de 40 a 60 ms (donde debería ser capilar) da lo siguiente:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_03/Sps_capilar.png]]
+
+Con los parámetros del ajuste cuadrático:
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_03/Sps_capipar_parametros.png]]
+
+Da una pendiente más baja, debería dar la de 2 puntos 0.916 y la de 3 en adelante 1.5.
