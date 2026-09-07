@@ -1,0 +1,23 @@
+#+TITLE: Journal Week 37
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-09-07][2026-09-07]]
+  - [[#0908][[09:08]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-09-07
+
+** [09:08]
+Reunión sobre setup:
+ - Hacer análisis por wavelets con soluciones de Burgers, Daubechies.
+ - Segmentar la superficie libre
+ - Habría que repetir con agua limpia.
+ - Mandar a imprimir rampas 1:35 y 1:27.5.
+ - Mandar espaciador nuevo.
+ - Algo de soluciones.
