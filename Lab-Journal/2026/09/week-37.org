@@ -8,6 +8,7 @@
 - [[#2026-09-07][2026-09-07]]
   - [[#0908][[09:08]]]
   - [[#1051][[10:51]]]
+  - [[#1121][[11:21]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -33,3 +34,12 @@ Y los parámetros de los ajustes:
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_07/strcutre_functions_smaller_range_parameters.png]]
+
+** [11:21]
+Esto para el primer sensor entre 100 y 250 ms:
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_07/structure_functions_forced.png]]
+
+Y sus parámetros:
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_07/structure_functions_forced_parameters.png]]
