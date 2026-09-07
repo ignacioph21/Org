@@ -7,6 +7,7 @@
 - [[#referencias][Referencias]]
 - [[#2026-09-07][2026-09-07]]
   - [[#0908][[09:08]]]
+  - [[#1051][[10:51]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -21,3 +22,14 @@ Reunión sobre setup:
  - Mandar a imprimir rampas 1:35 y 1:27.5.
  - Mandar espaciador nuevo.
  - Algo de soluciones.
+
+** [10:51]
+Estas son los scalings de las funciones de structura para el rango entre 100 y 200 mns (en lugar de llegar hasta 250 ms).
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_07/structure_functions_smaller_range.png]]
+
+Y los parámetros de los ajustes:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_07/strcutre_functions_smaller_range_parameters.png]]
