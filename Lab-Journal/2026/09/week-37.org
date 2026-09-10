@@ -9,6 +9,8 @@
   - [[#0908][[09:08]]]
   - [[#1051][[10:51]]]
   - [[#1121][[11:21]]]
+- [[#2026-09-10][2026-09-10]]
+  - [[#1155][[11:55]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -43,3 +45,13 @@ Esto para el primer sensor entre 100 y 250 ms:
 Y sus parámetros:
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_07/structure_functions_forced_parameters.png]]
+
+* 2026-09-10
+
+** [11:55]
+A continuación un ajuste de una onda individual de la primera iteración por la solución de onda de choque que propone Bonneton en [cite:@bonnetonEnergyDissipationSpectra2023]:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_10/Ajuste_Burgers.png]]
+
+Algo importante es que pareciera ser que la coordenada espacial de Burgers la asumimos como nuestra coordenada temporal, mediante algo parecido a la hipótesis de Taylor, diciendo que varía lentamente la batimetría, entonces es Shallow sin dispersión y la frecuencia y el número de onda se relacionan mediante cierta celeridad media. En ese caso para testear las cosas estadísticas como los espectros y scalings de las funciones de estucrtura basta con dedjar evolucionar en el solver pseudoespectral una condición inicial de ruido, sin tener que meterse en un forzado temporal.
