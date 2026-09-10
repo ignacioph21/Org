@@ -11,6 +11,7 @@
   - [[#1121][[11:21]]]
 - [[#2026-09-10][2026-09-10]]
   - [[#1155][[11:55]]]
+  - [[#1221][[12:21]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -55,3 +56,6 @@ A continuación un ajuste de una onda individual de la primera iteración por la
 [[file:../../../Assets/2026/09/Day_10/Ajuste_Burgers.png]]
 
 Algo importante es que pareciera ser que la coordenada espacial de Burgers la asumimos como nuestra coordenada temporal, mediante algo parecido a la hipótesis de Taylor, diciendo que varía lentamente la batimetría, entonces es Shallow sin dispersión y la frecuencia y el número de onda se relacionan mediante cierta celeridad media. En ese caso para testear las cosas estadísticas como los espectros y scalings de las funciones de estucrtura basta con dedjar evolucionar en el solver pseudoespectral una condición inicial de ruido, sin tener que meterse en un forzado temporal.
+
+** [12:21]
+Tengo que probar promediando sobre varias olas, por si es simplemente el fondo la desviación de la solución de Burgers.
