@@ -12,6 +12,8 @@
 - [[#2026-09-10][2026-09-10]]
   - [[#1155][[11:55]]]
   - [[#1221][[12:21]]]
+  - [[#1537][[15:37]]]
+  - [[#1541][[15:41]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -59,3 +61,15 @@ Algo importante es que pareciera ser que la coordenada espacial de Burgers la as
 
 ** [12:21]
 Tengo que probar promediando sobre varias olas, por si es simplemente el fondo la desviación de la solución de Burgers.
+
+** [15:37]
+Esto es la media cada 15 segundos de la señal de las primeras mediciones con un único sensor.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_10/mean_Wave.png]]
+
+** [15:41]
+Y acá el ajuste, la bara es la desviación estándar, la versión con dividido $N$ era inapreciable:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_10/ajuste_mean.png]]
