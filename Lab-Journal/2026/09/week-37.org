@@ -18,6 +18,7 @@
   - [[#1607][[16:07]]]
   - [[#1615][[16:15]]]
   - [[#1628][[16:28]]]
+  - [[#1825][[18:25]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -105,3 +106,6 @@ Y acá el mismo ajuste para las mediciones de ondas individuales:
 
 ** [16:28]
 Esta solución está en la página 101 de [cite:@whithamLinearNonlinearWaves1976].
+
+** [18:25]
+La única cuestión que quedaría resolver ahora es que los choques (con $v$ positiva) se forman las colas alrevés que las que medimos todos, nosotros, Bonneton y Falcon, ya que siempre pasa por el sensor primero el frente y luego la cola.
