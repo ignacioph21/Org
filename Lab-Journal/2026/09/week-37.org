@@ -14,6 +14,9 @@
   - [[#1221][[12:21]]]
   - [[#1537][[15:37]]]
   - [[#1541][[15:41]]]
+- [[#2026-09-11][2026-09-11]]
+  - [[#1607][[16:07]]]
+  - [[#1615][[16:15]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -73,3 +76,28 @@ Y acá el ajuste, la bara es la desviación estándar, la versión con dividido 
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_10/ajuste_mean.png]]
+
+* 2026-09-11
+
+** [16:07]
+Acá un ajuste con la solución más general de Burgers que está más abajo.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_11/ajuste_Burgers.png]]
+
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_11/f_rmula_ajuste.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_11/par_metros_ajuste_promedio.png]]
+
+
+** [16:15]
+Y acá el mismo ajuste para las mediciones de ondas individuales:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_11/ajuste_general_onda_individual.png]]
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_11/par_metros_ajuste.png]]
