@@ -17,6 +17,7 @@
 - [[#2026-09-11][2026-09-11]]
   - [[#1607][[16:07]]]
   - [[#1615][[16:15]]]
+  - [[#1628][[16:28]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -101,3 +102,6 @@ Y acá el mismo ajuste para las mediciones de ondas individuales:
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_11/par_metros_ajuste.png]]
+
+** [16:28]
+Esta solución está en la página 101 de [cite:@whithamLinearNonlinearWaves1976].
