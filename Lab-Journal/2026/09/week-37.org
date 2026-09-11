@@ -19,6 +19,7 @@
   - [[#1615][[16:15]]]
   - [[#1628][[16:28]]]
   - [[#1825][[18:25]]]
+  - [[#1837][[18:37]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -109,3 +110,6 @@ Esta solución está en la página 101 de [cite:@whithamLinearNonlinearWaves1976
 
 ** [18:25]
 La única cuestión que quedaría resolver ahora es que los choques (con $v$ positiva) se forman las colas alrevés que las que medimos todos, nosotros, Bonneton y Falcon, ya que siempre pasa por el sensor primero el frente y luego la cola.
+
+** [18:37]
+Para invertir la cola tengo que cambiar el signo al término cuadrático en $v$. sísísísááá. +
