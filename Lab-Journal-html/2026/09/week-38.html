@@ -49,38 +49,39 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgbeec89f">Referencias</a></li>
-<li><a href="#org8cfb940">2026-09-14</a>
+<li><a href="#org86228f6">Referencias</a></li>
+<li><a href="#org2897592">2026-09-14</a>
 <ul>
-<li><a href="#orgc512753">[10:47]</a></li>
-<li><a href="#org8d5f96e">[11:03]</a></li>
-<li><a href="#orgc4e0b0f">[11:04]</a></li>
-<li><a href="#org00e700e">[11:53]</a></li>
+<li><a href="#org711ad23">[10:47]</a></li>
+<li><a href="#org5cbcbe8">[11:03]</a></li>
+<li><a href="#orgc68e3b1">[11:04]</a></li>
+<li><a href="#org0d64212">[11:53]</a></li>
+<li><a href="#org700fdf1">[11:59]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbeec89f" class="outline-2">
-<h2 id="orgbeec89f">Referencias</h2>
-<div class="outline-text-2" id="text-orgbeec89f">
+<div id="outline-container-org86228f6" class="outline-2">
+<h2 id="org86228f6">Referencias</h2>
+<div class="outline-text-2" id="text-org86228f6">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org8cfb940" class="outline-2">
-<h2 id="org8cfb940">2026-09-14</h2>
-<div class="outline-text-2" id="text-org8cfb940">
+<div id="outline-container-org2897592" class="outline-2">
+<h2 id="org2897592">2026-09-14</h2>
+<div class="outline-text-2" id="text-org2897592">
 </div>
-<div id="outline-container-orgc512753" class="outline-3">
-<h3 id="orgc512753">[10:47]</h3>
-<div class="outline-text-3" id="text-orgc512753">
+<div id="outline-container-org711ad23" class="outline-3">
+<h3 id="org711ad23">[10:47]</h3>
+<div class="outline-text-3" id="text-org711ad23">
 <p>
 Estoy usando <code>PyBurgers</code> para resolver la Ecuación de Burgers 1D con disipación y comparar con los resultados experimentales. Acá para una discretización espacial equivalente a nuestra serie temporal, pero que sería de \(T=50\) s y \(f_s=200\) Hz y \(\nu=0.0510\).
 </p>
 
 
-<div id="org9ea69b8" class="figure">
+<div id="org84f02e7" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/serie_temporal_num_rica.png" alt="serie_temporal_num_rica.png" />
 </p>
 </div>
@@ -90,21 +91,21 @@ La condición inicial es ruido hasta 2 Hz. El espectro da así:
 </p>
 
 
-<div id="org3ef74b0" class="figure">
+<div id="orgcdf743d" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/espectro_num_rico.png" alt="espectro_num_rico.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8d5f96e" class="outline-3">
-<h3 id="org8d5f96e">[11:03]</h3>
-<div class="outline-text-3" id="text-org8d5f96e">
+<div id="outline-container-org5cbcbe8" class="outline-3">
+<h3 id="org5cbcbe8">[11:03]</h3>
+<div class="outline-text-3" id="text-org5cbcbe8">
 <p>
 Y las funciones de estructura:
 </p>
 
 
-<div id="orga64d232" class="figure">
+<div id="org1a2cac2" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/structure_functions_num_rico.png" alt="structure_functions_num_rico.png" />
 </p>
 </div>
@@ -114,7 +115,7 @@ Y el scaling:
 </p>
 
 
-<div id="orga240882" class="figure">
+<div id="orgdd92112" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/scaling_num_rico.png" alt="scaling_num_rico.png" />
 </p>
 </div>
@@ -125,9 +126,9 @@ Vale destacar que estoy usando los mismos códigos que para las mediciones.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc4e0b0f" class="outline-3">
-<h3 id="orgc4e0b0f">[11:04]</h3>
-<div class="outline-text-3" id="text-orgc4e0b0f">
+<div id="outline-container-orgc68e3b1" class="outline-3">
+<h3 id="orgc68e3b1">[11:04]</h3>
+<div class="outline-text-3" id="text-orgc68e3b1">
 <p>
 Algunos comentarios:
 </p>
@@ -142,15 +143,15 @@ Algunos comentarios:
 </ul>
 </div>
 </div>
-<div id="outline-container-org00e700e" class="outline-3">
-<h3 id="org00e700e">[11:53]</h3>
-<div class="outline-text-3" id="text-org00e700e">
+<div id="outline-container-org0d64212" class="outline-3">
+<h3 id="org0d64212">[11:53]</h3>
+<div class="outline-text-3" id="text-org0d64212">
 <p>
 Acá está el ajuste que hacíamos antes para la evolución de un pulso Gaussiano, de parámetros: \(T=5\) s, \(f_s=200\) Hz, \(\nu=0.00510\) y amplitud \(A=1\) y dispersión \(\sigma=0.25\).
 </p>
 
 
-<div id="org9d9463d" class="figure">
+<div id="orgd726b39" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/ajuste_Burgers_num_rico.png" alt="ajuste_Burgers_num_rico.png" />
 </p>
 </div>
@@ -158,6 +159,20 @@ Acá está el ajuste que hacíamos antes para la evolución de un pulso Gaussian
 <p>
 Acá tuve que cambiar la variable \(z\) para sacar la inversión del eje x que teníamos que poner para las mediciones (sería \(1-z\)).
 </p>
+</div>
+</div>
+<div id="outline-container-org700fdf1" class="outline-3">
+<h3 id="org700fdf1">[11:59]</h3>
+<div class="outline-text-3" id="text-org700fdf1">
+<p>
+Y los parámetros de ese ajuste es:
+</p>
+
+
+<div id="orgcd8c167" class="figure">
+<p><img src="../../../Assets/2026/09/Day_14/par_metros_ajuste.png" alt="par_metros_ajuste.png" />
+</p>
+</div>
 </div>
 </div>
 </div>
