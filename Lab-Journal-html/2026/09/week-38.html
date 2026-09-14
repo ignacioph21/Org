@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Journal Week 38</title>
+<meta name="generator" content="Org Mode" />
+<link rel='stylesheet' href='../../../style.css' />
+<script defer src='../../../script.js'></script><style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Journal Week 38</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6df650a">Referencias</a></li>
+<li><a href="#orgfb2341e">2026-09-14</a>
+<ul>
+<li><a href="#org5e2d306">[10:47]</a></li>
+<li><a href="#org8e200cb">[11:03]</a></li>
+<li><a href="#orgf5507fa">[11:04]</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6df650a" class="outline-2">
+<h2 id="org6df650a">Referencias</h2>
+<div class="outline-text-2" id="text-org6df650a">
+<div class="csl-bib-body">
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb2341e" class="outline-2">
+<h2 id="orgfb2341e">2026-09-14</h2>
+<div class="outline-text-2" id="text-orgfb2341e">
+</div>
+<div id="outline-container-org5e2d306" class="outline-3">
+<h3 id="org5e2d306">[10:47]</h3>
+<div class="outline-text-3" id="text-org5e2d306">
+<p>
+Estoy usando <code>PyBurgers</code> para resolver la Ecuación de Burgers 1D con disipación y comparar con los resultados experimentales. Acá para una discretización espacial equivalente a nuestra serie temporal, pero que sería de \(T=50\) s y \(f_s=200\) Hz.
+</p>
+
+
+<div id="org5b5179d" class="figure">
+<p><img src="../../../Assets/2026/09/Day_14/serie_temporal_num_rica.png" alt="serie_temporal_num_rica.png" />
+</p>
+</div>
+
+<p>
+La condición inicial es ruido hasta 2 Hz. El espectro da así:
+</p>
+
+
+<div id="org1973716" class="figure">
+<p><img src="../../../Assets/2026/09/Day_14/espectro_num_rico.png" alt="espectro_num_rico.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e200cb" class="outline-3">
+<h3 id="org8e200cb">[11:03]</h3>
+<div class="outline-text-3" id="text-org8e200cb">
+<p>
+Y las funciones de estructura:
+</p>
+
+
+<div id="orga9873fd" class="figure">
+<p><img src="../../../Assets/2026/09/Day_14/structure_functions_num_rico.png" alt="structure_functions_num_rico.png" />
+</p>
+</div>
+
+<p>
+Y el scaling:
+</p>
+
+
+<div id="org23f5bed" class="figure">
+<p><img src="../../../Assets/2026/09/Day_14/scaling_num_rico.png" alt="scaling_num_rico.png" />
+</p>
+</div>
+
+
+<p>
+Vale destacar que estoy usando los mismos códigos que para las mediciones.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf5507fa" class="outline-3">
+<h3 id="orgf5507fa">[11:04]</h3>
+<div class="outline-text-3" id="text-orgf5507fa">
+<p>
+Algunos comentarios:
+</p>
+<ul class="org-ul">
+<li>Ṕara poder comparar con los experimentos habría que:
+<ul class="org-ul">
+<li>Correr una simulación para un dominio espacial de \(T=500\) s y \(f_s=2000\) Hz.</li>
+<li>Encontrar el \(\nu\) de las mediciones para que \(\omega_\nu\) quede en el mismo lugar.</li>
+<li>Pensar porqué las colas apuntan en la otra dirección, que serían con velocidad negativa, especialmente por las funciones de estructura, ya que es una reflexión espacial en cualquier caso que cambia el signo de uno de los términos de Burgers.</li>
+</ul></li>
+<li>Para verificar que lo que estamos ajustando es de la forma d eBurgers se podría ajustar en escala logarítmica para darle más peso a las colas.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

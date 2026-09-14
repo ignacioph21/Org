@@ -1,0 +1,52 @@
+#+TITLE: Journal Week 38
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-09-14][2026-09-14]]
+  - [[#1047][[10:47]]]
+  - [[#1103][[11:03]]]
+  - [[#1104][[11:04]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-09-14
+
+** [10:47]
+Estoy usando =PyBurgers= para resolver la Ecuación de Burgers 1D con disipación y comparar con los resultados experimentales. Acá para una discretización espacial equivalente a nuestra serie temporal, pero que sería de $T=50$ s y $f_s=200$ Hz.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_14/serie_temporal_num_rica.png]]
+
+La condición inicial es ruido hasta 2 Hz. El espectro da así:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_14/espectro_num_rico.png]]
+
+
+
+** [11:03]
+Y las funciones de estructura:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_14/structure_functions_num_rico.png]]
+
+Y el scaling:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_14/scaling_num_rico.png]]
+
+
+Vale destacar que estoy usando los mismos códigos que para las mediciones.
+
+
+** [11:04]
+Algunos comentarios:
+- Ṕara poder comparar con los experimentos habría que:
+  - Correr una simulación para un dominio espacial de $T=500$ s y $f_s=2000$ Hz.
+  - Encontrar el $\nu$ de las mediciones para que $\omega_\nu$ quede en el mismo lugar.
+  - Pensar porqué las colas apuntan en la otra dirección, que serían con velocidad negativa, especialmente por las funciones de estructura, ya que es una reflexión espacial en cualquier caso que cambia el signo de uno de los términos de Burgers.
+- Para verificar que lo que estamos ajustando es de la forma d eBurgers se podría ajustar en escala logarítmica para darle más peso a las colas.
