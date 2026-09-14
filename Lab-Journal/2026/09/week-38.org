@@ -9,6 +9,8 @@
   - [[#1047][[10:47]]]
   - [[#1103][[11:03]]]
   - [[#1104][[11:04]]]
+  - [[#1153][[11:53]]]
+  - [[#1159][[11:59]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -16,7 +18,7 @@
 * 2026-09-14
 
 ** [10:47]
-Estoy usando =PyBurgers= para resolver la Ecuación de Burgers 1D con disipación y comparar con los resultados experimentales. Acá para una discretización espacial equivalente a nuestra serie temporal, pero que sería de $T=50$ s y $f_s=200$ Hz.
+Estoy usando =PyBurgers= para resolver la Ecuación de Burgers 1D con disipación y comparar con los resultados experimentales. Acá para una discretización espacial equivalente a nuestra serie temporal, pero que sería de $T=50$ s y $f_s=200$ Hz y $\nu=0.0510$.
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_14/serie_temporal_num_rica.png]]
@@ -50,3 +52,17 @@ Algunos comentarios:
   - Encontrar el $\nu$ de las mediciones para que $\omega_\nu$ quede en el mismo lugar.
   - Pensar porqué las colas apuntan en la otra dirección, que serían con velocidad negativa, especialmente por las funciones de estructura, ya que es una reflexión espacial en cualquier caso que cambia el signo de uno de los términos de Burgers.
 - Para verificar que lo que estamos ajustando es de la forma d eBurgers se podría ajustar en escala logarítmica para darle más peso a las colas.
+
+** [11:53]
+Acá está el ajuste que hacíamos antes para la evolución de un pulso Gaussiano, de parámetros: $T=5$ s, $f_s=200$ Hz, $\nu=0.00510$ y amplitud $A=1$ y dispersión $\sigma=0.25$.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_14/ajuste_Burgers_num_rico.png]]
+
+Acá tuve que cambiar la variable $z$ para sacar la inversión del eje x que teníamos que poner para las mediciones (sería $1-z$).
+
+** [11:59]
+Y los parámetros de ese ajuste es:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_14/par_metros_ajuste.png]]
