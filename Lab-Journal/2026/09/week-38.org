@@ -96,8 +96,6 @@ Para hallar $\omega_\nu$ ajusté el espectro obtenido con Welch.
 
 Los valores obtenidos son:
 
-#+ATTR_ORG: :width 500 a
-[[file:../../../Assets/2026/09/Day_16/valores_obtenidos.png]]
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_16/valores_obtenidos.png]]
 
