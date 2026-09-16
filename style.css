@@ -227,21 +227,24 @@ hr {
 }
 
 
-/* ── Inter-entry navigation ── */
-#entry-nav {
+/* ── Inter-entry navigation (shown above and below the entry) ── */
+.entry-nav {
   max-width: 760px;
   margin: 0 auto;
-  padding: 0 1.5rem 3rem;
+  padding: 0 1.5rem;
 }
+
+.entry-nav-bottom { padding-bottom: 3rem; }
+.entry-nav-top { padding-top: 1.5rem; padding-bottom: 0.5rem; }
 
 .entry-nav-row {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  border-top: 1px solid #3f444a;
-  padding-top: 1.25rem;
-  margin-top: 1.5rem;
 }
+
+.entry-nav-bottom .entry-nav-row { border-top: 1px solid #3f444a; padding-top: 1.25rem; margin-top: 1.5rem; }
+.entry-nav-top .entry-nav-row { border-bottom: 1px solid #3f444a; padding-bottom: 1.25rem; }
 
 .entry-nav-link {
   flex: 1;

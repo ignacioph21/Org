@@ -60,8 +60,25 @@ function buildEntryNav(entries, content) {
   var prev = sorted[currentIndex - 1] || null;
   var next = sorted[currentIndex + 1] || null;
 
+  // Bottom copy, right after the entry content.
+  var bottomNav = makeNav(sorted, currentIndex, prev, next, 'entry-nav-bottom');
+  content.parentNode.insertBefore(bottomNav, content.nextSibling);
+
+  // Top copy, above everything (before #preamble, or before #content if there's no preamble).
+  var topNav = makeNav(sorted, currentIndex, prev, next, 'entry-nav-top');
+  var preamble = document.getElementById('preamble');
+  var anchor = preamble || content;
+  anchor.parentNode.insertBefore(topNav, anchor);
+
+  // keep the current chip in view in both strips
+  document.querySelectorAll('.entry-nav-strip .current').forEach(function(chip) {
+    chip.scrollIntoView({ inline: 'center', block: 'nearest' });
+  });
+}
+
+function makeNav(sorted, currentIndex, prev, next, extraClass) {
   var nav = document.createElement('div');
-  nav.id = 'entry-nav';
+  nav.className = 'entry-nav ' + extraClass;
 
   var row = document.createElement('div');
   row.className = 'entry-nav-row';
@@ -81,11 +98,7 @@ function buildEntryNav(entries, content) {
   });
   nav.appendChild(strip);
 
-  content.parentNode.insertBefore(nav, content.nextSibling);
-
-  // keep the current chip in view
-  var current = strip.querySelector('.current');
-  if (current) current.scrollIntoView({ inline: 'center', block: 'nearest' });
+  return nav;
 }
 
 function makeNavLink(entry, cls, dir) {
