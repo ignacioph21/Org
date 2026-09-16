@@ -227,6 +227,67 @@ hr {
 }
 
 
+/* ── Inter-entry navigation ── */
+#entry-nav {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.entry-nav-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #3f444a;
+  padding-top: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.entry-nav-link {
+  flex: 1;
+  font-size: 0.85rem;
+  color: #bbc2cf;
+  background: #21242b;
+  border: 1px solid #3f444a;
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.entry-nav-link:hover { border-color: #51afef; color: #51afef; text-decoration: none; }
+.entry-nav-link.entry-nav-next { text-align: right; }
+.entry-nav-link.disabled { color: #3f444a; border-color: #2c313a; cursor: default; pointer-events: none; }
+
+.entry-nav-strip {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #3f444a #21242b;
+}
+
+.entry-nav-strip::-webkit-scrollbar { height: 6px; }
+.entry-nav-strip::-webkit-scrollbar-thumb { background: #3f444a; border-radius: 3px; }
+.entry-nav-strip::-webkit-scrollbar-track { background: #21242b; }
+
+.entry-nav-chip {
+  flex: 0 0 auto;
+  font-size: 0.75rem;
+  color: #5b6268;
+  background: #21242b;
+  border: 1px solid #3f444a;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.entry-nav-chip:hover { color: #bbc2cf; border-color: #51afef; text-decoration: none; }
+.entry-nav-chip.current { color: #282c34; background: #51afef; border-color: #51afef; font-weight: 500; }
+
 #lightbox {
   display: none;
   position: fixed;
