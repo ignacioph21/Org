@@ -22,6 +22,7 @@
   - [[#1433][[14:33]]]
   - [[#1438][[14:38]]]
   - [[#1442][[14:42]]]
+  - [[#1448][[14:48]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -176,3 +177,6 @@ Otra cosa que se podría cambiar es calcular $\tilde{E}$ usando los parámetros 
 
 ** [14:42]
 Se puede hacer que ajuste mejor cambiando el =k_fit_range=.
+
+** [14:48]
+Habría que poner incertezas usando la distribución de $T_m$ y propagarlas hasta $R_B$ y $\nu_c$.
