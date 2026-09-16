@@ -15,6 +15,7 @@
   - [[#1035][[10:35]]]
   - [[#1119][[11:19]]]
   - [[#1130][[11:30]]]
+  - [[#1144][[11:44]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -105,3 +106,23 @@ Hay algo que me genera duda, sobre si para calcular E debería usar $E=g\langle\
 
 ** [11:30]
 Esto último tendría sentido con el hecho de que en el espectro la zona que va como $f^{-2}$ se extiende hasta frecuencias más bajas. Puedo ajustar la prominencia para solo agarrar picos más importantes. Voy a probar eso ahora.
+
+** [11:44]
+Subiendo la prominencia de 0.046 a 0.15 obtengo lo siguientes picos detectados:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/picos_detectados_m_s_prminencia.png]]
+
+El ajuste sigue siendo parecido:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/ajuste_nuevo.png]]
+
+Y los parámetros obtenidos de todo el código:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/par_metros_nuevoos.png]]
+
+Con esto el $R_B$ cae en el rango medido por Bonneton, el $omega_\nu$ está también más cerca, y $H_c=37$ cm es lo mismo.
+
+En realida, ahora que lo pienso, para hacer el $H_c$ más chico tendríamos que hacer $T_m$ considerablemente más grande y bajar $T_m$ o $\nu_c$. Habrá que probar si es por el forzado raro esto, por ahí usando JONSWAP o algún otro espectro de ruido en el forzado estas cosas dan mejor.
