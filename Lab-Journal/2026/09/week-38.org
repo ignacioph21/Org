@@ -11,6 +11,8 @@
   - [[#1104][[11:04]]]
   - [[#1153][[11:53]]]
   - [[#1159][[11:59]]]
+- [[#2026-09-16][2026-09-16]]
+  - [[#1035][[10:35]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -66,3 +68,32 @@ Y los parámetros de ese ajuste es:
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_14/par_metros_ajuste.png]]
+
+* 2026-09-16
+
+** [10:35]
+Estoy estimando los parámetros que reporta Bonneton en su paper de [cite:@bonnetonEnergyDissipationSpectra2023]. Estos parámetros son:
+
+
+| Parámetro    | Definición                                               | Forma de obtenerlo                                                                                              | Valor reportado |
+| $E(\omega)$  | Espectro físico de $E=g\langle\eta²\rangle$.             | Es $E=g\frac{PSD}{2\pi}$ donde PSD se calcula con Welch.                                                        |                 |
+| $\tilde{E}$  | Energía total en el rango $[\omega_m,+\infty]$           | Integrando numéricamente el espectro $E(\omega)$ calculado                                                      |                 |
+| $\omega_m$   | Es la frecuencia asociada al tiempo entre frentes $T_m$. | $\omega_m = \frac{2\pi}{T_m}$                                                                                   |                 |
+| $\omega_\nu$ | Es la frecuencia que marca la escala difusiva            | Ajustando el espectro adimensionalizado                                                                         | [14.5,25.8] Hz  |
+| $R_B$        | Burgers-like Reynolds number.                            | $4\pi²\frac{\omega_\nu}{\omega_m}=\frac{3}{2}\frac{gH_cT_m}{\nu_c}$                                             | Entre 100 y 500 |
+| $\nu_c$      | Es la viscosidad de la Ecuación de Burgers               | Usando el $\tilde{E}=\frac{8}{9}\frac{\nu_c²}{g}\omega_m\omega_\nu(\text{coth(\omega_m\omega_\nu)-1})$ hallado. |                 |
+
+Para estimar $T_m$, o sea, ell tiempo entre choques Bonneton hace wave by wave analysis, yo hice algo parecido (creo) que es buscar los picos, ya que a priori, cada pico debería corresponderse con unn frente de onda de choque.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/distancia_entre_frentes.png]]
+
+Para hallar $\omega_\nu$ ajusté el espectro obtenido con Welch.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/ajuste_E.png]]
+
+Los valores obtenidos son:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/valores_obtenidos.png]]
