@@ -81,7 +81,7 @@ Estoy estimando los parámetros que reporta Bonneton en su paper de [cite:@bonne
 | $\omega_m$   | Es la frecuencia asociada al tiempo entre frentes $T_m$. | $\omega_m = \frac{2\pi}{T_m}$                                                                                   |                 |
 | $\omega_\nu$ | Es la frecuencia que marca la escala difusiva            | Ajustando el espectro adimensionalizado                                                                         | [14.5,25.8] Hz  |
 | $R_B$        | Burgers-like Reynolds number.                            | $R_B=4\pi²\frac{\omega_\nu}{\omega_m}=\frac{3}{2}\frac{gH_cT_m}{\nu_c}$                                         | Entre 100 y 500 |
-| $\nu_c$      | Es la viscosidad de la Ecuación de Burgers               | Usando el $\tilde{E}=\frac{8}{9}\frac{\nu_c²}{g}\omega_m\omega_\nu(\text{coth(\omega_m\omega_\nu)-1})$ hallado. |                 |
+| $\nu_c$      | Es la viscosidad de la Ecuación de Burgers               | Usando el $\tilde{E}=\frac{8}{9}\frac{\nu_c²}{g}\omega_m\omega_\nu(\text{coth}(\omega_m\omega_\nu)-1)$ hallado.  |                 |
 
 Para estimar $T_m$, o sea, ell tiempo entre choques Bonneton hace wave by wave analysis, yo hice algo parecido (creo) que es buscar los picos, ya que a priori, cada pico debería corresponderse con unn frente de onda de choque.
 
