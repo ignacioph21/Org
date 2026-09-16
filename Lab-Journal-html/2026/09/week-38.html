@@ -49,45 +49,46 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgcd9d818">Referencias</a></li>
-<li><a href="#orge47bab2">2026-09-14</a>
+<li><a href="#orgc6b9a67">Referencias</a></li>
+<li><a href="#org1ad37c5">2026-09-14</a>
 <ul>
-<li><a href="#orge9a9b44">[10:47]</a></li>
-<li><a href="#org5c36a6c">[11:03]</a></li>
-<li><a href="#orge93f0bd">[11:04]</a></li>
-<li><a href="#org6e8f814">[11:53]</a></li>
-<li><a href="#orgaaf39ba">[11:59]</a></li>
+<li><a href="#org88f333f">[10:47]</a></li>
+<li><a href="#orgc81a1d3">[11:03]</a></li>
+<li><a href="#orgb04eece">[11:04]</a></li>
+<li><a href="#orge2a0351">[11:53]</a></li>
+<li><a href="#orgd757107">[11:59]</a></li>
 </ul>
 </li>
-<li><a href="#org048e705">2026-09-16</a>
+<li><a href="#orga310b68">2026-09-16</a>
 <ul>
-<li><a href="#orgf92af3f">[10:35]</a></li>
+<li><a href="#orgf76f6a0">[10:35]</a></li>
+<li><a href="#orgc1940b9">[11:19]</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcd9d818" class="outline-2">
-<h2 id="orgcd9d818">Referencias</h2>
-<div class="outline-text-2" id="text-orgcd9d818">
+<div id="outline-container-orgc6b9a67" class="outline-2">
+<h2 id="orgc6b9a67">Referencias</h2>
+<div class="outline-text-2" id="text-orgc6b9a67">
 <div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Bonneton, Philippe. 2023. “Energy and Dissipation Spectra of Waves Propagating in the Inner Surf Zone.” <i>Journal of Fluid Mechanics</i> 977 (December): A48. <a href="https://doi.org/10.1017/jfm.2023.878">https://doi.org/10.1017/jfm.2023.878</a>.</div>
 </div>
 </div>
 </div>
-<div id="outline-container-orge47bab2" class="outline-2">
-<h2 id="orge47bab2">2026-09-14</h2>
-<div class="outline-text-2" id="text-orge47bab2">
+<div id="outline-container-org1ad37c5" class="outline-2">
+<h2 id="org1ad37c5">2026-09-14</h2>
+<div class="outline-text-2" id="text-org1ad37c5">
 </div>
-<div id="outline-container-orge9a9b44" class="outline-3">
-<h3 id="orge9a9b44">[10:47]</h3>
-<div class="outline-text-3" id="text-orge9a9b44">
+<div id="outline-container-org88f333f" class="outline-3">
+<h3 id="org88f333f">[10:47]</h3>
+<div class="outline-text-3" id="text-org88f333f">
 <p>
 Estoy usando <code>PyBurgers</code> para resolver la Ecuación de Burgers 1D con disipación y comparar con los resultados experimentales. Acá para una discretización espacial equivalente a nuestra serie temporal, pero que sería de \(T=50\) s y \(f_s=200\) Hz y \(\nu=0.0510\).
 </p>
 
 
-<div id="orgbd0c73b" class="figure">
+<div id="orgfb7211b" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/serie_temporal_num_rica.png" alt="serie_temporal_num_rica.png" />
 </p>
 </div>
@@ -97,21 +98,21 @@ La condición inicial es ruido hasta 2 Hz. El espectro da así:
 </p>
 
 
-<div id="org3b9ffeb" class="figure">
+<div id="orgf0fa0b5" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/espectro_num_rico.png" alt="espectro_num_rico.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org5c36a6c" class="outline-3">
-<h3 id="org5c36a6c">[11:03]</h3>
-<div class="outline-text-3" id="text-org5c36a6c">
+<div id="outline-container-orgc81a1d3" class="outline-3">
+<h3 id="orgc81a1d3">[11:03]</h3>
+<div class="outline-text-3" id="text-orgc81a1d3">
 <p>
 Y las funciones de estructura:
 </p>
 
 
-<div id="org9b75fff" class="figure">
+<div id="org9d4297f" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/structure_functions_num_rico.png" alt="structure_functions_num_rico.png" />
 </p>
 </div>
@@ -121,7 +122,7 @@ Y el scaling:
 </p>
 
 
-<div id="org94a8302" class="figure">
+<div id="orga3b37b5" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/scaling_num_rico.png" alt="scaling_num_rico.png" />
 </p>
 </div>
@@ -132,9 +133,9 @@ Vale destacar que estoy usando los mismos códigos que para las mediciones.
 </p>
 </div>
 </div>
-<div id="outline-container-orge93f0bd" class="outline-3">
-<h3 id="orge93f0bd">[11:04]</h3>
-<div class="outline-text-3" id="text-orge93f0bd">
+<div id="outline-container-orgb04eece" class="outline-3">
+<h3 id="orgb04eece">[11:04]</h3>
+<div class="outline-text-3" id="text-orgb04eece">
 <p>
 Algunos comentarios:
 </p>
@@ -149,15 +150,15 @@ Algunos comentarios:
 </ul>
 </div>
 </div>
-<div id="outline-container-org6e8f814" class="outline-3">
-<h3 id="org6e8f814">[11:53]</h3>
-<div class="outline-text-3" id="text-org6e8f814">
+<div id="outline-container-orge2a0351" class="outline-3">
+<h3 id="orge2a0351">[11:53]</h3>
+<div class="outline-text-3" id="text-orge2a0351">
 <p>
 Acá está el ajuste que hacíamos antes para la evolución de un pulso Gaussiano, de parámetros: \(T=5\) s, \(f_s=200\) Hz, \(\nu=0.00510\) y amplitud \(A=1\) y dispersión \(\sigma=0.25\).
 </p>
 
 
-<div id="org75f3368" class="figure">
+<div id="org3bfa423" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/ajuste_Burgers_num_rico.png" alt="ajuste_Burgers_num_rico.png" />
 </p>
 </div>
@@ -167,28 +168,28 @@ Acá tuve que cambiar la variable \(z\) para sacar la inversión del eje x que t
 </p>
 </div>
 </div>
-<div id="outline-container-orgaaf39ba" class="outline-3">
-<h3 id="orgaaf39ba">[11:59]</h3>
-<div class="outline-text-3" id="text-orgaaf39ba">
+<div id="outline-container-orgd757107" class="outline-3">
+<h3 id="orgd757107">[11:59]</h3>
+<div class="outline-text-3" id="text-orgd757107">
 <p>
 Y los parámetros de ese ajuste es:
 </p>
 
 
-<div id="org39bddb8" class="figure">
+<div id="orgc10c4f5" class="figure">
 <p><img src="../../../Assets/2026/09/Day_14/par_metros_ajuste.png" alt="par_metros_ajuste.png" />
 </p>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org048e705" class="outline-2">
-<h2 id="org048e705">2026-09-16</h2>
-<div class="outline-text-2" id="text-org048e705">
+<div id="outline-container-orga310b68" class="outline-2">
+<h2 id="orga310b68">2026-09-16</h2>
+<div class="outline-text-2" id="text-orga310b68">
 </div>
-<div id="outline-container-orgf92af3f" class="outline-3">
-<h3 id="orgf92af3f">[10:35]</h3>
-<div class="outline-text-3" id="text-orgf92af3f">
+<div id="outline-container-orgf76f6a0" class="outline-3">
+<h3 id="orgf76f6a0">[10:35]</h3>
+<div class="outline-text-3" id="text-orgf76f6a0">
 <p>
 Estoy estimando los parámetros que reporta Bonneton en su paper de (<a href="#citeproc_bib_item_1">Bonneton 2023</a>). Estos parámetros son:
 </p>
@@ -263,7 +264,7 @@ Para estimar \(T_m\), o sea, ell tiempo entre choques Bonneton hace wave by wave
 </p>
 
 
-<div id="org85c65bc" class="figure">
+<div id="org402ea95" class="figure">
 <p><img src="../../../Assets/2026/09/Day_16/distancia_entre_frentes.png" alt="distancia_entre_frentes.png" />
 </p>
 </div>
@@ -273,7 +274,7 @@ Para hallar \(\omega_\nu\) ajusté el espectro obtenido con Welch.
 </p>
 
 
-<div id="org94af920" class="figure">
+<div id="orgc8188a3" class="figure">
 <p><img src="../../../Assets/2026/09/Day_16/ajuste_E.png" alt="ajuste_E.png" />
 </p>
 </div>
@@ -283,10 +284,23 @@ Los valores obtenidos son:
 </p>
 
 
-<div id="orgec3b437" class="figure">
+<div id="org52d5cf6" class="figure">
 <p><img src="../../../Assets/2026/09/Day_16/valores_obtenidos.png" alt="valores_obtenidos.png" />
 </p>
 </div>
+
+<div id="orga1b26a7" class="figure">
+<p><img src="../../../Assets/2026/09/Day_16/valores_obtenidos.png" alt="valores_obtenidos.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc1940b9" class="outline-3">
+<h3 id="orgc1940b9">[11:19]</h3>
+<div class="outline-text-3" id="text-orgc1940b9">
+<p>
+Hay algo que me genera duda, sobre si para calcular E debería usar \(E=g\langle\eta²\rangle\) o simplemente la altura sin el factor \(g\). Me inclino a pensar que debería ser la primera opción, pero si la uso me da \(\nu_c\sim10^{-2}\) y \(H_c\sim30\) cm, mientras que si uso la segunda me queda \(\nu_c\sim10{-3}\) y queda \(H_c\sim9\) cm. En cualquier caso es muy alta de todas formas. Por ahí tiene que ver con la forma en que estimo el \(T_m\), que me está dando más chico de lo que es realmente, ya que solo una parte de todos los picos son ondas que rompen.
+</p>
 </div>
 </div>
 </div>

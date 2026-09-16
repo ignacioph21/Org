@@ -13,6 +13,7 @@
   - [[#1159][[11:59]]]
 - [[#2026-09-16][2026-09-16]]
   - [[#1035][[10:35]]]
+  - [[#1119][[11:19]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -95,5 +96,10 @@ Para hallar $\omega_\nu$ ajusté el espectro obtenido con Welch.
 
 Los valores obtenidos son:
 
+#+ATTR_ORG: :width 500 a
+[[file:../../../Assets/2026/09/Day_16/valores_obtenidos.png]]
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_16/valores_obtenidos.png]]
+
+** [11:19]
+Hay algo que me genera duda, sobre si para calcular E debería usar $E=g\langle\eta²\rangle$ o simplemente la altura sin el factor $g$. Me inclino a pensar que debería ser la primera opción, pero si la uso me da $\nu_c\sim10^{-2}$ y $H_c\sim30$ cm, mientras que si uso la segunda me queda $\nu_c\sim10{-3}$ y queda $H_c\sim9$ cm. En cualquier caso es muy alta de todas formas. Por ahí tiene que ver con la forma en que estimo el $T_m$, que me está dando más chico de lo que es realmente, ya que solo una parte de todos los picos son ondas que rompen.
