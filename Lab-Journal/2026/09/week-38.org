@@ -12,6 +12,7 @@
   - [[#1153][[11:53]]]
   - [[#1159][[11:59]]]
 - [[#2026-09-15][2026-09-15]]
+  - [[#1830][[18:30]]]
 - [[#2026-09-16][2026-09-16]]
   - [[#1035][[10:35]]]
   - [[#1119][[11:19]]]
@@ -81,7 +82,11 @@ Y los parámetros de ese ajuste es:
 [[file:../../../Assets/2026/09/Day_14/par_metros_ajuste.png]]
 
 * 2026-09-15
+
+** [18:30]
 Estuve probando correr simulaciones más largas con PyBurgers. Para esto cambié el planning a fftw_estimate, para que en vez de probar todos los algoritmos elija alguno usando algún criterio. Además le puse para correr en 6 =threads=.
+
+También seguí buscando background teórico de las funciones de estructura, y parece que hay, por lo menos para $S_2$, expresiones analíticas.
 
 * 2026-09-16
 
