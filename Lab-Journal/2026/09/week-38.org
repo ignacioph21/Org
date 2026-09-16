@@ -19,6 +19,9 @@
   - [[#1351][[13:51]]]
   - [[#1406][[14:06]]]
   - [[#1409][[14:09]]]
+  - [[#1433][[14:33]]]
+  - [[#1438][[14:38]]]
+  - [[#1442][[14:42]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -152,3 +155,24 @@ Acá está esa derivada:
 [[file:../../../Assets/2026/09/Day_16/derivada_suavizada.png]]
 
 Y acá puedo poner para los picos que superen cierta alltura mínima, y usar eso como criterio en vez de =prominence=.
+
+** [14:33]
+Cambiando las relaciones en frecuencia a las que propone Bonneton para la parte espacial de Burgers =adimensional= sí me da un $\nu$ comparable con el que puse para resolver númericamente. Para el primer ejemplo de $L=50$ y $fs=200$, con $\nu=0.0510$ se obtiene del estimador:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/picos_num_ricos.png]]
+
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/ajsute_num_rico.png]]
+
+Acá en vez de segundos debería decir metros (o una unidad de longitud arbitraria). Lo principal que cambió es que ahora el $\tilde{E}=2\nu²k_\nuk_m(\text{coth}(\k_m/k_\nu) - 1)$.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/par_metros_num_ricos.png]]
+
+** [14:38]
+Otra cosa que se podría cambiar es calcular $\tilde{E}$ usando los parámetros del ajuste, aunque para eso necesitamos ese valor de antemano, y sería medio cíclico hasta converger.
+
+** [14:42]
+Se puede hacer que ajuste mejor cambiando el =k_fit_range=.
