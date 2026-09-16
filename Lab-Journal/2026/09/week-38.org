@@ -17,6 +17,8 @@
   - [[#1130][[11:30]]]
   - [[#1144][[11:44]]]
   - [[#1351][[13:51]]]
+  - [[#1406][[14:06]]]
+  - [[#1409][[14:09]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -139,3 +141,14 @@ Esto para la prominencia de 0.015e-2, hay que multiplicarla también por $10^{-2
 Acá $H_c\sim0.4$ cm me parece más razonable que más de $30$ cm.
 
 Lo otro que se hizo bastante más chico es la viscosidad. Estoy tratando este estimador de parámetros a los resultados numéricos, pero el $\nu$ obtenido es bastante más chico que el que pongo en las ecuaciones, puede que haya algo con las unidades, al tratar la parte espacial en vez de la temporal, que tenga que corregir, y el tema de la gravedad y demás.
+
+** [14:06]
+Una idea es identificar los picos altos en la derivada de la señal suavizada. Acá le metí un pasabajos donde la frecuencia de corte es $f\sim12.7$ Hz, que es hasta donde llega el espectro. La otra alternativa sería utilizar el $f_\nu$.
+
+** [14:09]
+Acá está esa derivada:
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/derivada_suavizada.png]]
+
+Y acá puedo poner para los picos que superen cierta alltura mínima, y usar eso como criterio en vez de =prominence=.
