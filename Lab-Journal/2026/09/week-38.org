@@ -16,6 +16,7 @@
   - [[#1119][[11:19]]]
   - [[#1130][[11:30]]]
   - [[#1144][[11:44]]]
+  - [[#1351][[13:51]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -126,3 +127,15 @@ Y los parámetros obtenidos de todo el código:
 Con esto el $R_B$ cae en el rango medido por Bonneton, el $omega_\nu$ está también más cerca, y $H_c=37$ cm es lo mismo.
 
 En realida, ahora que lo pienso, para hacer el $H_c$ más chico tendríamos que hacer $T_m$ considerablemente más grande y bajar $R_B$ o $\nu_c$. Habrá que probar si es por el forzado raro esto, por ahí usando JONSWAP o algún otro espectro de ruido en el forzado estas cosas dan mejor.
+
+** [13:51]
+Había que pasar llas serie temporales calibradas a metros, las tenía en cm. Haciendo eso da todo bastante más razonable.
+
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/09/Day_16/par_metros_bien_calibrados.png]]
+
+Esto para la prominencia de 0.015e-2, hay que multiplicarla también por $10^{-2}$ por haber escalado la serie temporal. Da casi todo lo mismo, en el ajuste esto se eliminaba al normalizar por $\tilde{E}$. Habría que pensar un mejor criterio para detectar el tiempo medio entre frentes.
+
+Acá $H_c\sim0.4$ cm me parece más razonable que más de $30$ cm.
+
+Lo otro que se hizo bastante más chico es la viscosidad. Estoy tratando este estimador de parámetros a los resultados numéricos, pero el $\nu$ obtenido es bastante más chico que el que pongo en las ecuaciones, puede que haya algo con las unidades, al tratar la parte espacial en vez de la temporal, que tenga que corregir, y el tema de la gravedad y demás.
