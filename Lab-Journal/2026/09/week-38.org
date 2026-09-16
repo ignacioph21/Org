@@ -171,7 +171,7 @@ Cambiando las relaciones en frecuencia a las que propone Bonneton para la parte 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_16/ajsute_num_rico.png]]
 
-Acá en vez de segundos debería decir metros (o una unidad de longitud arbitraria). Lo principal que cambió es que ahora el $\tilde{E}=2\nu²k_\nuk_m(\text{coth}(\k_m/k_\nu) - 1)$.
+Acá en vez de segundos debería decir metros (o una unidad de longitud arbitraria). Lo principal que cambió es que ahora el $\tilde{E}=2\nu^2k_\nu k_m(\text{coth}(\k_m/k_\nu) - 1)$.
 
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/09/Day_16/par_metros_num_ricos.png]]
