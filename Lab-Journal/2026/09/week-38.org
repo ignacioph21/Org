@@ -25,6 +25,9 @@
   - [[#1438][[14:38]]]
   - [[#1442][[14:42]]]
   - [[#1448][[14:48]]]
+- [[#2026-09-17][2026-09-17]]
+  - [[#0950][[09:50]]]
+  - [[#1054][[10:54]]]
 
 * Referencias
 #+PRINT_BIBLIOGRAPHY:
@@ -189,3 +192,11 @@ Se puede hacer que ajuste mejor cambiando el =k_fit_range=.
 
 ** [14:48]
 Habría que poner incertezas usando la distribución de $T_m$ y propagarlas hasta $R_B$ y $\nu_c$.
+
+* 2026-09-17
+
+** [09:50]
+Sigo con la parte numérica. Pareciera que las funciones de estructuras varíasn bastante dependiendo del frame de la evolución temporal, y además parecen haber regiones, donde el comportamiento es más o menos parecido al del experimento.
+
+** [10:54]
+En general siempre la de dos puntos da distinta a la de más puntos, con exponentes menores. Hay una región, justo después del forzado, donde la de dos puntos satura y las demás crecen, y después otra región a frecuencias más altas donde todas saturan después de =p=1=, pero en valores mayores a 1. Esto para la simulación de $T=500$ y $fs=200$, para el último frame que es en =0.15= y una viscosidad pequeña de 5e-3. Al ir a tiempo smás cercanos a la condición inicial desaparece el régimen donde los exponentes de las funciones de estructura saturan.
