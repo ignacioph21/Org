@@ -16,5 +16,6 @@
 
 ** [09:45]
 ESta semana fue el workshop de interdisciplinary compleyx systems para el cual preparé el póster durante la semana pasada. LA otra semana nos dieron acceso a CLaude TEam que va a estar escribiendo la mayoría de los logs.
+
 ** [09:47]
 Ahora está haciendo funcionar la placa en mint.
