@@ -1,0 +1,20 @@
+#+TITLE: Journal Week 41
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+- [[#referencias][Referencias]]
+- [[#2026-10-08][2026-10-08]]
+  - [[#0945][[09:45]]]
+  - [[#0947][[09:47]]]
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-10-08
+
+** [09:45]
+ESta semana fue el workshop de interdisciplinary compleyx systems para el cual preparé el póster durante la semana pasada. LA otra semana nos dieron acceso a CLaude TEam que va a estar escribiendo la mayoría de los logs.
+** [09:47]
+Ahora está haciendo funcionar la placa en mint.
