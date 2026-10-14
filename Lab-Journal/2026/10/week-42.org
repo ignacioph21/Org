@@ -1012,3 +1012,4 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - [17:40] Reporte actualizado (36 páginas):
   - subsección "Método de ajuste de ω_ν: lineal, póster y en log", con las figuras de ω_ν(h) e insets (log y póster) y las curvas ajustadas superpuestas;
   - apéndice con las series de 15 s (S3, S2, S1 en paneles verticales; Bonneton y muchos forzados) para las 8 alturas (=Análisis/series_15s.py=).
+- [17:41] Series de 15 s: con muchos forzados, la ventana se centra en el pulso grande de una triangular (máximo de S3); se sigue el mismo pulso de S3 a S1.
