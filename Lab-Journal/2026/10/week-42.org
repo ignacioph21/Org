@@ -977,3 +977,8 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   3. fotos de la calibración con la línea de agua detectada;
   4. reglas del barrido marcadas y foto del fondo de S1;
   5. tabla del barrido.
+- [17:10] *Calibración con plateaus marcados a mano* por el usuario (7 plateaus, =Calibracion/pintar_plateaus_dia2.py=). Fotos al principio y al final de cada escalón (el último, solo al principio).
+  - El primer plateau (antes de t ≈ 210 s) se excluye: las fotos 1 y 2, inicio y final de ese escalón, dan el mismo nivel (±0,2 mm), pero las fases saltan ~2 mm. Fue *un corrimiento de los sensores*, no del agua.
+  - Resultado (adoptado): S1 −0,0174 ± 0,0011 (rms 0,27 mm), S2 −0,0167 ± 0,0014 (0,36 mm), S3 −0,0420 ± 0,0019 rad/cm (0,20 mm). Compatible a 1σ con el método de las fotos.
+  - Hm0 de S1 y S2 calculados con la pendiente del Día 1: multiplicar por ~1,18 y ~1,26.
+  - Reporte (21 páginas) y PDF vivo actualizados.
