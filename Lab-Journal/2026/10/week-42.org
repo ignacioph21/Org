@@ -819,3 +819,11 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - Pasos de 0,2 cm de cuba = 3,07 L = 2,3 cm de tanque. (Corrección: antes dije por error 23–31 L por paso.)
 - [13:48] Con el agua del tanque se llegó solo a *4,55 cm*. Corre la primera altura del barrido (4,55). Después se baja *de a 1 mm* hasta ~3,4 cm (~12 mediciones de ~11 min).
 - [13:49] La primera corrida a 4,55 cm se hizo con el generador de la portadora *apagado*. El usuario lo notó enseguida y la reinicia. Esa corrida no sirve (sin portadora no hay señal de los sensores).
+
+** [13:53] Protocolo automático para el barrido de altura
+- =Día 2/Análisis/vigilar_barrido.py= vigila =Medicions Dia 2/= en el pendrive. Con cada =.bin= completo (tamaño = scans × canales × 2):
+  - lo copia a =Día 2/Tres sensores/Mediciones/= y lo verifica con cmp;
+  - toma el nivel del nombre (=…_455= o =…_4.55= → 4,55 cm) o de =Análisis/niveles.json=;
+  - corre =analisis_rapido.py --combinado=;
+  - regenera =Análisis/barrido_vivo.pdf= (abierto en Evince, se recarga solo): ω_ν(h) de S1 (Bonneton y muchos forzados), ω_ν/√(g/h) y calibración φ_reposo contra nivel de los tres sensores con residuos.
+- Alertas automáticas: ruido de reposo > 0,5 mm (¿generador apagado?), R² del Bonneton en S1 < 0,95, o sin ajuste.
