@@ -1076,3 +1076,52 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - Burgers con coeficientes variables en x;
   - comparar R con R_B;
   - sumar al reporte el frente promedio de todas las alturas.
+
+** [18:01] Resultados de Cole-Hopf al frente promedio, por altura (muchos forzados)
+- Un solo PDF, con el resumen y las 8 alturas (3 páginas cada una: pulsos alineados con promedio y ajuste, colapso en z, evolución entre sensores): [[file:../../../Assets/2026/10/Day_14/cole_hopf_promedio_todas_las_alturas.pdf][cole_hopf_promedio_todas_las_alturas.pdf]].
+- Ajuste: Cole-Hopf (onda triangular) con fondo lineal, ventana común a los tres sensores elegida por el mayor R² medio. h es la profundidad local de cada sensor, "choque" es W/R y 1/ω_ν sale del espectro de esa medición (muchos forzados).
+
+| nivel [cm] | medición | n | ventana [s] | sensor | h [cm] | R | choque [ms] | 1/ω_ν [ms] | V_J [mm] | W [ms] | área [mm·s] | R² |
+|-|-|-|-|-|-|-|-|-|-|-|-|-|
+| 4,525 | altura_2 | 20 | -0,05 a +1,2 | S3 | 1,63 | 17 | 43 | 46 | 12,4 | 719 | 4,27 | 0,990 |
+|  |  |  |  | S2 | 1,43 | 33 | 19 | 49 | 11,6 | 620 | 3,44 | 0,996 |
+|  |  |  |  | S1 | 1,33 | 32 | 15 | 49 | 8,9 | 491 | 2,05 | 0,990 |
+| 4,450 | altura_3 | 21 | -0,05 a +1,2 | S3 | 1,55 | 22 | 37 | 46 | 10,6 | 799 | 4,10 | 0,988 |
+|  |  |  |  | S2 | 1,35 | 39 | 20 | 48 | 10,6 | 780 | 3,99 | 0,995 |
+|  |  |  |  | S1 | 1,25 | 44 | 15 | 48 | 7,4 | 658 | 2,33 | 0,996 |
+| 4,275 | altura_4 | 21 | -0,05 a +1,2 | S3 | 1,38 | 23 | 37 | 50 | 8,7 | 833 | 3,52 | 0,994 |
+|  |  |  |  | S2 | 1,18 | 39 | 22 | 44 | 8,8 | 845 | 3,61 | 0,997 |
+|  |  |  |  | S1 | 1,08 | 40 | 15 | 43 | 6,3 | 599 | 1,78 | 0,991 |
+| 4,050 | altura_5 | 20 | -0,10 a +1,6 | S3 | 1,15 | 11 | 76 | 50 | 13,9 | 810 | 5,32 | 0,988 |
+|  |  |  |  | S2 | 0,95 | 42 | 21 | 45 | 10,8 | 908 | 4,77 | 0,992 |
+|  |  |  |  | S1 | 0,85 | 60 | 16 | 36 | 8,0 | 938 | 3,68 | 0,990 |
+| 3,950 | Triangulos | 20 | -0,10 a +1,6 | S3 | 1,05 | 10 | 85 | 46 | 13,8 | 848 | 5,52 | 0,991 |
+|  |  |  |  | S2 | 0,85 | 40 | 25 | 45 | 11,0 | 999 | 5,35 | 0,996 |
+|  |  |  |  | S1 | 0,75 | 52 | 21 | 37 | 8,0 | 1074 | 4,20 | 0,990 |
+| 3,800 | altura_6 | 20 | -0,10 a +1,2 | S3 | 0,90 | 9 | 96 | 45 | 13,3 | 869 | 5,40 | 0,987 |
+|  |  |  |  | S2 | 0,70 | 38 | 22 | 40 | 10,7 | 844 | 4,41 | 0,994 |
+|  |  |  |  | S1 | 0,60 | 34 | 24 | 35 | 7,8 | 801 | 3,02 | 0,987 |
+| 3,700 | altura_7 | 21 | -0,05 a +1,6 | S3 | 0,80 | 29 | 33 | 44 | 9,8 | 960 | 4,68 | 0,984 |
+|  |  |  |  | S2 | 0,60 | 36 | 26 | 37 | 9,3 | 956 | 4,37 | 0,996 |
+|  |  |  |  | S1 | 0,50 | 50 | 18 | 34 | 6,5 | 896 | 2,80 | 0,991 |
+| 3,550 | altura_8 | 21 | -0,10 a +1,4 | S3 | 0,65 | 10 | 98 | 37 | 12,3 | 989 | 5,70 | 0,981 |
+|  |  |  |  | S2 | 0,45 | 35 | 29 | 32 | 9,5 | 1025 | 4,77 | 0,993 |
+|  |  |  |  | S1 | 0,35 | 33 | 28 | 28 | 7,5 | 935 | 3,38 | 0,993 |
+
+- Lectura:
+  - *R en S2* ≈ 33–42 en todas las alturas, casi constante (Burgers con R constante). *S1* ≈ 32–60. *S3* ≈ 9–29: frente redondeado, cerca de la rotura; con más agua (alturas 2–4) S3 ya tiene R ≈ 17–23.
+  - *Choque contra 1/ω_ν*: en S1 y S2 el choque del pulso promedio es de ~15–29 ms, casi independiente de h, mientras 1/ω_ν crece con h (28 → 49 ms en S1). Coinciden solo en la altura 8. En las alturas con más agua el frente del pulso grande es más abrupto que lo que da el espectro de toda la medición.
+  - *Amplitud*: V_J baja hacia S1 en todas las alturas (S3 ≥ S2 > S1).
+  - *Duración*: W ~0,5–1,1 s, más corto con más agua.
+  - *Área*: no se conserva entre sensores; cae 30–50 % de S3 a S1.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_14/resumen_pulsos_alturas.png]]
+- PDF de cada altura (en =Assets/2026/10/Day_14/promedio_pulsos/=):
+  - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_2.pdf][Custom_combinado_altura_2]] (nivel 4,525 cm)
+  - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_3.pdf][Custom_combinado_altura_3]] (nivel 4,450 cm)
+  - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_4.pdf][Custom_combinado_altura_4]] (nivel 4,275 cm)
+  - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_5.pdf][Custom_combinado_altura_5]] (nivel 4,050 cm)
+  - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Triangulos.pdf][Triangulos]] (nivel 3,950 cm)
+  - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_6.pdf][Custom_combinado_altura_6]] (nivel 3,800 cm)
+  - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_7.pdf][Custom_combinado_altura_7]] (nivel 3,700 cm)
+  - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_8.pdf][Custom_combinado_altura_8]] (nivel 3,550 cm)
