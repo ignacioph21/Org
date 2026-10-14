@@ -860,3 +860,9 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - ω_ν S1: Bonneton 23,8 ± 1,2 (R² 0,984), muchos forzados 23,5 ± 1,4 (R² 0,989). Hm0 S1 6,1 mm. Ruido de reposo ≤ 0,15 mm. Es la primera medición con la paleta ajustada (solo en los muchos forzados).
 - Exponente en S1 con 4 alturas (h 0,80–1,38 cm): Bonneton a = −0,25 ± 0,19, muchos forzados a = *−0,56 ± 0,12*.
 - h local = nivel de la regla − 0,035·x (S1 x = 90 → fondo 3,15 cm). Incertezas: inclinación de la cuba, posiciones de los sensores, forma real de la rampa y cero de la regla. Dan un corrimiento constante δ que afecta el exponente. Propuesta: medir directamente la profundidad en S1 una vez.
+- [14:40] El usuario va a medir la profundidad (altura de la rampa) en S1 al terminar la medición 5 (4,05 cm), para fijar el corrimiento δ de h local.
+- [14:42] *Calibración revisada* (indicación del usuario): en la altura 2 los sensores S1/S2 estaban un poco corridos; después del ajuste volvieron a su posición. Excluyendo la altura 2 (=Análisis/excluir_calibracion.json=) e incluyendo la medición de la mañana (3,95), el reposo 1 da rectas con el signo correcto:
+  - S1: A = −0,0325 rad/cm (Día 1: −0,0205), rms 0,18 mm;
+  - S2: A = −0,0199 (Día 1: −0,0211), rms 0,75 mm;
+  - S3: A = −0,0393 (Día 1: −0,0443), rms 0,34 mm.
+  Lo que antes parecía una deriva era la altura 2.
