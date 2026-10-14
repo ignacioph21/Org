@@ -866,3 +866,15 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - S2: A = −0,0199 (Día 1: −0,0211), rms 0,75 mm;
   - S3: A = −0,0393 (Día 1: −0,0443), rms 0,34 mm.
   Lo que antes parecía una deriva era la altura 2.
+- [14:43] Hipótesis del usuario: S1 podría tener hoy otro ángulo de inmersión que ayer. Explicaría solo una parte: 1,59× exige cos θ ≈ 0,63 (θ ≈ 51° respecto de un sensor vertical) si fuera solo el ángulo. Más probable una combinación de inclinación y separación entre alambres (se habían torcido). A confirmar mirando o fotografiando S1.
+- [14:51] Foto altura 5: =Día 2/Fotos regla/regla_altura_5.jpg=. La banda va de 3,97 a 4,10 (centro ~4,04); coherente con el ~4,05 leído.
+- [14:53] Altura 6: nivel ~3,9 cm.
+- [14:54] La medición directa de la profundidad en S1 se pasa para después de la altura 6 (3,9 cm).
+
+** [15:00] Barrido: resultado de la altura 5 (4,05 cm, h_S1 0,90 cm)
+- ω_ν S1: Bonneton 26,7 ± 2,7 (R² 0,982), muchos forzados 27,9 ± 1,5 (R² 0,991). Hm0 S1 5,5 mm. Ruido de reposo ≤ 0,19 mm.
+  -   S1 Bonneton            n =  5: exponente a = -0.29 ± 0.17
+  -   S1 muchos forzados     n =  5: exponente a = -0.63 ± 0.11
+  -   calibración S1: A = -0.02597 rad/cm (Día 1: ver calibracion_tercera.json), residuo rms = 1.18 mm de nivel, n = 4
+  -   calibración S2: A = -0.01650 rad/cm (Día 1: ver calibracion_tercera.json), residuo rms = 1.24 mm de nivel, n = 4
+  -   calibración S3: A = -0.03697 rad/cm (Día 1: ver calibracion_tercera.json), residuo rms = 0.43 mm de nivel, n = 4
