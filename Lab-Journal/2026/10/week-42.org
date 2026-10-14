@@ -894,3 +894,16 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - El análisis arrancó con nivel 3,9 (antes de la corrección); se corrigió a 3,8 en resultados.json y en puntos_calibracion.json.
 - Reglas marcadas para verificar el nivel usado: =Día 2/Fotos regla/verificacion/regla_altura_N_marcada.jpg= (líneas celestes en cada cm, roja en el nivel usado, amarilla en la banda estimada; script =marcar_reglas.py=).
 - Rango en h: S1 cubre hoy 0,40–1,125 cm (factor 2,8, ~0,45 décadas). Una década exigiría h_S1 ≈ 1 mm (S1 seco o en swash) o ~7,4 cm de nivel. Bonneton 2023 cubre h0 3,0–8,4 cm, también un factor 2,8.
+
+** [15:21] Nivel en las fotos y fondo de S1
+- *Nivel por análisis de imagen* (=Fotos regla/verificacion/medir_nivel_fotos.py=):
+  - la escala automática (grilla de mm) coincide ±1 % con la manual;
+  - la línea de agua se detecta como el mínimo de intensidad lejos de la regla;
+  - la marca de cm no se pudo detectar de forma automática, así que se fijó sobre recortes (=grilla_altura_N.png=).
+  - Validación contra la recta de reposos de S3: con los niveles del usuario el rms es 0,44 mm, con los de las fotos 0,91 mm. El borde de la banda depende del ángulo de la cámara. *Se mantienen los niveles leídos por el usuario* (incerteza ~0,4 mm según S3).
+- *Barrido de la altura del fondo en S1* (=Análisis/barrido_fondo_S1.png=), buscando el mejor colapso sobre ω_ν ∝ h^{-1/2}:
+  - muchos forzados con todos los puntos: mínimo χ²_red 0,60 en 3,19 cm (con 3,40: 1,27);
+  - sin la altura 6: mínimo 0,40 en 3,36 (con 3,40: 0,42). El mínimo es muy ancho (3,15–3,45), así que el colapso por sí solo no fija el fondo.
+  - El exponente libre con muchos forzados va de −0,53 (fondo 3,15) a −0,39 (3,40), o −0,48 sin la altura 6.
+  - Con Bonneton el exponente no llega a −0,5 para ningún fondo (≥ −0,26).
+- El usuario mide la altura con la regla casi al final de la cuba (cerca de la playa y de S1), así que la inclinación de la cuba pesa poco en S1.
