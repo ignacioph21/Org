@@ -954,3 +954,20 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - el alambre fino se tuerce y se corre al ajustarlo; la pendiente de S1 cambió respecto del Día 1 y su calibración por reposos no fue lineal;
   - un alambre más rígido mantendría la geometría (ángulo y separación) y la calibración.
   - A cambio: más menisco sobre el alambre y más perturbación del flujo, que importan con h de pocos mm.
+
+** [16:16] Calibración por escalones (Día 2)
+- Subiendo de 3,8 a 4,5 cm. Nivel leído *al inicio de la cuba* (lado de la paleta), en el mismo punto que la calibración del Día 1. El barrido se leyó en el extremo opuesto (final, cerca de S1).
+- Entre las dos escalas de nivel puede haber un corrimiento por la inclinación de la cuba (el Día 1 era ~0,55 cm entre extremos). La pendiente de la calibración no cambia si la inclinación es constante, pero sí la ordenada.
+
+** [16:41] Calibración por escalones con fotos y espectros tipo póster
+- =Calibracion_dia_2= (846 s, inicio 16:00:24): el nivel no quedó en plateaus netos, así que se usó el método A_fotos del Día 1. Son 13 fotos ubicadas por su hora EXIF y la fase se promedia en los 10 s anteriores a cada una.
+- El nivel de cada foto sale por imagen (cámara fija en las fotos 2–13; 52,2 px/mm; escalones de ~1 mm; 6,4 mm en total), anclado al final leído (4,50 cm).
+- Resultados:
+  - S1: −0,0162 ± 0,0008 rad/cm (rms 0,31 mm);
+  - S2: −0,0161 ± 0,0014 (rms 0,78);
+  - S3: −0,0413 ± 0,0020 (rms 0,39). Coincide con sus reposos (−0,0416) y con el Día 1 (93 %). S1 y S2 son ~20 % menos sensibles que el Día 1.
+- Salto de ~2 mm en t ≈ 210 s en los tres sensores, a confirmar qué fue.
+- Espectros tipo póster de S1 en las 8 alturas y los dos forzados (=Análisis/espectros_poster_barrido.py=). Las dos mitades de cada ventana difieren 2–5 rad/s con el Bonneton y 1–3 con muchos forzados (el error del ajuste subestima). Con errores realistas: muchos forzados a = −0,38 ± 0,05, Bonneton −0,27 ± 0,08.
+- Reporte actualizado (20 páginas): [[file:../../../Assets/2026/10/Day_14/reporte_dia2.pdf][reporte_dia2.pdf]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_14/calibracion_dia2_fotos.pdf]]
