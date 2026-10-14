@@ -991,3 +991,19 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - Por encima de 3ω_ν hay una cola más lenta, *ordenada por profundidad*: menos agua, más cola. ¿Capilaridad?
   - Hm0 crece de S3 a S2 y cae en S1 (asomeramiento, rotura cerca de S2, disipación).
   - A nivel bajo, ω_ν crece entre S3 y S1 como h^{-1/2}: en la altura 8, factor 1,39 (Bonneton) y 1,34 (muchos) contra 1,36 predicho.
+
+** [17:19] ¿De qué ajuste sale ω_ν(h)? Comparación de métodos
+- El gráfico usaba el ajuste automático propio: csch² sobre E/Ẽ en escala *lineal*, sin pesos, con Ẽ con borde interpolado y el ajuste desde max(ω_lo, ω_m).
+- El código del póster da distinto en dos puntos:
+  - altura 3 con muchos forzados: 24,3 contra 20,8, porque incluye 2 bins por debajo de ω_m (ajuste desde ω_lo = 16 < ω_m = 16,9);
+  - altura 8: 33,6 contra 36,2, por la integral discreta de Ẽ.
+  - Con los valores del póster el exponente de muchos forzados pasa a −0,25.
+- Causa: el ajuste lineal sin pesos lo dominan los pocos bins de baja frecuencia.
+- *Ajuste en log* (log10 E/Ẽ contra log10 csch², todos los puntos con peso parecido): muy estable ante el rango.
+  - muchos forzados: a = −0,45 (rango automático), −0,46 (16–80 y 20–80 fijos);
+  - Bonneton: a = −0,44 con rango fijo 16–80 o 20–80; −0,36 con el rango automático, que en los niveles altos se estiraba hasta 100–145 rad/s y metía la cola.
+- Propuesta: adoptar como estándar el ajuste en log con rango fijo 20–80 rad/s (a confirmar con el usuario).
+- [17:24] Figuras para revisar los métodos:
+  - =Análisis/comparacion_metodos_ajuste.pdf= (17 páginas: una por altura y forzado con los tres ajustes y el cociente, más el resumen);
+  - =Análisis/omega_nu_h_espectros.pdf= (4 páginas A4: ω_ν(h) en S1 con el espectro de cada punto alrededor; log 20–80 y póster, para cada forzado).
+  - Con la incerteza realista (máx del error del ajuste y la diferencia entre mitades/2): log → Bonneton a = −0,45 ± 0,05, muchos −0,46 ± 0,06; póster → −0,27 ± 0,09 y −0,24 ± 0,06.
