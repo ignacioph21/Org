@@ -918,3 +918,11 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - Con 7 alturas (h_S1 0,50–1,325 cm): Bonneton a = −0,32 ± 0,06, muchos forzados a = −0,39 ± 0,04.
 - ω_ν √(h/g) con muchos forzados: 0,67 / 0,73 / 0,75 / 0,82 / 0,78 / 0,74 / 0,75 (de h chico a h grande). Casi constante (~0,75) salvo el h más chico. Con Bonneton crece con h (0,67 → 0,86).
 - Calibración: S3 sigue lineal (rms 0,41 mm); S1 (3,0 mm) y S2 (2,1 mm) empeoran con los niveles bajos (¿no linealidad de S1 casi seco? a revisar).
+- [15:33] Altura 8: nivel *3,55 cm* (h_S1 ≈ 0,35 cm). Probablemente la última: los sensores quedan poco sumergidos.
+
+** [15:36] ¿Bonneton analizó ω_ν(h)?
+- No como ley. Da ω_ν solo en dos experimentos, al propagarse las olas a menor profundidad (§5, Fig. 7–8):
+  - BK94-9: h0 7,6 → 4,0 cm, ω_ν 18,7 → 24,1 rad/s, lo que implica *a ≈ −0,40*;
+  - vN03-C3: h0 8,4 → 3,0 cm, ω_ν 14,9 → 16,1, *a ≈ −0,08*.
+- Lo que sí analiza: R_B contra h0 (Fig. 10) y ν_c contra g^{1/2} H_c^{3/2} (Fig. 11, Ec. 5.4). De ahí sale ω_ν ∝ (g/H_c)^{1/2}, pero la dependencia con h aparece solo si H_c ∝ h.
+- Nuestros exponentes (−0,39 muchos forzados, −0,32 Bonneton) caen entre sus dos casos y coinciden con BK94-9. La diferencia entre sus dos casos sugiere que H_c/h no siempre es constante (vN03-C3 tiene Tp 2 s, bore merging fuerte e infragravitatorias). Medir H_c (con la calibración) permitiría separar ω_ν(H_c) de ω_ν(h).
