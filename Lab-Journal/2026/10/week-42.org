@@ -878,3 +878,9 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   -   calibración S1: A = -0.02597 rad/cm (Día 1: ver calibracion_tercera.json), residuo rms = 1.18 mm de nivel, n = 4
   -   calibración S2: A = -0.01650 rad/cm (Día 1: ver calibracion_tercera.json), residuo rms = 1.24 mm de nivel, n = 4
   -   calibración S3: A = -0.03697 rad/cm (Día 1: ver calibracion_tercera.json), residuo rms = 0.43 mm de nivel, n = 4
+
+** [15:07] Medición directa: rampa en S1 = ~3,4 cm
+- El usuario midió ~3,40 cm de altura de la rampa en S1. El esquema suponía 3,15 (x = 90, tan β 0,035), así que h_S1 real es *2,5 mm menor* en todas las alturas: queda en 0,55–1,125 cm (antes 0,80–1,38). Si la rampa es recta, S1 estaría en x ≈ 97 cm, o la rampa no es lineal. Falta medir S2 y S3.
+- Con el fondo corregido (=Análisis/fondo_sensores.json=): exponente en S1 con muchos forzados *a = −0,48 ± 0,08* y con Bonneton a = −0,22 ± 0,13.
+- Las referencias h^{-1/2} y h^{-2} del PDF vivo tienen ahora la amplitud ajustada a los datos (antes estaban ancladas a mano en el h viejo).
+- Consecuencia para el barrido: con el fondo de S1 en 3,4 cm (y la playa en ~3,5), el nivel mínimo útil es ~3,6 cm (h_S1 ≈ 2 mm), no 3,4.
