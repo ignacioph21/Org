@@ -1024,3 +1024,8 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - *Colapso en z*: la rampa de los tres sensores cae sobre la misma curva; las diferencias quedan en el choque, ordenadas por R (el frente se empina hacia la playa).
 - En S1, el ancho del choque de una sola onda (28–35 ms) es del orden de 1/ω_ν = 28 ms del espectro.
 - Reporte: 38 páginas, con la subsección de Cole-Hopf.
+- [17:48] Cole-Hopf con *fondo lineal* (offset + pendiente; el pulso no está aislado y con offset constante (η − offset)/V_J no tendía a 0 de los dos lados, como observó el usuario).
+  - Ventana [−0,1, +1,6] s. S3: R 12, choque 102 ms; S2: R 25, 43 ms; S1: R 39, 26 ms; R² 0,99 en los tres.
+  - El colapso en z tiende a 0 a ambos lados.
+  - En S1 el choque (26 ms) coincide con 1/ω_ν = 28 ms del espectro.
+  - La versión anterior quedó como =..._offset_constante.pdf=.
