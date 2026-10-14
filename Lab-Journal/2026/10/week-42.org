@@ -1029,3 +1029,8 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - El colapso en z tiende a 0 a ambos lados.
   - En S1 el choque (26 ms) coincide con 1/ω_ν = 28 ms del espectro.
   - La versión anterior quedó como =..._offset_constante.pdf=.
+- [17:50] Pregunta del usuario: ¿qué es W y cómo entran el tiempo y la posición del sensor (que serían el espacio y el tiempo de Burgers)?
+  - Con sensores fijos, Burgers va en forma de señalización: la posición x es la variable de evolución y el tiempo retardado τ = t − x/c es la variable "espacial".
+  - W(x) es la duración del pulso en el sensor, del choque al fin de la rampa; t0(x) es el arribo del choque; R es el Reynolds del pulso, ∝ área/difusión. La posición entra solo por los parámetros ajustados en cada sensor.
+  - En Burgers ideal R es constante y W ∝ √(x − x*). Medido: R crece (12 → 25 → 39) y W baja apenas (1,22 → 1,02 s). Esperable por asomeramiento (c y el coeficiente no lineal dependen de h) y por ν_c(H_c).
+  - Agregado al reporte.
