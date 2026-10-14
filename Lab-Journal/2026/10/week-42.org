@@ -1013,3 +1013,14 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - subsección "Método de ajuste de ω_ν: lineal, póster y en log", con las figuras de ω_ν(h) e insets (log y póster) y las curvas ajustadas superpuestas;
   - apéndice con las series de 15 s (S3, S2, S1 en paneles verticales; Bonneton y muchos forzados) para las 8 alturas (=Análisis/series_15s.py=).
 - [17:41] Series de 15 s: con muchos forzados, la ventana se centra en el pulso grande de una triangular (máximo de S3); se sigue el mismo pulso de S3 a S1.
+
+** [17:46] Cole-Hopf al pulso grande (altura 8, muchos forzados)
+- Ajuste con la solución exacta de Burgers por Cole-Hopf (onda triangular, como en la Primera iteración) en S3, S2 y S1 (=Análisis/cole_hopf/cole_hopf_pulso.py=). Ventana común [−0,1, +1,4] s del frente de cada sensor (la de mayor R² medio).
+- Resultados:
+  - S3: R 10, W 1043 ms, choque W/R 104 ms, R² 0,976;
+  - S2: R 17, W 1079 ms, choque 65 ms, R² 0,989;
+  - S1: R 28, W 971 ms, choque 35 ms, R² 0,986.
+- Al variar la ventana: S1 R = 26–30 (estable), S2 9–45, S3 2–38 (mal definido: S3 todavía no es un bore).
+- *Colapso en z*: la rampa de los tres sensores cae sobre la misma curva; las diferencias quedan en el choque, ordenadas por R (el frente se empina hacia la playa).
+- En S1, el ancho del choque de una sola onda (28–35 ms) es del orden de 1/ω_ν = 28 ms del espectro.
+- Reporte: 38 páginas, con la subsección de Cole-Hopf.
