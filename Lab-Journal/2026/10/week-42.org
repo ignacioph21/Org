@@ -947,3 +947,10 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - Calibración por reposos (sin la altura 2): S3 −0,0416 ± 0,0031 rad/cm (Día 1: −0,0443), rms 0,5 mm; S1 y S2 no lineales (rms 4 y 2,5 mm).
 - Reporte (15 páginas): =Día 2/Reporte/reporte_dia2.pdf= (figuras con =figuras_reporte_dia2.py=). Falta agregar la calibración por escalones.
 - [[file:../../../Assets/2026/10/Day_14/reporte_dia2.pdf][reporte_dia2.pdf]]
+
+** [16:12] Idea: sensor con alambre más grueso
+- Idea del usuario: probar un sensor con alambre más grueso.
+- Contexto del día (deducción, a confirmar):
+  - el alambre fino se tuerce y se corre al ajustarlo; la pendiente de S1 cambió respecto del Día 1 y su calibración por reposos no fue lineal;
+  - un alambre más rígido mantendría la geometría (ángulo y separación) y la calibración.
+  - A cambio: más menisco sobre el alambre y más perturbación del flujo, que importan con h de pocos mm.
