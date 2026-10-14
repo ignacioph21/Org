@@ -884,3 +884,13 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - Con el fondo corregido (=Análisis/fondo_sensores.json=): exponente en S1 con muchos forzados *a = −0,48 ± 0,08* y con Bonneton a = −0,22 ± 0,13.
 - Las referencias h^{-1/2} y h^{-2} del PDF vivo tienen ahora la amplitud ajustada a los datos (antes estaban ancladas a mano en el h viejo).
 - Consecuencia para el barrido: con el fondo de S1 en 3,4 cm (y la playa en ~3,5), el nivel mínimo útil es ~3,6 cm (h_S1 ≈ 2 mm), no 3,4.
+- [15:09] Altura 6: el nivel se corrige a *~3,8 cm* (antes ~3,9). h_S1 ≈ 0,40 cm con la rampa medida.
+- [15:11] Altura 7: nivel ~3,7 cm (h_S1 ≈ 0,30 cm).
+- [15:11] Foto altura 6: =Día 2/Fotos regla/regla_altura_6.jpg=. La banda va de 3,73 a 3,89 (centro ~3,81); coherente con el 3,8 corregido.
+
+** [15:15] Barrido: resultado de la altura 6 (3,8 cm, h_S1 0,40 cm)
+- ω_ν S1: Bonneton 27,2 ± 2,9 (R² 0,962), muchos forzados 29,3 ± 1,3 (R² 0,992). Hm0 S1 3,4 mm (Bonneton), 7,1 mm (muchos). Reposo de S1: ruido 0,32 mm, deriva −0,8 mm (más que en las otras alturas).
+- El punto queda *por debajo* de la tendencia h^{-1/2}: el exponente con muchos forzados pasa a −0,38 ± 0,05 (6 puntos) y con Bonneton a −0,19 ± 0,09. Con h = 4 mm, del orden de la longitud capilar (~2,7 mm), y con S1 al borde del swash, es esperable que la ley se rompa.
+- El análisis arrancó con nivel 3,9 (antes de la corrección); se corrigió a 3,8 en resultados.json y en puntos_calibracion.json.
+- Reglas marcadas para verificar el nivel usado: =Día 2/Fotos regla/verificacion/regla_altura_N_marcada.jpg= (líneas celestes en cada cm, roja en el nivel usado, amarilla en la banda estimada; script =marcar_reglas.py=).
+- Rango en h: S1 cubre hoy 0,40–1,125 cm (factor 2,8, ~0,45 décadas). Una década exigiría h_S1 ≈ 1 mm (S1 seco o en swash) o ~7,4 cm de nivel. Bonneton 2023 cubre h0 3,0–8,4 cm, también un factor 2,8.
