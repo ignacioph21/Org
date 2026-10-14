@@ -1034,3 +1034,14 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - W(x) es la duración del pulso en el sensor, del choque al fin de la rampa; t0(x) es el arribo del choque; R es el Reynolds del pulso, ∝ área/difusión. La posición entra solo por los parámetros ajustados en cada sensor.
   - En Burgers ideal R es constante y W ∝ √(x − x*). Medido: R crece (12 → 25 → 39) y W baja apenas (1,22 → 1,02 s). Esperable por asomeramiento (c y el coeficiente no lineal dependen de h) y por ν_c(H_c).
   - Agregado al reporte.
+
+** [17:53] Frente promedio de 21 pulsos (altura 8, muchos forzados)
+- =Análisis/cole_hopf/promedio_pulsos.py= → =promedio_pulsos_Custom_combinado_altura_8.pdf= (3 páginas: pulsos alineados con promedio y ajuste; colapso en z; evolución entre sensores).
+- Cole-Hopf con fondo lineal, ventana [−0,1, +1,4] s:
+  - S3: R 10, choque 98 ms;
+  - S2: R 35, choque 29 ms (1/ω_ν 32);
+  - S1: R 33, choque 28 ms (1/ω_ν 28).
+  - R² 0,98–0,99. S2 y S1 colapsan casi perfecto en z.
+- Observación del usuario: la amplitud parecía crecer al avanzar, al revés que en Burgers con viscosidad. Con la calibración por plateaus *baja*: V_J 12,3 → 9,5 → 7,5 mm; pico sobre el fondo 9,3 → 8,5 → 6,8 mm. La del Día 1 agrandaba S1/S2 e invertía la tendencia; Hm0 sube de S3 a S2 por asomeramiento.
+- W casi constante (~1 s): en Burgers ideal crecería como √x con el área constante. Acá el área cae 41 % (5,7 → 3,4 mm·s): el pulso pierde más de lo que permite Burgers.
+- Frentes: retraso 144 ms (S3 → S2) y 308 ms (S3 → S1), ~0,5 m/s > √(gh). Coherente con la celeridad de un bore; a confirmar con las separaciones medidas.
