@@ -853,3 +853,10 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - ω_ν S1: Bonneton 22,2 ± 1,3 (R² 0,981), muchos forzados 20,8 ± 0,8 (R² 0,991). Hm0 S1: 6,6 mm (Bonneton), 8,5 mm (muchos).
 - Exponente con 3 puntos (h_S1 0,80–1,38): Bonneton a = −0,24 ± 0,19, muchos forzados a = *−0,55 ± 0,12*. Con muchos forzados es compatible con −1/2 e incompatible con −2.
 - *Calibración por reposos: no funciona.* Entre 4,525 y 4,45 la fase de reposo cambia con el *signo opuesto* al de la calibración del Día 1 y con magnitud equivalente a 2–4 mm, distinta en cada sensor; el cambio de nivel fue 0,75 mm. Domina una deriva lenta de la fase entre mediciones (~0,01 rad en 15 min: ¿temperatura, generador, sensores tocados?), no el nivel. Para h se usa la regla. Si hace falta la calibración, conviene hacerla aparte con escalones rápidos dentro de una sola medición, como el Día 1.
+- [14:34] Foto altura 4: =Día 2/Fotos regla/regla_altura_4.jpg=. La banda de la superficie va de 4,19 a 4,31 (centro ~4,25); coherente con el ~4,275 leído.
+- [14:36] Altura 5: nivel ~4,05 cm.
+
+** [14:40] Barrido: resultado de la altura 4 (4,275 cm, h_S1 1,13 cm)
+- ω_ν S1: Bonneton 23,8 ± 1,2 (R² 0,984), muchos forzados 23,5 ± 1,4 (R² 0,989). Hm0 S1 6,1 mm. Ruido de reposo ≤ 0,15 mm. Es la primera medición con la paleta ajustada (solo en los muchos forzados).
+- Exponente en S1 con 4 alturas (h 0,80–1,38 cm): Bonneton a = −0,25 ± 0,19, muchos forzados a = *−0,56 ± 0,12*.
+- h local = nivel de la regla − 0,035·x (S1 x = 90 → fondo 3,15 cm). Incertezas: inclinación de la cuba, posiciones de los sensores, forma real de la rampa y cero de la regla. Dan un corrimiento constante δ que afecta el exponente. Propuesta: medir directamente la profundidad en S1 una vez.

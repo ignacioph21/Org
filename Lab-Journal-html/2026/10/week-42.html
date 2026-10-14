@@ -17,125 +17,126 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2c6b043">Referencias</a></li>
-<li><a href="#org2ff275c">2026-10-13</a>
+<li><a href="#orgf1e11d1">Referencias</a></li>
+<li><a href="#org9fad2f6">2026-10-13</a>
 <ul>
-<li><a href="#orgc6afed5">[12:07] Tercera iteración: qué set de curvas random se usó en 10<sub>forzados</sub></a></li>
-<li><a href="#org8476e24">[13:47] Forzados JONSWAP en una sola curva (≥ 10 min)</a></li>
-<li><a href="#org4cdefa0">[13:50] Llenado de la cuba</a></li>
-<li><a href="#orgfff068d">[13:52] Placa PersonalDaq en la compu de la sala</a></li>
-<li><a href="#org705b632">[14:04] Primera prueba con la cuba poco llena — montaje</a></li>
-<li><a href="#orga46ca29">[14:09] Primera prueba — correcciones del montaje y parámetros</a></li>
-<li><a href="#orge249893">[14:11] Primera prueba — geometría de la rampa</a></li>
-<li><a href="#orgb66b388">[14:12] Primera prueba — distancia de la paleta a su pared</a></li>
-<li><a href="#org3feeb5f">[14:18] Primera prueba — nivel del agua y medición de prueba</a></li>
-<li><a href="#orgd0ce81a">[14:28] Primera prueba — observación durante la medición</a></li>
-<li><a href="#org8ff9f04">[14:31] Primera prueba — inclinación de la cuba y analizador</a></li>
-<li><a href="#org0fcfab9">[14:33] Primera prueba — el motor tocó el tope</a></li>
-<li><a href="#org0ff4ccf">[14:35] Primera prueba — el motor se frenó</a></li>
-<li><a href="#org58c26e8">[14:45] Primera prueba — datos y nivel del lado opuesto</a></li>
-<li><a href="#org72be601">[14:47] Primera prueba — series y espectros (sin calibrar)</a></li>
-<li><a href="#orgba2f06f">[14:48] Primera prueba — espectro E/Ẽ con el ajuste de Bonneton (código del póster, cal. provisoria)</a></li>
-<li><a href="#orgb236901">[14:51] Segunda prueba — h ≈ 3,9 cm, como en la Segunda iteración</a></li>
-<li><a href="#org08c6ab0">[14:52] Primera prueba — espectro del canal 1 bien ajustado</a></li>
-<li><a href="#orgec00c11">[14:56] Dónde quedan los archivos</a></li>
-<li><a href="#orgea65a60">[14:58] Primera prueba — Iribarren (provisorio)</a></li>
-<li><a href="#org38b50e0">[15:00] Primera prueba — scaling (S<sub>p</sub>, ζ<sub>p</sub>) y reorganización</a></li>
-<li><a href="#org55d697c">[15:04] Primera prueba — rango de ajuste de S<sub>p</sub> elegido para el canal 1</a></li>
-<li><a href="#org08dc1c7">[15:06] Primera prueba — convergencia de S<sub>p</sub> (canal 1, τ = 201 ms)</a></li>
-<li><a href="#org9d4ba0c">[15:07] Segunda prueba — medición idéntica a la Segunda iteración</a></li>
-<li><a href="#org4b5e4ad">[15:12] JONSWAP en formato de la interfaz</a></li>
-<li><a href="#org90432ee">[15:12] Segunda prueba — series y espectro (sin calibrar)</a></li>
-<li><a href="#orgc6607ec">[15:13] Segunda prueba — espectro E/Ẽ ajustado, canal 1</a></li>
-<li><a href="#org4e8a852">[15:15] Segunda prueba — espectro del canal 1, mejor ajuste</a></li>
-<li><a href="#org8e155b6">[15:16] ¿Por qué cambia ω<sub>m</sub> (y R<sub>B</sub>) entre 10<sub>forzados</sub> y la de 3,95 cm?</a></li>
-<li><a href="#orgd1082ef">[15:19] ω<sub>ν</sub> depende de la posición del sensor</a></li>
-<li><a href="#org266a44c">[15:19] Tercera prueba — JONSWAP Bonneton</a></li>
-<li><a href="#org5add4fd">[15:26] Segunda prueba — Iribarren (S3) y deriva lenta</a></li>
-<li><a href="#org3ce8fa1">[15:33] Segunda prueba — scaling y convergencia, canal 1 (τ ∈ [83,8, 482] ms, t ∈ [60, 750] s)</a></li>
-<li><a href="#org632748c">[15:34] Tercera prueba — JONSWAP Bonneton: datos</a></li>
-<li><a href="#org2dbdc5e">[15:38] Corrección de niveles y cuarta prueba (muchos forzados, h = 3,6 cm)</a></li>
-<li><a href="#org2c8879a">[15:40] Tercera prueba — JONSWAP Bonneton: espectro e Iribarren</a></li>
-<li><a href="#org7482310">[15:40] PID del motor en &ldquo;soft&rdquo;</a></li>
-<li><a href="#orgbde28e7">[15:42] JONSWAP — espectro con ω<sub>m</sub> más bajo</a></li>
-<li><a href="#orgb4a6aca">[15:43] JONSWAP — ω<sub>m</sub> intermedio y en qué sentido es comparable a Bonneton</a></li>
-<li><a href="#org93451e9">[15:45] JONSWAP de Bonneton escalado a la profundidad real</a></li>
-<li><a href="#org8d2c2a3">[15:49] JONSWAP<sub>BONNETON</sub><sub>395</sub> — scaling y convergencia, canal 1 (τ ∈ [83,8, 482] ms, t ∈ [60, 655] s)</a></li>
-<li><a href="#org92ae2ab">[15:56] Cuarta prueba (3,60 cm, muchos forzados, PID soft): <b>se chocó contra el final</b> → vuelta a PID <b>stiff</b></a></li>
-<li><a href="#orgb6df4ae">[15:56] JONSWAP — rango de S<sub>p</sub> elegido en la app (canal 1)</a></li>
-<li><a href="#org7f92ac6">[16:04] Cuarta prueba — muchos<sub>forzados</sub><sub>360</sub><sub>soft</sub>: análisis rápido</a></li>
-<li><a href="#org79efd4e">[16:06] Conclusión: h = 3,60 cm es el nivel que mejor funciona → JONSWAP de Bonneton con esta altura</a></li>
-<li><a href="#org3cef908">[16:08] Bonneton de 30 min o más sin que el motor vuelva a 0</a></li>
-<li><a href="#org0733057">[16:13] Profundidad real en la paleta</a></li>
-<li><a href="#org0c41ef1">[16:17] Bonneton h = 3,5 cm: verificación contra vN03-C3 y copia al pendrive</a></li>
-<li><a href="#org082094a">[16:21] Recapitulación del día y pendientes</a></li>
-<li><a href="#orgba37696">[16:22] Medición de ruido en agua quieta</a></li>
-<li><a href="#orga584ffb">[16:31] Ruido en agua quieta (<code>ruido.bin</code>, 180 s, h = 3,60 cm): resultados</a></li>
-<li><a href="#orgf918d09">[16:31] Pendiente de la cola del espectro después de la csch² (canal 1)</a></li>
-<li><a href="#org3e386c2">[16:31] muchos<sub>forzados</sub><sub>360</sub><sub>soft</sub> — Iribarren, scaling y convergencia (canal 1, t ∈ [60, 600] s)</a></li>
-<li><a href="#org8816b6f">[16:37] ¿Qué tanto se parece al JONSWAP el espectro del canal 3? (JONSWAP<sub>BONNETON</sub><sub>395</sub>)</a></li>
-<li><a href="#org81c1911">[16:43] Quinta prueba — Bonneton escalado para h = 3,5 cm en la paleta (3,60 cm de referencia)</a></li>
-<li><a href="#orgd7468a9">[16:46] Bonneton nuevo vs el de la mañana: amplitud</a></li>
-<li><a href="#orge6d66cb">[16:50] Bonneton con más amplitud (Hm0 ×1,6)</a></li>
-<li><a href="#org035b2fc">[16:56] Idea para el futuro: evitar los rebotes</a></li>
-<li><a href="#orge9a5773">[17:03] Bonneton 3,5 cm: scaling con el rango donde n = 2 satura en 1</a></li>
-<li><a href="#org3b3c19e">[17:14] Sexta prueba — Bonneton ×1,6 (Hm0 = 12 mm): <code>Bonneton_custom_360.bin</code></a></li>
-<li><a href="#org054f640">[17:16] Recapitulación de mediciones (antes de la calibración)</a></li>
-<li><a href="#org3fa6b90">[17:40] Calibración: plan de análisis</a></li>
-<li><a href="#org768424f">[17:48] Calibración de la Tercera iteración: resultados</a></li>
-<li><a href="#orge409075">[17:50] Calibración: incerteza horizontal (alturas de las fotos) y comparación de pendientes</a></li>
-<li><a href="#orgbf13b85">[17:56] Reporte en PDF de la Tercera iteración (13/10)</a></li>
-<li><a href="#orgd2692b5">[17:59] Séptima y octava pruebas: Bonneton &ldquo;bien&rdquo; (7,5 mm) y ×1,6 con h = 3,95 cm</a></li>
-<li><a href="#orgde02e21">[18:16] Calibración por plateaus (en vez del momento de la foto)</a></li>
-<li><a href="#org7bd24c2">[18:30] S<sub>p</sub> en el rango de saturación, curtosis y tabla final</a></li>
-<li><a href="#org09e9c65">[18:57] Séptima y octava pruebas (Bonneton 7,5 y 12 mm con 3,95 cm): análisis completo</a></li>
-<li><a href="#org9129a8e">[18:57] Conclusiones del día (Tercera iteración, 13/10)</a></li>
-<li><a href="#orgefa993c">[18:57] Pendientes para mañana (14/10)</a></li>
+<li><a href="#org1832e42">[12:07] Tercera iteración: qué set de curvas random se usó en 10<sub>forzados</sub></a></li>
+<li><a href="#org8e65b19">[13:47] Forzados JONSWAP en una sola curva (≥ 10 min)</a></li>
+<li><a href="#org8c3417e">[13:50] Llenado de la cuba</a></li>
+<li><a href="#orged15c04">[13:52] Placa PersonalDaq en la compu de la sala</a></li>
+<li><a href="#orgbbcaf07">[14:04] Primera prueba con la cuba poco llena — montaje</a></li>
+<li><a href="#org093561c">[14:09] Primera prueba — correcciones del montaje y parámetros</a></li>
+<li><a href="#org59439d0">[14:11] Primera prueba — geometría de la rampa</a></li>
+<li><a href="#org629c06f">[14:12] Primera prueba — distancia de la paleta a su pared</a></li>
+<li><a href="#org76122a8">[14:18] Primera prueba — nivel del agua y medición de prueba</a></li>
+<li><a href="#orgfd3313c">[14:28] Primera prueba — observación durante la medición</a></li>
+<li><a href="#orgc76cbd3">[14:31] Primera prueba — inclinación de la cuba y analizador</a></li>
+<li><a href="#org77fb61d">[14:33] Primera prueba — el motor tocó el tope</a></li>
+<li><a href="#org97c62b6">[14:35] Primera prueba — el motor se frenó</a></li>
+<li><a href="#org8e7a545">[14:45] Primera prueba — datos y nivel del lado opuesto</a></li>
+<li><a href="#org04f88ec">[14:47] Primera prueba — series y espectros (sin calibrar)</a></li>
+<li><a href="#org2e46f64">[14:48] Primera prueba — espectro E/Ẽ con el ajuste de Bonneton (código del póster, cal. provisoria)</a></li>
+<li><a href="#org96713d4">[14:51] Segunda prueba — h ≈ 3,9 cm, como en la Segunda iteración</a></li>
+<li><a href="#org3c120a7">[14:52] Primera prueba — espectro del canal 1 bien ajustado</a></li>
+<li><a href="#orge60eb42">[14:56] Dónde quedan los archivos</a></li>
+<li><a href="#org9a895b8">[14:58] Primera prueba — Iribarren (provisorio)</a></li>
+<li><a href="#orgf398b5f">[15:00] Primera prueba — scaling (S<sub>p</sub>, ζ<sub>p</sub>) y reorganización</a></li>
+<li><a href="#org1ab2cf0">[15:04] Primera prueba — rango de ajuste de S<sub>p</sub> elegido para el canal 1</a></li>
+<li><a href="#org774bcc0">[15:06] Primera prueba — convergencia de S<sub>p</sub> (canal 1, τ = 201 ms)</a></li>
+<li><a href="#org53a7347">[15:07] Segunda prueba — medición idéntica a la Segunda iteración</a></li>
+<li><a href="#orgc5b6836">[15:12] JONSWAP en formato de la interfaz</a></li>
+<li><a href="#orgd6a067c">[15:12] Segunda prueba — series y espectro (sin calibrar)</a></li>
+<li><a href="#org28148d6">[15:13] Segunda prueba — espectro E/Ẽ ajustado, canal 1</a></li>
+<li><a href="#org85a694e">[15:15] Segunda prueba — espectro del canal 1, mejor ajuste</a></li>
+<li><a href="#org1398742">[15:16] ¿Por qué cambia ω<sub>m</sub> (y R<sub>B</sub>) entre 10<sub>forzados</sub> y la de 3,95 cm?</a></li>
+<li><a href="#org2a3aa66">[15:19] ω<sub>ν</sub> depende de la posición del sensor</a></li>
+<li><a href="#org7381064">[15:19] Tercera prueba — JONSWAP Bonneton</a></li>
+<li><a href="#org2068642">[15:26] Segunda prueba — Iribarren (S3) y deriva lenta</a></li>
+<li><a href="#orgeee7dde">[15:33] Segunda prueba — scaling y convergencia, canal 1 (τ ∈ [83,8, 482] ms, t ∈ [60, 750] s)</a></li>
+<li><a href="#orgc80699d">[15:34] Tercera prueba — JONSWAP Bonneton: datos</a></li>
+<li><a href="#org6b76c15">[15:38] Corrección de niveles y cuarta prueba (muchos forzados, h = 3,6 cm)</a></li>
+<li><a href="#org7943a3e">[15:40] Tercera prueba — JONSWAP Bonneton: espectro e Iribarren</a></li>
+<li><a href="#orgcec1ce6">[15:40] PID del motor en &ldquo;soft&rdquo;</a></li>
+<li><a href="#orgc4047a2">[15:42] JONSWAP — espectro con ω<sub>m</sub> más bajo</a></li>
+<li><a href="#org23a1530">[15:43] JONSWAP — ω<sub>m</sub> intermedio y en qué sentido es comparable a Bonneton</a></li>
+<li><a href="#org5c22e5f">[15:45] JONSWAP de Bonneton escalado a la profundidad real</a></li>
+<li><a href="#org189fd36">[15:49] JONSWAP<sub>BONNETON</sub><sub>395</sub> — scaling y convergencia, canal 1 (τ ∈ [83,8, 482] ms, t ∈ [60, 655] s)</a></li>
+<li><a href="#orgff8ef65">[15:56] Cuarta prueba (3,60 cm, muchos forzados, PID soft): <b>se chocó contra el final</b> → vuelta a PID <b>stiff</b></a></li>
+<li><a href="#org8ec5ee1">[15:56] JONSWAP — rango de S<sub>p</sub> elegido en la app (canal 1)</a></li>
+<li><a href="#orgfb663e0">[16:04] Cuarta prueba — muchos<sub>forzados</sub><sub>360</sub><sub>soft</sub>: análisis rápido</a></li>
+<li><a href="#org20e1b9a">[16:06] Conclusión: h = 3,60 cm es el nivel que mejor funciona → JONSWAP de Bonneton con esta altura</a></li>
+<li><a href="#org8470e15">[16:08] Bonneton de 30 min o más sin que el motor vuelva a 0</a></li>
+<li><a href="#orgf4d65b2">[16:13] Profundidad real en la paleta</a></li>
+<li><a href="#org45ba9ff">[16:17] Bonneton h = 3,5 cm: verificación contra vN03-C3 y copia al pendrive</a></li>
+<li><a href="#org4434c0b">[16:21] Recapitulación del día y pendientes</a></li>
+<li><a href="#orga7db8d2">[16:22] Medición de ruido en agua quieta</a></li>
+<li><a href="#org364b492">[16:31] Ruido en agua quieta (<code>ruido.bin</code>, 180 s, h = 3,60 cm): resultados</a></li>
+<li><a href="#org91eae84">[16:31] Pendiente de la cola del espectro después de la csch² (canal 1)</a></li>
+<li><a href="#orgabc9101">[16:31] muchos<sub>forzados</sub><sub>360</sub><sub>soft</sub> — Iribarren, scaling y convergencia (canal 1, t ∈ [60, 600] s)</a></li>
+<li><a href="#orgccb38fb">[16:37] ¿Qué tanto se parece al JONSWAP el espectro del canal 3? (JONSWAP<sub>BONNETON</sub><sub>395</sub>)</a></li>
+<li><a href="#org49327e7">[16:43] Quinta prueba — Bonneton escalado para h = 3,5 cm en la paleta (3,60 cm de referencia)</a></li>
+<li><a href="#org267dffb">[16:46] Bonneton nuevo vs el de la mañana: amplitud</a></li>
+<li><a href="#org37adb56">[16:50] Bonneton con más amplitud (Hm0 ×1,6)</a></li>
+<li><a href="#org0c2ddc8">[16:56] Idea para el futuro: evitar los rebotes</a></li>
+<li><a href="#orgea31282">[17:03] Bonneton 3,5 cm: scaling con el rango donde n = 2 satura en 1</a></li>
+<li><a href="#orgdf801a6">[17:14] Sexta prueba — Bonneton ×1,6 (Hm0 = 12 mm): <code>Bonneton_custom_360.bin</code></a></li>
+<li><a href="#org94689ae">[17:16] Recapitulación de mediciones (antes de la calibración)</a></li>
+<li><a href="#orgc6d9639">[17:40] Calibración: plan de análisis</a></li>
+<li><a href="#org125f37c">[17:48] Calibración de la Tercera iteración: resultados</a></li>
+<li><a href="#org935f1df">[17:50] Calibración: incerteza horizontal (alturas de las fotos) y comparación de pendientes</a></li>
+<li><a href="#org07944cb">[17:56] Reporte en PDF de la Tercera iteración (13/10)</a></li>
+<li><a href="#orgb5602a7">[17:59] Séptima y octava pruebas: Bonneton &ldquo;bien&rdquo; (7,5 mm) y ×1,6 con h = 3,95 cm</a></li>
+<li><a href="#orgbf1a89d">[18:16] Calibración por plateaus (en vez del momento de la foto)</a></li>
+<li><a href="#orga94e3a8">[18:30] S<sub>p</sub> en el rango de saturación, curtosis y tabla final</a></li>
+<li><a href="#orga1d77c1">[18:57] Séptima y octava pruebas (Bonneton 7,5 y 12 mm con 3,95 cm): análisis completo</a></li>
+<li><a href="#org8d7ae47">[18:57] Conclusiones del día (Tercera iteración, 13/10)</a></li>
+<li><a href="#org4f8166a">[18:57] Pendientes para mañana (14/10)</a></li>
 </ul>
 </li>
-<li><a href="#org5f83eee">2026-10-14</a>
+<li><a href="#orgb06917b">2026-10-14</a>
 <ul>
-<li><a href="#orge933e1c">[09:33] Reorganización de la Tercera iteración y regla para el tanque</a></li>
-<li><a href="#org8b44ccf">[09:44] Idea del día: ley ω<sub>ν</sub>(h)</a></li>
-<li><a href="#orgfc8f02f">[11:56] Montaje nuevo (Día 2)</a></li>
-<li><a href="#orge8dc7bd">[11:59] Forzado y esquema del Día 2</a></li>
-<li><a href="#orgb34cce1">[12:05] Videos: para más adelante, con agua de la canilla</a></li>
-<li><a href="#org6852746">[12:10] Observaciones de la primera medición (Día 2)</a></li>
-<li><a href="#orgace164c">[12:19] Primera medición del Día 2: <code>Custom_altura_1</code> (nivel 3,95 cm)</a></li>
-<li><a href="#orgd1adbb5">[12:33] Segunda medición: <code>Triangulos</code> (forzado de siempre, Curvas<sub>random</sub><sub>3</sub>, nivel 3,95 cm)</a></li>
-<li><a href="#org7b96ee8">[12:39] Forzado único para el barrido de altura (tarde)</a></li>
-<li><a href="#org166c982">[13:39] Barrido de altura: plan</a></li>
-<li><a href="#org7f229e2">[13:53] Protocolo automático para el barrido de altura</a></li>
-<li><a href="#org0e6156e">[14:02] Barrido: segunda altura medida</a></li>
-<li><a href="#orgfe01b36">[14:15] Barrido: altura 2 (<code>Custom_combinado_altura_2</code>, 4,525 cm, h<sub>S1</sub> = 1,38 cm)</a></li>
-<li><a href="#orgf618b08">[14:27] Barrido: alturas 3 y 4, paleta</a></li>
-<li><a href="#orgd5e5386">[14:31] Barrido: resultado de la altura 3 (4,45 cm, h<sub>S1</sub> 1,30 cm)</a></li>
+<li><a href="#orgdceb40f">[09:33] Reorganización de la Tercera iteración y regla para el tanque</a></li>
+<li><a href="#orgc8932c8">[09:44] Idea del día: ley ω<sub>ν</sub>(h)</a></li>
+<li><a href="#orgf0c387e">[11:56] Montaje nuevo (Día 2)</a></li>
+<li><a href="#org97270c1">[11:59] Forzado y esquema del Día 2</a></li>
+<li><a href="#org7d7b67f">[12:05] Videos: para más adelante, con agua de la canilla</a></li>
+<li><a href="#org2c8a525">[12:10] Observaciones de la primera medición (Día 2)</a></li>
+<li><a href="#orgcfa417b">[12:19] Primera medición del Día 2: <code>Custom_altura_1</code> (nivel 3,95 cm)</a></li>
+<li><a href="#org2aea2f6">[12:33] Segunda medición: <code>Triangulos</code> (forzado de siempre, Curvas<sub>random</sub><sub>3</sub>, nivel 3,95 cm)</a></li>
+<li><a href="#orgcb291c3">[12:39] Forzado único para el barrido de altura (tarde)</a></li>
+<li><a href="#org9245cf7">[13:39] Barrido de altura: plan</a></li>
+<li><a href="#org555df32">[13:53] Protocolo automático para el barrido de altura</a></li>
+<li><a href="#org976bbbb">[14:02] Barrido: segunda altura medida</a></li>
+<li><a href="#org6975473">[14:15] Barrido: altura 2 (<code>Custom_combinado_altura_2</code>, 4,525 cm, h<sub>S1</sub> = 1,38 cm)</a></li>
+<li><a href="#org0e7824d">[14:27] Barrido: alturas 3 y 4, paleta</a></li>
+<li><a href="#org9856837">[14:31] Barrido: resultado de la altura 3 (4,45 cm, h<sub>S1</sub> 1,30 cm)</a></li>
+<li><a href="#org95f1332">[14:40] Barrido: resultado de la altura 4 (4,275 cm, h<sub>S1</sub> 1,13 cm)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2c6b043" class="outline-2">
-<h2 id="org2c6b043">Referencias</h2>
-<div class="outline-text-2" id="text-org2c6b043">
+<div id="outline-container-orgf1e11d1" class="outline-2">
+<h2 id="orgf1e11d1">Referencias</h2>
+<div class="outline-text-2" id="text-orgf1e11d1">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org2ff275c" class="outline-2">
-<h2 id="org2ff275c">2026-10-13</h2>
-<div class="outline-text-2" id="text-org2ff275c">
+<div id="outline-container-org9fad2f6" class="outline-2">
+<h2 id="org9fad2f6">2026-10-13</h2>
+<div class="outline-text-2" id="text-org9fad2f6">
 </div>
-<div id="outline-container-orgc6afed5" class="outline-3">
-<h3 id="orgc6afed5">[12:07] Tercera iteración: qué set de curvas random se usó en 10<sub>forzados</sub></h3>
-<div class="outline-text-3" id="text-orgc6afed5">
+<div id="outline-container-org1832e42" class="outline-3">
+<h3 id="org1832e42">[12:07] Tercera iteración: qué set de curvas random se usó en 10<sub>forzados</sub></h3>
+<div class="outline-text-3" id="text-org1832e42">
 <p>
 Día de medición de la Tercera iteración (cuba grande, rampa impresa 5 cm). En el motor quedó cargado el mismo forzado que en la Segunda iteración: <b>Curvas<sub>random</sub><sub>3</sub></b>.
 </p>
 </div>
-<div id="outline-container-org429392d" class="outline-4">
-<h4 id="org429392d">Por qué la 3 y no la 2</h4>
-<div class="outline-text-4" id="text-org429392d">
+<div id="outline-container-org20d0c82" class="outline-4">
+<h4 id="org20d0c82">Por qué la 3 y no la 2</h4>
+<div class="outline-text-4" id="text-org20d0c82">
 <ul class="org-ul">
 <li>Hay tres sets en el pendrive KINGSTON, <code>Posgrado/Pruebas rampa impresa 3D cuba grande/Segunda iteración/Curvas forzado/</code> (copias idénticas en <code>Tercera iteración/</code>). En la compu solo estaban copiadas <code>Curvas_random_!</code> y <code>Curvas_random_2</code>.</li>
 <li>Ningún registro dice qué set se usó en 10<sub>forzados</sub> (19/06): el <code>10_forzados_metadata.json</code> solo tiene fs, canales y fecha, y no hay Command Table exportada (<code>.lmc</code>). Por la señal (autocorrelación, intervalos entre eventos) no se puede distinguir: las rompientes decorrelacionan demasiado.</li>
@@ -196,9 +197,9 @@ Día de medición de la Tercera iteración (cuba grande, rampa impresa 5 cm). En
 </ul>
 </div>
 </div>
-<div id="outline-container-org4b66214" class="outline-4">
-<h4 id="org4b66214">Guías usadas para cargar el motor</h4>
-<div class="outline-text-4" id="text-org4b66214">
+<div id="outline-container-org233165c" class="outline-4">
+<h4 id="org233165c">Guías usadas para cargar el motor</h4>
+<div class="outline-text-4" id="text-org233165c">
 <p>
 Repo del LTG: <a href="https://github.com/laboratorio-turbulencia-geofisica/Comunicacion-con-instrumentos">Comunicacion-con-instrumentos</a> → <code>Actuadores lineales/</code>.
 </p>
@@ -209,9 +210,9 @@ Repo del LTG: <a href="https://github.com/laboratorio-turbulencia-geofisica/Comu
 </div>
 </div>
 </div>
-<div id="outline-container-org8476e24" class="outline-3">
-<h3 id="org8476e24">[13:47] Forzados JONSWAP en una sola curva (≥ 10 min)</h3>
-<div class="outline-text-3" id="text-org8476e24">
+<div id="outline-container-org8e65b19" class="outline-3">
+<h3 id="org8e65b19">[13:47] Forzados JONSWAP en una sola curva (≥ 10 min)</h3>
+<div class="outline-text-3" id="text-org8e65b19">
 <p>
 Una curva por caso (<code>curva_00_completa.csv</code>, ID 1), de 16 000 puntos. Arranca y termina en x = 0 en reposo, así que la Command Table la puede repetir en loop sin saltos. Las dos duran al menos 10 min. Copiadas al pendrive en <code>Tercera iteración/Curvas forzado/Curvas_jonswap/</code> (ahí quedan solo estas). En la compu siguen además las versiones de 21 curvas.
 </p>
@@ -296,36 +297,36 @@ python generador_curvas_jonswap.py --tp 10 --hm0 0.006 --gamma 7 --una-curva --d
 Serie temporal de la paleta: Curvas<sub>random</sub><sub>3</sub> (10 curvas en loop, ciclo 145,6 s) contra las dos JONSWAP de una sola curva. Completa y primeros 60 s:
 </p>
 
-<div id="orgd88e913" class="figure">
+<div id="org4519df5" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/random3_vs_jonswap.png" alt="random3_vs_jonswap.png" />
 </p>
 </div>
 
-<div id="org5bdc3d1" class="figure">
+<div id="orgc1d1200" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/random3_vs_jonswap_60s.png" alt="random3_vs_jonswap_60s.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org4cdefa0" class="outline-3">
-<h3 id="org4cdefa0">[13:50] Llenado de la cuba</h3>
-<div class="outline-text-3" id="text-org4cdefa0">
+<div id="outline-container-org8c3417e" class="outline-3">
+<h3 id="org8c3417e">[13:50] Llenado de la cuba</h3>
+<div class="outline-text-3" id="text-org8c3417e">
 <p>
 Llenando la cuba con agua destilada; falta agua. La calibración (sobrellenar y vaciar de a poco) queda para más tarde hoy o mañana, cuando haya agua suficiente.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfff068d" class="outline-3">
-<h3 id="orgfff068d">[13:52] Placa PersonalDaq en la compu de la sala</h3>
-<div class="outline-text-3" id="text-orgfff068d">
+<div id="outline-container-orged15c04" class="outline-3">
+<h3 id="orged15c04">[13:52] Placa PersonalDaq en la compu de la sala</h3>
+<div class="outline-text-3" id="text-orged15c04">
 <p>
 La placa es la de siempre, <b>374679</b> (<code>PersonalDaq3001{374679}</code>). No la reconocía porque había que reiniciarla. La otra placa del laboratorio es la 374683 (la de los scripts del generador de la Tesis), pero no hace falta cambiar el código.
 </p>
 </div>
 </div>
-<div id="outline-container-org705b632" class="outline-3">
-<h3 id="org705b632">[14:04] Primera prueba con la cuba poco llena — montaje</h3>
-<div class="outline-text-3" id="text-org705b632">
+<div id="outline-container-orgbbcaf07" class="outline-3">
+<h3 id="orgbbcaf07">[14:04] Primera prueba con la cuba poco llena — montaje</h3>
+<div class="outline-text-3" id="text-orgbbcaf07">
 <p>
 Primera prueba con poca agua: la playa plana del final queda <b>sin sumergir</b>, para evitar rebotes. Los tres sensores están sumergidos.
 </p>
@@ -342,15 +343,15 @@ Primera prueba con poca agua: la playa plana del final queda <b>sin sumergir</b>
 </ul></li>
 </ul>
 
-<div id="org5733d84" class="figure">
+<div id="orgc493c1f" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/esquema_cuba_prueba1.png" alt="esquema_cuba_prueba1.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orga46ca29" class="outline-3">
-<h3 id="orga46ca29">[14:09] Primera prueba — correcciones del montaje y parámetros</h3>
-<div class="outline-text-3" id="text-orga46ca29">
+<div id="outline-container-org093561c" class="outline-3">
+<h3 id="org093561c">[14:09] Primera prueba — correcciones del montaje y parámetros</h3>
+<div class="outline-text-3" id="text-org093561c">
 <ul class="org-ul">
 <li>Los <b>15 cm</b> son del lado opuesto a la paleta: entre el final de la rampa/playa plana y la pared del fondo, sin fondo ni batimetría (no son entre la paleta y su pared).</li>
 <li><b>Sensor 1</b>: a 33 cm del final de la rampa/playa plana (no de la pared).</li>
@@ -363,15 +364,15 @@ Primera prueba con poca agua: la playa plana del final queda <b>sin sumergir</b>
 </ul></li>
 </ul>
 
-<div id="orge012507" class="figure">
+<div id="org77cb7e5" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/esquema_cuba_prueba1_v2.png" alt="esquema_cuba_prueba1_v2.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orge249893" class="outline-3">
-<h3 id="orge249893">[14:11] Primera prueba — geometría de la rampa</h3>
-<div class="outline-text-3" id="text-orge249893">
+<div id="outline-container-org59439d0" class="outline-3">
+<h3 id="org59439d0">[14:11] Primera prueba — geometría de la rampa</h3>
+<div class="outline-text-3" id="text-org59439d0">
 <ul class="org-ul">
 <li>Rampa: <b>1 m de largo, 3,5 cm de alto</b> → tan β = 0,035 (coincide con la del código de Iribarren). La playa plana arranca en x = 100 cm, a 3,5 cm de altura.</li>
 <li>Con h = 3,65 cm, sobre la playa queda una lámina de <b>~1,5 mm</b> de agua: queda apenas cubierta, no seca (salvo que la tensión superficial deje zonas secas). La costa sobre la rampa estaría pasando el final de la rampa.</li>
@@ -380,9 +381,9 @@ Primera prueba con poca agua: la playa plana del final queda <b>sin sumergir</b>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb66b388" class="outline-3">
-<h3 id="orgb66b388">[14:12] Primera prueba — distancia de la paleta a su pared</h3>
-<div class="outline-text-3" id="text-orgb66b388">
+<div id="outline-container-org629c06f" class="outline-3">
+<h3 id="org629c06f">[14:12] Primera prueba — distancia de la paleta a su pared</h3>
+<div class="outline-text-3" id="text-org629c06f">
 <ul class="org-ul">
 <li>41 cm desde el otro borde de la paleta (la cara de atrás) hasta la primera pared. 1 cm de ancho, acrílico (interpretado como el espesor de la paleta, <b>a confirmar</b>).</li>
 <li>Cierre de cotas (2 m de largo interior): 41 + 1 + 25 + 100 (rampa) + playa + 15 = 200 → <b>playa ≈ 18 cm</b>. Si el 1 cm fuera la pared y los 2 m fueran exteriores, la playa daría ~17 cm. La diferencia no cambia nada.</li>
@@ -390,15 +391,15 @@ Primera prueba con poca agua: la playa plana del final queda <b>sin sumergir</b>
 <li>Esquema final del montaje. Reemplaza a los dos anteriores. x desde el inicio de la rampa: paleta −25, S3 3, S2 35, S1 85, fin de la rampa 100, fin de la playa 118, pared 133 cm.</li>
 </ul>
 
-<div id="orge4a4849" class="figure">
+<div id="orgd9bc086" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/esquema_cuba_prueba1_v3.png" alt="esquema_cuba_prueba1_v3.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3feeb5f" class="outline-3">
-<h3 id="org3feeb5f">[14:18] Primera prueba — nivel del agua y medición de prueba</h3>
-<div class="outline-text-3" id="text-org3feeb5f">
+<div id="outline-container-org76122a8" class="outline-3">
+<h3 id="org76122a8">[14:18] Primera prueba — nivel del agua y medición de prueba</h3>
+<div class="outline-text-3" id="text-org76122a8">
 <ul class="org-ul">
 <li>Los 3,65 cm se midieron <b>al inicio de la cuba</b> (lado de la paleta). La cuba debe estar algo inclinada, porque el agua no llega a cubrir del todo la rampa y la playa. Para que la playa (3,5 cm) quede seca, el nivel tiene que bajar más de 1,5 mm a lo largo de ~1,4 m, o sea una pendiente de al menos ~1 mm/m.</li>
 <li>El esquema sigue valiendo. Las profundidades sobre S2 y S1 son <b>cotas superiores</b>: medir la profundidad local en cada sensor (S1 tiene ≤ 7 mm).</li>
@@ -406,18 +407,18 @@ Primera prueba con poca agua: la playa plana del final queda <b>sin sumergir</b>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd0ce81a" class="outline-3">
-<h3 id="orgd0ce81a">[14:28] Primera prueba — observación durante la medición</h3>
-<div class="outline-text-3" id="text-orgd0ce81a">
+<div id="outline-container-orgfd3313c" class="outline-3">
+<h3 id="orgfd3313c">[14:28] Primera prueba — observación durante la medición</h3>
+<div class="outline-text-3" id="text-orgfd3313c">
 <ul class="org-ul">
 <li>Con menos agua la ola rompe antes. &ldquo;El primer sensor queda medio lejos de la rompiente&rdquo;: cuando la ola llega, ya decayó bastante. Lo positivo: seguro estamos bien metidos en la inner surf zone.</li>
 <li>Medición de 10 min en curso. Después se pasa por pendrive para correr las baterías de análisis (versiones finales en el directorio del Workshop, <code>Presentaciones/</code>).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8ff9f04" class="outline-3">
-<h3 id="org8ff9f04">[14:31] Primera prueba — inclinación de la cuba y analizador</h3>
-<div class="outline-text-3" id="text-org8ff9f04">
+<div id="outline-container-orgc76cbd3" class="outline-3">
+<h3 id="orgc76cbd3">[14:31] Primera prueba — inclinación de la cuba y analizador</h3>
+<div class="outline-text-3" id="text-orgc76cbd3">
 <ul class="org-ul">
 <li><p>
 Inclinación de la cuba: del orden de <b>0,1°–0,15°</b> (1,7–2,6 mm/m), más profunda del lado de la paleta. Con h = 3,65 cm junto a la pared de la paleta (x = −67 cm), las profundidades locales estimadas son:
@@ -480,9 +481,9 @@ Esto es consistente con que la playa quede seca. <b>S1 tiene apenas 3–4 mm de 
 </ul>
 </div>
 </div>
-<div id="outline-container-org0fcfab9" class="outline-3">
-<h3 id="org0fcfab9">[14:33] Primera prueba — el motor tocó el tope</h3>
-<div class="outline-text-3" id="text-org0fcfab9">
+<div id="outline-container-org77fb61d" class="outline-3">
+<h3 id="org77fb61d">[14:33] Primera prueba — el motor tocó el tope</h3>
+<div class="outline-text-3" id="text-org77fb61d">
 <ul class="org-ul">
 <li><b>A un par de minutos del final de la medición de 10 min, el motor acumuló suficiente lag como para empezar a tocar el tope.</b></li>
 <li>Para el análisis: excluir el tramo final afectado (usar t ≲ 8 min, a confirmar viendo la serie).</li>
@@ -490,18 +491,18 @@ Esto es consistente con que la playa quede seca. <b>S1 tiene apenas 3–4 mm de 
 </ul>
 </div>
 </div>
-<div id="outline-container-org0ff4ccf" class="outline-3">
-<h3 id="org0ff4ccf">[14:35] Primera prueba — el motor se frenó</h3>
-<div class="outline-text-3" id="text-org0ff4ccf">
+<div id="outline-container-org97c62b6" class="outline-3">
+<h3 id="org97c62b6">[14:35] Primera prueba — el motor se frenó</h3>
+<div class="outline-text-3" id="text-org97c62b6">
 <ul class="org-ul">
 <li>Por el mismo motivo (lag acumulado y tope), <b>el motor se frenó cuando faltaban menos de 30 s</b> para terminar la medición.</li>
 <li>Al analizar hay que cortar el tramo final: desde que el motor empieza a tocar el tope (~2 min antes del final) y sobre todo los últimos ~30 s con la paleta frenada. El corte exacto se elige viendo la serie.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org58c26e8" class="outline-3">
-<h3 id="org58c26e8">[14:45] Primera prueba — datos y nivel del lado opuesto</h3>
-<div class="outline-text-3" id="text-org58c26e8">
+<div id="outline-container-org8e7a545" class="outline-3">
+<h3 id="org8e7a545">[14:45] Primera prueba — datos y nivel del lado opuesto</h3>
+<div class="outline-text-3" id="text-org8e7a545">
 <ul class="org-ul">
 <li>Medición: <code>Canal_365_muchos_forzados.bin</code> (600 s, 4 canales a 250 kHz, portadora 61,3 kHz). Copiada del pendrive a <code>Tercera iteración/Tres sensores/Mediciones/</code> (verificada con <code>cmp</code>). El lock-in, con el analizador de la Segunda, quedó en <code>Claude/tercera_iteracion/datos/</code> y tardó 3,4 min.</li>
 <li>Del lado opuesto (pared del fondo) hay <b>3,1 cm</b> de agua. <b>Medida dudosa</b>: la regla se leyó rápido. Si es correcta, el nivel baja 5,5 mm en 2 m (≈ 0,16°), consistente con la estimación de 0,1°–0,15°.</li>
@@ -509,9 +510,9 @@ Esto es consistente con que la playa quede seca. <b>S1 tiene apenas 3–4 mm de 
 </ul>
 </div>
 </div>
-<div id="outline-container-org72be601" class="outline-3">
-<h3 id="org72be601">[14:47] Primera prueba — series y espectros (sin calibrar)</h3>
-<div class="outline-text-3" id="text-org72be601">
+<div id="outline-container-org04f88ec" class="outline-3">
+<h3 id="org04f88ec">[14:47] Primera prueba — series y espectros (sin calibrar)</h3>
+<div class="outline-text-3" id="text-org04f88ec">
 <ul class="org-ul">
 <li>Series (fase × −1, sin el primer minuto): &ldquo;bastante bien&rdquo;. El forzado se apaga hacia ~560 s (la RMS cae a ~1/4). Análisis en t ∈ [60, 480] s, para dejar afuera el tramo en que el motor tocaba el tope.</li>
 <li><p>
@@ -566,15 +567,15 @@ El canal 3 ya no tiene el exceso de ruido de banda ancha (ni la joroba de ~700 H
 <li>Std de la fase: 0,0040 / 0,0044 / 0,0083 rad (canales 1/2/3), contra 0,013–0,014 en 10<sub>forzados</sub>: con menos agua, olas más chicas en S1 y S2.</li>
 </ul>
 
-<div id="orgae172f9" class="figure">
+<div id="orgdb236b2" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectros_fase_c365_vs_10forzados.png" alt="espectros_fase_c365_vs_10forzados.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgba2f06f" class="outline-3">
-<h3 id="orgba2f06f">[14:48] Primera prueba — espectro E/Ẽ con el ajuste de Bonneton (código del póster, cal. provisoria)</h3>
-<div class="outline-text-3" id="text-orgba2f06f">
+<div id="outline-container-org2e46f64" class="outline-3">
+<h3 id="org2e46f64">[14:48] Primera prueba — espectro E/Ẽ con el ajuste de Bonneton (código del póster, cal. provisoria)</h3>
+<div class="outline-text-3" id="text-org2e46f64">
 <p>
 t ∈ [60, 480] s, Welch 12 s, ajuste en ω ∈ (16, 80) rad/s, igual que el póster.
 </p>
@@ -648,9 +649,9 @@ t ∈ [60, 480] s, Welch 12 s, ajuste en ω ∈ (16, 80) rad/s, igual que el pó
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb236901" class="outline-3">
-<h3 id="orgb236901">[14:51] Segunda prueba — h ≈ 3,9 cm, como en la Segunda iteración</h3>
-<div class="outline-text-3" id="text-orgb236901">
+<div id="outline-container-org96713d4" class="outline-3">
+<h3 id="org96713d4">[14:51] Segunda prueba — h ≈ 3,9 cm, como en la Segunda iteración</h3>
+<div class="outline-text-3" id="text-org96713d4">
 <ul class="org-ul">
 <li>Nivel: <b>3,95 cm</b>, medido en el mismo lugar que en la Segunda iteración (allá era 3,9 cm).</li>
 <li>Medición en curso, de <b>800</b> (&ldquo;800 cm&rdquo; en el mensaje; se interpreta como 800 s, <b>a confirmar</b>).</li>
@@ -658,9 +659,9 @@ t ∈ [60, 480] s, Welch 12 s, ajuste en ω ∈ (16, 80) rad/s, igual que el pó
 </ul>
 </div>
 </div>
-<div id="outline-container-org08c6ab0" class="outline-3">
-<h3 id="org08c6ab0">[14:52] Primera prueba — espectro del canal 1 bien ajustado</h3>
-<div class="outline-text-3" id="text-org08c6ab0">
+<div id="outline-container-org3c120a7" class="outline-3">
+<h3 id="org3c120a7">[14:52] Primera prueba — espectro del canal 1 bien ajustado</h3>
+<div class="outline-text-3" id="text-org3c120a7">
 <ul class="org-ul">
 <li>El problema era <b>ω<sub>m</sub> mal estimado</b>, como pasaba originalmente. Con la prominencia del póster (0,15 cm) se detectaban solo 147 frentes en S1 (f<sub>m</sub> = 0,35 Hz). Bajándola, se detectan las olas chicas.</li>
 <li>Barrido (<code>Claude/tercera_iteracion/barrido_espectro.py</code>): distancia entre frentes 0,05–1 s, prominencia 0,01–0,15 cm, rango de ajuste ω<sub>lo</sub> 8–25 y ω<sub>hi</sub> 80–400 rad/s. Con ω<sub>hi</sub> &gt; 120 rad/s no hay ajustes bien determinados.</li>
@@ -671,15 +672,15 @@ Ajustes casi igual de buenos dan ω<sub>ν</sub> = 30–41 rad/s y R<sub>B</sub>
 <li>El usuario: &ldquo;Ahora sí, de eso estaba hablando. Da re bien el espectro.&rdquo;</li>
 </ul>
 
-<div id="org6ac3e73" class="figure">
+<div id="org3902f81" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_c365_canal1.png" alt="espectro_normalizado_c365_canal1.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgec00c11" class="outline-3">
-<h3 id="orgec00c11">[14:56] Dónde quedan los archivos</h3>
-<div class="outline-text-3" id="text-orgec00c11">
+<div id="outline-container-orge60eb42" class="outline-3">
+<h3 id="orge60eb42">[14:56] Dónde quedan los archivos</h3>
+<div class="outline-text-3" id="text-orge60eb42">
 <ul class="org-ul">
 <li>Medición cruda: <code>Tercera iteración/Tres sensores/Mediciones/Canal_365_muchos_forzados.bin</code> (+ <code>_metadata.json</code>), copiada del pendrive.</li>
 <li>Lock-in (fase): <code>Tercera iteración/Tres sensores/Mediciones analizadas/Canal_365_muchos_forzados_channel_{1,2,3}_analizada.npy</code>. De ahora en más la batería escribe ahí.</li>
@@ -688,9 +689,9 @@ Ajustes casi igual de buenos dan ω<sub>ν</sub> = 30–41 rad/s y R<sub>B</sub>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgea65a60" class="outline-3">
-<h3 id="orgea65a60">[14:58] Primera prueba — Iribarren (provisorio)</h3>
-<div class="outline-text-3" id="text-orgea65a60">
+<div id="outline-container-org9a895b8" class="outline-3">
+<h3 id="org9a895b8">[14:58] Primera prueba — Iribarren (provisorio)</h3>
+<div class="outline-text-3" id="text-org9a895b8">
 <p>
 Procesado del póster (f<sub>max</sub> = 30 Hz, ventanas de 300 olas) con la profundidad local de cada sensor y la <b>calibración provisoria</b> (la de 10<sub>forzados</sub>):
 </p>
@@ -760,9 +761,9 @@ Procesado del póster (f<sub>max</sub> = 30 Hz, ventanas de 300 olas) con la pro
 </ul>
 </div>
 </div>
-<div id="outline-container-org38b50e0" class="outline-3">
-<h3 id="org38b50e0">[15:00] Primera prueba — scaling (S<sub>p</sub>, ζ<sub>p</sub>) y reorganización</h3>
-<div class="outline-text-3" id="text-org38b50e0">
+<div id="outline-container-orgf398b5f" class="outline-3">
+<h3 id="orgf398b5f">[15:00] Primera prueba — scaling (S<sub>p</sub>, ζ<sub>p</sub>) y reorganización</h3>
+<div class="outline-text-3" id="text-orgf398b5f">
 <ul class="org-ul">
 <li>Funciones de estructura (computer.py del póster, t ∈ [60, 480] s, rango B τ ∈ [125, 250] ms):
 <ul class="org-ul">
@@ -774,9 +775,9 @@ Procesado del póster (f<sub>max</sub> = 30 Hz, ventanas de 300 olas) con la pro
 </ul>
 </div>
 </div>
-<div id="outline-container-org55d697c" class="outline-3">
-<h3 id="org55d697c">[15:04] Primera prueba — rango de ajuste de S<sub>p</sub> elegido para el canal 1</h3>
-<div class="outline-text-3" id="text-org55d697c">
+<div id="outline-container-org1ab2cf0" class="outline-3">
+<h3 id="org1ab2cf0">[15:04] Primera prueba — rango de ajuste de S<sub>p</sub> elegido para el canal 1</h3>
+<div class="outline-text-3" id="text-org1ab2cf0">
 <ul class="org-ul">
 <li>Con la app interactiva (<code>03_analisis_interactivo.py</code> de la Segunda, sobre el <code>.npz</code> de esta medición): canal 1, <b>f ∈ [2,07, 11,94] Hz → τ ∈ [83,8, 482] ms</b>.</li>
 <li>Resultado (estilo del póster, S<sub>p</sub>/σ<sup>p</sup>; σ<sub>η</sub> = 0,059 cm con la calibración provisoria):
@@ -788,30 +789,30 @@ Procesado del póster (f<sub>max</sub> = 30 Hz, ventanas de 300 olas) con la pro
 <li>Figuras: <code>Tercera iteración/Análisis/Canal_365_muchos_forzados/funciones_estructura/canal_1_tau_83.8-482/</code>.</li>
 </ul>
 
-<div id="org74d9caa" class="figure">
+<div id="orgf80e344" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/app_sp_canal1_f2.07-11.94.png" alt="app_sp_canal1_f2.07-11.94.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org08dc1c7" class="outline-3">
-<h3 id="org08dc1c7">[15:06] Primera prueba — convergencia de S<sub>p</sub> (canal 1, τ = 201 ms)</h3>
-<div class="outline-text-3" id="text-org08dc1c7">
+<div id="outline-container-org774bcc0" class="outline-3">
+<h3 id="org774bcc0">[15:06] Primera prueba — convergencia de S<sub>p</sub> (canal 1, τ = 201 ms)</h3>
+<div class="outline-text-3" id="text-org774bcc0">
 <ul class="org-ul">
 <li><code>incertezas_convergencia.py</code> del póster, adaptado a t ∈ [60, 480] s con ventanas de medición de 50 a 410 s. τ = √(83,8·482) = 201 ms, el centro del rango elegido.</li>
 <li><b>No converge</b>: S<sub>p</sub> cae de forma monótona con el tiempo de medición. En 50 s vale ~2 veces el valor final para p = 6, ~1,2 para p = 0,5. Sigue bajando en las últimas ventanas, por debajo de −5 % para p alto. No es ruido estadístico sino una <b>tendencia</b>: la estadística cambia durante la medición, con más energía al principio. Ya se veía en la RMS por ventanas de 5 s del canal 1 (~0,005–0,006 rad al principio, ~0,0035 después). ¿Deriva del motor (lag acumulado hacia el tope), del nivel o del forzado?</li>
 <li>ε de las últimas 10 ventanas (T ≥ 281 s): 0,2–0,3 % (p = 0,5) a ~5 % (p = 6). <b>Subestiman la incerteza real</b> por la tendencia. Con ellas, ζ<sub>6</sub> = 0,953 ± 0,019 (n = 2), 1,898 ± 0,019 (n = 3), 1,893 ± 0,017 (n = 4).</li>
 </ul>
 
-<div id="org3784a5f" class="figure">
+<div id="orgec11618" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/convergencia_Sp_canal1_tau201.png" alt="convergencia_Sp_canal1_tau201.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org9d4ba0c" class="outline-3">
-<h3 id="org9d4ba0c">[15:07] Segunda prueba — medición idéntica a la Segunda iteración</h3>
-<div class="outline-text-3" id="text-org9d4ba0c">
+<div id="outline-container-org53a7347" class="outline-3">
+<h3 id="org53a7347">[15:07] Segunda prueba — medición idéntica a la Segunda iteración</h3>
+<div class="outline-text-3" id="text-org53a7347">
 <ul class="org-ul">
 <li>La primera prueba (<code>Canal_365_muchos_forzados</code>) queda <b>en pausa</b>.</li>
 <li>Medición: <code>muchos_forzados_395.bin</code> (h = 3,95 cm, <b>752,6 s</b>, 4 canales a 250 kHz, home del motor en −29 mm). Copiada del pendrive a <code>Tres sensores/Mediciones/</code> y verificada con <code>cmp</code>.</li>
@@ -819,9 +820,9 @@ Procesado del póster (f<sub>max</sub> = 30 Hz, ventanas de 300 olas) con la pro
 </ul>
 </div>
 </div>
-<div id="outline-container-org4b5e4ad" class="outline-3">
-<h3 id="org4b5e4ad">[15:12] JONSWAP en formato de la interfaz</h3>
-<div class="outline-text-3" id="text-org4b5e4ad">
+<div id="outline-container-orgc5b6836" class="outline-3">
+<h3 id="orgc5b6836">[15:12] JONSWAP en formato de la interfaz</h3>
+<div class="outline-text-3" id="text-orgc5b6836">
 <ul class="org-ul">
 <li>Las JONSWAP se cargan desde la interfaz: CSV de <b>una sola columna de setpoints en mm, sin encabezado ni tiempos</b>. El nombre lleva <b>la duración total en ms como primer campo</b>.</li>
 <li>Duración = t<sub>final</sub> − t<sub>inicial</sub> = (N − 1)·dt, la misma convención que <code>linmot_bulk_upload.py</code>:
@@ -833,9 +834,9 @@ Procesado del póster (f<sub>max</sub> = 30 Hz, ventanas de 300 olas) con la pro
 </ul>
 </div>
 </div>
-<div id="outline-container-org90432ee" class="outline-3">
-<h3 id="org90432ee">[15:12] Segunda prueba — series y espectro (sin calibrar)</h3>
-<div class="outline-text-3" id="text-org90432ee">
+<div id="outline-container-orgd6a067c" class="outline-3">
+<h3 id="orgd6a067c">[15:12] Segunda prueba — series y espectro (sin calibrar)</h3>
+<div class="outline-text-3" id="text-orgd6a067c">
 <ul class="org-ul">
 <li>Series estables en t ∈ [60, 752] s y el motor no se frenó. Deriva lenta de la línea de base en los canales 1 y 2.</li>
 <li><p>
@@ -908,9 +909,9 @@ Contra 10<sub>forzados</sub> (Segunda iteración, t ∈ [60, 600] s):
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc6607ec" class="outline-3">
-<h3 id="orgc6607ec">[15:13] Segunda prueba — espectro E/Ẽ ajustado, canal 1</h3>
-<div class="outline-text-3" id="text-orgc6607ec">
+<div id="outline-container-org28148d6" class="outline-3">
+<h3 id="org28148d6">[15:13] Segunda prueba — espectro E/Ẽ ajustado, canal 1</h3>
+<div class="outline-text-3" id="text-org28148d6">
 <ul class="org-ul">
 <li>Con los parámetros del póster tal cual (distancia 0,135 s, prominencia 0,15 cm, ajuste en 16–80 rad/s): 467 frentes, f<sub>m</sub> = 0,68 Hz, ω<sub>ν</sub> = 73 ± 99 rad/s → <b>indeterminado</b>. Es lo mismo que en la primera prueba: la prominencia está en cm con la calibración vieja y la fase acá es la mitad que en 10<sub>forzados</sub>.</li>
 <li><b>Elegido</b>: los mismos parámetros del póster, con la <b>prominencia escalada por la amplitud</b>: 0,15 × (0,0063/0,0127) ≈ <b>0,075 cm</b>.
@@ -919,15 +920,15 @@ Contra 10<sub>forzados</sub> (Segunda iteración, t ∈ [60, 600] s):
 <li>Variantes: prominencia 0,05 cm → ω<sub>ν</sub> = 29,2 ± 1,9 rad/s, R<sub>B</sub> = 89. El mejor del barrido (distancia 0,1 s, prominencia 0,01 cm, ajuste en 20–80 rad/s) → ω<sub>ν</sub> = 26,2 ± 0,5 rad/s, R<sub>B</sub> = 52, pero con una prominencia tan baja probablemente cuenta ruido como frentes.</li>
 </ul>
 
-<div id="org328e5b4" class="figure">
+<div id="orge8e3f09" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_395_canal1.png" alt="espectro_normalizado_395_canal1.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org4e8a852" class="outline-3">
-<h3 id="org4e8a852">[15:15] Segunda prueba — espectro del canal 1, mejor ajuste</h3>
-<div class="outline-text-3" id="text-org4e8a852">
+<div id="outline-container-org85a694e" class="outline-3">
+<h3 id="org85a694e">[15:15] Segunda prueba — espectro del canal 1, mejor ajuste</h3>
+<div class="outline-text-3" id="text-org85a694e">
 <ul class="org-ul">
 <li>Barrido fino con el borde alto fijo en 80 rad/s (lo pidió el usuario): distancia 0,05–0,3 s, prominencia 0,005–0,1 cm, borde bajo 10–30 rad/s.</li>
 <li>Los mejores ajustes (rms en log ≈ 0,061–0,066) tienen todos el <b>borde bajo en 20 rad/s</b> y prominencia de 0,01–0,02 cm: <b>ω<sub>ν</sub> = 25,5–26,7 rad/s</b> y R<sub>B</sub> = 52–66. Es una meseta robusta.</li>
@@ -935,15 +936,15 @@ Contra 10<sub>forzados</sub> (Segunda iteración, t ∈ [60, 600] s):
 <li>Ojo: con una prominencia tan baja (0,015 cm con la calibración vieja), f<sub>m</sub> = 2,85 Hz puede estar contando ondulaciones chicas como frentes. R<sub>B</sub> depende de eso. La prominencia escalada (0,075 cm) daba ω<sub>ν</sub> = 30,0 ± 3,4 rad/s y R<sub>B</sub> = 110 (≈ póster), con peor ajuste.</li>
 </ul>
 
-<div id="orgae60825" class="figure">
+<div id="org012053a" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_395_canal1_ajustado.png" alt="espectro_normalizado_395_canal1_ajustado.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8e155b6" class="outline-3">
-<h3 id="org8e155b6">[15:16] ¿Por qué cambia ω<sub>m</sub> (y R<sub>B</sub>) entre 10<sub>forzados</sub> y la de 3,95 cm?</h3>
-<div class="outline-text-3" id="text-org8e155b6">
+<div id="outline-container-org1398742" class="outline-3">
+<h3 id="org1398742">[15:16] ¿Por qué cambia ω<sub>m</sub> (y R<sub>B</sub>) entre 10<sub>forzados</sub> y la de 3,95 cm?</h3>
+<div class="outline-text-3" id="text-org1398742">
 <ul class="org-ul">
 <li>ω<sub>m</sub> = 2π/T<sub>m</sub>, con T<sub>m</sub> = tiempo medio entre los frentes que detecta find<sub>peaks</sub>. <b>Depende directamente de los umbrales</b> (distancia y prominencia), y la prominencia está en cm con la calibración vieja. Hoy la fase es la mitad: con el mismo umbral se detectan menos olas, T<sub>m</sub> sube y ω<sub>m</sub> baja.</li>
 <li><p>
@@ -1018,9 +1019,9 @@ Con criterios equivalentes, <b>R<sub>B</sub> coincide</b> (136/110 y 61/57). La 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd1082ef" class="outline-3">
-<h3 id="orgd1082ef">[15:19] ω<sub>ν</sub> depende de la posición del sensor</h3>
-<div class="outline-text-3" id="text-orgd1082ef">
+<div id="outline-container-org2a3aa66" class="outline-3">
+<h3 id="org2a3aa66">[15:19] ω<sub>ν</sub> depende de la posición del sensor</h3>
+<div class="outline-text-3" id="text-org2a3aa66">
 <ul class="org-ul">
 <li>Hipótesis del usuario: el sensor está en una posición levemente distinta, y ω<sub>ν</sub> depende de dónde se mide.</li>
 <li>Hoy, con los mismos parámetros (distancia 0,1 s, prominencia 0,015 cm, ajuste en 20–80 rad/s): canal 1, ω<sub>ν</sub> = 25,7 ± 0,7 rad/s con buen ajuste (rms 0,061). En los canales 2 y 3 la csch² <b>no ajusta</b> (rms 0,2–0,37 aun con el mejor de cada barrido): el espectro tipo bore solo aparece en S1, cerca de la costa. Que ω<sub>ν</sub> dependa tanto de la posición es consistente con la hipótesis.</li>
@@ -1030,17 +1031,17 @@ Con criterios equivalentes, <b>R<sub>B</sub> coincide</b> (136/110 y 61/57). La 
 </ul>
 </div>
 </div>
-<div id="outline-container-org266a44c" class="outline-3">
-<h3 id="org266a44c">[15:19] Tercera prueba — JONSWAP Bonneton</h3>
-<div class="outline-text-3" id="text-org266a44c">
+<div id="outline-container-org7381064" class="outline-3">
+<h3 id="org7381064">[15:19] Tercera prueba — JONSWAP Bonneton</h3>
+<div class="outline-text-3" id="text-org7381064">
 <ul class="org-ul">
 <li>Arranca la medición con el JONSWAP escalado de Bonneton: <code>639960ms_bonneton_C3_h_20cm_Tp_1.07_Hm0_42.9mm_seed_1_una_curva.csv</code>, cargado desde la interfaz. Tp = 1,07 s, Hm0 = 42,9 mm, γ = 3,3, 640 s, dt = 40 ms.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5add4fd" class="outline-3">
-<h3 id="org5add4fd">[15:26] Segunda prueba — Iribarren (S3) y deriva lenta</h3>
-<div class="outline-text-3" id="text-org5add4fd">
+<div id="outline-container-org2068642" class="outline-3">
+<h3 id="org2068642">[15:26] Segunda prueba — Iribarren (S3) y deriva lenta</h3>
+<div class="outline-text-3" id="text-org2068642">
 <ul class="org-ul">
 <li><p>
 Iribarren, <b>solo sensor 3</b>, con la calibración de 10<sub>forzados</sub> y la convención del póster (D = profundidad nominal):
@@ -1107,7 +1108,7 @@ Con la profundidad local de S3 (~3,7 cm) cambia muy poco (⟨ξ⟩ = 0,282). ξ 
 <li>[15:27] Iribarren de S3 con <b>16 bins</b> en vez de 17, en el mismo intervalo [0,1027, 1,0990] (ancho de bin 0,0623): ⟨ξ⟩ = 0,284, σ = 0,347 ± 0,010, μ = −1,298 ± 0,015, spilling 95,5 %. Prácticamente igual que con 17.</li>
 </ul>
 
-<div id="org33e838e" class="figure">
+<div id="org2d71ec9" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/iribarren_395_S3_16bins.png" alt="iribarren_395_S3_16bins.png" />
 </p>
 </div>
@@ -1115,7 +1116,7 @@ Con la profundidad local de S3 (~3,7 cm) cambia muy poco (⟨ξ⟩ = 0,282). ξ 
 <li>[15:29] Iribarren de S3 con <b>15 bins</b> (ancho 0,0664): ⟨ξ⟩ = 0,284, σ = 0,353 ± 0,010, μ = −1,312 ± 0,016, spilling 95,5 %. Con 17/16/15 bins: σ = 0,345/0,347/0,353 y μ = −1,293/−1,298/−1,312, todo dentro de ~1σ. La diferencia en la barra del pico es un efecto de binning (la distribución sube de golpe hasta la moda en ξ ≈ 0,19–0,20 y los bordes de bin la cortan distinto).</li>
 </ul>
 
-<div id="orgb93e667" class="figure">
+<div id="org728176f" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/iribarren_395_S3_15bins.png" alt="iribarren_395_S3_15bins.png" />
 </p>
 </div>
@@ -1123,15 +1124,15 @@ Con la profundidad local de S3 (~3,7 cm) cambia muy poco (⟨ξ⟩ = 0,282). ξ 
 <li>[15:29] Iribarren de S3, bins contados <b>solo hasta ξ = 0,8</b> (lo pidió el usuario): con 17 bins en [0,1027, 1,099] entraban ~12 hasta 0,8 → uno menos = <b>11 bins en [0,1027, 0,8]</b>, ancho 0,0634. Queda 1 ola afuera (ξ &gt; 0,8). σ = 0,349 ± 0,011, μ = −1,301 ± 0,017, ⟨ξ⟩ = 0,284, spilling 95,5 %.</li>
 </ul>
 
-<div id="org15d9b51" class="figure">
+<div id="org9ae1c70" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/iribarren_395_S3_11bins_0.8.png" alt="iribarren_395_S3_11bins_0.8.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3ce8fa1" class="outline-3">
-<h3 id="org3ce8fa1">[15:33] Segunda prueba — scaling y convergencia, canal 1 (τ ∈ [83,8, 482] ms, t ∈ [60, 750] s)</h3>
-<div class="outline-text-3" id="text-org3ce8fa1">
+<div id="outline-container-orgeee7dde" class="outline-3">
+<h3 id="orgeee7dde">[15:33] Segunda prueba — scaling y convergencia, canal 1 (τ ∈ [83,8, 482] ms, t ∈ [60, 750] s)</h3>
+<div class="outline-text-3" id="text-orgeee7dde">
 <ul class="org-ul">
 <li>ζ<sub>p</sub> (S<sub>p</sub>/σ<sup>p</sup>, σ<sub>η</sub> = 0,091 cm con la calibración provisoria):
 <ul class="org-ul">
@@ -1142,28 +1143,28 @@ Con la profundidad local de S3 (~3,7 cm) cambia muy poco (⟨ξ⟩ = 0,282). ξ 
 <li>La tendencia de fondo coincide con la RMS del canal 1, que baja después de ~600 s, y con la deriva lenta de los tres canales: la estadística no es estacionaria.</li>
 </ul>
 
-<div id="orgbd6c51b" class="figure">
+<div id="orgaff2a57" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/zeta_395_canal1.png" alt="zeta_395_canal1.png" />
 </p>
 </div>
 
-<div id="orge66bd33" class="figure">
+<div id="org54b92af" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/convergencia_395_canal1.png" alt="convergencia_395_canal1.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org632748c" class="outline-3">
-<h3 id="org632748c">[15:34] Tercera prueba — JONSWAP Bonneton: datos</h3>
-<div class="outline-text-3" id="text-org632748c">
+<div id="outline-container-orgc80699d" class="outline-3">
+<h3 id="orgc80699d">[15:34] Tercera prueba — JONSWAP Bonneton: datos</h3>
+<div class="outline-text-3" id="text-orgc80699d">
 <ul class="org-ul">
 <li>Medición: <code>JONSWAP_BONNETON_395.bin</code> (h = 3,95 cm, ~660 s). Copiada del pendrive a <code>Tres sensores/Mediciones/</code>. Se analiza igual que <code>muchos_forzados_395</code>: lock-in, series, espectro con barrido (borde alto en 80 rad/s), Iribarren de S3 (11 bins hasta 0,8, D = 3,95 cm, calibración vieja) y S<sub>p</sub>, convergencia y scaling del canal 1 (τ ∈ [83,8, 482] ms).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2dbdc5e" class="outline-3">
-<h3 id="org2dbdc5e">[15:38] Corrección de niveles y cuarta prueba (muchos forzados, h = 3,6 cm)</h3>
-<div class="outline-text-3" id="text-org2dbdc5e">
+<div id="outline-container-org6b76c15" class="outline-3">
+<h3 id="org6b76c15">[15:38] Corrección de niveles y cuarta prueba (muchos forzados, h = 3,6 cm)</h3>
+<div class="outline-text-3" id="text-org6b76c15">
 <ul class="org-ul">
 <li><b>Corrección</b>: el 3,65 cm de la primera prueba estaba medido <b>del otro lado</b> respecto del punto de referencia que se usa ahora (el mismo de la Segunda iteración, donde se midieron 3,95 y ahora 3,6 cm). En el punto de referencia, la primera prueba correspondería a <b>~3,1 cm</b>. La diferencia entre lados es ~0,55 cm, consistente con la inclinación de ~0,15°.
 <ul class="org-ul">
@@ -1173,9 +1174,9 @@ Con la profundidad local de S3 (~3,7 cm) cambia muy poco (⟨ξ⟩ = 0,282). ξ 
 </ul>
 </div>
 </div>
-<div id="outline-container-org2c8879a" class="outline-3">
-<h3 id="org2c8879a">[15:40] Tercera prueba — JONSWAP Bonneton: espectro e Iribarren</h3>
-<div class="outline-text-3" id="text-org2c8879a">
+<div id="outline-container-org7943a3e" class="outline-3">
+<h3 id="org7943a3e">[15:40] Tercera prueba — JONSWAP Bonneton: espectro e Iribarren</h3>
+<div class="outline-text-3" id="text-org7943a3e">
 <ul class="org-ul">
 <li>t ∈ [60, 655] s (la RMS se mantiene estable hasta el final).</li>
 <li>Espectro E/Ẽ del canal 1, barrido con el borde alto en 80 rad/s. Mejor ajuste (rms 0,067): distancia 0,2 s, prominencia 0,005 cm, ajuste en (22, 80) rad/s → 1781 frentes, f<sub>m</sub> = 2,99 Hz, <b>ω<sub>ν</sub> = 23,0 ± 0,7 rad/s</b> (f<sub>ν</sub> = 3,67 Hz), <b>R<sub>B</sub> = 48</b>. Los siguientes en el ranking dan ω<sub>ν</sub> = 24,8–25,8 rad/s, igual que muchos<sub>forzados</sub><sub>395</sub> (25,7). Se ve el pico del JONSWAP en ω ≈ 5 rad/s (f<sub>p</sub> = 0,93 Hz).
@@ -1185,28 +1186,28 @@ Con la profundidad local de S3 (~3,7 cm) cambia muy poco (⟨ξ⟩ = 0,282). ξ 
 <li>Iribarren de S3 (11 bins hasta 0,8, D = 3,95 cm, calibración vieja): 1032 olas, <b>⟨ξ⟩ = 0,434</b>, σ = 0,223 ± 0,003, μ = −0,888 ± 0,004, <b>spilling 78 % / plunging 22 %</b>; 8 olas quedan fuera (ξ &gt; 0,8). Es muy distinto del forzado random (⟨ξ⟩ = 0,28, 95 % spilling): el JONSWAP da olas menos empinadas en S3, más cerca de plunging.</li>
 </ul>
 
-<div id="org5680967" class="figure">
+<div id="orgdc851ca" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_jonswap_canal1.png" alt="espectro_normalizado_jonswap_canal1.png" />
 </p>
 </div>
 
-<div id="orgba66396" class="figure">
+<div id="orge507f13" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/iribarren_jonswap_S3.png" alt="iribarren_jonswap_S3.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org7482310" class="outline-3">
-<h3 id="org7482310">[15:40] PID del motor en &ldquo;soft&rdquo;</h3>
-<div class="outline-text-3" id="text-org7482310">
+<div id="outline-container-orgcec1ce6" class="outline-3">
+<h3 id="orgcec1ce6">[15:40] PID del motor en &ldquo;soft&rdquo;</h3>
+<div class="outline-text-3" id="text-orgcec1ce6">
 <ul class="org-ul">
 <li>El usuario cambió el <b>PID del motor a &ldquo;soft&rdquo;</b>, también para la medición de muchos forzados a 3,6 cm. Queda indicado en el nombre del archivo de la medición.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbde28e7" class="outline-3">
-<h3 id="orgbde28e7">[15:42] JONSWAP — espectro con ω<sub>m</sub> más bajo</h3>
-<div class="outline-text-3" id="text-orgbde28e7">
+<div id="outline-container-orgc4047a2" class="outline-3">
+<h3 id="orgc4047a2">[15:42] JONSWAP — espectro con ω<sub>m</sub> más bajo</h3>
+<div class="outline-text-3" id="text-orgc4047a2">
 <p>
 Barrido hacia más prominencia y distancia (menos frentes → ω<sub>m</sub> más bajo), con el borde alto en 80 rad/s. Mejor ajuste por franja de ω<sub>m</sub>:
 </p>
@@ -1315,20 +1316,20 @@ Barrido hacia más prominencia y distancia (menos frentes → ω<sub>m</sub> má
 <li>Figura con ω<sub>m</sub> = 8,9 rad/s (T<sub>m</sub> = 0,70 s ≈ 0,66·Tp): ω<sub>ν</sub> = 25,5 ± 1,6 rad/s, R<sub>B</sub> = 113.</li>
 </ul>
 
-<div id="org0c91aee" class="figure">
+<div id="orgc64b81f" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_jonswap_canal1_wm_bajo.png" alt="espectro_normalizado_jonswap_canal1_wm_bajo.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb4a6aca" class="outline-3">
-<h3 id="orgb4a6aca">[15:43] JONSWAP — ω<sub>m</sub> intermedio y en qué sentido es comparable a Bonneton</h3>
-<div class="outline-text-3" id="text-orgb4a6aca">
+<div id="outline-container-org23a1530" class="outline-3">
+<h3 id="org23a1530">[15:43] JONSWAP — ω<sub>m</sub> intermedio y en qué sentido es comparable a Bonneton</h3>
+<div class="outline-text-3" id="text-org23a1530">
 <ul class="org-ul">
 <li><b>Espectro con ω<sub>m</sub> intermedio</b> (elegido): distancia 0,1 s, prominencia 0,01 cm, ajuste en (20, 80) rad/s → 1391 frentes, T<sub>m</sub> = 0,428 s, ω<sub>m</sub> = 14,7 rad/s (f<sub>m</sub> = 2,34 Hz), <b>ω<sub>ν</sub> = 25,5 ± 1,4 rad/s</b>, <b>R<sub>B</sub> = 68</b>, rms 0,108 (entre el más empinado, ω<sub>m</sub> = 18,8 y R<sub>B</sub> = 48, y el estirado, ω<sub>m</sub> = 8,9 y R<sub>B</sub> = 113).</li>
 </ul>
 
-<div id="org3f8c6e5" class="figure">
+<div id="org80fed9e" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_jonswap_canal1_wm_intermedio.png" alt="espectro_normalizado_jonswap_canal1_wm_intermedio.png" />
 </p>
 </div>
@@ -1342,15 +1343,15 @@ Barrido hacia más prominencia y distancia (menos frentes → ω<sub>m</sub> má
 <li>[15:44] JONSWAP, ω<sub>m</sub> intermedio, <b>borde superior del ajuste bajado a 70 rad/s</b> (el pedido decía &ldquo;10 Hz&rdquo;; se interpretó como 10 rad/s, porque 10 Hz dejaba el borde por debajo del inferior): ω<sub>ν</sub> = 25,5 ± 1,6 rad/s, R<sub>B</sub> = 69, prácticamente igual que con 80. Ahora <code>correr_poster.py</code> dibuja la zona &ldquo;Fit range&rdquo; y la curva hasta el borde del ajuste (en el póster estaban fijas en 14 Hz = 88 rad/s).</li>
 </ul>
 
-<div id="org78f210d" class="figure">
+<div id="org05f0f8f" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_jonswap_canal1_20-70.png" alt="espectro_normalizado_jonswap_canal1_20-70.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org93451e9" class="outline-3">
-<h3 id="org93451e9">[15:45] JONSWAP de Bonneton escalado a la profundidad real</h3>
-<div class="outline-text-3" id="text-org93451e9">
+<div id="outline-container-org5c22e5f" class="outline-3">
+<h3 id="org5c22e5f">[15:45] JONSWAP de Bonneton escalado a la profundidad real</h3>
+<div class="outline-text-3" id="text-org5c22e5f">
 <ul class="org-ul">
 <li>La <b>custom</b> (Tp = 10 s) queda para otras pruebas más adelante: es demasiado lenta.</li>
 <li>Nuevo Bonneton, escalado desde vN03-C3 conservando kp·h = 0,951 y ξ0 = 0,226 con la <b>profundidad real en la paleta, h = 4,15 cm</b>. Supone que el punto de referencia (3,6 cm) está del lado opuesto a la paleta y le suma ~0,55 cm por la inclinación; <b>a confirmar</b>.
@@ -1364,47 +1365,47 @@ Barrido hacia más prominencia y distancia (menos frentes → ω<sub>m</sub> má
 </ul></li>
 </ul>
 
-<div id="org9695042" class="figure">
+<div id="org0b66c64" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/control_bonneton_h4.15.png" alt="control_bonneton_h4.15.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8d2c2a3" class="outline-3">
-<h3 id="org8d2c2a3">[15:49] JONSWAP<sub>BONNETON</sub><sub>395</sub> — scaling y convergencia, canal 1 (τ ∈ [83,8, 482] ms, t ∈ [60, 655] s)</h3>
-<div class="outline-text-3" id="text-org8d2c2a3">
+<div id="outline-container-org189fd36" class="outline-3">
+<h3 id="org189fd36">[15:49] JONSWAP<sub>BONNETON</sub><sub>395</sub> — scaling y convergencia, canal 1 (τ ∈ [83,8, 482] ms, t ∈ [60, 655] s)</h3>
+<div class="outline-text-3" id="text-org189fd36">
 <ul class="org-ul">
 <li>ζ<sub>p</sub> (σ<sub>η</sub> = 0,048 cm con la calibración provisoria): n = 2 satura muy pronto, en <b>ζ ≈ 0,63</b> desde p ≈ 2,5 (en los random saturaba en ~0,92–0,95). n = 3: ζ<sub>3</sub> = 0,97, ζ<sub>6</sub> = 1,35. n = 4: ζ<sub>3</sub> = 1,08, ζ<sub>6</sub> = 1,61. Las curvas son cóncavas, no rectas.</li>
 <li>Convergencia en τ = 201 ms: <b>mucho mejor que con los random</b>. Sin tendencia monótona: oscila ±15–20 % hasta ~300 s y queda dentro de ±5 % en las últimas ventanas, salvo un salto de +4–8 % en la última. ε (T ≥ ~330 s): 0,3 % (p = 0,5) a 2,6–3,9 % (p = 6). Es consistente con que el JONSWAP es un forzado estacionario, a diferencia de la secuencia de 10 curvas random.</li>
 </ul>
 
-<div id="orgcb880fd" class="figure">
+<div id="orgc8395d5" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/zeta_jonswap_canal1.png" alt="zeta_jonswap_canal1.png" />
 </p>
 </div>
 
-<div id="org7165c93" class="figure">
+<div id="org0fbc733" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/convergencia_jonswap_canal1.png" alt="convergencia_jonswap_canal1.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org92ae2ab" class="outline-3">
-<h3 id="org92ae2ab">[15:56] Cuarta prueba (3,60 cm, muchos forzados, PID soft): <b>se chocó contra el final</b> → vuelta a PID <b>stiff</b></h3>
-<div class="outline-text-3" id="text-org92ae2ab">
+<div id="outline-container-orgff8ef65" class="outline-3">
+<h3 id="orgff8ef65">[15:56] Cuarta prueba (3,60 cm, muchos forzados, PID soft): <b>se chocó contra el final</b> → vuelta a PID <b>stiff</b></h3>
+<div class="outline-text-3" id="text-orgff8ef65">
 <ul class="org-ul">
 <li>Terminó la medición de muchos forzados con h = 3,60 cm y PID <b>soft</b>. Con soft, <b>el motor igual se chocó contra el final</b>: se vuelve a <b>PID stiff</b> para las próximas mediciones.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb6df4ae" class="outline-3">
-<h3 id="orgb6df4ae">[15:56] JONSWAP — rango de S<sub>p</sub> elegido en la app (canal 1)</h3>
-<div class="outline-text-3" id="text-orgb6df4ae">
+<div id="outline-container-org8ec5ee1" class="outline-3">
+<h3 id="org8ec5ee1">[15:56] JONSWAP — rango de S<sub>p</sub> elegido en la app (canal 1)</h3>
+<div class="outline-text-3" id="text-org8ec5ee1">
 <ul class="org-ul">
 <li>En la app interactiva, canal 1 del JONSWAP: <b>f ∈ [4,49, 13,19] Hz → τ ∈ [75,8, 222,7] ms</b>. En este rango n = 2 satura en <b>ζ ≈ 1</b> (0,9–1,1, tipo Burgers), y n ≥ 3 crece casi lineal hasta ζ ≈ 1,8–2,4 en p = 7,5. Con τ ∈ [83,8, 482] ms, n = 2 saturaba en 0,63: el rango hasta 482 ms entra en la zona donde S<sub>p</sub> ya satura en τ.</li>
 </ul>
 
-<div id="orga57136c" class="figure">
+<div id="org7432b0f" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/app_sp_jonswap_canal1_f4.49-13.19.png" alt="app_sp_jonswap_canal1_f4.49-13.19.png" />
 </p>
 </div>
@@ -1469,9 +1470,9 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 </ul>
 </div>
 </div>
-<div id="outline-container-org7f92ac6" class="outline-3">
-<h3 id="org7f92ac6">[16:04] Cuarta prueba — muchos<sub>forzados</sub><sub>360</sub><sub>soft</sub>: análisis rápido</h3>
-<div class="outline-text-3" id="text-org7f92ac6">
+<div id="outline-container-orgfb663e0" class="outline-3">
+<h3 id="orgfb663e0">[16:04] Cuarta prueba — muchos<sub>forzados</sub><sub>360</sub><sub>soft</sub>: análisis rápido</h3>
+<div class="outline-text-3" id="text-orgfb663e0">
 <ul class="org-ul">
 <li><code>muchos_forzados_360_soft.bin</code> (h = 3,60 cm en el punto de referencia, PID soft, 660 s). Lock-in con los tres canales en paralelo: 1,8 min. Análisis en t ∈ [60, 600] s (en la RMS no se ve el choque del final; se corta para ir a lo seguro).</li>
 <li>Std de la fase c1/c2/c3: 0,0037 / 0,0044 / 0,0084 rad, casi igual que en la primera prueba (~3,1 cm de referencia: 0,0040 / 0,0044 / 0,0083). En 3,95 cm era 0,0063 / 0,0054 / 0,0091.</li>
@@ -1479,7 +1480,7 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 <li>¿Llenar más antes del JONSWAP nuevo? El Bonneton nuevo se escaló para h = 4,15 cm en la paleta, que corresponde a 3,60 cm en el punto de referencia si este está del lado opuesto (+0,55 cm). Es el nivel actual: <b>no hace falta llenar</b>. Si se llena a 3,95 hay que regenerarlo para ~4,5 cm en la paleta.</li>
 </ul>
 
-<div id="org9c4db02" class="figure">
+<div id="org6fafc46" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_360_canal1.png" alt="espectro_normalizado_360_canal1.png" />
 </p>
 </div>
@@ -1488,18 +1489,18 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 </ul>
 </div>
 </div>
-<div id="outline-container-org79efd4e" class="outline-3">
-<h3 id="org79efd4e">[16:06] Conclusión: h = 3,60 cm es el nivel que mejor funciona → JONSWAP de Bonneton con esta altura</h3>
-<div class="outline-text-3" id="text-org79efd4e">
+<div id="outline-container-org20e1b9a" class="outline-3">
+<h3 id="org20e1b9a">[16:06] Conclusión: h = 3,60 cm es el nivel que mejor funciona → JONSWAP de Bonneton con esta altura</h3>
+<div class="outline-text-3" id="text-org20e1b9a">
 <ul class="org-ul">
 <li><b>Conclusión:</b> con <b>h = 3,60 cm</b> (en el punto de referencia, el mismo de la Segunda iteración) el espectro del canal 1 sigue mejor la forma de Bonneton (csch²). Es el mejor ajuste del día (rms 0,043–0,044, contra 0,061–0,108 en 3,1 y 3,95 cm) y es robusto: en el barrido, ω<sub>ν</sub> = 28,5–29,5 rad/s. Con ω<sub>m</sub> = 11,6 rad/s: ω<sub>ν</sub> = 28,5 ± 0,6 rad/s, R<sub>B</sub> = 97.</li>
 <li><b>Decisión:</b> no se llena más. Se mide el <b>JONSWAP de Bonneton escalado</b> (<code>599962ms_bonneton_C3_h_4.15cm_Tp_0.49_Hm0_8.9mm_seed_1_fhi_2.5fp_una_curva.csv</code>: Tp = 0,487 s, Hm0 = 8,9 mm, 600 s) con este nivel y PID <b>stiff</b>. Se escaló para 4,15 cm en la paleta, que corresponde a 3,60 cm en el punto de referencia si este está del lado opuesto a la paleta (+0,55 cm por la inclinación).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3cef908" class="outline-3">
-<h3 id="org3cef908">[16:08] Bonneton de 30 min o más sin que el motor vuelva a 0</h3>
-<div class="outline-text-3" id="text-org3cef908">
+<div id="outline-container-org8470e15" class="outline-3">
+<h3 id="org8470e15">[16:08] Bonneton de 30 min o más sin que el motor vuelva a 0</h3>
+<div class="outline-text-3" id="text-org8470e15">
 <ul class="org-ul">
 <li>Problema: la curva única de 10 min empieza y termina en x = 0, así que en loop el motor vuelve a 0 cada 10 min. Una sola curva de 30 min necesitaría ~48 000 puntos (&gt; 16 000) o un dt demasiado grande.</li>
 <li>Solución: <b>tres curvas</b> (<code>generador_curvas_jonswap.py --escalado --h-paleta 0.0415 --f-hi-frac 2.5 --loop --dt 0.0375</code>), en <code>Curvas_jonswap/bonneton_C3_h_4.15cm_Tp_0.49_Hm0_8.9mm_seed_1_fhi_2.5fp_loop/</code>:
@@ -1516,9 +1517,9 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 </ul>
 </div>
 </div>
-<div id="outline-container-org0733057" class="outline-3">
-<h3 id="org0733057">[16:13] Profundidad real en la paleta</h3>
-<div class="outline-text-3" id="text-org0733057">
+<div id="outline-container-orgf4d65b2" class="outline-3">
+<h3 id="orgf4d65b2">[16:13] Profundidad real en la paleta</h3>
+<div class="outline-text-3" id="text-orgf4d65b2">
 <ul class="org-ul">
 <li>La paleta está <b>sumergida 2,5 cm</b>. Con el hueco de ~1 cm entre la paleta y el fondo (montaje de la mañana), la profundidad en la paleta sería <b>~3,5 cm</b>, no los 4,15 cm supuestos (3,6 + 0,55 por la inclinación). Eso indica que el punto de referencia (3,6 cm) está <b>del lado de la paleta</b>. <b>A confirmar el hueco</b> antes de regenerar el Bonneton.</li>
 <li>Las semillas distintas para juntar estadística (varias corridas de 10 min) quedan para otro momento.</li>
@@ -1533,9 +1534,9 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 </ul>
 </div>
 </div>
-<div id="outline-container-org0c41ef1" class="outline-3">
-<h3 id="org0c41ef1">[16:17] Bonneton h = 3,5 cm: verificación contra vN03-C3 y copia al pendrive</h3>
-<div class="outline-text-3" id="text-org0c41ef1">
+<div id="outline-container-org45ba9ff" class="outline-3">
+<h3 id="org45ba9ff">[16:17] Bonneton h = 3,5 cm: verificación contra vN03-C3 y copia al pendrive</h3>
+<div class="outline-text-3" id="text-org45ba9ff">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1615,13 +1616,13 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 </ul>
 </div>
 </div>
-<div id="outline-container-org082094a" class="outline-3">
-<h3 id="org082094a">[16:21] Recapitulación del día y pendientes</h3>
-<div class="outline-text-3" id="text-org082094a">
+<div id="outline-container-org4434c0b" class="outline-3">
+<h3 id="org4434c0b">[16:21] Recapitulación del día y pendientes</h3>
+<div class="outline-text-3" id="text-org4434c0b">
 </div>
-<div id="outline-container-org8227477" class="outline-4">
-<h4 id="org8227477">Mediciones (todas en <code>Tres sensores/Mediciones/</code>, lock-in en <code>Mediciones analizadas/</code>, análisis en <code>Análisis/&lt;nombre&gt;/</code>)</h4>
-<div class="outline-text-4" id="text-org8227477">
+<div id="outline-container-org4d39a3d" class="outline-4">
+<h4 id="org4d39a3d">Mediciones (todas en <code>Tres sensores/Mediciones/</code>, lock-in en <code>Mediciones analizadas/</code>, análisis en <code>Análisis/&lt;nombre&gt;/</code>)</h4>
+<div class="outline-text-4" id="text-org4d39a3d">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1695,9 +1696,9 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 </table>
 </div>
 </div>
-<div id="outline-container-orga2e851e" class="outline-4">
-<h4 id="orga2e851e">Conclusiones hasta ahora</h4>
-<div class="outline-text-4" id="text-orga2e851e">
+<div id="outline-container-orgbb3362d" class="outline-4">
+<h4 id="orgbb3362d">Conclusiones hasta ahora</h4>
+<div class="outline-text-4" id="text-orgbb3362d">
 <ul class="org-ul">
 <li>El piso de ruido bajó ~16–20× (canales 1 y 2) y ~120–140× (canal 3) respecto de 10<sub>forzados</sub>.</li>
 <li>ω<sub>ν</sub> (canal 1) es robusto ante los parámetros; R<sub>B</sub> depende de la detección de frentes (ω<sub>m</sub>). ω<sub>ν</sub> depende de la posición del sensor respecto de la rompiente (nivel).</li>
@@ -1706,9 +1707,9 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 </ul>
 </div>
 </div>
-<div id="outline-container-org09cb5a1" class="outline-4">
-<h4 id="org09cb5a1">Pendientes</h4>
-<div class="outline-text-4" id="text-org09cb5a1">
+<div id="outline-container-orgd8118dd" class="outline-4">
+<h4 id="orgd8118dd">Pendientes</h4>
+<div class="outline-text-4" id="text-orgd8118dd">
 <ul class="org-ul">
 <li class="off"><code>[&nbsp;]</code> Medir el Bonneton de 3,5 cm (PID stiff).</li>
 <li class="off"><code>[&nbsp;]</code> <b>Calibración</b> (sobrellenar y vaciar): hace falta para Iribarren, ν<sub>c</sub>, umbrales en cm y para comparar alturas con 10<sub>forzados</sub> (la fase es ~2× más chica a 3,95 cm).</li>
@@ -1724,18 +1725,18 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 </div>
 </div>
 </div>
-<div id="outline-container-orgba37696" class="outline-3">
-<h3 id="orgba37696">[16:22] Medición de ruido en agua quieta</h3>
-<div class="outline-text-3" id="text-orgba37696">
+<div id="outline-container-orga7db8d2" class="outline-3">
+<h3 id="orga7db8d2">[16:22] Medición de ruido en agua quieta</h3>
+<div class="outline-text-3" id="text-orga7db8d2">
 <ul class="org-ul">
 <li>3 minutos con los tres sensores en agua quieta (h = 3,60 cm en el punto de referencia), con la configuración normal de entradas del DAQ.</li>
 <li>[16:27] Observación del usuario: con el Bonneton y con menos altura de agua hay <b>menos rebotes</b> en la cuba.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga584ffb" class="outline-3">
-<h3 id="orga584ffb">[16:31] Ruido en agua quieta (<code>ruido.bin</code>, 180 s, h = 3,60 cm): resultados</h3>
-<div class="outline-text-3" id="text-orga584ffb">
+<div id="outline-container-org364b492" class="outline-3">
+<h3 id="org364b492">[16:31] Ruido en agua quieta (<code>ruido.bin</code>, 180 s, h = 3,60 cm): resultados</h3>
+<div class="outline-text-3" id="text-org364b492">
 <ul class="org-ul">
 <li><b>Portadora</b> (61,3 kHz): canales 0/1/2/3 = 9,16 / 1,90 / 2,09 / <b>0,60 V</b>. En 10<sub>forzados</sub>: 8,77 / 1,70 / 1,83 / 1,95 V. <b>El sensor 3 da hoy ~3× menos portadora</b> que los otros (antes era igual).</li>
 <li><b>Piso de tensión cruda</b> (±2–20 kHz de la portadora): 7,4e-12 / 2,3e-11 / <b>3,9e-12</b> V²/Hz (canales 1/2/3). En 10<sub>forzados</sub>: 6e-11 / 2e-10 / <b>1,9e-9</b>. El ruido de banda ancha del canal 3 <b>desapareció</b> (~500× menos). Hoy el canal 3 es el de menor piso.</li>
@@ -1747,9 +1748,9 @@ Con el JONSWAP (forzado estacionario de banda continua) S<sub>p</sub> converge ~
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf918d09" class="outline-3">
-<h3 id="orgf918d09">[16:31] Pendiente de la cola del espectro después de la csch² (canal 1)</h3>
-<div class="outline-text-3" id="text-orgf918d09">
+<div id="outline-container-org91eae84" class="outline-3">
+<h3 id="org91eae84">[16:31] Pendiente de la cola del espectro después de la csch² (canal 1)</h3>
+<div class="outline-text-3" id="text-org91eae84">
 <ul class="org-ul">
 <li><p>
 Ajuste de ley de potencias S<sub>η</sub> ∝ f<sup>α</sup> (Welch 4 s):
@@ -1813,15 +1814,15 @@ Ajuste de ley de potencias S<sub>η</sub> ∝ f<sup>α</sup> (Welch 4 s):
 <li>El &ldquo;−2 después de ~30 Hz&rdquo; que se veía en junio coincide con donde el piso de ruido de 10<sub>forzados</sub> (10× más alto) cortaba los espectros. Probablemente era ruido, <b>a revisar</b>.</li>
 </ul>
 
-<div id="org890a7a8" class="figure">
+<div id="org9f475a3" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/ruido_vs_espectros_canal1.png" alt="ruido_vs_espectros_canal1.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3e386c2" class="outline-3">
-<h3 id="org3e386c2">[16:31] muchos<sub>forzados</sub><sub>360</sub><sub>soft</sub> — Iribarren, scaling y convergencia (canal 1, t ∈ [60, 600] s)</h3>
-<div class="outline-text-3" id="text-org3e386c2">
+<div id="outline-container-orgabc9101" class="outline-3">
+<h3 id="orgabc9101">[16:31] muchos<sub>forzados</sub><sub>360</sub><sub>soft</sub> — Iribarren, scaling y convergencia (canal 1, t ∈ [60, 600] s)</h3>
+<div class="outline-text-3" id="text-orgabc9101">
 <ul class="org-ul">
 <li>Iribarren S3 (11 bins hasta 0,8, D = 3,5 cm, calibración vieja): 1416 olas, ⟨ξ⟩ = 0,287, σ = 0,357 ± 0,010, μ = −1,273 ± 0,016, spilling 95,8 %. Muy parecido a muchos<sub>forzados</sub><sub>395</sub>.</li>
 <li>Convergencia (n = 3, p = 6): ε = 5,2 % (τ = 201 ms) y 7,0 % (τ = 130 ms); máximo desvío desde T = 200 s: 10–14 %. <b>Converge bien, a diferencia de los otros random</b> (24–59 %), y parecido al JONSWAP (11–13 %).</li>
@@ -1829,9 +1830,9 @@ Ajuste de ley de potencias S<sub>η</sub> ∝ f<sup>α</sup> (Welch 4 s):
 </ul>
 </div>
 </div>
-<div id="outline-container-org8816b6f" class="outline-3">
-<h3 id="org8816b6f">[16:37] ¿Qué tanto se parece al JONSWAP el espectro del canal 3? (JONSWAP<sub>BONNETON</sub><sub>395</sub>)</h3>
-<div class="outline-text-3" id="text-org8816b6f">
+<div id="outline-container-orgccb38fb" class="outline-3">
+<h3 id="orgccb38fb">[16:37] ¿Qué tanto se parece al JONSWAP el espectro del canal 3? (JONSWAP<sub>BONNETON</sub><sub>395</sub>)</h3>
+<div class="outline-text-3" id="text-orgccb38fb">
 <ul class="org-ul">
 <li>Pedido en la paleta: fp = 0,935 Hz, γ = 3,3, Hm0 = 42,9 mm (curva <code>h_20cm</code>, diseñada para 20 cm de profundidad).</li>
 <li>Canal 3 (x = 3 cm desde el inicio de la rampa), calibración vieja: <b>no se parece</b>.
@@ -1844,7 +1845,7 @@ Ajuste de ley de potencias S<sub>η</sub> ∝ f<sup>α</sup> (Welch 4 s):
 <li>Interpretación: la curva estaba escalada para 20 cm. Con ~4 cm el forzado es muy no lineal (Ursell ~100): la energía pasa al segundo armónico (ligado y libre, sin generación de 2.º orden en la paleta) y el pico pierde forma. El hueco en fp podría ser un nodo de onda estacionaria por reflexión (a revisar). El Bonneton nuevo escalado para 3,5 cm (Ursell 9,4) debería parecerse mucho más: <b>verificar en S3 cuando se mida</b>.</li>
 </ul>
 
-<div id="org5d83ae1" class="figure">
+<div id="org53dae6f" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/canal3_vs_jonswap.png" alt="canal3_vs_jonswap.png" />
 </p>
 </div>
@@ -1859,9 +1860,9 @@ Ajuste de ley de potencias S<sub>η</sub> ∝ f<sup>α</sup> (Welch 4 s):
 </ul>
 </div>
 </div>
-<div id="outline-container-org81c1911" class="outline-3">
-<h3 id="org81c1911">[16:43] Quinta prueba — Bonneton escalado para h = 3,5 cm en la paleta (3,60 cm de referencia)</h3>
-<div class="outline-text-3" id="text-org81c1911">
+<div id="outline-container-org49327e7" class="outline-3">
+<h3 id="org49327e7">[16:43] Quinta prueba — Bonneton escalado para h = 3,5 cm en la paleta (3,60 cm de referencia)</h3>
+<div class="outline-text-3" id="text-org49327e7">
 <ul class="org-ul">
 <li><code>Bonneton_bien_profundidad_360.bin</code> (660 s), con la curva <code>599962ms_bonneton_C3_h_3.5cm_Tp_0.45_Hm0_7.5mm_seed_1_fhi_2.5fp_una_curva.csv</code> (Tp = 0,447 s, Hm0 = 7,5 mm, γ = 3,3), PID stiff. Copiada del pendrive y lock-in en paralelo.</li>
 <li>[16:45] Resultados de <code>Bonneton_bien_profundidad_360</code>:
@@ -1874,20 +1875,20 @@ Ajuste de ley de potencias S<sub>η</sub> ∝ f<sup>α</sup> (Welch 4 s):
 </ul></li>
 </ul>
 
-<div id="orgf11395b" class="figure">
+<div id="org7a435d3" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/bonneton360_canal3_vs_jonswap.png" alt="bonneton360_canal3_vs_jonswap.png" />
 </p>
 </div>
 
-<div id="org0cefe4a" class="figure">
+<div id="org822bbe5" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_bonneton360_canal1.png" alt="espectro_normalizado_bonneton360_canal1.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd7468a9" class="outline-3">
-<h3 id="orgd7468a9">[16:46] Bonneton nuevo vs el de la mañana: amplitud</h3>
-<div class="outline-text-3" id="text-orgd7468a9">
+<div id="outline-container-org267dffb" class="outline-3">
+<h3 id="org267dffb">[16:46] Bonneton nuevo vs el de la mañana: amplitud</h3>
+<div class="outline-text-3" id="text-org267dffb">
 <ul class="org-ul">
 <li><p>
 Hm0 = 4σ<sub>η</sub> (calibración vieja, sin &lt; 0,3 Hz):
@@ -1945,15 +1946,15 @@ Hm0 = 4σ<sub>η</sub> (calibración vieja, sin &lt; 0,3 Hz):
 <li>[16:47] Iribarren de S3, <code>Bonneton_bien_profundidad_360</code> (11 bins hasta 0,8, D = 3,5 cm, calibración vieja): 1427 olas, <b>⟨ξ⟩ = 0,36</b>, σ = 0,219 ± 0,004, μ = −1,033 ± 0,006, <b>spilling 92 % / plunging 8 %</b>. Está entre el random (0,28–0,29, 96 %) y el JONSWAP de la mañana (0,43, 78 %). Ojo: el ξ0 de diseño (0,226) es el de aguas profundas con Hm0; acá ξ es ola por ola con H/L local.</li>
 </ul>
 
-<div id="orgb470dac" class="figure">
+<div id="org97ad35d" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/iribarren_bonneton360_S3.png" alt="iribarren_bonneton360_S3.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orge6d66cb" class="outline-3">
-<h3 id="orge6d66cb">[16:50] Bonneton con más amplitud (Hm0 ×1,6)</h3>
-<div class="outline-text-3" id="text-orge6d66cb">
+<div id="outline-container-org37adb56" class="outline-3">
+<h3 id="org37adb56">[16:50] Bonneton con más amplitud (Hm0 ×1,6)</h3>
+<div class="outline-text-3" id="text-org37adb56">
 <ul class="org-ul">
 <li>Los sensores hoy quedan donde están. Se pide una versión de Bonneton con más amplitud, más parecida a la de la mañana, aunque cambie R<sub>B</sub>.</li>
 <li><code>Curvas_jonswap/bonneton_C3_Hm0x1.6_h_3.5cm_Tp_0.45_Hm0_12.0mm_seed_1_fhi_2.5fp_una_curva/599962ms_…csv</code> (en la compu y en el pendrive). Generada con <code>--tp 0.4472136 --hm0 0.012 --gamma 3.3 --h-paleta 0.035 --f-hi-frac 2.5 --una-curva --dt 0.0375</code>.
@@ -1966,15 +1967,15 @@ Hm0 = 4σ<sub>η</sub> (calibración vieja, sin &lt; 0,3 Hz):
 <li>[16:55] <code>Bonneton_bien_profundidad_360</code>, canal 1: borde superior del ajuste <b>alargado de a 5 rad/s mientras mejore R²</b> (R² en log10 de E/Ẽ; distancia 0,2 s, prominencia 0,03 cm, borde inferior 22 rad/s). R² sube de 0,949 (80) a <b>0,970 en 105 rad/s</b> y baja en 110. Elegido (22, 105) rad/s: ω<sub>ν</sub> = 32,4 ± 4,8 rad/s, R<sub>B</sub> = 93. ω<sub>ν</sub> prácticamente no cambia (32,37 → 32,43); la incerteza baja de 5,9 a 4,8.</li>
 </ul>
 
-<div id="org15ef52d" class="figure">
+<div id="orge12018c" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_bonneton360_canal1_hasta105.png" alt="espectro_normalizado_bonneton360_canal1_hasta105.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org035b2fc" class="outline-3">
-<h3 id="org035b2fc">[16:56] Idea para el futuro: evitar los rebotes</h3>
-<div class="outline-text-3" id="text-org035b2fc">
+<div id="outline-container-org0c2ddc8" class="outline-3">
+<h3 id="org0c2ddc8">[16:56] Idea para el futuro: evitar los rebotes</h3>
+<div class="outline-text-3" id="text-org0c2ddc8">
 <ul class="org-ul">
 <li><b>Pasiva</b>: poner al final de la rampa algo tipo <b>compuerta</b> que deje pasar las olas en un solo sentido (hacia el fondo) y no las devuelva. Un absorbedor pasivo, para que no vuelvan reflexiones hacia la zona de medición ni hacia la paleta.</li>
 <li><b>Activa (alternativa)</b>: un <b>compensador</b> con un sensor de altura y el <b>segundo motor</b> controlado tipo PID, que absorba activamente la onda que llega (como el ARC de la paleta de vN03).</li>
@@ -1982,9 +1983,9 @@ Hm0 = 4σ<sub>η</sub> (calibración vieja, sin &lt; 0,3 Hz):
 </ul>
 </div>
 </div>
-<div id="outline-container-orge9a5773" class="outline-3">
-<h3 id="orge9a5773">[17:03] Bonneton 3,5 cm: scaling con el rango donde n = 2 satura en 1</h3>
-<div class="outline-text-3" id="text-orge9a5773">
+<div id="outline-container-orgea31282" class="outline-3">
+<h3 id="orgea31282">[17:03] Bonneton 3,5 cm: scaling con el rango donde n = 2 satura en 1</h3>
+<div class="outline-text-3" id="text-orgea31282">
 <ul class="org-ul">
 <li>Con los rangos anteriores el scaling daba raro: τ ∈ [83,8, 482] ms → ζ negativos (S<sub>p</sub> baja para τ ≳ Tp/2 ≈ 220 ms). τ ∈ [75,8, 222,7] → n = 2 con ζ<sub>6</sub> = 0,50 &lt; ζ<sub>3</sub>. La convergencia, en cambio, es excelente (máx. desvío 2–3 %).</li>
 <li>Nuevo <code>Análisis/rango_saturacion.py</code>: recorre todas las ventanas [τ<sub>a</sub>, τ<sub>b</sub>] de la grilla (ancho ≥ ×1,5, ≥ 5 puntos) y minimiza la media de (ζ<sub>p</sub><sup>(2)</sup> − 1)² para p ∈ [3, 6]. Hay una meseta clara en <b>τ ≈ 60–160 ms</b>.</li>
@@ -1997,20 +1998,20 @@ Hm0 = 4σ<sub>η</sub> (calibración vieja, sin &lt; 0,3 Hz):
 <li>También <code>correr_poster.py sp_calcular --n-max 4</code> (solo n = 2, 3, 4; ~2× más rápido). La batería ya lo usa.</li>
 </ul>
 
-<div id="orgca7b5ef" class="figure">
+<div id="org39aa5dd" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/zeta_bonneton360_tau63-158.png" alt="zeta_bonneton360_tau63-158.png" />
 </p>
 </div>
 
-<div id="org3ff0356" class="figure">
+<div id="orge066a2d" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/convergencia_bonneton360_tau100.png" alt="convergencia_bonneton360_tau100.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3b3c19e" class="outline-3">
-<h3 id="org3b3c19e">[17:14] Sexta prueba — Bonneton ×1,6 (Hm0 = 12 mm): <code>Bonneton_custom_360.bin</code></h3>
-<div class="outline-text-3" id="text-org3b3c19e">
+<div id="outline-container-orgdf801a6" class="outline-3">
+<h3 id="orgdf801a6">[17:14] Sexta prueba — Bonneton ×1,6 (Hm0 = 12 mm): <code>Bonneton_custom_360.bin</code></h3>
+<div class="outline-text-3" id="text-orgdf801a6">
 <ul class="org-ul">
 <li>Curva <code>599962ms_bonneton_C3_Hm0x1.6_h_3.5cm_Tp_0.45_Hm0_12.0mm_…csv</code>, h = 3,60 cm de referencia, PID stiff, 660 s. El forzado va de ~35 s a ~635 s; análisis en t ∈ [50, 625] s.</li>
 <li><p>
@@ -2068,20 +2069,20 @@ En S3 crece como el forzado (×1,6). <b>En S1 casi no cambia: altura saturada po
 <li>Iribarren de S3: ⟨ξ⟩ = 0,285, σ = 0,221, μ = −1,279, <b>spilling 99 %</b> (con 7,5 mm: 0,36 y 92 %).</li>
 </ul>
 
-<div id="org84dc74a" class="figure">
+<div id="orgaeda356" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/bonneton_x1.6_canal3_vs_jonswap.png" alt="bonneton_x1.6_canal3_vs_jonswap.png" />
 </p>
 </div>
 
-<div id="org735df13" class="figure">
+<div id="orgb2aa8ea" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/espectro_normalizado_bonneton_x1.6_canal1.png" alt="espectro_normalizado_bonneton_x1.6_canal1.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org054f640" class="outline-3">
-<h3 id="org054f640">[17:16] Recapitulación de mediciones (antes de la calibración)</h3>
-<div class="outline-text-3" id="text-org054f640">
+<div id="outline-container-org94689ae" class="outline-3">
+<h3 id="org94689ae">[17:16] Recapitulación de mediciones (antes de la calibración)</h3>
+<div class="outline-text-3" id="text-org94689ae">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -2199,9 +2200,9 @@ En S3 crece como el forzado (×1,6). <b>En S1 casi no cambia: altura saturada po
 </ul>
 </div>
 </div>
-<div id="outline-container-org3fa6b90" class="outline-3">
-<h3 id="org3fa6b90">[17:40] Calibración: plan de análisis</h3>
-<div class="outline-text-3" id="text-org3fa6b90">
+<div id="outline-container-orgc6d9639" class="outline-3">
+<h3 id="orgc6d9639">[17:40] Calibración: plan de análisis</h3>
+<div class="outline-text-3" id="text-orgc6d9639">
 <ul class="org-ul">
 <li>Fotos de la regla en cada escalón (pasando por Bluetooth). Hay escalones con más de una foto (se detectan por correlación). De cada foto: calibrar px→mm con la regla y detectar dónde toca la línea de agua, a un par de píxeles a izquierda y derecha. Así la altura sale con mejor resolución que la lectura a ojo. Guardar cada imagen con la línea detectada dibujada, para verificar.</li>
 <li>Archivo <code>calibracion</code> en el pendrive: ignorar el transitorio del principio (se esperó ~1 min antes de empezar), detectar los plateaus y asociarlos a las alturas de las fotos.</li>
@@ -2209,9 +2210,9 @@ En S3 crece como el forzado (×1,6). <b>En S1 casi no cambia: altura saturada po
 </ul>
 </div>
 </div>
-<div id="outline-container-org768424f" class="outline-3">
-<h3 id="org768424f">[17:48] Calibración de la Tercera iteración: resultados</h3>
-<div class="outline-text-3" id="text-org768424f">
+<div id="outline-container-org125f37c" class="outline-3">
+<h3 id="org125f37c">[17:48] Calibración de la Tercera iteración: resultados</h3>
+<div class="outline-text-3" id="text-org125f37c">
 <ul class="org-ul">
 <li>Fotos de la regla: <code>Tercera iteración/Calibracion/Fotos regla/</code> (15 fotos + <code>analizar_fotos.py</code>, <code>resumen.csv</code>, <code>escalones.csv</code> y <code>*_linea.jpg</code> con la línea detectada). Escala: ~58 px/mm, o sea 0,017 mm/px. Línea de agua: línea oscura de contacto con el vidrio, medida a cada lado de la regla (mediana robusta de las columnas cercanas). La altura se interpola entre las dos marcas de mm vecinas, así no importa la diferencia de escala entre aire y agua. Fotos repetidas detectadas por correlación (&gt; 0,99) y Δh &lt; 0,05 mm.</li>
 <li>9 escalones: 44,11 (3 fotos) / 43,25 / 42,48 (2) / 41,65 / 40,83 (2) / 39,79 / 39,16 / 38,48 (2) / 37,93 (2) mm. Dispersión entre fotos repetidas: 0,006–0,06 mm. Izquierda y derecha difieren ~0,35 mm, sistemáticamente (perspectiva); se usa el promedio.</li>
@@ -2276,12 +2277,12 @@ En S3 crece como el forzado (×1,6). <b>En S1 casi no cambia: altura saturada po
 <li>Deriva: en el primer escalón (nivel fijo, 44,1 mm) la fase del canal 3 baja ~3 mrad en ~100 s (~0,7 mm aparentes). Es la misma deriva lenta de las mediciones.</li>
 </ul>
 
-<div id="orgae5f10e" class="figure">
+<div id="orgc642be2" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/calibracion_fase_vs_altura.png" alt="calibracion_fase_vs_altura.png" />
 </p>
 </div>
 
-<div id="orga9740ac" class="figure">
+<div id="org64ac872" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/foto_regla_172425_linea.jpg" alt="foto_regla_172425_linea.jpg" />
 </p>
 </div>
@@ -2290,9 +2291,9 @@ En S3 crece como el forzado (×1,6). <b>En S1 casi no cambia: altura saturada po
 </ul>
 </div>
 </div>
-<div id="outline-container-orge409075" class="outline-3">
-<h3 id="orge409075">[17:50] Calibración: incerteza horizontal (alturas de las fotos) y comparación de pendientes</h3>
-<div class="outline-text-3" id="text-orge409075">
+<div id="outline-container-org935f1df" class="outline-3">
+<h3 id="org935f1df">[17:50] Calibración: incerteza horizontal (alturas de las fotos) y comparación de pendientes</h3>
+<div class="outline-text-3" id="text-org935f1df">
 <ul class="org-ul">
 <li>Incerteza de la altura por foto, <b>σ<sub>h</sub> ≈ 0,05 mm</b>:
 <ul class="org-ul">
@@ -2356,9 +2357,9 @@ En S3 crece como el forzado (×1,6). <b>En S1 casi no cambia: altura saturada po
 </p>
 </div>
 </div>
-<div id="outline-container-orgbf13b85" class="outline-3">
-<h3 id="orgbf13b85">[17:56] Reporte en PDF de la Tercera iteración (13/10)</h3>
-<div class="outline-text-3" id="text-orgbf13b85">
+<div id="outline-container-org07944cb" class="outline-3">
+<h3 id="org07944cb">[17:56] Reporte en PDF de la Tercera iteración (13/10)</h3>
+<div class="outline-text-3" id="text-org07944cb">
 <ul class="org-ul">
 <li><code>Tercera iteración/Reporte/reporte_tercera_iteracion.pdf</code> (9 páginas, LaTeX; fuente <code>.tex</code> y <code>figuras/</code>). Resume montaje, forzados (comparación con vN03), análisis, ruido, calibración, alturas calibradas, espectros S3 contra JONSWAP, ajustes de Bonneton en S1, funciones de estructura y convergencia, Iribarren calibrado, problemas y pendientes.</li>
 <li>Recalculado con la calibración nueva (<code>correr_poster.py --cal tercera</code>): Iribarren de S3 en todas (los random dan ⟨ξ⟩ ≈ 0,23–0,24, igual que el póster) y ν<sub>c</sub> = 2,4–5,4e-4 m²/s (póster 2,8e-4). Hm0 calibrados: crecen de S3 a S2 (asomeramiento) y caen en S1.</li>
@@ -2366,9 +2367,9 @@ En S3 crece como el forzado (×1,6). <b>En S1 casi no cambia: altura saturada po
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd2692b5" class="outline-3">
-<h3 id="orgd2692b5">[17:59] Séptima y octava pruebas: Bonneton &ldquo;bien&rdquo; (7,5 mm) y ×1,6 con h = 3,95 cm</h3>
-<div class="outline-text-3" id="text-orgd2692b5">
+<div id="outline-container-orgb5602a7" class="outline-3">
+<h3 id="orgb5602a7">[17:59] Séptima y octava pruebas: Bonneton &ldquo;bien&rdquo; (7,5 mm) y ×1,6 con h = 3,95 cm</h3>
+<div class="outline-text-3" id="text-orgb5602a7">
 <ul class="org-ul">
 <li>Aprovechando que se volvió a llenar, se miden la curva <code>bonneton_C3_h_3.5cm…</code> (Hm0 7,5 mm) y la ×1,6 (Hm0 12 mm) con <b>3,95 cm</b> en el punto de referencia. La paleta queda ~0,35 cm más sumergida: h en la paleta ≈ 3,85 cm, y las curvas estaban escaladas para 3,5 cm.
 <ul class="org-ul">
@@ -2380,9 +2381,9 @@ En S3 crece como el forzado (×1,6). <b>En S1 casi no cambia: altura saturada po
 </ul>
 </div>
 </div>
-<div id="outline-container-orgde02e21" class="outline-3">
-<h3 id="orgde02e21">[18:16] Calibración por plateaus (en vez del momento de la foto)</h3>
-<div class="outline-text-3" id="text-orgde02e21">
+<div id="outline-container-orgbf1a89d" class="outline-3">
+<h3 id="orgbf1a89d">[18:16] Calibración por plateaus (en vez del momento de la foto)</h3>
+<div class="outline-text-3" id="text-orgbf1a89d">
 <ul class="org-ul">
 <li>Los intervalos &ldquo;10 s antes de cada foto&rdquo; caían en cualquier lado: las fotos se sacaron justo antes de cada vaciado y el reloj del celular parece ~10 s adelantado respecto de la PC.</li>
 <li><p>
@@ -2448,9 +2449,9 @@ Adoptada como oficial en <code>calibracion_tercera.json</code> (los valores de l
 </ul>
 </div>
 </div>
-<div id="outline-container-org7bd24c2" class="outline-3">
-<h3 id="org7bd24c2">[18:30] S<sub>p</sub> en el rango de saturación, curtosis y tabla final</h3>
-<div class="outline-text-3" id="text-org7bd24c2">
+<div id="outline-container-orga94e3a8" class="outline-3">
+<h3 id="orga94e3a8">[18:30] S<sub>p</sub> en el rango de saturación, curtosis y tabla final</h3>
+<div class="outline-text-3" id="text-orga94e3a8">
 <ul class="org-ul">
 <li><p>
 Criterio (pedido del usuario): para cada medición, el rango de τ es el que hace saturar ζ<sub>p</sub><sup>(2)</sup> en 1 (<code>rango_saturacion.py</code>), y se marca rayado sobre el espectro normalizado.
@@ -2543,9 +2544,9 @@ Criterio (pedido del usuario): para cada medición, el rango de τ es el que hac
 </ul>
 </div>
 </div>
-<div id="outline-container-org09e9c65" class="outline-3">
-<h3 id="org09e9c65">[18:57] Séptima y octava pruebas (Bonneton 7,5 y 12 mm con 3,95 cm): análisis completo</h3>
-<div class="outline-text-3" id="text-org09e9c65">
+<div id="outline-container-orga1d77c1" class="outline-3">
+<h3 id="orga1d77c1">[18:57] Séptima y octava pruebas (Bonneton 7,5 y 12 mm con 3,95 cm): análisis completo</h3>
+<div class="outline-text-3" id="text-orga1d77c1">
 <ul class="org-ul">
 <li><p>
 Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <code>Bonneton_custom_395</code> (18:11, tramo 30–610 s; después de los 610 s el motor vuelve a arrancar).
@@ -2656,16 +2657,16 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-org9129a8e" class="outline-3">
-<h3 id="org9129a8e">[18:57] Conclusiones del día (Tercera iteración, 13/10)</h3>
-<div class="outline-text-3" id="text-org9129a8e">
+<div id="outline-container-org8d7ae47" class="outline-3">
+<h3 id="org8d7ae47">[18:57] Conclusiones del día (Tercera iteración, 13/10)</h3>
+<div class="outline-text-3" id="text-org8d7ae47">
 
-<div id="orga2291c6" class="figure">
+<div id="orgfa2ce4f" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/comp_omega_nu_final.png" alt="comp_omega_nu_final.png" />
 </p>
 </div>
 
-<div id="org8aac542" class="figure">
+<div id="orgc4c6425" class="figure">
 <p><img src="../../../Assets/2026/10/Day_13/comp_colapso_final.png" alt="comp_colapso_final.png" />
 </p>
 </div>
@@ -2681,9 +2682,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-orgefa993c" class="outline-3">
-<h3 id="orgefa993c">[18:57] Pendientes para mañana (14/10)</h3>
-<div class="outline-text-3" id="text-orgefa993c">
+<div id="outline-container-org4f8166a" class="outline-3">
+<h3 id="org4f8166a">[18:57] Pendientes para mañana (14/10)</h3>
+<div class="outline-text-3" id="text-org4f8166a">
 <p>
 <b>Lo principal:</b>
 </p>
@@ -2708,13 +2709,13 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </div>
 </div>
 </div>
-<div id="outline-container-org5f83eee" class="outline-2">
-<h2 id="org5f83eee">2026-10-14</h2>
-<div class="outline-text-2" id="text-org5f83eee">
+<div id="outline-container-orgb06917b" class="outline-2">
+<h2 id="orgb06917b">2026-10-14</h2>
+<div class="outline-text-2" id="text-orgb06917b">
 </div>
-<div id="outline-container-orge933e1c" class="outline-3">
-<h3 id="orge933e1c">[09:33] Reorganización de la Tercera iteración y regla para el tanque</h3>
-<div class="outline-text-3" id="text-orge933e1c">
+<div id="outline-container-orgdceb40f" class="outline-3">
+<h3 id="orgdceb40f">[09:33] Reorganización de la Tercera iteración y regla para el tanque</h3>
+<div class="outline-text-3" id="text-orgdceb40f">
 <ul class="org-ul">
 <li>Lo del 13/10 se movió a <code>Tercera iteración/Día 1/</code> (Análisis, Calibracion, Curvas forzado, Reporte, Tres sensores, Un solo sensor). Lo de hoy va en <code>Tercera iteración/Día 2/</code>. Se corrigieron las rutas de los scripts de <code>Día 1/Análisis/</code> (lockin, resumen, ver<sub>espectros</sub>, ver<sub>series</sub>, barrido<sub>espectro</sub>, bateria.sh). <code>linmot_bulk_upload.py</code> quedó en la raíz de la Tercera iteración.</li>
 <li>Tanque de agua: diámetro interno ≈ 41 cm, altura 48–49 cm desde el piso. Da 1,320 L por cm, o sea unos 63–65 L en total (algo menos de capacidad útil, porque el fondo interno queda por encima del piso).</li>
@@ -2724,9 +2725,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-org8b44ccf" class="outline-3">
-<h3 id="org8b44ccf">[09:44] Idea del día: ley ω<sub>ν</sub>(h)</h3>
-<div class="outline-text-3" id="text-org8b44ccf">
+<div id="outline-container-orgc8932c8" class="outline-3">
+<h3 id="orgc8932c8">[09:44] Idea del día: ley ω<sub>ν</sub>(h)</h3>
+<div class="outline-text-3" id="text-orgc8932c8">
 <ul class="org-ul">
 <li>Idea del usuario: buscar una ley ω<sub>ν</sub> ∼ h<sup>a</sup> (dudaba entre a = −2 y a = −1/2), a partir de Bonneton 2023 y de Tayfun 2006. Para verificarla, medir con el espectro Bonneton de 20 cm de paleta (fp bien a la izquierda) en 5–7 niveles.</li>
 <li>Bonneton 2023 (Ec. 4.2 y 5.4): ω<sub>ν</sub> = (3/4π) g H<sub>c</sub>/ν<sub>c</sub> y ν<sub>c</sub> = α<sub>ν</sub> g<sup>1/2</sup> H<sub>c</sub><sup>3/2</sup>, así que ω<sub>ν</sub> = (3/4π α<sub>ν</sub>) (g/H<sub>c</sub>)<sup>1/2</sup>. En la ISZ H<sub>c</sub>/h0 ≈ 0,4–0,6 casi constante, y entonces <b>ω<sub>ν</sub> ∝ (g/h)<sup>1/2</sup> ∝ h<sup>-1/2</sup></b>, sin depender del forcing salvo por α<sub>ν</sub> y γ.</li>
@@ -2736,9 +2737,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc8f02f" class="outline-3">
-<h3 id="orgfc8f02f">[11:56] Montaje nuevo (Día 2)</h3>
-<div class="outline-text-3" id="text-orgfc8f02f">
+<div id="outline-container-orgf0c387e" class="outline-3">
+<h3 id="orgf0c387e">[11:56] Montaje nuevo (Día 2)</h3>
+<div class="outline-text-3" id="text-orgf0c387e">
 <ul class="org-ul">
 <li>Después de ~2 h de montaje: la rampa se movió 4 cm hacia adelante (a confirmar si &ldquo;hacia adelante&rdquo; es hacia la paleta).</li>
 <li>Sensores separados ~7,5 cm entre sí (se precisará con las fotos de las reglas). S1 a 28 cm del borde final de la rampa.</li>
@@ -2749,9 +2750,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-orge8dc7bd" class="outline-3">
-<h3 id="orge8dc7bd">[11:59] Forzado y esquema del Día 2</h3>
-<div class="outline-text-3" id="text-orge8dc7bd">
+<div id="outline-container-org97270c1" class="outline-3">
+<h3 id="org97270c1">[11:59] Forzado y esquema del Día 2</h3>
+<div class="outline-text-3" id="text-org97270c1">
 <ul class="org-ul">
 <li>Forzado: <code>Día 2/Curvas forzado/quieto_90s_bonneton_C3_h_20cm_180s/curva_00_completa.csv</code> (script <code>generador_quieto_bonneton.py</code>). Son 7001 puntos con dt 0,04 s y 280 s en total:
 <ul class="org-ul">
@@ -2765,23 +2766,23 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 <li>Esquema con nivel 3,95 cm. Se supone S1 a 28 cm del borde final de la playa (x = 118 en coordenadas de rampa), así que S1 x = 90 (h = 0,80 cm), S2 x = 82,5 (h = 1,06), S3 x = 75 (h = 1,32). Sobre la playa quedan ~4,5 mm de agua. <b>A confirmar</b>: la dirección del corrimiento de 4 cm (se supuso hacia la paleta) y las separaciones exactas (fotos de las reglas).</li>
 </ul>
 
-<div id="orge443f1a" class="figure">
+<div id="orgff383ea" class="figure">
 <p><img src="../../../Assets/2026/10/Day_14/esquema_dia2.png" alt="esquema_dia2.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb34cce1" class="outline-3">
-<h3 id="orgb34cce1">[12:05] Videos: para más adelante, con agua de la canilla</h3>
-<div class="outline-text-3" id="text-orgb34cce1">
+<div id="outline-container-org7d7b67f" class="outline-3">
+<h3 id="org7d7b67f">[12:05] Videos: para más adelante, con agua de la canilla</h3>
+<div class="outline-text-3" id="text-org7d7b67f">
 <ul class="org-ul">
 <li>El usuario decidió tomar los videos en el futuro con agua de la canilla, no hoy con la destilada. Queda pendiente.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6852746" class="outline-3">
-<h3 id="org6852746">[12:10] Observaciones de la primera medición (Día 2)</h3>
-<div class="outline-text-3" id="text-org6852746">
+<div id="outline-container-org2c8a525" class="outline-3">
+<h3 id="org2c8a525">[12:10] Observaciones de la primera medición (Día 2)</h3>
+<div class="outline-text-3" id="text-org2c8a525">
 <ul class="org-ul">
 <li>Con este montaje los sensores vibran cuando se mueve el motor. Hay que tenerlo en cuenta en los espectros: puede meter picos de alta frecuencia durante el Bonneton. En el reposo el motor está quieto, así que no hay vibración.</li>
 <li>Al usuario le parece que la ola rompe entre S3 y S2. No se pueden juntar más ni acercarlos a S1 con este setup; con el montaje futuro tal vez sí.</li>
@@ -2790,9 +2791,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-orgace164c" class="outline-3">
-<h3 id="orgace164c">[12:19] Primera medición del Día 2: <code>Custom_altura_1</code> (nivel 3,95 cm)</h3>
-<div class="outline-text-3" id="text-orgace164c">
+<div id="outline-container-orgcfa417b" class="outline-3">
+<h3 id="orgcfa417b">[12:19] Primera medición del Día 2: <code>Custom_altura_1</code> (nivel 3,95 cm)</h3>
+<div class="outline-text-3" id="text-orgcfa417b">
 <ul class="org-ul">
 <li>Datos en el pendrive (<code>Tercera iteración/Medicions Dia 2/</code>), copiados a <code>Día 2/Tres sensores/Mediciones/</code>. Son 300 s a 250 kHz. Análisis en <code>Día 2/Análisis/Custom_altura_1/</code> (<code>analisis_rapido.py</code>).</li>
 <li>Conexiones OK: los tres canales responden. El Bonneton arranca en t ≈ 100,4 s (reposo 69–99 s). Ruido en el reposo: S1 0,13 mm, S2 0,15 mm, S3 0,07 mm rms. Hm0 en el Bonneton: S3 4,8, S2 5,1, S1 4,6 mm.</li>
@@ -2818,9 +2819,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd1adbb5" class="outline-3">
-<h3 id="orgd1adbb5">[12:33] Segunda medición: <code>Triangulos</code> (forzado de siempre, Curvas<sub>random</sub><sub>3</sub>, nivel 3,95 cm)</h3>
-<div class="outline-text-3" id="text-orgd1adbb5">
+<div id="outline-container-org2aea2f6" class="outline-3">
+<h3 id="org2aea2f6">[12:33] Segunda medición: <code>Triangulos</code> (forzado de siempre, Curvas<sub>random</sub><sub>3</sub>, nivel 3,95 cm)</h3>
+<div class="outline-text-3" id="text-org2aea2f6">
 <ul class="org-ul">
 <li>El usuario usó su forzado de siempre (Command Table, sin reposo) para ser coherente con ayer. Dura 300 s. Copiado de <code>Medicions Dia 2/</code>.</li>
 <li>Sin reposo, así que no hay punto de calibración: η se toma respecto de la media y se analiza 5–299 s. Hm0 ≈ 8,5 mm en los tres sensores.</li>
@@ -2837,9 +2838,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-org7b96ee8" class="outline-3">
-<h3 id="org7b96ee8">[12:39] Forzado único para el barrido de altura (tarde)</h3>
-<div class="outline-text-3" id="text-org7b96ee8">
+<div id="outline-container-orgcb291c3" class="outline-3">
+<h3 id="orgcb291c3">[12:39] Forzado único para el barrido de altura (tarde)</h3>
+<div class="outline-text-3" id="text-orgcb291c3">
 <ul class="org-ul">
 <li>El usuario decidió medir en cada altura los dos forzados con una sola curva.</li>
 <li>Archivo: <code>Día 2/Curvas forzado/bonneton_180s_espera_30s_muchos_forzados_308s/617640ms_…csv</code> (también en el pendrive, <code>Curvas_jonswap/</code>). Son 15442 puntos con dt 0,04 s: <b>617 640 ms</b>.</li>
@@ -2859,9 +2860,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-org166c982" class="outline-3">
-<h3 id="org166c982">[13:39] Barrido de altura: plan</h3>
-<div class="outline-text-3" id="text-org166c982">
+<div id="outline-container-org9245cf7" class="outline-3">
+<h3 id="org9245cf7">[13:39] Barrido de altura: plan</h3>
+<div class="outline-text-3" id="text-org9245cf7">
 <ul class="org-ul">
 <li>Queda agua en el tanque solo para subir 0,8 cm de cuba (~12,3 L), así que el máximo es ~4,75 cm desde 3,95. El usuario empieza llenando y después va vaciando.</li>
 <li>Pasos de 0,2 cm de cuba = 3,07 L = 2,3 cm de tanque. (Corrección: antes dije por error 23–31 L por paso.)</li>
@@ -2870,9 +2871,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-org7f229e2" class="outline-3">
-<h3 id="org7f229e2">[13:53] Protocolo automático para el barrido de altura</h3>
-<div class="outline-text-3" id="text-org7f229e2">
+<div id="outline-container-org555df32" class="outline-3">
+<h3 id="org555df32">[13:53] Protocolo automático para el barrido de altura</h3>
+<div class="outline-text-3" id="text-org555df32">
 <ul class="org-ul">
 <li><code>Día 2/Análisis/vigilar_barrido.py</code> vigila <code>Medicions Dia 2/</code> en el pendrive. Con cada <code>.bin</code> completo (tamaño = scans × canales × 2):
 <ul class="org-ul">
@@ -2885,9 +2886,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-org0e6156e" class="outline-3">
-<h3 id="org0e6156e">[14:02] Barrido: segunda altura medida</h3>
-<div class="outline-text-3" id="text-org0e6156e">
+<div id="outline-container-org976bbbb" class="outline-3">
+<h3 id="org976bbbb">[14:02] Barrido: segunda altura medida</h3>
+<div class="outline-text-3" id="text-org976bbbb">
 <ul class="org-ul">
 <li>El usuario ajustó (apretó) los sensores 1 y 2 para que no se suelten. En principio no se movieron. Si en la calibración de reposos S1 o S2 muestran un salto entre antes y después, viene de acá.</li>
 <li>Con más agua hay bastantes más rebotes (reflexiones). Pueden molestar en el análisis: energía reflejada que vuelve sobre los sensores y más seiche.</li>
@@ -2895,9 +2896,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfe01b36" class="outline-3">
-<h3 id="orgfe01b36">[14:15] Barrido: altura 2 (<code>Custom_combinado_altura_2</code>, 4,525 cm, h<sub>S1</sub> = 1,38 cm)</h3>
-<div class="outline-text-3" id="text-orgfe01b36">
+<div id="outline-container-org6975473" class="outline-3">
+<h3 id="org6975473">[14:15] Barrido: altura 2 (<code>Custom_combinado_altura_2</code>, 4,525 cm, h<sub>S1</sub> = 1,38 cm)</h3>
+<div class="outline-text-3" id="text-org6975473">
 <ul class="org-ul">
 <li>ω<sub>ν</sub> S1: Bonneton 23,5 ± 1,5 (R² 0,961), muchos forzados 20,4 ± 1,0 (R² 0,989). Contra 3,95 cm (h<sub>S1</sub> 0,80; Bonneton 26,1, muchos/Triangulos 27,2), el exponente da ≈ −0,2 con Bonneton y ≈ −0,5 con muchos forzados. Son solo 2 puntos.</li>
 <li>Con más agua hay más rebotes: el ajuste del Bonneton empeora un poco y el rango automático se estira hasta 120 rad/s.</li>
@@ -2912,9 +2913,9 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf618b08" class="outline-3">
-<h3 id="orgf618b08">[14:27] Barrido: alturas 3 y 4, paleta</h3>
-<div class="outline-text-3" id="text-orgf618b08">
+<div id="outline-container-org0e7824d" class="outline-3">
+<h3 id="org0e7824d">[14:27] Barrido: alturas 3 y 4, paleta</h3>
+<div class="outline-text-3" id="text-org0e7824d">
 <ul class="org-ul">
 <li>Altura 3 (<code>Custom_combinado_altura_3</code>, ~4,45 cm, 647 s): el primer intento de análisis quedó cortado (al expirar el monitor se cortó también el vigilante). Se relanza; ahora el vigilante corre con nohup (log en <code>Análisis/vigilante.log</code>).</li>
 <li>Altura 4 (<code>Custom_combinado_altura_4</code>, midiéndose): nivel <b>~4,275 cm</b>. Al principio el usuario estimó 4,30–4,35.</li>
@@ -2923,13 +2924,25 @@ Orden real: 8 = <code>Bonneton_h3_5_395</code> (17:56, tramo 55–630 s) y 9 = <
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd5e5386" class="outline-3">
-<h3 id="orgd5e5386">[14:31] Barrido: resultado de la altura 3 (4,45 cm, h<sub>S1</sub> 1,30 cm)</h3>
-<div class="outline-text-3" id="text-orgd5e5386">
+<div id="outline-container-org9856837" class="outline-3">
+<h3 id="org9856837">[14:31] Barrido: resultado de la altura 3 (4,45 cm, h<sub>S1</sub> 1,30 cm)</h3>
+<div class="outline-text-3" id="text-org9856837">
 <ul class="org-ul">
 <li>ω<sub>ν</sub> S1: Bonneton 22,2 ± 1,3 (R² 0,981), muchos forzados 20,8 ± 0,8 (R² 0,991). Hm0 S1: 6,6 mm (Bonneton), 8,5 mm (muchos).</li>
 <li>Exponente con 3 puntos (h<sub>S1</sub> 0,80–1,38): Bonneton a = −0,24 ± 0,19, muchos forzados a = <b>−0,55 ± 0,12</b>. Con muchos forzados es compatible con −1/2 e incompatible con −2.</li>
 <li><b>Calibración por reposos: no funciona.</b> Entre 4,525 y 4,45 la fase de reposo cambia con el <b>signo opuesto</b> al de la calibración del Día 1 y con magnitud equivalente a 2–4 mm, distinta en cada sensor; el cambio de nivel fue 0,75 mm. Domina una deriva lenta de la fase entre mediciones (~0,01 rad en 15 min: ¿temperatura, generador, sensores tocados?), no el nivel. Para h se usa la regla. Si hace falta la calibración, conviene hacerla aparte con escalones rápidos dentro de una sola medición, como el Día 1.</li>
+<li>[14:34] Foto altura 4: <code>Día 2/Fotos regla/regla_altura_4.jpg</code>. La banda de la superficie va de 4,19 a 4,31 (centro ~4,25); coherente con el ~4,275 leído.</li>
+<li>[14:36] Altura 5: nivel ~4,05 cm.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org95f1332" class="outline-3">
+<h3 id="org95f1332">[14:40] Barrido: resultado de la altura 4 (4,275 cm, h<sub>S1</sub> 1,13 cm)</h3>
+<div class="outline-text-3" id="text-org95f1332">
+<ul class="org-ul">
+<li>ω<sub>ν</sub> S1: Bonneton 23,8 ± 1,2 (R² 0,984), muchos forzados 23,5 ± 1,4 (R² 0,989). Hm0 S1 6,1 mm. Ruido de reposo ≤ 0,15 mm. Es la primera medición con la paleta ajustada (solo en los muchos forzados).</li>
+<li>Exponente en S1 con 4 alturas (h 0,80–1,38 cm): Bonneton a = −0,25 ± 0,19, muchos forzados a = <b>−0,56 ± 0,12</b>.</li>
+<li>h local = nivel de la regla − 0,035·x (S1 x = 90 → fondo 3,15 cm). Incertezas: inclinación de la cuba, posiciones de los sensores, forma real de la rampa y cero de la regla. Dan un corrimiento constante δ que afecta el exponente. Propuesta: medir directamente la profundidad en S1 una vez.</li>
 </ul>
 </div>
 </div>
