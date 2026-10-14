@@ -907,3 +907,14 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - El exponente libre con muchos forzados va de −0,53 (fondo 3,15) a −0,39 (3,40), o −0,48 sin la altura 6.
   - Con Bonneton el exponente no llega a −0,5 para ningún fondo (≥ −0,26).
 - El usuario mide la altura con la regla casi al final de la cuba (cerca de la playa y de S1), así que la inclinación de la cuba pesa poco en S1.
+- [15:24] Foto altura 7: =Día 2/Fotos regla/regla_altura_7.jpg=. La banda va de 3,62 a 3,73 (centro ~3,68); coherente con el 3,7 leído.
+
+** [15:26] Fondo de S1 medido de nuevo: *3,20 cm*
+- El usuario lo volvió a medir con calma: la rampa en S1 está a 3,20 cm (no 3,4). Coincide con el óptimo del colapso con muchos forzados (3,19 cm, χ²_red 0,60) y está cerca del esquema (3,15). Se actualiza =Análisis/fondo_sensores.json=.
+- [15:31] Foto del fondo en S1: =Día 2/Fotos regla/fondo_S1.jpg= (regla apoyada en el fondo de la cuba, ~107 px/cm). El borde de la rampa cae en ~3,2 cm, lo que confirma la medición.
+
+** [15:32] Barrido: resultado de la altura 7 (3,7 cm, h_S1 0,50 cm con fondo 3,20)
+- ω_ν S1: Bonneton 31,1 ± 1,5 (R² 0,983), muchos forzados 29,5 ± 0,9 (R² 0,988). Hm0 S1 4,2 mm. Ruido de reposo ≤ 0,17 mm.
+- Con 7 alturas (h_S1 0,50–1,325 cm): Bonneton a = −0,32 ± 0,06, muchos forzados a = −0,39 ± 0,04.
+- ω_ν √(h/g) con muchos forzados: 0,67 / 0,73 / 0,75 / 0,82 / 0,78 / 0,74 / 0,75 (de h chico a h grande). Casi constante (~0,75) salvo el h más chico. Con Bonneton crece con h (0,67 → 0,86).
+- Calibración: S3 sigue lineal (rms 0,41 mm); S1 (3,0 mm) y S2 (2,1 mm) empeoran con los niveles bajos (¿no linealidad de S1 casi seco? a revisar).
