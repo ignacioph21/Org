@@ -841,3 +841,15 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - con la paleta en 0 (segundo reposo) el nivel queda ~1,5 mm más alto y sin asentar, así que el segundo reposo se excluye de la calibración.
 - *Calibración:* la pendiente entre la altura 1 (mañana) y la 2 sale 2–3 veces menor que la del Día 1, y distinta en cada sensor. Entre medio se apretaron S1 y S2 y se reinició el generador (a confirmar que quedó en la misma frecuencia). La medición de la mañana se excluye del ajuste; se calibra solo con el primer reposo de las mediciones de la tarde.
 - =Triangulos= (3,95, sin reposo) se suma al PDF vivo como punto de muchos forzados en ω_ν(h).
+- [14:19] Altura 3: nivel ~4,45 cm (lo dijo el usuario). Foto =Día 2/Fotos regla/regla_altura_3.jpg=: el borde inferior de la banda da 4,40, el centro 4,46 y el contacto superior 4,51. Fotos renombradas como =regla_altura_N.jpg=.
+
+** [14:27] Barrido: alturas 3 y 4, paleta
+- Altura 3 (=Custom_combinado_altura_3=, ~4,45 cm, 647 s): el primer intento de análisis quedó cortado (al expirar el monitor se cortó también el vigilante). Se relanza; ahora el vigilante corre con nohup (log en =Análisis/vigilante.log=).
+- Altura 4 (=Custom_combinado_altura_4=, midiéndose): nivel *~4,275 cm*. Al principio el usuario estimó 4,30–4,35.
+- Calibración: se usa el *primer reposo* (indicación del usuario).
+- *La paleta de acrílico del motor a veces toca la pared de la cuba.* El usuario la ajustó durante la altura 4, en el reposo previo a los muchos forzados (la espera con la paleta en 0). En la altura 4, el Bonneton es con la paleta posiblemente rozando y los muchos forzados ya con la paleta ajustada. Las alturas anteriores pueden haber tenido roces.
+
+** [14:31] Barrido: resultado de la altura 3 (4,45 cm, h_S1 1,30 cm)
+- ω_ν S1: Bonneton 22,2 ± 1,3 (R² 0,981), muchos forzados 20,8 ± 0,8 (R² 0,991). Hm0 S1: 6,6 mm (Bonneton), 8,5 mm (muchos).
+- Exponente con 3 puntos (h_S1 0,80–1,38): Bonneton a = −0,24 ± 0,19, muchos forzados a = *−0,55 ± 0,12*. Con muchos forzados es compatible con −1/2 e incompatible con −2.
+- *Calibración por reposos: no funciona.* Entre 4,525 y 4,45 la fase de reposo cambia con el *signo opuesto* al de la calibración del Día 1 y con magnitud equivalente a 2–4 mm, distinta en cada sensor; el cambio de nivel fue 0,75 mm. Domina una deriva lenta de la fase entre mediciones (~0,01 rad en 15 min: ¿temperatura, generador, sensores tocados?), no el nivel. Para h se usa la regla. Si hace falta la calibración, conviene hacerla aparte con escalones rápidos dentro de una sola medición, como el Día 1.
