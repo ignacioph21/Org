@@ -827,3 +827,7 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - corre =analisis_rapido.py --combinado=;
   - regenera =Análisis/barrido_vivo.pdf= (abierto en Evince, se recarga solo): ω_ν(h) de S1 (Bonneton y muchos forzados), ω_ν/√(g/h) y calibración φ_reposo contra nivel de los tres sensores con residuos.
 - Alertas automáticas: ruido de reposo > 0,5 mm (¿generador apagado?), R² del Bonneton en S1 < 0,95, o sin ajuste.
+
+** [14:02] Barrido: segunda altura medida
+- El usuario ajustó (apretó) los sensores 1 y 2 para que no se suelten. En principio no se movieron. Si en la calibración de reposos S1 o S2 muestran un salto entre antes y después, viene de acá.
+- Con más agua hay bastantes más rebotes (reflexiones). Pueden molestar en el análisis: energía reflejada que vuelve sobre los sensores y más seiche.
