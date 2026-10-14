@@ -17,41 +17,657 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1be6001">Referencias</a></li>
-<li><a href="#org71bf96b">2026-10-08</a>
+<li><a href="#org9fab7b6">Referencias</a></li>
+<li><a href="#org90b83a0">2026-10-08</a>
 <ul>
-<li><a href="#org4d42866">[09:45]</a></li>
-<li><a href="#org921f51f">[09:47]</a></li>
+<li><a href="#org99102aa">[09:45]</a></li>
+<li><a href="#org968e960">[09:47]</a></li>
+<li><a href="#org7c21ad9">[10:22] Driver PDAQ Linux</a></li>
+<li><a href="#org771634a">[17:00] Cierre del día — dónde quedamos (Driver PDAQ Linux)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1be6001" class="outline-2">
-<h2 id="org1be6001">Referencias</h2>
-<div class="outline-text-2" id="text-org1be6001">
+<div id="outline-container-org9fab7b6" class="outline-2">
+<h2 id="org9fab7b6">Referencias</h2>
+<div class="outline-text-2" id="text-org9fab7b6">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org71bf96b" class="outline-2">
-<h2 id="org71bf96b">2026-10-08</h2>
-<div class="outline-text-2" id="text-org71bf96b">
+<div id="outline-container-org90b83a0" class="outline-2">
+<h2 id="org90b83a0">2026-10-08</h2>
+<div class="outline-text-2" id="text-org90b83a0">
 </div>
-<div id="outline-container-org4d42866" class="outline-3">
-<h3 id="org4d42866">[09:45]</h3>
-<div class="outline-text-3" id="text-org4d42866">
+<div id="outline-container-org99102aa" class="outline-3">
+<h3 id="org99102aa">[09:45]</h3>
+<div class="outline-text-3" id="text-org99102aa">
 <p>
 ESta semana fue el workshop de interdisciplinary compleyx systems para el cual preparé el póster durante la semana pasada. LA otra semana nos dieron acceso a CLaude TEam que va a estar escribiendo la mayoría de los logs.
 </p>
 </div>
 </div>
-<div id="outline-container-org921f51f" class="outline-3">
-<h3 id="org921f51f">[09:47]</h3>
-<div class="outline-text-3" id="text-org921f51f">
+<div id="outline-container-org968e960" class="outline-3">
+<h3 id="org968e960">[09:47]</h3>
+<div class="outline-text-3" id="text-org968e960">
 <p>
 Ahora está haciendo funcionar la placa en mint.
 </p>
+</div>
+</div>
+<div id="outline-container-org7c21ad9" class="outline-3">
+<h3 id="org7c21ad9">[10:22] Driver PDAQ Linux</h3>
+<div class="outline-text-3" id="text-org7c21ad9">
+<p>
+Log del trabajo con Claude para usar la PersonalDaq/3001 en Linux (Mint) sin Windows ni <code>DaqX64.dll</code>. Informe prolijo en PDF: <a href="file:///home/ignacio/Documentos/pdaq/V3/validacion/informe/informe_driver_pdaq_linux.pdf">file:///home/ignacio/Documentos/pdaq/V3/validacion/informe/informe_driver_pdaq_linux.pdf</a>
+</p>
+</div>
+<div id="outline-container-orgc53f797" class="outline-4">
+<h4 id="orgc53f797">Resultado</h4>
+<div class="outline-text-4" id="text-orgc53f797">
+<ul class="org-ul">
+<li>Driver en espacio de usuario con la <b>misma API que PyIOTech</b>: los scripts del laboratorio corren sin cambios.</li>
+<li>Copia de trabajo: <code>~/Documentos/pdaq/Controlador_Linux/</code> (copia de &ldquo;Software Compu Sala/Controlador&rdquo;, cada <code>PyIOTech</code> es un symlink al driver nuevo).</li>
+<li>Probados con la placa: <code>measure_interface.py</code> (con y sin ganancias, modos finito e infinito) y <code>real_time_grapher_más_puntos.py</code> (multicanal, lock-in).</li>
+<li><p>
+Uso:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="font-weight: bold; text-decoration: underline;">cd</span> ~/Documentos/pdaq/Controlador_Linux
+../pdaq-env/bin/python measure_interface.py
+</code></pre>
+</div></li>
+<li>Código: <code>~/Documentos/pdaq/V3/PyIOTech/</code> (<code>daq.py</code> API, <code>_pdaq3k.py</code> USB, <code>daqh.py</code> constantes). README en <code>~/Documentos/pdaq/V3/README.md</code>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf977732" class="outline-4">
+<h4 id="orgf977732">Cómo se resolvió (para referencia futura)</h4>
+<div class="outline-text-4" id="text-orgf977732">
+<ul class="org-ul">
+<li><b>Por qué no andaba antes:</b> la placa es un Cypress FX2LP que enumera <b>sin firmware</b> (<code>0622:0470</code>, bcdDevice <code>0x2C01</code>). En Windows <code>pdaq3kld.sys</code> le carga el firmware del 8051 antes de que USBPcap lo vea, por eso no aparecía en las capturas. Extraje el firmware de <code>pdaq3kld.sys</code> (tabla de selección por bcdDevice <code>0x2Cxx</code> → &ldquo;PDaq3K Series Loader&rdquo;) → <code>pdaq3k_fx2.ihx</code>. Se carga con request <code>0xA0</code> y la placa re-enumera como <code>0622:2c01</code>.</li>
+<li><b>FPGA:</b> Spartan-3 <code>3s400ft256</code>, bitstream de 212392 B por <code>0xB2</code> + 104 × <code>0xB3</code> (último bloque de 1448 B sin relleno; V2.2 lo rellenaba con <code>0xFF</code>, error).</li>
+<li><b>Protocolo:</b> <code>0xB4</code> escribe/lee registros de la FPGA (<code>wIndex</code> = registro). Mapa de registros con nombres sacado de <code>pdaq3k.sys</code> (función de nombres en <code>0x1df28</code>): 0 AcqControl, 1 ScanListFIFO, 2/3/5 divisor del pacer (48 MHz/(N+1)), 15 VariableConvRate (sólo LCR; Windows escribe basura no inicializada), 16 y 28–31 DAC, 88 DmaControl, 89 TrigControl. Datos uint16 por bulk <code>0x82</code>.</li>
+<li><b>Scan list:</b> entrada de 32 bits = settle&lt;&lt;29 | ganancia&lt;&lt;24 | diferencial 0x400000 | canal&lt;&lt;4 | último 0x4 | 0x2 (de <code>adcSetScanSeq3K</code> en <code>pdaq3k.sys</code>).</li>
+<li><b>Calibración de fábrica:</b> EEPROM (<code>0xB8</code>) = header <code>40010001</code> + por rango x1..x100 tres float32 (m₊−1, m₋−1, b[V]). La DLL usa m = 1+(m₊−1+m₋−1)/2 y V = m·V<sub>crudo</sub> + b (de <code>ConvertExpCalConstantToCalConstant</code> en <code>DaqX64.dll</code>). Confirmado con los barridos de CC del AFG. Activada por defecto; <code>daqDevice(..., calibrate=False)</code> da cuentas crudas.</li>
+<li>Capturas USBPcap originales: pendrive KINGSTON, <code>Posgrado/Pruebas Placa PS3K/Pruebas definitivas/</code>. Herramientas para reproducirlas: <code>V3/pcap_to_ops.py</code>, <code>V3/replay.py</code>.</li>
+<li>Reglas udev instaladas: <code>/etc/udev/rules.d/99-pdaq3001.rules</code> (placa, 0470 y 2c01) y <code>99-tektronix-usbtmc.rules</code> (AFG).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaabd5db" class="outline-4">
+<h4 id="orgaabd5db">Banco de pruebas</h4>
+<div class="outline-text-4" id="text-orgaabd5db">
+<p>
+AFG3021B por USBTMC (<code>/dev/usbtmc0</code>) a CH0 y CH1 en diferencial, misma señal en ambos. Control automático con límites por software (<code>V3/validacion/afg.py</code>): High Z obligatorio, |offset|+Vpp/2 ≤ 8 V, verificación por lectura antes de habilitar la salida. Batería: <code>V3/validacion/pruebas_afg.py</code>; figuras: <code>V3/validacion/figuras_validacion.py</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org14fdd7b" class="outline-4">
+<h4 id="org14fdd7b">Resultados</h4>
+<div class="outline-text-4" id="text-org14fdd7b">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Prueba</th>
+<th scope="col" class="org-left">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Arranque en frío</td>
+<td class="org-left">5,3 s (firmware FX2 + FPGA); aperturas siguientes 0,12 s</td>
+</tr>
+
+<tr>
+<td class="org-left">Caudal</td>
+<td class="org-left">999 996 muestras/s sostenidas 20 s</td>
+</tr>
+
+<tr>
+<td class="org-left">Continuidad</td>
+<td class="org-left">10 M muestras a 1 MS/s a disco, desvío máx 17 ns (≪ 1 µs)</td>
+</tr>
+
+<tr>
+<td class="org-left">Linealidad x1</td>
+<td class="org-left">residuo &lt; 0,8 mV en ±8 V</td>
+</tr>
+
+<tr>
+<td class="org-left">Ganancia con calibración</td>
+<td class="org-left">+0,22 a +0,49 % vs AFG en x1..x100 (crudo: −0,3 a −1,7 %)</td>
+</tr>
+
+<tr>
+<td class="org-left">Offset con calibración</td>
+<td class="org-left">−7,1 ± 0,2 mV en CH0 (crudo: −7,2 a +2,1 mV)</td>
+</tr>
+
+<tr>
+<td class="org-left">Pasa altos</td>
+<td class="org-left">no se ve con el AFG (escalón de 2 V: deriva 0,01 mV en 14 s)</td>
+</tr>
+
+<tr>
+<td class="org-left">Respuesta en amplitud</td>
+<td class="org-left">plana ±0,05 % de 0,1 a 100 Hz; −2,3 % a 200 kHz</td>
+</tr>
+
+<tr>
+<td class="org-left">Retardo CH1−CH0</td>
+<td class="org-left">1,00 µs (≥ 100 kHz), ~1,15 µs entre 100 Hz y 3 kHz</td>
+</tr>
+
+<tr>
+<td class="org-left">Frecuencia</td>
+<td class="org-left">1000,0071 Hz con el AFG en 1000 Hz (7 ppm)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Transferencia en CC y no linealidad:
+</p>
+
+<div id="org1d5144a" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig01_cc_linealidad.png" alt="fig01_cc_linealidad.png" />
+</p>
+</div>
+
+<p>
+Calibración de fábrica aplicada (la dispersión entre rangos baja de 1,4 % a 0,27 %; el remanente común de +0,4 % y −7 mV es compatible con la exactitud del AFG, ~1 %):
+</p>
+
+<div id="org21ec3f2" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig02_calibracion.png" alt="fig02_calibracion.png" />
+</p>
+</div>
+
+<p>
+Seno de 4 Vpp a 1 MS/s y continuidad de 10 s (una muestra perdida = salto de 1 µs):
+</p>
+
+<div id="org777e799" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig06_seno_1MSs.png" alt="fig06_seno_1MSs.png" />
+</p>
+</div>
+
+<div id="orgb702abd" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig07_continuidad.png" alt="fig07_continuidad.png" />
+</p>
+</div>
+
+<p>
+Caudal USB:
+</p>
+
+<div id="orgab2a49e" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig08_caudal.png" alt="fig08_caudal.png" />
+</p>
+</div>
+
+<p>
+Búsqueda del pasa altos (escalones con la salida siempre prendida y respuesta en frecuencia):
+</p>
+
+<div id="orgb4b67da" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig03_escalones.png" alt="fig03_escalones.png" />
+</p>
+</div>
+
+<div id="org22e8bb7" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig04_respuesta_frecuencia.png" alt="fig04_respuesta_frecuencia.png" />
+</p>
+</div>
+
+<p>
+Retardo entre canales (importante para el lock-in; <code>Formatter.py</code> ya suma <code>i*1e-6</code> por canal):
+</p>
+
+<div id="org69963ed" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig05_retardo_canales.png" alt="fig05_retardo_canales.png" />
+</p>
+</div>
+
+<p>
+Ruido impulsivo externo, coincidente en ambos canales (picos de hasta 250 mV con el generador conectado; con entradas abiertas 0,6 mV rms). En x100 satura ~0,5 % de las muestras:
+</p>
+
+<div id="org93dfdca" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig09_interferencia.png" alt="fig09_interferencia.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5ad4193" class="outline-4">
+<h4 id="org5ad4193">1 MS/s total (2 × 500 kHz, settle 1 µs) y resampleo con FDF — seno de 50 kHz, 4 Vpp</h4>
+<div class="outline-text-4" id="text-org5ad4193">
+<p>
+Configuración del lock-in. Análisis con las funciones del lab sin modificar (<code>get_converted_data</code>, <code>resample</code>, <code>get_amplitude_and_phase</code>, FDF de <code>pseudopyroomacoustics.py</code>). Script: <code>V3/validacion/analisis_50kHz_fdf.py</code>.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Medición</th>
+<th scope="col" class="org-left">Sin corrección (t0 = 0)</th>
+<th scope="col" class="org-left">Con FDF (t0 = −0,5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Desfase CH1−CH0 (ajuste senoidal)</td>
+<td class="org-left">18,167°</td>
+<td class="org-left">0,166°</td>
+</tr>
+
+<tr>
+<td class="org-left">Fase del lock-in (Butter 100 Hz)</td>
+<td class="org-left">18,166° ± 0,006°</td>
+<td class="org-left">0,166° ± 0,006°</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>El FDF corrige el retardo de multiplexado. El residuo de 0,17° es real: el retardo entre canales es 1,0093 ± 0,0003 µs (9 ns más que 1 µs), estable en 5 s.</li>
+<li>Ganancia del FDF a 50 kHz: 0,9996.</li>
+<li>Continuidad a 1 MS/s total: 2,5 M scans a disco en 5 s, desvío máx 2 ns (un scan perdido = 2 µs).</li>
+<li><b>Ojo, amplitud del lock-in:</b> da 1,974 V contra 2,020 V de CH1 (−2,3 %). <code>reconstruct_reference_and_quadrature</code> normaliza la referencia con <code>max(reference)</code>, que incluye los picos del ruido impulsivo. Normalizar con <code>Ar</code> (FFT) o con la envolvente media de Hilbert evitaría el sesgo.</li>
+<li><b>Ojo, CH0 ≠ CH1 en frecuencia:</b> con la misma señal CH0 cae respecto de CH1 +0,02 % a 1 kHz, +0,44 % a 10 kHz, +0,9 % a 30–50 kHz, +1,1 % a 100–200 kHz. Pasa también con CH0 solo (no es el multiplexado). Falta ver si es la placa o el cableado → intercambiar cables. Importa para cocientes de amplitud en el lock-in.</li>
+<li>Espectro: SFDR 57 dB limitado por un tono <b>externo</b> de 121,54 kHz (−57 dBc) y su armónico en 243 kHz, en ambos canales (¿fuente conmutada?), y 50 Hz a −68 dBc.</li>
+</ul>
+
+
+<div id="org012b033" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig10_50kHz_fdf_muestras.png" alt="fig10_50kHz_fdf_muestras.png" />
+</p>
+</div>
+
+<div id="org82f979a" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig12_50kHz_lockin.png" alt="fig12_50kHz_lockin.png" />
+</p>
+</div>
+
+<div id="org17e5305" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig13_50kHz_continuidad.png" alt="fig13_50kHz_continuidad.png" />
+</p>
+</div>
+
+<div id="org37c5be4" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig14_ch0_vs_ch1_frecuencia.png" alt="fig14_ch0_vs_ch1_frecuencia.png" />
+</p>
+</div>
+
+<div id="orgda1b403" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig11_50kHz_espectro.png" alt="fig11_50kHz_espectro.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org72006f3" class="outline-4">
+<h4 id="org72006f3">RLC serie y lock-in</h4>
+<div class="outline-text-4" id="text-org72006f3">
+<p>
+Circuito en protoboard: AFG(+) → L (10 mH) → R (360 Ω) → C (560 pF) → AFG(−). CH0 = referencia en bornes del AFG; CH1 diferencial sobre R (HI del lado de L, LO del lado de C → R <b>no</b> está a masa: los bornes de CH1 quedan a ~2·V<sub>ref</sub> cerca de resonancia, ojo con el modo común).
+</p>
+
+<div id="orgba63bc8" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/circuito_rlc_zin.png" alt="circuito_rlc_zin.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li>Barrido 20–150 kHz a 0,2 Vpp (amplitud baja por el modo común), 2 canales a 500 kHz, x10 ambos. Scripts: <code>V3/validacion/rlc_barrido.py</code>, <code>analisis_zin_rlc.py</code>.</li>
+<li>Incertezas por punto: dispersión de H entre 20 bloques de 10 ms (mediana 0,06 %). Script: <code>V3/validacion/figura_rlc.py</code>.</li>
+<li>RLC serie con pérdidas: χ²<sub>red</sub> ≈ 10⁵ (no describe la fase a baja f: +53° en vez de → +90°).</li>
+<li><p>
+Modelo completo: + capacitancia propia de L (C<sub>L</sub>) + fuga de modo común en CH1, V<sub>CH1</sub> = (V<sub>A</sub>−V<sub>B</sub>) + k·(V<sub>A</sub>+V<sub>B</sub>)/2, k = k₀ + jωτ<sub>k</sub> → χ²<sub>red</sub> = 11,6, residuos &lt; 0,4 %:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">L = 8,27 ± 0,03 mH</td>
+<td class="org-left">C = 751 ± 2 pF</td>
+<td class="org-left">R<sub>L</sub> = 1141 ± 4 Ω</td>
+<td class="org-left">C<sub>L</sub> = 10,1 ± 0,2 pF</td>
+</tr>
+
+<tr>
+<td class="org-left">k₀ = 0,01265 ± 0,00002 (CMRR ≈ 38 dB)</td>
+<td class="org-left">τ<sub>k</sub> = −80,7 ± 0,7 ns</td>
+<td class="org-left">f₀ = 63,862 ± 0,008 kHz</td>
+<td class="org-left">ρ(L,C) = −0,998</td>
+</tr>
+</tbody>
+</table>
+<p>
+Ojo: L y C muy anticorrelacionados → f₀ bien determinada, pero L y C individuales dependen del modelo (−17 % / +34 % vs nominal). Medir L y C con LCR. El &ldquo;27 kΩ ∥ 42 pF&rdquo; de antes era una descripción efectiva, descartada (Z<sub>in</sub> real abajo).
+</p></li>
+</ul>
+
+<div id="org66dcf54" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig16_rlc_barrido.png" alt="fig16_rlc_barrido.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><b>Lock-in del lab (<code>get_amplitude_and_phase</code>) vs ajuste senoidal de los mismos datos:</b>
+<ul class="org-ul">
+<li>Fase: ±0,13° (0,3° a 20 kHz con V<sub>R</sub> = 6 mVpp). Algoritmo sin sesgo con señales sintéticas: −0,1 % y &lt; 0,01° hasta 200 kHz.</li>
+<li>Amplitud: −42 % (!). <code>reconstruct_reference_and_quadrature</code> normaliza con <code>max(reference)</code> y CH0 tenía 18 mV rms de ruido impulsivo sobre 97 mV de amplitud. Con la mediana de |Hilbert| el sesgo desaparece hasta 60 kHz (sube a +7,5 % a 150 kHz). Mejor opción: normalizar con un ajuste por cuadrados mínimos a <code>fr</code>.</li>
+</ul></li>
+</ul>
+
+<div id="org4e7c147" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig17_lockin_errores.png" alt="fig17_lockin_errores.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd6e0aa1" class="outline-4">
+<h4 id="orgd6e0aa1">Impedancia de entrada (CH2 HI)</h4>
+<div class="outline-text-4" id="text-orgd6e0aa1">
+<p>
+Divisor R<sub>s</sub> = 388 kΩ (tester) del AFG(+) a CH2 HI, CH2 LO a masa (ver circuito). Z<sub>in</sub> = R<sub>s</sub>·H/(1−H). Script: <code>V3/validacion/zin_barrido.py</code>.
+</p>
+<ul class="org-ul">
+<li><b>R<sub>in</sub> = 46 ± 5 MΩ ∥ C<sub>in</sub> = 4,57 ± 0,03 pF</b> (incluye protoboard; C propia de R<sub>s</sub> 0,16 pF). La carga de la placa es despreciable → no explica lo del RLC.</li>
+<li>Nota: un primer barrido usó x10 en CH2 y <b>saturó</b> (CH2 ve ~99 % de la señal, no ~6 % como predecía el modelo de 27 kΩ). Dio &ldquo;582 kΩ&rdquo; y un &ldquo;retardo de 1,8 µs&rdquo; falsos → descartado. El script ahora aborta si hay muestras saturadas.</li>
+</ul>
+
+<div id="orgaa5f7cf" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig15_zin_ch2.png" alt="fig15_zin_ch2.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgef6a206" class="outline-4">
+<h4 id="orgef6a206">Comparación con el Apéndice B de la Tesis</h4>
+<div class="outline-text-4" id="text-orgef6a206">
+<p>
+Fuente de la Tesis clonada de GitHub en <code>~/Documentos/Manuscrito-Tesis-Licenciatura</code> (apéndices en <code>Entradas/apendice_00.tex</code> y <code>apendice_01.tex</code>). Datos crudos del Apéndice B: <code>Backup.../Placa PS3K/RLC Barrido/Versión 2.0/Barrido 2</code> (jun-2025, 2 canales a 500 kHz, x1, 5 Vpp). Reanálisis: <code>V3/validacion/tesis_reanalisis.py</code>, <code>comparacion_modelos.py</code>, <code>figura_tesis.py</code>.
+</p>
+<ul class="org-ul">
+<li>Base de tiempo de la Tesis OK: frecuencia medida = nominal +8 ppm (con 2 canales a 500 kHz no hay factor 2).</li>
+<li>Con σ<sub>H</sub> ≈ 0,01 % la diferencia de respuesta CH1/CH0 (~1 %) domina → corregida con C₁₀(f) medido hoy en la misma configuración.</li>
+<li>Ajustes (Tesis corregida / hoy): RLC serie χ²<sub>red</sub> 29281 / 109405; fenomenológico de la Tesis 2720 / 4286 con f<sub>c</sub> = 13,1 ± 1,4 / 9,4 ± 0,6 kHz; C<sub>L</sub> + modo común 69 / 11,6. Se recuperan f₀ = 75–76 kHz y Q ≈ 2 de la Tesis.</li>
+<li>Misma fenomenología en ambos circuitos. El modo común la describe mejor, pero en el circuito de la Tesis pide k₀ ≈ 10 % y C<sub>L</sub> &lt; 0 (no físico) → mecanismo NO establecido. El término −arctan(f<sub>c</sub>/f) de la Tesis es un atraso (un pasa altos sería +arctan).</li>
+<li>&ldquo;Barrido R a Tierra&rdquo; de la Tesis sólo cubre 60–90 kHz (100 scans/archivo): no discrimina. Falta un barrido con R a masa por debajo de 40 kHz.</li>
+</ul>
+
+<div id="org901ed9c" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig18_tesis_rlc.png" alt="fig18_tesis_rlc.png" />
+</p>
+</div>
+
+<p>
+El PDF tiene ahora una sección &ldquo;Física y modelos&rdquo; con las ecuaciones de todo: calibración, temporización, ajuste senoidal e incertezas, FDF y lock-in, RLC, capacitancia propia de la bobina, modo común, Z<sub>in</sub> y transferencia entre canales.
+</p>
+</div>
+</div>
+<div id="outline-container-org939994e" class="outline-4">
+<h4 id="org939994e">Pruebas de la hipótesis del modo común (resultado: descartada)</h4>
+<div class="outline-text-4" id="text-org939994e">
+<p>
+Esquemas: <code>V3/validacion/circuitos/prueba1_cmrr.pdf</code>, <code>prueba2_r_a_masa.pdf</code>. Scripts: <code>cmrr_barrido.py</code>, <code>rlc_r_masa.py</code>.
+</p>
+<ul class="org-ul">
+<li><b>Prueba 1, CH1 HI y LO juntos al AFG(+):</b> CMRR = 80 dB (k = 0,010 %) hasta 10 kHz, 70 dB a 50 kHz, 56 dB a 150 kHz. El ajuste pedía k ≈ 1,3 % → <b>el modo común NO es la causa</b>. (El término del modelo actúa como descripción efectiva de &ldquo;algo en fase con V<sub>ref</sub> que llega a CH1&rdquo;.)</li>
+<li><b>Prueba 2, R a masa (L → C → R → masa, CH1 LO a masa):</b> RLC casi ideal. Fase +88,5° a 10 kHz y −88,4° a 150 kHz; pico 0,53 (antes 0,17); resonancia ≈ 69,5 kHz y angosta (Q ≈ 7). <b>La anomalía desaparece</b>: tiene que ver con medir con CH1 sobre nodos no a masa, mecanismo sin identificar.</li>
+<li>Probé un modelo de &ldquo;inyección de carga del multiplexor&rdquo; (R equivalente desde V0 a los bornes de CH1): no ajusta en ninguno de los dos circuitos → descartado también.</li>
+<li>Aun con R a masa, el RLC serie deja residuos de hasta 14° cerca de la resonancia (σ por punto 0,004 %). Ideas: no linealidad de la bobina (probar a menor amplitud), pérdidas dependientes de f (modelos simples no alcanzan).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga8aac31" class="outline-4">
+<h4 id="orga8aac31">Propuesta para el sensor: medir V<sub>C</sub> (un canal por sensor, contra masa)</h4>
+<div class="outline-text-4" id="text-orga8aac31">
+<ul class="org-ul">
+<li>Restricción: C (sensor) a masa y un canal por sensor. V<sub>R</sub> = jωRC·V<sub>C</sub> → misma info; fase corrida 90° exactos, misma ∂φ/∂C (~4° por 1 % de C en f0; ~0,8° a 10–15 % de f0).</li>
+<li>Tamaño: |V<sub>C</sub>/V<sub>0</sub>| = 1 a baja f y Q ≈ 7,4 en f0 (13× más que V<sub>R</sub>). Generador ≤ ~2,2 Vpp para |V<sub>C</sub>| ≤ 8 V. A sus máximos respectivos V<sub>C</sub> da ~1,7× más señal que V<sub>R</sub>.</li>
+<li>Pendiente: Prueba 3 (CH1 HI en la pata viva del sensor, LO a masa) para verificar que no reaparece la anomalía. Esquema: <code>V3/validacion/circuitos/prueba3_nodos.pdf</code>.</li>
+<li>PDF reorganizado en secciones autocontenidas (pregunta, física, método, resultado, conclusión); versión anterior en <code>informe_driver_pdaq_linux_v1.tex</code>.</li>
+</ul>
+
+<div id="org0580cd1" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig19_cmrr.png" alt="fig19_cmrr.png" />
+</p>
+</div>
+
+<div id="orgbd56c59" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig20_rlc_r_masa.png" alt="fig20_rlc_r_masa.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgce3b93b" class="outline-4">
+<h4 id="orgce3b93b">⚠ AVISO: posible error de conexionado en las últimas pruebas (2026-10-08, tarde)</h4>
+<div class="outline-text-4" id="text-orgce3b93b">
+<ul class="org-ul">
+<li>El barrido con el sensor en paralelo a C y el primer &ldquo;minuto de fase&rdquo; se hicieron <b>mal conectados</b> (confirmado por el usuario) → datos descartados en <code>V3/validacion/DESCARTADO_mal_conectado_*</code> y <code>fase_minuto/DESCARTADO_mal_conectado/</code>.</li>
+<li>El usuario sospecha que <b>las pruebas anteriores también pudieron estar mal conectadas</b>: Prueba 1 (CMRR, <code>cmrr_ch1/</code>), Prueba 2 (R a masa, <code>rlc_r_masa/</code>) y posiblemente la de Z<sub>in</sub> (<code>zin_ch2/</code>). <b>Sus conclusiones (CMRR = 80 dB descarta el modo común; con R a masa desaparece la anomalía; Z<sub>in</sub> = 46 MΩ ∥ 4,6 pF) quedan PENDIENTES DE VERIFICACIÓN</b> hasta revisar el cableado y repetirlas.</li>
+<li>Lo que no depende de esas conexiones sigue válido: validación con la misma señal en CH0 y CH1 (calibración, linealidad, continuidad, FDF), datos de la Tesis.</li>
+<li>Hallazgo independiente del cableado: el lock-in con <code>filter_mode</code>&rsquo;butter&rsquo;= y corte de 10 Hz a 500 kHz es numéricamente inestable (forma b,a) → diverge. <code>butter</code> es el default de <code>get_amplitude_and_phase</code> y <code>lock_in</code>. Arreglo: <code>sos</code> + <code>sosfiltfilt</code>. El modo <code>exponential</code> funciona.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org69dbc86" class="outline-4">
+<h4 id="org69dbc86">Sensor en paralelo a C, medición diferencial sobre R (bien conectado, v3)</h4>
+<div class="outline-text-4" id="text-org69dbc86">
+<ul class="org-ul">
+<li>Barrido 0,2 Vpp (<code>rlc_sensor_0.2Vpp_v3/</code>): RLC con fase 0° en ~54 kHz, pico |V<sub>R</sub>/V<sub>ref</sub>| = 0,136 en ~60 kHz; misma anomalía de baja f (+33° a 20 kHz). ⚠ CH0 lee hasta 0,27 Vpp con 0,2 Vpp programados (y 1,286 Vpp con 1 Vpp): imposible en bornes del AFG → revisar dónde está CH0.</li>
+<li>Minuto a 54 kHz, 1 Vpp, salida encendida a t = 0 (<code>fase_minuto/sensor_v2_54000Hz.*</code>, <code>lockin_bloques30.py</code>, <code>figura_fase_minuto.py</code>):
+<ul class="org-ul">
+<li><b>Hay una exponencial al encender:</b> fase +0,100 ± 0,002° con τ = 1,69 ± 0,06 s; |V<sub>R</sub>| +0,144 % con τ = 1,24 ± 0,03 s. |V<sub>ref</sub>| no la muestra (τ ≈ 7 s, mal definida) → no es la amplitud del generador.</li>
+<li>Después, deriva lenta de ~0,12° (sube hasta ~12 s y baja). Ruido de fase 0,008° por bloque de 10 ms.</li>
+<li>Lock-in del lab (bloques de 30 s, exponencial 10 Hz) reproduce lo mismo con un corrimiento de 0,17° (= 9 ns de retardo entre canales que el código supone 1 µs). Amplitud sesgada −8 % (normalización por max).</li>
+<li>El filtro exponencial del lock-in arranca de cero en cada bloque: transitorio propio de τ ≈ 50 ms (99 % a 170 ms) → no confundir con la exponencial física (la física es de 1–2 s y aparece en el ajuste senoidal crudo).</li>
+<li>¿Electrónica? Pendiente de discriminar: repetir el encendido con la MISMA señal en CH0 y CH1 (si aparece → placa) y con el RLC SIN sensor (si desaparece → sensor/agua). Candidatos físicos: calentamiento de R/L/sensor, polarización de los electrodos en el agua.</li>
+</ul></li>
+</ul>
+
+<div id="orgeec3d50" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig21_fase_minuto_sensor.png" alt="fig21_fase_minuto_sensor.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6ed32a4" class="outline-4">
+<h4 id="org6ed32a4">Exponencial de encendido con el sensor (sin sumergir) — búsqueda del origen</h4>
+<div class="outline-text-4" id="text-org6ed32a4">
+<p>
+<b>Versión del lock-in:</b> desde acá, SIEMPRE la más nueva y corregida: <code>Posgrado/Software Compu Sala/Pruebasa analizar/Analizador fase corregida/lock_in_numba_hilbert.py</code>, <code>lock_in(..., filter_mode</code>&rsquo;exponential&rsquo;, cut<sub>off</sub>=2000, trim<sub>output</sub>=True)= (trim n/N; la vieja de Faraday Sensor usa sqrt(n/N), mal). Descartar los primeros ~20 ms de cada bloque (arranque del filtro + borde del trim). Script: <code>V3/validacion/lockin_corregido.py</code>.
+</p>
+<ul class="org-ul">
+<li>10 Vpp, x1, 54 kHz, un minuto (<code>fase_minuto/sensor_x1_10Vpp_*</code>): la fase baja de 13,32° a 12,88°; dos exponenciales: 0,32° con τ = 1,0 s y 0,22° con τ ≈ 26 s; oscilación lenta de ~0,02° (período 1,2–1,6 s, sin identificar).</li>
+<li><p>
+Serie 1 / 2,5 / 5 / 7,5 / 10 Vpp (<code>serie_amplitudes/</code>, 20 s cada una, 15 s apagado entre medidas):
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">Vpp</td>
+<td class="org-left">fase final</td>
+<td class="org-left">Δφ del transitorio</td>
+<td class="org-left">τ rápido</td>
+<td class="org-left">τ lento</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">+20,04°</td>
+<td class="org-left">0,08°</td>
+<td class="org-left">0,8 s</td>
+<td class="org-left">~37 s</td>
+</tr>
+
+<tr>
+<td class="org-right">2,5</td>
+<td class="org-left">+19,17°</td>
+<td class="org-left">0,21°</td>
+<td class="org-left">0,6 s</td>
+<td class="org-left">9 s</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">+16,71°</td>
+<td class="org-left">0,43°</td>
+<td class="org-left">0,5 s</td>
+<td class="org-left">11 s</td>
+</tr>
+
+<tr>
+<td class="org-right">7,5</td>
+<td class="org-left">+14,27°</td>
+<td class="org-left">0,43°</td>
+<td class="org-left">0,4 s</td>
+<td class="org-left">6 s</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">+12,95°</td>
+<td class="org-left">0,50°</td>
+<td class="org-left">0,35 s</td>
+<td class="org-left">5 s</td>
+</tr>
+</tbody>
+</table></li>
+<li><b>La fase de equilibrio depende de la amplitud</b> (−7° de 1 a 10 Vpp) y ese cambio es <b>instantáneo</b> (&lt; 20 ms) → no es térmico: es una no linealidad (un componente cuyo valor depende de la tensión). El transitorio va en el mismo sentido y crece con la amplitud → probablemente el mismo mecanismo con relajación lenta (o calentamiento).</li>
+<li><b>Además, memoria de largo plazo:</b> a 1 Vpp la fase era −1,5° en la medición anterior y +20° en esta serie (minutos después, tras correr 10 Vpp).</li>
+<li>La placa queda prácticamente descartada para el efecto de amplitud: es lineal (0,004 %) y con la misma señal en ambos canales el cociente no depende de la amplitud.</li>
+<li>Candidato principal: el capacitor cerámico si es de clase II (X7R/Y5V: pierde capacidad con la tensión y tiene relajación dieléctrica de segundos; con 10 Vpp recibe ~13 Vpp). Otros: núcleo de la bobina, el propio sensor. Próximos pasos: ver qué tipo de capacitor es y reemplazarlo por C0G/NP0 o de film; o repetir la serie sin el sensor.</li>
+</ul>
+
+<div id="orgc526d59" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig23_lockin_fase_10Vpp.png" alt="fig23_lockin_fase_10Vpp.png" />
+</p>
+</div>
+
+<div id="orge48da69" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig24_serie_amplitudes.png" alt="fig24_serie_amplitudes.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4c1f1bd" class="outline-4">
+<h4 id="org4c1f1bd">τ en función de la amplitud</h4>
+<div class="outline-text-4" id="text-org4c1f1bd">
+<ul class="org-ul">
+<li>τ rápida (2 exp.): 0,76 ± 0,16 / 0,61 ± 0,20 / 0,50 ± 0,03 / 0,42 ± 0,03 / 0,35 ± 0,02 s para 1 / 2,5 / 5 / 7,5 / 10 Vpp → τ ∝ V<sup>(−0,50 ± 0,06)</sup> (2,5–10 Vpp). Con 1 exponencial: τ ∝ V<sup>(−0,45 ± 0,14)</sup>. Incertezas infladas por la correlación de residuos.</li>
+<li>Un calentamiento lineal (Newton) daría τ independiente de la amplitud (sólo cambia el tamaño, ∝ V²) → <b>el τ que baja con la amplitud va en contra de un efecto térmico simple</b> y a favor de una relajación activada por el campo en un componente no lineal.</li>
+<li><b>No discrimina capacitor vs bobina:</b> tanto un cerámico de clase II (dominios ferroeléctricos) como un núcleo de ferrita (desacomodación magnética) muestran relajaciones más rápidas a mayor campo, y ambos aumentan C o L con la amplitud (→ f0 baja → fase baja, como se ve). Prueba decisiva: cambiar C por C0G/NP0 o film (y/o la bobina por una de aire). Repetir la serie en orden inverso (10 → 1 Vpp) para descartar efectos de historia.</li>
+</ul>
+
+<div id="org73f88ca" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig25_tau_vs_amplitud.png" alt="fig25_tau_vs_amplitud.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc3d5a5e" class="outline-4">
+<h4 id="orgc3d5a5e">✅ Prueba del capacitor solo (RC): el disco cerámico es el origen</h4>
+<div class="outline-text-4" id="text-orgc3d5a5e">
+<ul class="org-ul">
+<li>Montaje: AFG(+) → R<sub>s</sub> 388 kΩ → disco azul (&ldquo;560 pF&rdquo;) → masa; CH1 sobre C contra masa (<code>circuitos/prueba4_rc.pdf</code>). Barrido a 1 Vpp: τ<sub>RC</sub> = 12,9 µs (f<sub>c</sub> = 12,3 kHz) → 33 pF efectivos si R = 388 kΩ (o 23 kΩ si C = 560 pF): verificar armado.</li>
+<li>Serie a 12,3 kHz, 1→2,5→5→7,5→10→7,5→5→2,5→1 Vpp (15 s on / 20 s off), lock-in corregido (<code>rc_capacitor/serie/</code>, <code>analisis_serie_rc.py</code>):
+<ul class="org-ul">
+<li>Fase −43,22° (1 Vpp) → −44,82° (10 Vpp): C +5,5 % con la tensión (0,29°/%).</li>
+<li>Histéresis: al volver, −43,87° a 1 Vpp (0,65° ≈ 2 % de C retenido) → memoria.</li>
+<li>Exponencial al encender subiendo: 0,04–0,08°, τ 2,4 → 1,3 s (baja con la amplitud); bajando se invierte y es más lenta.</li>
+</ul></li>
+<li><b>Mismas tres firmas que con el sensor → el capacitor de disco (dieléctrico clase II, ferroeléctrico) es el origen de la exponencial y de la dependencia con la amplitud.</b> Reemplazar por C0G/NP0, mica o film.</li>
+</ul>
+
+<div id="orgab658f9" class="figure">
+<p><img src="../../../Assets/2026/10/Day_08/fig26_rc_serie.png" alt="fig26_rc_serie.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4971c41" class="outline-4">
+<h4 id="org4971c41">Repositorio para GitHub</h4>
+<div class="outline-text-4" id="text-org4971c41">
+<p>
+Armado en <code>~/Documentos/PersonalDaq3001-Linux</code> (mismo estilo que el README de Comunicacion-con-instrumentos): driver <code>PyIOTech/</code>, ejemplos, <code>tools/extraer_firmware.py</code> (saca el firmware de <code>pdaq3kld.sys</code> y <code>pdaq3k.sys</code>, con verificación por hash), udev, <code>docs/protocolo.md</code>, GPLv2 (por pyIOTech). <b>Sin firmware</b> (propietario, en <code>.gitignore</code>). Falta: crear el repo en GitHub y hacer push (lo hace el usuario).
+</p>
+</div>
+</div>
+<div id="outline-container-org2e33e34" class="outline-4">
+<h4 id="org2e33e34">Bugs encontrados y corregidos durante las pruebas</h4>
+<div class="outline-text-4" id="text-org2e33e34">
+<ul class="org-ul">
+<li>El archivo de disco podía terminar con un scan incompleto (cantidad impar de muestras con 2 canales) → <code>Formatter.read</code> fallaría. Ahora sólo se entregan scans completos.</li>
+<li><code>AdcSetDiskFile</code> quedaba activo para las adquisiciones siguientes y las sobrescribía. Ahora vale para una sola adquisición.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0a55f06" class="outline-4">
+<h4 id="org0a55f06">Ojo / pendientes</h4>
+<div class="outline-text-4" id="text-org0a55f06">
+<ul class="org-ul">
+<li>Límite de la placa: <b>1 MS/s total</b> (frecuencia × canales). <code>measure_interface.py</code> trae 1 MHz por defecto: con 2 canales la placa corre a ~500 kHz pero el metadata dice 1 MHz (también pasaba en Windows). El driver imprime un aviso.</li>
+<li>CH1 tiene ~2 mV de offset distinto de CH0; la tabla de fábrica es por rango, no por canal.</li>
+<li>El pasa altos que veíamos no aparece con fuente de baja impedancia, Z<sub>in</sub> = 46 MΩ ∥ 4,6 pF no lo explica, y el CMRR medido (80 dB) tampoco. Con R a masa la anomalía desaparece. Mecanismo sin identificar.</li>
+<li>Origen del ruido impulsivo (lazo de masa generador/PC) a investigar.</li>
+<li>No implementado: DAC en forma de onda, triggers por hardware, DIO, contadores. <code>DacWt</code> sin verificar.</li>
+<li>Corregir la normalización de amplitud del lock-in (ajuste LS a <code>fr</code>) y repetir el RLC a mayor amplitud.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org771634a" class="outline-3">
+<h3 id="org771634a">[17:00] Cierre del día — dónde quedamos (Driver PDAQ Linux)</h3>
+<div class="outline-text-3" id="text-org771634a">
+<ul class="org-ul">
+<li><b>Resultado principal:</b> la exponencial de encendido y la dependencia de la fase con la amplitud vienen del capacitor de disco azul (cerámico clase II): el RC con sólo ese capacitor reproduce las tres firmas (C +5,5 % de 1 a 10 Vpp, histéresis, τ que baja con la amplitud). Ver la entrada &ldquo;Driver PDAQ Linux&rdquo; y el PDF.</li>
+<li><b>Repo para compartir:</b> <code>~/Documentos/PersonalDaq3001-Linux</code> (commit local, sin push, sin firmware). Falta decidir si va como carpeta hermana &ldquo;Personal DAQ 3001 en Linux/&rdquo; en <code>Comunicacion-con-instrumentos</code> (separado de la de Windows) o como repo propio; y si los ejemplos se duplican o se referencian.</li>
+<li><b>Pendientes:</b> (1) cambiar el capacitor por C0G/NP0/film y repetir RC + sensor; (2) re-verificar Z<sub>in</sub>, CMRR y R a masa (posible error de cableado); (3) CH0 lee más que lo programado con el sensor; (4) arreglar normalización de amplitud y filtro butter del lock-in.</li>
+</ul>
 </div>
 </div>
 </div>
