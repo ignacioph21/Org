@@ -938,3 +938,12 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - S1 no se recorta: la distribución de η no se acumula en el mínimo (percentil 0,1 % a −1,4 mm con Bonneton y −3,5 mm con muchos forzados, pendiente del Día 1); en el zoom se ven bores bien formados.
 - ω_ν √(h/g) en S1 con muchos forzados, de h = 0,35 a 1,325: 0,68 / 0,67 / 0,73 / 0,75 / 0,82 / 0,78 / 0,74 / 0,75, es decir ≈ 0,74 ± 0,05 en todo el rango.
 - *Barrido completo, 8 alturas* (h_S1 0,35–1,325 cm, un factor 3,8): exponente en S1 con muchos forzados a = −0,39 ± 0,04, con Bonneton a = −0,28 ± 0,04. S2 y S3 (cerca de la rotura) dan exponentes más planos.
+- [15:52] Fondo medido (aproximado) en S2 ~3,1 cm y en S3 ~2,9 cm. Con la pendiente 0,035, esto implica S2 a ~3 cm de S1 y S3 a ~9 cm, lo que no cierra con la separación de ~7,5 cm entre sensores. Hay que medir las separaciones con cinta. Se usan los valores medidos.
+- [15:55] El fondo de S2 y S3 no tiene foto (era complicado sacarlas): solo hay lectura aproximada (~3,1 y ~2,9 cm).
+
+** [16:06] Reporte del Día 2 y corrección de la altura 6
+- *Corrección*: en la altura 6 el DAQ arrancó ~25 s antes que el motor y el detector tomó la subida de la paleta (t ≈ 26 s) como arranque del Bonneton (el real es 127,9 s). El detector ahora exige 8 s seguidos y se reprocesaron todas las alturas (=Análisis/reprocesar_todo.sh=): solo cambió la 6, que queda en Bonneton 27,2 ± 1,5 y muchos forzados 28,4 ± 0,9.
+- Exponentes finales en S1 (8 alturas, fondo 3,20): Bonneton −0,27 ± 0,04, muchos forzados −0,39 ± 0,04; S2 −0,15 / −0,31; S3 +0,06 / −0,29.
+- Calibración por reposos (sin la altura 2): S3 −0,0416 ± 0,0031 rad/cm (Día 1: −0,0443), rms 0,5 mm; S1 y S2 no lineales (rms 4 y 2,5 mm).
+- Reporte (15 páginas): =Día 2/Reporte/reporte_dia2.pdf= (figuras con =figuras_reporte_dia2.py=). Falta agregar la calibración por escalones.
+- [[file:../../../Assets/2026/10/Day_14/reporte_dia2.pdf][reporte_dia2.pdf]]
