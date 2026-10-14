@@ -1125,3 +1125,4 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_6.pdf][Custom_combinado_altura_6]] (nivel 3,800 cm)
   - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_7.pdf][Custom_combinado_altura_7]] (nivel 3,700 cm)
   - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_8.pdf][Custom_combinado_altura_8]] (nivel 3,550 cm)
+- [18:04] Agregado al reporte (42 páginas): subsección "Cole-Hopf al frente promedio de los pulsos, en todas las alturas", con método, las 3 páginas de la altura 8, la figura resumen y la tabla por altura y sensor. [[file:../../../Assets/2026/10/Day_14/reporte_dia2.pdf][reporte_dia2.pdf]]
