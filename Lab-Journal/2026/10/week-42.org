@@ -780,7 +780,7 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - deriva lenta tipo exponencial en los primeros ~50 s;
   - nivel medio ~1,5 mm más bajo durante el Bonneton (set-down);
   - pico angosto en S2 a ~550 rad/s (≈ 88 Hz), posible vibración, fuera del rango de ajuste.
-- Primera foto de la regla: =Día 2/Fotos regla/20261014_121415.jpg=. Leída: el contacto con el vidrio da ~3,94 cm y el borde inferior de la banda de la superficie ~3,82 cm. Hay que fijar un criterio de lectura (a confirmar).
+- Primera foto de la regla: =Día 2/Fotos regla/regla_altura_1.jpg=. Leída: el contacto con el vidrio da ~3,94 cm y el borde inferior de la banda de la superficie ~3,82 cm. Hay que fijar un criterio de lectura (a confirmar).
 - Ajuste por canal (=espectros_ajustados.png=):
   - S3 (h 1,33 cm): ω_ν = 20,6 ± 3,3 (R² 0,967, mal ajuste: joroba en 20–30 rad/s, compatible con estar antes de la rotura o cerca);
   - S2 (h 1,06 cm): ω_ν = 21,0 ± 1,2 (R² 0,982);
@@ -831,3 +831,13 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 ** [14:02] Barrido: segunda altura medida
 - El usuario ajustó (apretó) los sensores 1 y 2 para que no se suelten. En principio no se movieron. Si en la calibración de reposos S1 o S2 muestran un salto entre antes y después, viene de acá.
 - Con más agua hay bastantes más rebotes (reflexiones). Pueden molestar en el análisis: energía reflejada que vuelve sobre los sensores y más seiche.
+- [14:08] La medición de la segunda altura es =Custom_combinado_altura_2= (630 s), con nivel leído *~4,50–4,55 cm* (se usa 4,525 ± 0,025). Foto: =Día 2/Fotos regla/regla_altura_2.jpg=; en la foto el contacto con el vidrio da ~4,60 y el borde inferior de la banda ~4,54. Se está midiendo la tercera altura, ~4,45 cm.
+
+** [14:15] Barrido: altura 2 (=Custom_combinado_altura_2=, 4,525 cm, h_S1 = 1,38 cm)
+- ω_ν S1: Bonneton 23,5 ± 1,5 (R² 0,961), muchos forzados 20,4 ± 1,0 (R² 0,989). Contra 3,95 cm (h_S1 0,80; Bonneton 26,1, muchos/Triangulos 27,2), el exponente da ≈ −0,2 con Bonneton y ≈ −0,5 con muchos forzados. Son solo 2 puntos.
+- Con más agua hay más rebotes: el ajuste del Bonneton empeora un poco y el rango automático se estira hasta 120 rad/s.
+- *Nivel medio y posición de la paleta:*
+  - al subir la paleta de 0 a 55 mm, el nivel en los sensores baja ~1,5 mm de golpe y se recupera en ~100 s (el agua pasa por la ranura de ~1 cm bajo la paleta); es la deriva del principio de cada medición;
+  - con la paleta en 0 (segundo reposo) el nivel queda ~1,5 mm más alto y sin asentar, así que el segundo reposo se excluye de la calibración.
+- *Calibración:* la pendiente entre la altura 1 (mañana) y la 2 sale 2–3 veces menor que la del Día 1, y distinta en cada sensor. Entre medio se apretaron S1 y S2 y se reinició el generador (a confirmar que quedó en la misma frecuencia). La medición de la mañana se excluye del ajuste; se calibra solo con el primer reposo de las mediciones de la tarde.
+- =Triangulos= (3,95, sin reposo) se suma al PDF vivo como punto de muchos forzados en ω_ν(h).
