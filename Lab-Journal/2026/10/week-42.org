@@ -1009,3 +1009,6 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - Con la incerteza realista (máx del error del ajuste y la diferencia entre mitades/2): log → Bonneton a = −0,45 ± 0,05, muchos −0,46 ± 0,06; póster → −0,27 ± 0,09 y −0,24 ± 0,06.
 - [17:26] Figura pedida: =Análisis/omega_nu_h_poster.pdf= (A4 apaisado, una página por forzado). ω_ν(h) en S1 con los espectros del póster (Fig. 12/13 del reporte) junto a cada punto; ω_ν del póster: Bonneton a = −0,27 ± 0,09, muchos −0,24 ± 0,06.
 - [17:29] Figura de página entera con insets: =Análisis/omega_nu_h_insets_poster.pdf= (ajuste del póster) y =omega_nu_h_insets_log.pdf= (log 20–80). La versión anterior quedó como =omega_nu_h_poster_v1.pdf= (también en Reporte/figuras).
+- [17:40] Reporte actualizado (36 páginas):
+  - subsección "Método de ajuste de ω_ν: lineal, póster y en log", con las figuras de ω_ν(h) e insets (log y póster) y las curvas ajustadas superpuestas;
+  - apéndice con las series de 15 s (S3, S2, S1 en paneles verticales; Bonneton y muchos forzados) para las 8 alturas (=Análisis/series_15s.py=).
