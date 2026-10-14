@@ -971,3 +971,9 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - Reporte actualizado (20 páginas): [[file:../../../Assets/2026/10/Day_14/reporte_dia2.pdf][reporte_dia2.pdf]]
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_14/calibracion_dia2_fotos.pdf]]
+- [16:59] El PDF vivo del barrido (=Análisis/barrido_vivo.pdf=) quedó autocontenido, con 5 páginas:
+  1. ω_ν(h) en S1 y calibración por escalones (reposos como comparación);
+  2. serie de la calibración convertida a nivel, con las ventanas de 10 s antes de cada foto y el Δh de cada foto;
+  3. fotos de la calibración con la línea de agua detectada;
+  4. reglas del barrido marcadas y foto del fondo de S1;
+  5. tabla del barrido.
