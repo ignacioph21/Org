@@ -1045,3 +1045,34 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - Observación del usuario: la amplitud parecía crecer al avanzar, al revés que en Burgers con viscosidad. Con la calibración por plateaus *baja*: V_J 12,3 → 9,5 → 7,5 mm; pico sobre el fondo 9,3 → 8,5 → 6,8 mm. La del Día 1 agrandaba S1/S2 e invertía la tendencia; Hm0 sube de S3 a S2 por asomeramiento.
 - W casi constante (~1 s): en Burgers ideal crecería como √x con el área constante. Acá el área cae 41 % (5,7 → 3,4 mm·s): el pulso pierde más de lo que permite Burgers.
 - Frentes: retraso 144 ms (S3 → S2) y 308 ms (S3 → S1), ~0,5 m/s > √(gh). Coherente con la celeridad de un bore; a confirmar con las separaciones medidas.
+
+** Frente promedio de los pulsos en todas las alturas (muchos forzados) — cierre del día
+- =Análisis/cole_hopf/promedio_pulsos.py= en las 8 alturas (~20 pulsos por altura, uno por triangular): alineados en el frente de cada sensor, promediados y ajustados con Cole-Hopf más fondo lineal (ventana común, la de mayor R² medio). R² entre 0,98 y 0,997. Resumen: =resumen_pulsos_alturas.pdf=.
+- En el promedio los pulsos quedan bien ordenados, como notó el usuario:
+  - V_J baja de S3/S2 a S1 en todas las alturas;
+  - los frentes llegan en orden (S3 → S2 ~120–160 ms, S3 → S1 ~230–310 ms).
+- *R*:
+  - S2 ≈ 33–42, casi constante en todas las alturas (Burgers con R constante);
+  - S1 ≈ 32–60, más disperso;
+  - S3 ≈ 9–29 (cerca de la rotura, frente redondeado).
+- *Ancho del choque contra 1/ω_ν*:
+  - en S2 y S1 el choque del pulso promedio es de ~15–29 ms y casi no depende de h;
+  - 1/ω_ν del espectro crece con h (28 → 49 ms en S1);
+  - solo coinciden a nivel bajo (altura 8: 28 contra 28 ms). La coincidencia que se vio en la altura 8 *no se mantiene*: en las alturas altas el frente del pulso grande es más abrupto que lo que da el espectro de toda la medición (que mezcla todas las olas).
+- W ~0,5–1,1 s, más corto a más agua. El área del pulso no se conserva entre sensores, como ya se vio en la altura 8.
+- PDFs del día en =~/Org/Assets/2026/10/Day_14/=:
+  - [[file:../../../Assets/2026/10/Day_14/reporte_dia2.pdf][reporte_dia2.pdf]] (reporte completo, 38 páginas)
+  - [[file:../../../Assets/2026/10/Day_14/barrido_vivo.pdf][barrido_vivo.pdf]] (resumen autocontenido del barrido y la calibración)
+  - [[file:../../../Assets/2026/10/Day_14/omega_nu_h_insets_log.pdf][omega_nu_h_insets_log.pdf]] y [[file:../../../Assets/2026/10/Day_14/omega_nu_h_insets_poster.pdf][omega_nu_h_insets_poster.pdf]] (ω_ν(h) con los espectros)
+  - [[file:../../../Assets/2026/10/Day_14/comparacion_metodos_ajuste.pdf][comparacion_metodos_ajuste.pdf]] (lineal, póster y log)
+  - [[file:../../../Assets/2026/10/Day_14/calibracion_dia2_plateaus.pdf][calibracion_dia2_plateaus.pdf]]
+  - [[file:../../../Assets/2026/10/Day_14/cole_hopf_Custom_combinado_altura_8.pdf][cole_hopf_Custom_combinado_altura_8.pdf]] (pulso individual)
+  - [[file:../../../Assets/2026/10/Day_14/resumen_pulsos_alturas.pdf][resumen_pulsos_alturas.pdf]] y =promedio_pulsos/= (frente promedio por altura)
+- Pendientes para la próxima:
+  - decidir si se adopta el ajuste en log con rango fijo 20–80 rad/s;
+  - medir con cinta las separaciones entre sensores;
+  - foto de costado de S1;
+  - qué fue el salto de t ≈ 210 s en la calibración;
+  - Burgers con coeficientes variables en x;
+  - comparar R con R_B;
+  - sumar al reporte el frente promedio de todas las alturas.
