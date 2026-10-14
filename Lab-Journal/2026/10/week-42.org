@@ -926,3 +926,15 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - vN03-C3: h0 8,4 → 3,0 cm, ω_ν 14,9 → 16,1, *a ≈ −0,08*.
 - Lo que sí analiza: R_B contra h0 (Fig. 10) y ν_c contra g^{1/2} H_c^{3/2} (Fig. 11, Ec. 5.4). De ahí sale ω_ν ∝ (g/H_c)^{1/2}, pero la dependencia con h aparece solo si H_c ∝ h.
 - Nuestros exponentes (−0,39 muchos forzados, −0,32 Bonneton) caen entre sus dos casos y coinciden con BK94-9. La diferencia entre sus dos casos sugiere que H_c/h no siempre es constante (vN03-C3 tiene Tp 2 s, bore merging fuerte e infragravitatorias). Medir H_c (con la calibración) permitiría separar ω_ν(H_c) de ω_ν(h).
+- [15:43] El tanque azul es un ROT-14 (RO, presurizado con vejiga): 52,9 L totales, ~31,7 L útiles (16" × 25"). La regla de litros/cm pegada afuera no aplica si está presurizado. Puede alcanzar agua para calibrar llenando por escalones.
+- [15:45] El usuario confirma que en la altura 8 (3,55 cm) el sensor 1 ya está al límite de inmersión.
+- [15:46] Foto altura 8: =Día 2/Fotos regla/regla_altura_8.jpg=. La banda va de 3,47 a 3,56 (centro ~3,52); compatible con el 3,55 leído, en el borde superior de la banda.
+- [15:49] Perfil de la rampa: pendiente conocida de diseño, 35 mm en 1000 mm (tan β = 0,035). Con el fondo medido en S1 (3,20 cm), S1 queda en x ≈ 91,4 cm (el esquema decía 90). Fondo de S2 y S3 *deducido* con la pendiente y la separación de ~7,5 cm: S2 2,94 cm, S3 2,68 cm (provisorio hasta medir las separaciones).
+- [15:49] Generador confirmado: *61,3 kHz y 10 Vpp*, igual que ayer y que a la mañana. Por lo tanto, la diferencia de pendiente de S1 respecto del Día 1 no viene del generador sino de la geometría del sensor (ángulo o separación de los alambres tras el ajuste).
+- [15:49] Confirmado: la rampa se corrió 4 cm *hacia la paleta*, así que paleta–rampa = 21 cm. Esquema actualizado (sin fondo 19 cm, sigue deducido).
+
+** [15:52] Barrido: resultado de la altura 8 (3,55 cm, h_S1 0,35 cm), la última
+- ω_ν S1: Bonneton 32,1 ± 1,4 (R² 0,958), muchos forzados 36,2 ± 2,6 (R² 0,982). Hm0 S1 2,9 mm. Ruido de reposo 0,15 mm.
+- S1 no se recorta: la distribución de η no se acumula en el mínimo (percentil 0,1 % a −1,4 mm con Bonneton y −3,5 mm con muchos forzados, pendiente del Día 1); en el zoom se ven bores bien formados.
+- ω_ν √(h/g) en S1 con muchos forzados, de h = 0,35 a 1,325: 0,68 / 0,67 / 0,73 / 0,75 / 0,82 / 0,78 / 0,74 / 0,75, es decir ≈ 0,74 ± 0,05 en todo el rango.
+- *Barrido completo, 8 alturas* (h_S1 0,35–1,325 cm, un factor 3,8): exponente en S1 con muchos forzados a = −0,39 ± 0,04, con Bonneton a = −0,28 ± 0,04. S2 y S3 (cerca de la rotura) dan exponentes más planos.
