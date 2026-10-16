@@ -1225,3 +1225,8 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_16/pdfs_eta_ajustes_resumen.png]]
 - Reporte del día actualizado (12 p., sección "PDFs de la elevación"): [[file:../../../Assets/2026/10/Day_16/reporte_dia3.pdf][reporte_dia3.pdf]].
+
+** [11:03] Compu fina del Labo: dos puertos serie de perfil bajo
+- Se instalaron en la Compu fina del Labo dos puertos serie de perfil bajo.
+- Hubo que instalar los drivers de la página de Nisuta, reiniciar y volver a instalarlos. Aparecieron como *COM4, COM5, COM6 y COM7*.
+- *El conector de arriba es COM5 y el de abajo es COM6.*
