@@ -1180,3 +1180,48 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_16/iribarren_dia1_d_corregida.png]]
 - Reporte actualizado (6 páginas): [[file:../../../Assets/2026/10/Day_16/reporte_dia3.pdf][reporte_dia3.pdf]].
+
+** [09:41] Relación de dispersión en el Día 2 (Triangulos y Custom_altura_1, 3,95 cm)
+- Pedido: c = Δx/T_viaje de ondas individuales contra f = 1/T, a una sola altura (=Triangulos=, muchos forzados; =Custom_altura_1=, Bonneton; tramo Bonneton). Después: buscar otros métodos (beamforming) teniendo en cuenta la variación del fondo, y reporte con los hallazgos.
+- Geometría usada: S1 en x = 91, S2 en 83,5 y S3 en 76 cm (separación ~7,5 cm, *sin medir con cinta*). A 3,95: h S3/S2/S1 = 1,25/0,99/0,73 cm. Los fondos de S2 y S3 de =fondo_sensores.json= no son compatibles con 7,5 cm.
+- *Ondas individuales* (cruces por cero, emparejamiento por período): c ≈ √(g h̄) (S3→S2 0,31/0,33 m/s; S2→S1 0,30/0,30). c crece con H (corr +0,35 a +0,5; α ≈ 0,66–0,86 en √(g(h + αH))) y baja con f (corr −0,3 a −0,4).
+- *Espectros cruzados* con WKB (θ = c_lineal-larga/c, Δφ = θωτ): la banda de 1,5–4 Hz (frentes) da θ ≈ 0,97–1,11, o sea √(gh). En Bonneton, 2,5–3 Hz cerca de la lineal y 4–5 Hz por debajo (armónicos forzados, como Martins et al. 2021). *Por debajo de 1,5 Hz, θ ≈ 0,5–0,75* (c ≈ 0,4–0,6 m/s): no lo explica la reflexión (el ajuste incidente + reflejada no discrimina) ni la amplitud (terciles iguales); hay una componente en fase en la correlación cruzada → ver acople.
+- Coherencia < 0,5 desde ~2 Hz (Triangulos) y ~5–6 Hz (Bonneton). El beamforming (Bartlett, Capon) con tres sensores no agrega nada a los pares.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/dispersion_ondas_individuales_bonneton.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/dispersion_espectro_cruzado_bonneton.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/dispersion_espectro_cruzado_triangulos.png]]
+- Reporte: [[file:../../../Assets/2026/10/Day_16/reporte_dispersion.pdf][reporte_dispersion.pdf]] (=Día 3/Reporte/reporte_dispersion.tex=, 11 p.).
+
+** [09:41] Acople entre canales (Día 2) — queda pendiente
+- Promedios condicionales de dη/dt en los frentes: los vecinos registran el frente con *retardo 0* (antes de que llegue el agua). S2 recibe ~0,17–0,29 de S3 y ~0,22–0,26 de S1; S1 recibe 0,07–0,10 de S2 y ≲ 0,06 de S3.
+- Desmezcla con med = Mη: en S1 el pico no cambia, entre 1,5 y 3 Hz sube 30–70 % (valle por interferencia), la cola sube ×1,15–1,2 con la misma pendiente y Hm0 +5–9 %. En las series solo desaparecen escalones chicos de S1 cuando el frente pasa por S2. *S2 no es confiable.*
+- La componente en fase que contamina la dispersión a baja f se explica en buena parte por el acople.
+- Decisión: dejarlo pendiente; para S1, que da los resultados principales, afecta poco. *Solución: independizar los sensores, cada uno con su propia PCB.*
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/acople_desmezcla_S1_espectros.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/acople_desmezcla_S1_series.png]]
+
+** [09:41] PDFs de la elevación (Días 1 y 2) y ajustes skew-normal / Tayfun
+- PDF de η por medición y sensor (Día 1: t ∈ [60, 600] s; Día 2: tramo Bonneton), con Sk, K y asimetría horizontal As (Hilbert; As < 0 = frente empinado). Scripts =Día 3/Códigos/pdfs_eta.py= y =pdfs_eta_ajustes.py=.
+- *Bonneton/JONSWAP/Custom*: Sk > 0 y crece de S3 a S1 (Día 1 ~0,15–0,2 → 0,5–0,7; Día 2 0,25–0,45 → 0,55–1,1); K ≈ 3–3,8.
+- *Barrido del Día 2*: al bajar el nivel As se hace más negativa en los tres sensores (S3: +0,08 → −0,70), los frentes llegan ya formados a S3. *Altura 8, S1*: Sk = 1,14, K = 4,9, Hm0 = 3,4 mm y PDF con pico angosto y hombro: posiblemente S1 casi seco en los valles.
+- *Muchos forzados y Triangulos*: K = 4–6 (colas pesadas de los dos lados, modulación del forzado); As > 0 en S3 (+0,3 a +0,5), sin verificar.
+- Valles acotados: en el Día 1 la PDF de S1 se corta cerca de −2 mm (h ≈ 3,5 mm bajo S1).
+- *Ajustes* (3 parámetros, máxima verosimilitud; distancia KS porque los p-valores no sirven con muestras correlacionadas): skew-normal y Tayfun (segundo orden, banda angosta) ajustan el cuerpo igual de bien (KS 0,002–0,02 contra 0,01–0,06 de la gaussiana).
+  - S3 y S2: μ_Tayfun ≈ Sk/3 → asimetría de segundo orden.
+  - S1: μ < Sk/3, más asimetría (rompientes/bores); en el Día 1 la skew-normal ajusta mejor (KS 0,004–0,010 contra 0,009–0,026). La cola de crestas de S1 del Día 1 es más corta que la de los modelos.
+  - Muchos forzados: los dos subestiman P(η > 3σ) ×2–3. Altura 8 S1: no ajusta ninguno (Sk fuera del rango de la skew-normal).
+  - La cota inferior de Tayfun queda por debajo del corte de los valles.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/pdfs_eta_dia2.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/pdfs_eta_momentos_dia2.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/pdfs_eta_ajustes_dia2.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/pdfs_eta_ajustes_resumen.png]]
+- Reporte del día actualizado (12 p., sección "PDFs de la elevación"): [[file:../../../Assets/2026/10/Day_16/reporte_dia3.pdf][reporte_dia3.pdf]].
