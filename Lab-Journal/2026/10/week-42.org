@@ -1161,3 +1161,22 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_16/miche_olas_arriba_med4.png]]
 - Reporte del día: [[file:../../../Assets/2026/10/Day_16/reporte_dia3.pdf][reporte_dia3.pdf]] (=Día 3/Reporte/reporte_dia3.tex=).
+
+** [08:42] Iribarren de S3 (Día 1) con la profundidad corregida
+- Mismo procesado que el reporte del Día 1 (póster vía =correr_poster.py=, calibración del Día 1, 11 bins en [0,1027, 0,8]); solo cambia d en L: 3,65 / 4,00 / 4,35 cm en vez de 3,1 / 3,5 / 3,95. Con la D vieja se reproduce exactamente la tabla del Día 1.
+- *Cambia poco*: ⟨ξ⟩ sube 0,002–0,006 (1–2 %) y el spilling baja ≤ 0,7 puntos. Las olas de S3 están en profundidad intermedia (mediana de kd = 0,8–1,8), así que √L crece solo 1–2 % con d un 10–18 % mayor.
+  | Medición                  |    d | ⟨ξ⟩ (antes)   | σ (antes)     | spilling (antes) |
+  |---------------------------+------+---------------+---------------+------------------|
+  | 1 random (3,65 paleta)    | 3,65 | 0,235 (0,231) | 0,371 (0,363) | 99,0 (99,2) %    |
+  | 2 random 3,95             | 4,35 | 0,244 (0,241) | 0,374 (0,376) | 98,2 (98,4) %    |
+  | 3 JONSWAP h_20cm          | 4,35 | 0,375 (0,369) | 0,244 (0,242) | 90,1 (90,8) %    |
+  | 4 random 3,60 soft        | 4,00 | 0,248 (0,244) | 0,388 (0,384) | 98,1 (98,7) %    |
+  | 6 Bonneton 3,5 cm         | 4,00 | 0,312 (0,306) | 0,238 (0,228) | 97,5 (98,2) %    |
+  | 7 Bonneton ×1,6           | 4,00 | 0,246 (0,242) | 0,221 (0,231) | 99,7 (99,7) %    |
+  | 8 Bonneton 3,5 cm, 3,95   | 4,35 | 0,317 (0,313) | 0,245 (0,247) | 97,3 (97,7) %    |
+  | 9 Bonneton ×1,6, 3,95     | 4,35 | 0,254 (0,250) | 0,235 (0,237) | 99,9 (99,9) %    |
+- Las conclusiones del Día 1 no cambian.
+- La profundidad en la paleta para el Bonneton de 3,5 cm era aproximada: la paleta pudo estar algo más sumergida.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/iribarren_dia1_d_corregida.png]]
+- Reporte actualizado (6 páginas): [[file:../../../Assets/2026/10/Day_16/reporte_dia3.pdf][reporte_dia3.pdf]].
