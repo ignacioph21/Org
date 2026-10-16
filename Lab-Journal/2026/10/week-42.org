@@ -1126,3 +1126,38 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
   - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_7.pdf][Custom_combinado_altura_7]] (nivel 3,700 cm)
   - [[file:../../../Assets/2026/10/Day_14/promedio_pulsos/promedio_pulsos_Custom_combinado_altura_8.pdf][Custom_combinado_altura_8]] (nivel 3,550 cm)
 - [18:04] Agregado al reporte (42 páginas): subsección "Cole-Hopf al frente promedio de los pulsos, en todas las alturas", con método, las 3 páginas de la altura 8, la figura resumen y la tabla por altura y sensor. [[file:../../../Assets/2026/10/Day_14/reporte_dia2.pdf][reporte_dia2.pdf]]
+* 2026-10-16
+** [08:38] Día 3: organización (solo análisis de los Días 1 y 2)
+- Hoy no se mide: se sigue el análisis de los Días 1 y 2. Todo va en =Tercera iteración/Día 3/=: =Códigos/= (copias de los scripts de =Día 1/Análisis= y =Día 2/Análisis=, con rutas en =Códigos/rutas.py=), =Resultados/=, =Figuras/= y =Reporte/=.
+- Los datos crudos y analizados (=.bin=, =.npy=, calibraciones) no se duplican: se leen de =Día 1/= y =Día 2/=.
+- *Los Días 1 y 2 quedan de solo lectura*: las correcciones a lo de esos días también van en el Día 3.
+- Prueba: =dia2/reprocesar_todo.sh= regenera las 9 mediciones del Día 2 en ~2 min, con resultados idénticos.
+
+** [08:38] Correcciones de la geometría de la cuba (valen para los Días 1 y 2)
+- *Rampa impresa de 99 cm*: el diseño era de 100 cm, pero la impresora 3D no imprimió el primer cm (muy fino). Empieza con un escalón de 0,35 mm y termina en 3,5 cm (tan β = 0,035). El "inicio de la rampa" del que se habla es el inicio real.
+- *Cuba de 198 cm* interior (no 200). *Playa de 20 cm* (diseño). Las cotas medidas del Día 1 suman 201 cm: la diferencia es incerteza de medir con regla/metro desde el costado.
+- *Día 1: S3 estaba 3 cm ANTES del inicio de la rampa* (x = −3 cm, sobre el fondo plano), no 3 cm sobre ella. S2 en x = 29 cm (32 cm después de S3) y S1 en x = 86 cm (33 cm del final de la playa).
+- *Inclinación de la cuba ~0,1°*, más profunda del lado de la paleta. Los niveles 3,60 y 3,95 del Día 1 se midieron con la regla cerca del final: bajo S3 hay ~4 mm más (4,00 y 4,35 cm). La primera prueba (3,65 cm, =Canal_365=) se midió del lado de la paleta: bajo S3 es 3,65 cm (el reporte del Día 1 la llamaba "3,1").
+- Profundidades locales (inclinación 0,1°):
+  | nivel                       | S3 (x = −3) | S2 (x = 29) | S1 (x = 86) |
+  |-----------------------------+-------------+-------------+-------------|
+  | 3,65 (lado paleta, Canal_365) |        3,65 |        2,54 |        0,45 |
+  | 3,60 (ref., final)          |        4,00 |        2,89 |        0,80 |
+  | 3,95 (ref., final)          |        4,35 |        3,24 |        1,15 |
+- Día 2 con la rampa de 99 cm y la playa de 20 cm: S1 en x = 91 cm, con fondo de 3,22 cm (medido: 3,20 cm). Coinciden mejor que con el esquema original (3,15 cm).
+- *A confirmar*: (a) con 0,1° la diferencia entre el final y S3 (~1,4 m) es ~2,4 mm; los 4 mm corresponden a ~0,16°, como los 5,5 mm entre lados medidos el Día 1. (b) El Bonneton de 3,5 cm se escaló suponiendo 3,5 cm en la paleta; si el 3,60 se midió en el final, en la paleta habría ~4 cm.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/esquema_dia1_corregido.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/esquema_dia2_corregido.png]]
+
+** [08:38] Límite de Miche–Stokes en S3 (Día 1)
+- H vs T ola por ola en S3, con *las mismas olas que el Iribarren* del reporte del Día 1 (los conteos coinciden en las 8 mediciones). Límite: H = 0,142 L tanh(kd), con dispersión gravito-capilar y d = profundidad corregida bajo S3.
+- *En 7 de 8 mediciones ninguna ola pasa el límite.* En la medición 4 (random, 3,60, soft) pasan *2 de 1416* (H/H_M = 1,11 y 1,16; T = 0,22 s, H ≈ 1,25 cm). Son crestas reales, pero el T por cruces por cero sale corto porque el valle anterior apenas cruza el cero. La ola dura ~0,5 s, y con ese T darían ~0,5.
+- Máximos de H/H_M: random 0,88 (olas cortas, T ≈ 0,1–0,25 s, donde el límite es el de Stokes y no depende de d); JONSWAP 0,36; Bonneton 0,33–0,55. Con la D vieja del Iribarren los cocientes cambian ≲ 3 %.
+- Pendiente: rehacer el Iribarren del Día 1 con la profundidad corregida bajo S3.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/miche_h_vs_t_dia1.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_16/miche_olas_arriba_med4.png]]
+- Reporte del día: [[file:../../../Assets/2026/10/Day_16/reporte_dia3.pdf][reporte_dia3.pdf]] (=Día 3/Reporte/reporte_dia3.tex=).
