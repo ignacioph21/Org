@@ -1,0 +1,33 @@
+#+TITLE: Journal Week 43
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-10-20
+
+** [15:30] Referencia para medir con cámaras laterales: Redor et al. (2021)
+Idea: medir la superficie libre en la cuba grande con cámaras laterales a través de la pared de vidrio. Referencia a seguir:
+- I. Redor, H. Michallet, N. Mordant y E. Barthélemy, /Experimental study of integrable turbulence in shallow water/, Phys. Rev. Fluids *6*, 124801 (2021). [[https://doi.org/10.1103/PhysRevFluids.6.124801][doi:10.1103/PhysRevFluids.6.124801]], [[https://arxiv.org/abs/2210.04638][arXiv:2210.04638]].
+- Detalle de la técnica: I. Redor et al., /Analysis of soliton gas with large-scale video-based wave measurements/, Exp. Fluids *61*, 216 (2020), y la tesis de Redor (Univ. Grenoble Alpes, 2019).
+
+Montaje del paper (sección de métodos, figs. 1, 3 y 4):
+- Canal de 33,73 m × 0,55 m, paredes laterales de vidrio en paneles de 1,92 m separados por postes de 8 cm.
+- 7 cámaras Full HD (1920 × 1080) sincronizadas, a 20 fps; cada una filma un panel entero. Píxel ≈ 1 mm; cubren 14 m del canal.
+- Imágenes rectificadas con una grilla de calibración apoyada contra el vidrio de adelante.
+- *Contraste: fondo del canal pintado de blanco y pared de atrás pintada de negro.* Con la cámara a un ángulo adecuado, la línea de contacto agua-vidrio queda como borde entre dos imágenes refractadas: la del fondo blanco (refractada por la superficie libre) y la de la pared negra (refractada por el agua junto al vidrio). Con ese borde nítido logran resolución sub-píxel, mejor que 0,1 mm.
+- La fig. 4 del paper está en escala de grises invertida (por eso la superficie se ve negra). Abajo, la figura tal como sale en el paper y la versión re-invertida, que debería parecerse a la imagen cruda: fondo oscuro (pared negra), franja clara a la altura de la superficie y franja clara abajo (fondo blanco). Si además le ajustaron el contraste, la re-inversión no lo recupera.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_20/redor2021_fig4_original.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_20/redor2021_fig4_invertida.png]]
+
+Para nuestra cuba (a probar):
+- ¿Fondo negro y pared blanca, al revés que en el paper? En principio también daría un borde nítido, con el contraste invertido; no está verificado.
+- Nuestro "fondo" bajo los sensores es la rampa impresa: habría que pintarla o cubrirla.
+- Con pocos mm de profundidad sobre la rampa (h ≈ 3,5 mm bajo S1), la imagen del fondo refractada por la superficie va a ser más angosta: a confirmar con una prueba.
+- Antes de pintar nada, probar con cartulinas blancas y negras y una sola cámara.
