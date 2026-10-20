@@ -17,30 +17,36 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9558ae8">Referencias</a></li>
-<li><a href="#orgfeaec68">2026-10-20</a>
+<li><a href="#org7c11777">Referencias</a></li>
+<li><a href="#org92adeb2">2026-10-20</a>
 <ul>
-<li><a href="#org12adc18">[15:30] Referencia para medir con cámaras laterales: Redor et al. (2021)</a></li>
-<li><a href="#org7858f1d">[15:40] Excedencia de crestas (Fig. 15 de Redor et al. 2021) con los Días 1 y 2</a></li>
+<li><a href="#orgefea026">[15:30] Referencia para medir con cámaras laterales: Redor et al. (2021)</a></li>
+<li><a href="#org5837f33">[15:40] Excedencia de crestas en las tres iteraciones y rotura entre sensores → reporte</a></li>
+<li><a href="#orgd7ec701">[16:30] Pendiente: testear el índice de rotura con la cámara de costado</a></li>
+<li><a href="#org89994ad">[16:45] Día 2: excedencia de crestas también en el tramo de muchos forzados de los combinados</a></li>
+<li><a href="#orgf9857a4">[17:30] PDFs por medición del Día 1 y modelo empírico de crestas saturadas</a></li>
+<li><a href="#org4a3d294">[18:00] S<sub>p</sub> de S1 entre ω<sub>m</sub> y ω<sub>ν</sub>: Burgers con choques de ancho finito (Ricard &amp; Falcon 2023)</a></li>
+<li><a href="#org17f3db4">[18:30] S<sub>p</sub> de S1 con parámetros libres y choques de Poisson</a></li>
+<li><a href="#orgbe556c5">[18:25] Reporte de intermitencia (S1, Día 1): teoría de ruido de disparo de olas coherentes</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9558ae8" class="outline-2">
-<h2 id="org9558ae8">Referencias</h2>
-<div class="outline-text-2" id="text-org9558ae8">
+<div id="outline-container-org7c11777" class="outline-2">
+<h2 id="org7c11777">Referencias</h2>
+<div class="outline-text-2" id="text-org7c11777">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-orgfeaec68" class="outline-2">
-<h2 id="orgfeaec68">2026-10-20</h2>
-<div class="outline-text-2" id="text-orgfeaec68">
+<div id="outline-container-org92adeb2" class="outline-2">
+<h2 id="org92adeb2">2026-10-20</h2>
+<div class="outline-text-2" id="text-org92adeb2">
 </div>
-<div id="outline-container-org12adc18" class="outline-3">
-<h3 id="org12adc18">[15:30] Referencia para medir con cámaras laterales: Redor et al. (2021)</h3>
-<div class="outline-text-3" id="text-org12adc18">
+<div id="outline-container-orgefea026" class="outline-3">
+<h3 id="orgefea026">[15:30] Referencia para medir con cámaras laterales: Redor et al. (2021)</h3>
+<div class="outline-text-3" id="text-orgefea026">
 <p>
 Idea: medir la superficie libre en la cuba grande con cámaras laterales a través de la pared de vidrio. Referencia a seguir:
 </p>
@@ -60,12 +66,12 @@ Montaje del paper (sección de métodos, figs. 1, 3 y 4):
 <li>La fig. 4 del paper está en escala de grises invertida (por eso la superficie se ve negra). Abajo, la figura tal como sale en el paper y la versión re-invertida, que debería parecerse a la imagen cruda: fondo oscuro (pared negra), franja clara a la altura de la superficie y franja clara abajo (fondo blanco). Si además le ajustaron el contraste, la re-inversión no lo recupera.</li>
 </ul>
 
-<div id="orgdacd00a" class="figure">
+<div id="org763141f" class="figure">
 <p><img src="../../../Assets/2026/10/Day_20/redor2021_fig4_original.png" alt="redor2021_fig4_original.png" />
 </p>
 </div>
 
-<div id="orgdb979cc" class="figure">
+<div id="orgd9f5885" class="figure">
 <p><img src="../../../Assets/2026/10/Day_20/redor2021_fig4_invertida.png" alt="redor2021_fig4_invertida.png" />
 </p>
 </div>
@@ -81,42 +87,75 @@ Para nuestra cuba (a probar):
 </ul>
 </div>
 </div>
-<div id="outline-container-org7858f1d" class="outline-3">
-<h3 id="org7858f1d">[15:40] Excedencia de crestas (Fig. 15 de Redor et al. 2021) con los Días 1 y 2</h3>
-<div class="outline-text-3" id="text-org7858f1d">
+<div id="outline-container-org5837f33" class="outline-3">
+<h3 id="org5837f33">[15:40] Excedencia de crestas en las tres iteraciones y rotura entre sensores → reporte</h3>
+<div class="outline-text-3" id="text-org5837f33">
+<p>
+Todo está en el reporte del día: <a href="../../../Assets/2026/10/Day_20/reporte_dia4.pdf">reporte<sub>dia4.pdf</sub></a> (23 p.). Lo compila <code>Tercera iteración/Día 4/Reporte/</code> (latexmk deja el PDF directo en Assets). Códigos y resultados en <code>Tercera iteración/Día 4/</code>.
+</p>
 <ul class="org-ul">
-<li>Script <code>Tercera iteración/Día 4/Códigos/crestas_excedencia.py</code> (carpeta nueva Día 4, mismas reglas que el Día 3). η de <code>serie()</code> de <code>pdfs_eta.py</code> (mismos tramos y calibraciones).</li>
-<li>Método: pasabajos 20 Hz. Sin filtrar, los cruces por cero cuentan ruido: 7–50 cruces/s contra ~2,4 Hz con 10–20 Hz. Olas por cruce ascendente, cresta = máximo entre cruces, A = Ac/(2σ) como en Redor.</li>
-<li>Modelos de referencia: Rayleigh exp(−2A²), Tayfun de 2.º orden con μ = Sk/3 y Tayfun–Fedele con Λ ≈ 8(K−3)/3. Que la curva roja de Redor (Fedele &amp; Tayfun 2009, ec. 5.19–5.20) sea exactamente Tayfun con μ = Sk/3 lo supongo yo: a confirmar.</li>
-<li><b>Bonneton (Día 1)</b>: todos por encima de Rayleigh, como en Redor. En A = 1,25 (2,5σ), el cociente medido/Tayfun va de S3 a S2 y a S1 así: ≈ 1,0–1,2 → 1,05–1,4 → 1,6–2,0.
-<ul class="org-ul">
-<li>S3 sigue a Tayfun: la asimetría es de 2.º orden, coherente con lo que dieron las PDFs.</li>
-<li>S1 tiene <b>exceso de crestas intermedias</b> (A ≈ 0,5–1,6) y <b>después un corte abrupto en A ≈ 1,7–1,9</b>: Ac,máx ≈ 3,4–4,4 mm con σ ≈ 0,85–1 mm. Redor ve lo contrario (una cola larga, por los solitones).</li>
-<li>Interpretación (mía, a confirmar): rotura limitada por la profundidad. Las olas grandes ya rompieron antes de S1 y quedan saturadas. Ac,máx sería del orden de la mitad de h en S1, con h ≈ 5–9 mm según el nivel (estimado a partir de la rampa, sin medir).</li>
-</ul></li>
-<li><b>Muchos forzados, Canal<sub>365</sub> y Triangulos</b> (K = 4–6): por debajo de Rayleigh para A &lt; 1 y con colas largas después. Son dos poblaciones, por la modulación del forzado: no es un mar aleatorio y ningún modelo de banda angosta aplica.</li>
-<li><b>Barrido del Día 2</b>: entre 2 y 5 veces más que Rayleigh y entre 1,1 y 2 veces más que Tayfun en A = 1,25, sin un corte tan marcado en S1. La excepción es altura 8 (Sk = 1,15): ahí Tayfun–Fedele ajusta (cociente ≈ 1,0). Hay solo 230–360 crestas por serie, así que la cola es ruidosa.</li>
+<li>Excedencia de crestas como la Fig. 15 de Redor et al. (2021), contra Rayleigh, Tayfun y Tayfun–Fedele: Días 1 y 2, Primera y Segunda iteración.</li>
+<li>Rotura de sensor en sensor (las olas van de S3 a S1): en el Día 1 asomeramiento entre S3 y S2 y rotura entre S2 y S1. En S1 hay un corte de la cola de crestas, que también aparece en la Primera y la Segunda. En el Día 2 los tres sensores ya están en la rompiente, y en S1 H<sub>m0</sub> ≈ h (saturación).</li>
+<li>Comparación con la literatura: el patrón coincide con Al Khalili et al. (2025, Coast. Eng. 199, 104745; canal 1:50) y con Battjes &amp; Groenendijk (2000). Alturas H/Hs comparadas con su Fig. 17: S3/S2 del Día 1 ≈ B1–B3 (Forristall), S1 ≈ B5–B6 (corte en H/Hs ≈ 1,2–1,4); S1 del Día 2 vuelve a Rayleigh.</li>
+<li>Índice de rotura de Tayfun (2006), γ<sub>b</sub> = 1,20 ξ<sup>0,27</sup>: la lognormal de ξ0 en S3 coincide (σ<sub>lnξ</sub> ≈ 0,25 contra 0,246), es spilling y no rompe nada antes de S2. Pero predice la rotura <b>después</b> de S1, y en S1 las olas llegan rotas (se pierde 64–80 % de la energía). Cierra con γ<sub>b</sub> efectivo ≈ 0,4–0,5 o con asomeramiento no lineal + disipación viscosa: a confirmar midiendo dónde rompe.</li>
+<li>Correcciones al índice (sección 8.1 del reporte): con asomeramiento no lineal + γ de olas irregulares (Goda A = 0,12 o Ruessink 2003), en el nivel 3,60 cierra (rompe el 74–98 % antes de S1); en el 3,95 no (≤ 39 %, frente a 64–81 % de energía perdida). Faltan h medida, un sensor entre S2 y S1 y la cámara.</li>
 </ul>
-
-<div id="orgddf3cd0" class="figure">
-<p><img src="../../../Assets/2026/10/Day_20/crestas_excedencia_caso.png" alt="crestas_excedencia_caso.png" />
-</p>
 </div>
-
-<div id="org9ea5b1f" class="figure">
-<p><img src="../../../Assets/2026/10/Day_20/crestas_excedencia_dia1.png" alt="crestas_excedencia_dia1.png" />
-</p>
 </div>
-
-<div id="org13ad803" class="figure">
-<p><img src="../../../Assets/2026/10/Day_20/crestas_excedencia_dia2.png" alt="crestas_excedencia_dia2.png" />
-</p>
+<div id="outline-container-orgd7ec701" class="outline-3">
+<h3 id="orgd7ec701">[16:30] Pendiente: testear el índice de rotura con la cámara de costado</h3>
+<div class="outline-text-3" id="text-orgd7ec701">
+<ul class="org-ul">
+<li class="off"><code>[&nbsp;]</code> Cuando haya mediciones espaciales con la cámara lateral (montaje de Redor et al. 2021, entrada de las 15:30), ubicar el punto de rotura ola por ola y medir H(x) entre S2 y S1. Con eso, testear el índice de rotura de Tayfun (2006) / Kaminsky–Kraus y sus correcciones (Goda 2010, Ruessink 2003, asomeramiento no lineal), y separar la rotura de la disipación viscosa. Detalle en el reporte del día, sección 8.</li>
+</ul>
 </div>
-
-<div id="orgc1b335d" class="figure">
-<p><img src="../../../Assets/2026/10/Day_20/crestas_excedencia_resumen.png" alt="crestas_excedencia_resumen.png" />
-</p>
 </div>
+<div id="outline-container-org89994ad" class="outline-3">
+<h3 id="org89994ad">[16:45] Día 2: excedencia de crestas también en el tramo de muchos forzados de los combinados</h3>
+<div class="outline-text-3" id="text-org89994ad">
+<ul class="org-ul">
+<li>Hasta ahora el Día 2 usaba solo el tramo Bonneton (<code>t_bon_s</code>). Ahora se suma el de muchos forzados (<code>t_muchos_s</code>, 310–340 s) como tanda aparte (reporte, Fig. &ldquo;Día 2, tramo de muchos forzados&rdquo; y tabla). Se ve como los forzados modulados del Día 1: por debajo de Rayleigh, meseta y Tayfun por debajo (0,4–0,8). <b>En S1 no hay corte</b>, a diferencia del tramo Bonneton de la misma medición, y A<sub>s</sub> apenas llega a ≈ −0,2.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf9857a4" class="outline-3">
+<h3 id="orgf9857a4">[17:30] PDFs por medición del Día 1 y modelo empírico de crestas saturadas</h3>
+<div class="outline-text-3" id="text-orgf9857a4">
+<ul class="org-ul">
+<li>Un PDF por medición del Día 1 con todos los resultados, para elegir la principal del trabajo: <code>Tercera iteración/Día 4/Por medición Día 1/PDFs/</code> (README al lado). Curtosis ahora con puntos y barras (10 bloques).</li>
+<li>Diagnóstico de S<sub>p</sub> (pendiente local): en las 8 mediciones el rango &ldquo;satura en 1&rdquo; cae en el <b>codo</b> entre el régimen de τ chico (ζ6 ≈ 3,5–4,5) y la caída cerca de Tp/2, donde todos los ζ<sub>p</sub> pasan por 1 a la vez. Solo en los random hay una meseta real cerca de 1 (Canal<sub>365</sub>: [150, 231] ms, ζ6 = 1,07). Hay que elegir de nuevo los rangos.</li>
+<li>Modelo empírico para la excedencia de crestas saturadas en S1 (reporte, sección &ldquo;Modelo empírico&rdquo;): una Weibull compuesta, análoga a la de Battjes &amp; Groenendijk (2000), ajusta con rms 0,01–0,02 en log P, contra 0,14–0,23 de Tayfun. Propuesto para el Bonneton: k1 ≈ 2,4, k2 ≈ 3,5, transición en A ≈ 1,4. En validación cruzada da rms 0,06–0,09.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4a3d294" class="outline-3">
+<h3 id="org4a3d294">[18:00] S<sub>p</sub> de S1 entre ω<sub>m</sub> y ω<sub>ν</sub>: Burgers con choques de ancho finito (Ricard &amp; Falcon 2023)</h3>
+<div class="outline-text-3" id="text-org4a3d294">
+<ul class="org-ul">
+<li>Sección nueva en el reporte del día. ω<sub>ν</sub>/ω<sub>m</sub> = 1,5–2,5 en las 8 mediciones del Día 1: no hay separación de escalas, y el rango &ldquo;que satura en 1&rdquo; es un cruce (codo), no una meseta. Ese cruce también lo tienen los subrogados FT/IAAFT: viene del espectro.</li>
+<li>El Burgers modificado de Ricard &amp; Falcon, sin parámetros libres (a, t* y Γ de los frentes de S1), reproduce ζ<sub>p</sub>(τ) y da ⟨ζ<sub>p</sub>⟩ → ≈ 1,3. Cierra en los Bonneton con nivel 3,60 (dentro de 0,1–0,2). En los random ζ<sub>p</sub> sigue creciendo: no son de Burgers. t*<sub>ν</sub> = 2/πω<sub>ν</sub> ≈ 1,5 t* de los frentes.</li>
+<li>Propuesta para el trabajo: mostrar ζ<sub>p</sub>(τ) contra el modelo y S<sub>p</sub>/S<sub>p</sub><sup>th</sup> en lugar de ζ<sub>p</sub> en un rango. Medición principal: Bonneton<sub>bien</sub><sub>profundidad</sub><sub>360</sub> o Bonneton<sub>custom</sub><sub>360</sub>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org17f3db4" class="outline-3">
+<h3 id="org17f3db4">[18:30] S<sub>p</sub> de S1 con parámetros libres y choques de Poisson</h3>
+<div class="outline-text-3" id="text-org17f3db4">
+<ul class="org-ul">
+<li>Reporte del día, subsección &ldquo;Con parámetros libres&rdquo; (sección 11), y en los PDFs por medición. Con la forma de Poisson, S<sub>p</sub><sup>sh</sup> = (1 − e<sup>−Γτ</sup>)⟨|Δη|<sup>p</sup>⟩, el rms en ζ<sub>p</sub>(τ) baja de 0,6–0,75 (sin parámetros libres) a 0,19–0,30, y se reproduce la caída de ζ<sub>p</sub> hacia 0 para τ ≳ 150 ms.</li>
+<li>El Γ ajustado (10–16 s⁻¹ en los Bonneton) coincide con ω<sub>m</sub> en rad/s, no con los frentes por segundo (0,9–1,8). La saturación la fija la rampa entre frentes (1/ω<sub>m</sub> ≈ 70 ms). Pero con a, t* y Γ medidos y λ = ω<sub>m</sub> no alcanza (rms 0,52–0,80): falta la forma completa de la ola. Sigue en el reporte de intermitencia.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbe556c5" class="outline-3">
+<h3 id="orgbe556c5">[18:25] Reporte de intermitencia (S1, Día 1): teoría de ruido de disparo de olas coherentes</h3>
+<div class="outline-text-3" id="text-orgbe556c5">
+<ul class="org-ul">
+<li>Reporte aparte: <a href="../../../Assets/2026/10/Day_20/reporte_intermitencia.pdf">reporte<sub>intermitencia.pdf</sub></a>. Lo compila <code>Tercera iteración/Día 4/Intermitencia/Reporte/</code>, con el PDF directo en Assets; códigos en <code>Intermitencia/Códigos/</code>. Es una versión con las mediciones procesadas hasta ahora; se completa regenerando con <code>resumen.py</code>.</li>
+<li>S<sub>p</sub> de 2, 3 y 4 puntos, nulos FT/IAAFT, jerarquía de modelos (Burgers bifractal, Ricard &amp; Falcon, tanh exacto, perfil medio, Poisson) con sus derivaciones.</li>
+<li>Teoría propuesta: η = Σ a<sub>i</sub> ψ(t − t<sub>i</sub>) + fondo gaussiano, con el núcleo ψ por deconvolución y sin parámetros libres. Reproduce ζ<sub>p</sub>(τ) de n = 2, 3, 4 para τ ≥ 20 ms (rms 0,10–0,29 con n = 2). Intermitencia por ciclo útil chico (Γw ≈ 0,07); saturación en τ ~ w ≈ 1/ω<sub>m</sub> (explica el λ ≈ ω<sub>m</sub> de Poisson). Los tiempos de Poisson empeoran el acuerdo en los Bonneton.</li>
+<li>[18:45] Reporte de intermitencia completo con las 8 mediciones (21 p.). Modelos analíticos de ζ<sub>p</sub> contra p: con log-Poisson, ζ<sub>p</sub> = h_∞p + C(1 − β<sup>p</sup>), los Bonneton con nivel 3,60 dan C ≈ 1,0–1,1 para n = 2, 3, 4 (codimensión de eventos puntuales: los frentes) y h_∞ creciendo con n (0,02 → 0,3 → 0,37: ancho finito + cresta curva).</li>
+</ul>
 </div>
 </div>
 </div>
