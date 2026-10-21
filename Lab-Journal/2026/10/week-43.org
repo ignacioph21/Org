@@ -95,3 +95,9 @@ Todo está en el reporte del día: [[file:../../../Assets/2026/10/Day_20/reporte
 ** [12:16] Pendientes: estado
 - En week-42 quedaron tachados: Bonneton de 3,5 cm, calibración y tres sensores juntos cerca de la rompiente (hechos los Días 1 y 2).
 - Las mediciones pendientes (cámara lateral, ruido en agua quieta, deriva lenta, más JONSWAP, videos, profundidades locales) quedan para dentro de varias semanas.
+
+** [12:45] Reporte del día: modelo de Ricard & Falcon, convención τ ↔ f y factor del operador de n puntos
+Todo está en el reporte: [[file:../../../Assets/2026/10/Day_21/reporte_dia5.pdf][reporte_dia5.pdf]] (24 p.). Lo compila =Tercera iteración/Día 5/Reporte/= (latexmk deja el PDF en Assets). Códigos en =Día 5/Falcon JONSWAP/= y =Día 5/Intermitencia Burgers/=.
+- *Factor del operador.* El Γτ del paper vale para 2 puntos. Con n puntos, un frente pesa durante (n − 1)τ con pesos |C_j|^p, así que S_p^mB = Γ τ K_{n,p} ⟨|Δη|^p⟩, con K = Σ|C_j|^p. Con ese factor, el Γ libre de n = 6 baja de 3–4 Hz a 0,4–1,0 Hz en los Bonneton, del orden de los frentes detectados, con el mismo rms. Con n = 2 (K = 1) no cambia nada: ahí Γ está mal determinado, porque en el régimen bifractal ζ_p = 1 para cualquier Γ.
+- El t* efectivo de n = 6 (30–42 ms) es 2–3 veces el de los ajustes tanh: pendiente medirlo en una ventana ~5τ.
+- Diagnóstico del detector: lo que detecta está bien (R² ≈ 0,99), pero con 3σ ve solo la mitad de las olas.
