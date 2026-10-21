@@ -65,3 +65,20 @@ Todo está en el reporte del día: [[file:../../../Assets/2026/10/Day_20/reporte
 - S_p de 2, 3 y 4 puntos, nulos FT/IAAFT, jerarquía de modelos (Burgers bifractal, Ricard & Falcon, tanh exacto, perfil medio, Poisson) con sus derivaciones.
 - Teoría propuesta: η = Σ a_i ψ(t − t_i) + fondo gaussiano, con el núcleo ψ por deconvolución y sin parámetros libres. Reproduce ζ_p(τ) de n = 2, 3, 4 para τ ≥ 20 ms (rms 0,10–0,29 con n = 2). Intermitencia por ciclo útil chico (Γw ≈ 0,07); saturación en τ ~ w ≈ 1/ω_m (explica el λ ≈ ω_m de Poisson). Los tiempos de Poisson empeoran el acuerdo en los Bonneton.
 - [18:45] Reporte de intermitencia completo con las 8 mediciones (21 p.). Modelos analíticos de ζ_p contra p: con log-Poisson, ζ_p = h_∞p + C(1 − β^p), los Bonneton con nivel 3,60 dan C ≈ 1,0–1,1 para n = 2, 3, 4 (codimensión de eventos puntuales: los frentes) y h_∞ creciendo con n (0,02 → 0,3 → 0,37: ancho finito + cresta curva).
+
+* 2026-10-21
+** [11:06] Agua del tanque: posible suciedad por las obras en el Labo
+- Por las obras en el Labo, el agua del tanque tal vez estaba un poco sucia: varios notamos algunas pelusas de mugre.
+- Igual, antes de estas mediciones la recirculamos casi por completo. A confirmar a qué mediciones se refiere y si afecta la calibración o los sensores.
+
+** [11:06] S_p de S1: modelo de Ricard & Falcon (2023) en una ventana común dentro del ajuste espectral
+- *Convención de τ.* La app (=03_analisis_interactivo.py=) pasa f → τ como τ = 1/f, pero el incremento de n puntos es un pasabanda con respuesta |2 sin(ωτ/2)|^{n−1}: máximo en f = 1/(2τ) y *cero* en f = 1/τ. Hay que usar la del paper, τ = π/ω.
+- *Validación del modelo.* Saqué los puntos de la Fig. 4 del paper de los vectores del PDF. Con sus t* = 7,7 ms y n = 4,8, y A, Γ, δ0 libres, mi implementación de las ecs. 3–5 los reproduce con rms 0,04.
+- *Ventana.* Una sola para todos los n: la de saturación de ζ_p^(2) en 1, buscada dentro del rango del ajuste de Bonneton (csch²) de cada medición. En JONSWAP_BONNETON_395 queda τ = 97–150 ms, o sea ω = 21–32 rad/s, alrededor de ω_ν. El rango ω_m–ω_ν que usaba antes se salía del ajuste espectral.
+- *Resultado en JONSWAP* (n = 6 está convergido; n = 5 da casi lo mismo). El modelo anda (rms 0,02–0,04) con t* ≈ 16–33 ms, parecido al medido (22 ms). Pero hace falta Γ ≈ 3 Hz: más que los frentes > 3σ (0,84 Hz) y que Γ_m = ω_m/2π (2,3 Hz). Con los t* y Γ medidos no alcanza (rms 0,10–0,17). El detector de frentes probablemente subestima la tasa de choques: a revisar.
+
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_21/ventanas_JONSWAP_BONNETON_395.png]]
+
+- Códigos y figuras en =Tercera iteración/Día 5/Falcon JONSWAP/=. La batería sobre las otras 7 mediciones está corriendo: =Figuras/ventanas_barrido.pdf=.
+- También hoy: ζ_p(τ) de la simulación de Burgers de 200 Hz (=Día 5/Intermitencia Burgers/=). Ahí n ≥ 3 se plancha con p (≈1,45), en S1 sigue creciendo. Los choques están apenas resueltos (≈2 muestras), así que hace falta una corrida con más resolución.
