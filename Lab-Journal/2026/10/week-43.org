@@ -88,3 +88,6 @@ Todo está en el reporte del día: [[file:../../../Assets/2026/10/Day_20/reporte
 - Bonneton (5 mediciones): n = 2 anda sin parámetros libres, con t* y Γ de los frentes (rms 0,018–0,035). n = 6 solo con ajuste libre (rms 0,009–0,033), con t* ≈ 30–44 ms y Γ ≈ 1,8–4,4 Hz, por encima de los frentes > 3σ (0,8–1,8 Hz).
 - Random (3 mediciones): con n = 6, el ajuste libre lleva t* a la cota (1 s): el "frente" es una rampa y no un choque. Coincide con lo del Día 4: los random no son de Burgers.
 - A revisar: la tasa de choques que pide el modelo es mayor que la detectada. ¿El detector > 3σ pierde frentes chicos?
+
+** [12:13] Pendiente: sujetacables impresos en 3D
+- [ ] Esta semana o la siguiente: buscar un modelo de sujetacables y mandarlo a imprimir en 3D.
