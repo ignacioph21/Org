@@ -82,3 +82,9 @@ Todo está en el reporte del día: [[file:../../../Assets/2026/10/Day_20/reporte
 
 - Códigos y figuras en =Tercera iteración/Día 5/Falcon JONSWAP/=. La batería sobre las otras 7 mediciones está corriendo: =Figuras/ventanas_barrido.pdf=.
 - También hoy: ζ_p(τ) de la simulación de Burgers de 200 Hz (=Día 5/Intermitencia Burgers/=). Ahí n ≥ 3 se plancha con p (≈1,45), en S1 sigue creciendo. Los choques están apenas resueltos (≈2 muestras), así que hace falta una corrida con más resolución.
+
+** [11:25] Modelo de Ricard & Falcon con ventana común: las 8 mediciones del Día 1
+- Batería completa: =Tercera iteración/Día 5/Falcon JONSWAP/Figuras/ventanas_barrido.pdf= (una página por medición, como la figura de JONSWAP). Las ventanas de saturación de ζ^(2) caen siempre alrededor de ω_ν (ω ≈ 21–45 rad/s).
+- Bonneton (5 mediciones): n = 2 anda sin parámetros libres, con t* y Γ de los frentes (rms 0,018–0,035). n = 6 solo con ajuste libre (rms 0,009–0,033), con t* ≈ 30–44 ms y Γ ≈ 1,8–4,4 Hz, por encima de los frentes > 3σ (0,8–1,8 Hz).
+- Random (3 mediciones): con n = 6, el ajuste libre lleva t* a la cota (1 s): el "frente" es una rampa y no un choque. Coincide con lo del Día 4: los random no son de Burgers.
+- A revisar: la tasa de choques que pide el modelo es mayor que la detectada. ¿El detector > 3σ pierde frentes chicos?
