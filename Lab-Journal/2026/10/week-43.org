@@ -104,3 +104,10 @@ Todo está en el reporte: [[file:../../../Assets/2026/10/Day_21/reporte_dia5.pdf
 
 ** [13:28] Pendiente: merging de bores entre sensores contra la fusión de choques de Burgers
 - [ ] En algún momento: estudiar el merging de bores entre S1 y S2, por ejemplo, y compararlo con la fusión de ondas de choque de la ecuación de Burgers (las simulaciones largas de =Burgers Equation/Solver largo/=).
+
+** [13:45] Reporte numérico: simulaciones de Burgers contra S1, con y sin ruido
+Reporte aparte: [[file:../../../Assets/2026/10/Day_21/reporte_numerico.pdf][reporte_numerico.pdf]] (8 p.). Lo compila =Tercera iteración/Día 5/Reporte numérico/=; códigos en =Día 5/Intermitencia Burgers/Códigos/=.
+- Simulación de referencia: la *v2* de =Burgers Equation/Solver largo/= (A = 2,5, ν = 0,0513, último frame, t = 0,3). Es un diente de sierra desarrollado, con choques de 11 muestras y un cociente ancho/separación de los frentes como en S1. La de =Structure functions/= (ν = 0,005) no sirve: los choques ocupan 1–2 muestras.
+- Con el mismo análisis que S1: en la v2, n = 6 crece con p como en S1 (2,64 contra 2,30 en p = 7,5), con la ventana en el mismo τ/t* ≈ 4–7. n = 2 no se parece (baja a 0,89 en p alto).
+- Ruido (gaussiano o el de S1 en agua quieta, con su cociente ruido/señal de 4,6 %): casi no cambia nada. Con el triple, n = 6 se dobla hacia abajo en p alto.
+- En el reporte del día sumé una sección con esquemas: por qué en JONSWAP n = 2 satura y n = 6 crece. En la fórmula de Falcon lo decide τ/t* en la ventana, y para n = 6 necesita un t* el doble, porque no tiene el déficit de los bordes de las mesetas del operador de n puntos. El frente tanh exacto lo tiene con el t* medido.
