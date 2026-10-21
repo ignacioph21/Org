@@ -91,3 +91,7 @@ Todo está en el reporte del día: [[file:../../../Assets/2026/10/Day_20/reporte
 
 ** [12:13] Pendiente: sujetacables impresos en 3D
 - [ ] Esta semana o la siguiente: buscar un modelo de sujetacables y mandarlo a imprimir en 3D.
+
+** [12:16] Pendientes: estado
+- En week-42 quedaron tachados: Bonneton de 3,5 cm, calibración y tres sensores juntos cerca de la rompiente (hechos los Días 1 y 2).
+- Las mediciones pendientes (cámara lateral, ruido en agua quieta, deriva lenta, más JONSWAP, videos, profundidades locales) quedan para dentro de varias semanas.

@@ -459,8 +459,8 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 - h = 3,60 cm es el mejor nivel (mejor ajuste de la csch²). Bonneton escalado para 3,5 cm en la paleta (Tp = 0,447 s, Hm0 = 7,5 mm), cargado en el pendrive.
 - S_p converge bien con el JONSWAP (estacionario). Con los random hay tendencias y eventos dominantes.
 *** Pendientes
-- [ ] Medir el Bonneton de 3,5 cm (PID stiff).
-- [ ] *Calibración* (sobrellenar y vaciar): hace falta para Iribarren, ν_c, umbrales en cm y para comparar alturas con 10_forzados (la fase es ~2× más chica a 3,95 cm).
+- [X] Medir el Bonneton de 3,5 cm (PID stiff).
+- [X] *Calibración* (sobrellenar y vaciar): hace falta para Iribarren, ν_c, umbrales en cm y para comparar alturas con 10_forzados (la fase es ~2× más chica a 3,95 cm).
 - [ ] *Ruido en agua quieta* con los 3 sensores, intercambiando entradas del DAQ (+ opcional: canal 3 en corto).
 - [ ] Origen de la *deriva lenta* común a los 3 canales (¿nivel?, ¿temperatura?, ¿electrónica?): medir el nivel al final y la deriva con la paleta quieta.
 - [ ] Videos con otra iluminación.
@@ -712,7 +712,7 @@ Barrido hacia más prominencia y distancia (menos frentes → ω_m más bajo), c
 ** [18:57] Pendientes para mañana (14/10)
 *Lo principal:*
 - [ ] Tomar *videos*.
-- [ ] Poner los *tres sensores juntos cerca de la rompiente*.
+- [X] Poner los *tres sensores juntos cerca de la rompiente*.
 - [ ] En los JONSWAP, *acercar S1 a la rompiente* (que en S1 no quede rastro del JONSWAP).
 *Además (de lo que surgió hoy):*
 - [ ] Medir conductividad y temperatura del agua; ver si la deriva lenta sigue con la paleta quieta. Revisar el sensor 3 (portadora 0,60 V).
