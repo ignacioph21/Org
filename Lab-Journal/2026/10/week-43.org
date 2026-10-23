@@ -140,3 +140,7 @@ Reporte aparte: [[file:../../../Assets/2026/10/Day_21/reporte_numerico.pdf][repo
 - Original (izquierda) y limpia (derecha), espejadas para que la ola vaya de izquierda a derecha:
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_23/fotos_ola_original_vs_limpia.png]]
+
+** [18:53] Manuscrito: Figura 2 en el PDF; se sigue después
+- Figura 2 agregada a [[file:../../../Assets/2026/10/Day_23/resumen_figuras_manuscrito.pdf][resumen_figuras_manuscrito.pdf]] (6 p.): (a) el collage de las fotos limpias con los perfiles del póster superpuestos, (b) la figura de perfiles del póster.
+- Próximo: revisar la Fig. 2 y seguir con la Fig. 3. Estado en =Día 6/Manuscrito/ESTADO.md=.
