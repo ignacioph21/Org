@@ -111,3 +111,25 @@ Reporte aparte: [[file:../../../Assets/2026/10/Day_21/reporte_numerico.pdf][repo
 - Con el mismo análisis que S1: en la v2, n = 6 crece con p como en S1 (2,64 contra 2,30 en p = 7,5), con la ventana en el mismo τ/t* ≈ 4–7. n = 2 no se parece (baja a 0,89 en p alto).
 - Ruido (gaussiano o el de S1 en agua quieta, con su cociente ruido/señal de 4,6 %): casi no cambia nada. Con el triple, n = 6 se dobla hacia abajo en p alto.
 - En el reporte del día sumé una sección con esquemas: por qué en JONSWAP n = 2 satura y n = 6 crece. En la fórmula de Falcon lo decide τ/t* en la ventana, y para n = 6 necesita un t* el doble, porque no tiene el déficit de los bordes de las mesetas del operador de n puntos. El frente tanh exacto lo tiene con el t* medido.
+
+* 2026-10-23
+** [11:59] Nota: efectos capilares en esta turbulencia
+- Si alguien pregunta por los efectos capilares: en régimen muy no lineal, la frecuencia de cruce gravito-capilar se corre.
+- Referencia: Falcon, Laroche & Fauve (2007, PRL 98, 094503, "Observation of Gravity-Capillary Wave Turbulence"), en mercurio. El cruce lineal, k ~ 1/l_c con l_c = √(γ/ρg), da f_c ≈ 17 Hz para el mercurio, pero "the cross-over frequency increases with the driving amplitude and with the width of the driving frequency band" (recuadro de su Fig. 4), porque la estimación "is only valid for linear waves". Para el agua, l_c ≈ 2,7 mm.
+
+** [12:02] Nota: ¿los espectros son un efecto de agua somera y no Burgers?
+- Respuesta, si alguien lo plantea: Falcon & Laroche (2011, EPL 95, 34003, "Observation of depth-induced properties in wave turbulence on the surface of a fluid") muestran qué hace la profundidad finita en la turbulencia de ondas gravito-capilares. Aparece una joroba en el espectro capilar a una escala que depende de h, la ley de potencias gravitatoria tiene un exponente que depende fuertemente de h, y la PDF de η es de tipo Tayfun e independiente de h. Lo revisé: esos espectros son *cualitativamente diferentes* de los nuestros (decaimiento csch² de los frentes y una cola), así que no se explican como un efecto de agua somera.
+
+** [12:33] Pendiente (PRIORIDAD ALTA): corregir el empalme de bloques del lock-in
+- [ ] Corregir el lock-in (=Día 1/Análisis/lockin.py=, bloques de 30 s) para que empalme bien y desaparezcan los picos de 1–4 mm en cada borde (t = 30k s). En la ventana común casi no afectan (< 1 %), pero a τ chico con n ≥ 3 dominan p alto. Diagnóstico y parche provisorio: =Día 6/Desglose ventanas/Códigos/bordes_lockin.py=. Propuesta: bloques solapados y empalme por índice de muestra; rehacer los =.npy= en una carpeta nueva. Detalle en =Claude/pendientes_tercera_iteracion.md=.
+
+** [13:42] Decisión: medición principal para intermitencia
+- Vamos con *JONSWAP_BONNETON_395* (reemplaza a Bonneton_custom_360 como candidata): es la que mejor funciona y ajusta una zona más lineal, no un codo.
+- La ventana de saturación del Día 5 es un codo (en Bonneton_bien_profundidad_360 la pendiente local varía hasta 128 % dentro). En los resúmenes por medición se usa la meseta de la pendiente local común a n = 2 y 6 dentro del ajuste csch².
+
+** [15:57] Manuscrito: en qué estamos (pausa por el coloquio)
+- Arrancamos el armado del manuscrito figura por figura: [[file:../../../Assets/2026/10/Day_23/resumen_figuras_manuscrito.pdf][resumen_figuras_manuscrito.pdf]]. Carpeta =Tercera iteración/Día 6/Manuscrito/=; el estado detallado está en =ESTADO.md=.
+- *Figura 1 lista*: render (provisorio, el del póster) y esquema del Día 1 en inglés y en cm, con motor, paleta, rampa (tan α = 0,035), playa, sensores, cotas y olas cualitativas.
+- Pendientes de la Fig. 1: render nuevo en Fusion; confirmar el hueco paleta–fondo (1 cm) y h bajo cada sensor; decidir 4,35 cm (corregida) o 3,95 cm (regla).
+- Próximo: Figura 2, la elige el usuario.
+- También hoy (detalle en los reportes del día, en Assets/Day_23): desglose de las Figs. 15–16 del Día 5, excedencia de 4 mediciones con Weibull sin ajuste y Miche–Tayfun, resúmenes por medición (JONSWAP es la principal) y el rango B aparte. Lock-in: PRIORIDAD ALTA corregir el empalme.
