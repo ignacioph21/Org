@@ -133,3 +133,10 @@ Reporte aparte: [[file:../../../Assets/2026/10/Day_21/reporte_numerico.pdf][repo
 - Pendientes de la Fig. 1: render nuevo en Fusion; confirmar el hueco paleta–fondo (1 cm) y h bajo cada sensor; decidir 4,35 cm (corregida) o 3,95 cm (regla).
 - Próximo: Figura 2, la elige el usuario.
 - También hoy (detalle en los reportes del día, en Assets/Day_23): desglose de las Figs. 15–16 del Día 5, excedencia de 4 mediciones con Weibull sin ajuste y Miche–Tayfun, resúmenes por medición (JONSWAP es la principal) y el rango B aparte. Lock-in: PRIORIDAD ALTA corregir el empalme.
+
+** [18:39] Manuscrito, Figura 2: fotos de la ola con el fondo limpio
+- Collage de los 9 cuadros de la ola al romper (video1.mp4, 24/08; t = 0–339 ms a 238,7 fps), sin la esquina de la bolsa blanca de la izquierda. Código: =Día 6/Manuscrito/Códigos/limpiar_fotos.py= y =fig2_collage.py=. Fotos originales sin tocar, en =Póster/Cödigos /01_introduccion/Wave Evolution video /frames/=.
+- Cómo se limpió: cada cuadro se alinea con el primero. Arriba de la superficie, la bolsa se reemplaza por un fondo de pared ajustado y la ola se conserva. Abajo, cada columna se copia de la zona limpia siguiendo la inclinación de la base de la rampa.
+- Original (izquierda) y limpia (derecha), espejadas para que la ola vaya de izquierda a derecha:
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_23/fotos_ola_original_vs_limpia.png]]
