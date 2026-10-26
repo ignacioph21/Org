@@ -89,3 +89,12 @@
 - La ν molecular difiere < 1 % entre las dos aguas (pesa más la temperatura, ≈ −2,5 %/°C) y es 300–1000 veces más chica que las ν de arriba: ν y ν_c son de la rotura.
 - *A confirmar*: el Journal no dice qué agua tenía la cuba el 24/08 (supuse canilla; la destilada entró el 13/10).
 - [ ] Test limpio: cuando se filme de costado con agua de la canilla (decisión del 14/10), medir también con los sensores en el mismo llenado, recalibrar (la sensibilidad cambia 3,4×) y comparar α_ν = ν_c/(g^½ H_c^{3/2}) con H_c medido en el video. Medir conductividad y temperatura.
+
+** [10:03] Manuscrito, Figura 2: versión sin fondo, aprobada
+- (a) Cuadros sin el fondo: |cuadro − fondo| con el fondo de =backgrounder.py= (promedio de los primeros 60 cuadros) alineado a cada cuadro. La bolsa, estática, se cancela sin tocar el agua (la limpieza anterior se comía el frente roto en 277–339 ms). El mapeo captura→video del póster tenía errores de ~2 % en escala y una cizalla (hasta 40 px): se refinó con ECC afín. Sin la línea detectada, rotada 1,05° (inclinación de la cámara) para que la línea de agua quede horizontal y recortada justo debajo de ella. Códigos: =Día 6/Manuscrito/Códigos/quitar_fondo.py= y =fig2_collage.py=.
+- En el frente, la resta muestra un contorno 30–40 px por delante del perfil detectado (también tenue en las fotos originales): probablemente el frente sobre el vidrio del fondo, en perspectiva. A tener en cuenta con la cámara de costado.
+- (b) Perfiles superpuestos rehechos con el estilo del manuscrito, sin α, H ni L (solo outer/inner surf zone): =fig2b_perfiles.py=.
+- *Aprobada por el usuario* ("ahora sí, me gusta bastante más"). PDF: [[file:../../../Assets/2026/10/Day_23/resumen_figuras_manuscrito.pdf][resumen_figuras_manuscrito.pdf]] (5 p.).
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/10/Day_26/F2a_collage_sin_fondo.png]]
+- Próximo: Figura 3.
