@@ -36,3 +36,19 @@
   - Seno a 1–80 Hz: ganancia y fase contra f, y Sk/As del registro (≈ 0 si no hay sesgo); la bajada y la subida tienen que coincidir.
   - Diente de sierra con subida rápida y bajada lenta, y al revés: el Sk medido tiene que cambiar de signo con el forzado. Un sesgo de mojado da el mismo signo en los dos casos.
   - Comparar con la posición del encoder del motor y repetir con dos profundidades de inmersión.
+
+** [09:02] Extra: espectro espacial de la foto de 306 ms (video1.mp4, 24/08), ajuste csch²
+- Perfil de la curva 8 del póster (=wave_curves.csv=, 0,0313 cm/px), S_η(k) = |FFT(Hann · dη/dx)|²/k² (la derivada evita el salto entre bordes). Código: =Día 6/Manuscrito/Códigos/espectro_espacial.py=.
+- Velocidad del medio frente ≈ 58 cm/s, casi constante en los 9 cuadros. Ancho 10–90 % del frente: 3,1 cm (0 ms) → *0,84 cm (197 ms, el más empinado)* → 2,2 cm (306 ms) → 3,6 cm (339 ms).
+- Ajuste S = A csch²(k/k_ν) (la misma forma que el temporal, en log, sobre el perfil crudo): *k_ν depende del rango*, porque el espectro cae como k^−2,4 (más empinado que la asíntota k⁻²). A 306 ms: 1,5 ± 0,3 rad/cm (0,3–5) y 3,5 ± 0,7 rad/cm (0,3–10). En los 9 cuadros, k_ν sube mientras el frente se empina (máximo a 197 ms) y baja después de romper. Arriba de ~10 rad/cm domina la cuantización de 1 px.
+- *Comparación con el temporal* (S1 de JONSWAP_BONNETON_395: ω_ν = 23,0 rad/s; otro día y otra profundidad, así que es orientativa):
+  - ω = c k_ν del ajuste espectral: 90–210 rad/s, de 4 a 9 veces ω_ν. El ajuste espectral de una foto lo dominan los subescalones del frente roto.
+  - Con el ancho total del frente (tanh: k_ν = 2/(πℓ), w_10–90 = 2,2ℓ): k_ν = 0,64 rad/cm a 306 ms (37 rad/s) y *0,39 rad/cm a 339 ms (23 rad/s, igual a ω_ν)*. El ω_ν temporal corresponde al ancho del bore ya roto, no a su estructura fina.
+  - ν (choque de Burgers en aguas someras, ℓ = 8νh/(3cH), o sea ν = 3cH/(4πhk_ν)): espacial a 306 ms, 1,2–4×10⁻⁴ m²/s (h = 2,4–3,5 cm). Temporal en S1: ν_c de Bonneton = 4,5×10⁻⁴ m²/s, y con la misma fórmula del choque (ν = 3gH/(4πω_ν), independiente de h) 6,5×10⁻⁴ m²/s con H = Hm0 = 6,4 mm. *Mismo orden de magnitud* (≈ 400 veces la viscosidad del agua).
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/10/Day_26/extra_espectro_espacial_curva8.png]]
+
+** [09:03] Pendiente (a futuro): analizar el video completo y obtener relaciones de dispersión locales
+- [ ] Sacar η(x, t) de todo el video (no solo los 9 cuadros) y calcular relaciones de dispersión *locales*, tipo espectrograma (ventanas en x y en t, ω(k) en cada posición).
+- En shallow water deberían dar lineales, ω = √(gh(x)) k: la pendiente local da h(x) y, de ahí, *estimar directamente la pendiente de la rampa*.
+- Idea del usuario. Encaja con la cámara lateral (Redor et al. 2021) y con la pendiente de medir H(x) y el punto de rotura.
