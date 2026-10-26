@@ -124,3 +124,15 @@
 - La forma estándar en la literatura de turbulencia de ondas para la PDF asimétrica es la de Tayfun (segundo orden): Falcon & Laroche (2011) la usan.
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_26/F4_sensores.png]]
+
+** [11:00] PDFs de η de la Fig. 4: ajustes de Tayfun (para discutir)
+- Tayfun (1980), forma de Socquet-Juglard et al. (2005) (segundo orden, banda angosta: z = x + μx²/2, μ = kσ, S_k ≈ 3μ, valles acotados en z > −1/(2μ)); en turbulencia de ondas la usan Falcon & Laroche (2011). Ajuste de 3 parámetros por máxima verosimilitud sobre η/σ decimada ×10, series de la Fig. 4 (sin líneas ni resonancias). Comparado con la skew-normal ajustada y con la skew-normal sin ajuste (media 0, varianza 1, la S_k medida) que va en la figura. Código: =Día 6/Manuscrito/Códigos/tayfun_fig4.py= (funciones copiadas del Día 3).
+  | Sensor | S_k  | μ Tayfun | 3μ   | KS gauss | KS SN sin ajuste | KS SN ajuste | KS Tayfun | P(η>3σ)×10³ medido / SN / Tayfun |
+  |--------+------+----------+------+----------+------------------+--------------+-----------+----------------------------------|
+  | S1     | 0,18 | 0,054    | 0,16 | 0,014    | 0,002            | 0,002        | 0,003     | 2,4 / 2,7 / 2,4                  |
+  | S2     | 0,38 | 0,101    | 0,30 | 0,025    | 0,008            | 0,006        | 0,009     | 5,1 / 4,3 / 3,5                  |
+  | S3     | 0,59 | 0,172    | 0,51 | 0,043    | 0,004            | 0,003        | 0,009     | 6,2 / 6,0 / 5,2                  |
+- μ ≈ S_k/3 en los tres sensores (asimetría de segundo orden, como en el Día 3). Tayfun y la skew-normal ajustan el cuerpo igual de bien. En S2 los dos subestiman la cola de crestas. En S3 la cota inferior de Tayfun (−2,96σ) cae justo donde se cortan los valles medidos.
+- Tabla completa (también con P(η < −2σ) y Δℓ) en el PDF de figuras, sección 4, recuadro "Para discutir".
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_26/extra_tayfun_fig4.png]]
