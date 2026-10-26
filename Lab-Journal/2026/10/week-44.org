@@ -106,3 +106,21 @@
 - Reglas nuevas para las figuras (el usuario): frecuencias siempre en f, palabras con mayúscula inicial, unidades entre corchetes.
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_26/F3_forzado.png]]
+
+** [10:46] Ruido de los sensores: líneas de red y resonancias (JONSWAP_BONNETON_395)
+- Numeración nueva del manuscrito: S1 = canal 3 (paleta), S2 = canal 2, S3 = canal 1 (costa, el "S1" de antes).
+- La serie del lock-in ya viene filtrada: pasabajos exponencial de dos etapas (−3 dB por etapa en 1 kHz) y recorte espectral a < 1 kHz (salida a 2 kHz). Sin el pasabajos de 20 Hz, las series se ven "peludas", sobre todo S2.
+- *Espectros hasta 1 kHz* (Welch de 20 s): las líneas de red son débiles (S1: nada; S2: 48,0 Hz, ancha, 35×; S3: 100, 200 y 300 Hz, 11–27×). Lo que domina son *resonancias, probablemente mecánicas del alambre* (idea del usuario): S2 tiene dos líneas angostas en 511,8 y 559,8 Hz (180× y 55× la mediana local) sobre jorobas de 10–20 Hz de ancho, que *suman 135 µm rms* (casi todo el ruido de S2); S3 tiene las mismas jorobas sin la línea, más otras en ~170, ~270, ~370 y ~670 Hz; S1 una en 26,2 Hz.
+- *Filtro* (=Día 6/Manuscrito/Códigos/fig4_sensores.sacar_red=): en la FFT de la serie completa, el módulo de cada banda se reemplaza por una interpolación lineal en el log del nivel rms de los bordes (la fase se conserva). Bandas: red 50k ± 1 Hz; líneas angostas > 10× la mediana en ±2 Hz (± 0,25 Hz); resonancias anchas > 3× la mediana en ±25 Hz del espectro suavizado (± 1 Hz). Primero interpolé con el promedio de log|X| y dejaba pozos (~−2,5 dB): se corrigió.
+- rms entre 20 Hz y 1 kHz: 33 → 30 (S1), 144 → 50 (S2), 57 → 50 µm (S3). σ, S_k y K cambian < 0,01. Quedan hombros chicos en los bordes de las jorobas anchas.
+- Crudo (gris), filtrado (negro) y lo sacado (rojo): =Día 6/Manuscrito/Códigos/extra_red_espectros.py=.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_26/extra_red_espectros.png]]
+- Se aplica en la Fig. 4 del manuscrito (series y PDFs), con los pasos escritos en el PDF de figuras.
+
+** [10:46] Manuscrito, Figura 4: los tres sensores (en curso)
+- (a)–(c) series de S1, S2 y S3 en 11 s desde t0 = 367,91 s (elegido con =Códigos/elegir_ventana.py=), con recuadros que siguen a la ola más grande (S1 → S2: 0,47 s; S2 → S3: 0,93 s; en S3 es un diente de sierra). (d)–(f) PDF de η/σ con la gaussiana y una skew-normal con la misma S_k (sin ajuste): S_k = 0,17 / 0,38 / 0,59, K = 3,13 / 3,51 / 3,54.
+- Las crestas con z > 4 no caen en los bordes de bloque del lock-in: son olas reales (S1 en 183,05 y 282,73 s, que llegan a S2 0,5 s después). S3 concentra crestas extremas en 60–90 s (¿transitorio del arranque?).
+- La forma estándar en la literatura de turbulencia de ondas para la PDF asimétrica es la de Tayfun (segundo orden): Falcon & Laroche (2011) la usan.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_26/F4_sensores.png]]
