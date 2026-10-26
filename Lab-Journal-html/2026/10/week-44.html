@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Journal Week 44</title>
+<meta name="generator" content="Org Mode" />
+<link rel='stylesheet' href='../../../style.css' />
+<script defer src='../../../script.js'></script><style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Journal Week 44</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org20c4ea0">Referencias</a></li>
+<li><a href="#org4f03e96">2026-10-26</a>
+<ul>
+<li><a href="#org9225334">[08:40] Decisión: en el manuscrito van los datos crudos (sin desmezclar)</a></li>
+<li><a href="#org9343629">[08:50] Nota: nivel de ruido de S1 (Día 1)</a></li>
+<li><a href="#org21482eb">[08:55] Nota: objeción &ldquo;el corte y la caída de energía son rozamiento/disipación viscosa&rdquo;</a></li>
+<li><a href="#org18c444f">[09:00] Pendiente: respuesta en frecuencia del sensor y sesgo de mojado</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org20c4ea0" class="outline-2">
+<h2 id="org20c4ea0">Referencias</h2>
+<div class="outline-text-2" id="text-org20c4ea0">
+<div class="csl-bib-body">
+</div>
+</div>
+</div>
+<div id="outline-container-org4f03e96" class="outline-2">
+<h2 id="org4f03e96">2026-10-26</h2>
+<div class="outline-text-2" id="text-org4f03e96">
+</div>
+<div id="outline-container-org9225334" class="outline-3">
+<h3 id="org9225334">[08:40] Decisión: en el manuscrito van los datos crudos (sin desmezclar)</h3>
+<div class="outline-text-3" id="text-org9225334">
+<ul class="org-ul">
+<li>Las matrices de acople ε del Día 2 (<code>Día 3/Resultados/dia2/acople/acople.json</code>) quedan como referencia: S1 recibe 0,07–0,10 de S2 y ≲ 0,06 de S3; S2 recibe hasta 0,55 de S3. Para S1 el desmezclado no corre el pico y sube Hm0 un 5–9 %. Ver la entrada del 16/10 (week-42).</li>
+<li>Para JONSWAP<sub>BONNETON</sub><sub>395</sub> (Día 1) no hay matriz calculada.</li>
+<li>Se usan los crudos; más adelante se independizan los sensores (cada uno con su PCB).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9343629" class="outline-3">
+<h3 id="org9343629">[08:50] Nota: nivel de ruido de S1 (Día 1)</h3>
+<div class="outline-text-3" id="text-org9343629">
+<ul class="org-ul">
+<li>Reposo de Bonneton<sub>bien</sub><sub>profundidad</sub><sub>360</sub> (t = 2–28 s): 0,050 mm rms en ventanas de 1 s (61 µm en las 26 s, por movimiento lento &lt; 5 Hz).</li>
+<li>Piso espectral blanco ≈ 2×10⁻⁶ mm²/Hz (20–300 Hz), el mismo en el reposo y durante JONSWAP<sub>BONNETON</sub><sub>395</sub> (60–300 Hz: 2,1×10⁻⁶).</li>
+<li>rms del ruido: ≈ 50 µm en toda la banda (0–1000 Hz), ≈ 11 µm hasta 60 Hz, ≈ 7 µm hasta 20 Hz. Compatible con el σ<sub>n</sub> ≲ 20 µm del ajuste RFPN del Día 4.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org21482eb" class="outline-3">
+<h3 id="org21482eb">[08:55] Nota: objeción &ldquo;el corte y la caída de energía son rozamiento/disipación viscosa&rdquo;</h3>
+<div class="outline-text-3" id="text-org21482eb">
+<ul class="org-ul">
+<li>Estimaciones lineales en aguas someras (ν = 10⁻⁶ m²/s, h bajo S1 ≈ 0,73 cm, la del Día 2; la del Día 1 no está medida).</li>
+<li><b>Magnitud</b>: capa de Stokes laminar en el fondo (RE = U²/(ων) ≈ 7×10³), γ = √(νω/2)/(2h): 0,12 s⁻¹ en ω<sub>m</sub>, 0,23 s⁻¹ en ω<sub>ν</sub>. De S3 a S1 (15 cm, ≈ 0,5 s) se pierde 12 % de la energía en ω<sub>m</sub> y 23 % en ω<sub>ν</sub>; en S1 se mide una pérdida de 64–80 %. El rozamiento explica como mucho ~1/6.</li>
+<li><b>Forma</b>: el amortiguamiento viscoso va como √ω, es decir exp(−β√ω), suave. Entre 23 y 100 rad/s cambia ×1,3 (×2 en todo el recorrido desde la paleta); el csch² cae ≈ 1/800. La disipación de volumen (νk²) es despreciable cerca de ω<sub>ν</sub> (0,007 s⁻¹).</li>
+<li><b>Signo de ω<sub>ν</sub>(h)</b> (el argumento más fuerte): un corte viscoso (2γ t<sub>viaje</sub> ≈ 1) da ω<sub>c</sub> ≈ 2gh³/(νL²), que <b>crece</b> como h³ (≈ 340 rad/s en S1). En el Día 2, ω<sub>ν</sub> ∝ h^−0,39 / h^−0,27 con ω<sub>ν</sub>√(h/g) ≈ 0,74: la escala de los frentes la fija la profundidad.</li>
+<li><b>La ν de ω<sub>ν</sub> no es la molecular</b>: con ν molecular el choque tendría ~5 µm (decenas de µs). Para frentes de ~20 ms hace falta ν<sub>ef</sub> ≈ 10⁻³ m²/s (~1000× la del agua): es la viscosidad efectiva de la rotura. En el manuscrito escribir &ldquo;effective (breaking) viscosity&rdquo;.</li>
+<li>Coherente con Rankine–Hugoniot en la velocidad de los frentes y con la pérdida de ~5 % del pulso medio de S2 a S1 (Burgers).</li>
+<li>Puntos débiles: h bajo los sensores (con 0,5 cm las pérdidas suben ~50 %); una película superficial (posible suciedad del agua, 21/10) puede duplicar γ, pero sigue siendo ∝ √ω y con el signo opuesto en h; las paredes laterales aportan ~2h/b (falta medir el ancho b). Separar rotura y viscosidad punto por punto: cámara lateral (Redor et al. 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org18c444f" class="outline-3">
+<h3 id="org18c444f">[09:00] Pendiente: respuesta en frecuencia del sensor y sesgo de mojado</h3>
+<div class="outline-text-3" id="text-org18c444f">
+<ul class="org-ul">
+<li class="off"><code>[&nbsp;]</code> Sacudir el sensor sumergido con el motor (hasta ~80 Hz) en agua quieta para mostrar que no hay sesgo de mojado: que la asimetría de las PDF (Sk &gt; 0, As &lt; 0) sea del flujo y no del mojado residual del alambre.</li>
+<li>Por qué importa: si la película de agua tarda en escurrir del alambre cuando el agua baja, el sensor lee alto en la bajada. Eso rellena los valles (Sk &gt; 0 falso) y suaviza la parte de atrás de la ola (As &lt; 0 falso): imita justo las firmas que medimos.</li>
+<li>Velocidades a cubrir: en S1 (JONSWAP<sub>BONNETON</sub><sub>395</sub>), dη/dt llega a +94 / +163 mm/s (percentiles 99 / 99,9, subida de los frentes) y a −49 / −68 mm/s (1 / 0,1, bajada). Hay que llegar a ≳ 0,2 m/s. A 80 Hz eso es A ≈ 0,4 mm y ≈ 100 m/s² (~10 g); a 10 Hz, A ≈ 3 mm y ≈ 12 m/s². <b>A confirmar si el LinMot lo banca con el sensor montado.</b> (Propuesta mía.)</li>
+<li>Pruebas propuestas (mías, a discutir):
+<ul class="org-ul">
+<li>Seno a 1–80 Hz: ganancia y fase contra f, y Sk/As del registro (≈ 0 si no hay sesgo); la bajada y la subida tienen que coincidir.</li>
+<li>Diente de sierra con subida rápida y bajada lenta, y al revés: el Sk medido tiene que cambiar de signo con el forzado. Un sesgo de mojado da el mismo signo en los dos casos.</li>
+<li>Comparar con la posición del encoder del motor y repetir con dos profundidades de inmersión.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

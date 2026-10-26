@@ -1,0 +1,38 @@
+#+TITLE: Journal Week 44
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-10-26
+** [08:40] Decisión: en el manuscrito van los datos crudos (sin desmezclar)
+- Las matrices de acople ε del Día 2 (=Día 3/Resultados/dia2/acople/acople.json=) quedan como referencia: S1 recibe 0,07–0,10 de S2 y ≲ 0,06 de S3; S2 recibe hasta 0,55 de S3. Para S1 el desmezclado no corre el pico y sube Hm0 un 5–9 %. Ver la entrada del 16/10 (week-42).
+- Para JONSWAP_BONNETON_395 (Día 1) no hay matriz calculada.
+- Se usan los crudos; más adelante se independizan los sensores (cada uno con su PCB).
+
+** [08:50] Nota: nivel de ruido de S1 (Día 1)
+- Reposo de Bonneton_bien_profundidad_360 (t = 2–28 s): 0,050 mm rms en ventanas de 1 s (61 µm en las 26 s, por movimiento lento < 5 Hz).
+- Piso espectral blanco ≈ 2×10⁻⁶ mm²/Hz (20–300 Hz), el mismo en el reposo y durante JONSWAP_BONNETON_395 (60–300 Hz: 2,1×10⁻⁶).
+- rms del ruido: ≈ 50 µm en toda la banda (0–1000 Hz), ≈ 11 µm hasta 60 Hz, ≈ 7 µm hasta 20 Hz. Compatible con el σ_n ≲ 20 µm del ajuste RFPN del Día 4.
+
+** [08:55] Nota: objeción "el corte y la caída de energía son rozamiento/disipación viscosa"
+- Estimaciones lineales en aguas someras (ν = 10⁻⁶ m²/s, h bajo S1 ≈ 0,73 cm, la del Día 2; la del Día 1 no está medida).
+- *Magnitud*: capa de Stokes laminar en el fondo (RE = U²/(ων) ≈ 7×10³), γ = √(νω/2)/(2h): 0,12 s⁻¹ en ω_m, 0,23 s⁻¹ en ω_ν. De S3 a S1 (15 cm, ≈ 0,5 s) se pierde 12 % de la energía en ω_m y 23 % en ω_ν; en S1 se mide una pérdida de 64–80 %. El rozamiento explica como mucho ~1/6.
+- *Forma*: el amortiguamiento viscoso va como √ω, es decir exp(−β√ω), suave. Entre 23 y 100 rad/s cambia ×1,3 (×2 en todo el recorrido desde la paleta); el csch² cae ≈ 1/800. La disipación de volumen (νk²) es despreciable cerca de ω_ν (0,007 s⁻¹).
+- *Signo de ω_ν(h)* (el argumento más fuerte): un corte viscoso (2γ t_viaje ≈ 1) da ω_c ≈ 2gh³/(νL²), que *crece* como h³ (≈ 340 rad/s en S1). En el Día 2, ω_ν ∝ h^−0,39 / h^−0,27 con ω_ν√(h/g) ≈ 0,74: la escala de los frentes la fija la profundidad.
+- *La ν de ω_ν no es la molecular*: con ν molecular el choque tendría ~5 µm (decenas de µs). Para frentes de ~20 ms hace falta ν_ef ≈ 10⁻³ m²/s (~1000× la del agua): es la viscosidad efectiva de la rotura. En el manuscrito escribir "effective (breaking) viscosity".
+- Coherente con Rankine–Hugoniot en la velocidad de los frentes y con la pérdida de ~5 % del pulso medio de S2 a S1 (Burgers).
+- Puntos débiles: h bajo los sensores (con 0,5 cm las pérdidas suben ~50 %); una película superficial (posible suciedad del agua, 21/10) puede duplicar γ, pero sigue siendo ∝ √ω y con el signo opuesto en h; las paredes laterales aportan ~2h/b (falta medir el ancho b). Separar rotura y viscosidad punto por punto: cámara lateral (Redor et al. 2021).
+
+** [09:00] Pendiente: respuesta en frecuencia del sensor y sesgo de mojado
+- [ ] Sacudir el sensor sumergido con el motor (hasta ~80 Hz) en agua quieta para mostrar que no hay sesgo de mojado: que la asimetría de las PDF (Sk > 0, As < 0) sea del flujo y no del mojado residual del alambre.
+- Por qué importa: si la película de agua tarda en escurrir del alambre cuando el agua baja, el sensor lee alto en la bajada. Eso rellena los valles (Sk > 0 falso) y suaviza la parte de atrás de la ola (As < 0 falso): imita justo las firmas que medimos.
+- Velocidades a cubrir: en S1 (JONSWAP_BONNETON_395), dη/dt llega a +94 / +163 mm/s (percentiles 99 / 99,9, subida de los frentes) y a −49 / −68 mm/s (1 / 0,1, bajada). Hay que llegar a ≳ 0,2 m/s. A 80 Hz eso es A ≈ 0,4 mm y ≈ 100 m/s² (~10 g); a 10 Hz, A ≈ 3 mm y ≈ 12 m/s². *A confirmar si el LinMot lo banca con el sensor montado.* (Propuesta mía.)
+- Pruebas propuestas (mías, a discutir):
+  - Seno a 1–80 Hz: ganancia y fase contra f, y Sk/As del registro (≈ 0 si no hay sesgo); la bajada y la subida tienen que coincidir.
+  - Diente de sierra con subida rápida y bajada lenta, y al revés: el Sk medido tiene que cambiar de signo con el forzado. Un sesgo de mojado da el mismo signo en los dos casos.
+  - Comparar con la posición del encoder del motor y repetir con dos profundidades de inmersión.
