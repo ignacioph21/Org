@@ -52,3 +52,24 @@
 - [ ] Sacar η(x, t) de todo el video (no solo los 9 cuadros) y calcular relaciones de dispersión *locales*, tipo espectrograma (ventanas en x y en t, ω(k) en cada posición).
 - En shallow water deberían dar lineales, ω = √(gh(x)) k: la pendiente local da h(x) y, de ahí, *estimar directamente la pendiente de la rampa*.
 - Idea del usuario. Encaja con la cámara lateral (Redor et al. 2021) y con la pendiente de medir H(x) y el punto de rotura.
+
+** [09:13] Extra (sigue): foto de 306 ms — suavizado, normalización de Bonneton, frente y Cole-Hopf de pulso único
+- *Estirar el ajuste sobre el suavizado* (pregunta del usuario): k_ν se estabiliza en ≈ 4 rad/cm (0,3–20/30/40), pero eso lo fija el filtro del póster. El cociente suavizado/crudo cae a < 0,5 desde ~5 rad/cm (mediana de 11 px) y desde ~16 rad/cm sigue el gaussiano de σ = 2,5 px (35 rad/cm: 8×10⁻⁴ contra 7×10⁻⁴). Por encima de ~10 rad/cm esta foto no da información. Código: =espectro_espacial_suavizado.py=.
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/10/Day_26/extra_espectro_espacial_suavizado_curva8.png]]
+- *Zoom del frente*: no es un escalón suave sino una escalera de ~3 escalones (x ≈ 3,3, 4,2 y 5,0 cm; 2–4 mm de alto cada uno, unos pocos mm de ancho). Los tanh de los ajustes csch² (ℓ = 1,6–2,6 mm) tienen el ancho de *cada escalón*; el del ancho 10–90 % (ℓ ≈ 1 cm) sigue el frente completo. Código: =frente_espacial.py=.
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/10/Day_26/extra_frente_curva8.png]]
+- *Normalización de Bonneton* (pedido del usuario: E/Ẽ con k_ν como único parámetro libre, el mismo tratamiento que las series temporales, sobre el suavizado). k_m = 2π/L = 0,22 rad/cm (un solo frente en la foto; ≈ ω_m/c del JONSWAP, 0,25), borde inferior k_lo = 22/c = 0,38 rad/cm. Ajuste lineal (el de =ajuste_bonneton_auto.py=): no anda en una foto, lo dominan los primeros bins (R² < 0). En log: k_ν = 1,84 ± 0,08 rad/cm en 0,38–10 (R² 0,81, ω = c k_ν ≈ 110 rad/s); 3,55 en 0,38–40 (R² 0,93, pero sigue al filtro). Sigue siendo 5–9 veces ω_ν/c. Código: =espectro_espacial_bonneton.py=.
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/10/Day_26/extra_espectro_espacial_bonneton_curva8.png]]
+- Cole-Hopf de varios choques con un solo ν (=frente_colehopf.py=): no queda determinado (con 3–4 choques ν tiene incerteza ≥ 100 % y aparecen saltos espurios). Descartado por ahora.
+- *Cole-Hopf de un único pulso* (pedido del usuario; la onda triangular del Día 2, =cole_hopf_pulso.py=, con t → x y la rampa hacia +x): sobre el suavizado, *R = 21 ± 0,5, W = 20,7 cm, V_J = 11,7 mm, R² = 0,988* (rms 0,35 mm). Sigue la rampa trasera, la cola y la subida del frente; no capta la escalera y queda ~1 mm bajo en el pico (la cresta se pasa respecto de Burgers, como en los Bonneton). Choque W/R = *10 mm* (= el ℓ ≈ 9,9 mm del ancho 10–90 %), 17 ms con c = 58 cm/s. Código: =pulso_colehopf.py=.
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/10/Day_26/extra_pulso_colehopf_curva8.png]]
+- *ν con la misma fórmula en espacio y en tiempo* (ν = 3cV_J W/(8hR), de R = A/(2ν) con v = (3c/2h)η): foto, *0,74–1,1×10⁻³ m²/s* (h = 3,5–2,4 cm); temporal del Día 2 (S1, altura 8, pulso grande: R = 39, choque 26 ms, h = 0,35 cm, W_x = c W_t = 18,9 cm), *0,79×10⁻³ m²/s*. Coinciden con montajes distintos: ≈ 1000 veces la del agua, la viscosidad efectiva de la rotura.
+- Conclusión: el pulso de Cole-Hopf (perfil entero) mide la escala del bore, que es la de Burgers y la que ve el sensor; el csch² sobre una foto sola lo dominan los escalones internos de ~2 mm.
+
+** [09:14] Pendiente (el usuario: "definitivamente vale la pena"): medir con la cámara bien de costado
+- [ ] Filmar la ola bien de costado (montaje tipo Redor et al. 2021, entrada del 20/10) en la geometría del Día 1, con buena iluminación y escala en el plano de la ola.
+- Con eso: η(x, t) del video completo → Cole-Hopf de pulso y ν cuadro a cuadro durante la rotura, espectros espaciales promediados sobre muchos cuadros (¿el codo va a ~0,5 rad/cm, el ancho del bore?), dispersión local tipo espectrograma (pendiente de la rampa), punto de rotura y H(x) entre S2 y S1. Extraer el perfil con borde subpíxel y sin la mediana, para no depender del filtro del póster.
