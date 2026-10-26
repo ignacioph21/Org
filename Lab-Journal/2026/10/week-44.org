@@ -98,3 +98,11 @@
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/10/Day_26/F2a_collage_sin_fondo.png]]
 - Próximo: Figura 3.
+
+** [10:22] Manuscrito, Figura 3: el forzado, aprobada
+- Medición principal: JONSWAP_BONNETON_395. (a) Posición de la paleta x_p − ⟨x_p⟩ (el CSV tal cual se le pasó al motor; ⟨x_p⟩ ≈ 55 mm), ventana de 30 s por el centro de los 10 min. (b) Espectro S(f) en escala lineal (Welch con ventanas de Hann de 75 s, sin las rampas, solo dentro de la banda generada) con el objetivo JONSWAP en rayas, e inset log-log con la cola f^−5,6. Código: =Día 6/Manuscrito/Códigos/fig3_forzado.py=.
+- *La curva no es JONSWAP*: el generador sintetiza η JONSWAP (γ = 3,3, T_p = 1,07 s, H_m0 = 42,9 mm, banda 0,5–3 f_p; amplitudes determinísticas, fases al azar) y la divide por la transferencia de Biésel del pistón a h = 20 cm (de diseño). Por eso la cola de la paleta cae más rápido (la pendiente local va de −6 cerca del pico a −5 cerca del corte). Con 3,95 cm la η lineal en la paleta sería ≈ f^−3,3 con H_m0 ≈ 17,5 mm, y en S3 se midió H_m0 ≈ 5,3 mm: aclararlo en el texto.
+- El serrucho del espectro era la estimación (Welch con 6 segmentos de 164 s sobre componentes con fases al azar), no la señal: con ventanas de 75 s queda liso.
+- Reglas nuevas para las figuras (el usuario): frecuencias siempre en f, palabras con mayúscula inicial, unidades entre corchetes.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_26/F3_forzado.png]]
