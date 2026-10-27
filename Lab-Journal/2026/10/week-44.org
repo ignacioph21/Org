@@ -217,5 +217,5 @@
 - Verificación: textos completos de Zhang & Benoit (preprint), Mase & Kirby 1992, Kirby & Kaihatu 1996, Kaihatu 2007, Bolles 2019 y Onorato 2006 (preprint); el resto, solo abstracts. Sin acceso al reporte BK94 ni a Katsardi et al. 2013.
 - *Propuesta:* mostrar las dos (crestas con Tayfun, alturas con Rayleigh y Battjes–Groenendijk) y S_k, K contra x.
 
-** [18:33] Pendiente: revisar papers de Fauve sobre modelos de PDFs asimétricas de los incrementos
+** [18:30] Pendiente: revisar papers de Fauve sobre modelos de PDFs asimétricas de los incrementos
 - Pedido del usuario: buscar en los trabajos de Fauve (y colaboradores) modelos para las PDFs *asimétricas de los incrementos* δη(τ) = η(t + τ) − η(t), para la parte de intermitencia y funciones de estructura (S_p, ζ_p).
