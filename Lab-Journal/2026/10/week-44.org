@@ -219,3 +219,13 @@
 
 ** [18:30] Pendiente: revisar papers de Fauve sobre modelos de PDFs asimétricas de los incrementos
 - Pedido del usuario: buscar en los trabajos de Fauve (y colaboradores) modelos para las PDFs *asimétricas de los incrementos* δη(τ) = η(t + τ) − η(t), para la parte de intermitencia y funciones de estructura (S_p, ζ_p).
+
+** [18:55] Review de experimentos de olas en canales y cierre del día
+- Review de 21 trabajos (PDFs en =Tercera iteración/Día 6/Bibliografía/=), con tabla de tamaños de las instalaciones y figuras recortadas de los resultados principales: [[file:../../../Assets/2026/10/Day_27/review_canales.pdf][review_canales.pdf]].
+- *Conclusiones:*
+  - Nuestro canal está entero en k_p h < 1,3 y tiene solo ~5–6 longitudes de onda: no hay inestabilidad modulacional (Onorato); el régimen es de 2.º orden fuera de equilibrio por la pendiente (Trulsen 2012/2020, Zhang et al. 2019).
+  - S1 (S_k 0,17, K 3,13) ≈ el caso BFI bajo de Onorato (K ≈ 3,2).
+  - S2 (K 3,51, cola de alturas sobre Rayleigh) = el máximo de S_k, K y olas grandes en el lado somero de la pendiente (Trulsen, Zhang 2019, Kashima & Mori).
+  - S3: cola de alturas cortada por debajo de Rayleigh (Battjes & Groenendijk, Katsardi), H_rms/h = 0,48 entre 0,42 (Thornton & Guza) y 0,6 (Mase & Kirby); crestas sobre Rayleigh y S_k, K cerca de Redor 2021 (0,70; 3,40).
+  - Fig. 8 propuesta en tres paneles: S_k y K contra x; crestas con Tayfun; alturas con Rayleigh y la CWD sin ajuste.
+- *Pendientes:* okay de las Figs. 7 y 8; detección para la Fig. 8 (histéresis 0,2 mm o pasabajos de 20 Hz); fórmula de H_rms de B&G en el PDF; valores de S_k y K de las figuras de Trulsen y Kashima; crestas de Katsardi; k_p h en S2 y S3; umbral de Iribarren con L local; papers de Fauve sobre PDF asimétricas de incrementos.
