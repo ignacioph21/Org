@@ -136,3 +136,34 @@
 - Tabla completa (también con P(η < −2σ) y Δℓ) en el PDF de figuras, sección 4, recuadro "Para discutir".
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_26/extra_tayfun_fig4.png]]
+
+* 2026-10-27
+** [16:50] Manuscrito, Figura 6: incerteza de la profundidad local (pendiente por definir)
+- Probamos una banda de Miche con la incerteza de la profundidad local d en la Fig. 6 (H/√m0 contra T/T_m): primero ±1 mm, después ±0,5 mm. *Decisión del usuario: por ahora la figura va SOLO con la línea de Miche; la banda queda acá, como pendiente por definir.*
+- Ancho de la banda (±0,5 mm): S1 ±0,3 % (T ≈ 0,3 s, aguas casi profundas: tanh kd ≈ 1), S2 ±0,7 %, S3 ±4,9 % en la meseta (aguas someras: H_Miche ≈ (2π/7) d ≈ 0,9 d). Solo se nota en S3.
+- Olas de S3 por encima de Miche (d = 10,1 mm): 4 con d; 6 con d − 0,5 mm y 2 con d + 0,5 mm; con ±1 mm, 12 y 1.
+- *Pendiente por definir:* el valor de la incerteza (±0,5 o ±1 mm) y si se incluye el setup (en la zona de rompientes η̄ ~ 0,1–0,2 H, ~0,5–1 mm en S3, del orden de la incerteza; se mide si la calibración ODR conserva el cero absoluto). Código: =Día 6/Manuscrito/Códigos/fig6_HT.py banda= (=fig6_HT.DD_MM=).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_27/extra_F6_HT_banda.png]]
+
+** [16:50] Las olas de S3 que cruzan Miche no son artefactos del procesado
+- Controles sobre las 6 olas por encima de Miche con d − 0,5 mm (=Día 6/Manuscrito/Códigos/extra_outliers_miche.py=):
+  | t [s]  | H [mm] | T [s] | H/H_M | Borde de bloque | máx abs(Δη) / p99,9 | D = 0,1 / 0,2 / 0,3 mm | Pasabajos 20 Hz |
+  |--------+--------+-------+-------+-----------------+---------------------+------------------------+-----------------|
+  | 130,86 |   9,23 | 1,32  | 1,08  | 10,9 s          | 1,2×                | 1,08 / 1,08 / 1,08     | 1,05            |
+  | 259,88 |   9,64 | 1,17  | 1,13  | 10,1 s          | 1,0×                | 1,13 / 1,13 / 1,13     | 1,10            |
+  | 267,40 |   8,63 | 1,51  | 1,01  | 2,6 s           | 1,2×                | 1,01 / 1,01 / 1,01     | 0,98            |
+  | 418,81 |   8,84 | 0,83  | 1,05  | 1,2 s (fuera)   | 1,2×                | 1,05 / 1,05 / 1,05     | 1,03            |
+  | 498,60 |  10,29 | 1,22  | 1,20  | 11,4 s          | 1,2×                | 1,20 / 1,20 / 1,20     | 1,19            |
+  | 522,87 |   9,06 | 1,16  | 1,06  | 12,9 s          | 1,0×                | 1,06 / 1,06 / 1,06     | 1,04            |
+- Ninguna contiene un borde del lock-in, no hay picos, no cambian con la histéresis y el pasabajos de 20 Hz las baja 1–3 %. Son bores reales con H ≈ d: frente casi vertical y cola lineal de ~1 s, de olas que en S2 tenían 4–9 mm de cresta. Lo que sí es de la *definición* (cruces ascendentes, la de Tayfun): H junta la cresta del bore con el valle de su cola larga, y en 130,86 y 522,87 s entran dos crestas en la misma ola.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_27/extra_outliers_miche_S3.png]]
+
+** [16:50] Pendiente por definir: cómo verificar la saturación H ∝ h después de la rotura
+- Después de la rotura, Miche en aguas someras es H_max ≈ (2π/7) h ≈ 0,9 h: la saturación por profundidad (H = γh en la zona interna).
+- H/d con las olas de la Fig. 6: H_rms/d = 0,09 (S1), 0,17 (S2) y *0,48 (S3)*; H_1/3/d = 0,12 / 0,23 / 0,64; H_max/d = 0,23 / 0,48 / 1,02. En S3, cerca del γ_rms ≈ 0,42 de Thornton & Guza (1983) (0,4–0,5 en laboratorio): indicio, no prueba (un solo punto).
+- Formas de verificarla:
+  1. Ola por ola en esta medición: H_S3 contra H_S2 (emparejadas por cresta con el retardo de la correlación): techo γh si satura.
+  2. Barrido de nivel del Día 2 (=Custom_combinado_altura_1–8=): H_rms y H_1/10 en S3 contra h local, recta por el origen (a confirmar: posiciones de los sensores ese día).
+  3. A medir: varias amplitudes de forzado con el mismo nivel (H_S3 fijo mientras H_S1 crece), y el setup η̄ en cada sensor.
