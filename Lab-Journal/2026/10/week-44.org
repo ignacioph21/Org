@@ -187,3 +187,7 @@
 - Alternativas: S0 de Grilli et al. (1997), Derakhti et al. (2020, criterio de energía en la cresta en cualquier profundidad), Robertson et al. (2013, revisión).
 - Referencias verificadas: Battjes 1974, doi:10.9753/icce.v14.26; Roubos et al. 2021, doi:10.48438/jchs.2021.0009; Moragues et al. 2020, doi:10.3390/jmse8040296; Goda 2010, doi:10.1142/S0578563410002129; Derakhti et al. 2020, doi:10.1029/2019JC015886; Grilli et al. 1997, doi:10.1061/(ASCE)0733-950X(1997)123:3(102); Stagonas et al. 2011, doi:10.1016/j.coastaleng.2011.05.009; Robertson et al. 2013, doi:10.1142/S0578563413500022.
 - *Por definir:* ξ con L local sin clasificar (solo la PDF), o ξ0 para clasificar.
+
+** [17:50] Medidas del agujero a rellenar
+- Diámetro interior: *66,2 mm*.
+- Alto: *32,58 mm*.
