@@ -206,3 +206,13 @@
 - *Por decidir:* qué detección usar para la Fig. 8 (0,2 mm como las Figs. 5–7, o pasabajos de 20 Hz para el cuerpo).
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_27/extra_excedencia_metodo.png]]
+
+** [18:29] Búsqueda bibliográfica: ¿crestas o alturas? (Onorato, canales con pendiente, zona de rompientes)
+- Objetivo: mostrar que los resultados son compatibles con canales grandes; decidir qué excedencia va en la Fig. 8.
+- *Olas extremas (Onorato, Trulsen, Benoit):* el diagnóstico estándar es S_k y K de η contra x. Encima, la excedencia de *alturas* (Rayleigh: Onorato 2004, 2006; Boccotti: Zhang & Benoit 2021) y, cuando el tema es la no linealidad, la de *crestas* (Tayfun / 2.º orden: Onorato, Osborne & Serio 2005, preprint). Onorato 2006 y 2009 muestran las dos.
+- *Pendiente o escalón:* máximo de S_k y K (y de olas grandes) al final de la pendiente (Trulsen et al. 2012, 2020; Zhang et al. 2019; Kashima & Mori 2019). Coincide con nuestro S2 (cola de alturas por encima de Rayleigh justo antes de romper). Trulsen 2020: efecto solo si k_p h < 1,3.
+- *Bolles, Speer & Moore 2019 (PRFluids 4, 011801):* la geometría más parecida a la nuestra (canal de 6 m × 20 cm, escalón de 12,5 a 3 cm). Usan la PDF de η (gamma después del escalón), S_k y K contra x, y P(η > 4σ | η > 0), ×47–65 respecto de Gauss.
+- *Zona de rompientes (Kirby, Bonneton y sus datasets MK92, BK94):* no muestran excedencias; Hs/Hrms, S_k y asimetría contra x (Kaihatu et al. 2007; Kirby & Kaihatu 1996). Mase & Kirby 1992 agrega crestas representativas contra h. Distribución de alturas en rompientes: Battjes & Groenendijk 2000 (Weibull compuesta, cola por debajo de Rayleigh por la profundidad), como nuestro S3.
+- van Noorloos 2003 (el dataset vN03 de Bonneton): sin estadística ola por ola (ondas largas, espectros).
+- Verificación: textos completos de Zhang & Benoit (preprint), Mase & Kirby 1992, Kirby & Kaihatu 1996, Kaihatu 2007, Bolles 2019 y Onorato 2006 (preprint); el resto, solo abstracts. Sin acceso al reporte BK94 ni a Katsardi et al. 2013.
+- *Propuesta:* mostrar las dos (crestas con Tayfun, alturas con Rayleigh y Battjes–Groenendijk) y S_k, K contra x.
