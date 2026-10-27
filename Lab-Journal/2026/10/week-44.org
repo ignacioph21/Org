@@ -167,3 +167,23 @@
   1. Ola por ola en esta medición: H_S3 contra H_S2 (emparejadas por cresta con el retardo de la correlación): techo γh si satura.
   2. Barrido de nivel del Día 2 (=Custom_combinado_altura_1–8=): H_rms y H_1/10 en S3 contra h local, recta por el origen (a confirmar: posiciones de los sensores ese día).
   3. A medir: varias amplitudes de forzado con el mismo nivel (H_S3 fijo mientras H_S1 crece), y el setup η̄ en cada sensor.
+
+** [17:06] Manuscrito, Figura 7: PDF del número de Iribarren en S1 (en curso)
+- ξ = tan α / √(H/L) ola por ola en S1 (las 812 olas de la Fig. 6), tan α = 0,035, *L de la relación de dispersión completa* (gravito-capilar, d local = 42,5 mm; decisión del usuario). Estética del póster con el esquema de colores nuevo; sin porcentajes en la figura (van en el texto).
+- PDF: 6 bloques consecutivos de 135–136 olas (todas), ⌊√135⌋ = 11 bins en [0,1027, 0,8], promedio de los 6 histogramas, error std/√6.
+- ⟨ξ⟩ = 0,368, mediana 0,354; con el umbral 0,5: spilling 92 % (748 olas), plunging 8 % (64). Log-normal: σ = 0,233 ± 0,004, μ = −1,047 ± 0,006, A = 0,97 ± 0,03; χ²_red = 3,2 (7 g.l.), R² = 0,994. El χ² viene de la cola (ξ = 0,52–0,71, ±2–3σ, con 6–34 olas por bin).
+- Con el criterio de Battjes (L0 = gT²/2π): ⟨ξ0⟩ = 0,474, spilling 66 %.
+- Código: =Día 6/Manuscrito/Códigos/fig7_iribarren.py= (=battjes= como argumento da la alternativa).
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/10/Day_27/F7_iribarren.png]]
+
+** [17:06] Búsqueda bibliográfica: ¿se puede redefinir ξ con la L local?
+- *Todos los umbrales publicados usan L0 = gT²/2π*, incluido ξ_b: Battjes (1974, p. 470) define ξ_b = tan α/√(H_b/L0) (umbrales 0,4 y 2,0), no con L_b, aunque fuentes secundarias (Coastal Wiki, Derakhti et al. 2020) se lo atribuyan con L_b.
+- No hay umbrales calibrados para ξ con L local de profundidad finita ni con capilaridad (Battjes ignora la tensión superficial). La única recalibración con L local es para tsunamis (Roubos et al. 2021: < 0,27 / 0,27–0,54 / > 0,54). Moragues et al. (2020) usan L local en un plano (h/L, H/L) y encuentran que ξ no predice bien el tipo de rotura salvo spilling y plunging temprano.
+- Con gravedad, L = L0 tanh kd → ξ_loc = ξ0 √(tanh kd): el umbral equivalente es 0,5 √(tanh kd), que depende de T ola por ola (≈ 0,40 en el pie, kd ≈ 0,75). *La diferencia entre 92 y 66 % de spilling es solo el umbral.*
+- Práctica estándar con oleaje irregular (CIRIA Rock Manual 2007, EurOtop): ξ0 con L0 del período y H en el pie de la estructura. Otros umbrales con ξ0: Okazaki & Sunamura (1991): 0,5 / 2,5 / 3,7 (solo el abstract).
+- No hay trabajos con la PDF de ξ por cruces por cero; lo más cercano: Goda (2010), Aggarwal et al. (2020, CFD, lognormal), Holand et al. (2023, rotura ola por ola sin ξ).
+- Escala y capilaridad: Stagonas et al. (2011, la disipación a escala chica depende de la tensión superficial); Deike, Popinet & Melville (2015, JFM 769: límites spilling/plunging con (1+Bo)^(−1/3), aguas profundas).
+- Alternativas: S0 de Grilli et al. (1997), Derakhti et al. (2020, criterio de energía en la cresta en cualquier profundidad), Robertson et al. (2013, revisión).
+- Referencias verificadas: Battjes 1974, doi:10.9753/icce.v14.26; Roubos et al. 2021, doi:10.48438/jchs.2021.0009; Moragues et al. 2020, doi:10.3390/jmse8040296; Goda 2010, doi:10.1142/S0578563410002129; Derakhti et al. 2020, doi:10.1029/2019JC015886; Grilli et al. 1997, doi:10.1061/(ASCE)0733-950X(1997)123:3(102); Stagonas et al. 2011, doi:10.1016/j.coastaleng.2011.05.009; Robertson et al. 2013, doi:10.1142/S0578563413500022.
+- *Por definir:* ξ con L local sin clasificar (solo la PDF), o ξ0 para clasificar.
