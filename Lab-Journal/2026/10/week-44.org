@@ -378,3 +378,4 @@
 
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/F16_funciones_estructura.png]]
+- *Pendiente:* figura de un frente promedio y, tal vez, su solución de Cole–Hopf superpuesta.
