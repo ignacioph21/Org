@@ -347,3 +347,11 @@
 - Para responder a la objeción de elegir el umbral de los frentes mirando el ajuste: Bonneton define T_m como el tiempo medio entre frentes adyacentes (análisis ola por ola) y en la zona interna de rompientes hay un frente por ola. Adoptado f_m = 1/⟨T⟩ con las olas de la Fig. 6 (histéresis ±0,2 mm, fijada por el ruido).
 - JONSWAP S3: f_m = 1,35 Hz, f_ν = 4,35 ± 0,08 Hz, *R_B = 127* (72–124 con otras definiciones: incerteza sistemática), ν_c = 4,2e-4 m²/s, κ = 0,48, α_ν = 0,39. El ajuste dobla algo tarde (rms 0,12): entre f_m y ~2,3 Hz el espectro no es csch².
 - Día 2: f_ν ∝ h^−0,47 ± 0,04 (robusto con todas las definiciones), H_c ∝ h^0,70, κ = 0,58, α_ν = 0,39.
+
+** [12:13] Ajuste del espectro por función partida (prueba)
+- Pedido del usuario: ajustar el espectro de S3 (JONSWAP) con una función partida: E/Ẽ = A csch²(f/f_ν) hasta una frecuencia de crossover f_c y una recta en log–log (f/f_c)^β después, con continuidad en f_c; A, f_ν, f_c y β libres, en log, de f_m (= 1/⟨T⟩ = 1,35 Hz) a 35 Hz (=Códigos/extra_ajuste_partido.py=).
+- Resultado: *f_ν = 3,75 ± 0,03 Hz, f_c = 13,9 ± 0,1 Hz (= 3,7 f_ν), β = −3,74 ± 0,04*, R_B = 110, rms 0,072 déc. en todo el rango. Comparación: el de la Fig. 11 (csch² con amplitud libre, f_m–11,1 Hz) da f_ν = 3,87 Hz, R_B = 114, rms 0,093.
+- El quiebre cae solo donde terminaba a mano el sombreado (14 Hz) y la pendiente coincide con la cola ajustada aparte: elimina dos elecciones a mano. Residuos planos desde ~3 Hz; queda el exceso del modelo cerca de f_m (+0,3 déc.).
+- *Por decidir:* usar el partido en la Fig. 11; mostrar las dos curvas (amplitud libre y teórica) o una.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/extra_ajuste_partido.png]]
