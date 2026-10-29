@@ -302,3 +302,13 @@
 ** [10:11] Corrección: la h del barrido del Día 2 está medida (saturación H_c ∝ h)
 - El usuario: en el barrido del Día 2 el h local de S3 (entonces "S1") sí se midió bien. Fondo medido con regla y foto (3,20 cm, ±0,5 mm) y nivel leído cerca del sensor: h = nivel − 3,20 cm no lleva la corrección por inclinación. Los +4 mm del 16/10 eran para el sensor del lado de la paleta en el Día 1; aplicarlos acá (entrada de las 09:50) fue un error mío.
 - Sensibilidad correcta, con el fondo ± 0,5 mm: H_c espectral ∝ h^0,89–1,02; ω_ν ∝ h^−0,49 a −0,57; α_ν constante (exponente 0,05–0,06). *La saturación H_c = κh con κ = 0,54 ± 0,08 y α_ν ≈ 0,46 constante es robusta.* Corregido en el apunte de crestas y alturas.
+
+** [11:01] Figura 10: diagrama de regímenes con las formas de onda (en el resumen del manuscrito)
+- Diagrama de Le Méhauté con las olas individuales de los tres sensores (las de la Fig. 6) y 43 formas de onda elegidas a mano por el usuario, dibujadas en su punto con la misma escala (barra 0,5 s × 5 mm). Medianas de cada sensor marcadas.
+- Proceso: varias opciones (formas sobre el gráfico vs puntos numerados con grilla; selección por percentiles, k-medias o celdas), un catálogo por celdas y dos herramientas interactivas de matplotlib (=Códigos/elegir_olas_regimenes.py=, por celdas; =Códigos/clic_olas_regimenes.py=, clic agrega la ola más cercana y clic encima la saca). La selección queda en =Resultados/regimenes_clic.json=.
+- Estilo final: sin fondo, línea de 0,55 pt con borde blanco de 1,1 pt por lado, color del sensor oscurecido (V × 0,62 en HSV), puntos con opacidad 0,45, barra de escala pegada al borde izquierdo en la zona cnoidal.
+- Lectura: S1 en Stokes (U = 5,5), S2 en el borde de Ursell (U = 21), S3 cnoidal y pegado a la rotura (U = 224, H/h = 0,44). Explica por qué Tayfun anda en S1 y no en S2/S3.
+- Provisoria: el usuario cree que va a quedar así por ahora, pero probablemente se retome.
+- En el resumen: [[file:../../../Assets/2026/10/Day_29/resumen_figuras_manuscrito.pdf][resumen_figuras_manuscrito.pdf]] (Fig. 10).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F10_regimenes.png]]
