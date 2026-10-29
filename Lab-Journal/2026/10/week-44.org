@@ -276,3 +276,11 @@
 - En el apunte de crestas y alturas (sección nueva): [[file:../../../Assets/2026/10/Day_29/apunte_crestas_alturas.pdf][apunte_crestas_alturas.pdf]].
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/extra_saturacion_bonneton.png]]
+
+** [09:59] Diagrama de regímenes con la relación de dispersión completa (gravito-capilar)
+- Pedido del usuario: rehacer el diagrama de Le Méhauté con nuestras olas usando la dispersión completa (como la Fig. 6, σ = 0,0728 N/m). Está en el apunte de Stokes (Fig. C4, =Códigos/apunte_stokes.py=, función =c4=).
+- Con capilaridad las fronteras dependen de h y τ por separado (número de Bond σ/ρgh²: 0,004/0,008/0,07 en S1/S2/S3): una frontera por sensor. A τ fijo la onda es más larga, así que H_b de Miche sube y la línea de Ursell baja; el efecto pasa del 5 % solo para τ ≲ 0,16–0,18 s.
+- Nuestras olas casi no cambian: U de las medianas 5,6/21/225 (antes 5,5/21/224); U > 26 en el 1/43/89 % (antes 1/43/88 %); sobre Miche 0/0/0,75 %.
+- Resonancia de Wilton (2.º armónico libre, la serie de Stokes diverge) en τ ≈ 0,10 s, λ ≈ 2,4 cm; solo el 1/0,3/3 % de las olas tienen T < 2τ_W.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/C4_diagrama_capilar.png]]
