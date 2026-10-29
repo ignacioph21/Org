@@ -342,3 +342,8 @@
 [[file:../../../Assets/2026/10/Day_29/F11_espectro.png]]
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/F12_fnu_h.png]]
+
+** [12:05] f_m sin umbral: 1/⟨T⟩ de las olas
+- Para responder a la objeción de elegir el umbral de los frentes mirando el ajuste: Bonneton define T_m como el tiempo medio entre frentes adyacentes (análisis ola por ola) y en la zona interna de rompientes hay un frente por ola. Adoptado f_m = 1/⟨T⟩ con las olas de la Fig. 6 (histéresis ±0,2 mm, fijada por el ruido).
+- JONSWAP S3: f_m = 1,35 Hz, f_ν = 4,35 ± 0,08 Hz, *R_B = 127* (72–124 con otras definiciones: incerteza sistemática), ν_c = 4,2e-4 m²/s, κ = 0,48, α_ν = 0,39. El ajuste dobla algo tarde (rms 0,12): entre f_m y ~2,3 Hz el espectro no es csch².
+- Día 2: f_ν ∝ h^−0,47 ± 0,04 (robusto con todas las definiciones), H_c ∝ h^0,70, κ = 0,58, α_ν = 0,39.
