@@ -312,3 +312,12 @@
 - En el resumen: [[file:../../../Assets/2026/10/Day_29/resumen_figuras_manuscrito.pdf][resumen_figuras_manuscrito.pdf]] (Fig. 10).
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/F10_regimenes.png]]
+
+** [11:17] Notación unificada y sección espectral (Figs. 11 y 12)
+- Notación común en todas las figuras: η/√m0 (Fig. 4), h para la profundidad local (Figs. 6–10), T para el período (Fig. 10), σ_lnξ y μ_lnξ para la log-normal (Fig. 7), sensor en negrita y letra de panel arriba a la izquierda (Figs. 8–9).
+- *Fig. 11:* espectro de S3 estilo póster, en f: f_ν = 3,68 ± 0,05 Hz con el f_m adoptado (2,32 Hz). Con el criterio de frentes del póster (1,5 mm) f_m = 1,40 Hz y f_ν = 3,87 Hz: *por definir*.
+- *Fig. 12:* barrido del Día 2 en S3: f_ν ∝ h^−0,53 ± 0,03 (puntos numerados), H_c espectral ∝ h^0,96 ± 0,13 con κ = 0,54 (saturación), y los 8 espectros en grilla 2×4.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F11_espectro.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F12_fnu_h.png]]
