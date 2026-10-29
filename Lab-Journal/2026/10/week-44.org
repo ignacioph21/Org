@@ -369,3 +369,12 @@
 
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/F16_funciones_estructura.png]]
+
+** [16:05] Cierre del día: Figs. 15–16 actualizadas
+- Ventana de ajuste simétrica (en ln τ) alrededor de 1/2f_ν = 129 ms: 108–155 ms (las barras con 97–172 ms eran enormes).
+- (c): ζ_p = media del ζ_p local en la ventana ± desvío; subrogadas IAAFT de n = 2 y n = 6 (vacías), lineales en p (sin saturación).
+- Modelo de Ricard & Falcon con los valores medidos (a = 2,28 mm, t* = 21,9 ms, Γ = 0,85 Hz): rms ≈ 0,35, no describe ni n = 2 ni n = 6 sin parámetros libres.
+- *Pendiente a decidir:* quizás mostrar solo n = 6 para evitar réplicas: satura por encima de 1 y sin plancharse del todo, como el modelo de frentes finitos de Falcon; sigue siendo intermitencia y las subrogadas muestran que se debe a los frentes.
+
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F16_funciones_estructura.png]]
