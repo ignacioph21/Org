@@ -332,3 +332,13 @@
 [[file:../../../Assets/2026/10/Day_29/F11b_frentes.png]]
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/F12_fnu_h.png]]
+
+** [11:46] Ajuste del espectro corregido y criterio intermedio de f_m
+- Correcciones del usuario: el ajuste del espectro normalizado tiene a f_ν como *único* parámetro libre (E/Ẽ = csch²(f/f_ν)/[f_ν(coth(f_m/f_ν)−1)], la amplitud la fija Ẽ) y el rango arranca en f_m. Con frentes principales (1σ, f_m = 1,37 Hz) la curva doblaba tarde (entre f_m y ~2,3 Hz el espectro es casi plano); con 0,2σ (crestas secundarias) f_m = 2,1 Hz. Adoptado un criterio intermedio: prominencia 0,5σ.
+- JONSWAP S3: f_m = 1,70 Hz, f_ν = 4,03 ± 0,05 Hz, *R_B = 94*, ν_c = 4,4e-4 m²/s, H_c = 4,8 mm (κ = 0,47), α_ν = 0,43; rms 0,09 déc.
+- Día 2: f_ν ∝ h^−0,46 ± 0,04, H_c ∝ h^0,75 ± 0,10 (saturación incompleta), κ = 0,54, α_ν = 0,42 con leve tendencia.
+- Regla nueva: en los recuadros de pasos van las ecuaciones de todo ajuste y referencia teórica (agregadas en las Figs. 3, 4, 6, 7, 11 y 12).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F11_espectro.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F12_fnu_h.png]]
