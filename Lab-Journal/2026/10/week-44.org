@@ -298,3 +298,7 @@
 [[file:../../../Assets/2026/10/Day_29/extra_W1.png]]
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/extra_W2.png]]
+
+** [10:11] Corrección: la h del barrido del Día 2 está medida (saturación H_c ∝ h)
+- El usuario: en el barrido del Día 2 el h local de S3 (entonces "S1") sí se midió bien. Fondo medido con regla y foto (3,20 cm, ±0,5 mm) y nivel leído cerca del sensor: h = nivel − 3,20 cm no lleva la corrección por inclinación. Los +4 mm del 16/10 eran para el sensor del lado de la paleta en el Día 1; aplicarlos acá (entrada de las 09:50) fue un error mío.
+- Sensibilidad correcta, con el fondo ± 0,5 mm: H_c espectral ∝ h^0,89–1,02; ω_ν ∝ h^−0,49 a −0,57; α_ν constante (exponente 0,05–0,06). *La saturación H_c = κh con κ = 0,54 ± 0,08 y α_ν ≈ 0,46 constante es robusta.* Corregido en el apunte de crestas y alturas.
