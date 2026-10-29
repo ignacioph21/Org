@@ -359,3 +359,13 @@
 ** [12:16] Pendientes anotados
 - *Al terminar el PDF de figuras:* armar un repo en GitHub, privado por ahora, con los datos y todos los códigos ordenados (pedido del usuario).
 - *A futuro:* medir H_c independientemente del espectro (salto de cada frente en la serie temporal). Hoy la Fig. 12(b) usa el mismo ω_ν que la (c) y la relación ω_ν√(h/g) = 3/(4πα_ν√κ) es una identidad; lo contrastable es que κ y α_ν no dependan de h.
+
+** [15:53] Intermitencia: Figs. 14–16 del manuscrito
+- *Fig. 14* (PDF de incrementos de 2 y 6 puntos, S y K vs τ): en el PDF. Modelo de Falcon et al. 2008 (producto de gaussianas) probado y descartado (K ≥ 9); queda pendiente buscar modelos para PDF asimétricas.
+- *Factor 2 de Falcon:* τ = 1/(2f). Referencias en τ: 1/2f_ν = 129 ms y 1/2f_m = T_m/2 = 371 ms.
+- *Ventana de ajuste:* la que hace saturar ζ_p^(2) en 1 (mín. ⟨(ζ_p−1)²⟩, p ∈ [3,6], ancho ≥ ×1,5): 87,5–159,5 ms, que contiene 1/2f_ν.
+- *Fig. 15* (convergencia): ε_p de 1 % (p = 2) a 7 % (p = 7); ζ_7^(2) = 1,11 ± 0,04.
+- *Fig. 16* (borrador): S_p/σ^p, ζ_p locales, scaling y subrogada IAAFT. n = 2 satura (ζ_6 = 1,05), n = 6 no (ζ_7 = 2,12). La IAAFT (mismo espectro y PDF) da ζ_p ≈ 0,43 p, sin saturación: la saturación viene de la correlación en fase de los frentes.
+
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F16_funciones_estructura.png]]
