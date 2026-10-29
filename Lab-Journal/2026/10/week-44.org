@@ -229,3 +229,29 @@
   - S3: cola de alturas cortada por debajo de Rayleigh (Battjes & Groenendijk, Katsardi), H_rms/h = 0,48 entre 0,42 (Thornton & Guza) y 0,6 (Mase & Kirby); crestas sobre Rayleigh y S_k, K cerca de Redor 2021 (0,70; 3,40).
   - Fig. 8 propuesta en tres paneles: S_k y K contra x; crestas con Tayfun; alturas con Rayleigh y la CWD sin ajuste.
 - *Pendientes:* okay de las Figs. 7 y 8; detección para la Fig. 8 (histéresis 0,2 mm o pasabajos de 20 Hz); fórmula de H_rms de B&G en el PDF; valores de S_k y K de las figuras de Trulsen y Kashima; crestas de Katsardi; k_p h en S2 y S3; umbral de Iribarren con L local; papers de Fauve sobre PDF asimétricas de incrementos.
+
+* 2026-10-29
+** [09:24] Día 7: directorio nuevo para el manuscrito
+- El trabajo del 27/10 quedó en =Día 6/= (tendría que haber sido Día 7); se deja así. Desde hoy el manuscrito sigue en =Tercera iteración/Día 7/Manuscrito/= (copia de =.tex=, =Códigos/=, =Figuras/= y =Resultados/=; sin datos crudos).
+- PDF del resumen: [[file:../../../Assets/2026/10/Day_29/resumen_figuras_manuscrito.pdf][resumen_figuras_manuscrito.pdf]] (Day_29).
+
+** [09:36] Figuras 8 (excedencia de crestas) y 9 (excedencia de alturas)
+- Script: =Día 7/Manuscrito/Códigos/fig8_crestas_alturas.py=. Las olas son las de la Fig. 6 (histéresis ±0,2 mm, t > 90 s, sin bordes de bloque). Normalización con √m0; un panel por sensor; Rayleigh en rayas y el modelo en línea llena (con los tres sensores en un panel los modelos se confundían con Rayleigh).
+- *Crestas* (A_c = máx η desde el nivel medio) contra Rayleigh y Tayfun (1980) con μ = S_k/3 de cada serie, sin ajuste.
+- *Alturas* contra Rayleigh y la Weibull compuesta (CWD) de Battjes & Groenendijk (2000), sin ajuste, con la profundidad local d y tan α = 0,035.
+  | Sensor | S_k  | P(A_c > 3√m0): medida / Tayfun | P(H > 6√m0): medida / CWD | H_rms/√m0 |
+  |--------+------+--------------------------------+---------------------------+-----------|
+  | Rayleigh | 0  | 0,011                          | 0,011                     | 2,83      |
+  | S1     | 0,19 | 0,028 / 0,022                  | 0,011 / 0,010             | 2,90      |
+  | S2     | 0,39 | 0,078 / 0,037                  | 0,016 / 0,013             | 2,99      |
+  | S3     | 0,53 | 0,126 / 0,048                  | 0,0045 / 0,0018           | 3,16      |
+- *Lectura:* S1 casi lineal (crestas ≈ Tayfun, alturas = Rayleigh). S2: crestas al doble de Tayfun y cola de alturas sobre Rayleigh (lado somero de la pendiente, como Trulsen y Zhang). S3: *la CWD sin ajuste reproduce la forma de las alturas* (cuerpo por encima de Rayleigh, cola cortada; H_rms medida 4,81 mm, B&G 4,84 mm); las crestas quedan muy por encima de Tayfun pero acotadas (cruzan Tayfun en 4√m0, como Redor 2021).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F8_crestas.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F9_alturas.png]]
+
+** [09:36] Apunte: excedencia de crestas y de alturas
+- Pedido del usuario: rehacer el apunte introductorio con lo que surgió de la revisión de papers. Reemplaza al del 27/10, que era solo de alturas: [[file:../../../Assets/2026/10/Day_29/apunte_crestas_alturas.pdf][apunte_crestas_alturas.pdf]] (9 p.). Fuente en =Día 7/Manuscrito/Apunte excedencia/=; figuras con =Códigos/apunte_crestas_alturas.py=.
+- Contenido: qué son la cresta, el valle y la altura; la receta para contar; de dónde sale Rayleigh (envolvente de una gaussiana de banda angosta; banda ancha: alturas algo por debajo); Tayfun deducido de Stokes de 2.º orden (S_k = 3μ); la CWD y por qué el cuerpo de S3 queda por encima de Rayleigh; qué dice la literatura; cuidados (detección, nivel medio, cruce ascendente o descendente, cola, profundidad local).
+- Idea central, comprobada con un mar JONSWAP simulado (~130 000 olas): el 2.º orden levanta las crestas (P(A_c > 3√m0) de 0,011 a 0,042) y *no cambia las alturas* (P(H > 6√m0) 0,0062 contra 0,0066). Por eso las crestas sirven para medir la no linealidad y las alturas, la saturación por profundidad.
