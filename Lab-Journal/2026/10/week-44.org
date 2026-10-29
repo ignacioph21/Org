@@ -255,3 +255,24 @@
 - Pedido del usuario: rehacer el apunte introductorio con lo que surgió de la revisión de papers. Reemplaza al del 27/10, que era solo de alturas: [[file:../../../Assets/2026/10/Day_29/apunte_crestas_alturas.pdf][apunte_crestas_alturas.pdf]] (9 p.). Fuente en =Día 7/Manuscrito/Apunte excedencia/=; figuras con =Códigos/apunte_crestas_alturas.py=.
 - Contenido: qué son la cresta, el valle y la altura; la receta para contar; de dónde sale Rayleigh (envolvente de una gaussiana de banda angosta; banda ancha: alturas algo por debajo); Tayfun deducido de Stokes de 2.º orden (S_k = 3μ); la CWD y por qué el cuerpo de S3 queda por encima de Rayleigh; qué dice la literatura; cuidados (detección, nivel medio, cruce ascendente o descendente, cola, profundidad local).
 - Idea central, comprobada con un mar JONSWAP simulado (~130 000 olas): el 2.º orden levanta las crestas (P(A_c > 3√m0) de 0,011 a 0,042) y *no cambia las alturas* (P(H > 6√m0) 0,0062 contra 0,0066). Por eso las crestas sirven para medir la no linealidad y las alturas, la saturación por profundidad.
+
+** [09:50] Apunte: ondas de Stokes, cnoidales y límite de rotura (diagrama de Le Méhauté)
+- Pedido del usuario: derivación de Stokes de orden n y el límite de Miche–Stokes, con el diagrama de regímenes de Wikipedia: [[file:../../../Assets/2026/10/Day_29/apunte_stokes.pdf][apunte_stokes.pdf]] (8 p.). Fuente en =Día 7/Manuscrito/Apunte Stokes/=; figuras con =Códigos/apunte_stokes.py=.
+- Contenido: el problema exacto; la estructura de cada orden (mismo operador lineal, forzado por los órdenes anteriores); el 2.º orden completo en aguas profundas (la cresta sube, el valle se aplana, H no cambia); el 3.º orden y la corrección de la frecuencia (Lindstedt); por qué la serie se rompe en aguas someras (casi resonancia de los armónicos: cada orden ∝ U); *U = 8π²/3 ≈ 26 sale de pedir η2/η1 = 1/4* (la joroba en el valle); cnoidal/KdV; ángulo de 120°, Michell, McCowan y Miche; el diagrama rehecho con fórmulas y nuestras olas encima.
+- Nuestras olas (medianas): S1 U = 5,5 (Stokes, η2/η1 = 0,075); S2 U = 21 (borde; 43 % de las olas con U > 26); S3 U = 224, H/h = 0,44 (cnoidal, casi solitones; 88 % con U > 26). Explica por qué Tayfun anda en S1 y no en S2/S3.
+
+** [09:50] ¿Alturas de los frentes saturadas (H_c ∝ h, Bonneton)? Barrido de nivel del Día 2
+- Pregunta del usuario: si la excedencia de S3 muestra la saturación que supone Bonneton, el factor κ = H_c/h y si es consistente con ω_ν ∝ h^−1/2.
+- *H_c sin α_ν, desde el espectro:* un tren de frentes tanh de altura H_c (uno por 2π/ω_m) da E = (H_c² ω_m/2π²ω_ν²) csch²(ω/ω_ν) → H_c = π ω_ν √(2E_a/ω_m); y α_ν = 3√(g/H_c)/(4π ω_ν). (La amplitud de Bonneton es E_a = 8ν_c²ω_m/9g².)
+- Día 2, tramo Bonneton, canal 1 (= S3 nuevo), h = nivel − 3,20 cm (3,5–13 mm), ajuste ln E en 20–80 rad/s (=Códigos/saturacion_bonneton.py=):
+  | Magnitud     | Exponente con h | con h + 4 mm | κ = H/h          |
+  |--------------+-----------------+--------------+------------------|
+  | H_c espectral | 0,96 ± 0,13    | 1,47 ± 0,24  | 0,54 ± 0,08      |
+  | H_rms        | 0,53 ± 0,07     | 0,82 ± 0,13  | 0,59 (0,74 → 0,42) |
+  | ω_ν          | −0,53 ± 0,03    | −0,83 ± 0,06 | ω_ν√(h/g) = 0,71 |
+  | α_ν          | 0,05 ± 0,06     | 0,10 ± 0,10  | 0,46 ± 0,03      |
+- *Conclusión:* la altura de los frentes que ve el espectro sí está saturada, κ = 0,54 ± 0,08 (Bonneton: 0,4–0,6; JONSWAP S3 del Día 1: 0,49), y α_ν no depende de h → ω_ν√(h/g) = 3/(4π α_ν √κ) = 0,70, consistente con ω_ν ∝ h^−1/2. Las alturas ola por ola escalan como h^0,5 (a nivel alto entran olas chicas que no rompen). La excedencia de S3 es más angosta que Rayleigh (CV 0,40 contra 0,52) pero no "todas iguales".
+- *Cuidado:* la identidad es por construcción; lo contrastable es que κ y α_ν no dependan de h. Los exponentes dependen de la definición de h (con +4 mm: H_c ∝ h^1,5), pero α_ν sigue constante. Medir h bajo el sensor sigue pendiente. Este ajuste da ω_ν ∝ h^−0,53 (antes: −0,27 lineal, −0,45 log).
+- En el apunte de crestas y alturas (sección nueva): [[file:../../../Assets/2026/10/Day_29/apunte_crestas_alturas.pdf][apunte_crestas_alturas.pdf]].
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/extra_saturacion_bonneton.png]]
