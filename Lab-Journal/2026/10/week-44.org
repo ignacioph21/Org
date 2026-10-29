@@ -321,3 +321,14 @@
 [[file:../../../Assets/2026/10/Day_29/F11_espectro.png]]
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/F12_fnu_h.png]]
+
+** [11:37] Criterio de f_m: frentes principales (R_B pasa de 63 a 106)
+- El criterio anterior (prominencia 0,344 mm) contaba también las crestas secundarias de los bores (f_m = 2,2–2,3 Hz). Adoptado, a pedido del usuario: frentes principales como el póster (distancia 0,135 s), con prominencia 1σ de la serie (con 1,5 mm fijos, en el barrido del Día 2 los niveles bajos perdían frentes: f_m de 0,96 a 1,72 Hz; con 1σ, 1,27–1,63 Hz).
+- JONSWAP S3: f_m = 1,37 Hz, f_ν = 3,68 Hz (no cambia: el ajuste sigue desde 2,32 Hz), *R_B = 106* (en el rango de Bonneton, ~100–500), ν_c = 6,1e-4 m²/s, H_c = 6,0 mm (κ = 0,59), α_ν = 0,42. Cola E ∝ f^−3,74 ± 0,03 (14–35 Hz).
+- Día 2: f_ν ∝ h^−0,53 (igual), H_c ∝ h^0,92 ± 0,12, κ = 0,72 ± 0,10, α_ν = 0,40 ± 0,03 sin tendencia: la saturación sigue explicando ω_ν ∝ h^−1/2.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F11_espectro.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F11b_frentes.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/F12_fnu_h.png]]
