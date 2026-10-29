@@ -284,3 +284,17 @@
 - Resonancia de Wilton (2.º armónico libre, la serie de Stokes diverge) en τ ≈ 0,10 s, λ ≈ 2,4 cm; solo el 1/0,3/3 % de las olas tienen T < 2τ_W.
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/C4_diagrama_capilar.png]]
+
+** [10:06] Zona lineal con capilaridad y búsqueda de ondas de Wilton
+- *Zona lineal en el diagrama con dispersión completa:* derivé η2/η1 de Stokes de 2.º orden con tensión superficial y profundidad finita (con σ = 0 coincide con la fórmula de gravedad). El borde lineal (η2/η1 = 1 %) cae a H = 0 en la resonancia de Wilton y el armónico cambia de signo del otro lado. En S3 el borde lineal queda ~20 % más abajo para todo τ: en aguas someras la capilaridad resta dispersión (KdV ∝ 1 − 3 Bo, Bo = σ/ρgh² = 0,07), así que el Ursell efectivo es ~1,3 U. Con Bo = 1/3 (h ≈ 4,7 mm) la dispersión de KdV cambia de signo; el barrido del Día 2 llegó a 3,5 mm.
+- *¿Ondas de Wilton en JONSWAP?* (=Códigos/wilton.py=): f_W = 9,83 Hz (S1, S2) y 9,64 Hz (S3), igual que los 9,8 Hz de Hammack. *No aparecen:* el espectro pasa por f_W y 2f_W sin rasgos; la bicoherencia diagonal no tiene máximo en f_W (en S3 vale 0,1–0,5 en todo 2–30 Hz: todo el contenido de alta frecuencia está acoplado en fase, son los frentes); onda por onda casi no hay ondas con T < τ_W y el 2.º armónico no muestra la divergencia ni el cambio de signo.
+- Por qué: lo que hay en 10 Hz son armónicos ligados de las olas de 1–3 Hz, no ondas libres; Wilton pide ondas libres (Hammack las generaba a ~20 Hz). Además el Doppler orbital borra rasgos angostos.
+- *Antecedentes:* Wilton 1915; McGoldrick 1970 (intercambio de energía entre armónicos medido); Henderson & Hammack 1987 y Perlin, Henderson & Hammack 1990 (componente de 9,8 Hz al generar ~20 Hz).
+- *A mirar:* lomo de 25–30 Hz (y ~50 Hz) en S1 y S2. ¿Resonancia del sensor (lo dirá la prueba de sacudirlo hasta ~80 Hz) o capilares parásitas en los frentes (λ ≈ 2 cm a 0,5–0,6 m/s → 25–30 Hz)? Si es el sensor, está también sin olas.
+- Todo en el apunte de Stokes (11 p.): [[file:../../../Assets/2026/10/Day_29/apunte_stokes.pdf][apunte_stokes.pdf]].
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/C4_diagrama_capilar.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/extra_W1.png]]
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_29/extra_W2.png]]
