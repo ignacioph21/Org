@@ -355,3 +355,7 @@
 - *Por decidir:* usar el partido en la Fig. 11; mostrar las dos curvas (amplitud libre y teórica) o una.
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/extra_ajuste_partido.png]]
+
+** [12:16] Pendientes anotados
+- *Al terminar el PDF de figuras:* armar un repo en GitHub, privado por ahora, con los datos y todos los códigos ordenados (pedido del usuario).
+- *A futuro:* medir H_c independientemente del espectro (salto de cada frente en la serie temporal). Hoy la Fig. 12(b) usa el mismo ω_ν que la (c) y la relación ω_ν√(h/g) = 3/(4πα_ν√κ) es una identidad; lo contrastable es que κ y α_ν no dependan de h.
