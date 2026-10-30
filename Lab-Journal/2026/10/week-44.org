@@ -401,3 +401,6 @@
 - Decisión: modelo analítico para p ≤ 5; p ≥ 6 explicado por la forma de las olas grandes; aguas someras con rotura a futuro. Sección agregada a [[file:../../../Assets/2026/10/Day_30/resultados_modelo.pdf][resultados_modelo.pdf]].
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_30/M5_momentos_altos.png]]
+
+** [19:30] Guía didáctica del modelo
+- Versión explicada paso a paso del modelo de las S_p (señales de juguete, anatomía de una ola, cada pieza en palabras, cómo leer los resultados, por qué falla a p alto, historia de los intentos): [[file:../../../Assets/2026/10/Day_30/guia_modelo.pdf][guia_modelo.pdf]].
