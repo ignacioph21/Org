@@ -379,3 +379,25 @@
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/10/Day_29/F16_funciones_estructura.png]]
 - *Pendiente:* figura de un frente promedio y, tal vez, su solución de Cole–Hopf superpuesta.
+
+* 2026-10-30
+** [16:05] Día 8: manuscrito copiado a Día 8
+- El manuscrito sigue en =Tercera iteración/Día 8/Manuscrito/= (copia del Día 7). PDF de figuras: [[file:../../../Assets/2026/10/Day_30/resumen_figuras_manuscrito.pdf][resumen_figuras_manuscrito.pdf]].
+- PDF de pruebas aparte para ordenar la historia: [[file:../../../Assets/2026/10/Day_30/pruebas_intermitencia.pdf][pruebas_intermitencia.pdf]] (S_p y ζ_p de n = 2–6 en el rango inercial; qué es el ruido de disparo).
+
+** [21:30] Modelo analítico de las funciones de estructura
+- Rango inercial = de f_m a f_ν (tramo f⁻² de Bonneton), τ = 1/2f como Falcon; techo en 0,75/2f_m (antes del pico cresta–valle): achica mucho las barras.
+- Modelo final, sin parámetros ajustados a las S_p: tren de olas independientes; espalda = onda simple de aguas someras, η_b = [(2c0 + L/(t − t0))/3]²/g − h, con L = 2hc0/3s de la pendiente universal medida (6,6 mm/s; L = 32 cm); frente = escalón de Cole–Hopf con t* = 8ν_c/3gJ (ν_c del espectro); fondo gaussiano fijado por S_2.
+- Verificado por partes: colapso de 666 espaldas (rms 0,49 mm), salto predicho vs medido (r = 0,83), subida de los frentes vs salto (ν constante), olas independientes.
+- Resultado: S_p dentro de ±15 % en n = 2–6 y p hasta 7 (salvo n = 2, p ≥ 6); forma de ζ_p(τ) entera para p ≤ 4; ζ_p (rango inercial) con desvío típico 0,05 para p ≤ 5, en JONSWAP y en Bonneton 360 (n = 6, p = 7: 4,02 vs 3,85).
+- No describe p ≥ 5 en JONSWAP: lo dominan ~90 frentes grandes con valle tardío plano (≈ −1,4 mm) que la onda simple no tiene (¿reflexión de la playa?).
+- Sección de resultados en prosa: [[file:../../../Assets/2026/10/Day_30/resultados_modelo.pdf][resultados_modelo.pdf]].
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_30/M3_jonswap.png]]
+
+** [18:50] Momentos altos del modelo de S_p
+- L por ola crece con el período (r = 0,58; L ∝ T^0,66) y una estructura del bore roto medida mejoran: Bonneton 360 n = 6 χ²_red 0,9; JONSWAP n ≥ 3 χ²_red 2,3–4,8. Pero ζ_7 (n = 6) en JONSWAP queda en 1,43 contra 1,92.
+- Test sin modelo: las olas reales rearmadas al azar reproducen los momentos altos → lo que falta es la forma de las ~70 olas más grandes (bores rotos: pie antes del frente, rodillo, valle previo más hondo).
+- Decisión: modelo analítico para p ≤ 5; p ≥ 6 explicado por la forma de las olas grandes; aguas someras con rotura a futuro. Sección agregada a [[file:../../../Assets/2026/10/Day_30/resultados_modelo.pdf][resultados_modelo.pdf]].
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/10/Day_30/M5_momentos_altos.png]]
