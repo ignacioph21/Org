@@ -1,0 +1,41 @@
+#+TITLE: Journal Week 45
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-11-02
+** [09:25] Día 9: manuscrito copiado a Día 9
+- El manuscrito sigue en =Tercera iteración/Día 9/Manuscrito/= (copia del Día 8). PDF de figuras: [[file:../../../Assets/2026/11/Day_02/resumen_figuras_manuscrito.pdf][resumen_figuras_manuscrito.pdf]].
+** [09:39] Descomposición de las S_p por partes de la ola
+- Cada incremento se rotula por lo que contiene (espalda, punta de la cresta, valle tardío, un frente, dos o más frentes); la partición de S_p y de ζ_p es exacta, y se aplica igual al dato y al modelo de onda simple + Cole–Hopf. Robusta a los umbrales (×0,5–2).
+- La saturación de n = 2 vive en las ventanas con un solo frente (≥ 90 % de S_p a p alto; la mitad la ponen el 10 % de frentes mayores): su exponente propio queda plano en p (≈ 0,33 JONSWAP). El modelo pierde la saturación porque el incremento a través de los frentes grandes cae demasiado rápido con τ.
+- Con n ≥ 4 el crecimiento de ζ_p a p alto viene de las ventanas con dos o más frentes (47 % de S_7 en n = 6 contra 26 % en el modelo). La geometría (cuántas ventanas tienen frentes) coincide dato/modelo: lo que falla es la forma alrededor de los frentes grandes.
+- Scripts y números: =Día 9/Manuscrito/Códigos/descomposicion_partes.py=, =fig_descomposicion_partes.py=, ESTADO.md.
+** [10:44] Partes de la ola, plateau y por qué n = 2 satura y n ≥ 3 no
+- PDF didáctico: [[file:../../../Assets/2026/11/Day_02/partes_ola.pdf][partes_ola.pdf]] (19 p.), con las cinco mediciones del Día 1.
+- Plateau real solo en JONSWAP con n = 2 (120–243 ms, ζ∞ ≈ 0,57); la única sección que satura son las ventanas con un frente.
+- Regla sin modelo: dζ_p/dp → d ln J_n/d ln τ (el salto visto a escala τ); verificada en 5 mediciones y n = 2–6. Con n = 2 la espalda resta y la subida suma; con n ≥ 3 la recta se anula y solo quedan términos que suman (esquina valle plano/espalda empinada desde n = 3, pares de frentes desde n = 5).
+- ζ_p que baja con p (n = 2): identidad exacta ∂ζ_p/∂p = ∂⟨ln|δ|⟩_p/∂ln τ; el teorema de monotonía es asintótico y nuestro rango no lo es. Significativo en Bonneton, no en JONSWAP.
+** [11:12] Bibliografía, anatomía de las olas grandes y continuación de la intermitencia
+- Revisión bibliográfica (intermitencia, Burgers, bifractalidad, métodos): [[file:../../../Assets/2026/11/Day_02/revision_intermitencia.pdf][revision_intermitencia.pdf]]. Antecedente clave: Ricard & Falcon 2023 (PRE 108, 045106), frentes tanh en S_p sin parámetros.
+- Anatomía de las olas grandes (JONSWAP y muchos forzados del Día 1; Día 2 junto a la rompiente): [[file:../../../Assets/2026/11/Day_02/anatomia_ola.pdf][anatomia_ola.pdf]]. Valle plano + frente de Burgers (ν = ν_c) + punta solitaria de KdV (A ≈ 0,3 J, ancho de KdV sin ajustar) + espalda de onda simple; rms 0,06 mm en JONSWAP. Día 2: frente doble en S1 (la rotura), KdV ondular solo en el umbral de Favre.
+- Intermitencia (sección nueva en partes_ola.pdf): S_p^± con signo, la saturación y la no monotonía están en S^+ (frentes); con la punta solitaria el modelo da ζ_7^(6) = 1,88 contra 1,92.
+** [11:29] Campos de frentes, puntas y ruido; pendiente del shuffle
+- JONSWAP separado en F (frentes + espaldas), P (puntas solitarias) y N (resto) ajustando cada ola: F solo es Burgers (n ≥ 3 satura, n = 2 baja con p); sumarle las puntas deja n = 2 plano y hace crecer n ≥ 3, como el dato. Sección 10.3 de partes_ola.pdf.
+- Pendiente: explorar por qué barajar las olas individuales no cambia el scaling (plan en partes_ola.pdf, conclusiones).
+** [11:45] Teoría por piezas, Falcon 2023 y propagación desde S1
+- PDF de síntesis, didáctico: [[file:../../../Assets/2026/11/Day_02/teoria_intermitencia.pdf][teoria_intermitencia.pdf]] (anatomía → dónde vive la intermitencia → regla de Laplace → cada pieza en el incremento → pruebas → modelo).
+- Modelo de frentes de Ricard & Falcon (2023) sobre dato − puntas: con n = 2 necesita la espalda (−sτ; el ajuste libre elige los t* y s medidos); con n = 6 da ζ_p ≈ 1 plano (Burgers): compatible dentro de las barras pero sin la pendiente del dato (0,056); ningún ancho de frente la reproduce.
+- Propagación S1 → S2 → S3 (Día 2) con aguas someras en forma de señalización: reproduce la asimetría S_k; KdV hace la punta pero de más (anatomia_ola.pdf, sección 7).
+- Bibliografía frente + punta: [[file:../../../Assets/2026/11/Day_02/revision_frente_punta.pdf][revision_frente_punta.pdf]] (28 refs). Frente + onda simple respaldado (Bonneton 2007/2023); punta sech² con ancho de KdV sobre bore roto es nueva y dudosa (con h + J el ancho da 140 ms; podría ser el rodillo): describirla como forma y escala.
+- Ancho de la punta libre: ≈ 50 ms fijo, no escala con A (KdV), J (rodillo) ni h (Día 2). Hay que probar la respuesta del sensor al escalón antes de interpretarla.
+** [11:57] Hoja de ruta y control de rebotes
+- Objetivo: justificar la intermitencia (localización en frentes → regla σ_sat = d ln J_n/d ln τ → geometría local del frente); la anatomía queda como spin-off. Hoja de ruta A–E en ESTADO.md.
+- Control: las primeras olas sobre agua calma (Día 2, sin rebote de la playa) ya tienen el sobrepaso post-cresta (S3 0,43 vs 0,52; S1 0,64 vs 0,65): no lo crean los rebotes. Falta la respuesta del sensor al escalón.
+** [12:06] El período ordena los tres mecanismos (7 mediciones del Día 1)
+- En S3 de las siete mediciones largas, σ_sat crece con el período para n = 2 y 3 (valle más plano: la espalda resta menos, la esquina suma más) y decrece para n = 6 (pares de frentes con períodos cortos). Spearman +0,89, +0,93 y −0,82; σ_sat(n=2) sigue a λ2 de la geometría (+0,79). Sección 10 de teoria_intermitencia.pdf.
