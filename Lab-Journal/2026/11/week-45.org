@@ -39,3 +39,5 @@
 - Control: las primeras olas sobre agua calma (Día 2, sin rebote de la playa) ya tienen el sobrepaso post-cresta (S3 0,43 vs 0,52; S1 0,64 vs 0,65): no lo crean los rebotes. Falta la respuesta del sensor al escalón.
 ** [12:06] El período ordena los tres mecanismos (7 mediciones del Día 1)
 - En S3 de las siete mediciones largas, σ_sat crece con el período para n = 2 y 3 (valle más plano: la espalda resta menos, la esquina suma más) y decrece para n = 6 (pares de frentes con períodos cortos). Spearman +0,89, +0,93 y −0,82; σ_sat(n=2) sigue a λ2 de la geometría (+0,79). Sección 10 de teoria_intermitencia.pdf.
+** [12:11] La historia corta de la intermitencia
+- Versión de 3 páginas, solo con magnitudes medidas: [[file:../../../Assets/2026/11/Day_02/historia_intermitencia.pdf][historia_intermitencia.pdf]]. Observación → la saturación está en los frentes → regla dζ/dp = d ln J_n/d ln τ → la forma a cada lado del frente (n = 2 la espalda resta; n ≥ 3 la diferencia de pendientes suma) → el período ordena las siete mediciones con el signo predicho. Falta el control del sensor al escalón.
