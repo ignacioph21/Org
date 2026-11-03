@@ -66,3 +66,8 @@
 ** [17:30] Bootstrap por olas y ESS en todas las mediciones
 - Bootstrap por bloques de 20 olas: errores de ζ_7 ≈ 0,12 (como los bloques), pero las diferencias apareadas son chicas: n = 3 contra n = 4 difieren 0,18 ± 0,04. Ningún par de estimadores coincide: ningún ζ_p es un exponente.
 - ESS en las 21 mediciones (S3, Día 1 y Día 2): ζ_7/ζ_3 = 1,86 ± 0,09 (n = 3), igual en todas las condiciones, contra ≈ 2,2 de los subrogados gaussianos. Es el número de intermitencia más reproducible.
+** [19:30] Corrección: referato de las exploraciones
+- Un referee independiente revisó las exploraciones y refutó tres conclusiones; versión 2 en [[file:../../../Assets/2026/11/Day_03/exploraciones_intermitencia.pdf][exploraciones_intermitencia.pdf]].
+- ESS NO da un número robusto: el ζ_7/ζ_3 ≈ 1,86 de la ventana ancha lo fijan las escalas dentro del frente (un tren de choques puro da lo mismo); en el rango, el dato es compatible con un tren de choques, pero ese valor depende mucho de la estadística del tren; entre mediciones es demasiado ruidoso. Sí sirve localmente (30–120 ms): ahí los n ≥ 3 coinciden.
+- Sensor: responde en ≲ 30 ms y la forma de la subida es física (asimetría 0,8–1,8; un retardo daría 0,37), pero que el piso de 60–80 ms sea en parte instrumental sigue abierto. El control al escalón sigue siendo necesario.
+- Una década de rango limpio en un tren ideal pediría T/t_r ≳ 1000 (hoy 13). Próximo posible: una medición larga (≥ 30 min) con el sensor en agua baja.
