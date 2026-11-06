@@ -92,3 +92,5 @@
 ** [19:00] Pendiente: continuar con el atlas el miércoles 11/11
 - El atlas de canales sigue el miércoles 11/11, que probablemente sea el Día 12 (lunes 9 y martes 10 son feriados).
 - Falta: completar la búsqueda que quedó cortada (Stive 1985, GWK, Delta Flume, BARDEX, LIP11D, Hansen & Svendsen 1979, Stive 1980, Boers 1996, Baldock et al. 1998, Ting 2002), dibujar las curvas de γ de campo (Thornton & Guza, Sallenger & Holman, Raubenheimer et al.), buscar skewness y asimetría de η en la literatura (Rocha et al. 2017), verificar las filas con fuente secundaria y llevar al manuscrito las láminas que convenzan.
+** [19:05] Atlas ampliado: 218 experimentos
+- Diez minutos más de búsqueda: el atlas pasó de 170 a 218 casos (sumó GWK DynaRev 2017, Stive 1980, Baldock & Huntley 2002, Stive 1985 y 19 playas australianas de Stringari & Power 2019) y la lámina de rotura tiene la recta de campo de Sallenger & Holman (1985), sobre la que cae la medición principal de la cuba: [[file:../../../Assets/2026/11/Day_06/atlas_canales.pdf][atlas_canales.pdf]] (9 p.). Sigue el miércoles 11/11.
