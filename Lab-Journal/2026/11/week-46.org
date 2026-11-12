@@ -1,0 +1,16 @@
+#+TITLE: Journal Week 46
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-11-12
+** [09:22] Día 12: funciones de estructura con signo (S_p^+ y S_p^-)
+- Antes de escribir: repaso de las funciones de estructura con signo a partir de Sreenivasan, Iyer & Vinodh (2022, Phys. Rev. Research 4, L042002). Revisé un apunte sobre ese paper hecho por otra IA: las cuentas están bien. Tiene errores menores (el recuadro de su Fig. 2 es la raíz p-ésima del cociente, la cota ζ_p ≤ p/3 no vale para las partes, un argumento corrido en la sección de bores) y todo está planteado en el espacio.
+- Versión nueva, en prosa y con la serie principal (JONSWAP, S3): [[file:../../../Assets/2026/11/Day_12/funciones_con_signo.pdf][funciones_con_signo.pdf]] (12 p.). Códigos y figuras en =Tercera iteración/Día 12/Apunte funciones con signo/=.
+- Lo central: en una serie temporal el lado de los choques es el positivo (un frente llega al sensor como una subida). En S3, ζ_p^+ ≈ 0,3–0,47 (satura) y ζ_p^- va de 1,0 a 2,6 (p = 2–7); el ζ_p de siempre es su promedio pesado por la parte de cada uno. El 99 % de S_7^+ sale de ventanas con un frente.
+- Γ_p = (S_p^+ − S_p^-)/(S_p^+ + S_p^-) mide la irreversibilidad a todo orden: 0,4–0,95 en el dato a 129 ms, ≈ 0 en los subrogados IAAFT. Posible figura para el manuscrito.
