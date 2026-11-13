@@ -80,3 +80,10 @@
 [[file:../../../Assets/2026/11/Day_13/F6_HT_puntos.png]]
 - Las alternativas A–I también quedaron en minúsculas ([[file:../../../Assets/2026/11/Day_13/alternativas_fig6.pdf][alternativas_fig6.pdf]]).
 - Pendientes: rótulo "asymmetry" (se confunde con la asimetría adelante–atrás), nombres propios, elegir la Fig. 6 final, cruces descendentes, Fig. 8.
+** [17:33] Figura resumen de la comparación con otros canales (borrador) y número de Ursell
+- Pedido: una figura resumen de [[file:../../../Assets/2026/11/Day_13/comparacion_canales.pdf][comparacion_canales.pdf]] para discutir Froude y Bond, con muchos canales, que apoye que la cuba sirve para unas cosas y no para aire/rodillo.
+- Borrador =C4_resumen= (=Día 13/Comparación canales/Códigos/fig_resumen_canales.py=). Un solo eje horizontal, el Bond local $Bo_h$ (arriba, $h$): con agua, $Re_h$ y $We$ dependen solo de $h$, así que los umbrales son líneas verticales. (a) $H/h$ de la zona interna (eje derecho $Fr_b$): la cuba (S3, JONSWAP), GLOBEX (72 sondas), canales regulares (8), un canal grande y campo (21); abajo, las profundidades de las sondas internas de todas las instalaciones. (b) el Cuadro 1 como barras: comprobado con datos, esperable por Froude sin comprobar, y procesos que necesitan una escala que la cuba no tiene (ondulaciones: $h > 2$ cm; aire y rodillo: $h \gtrsim 10$ cm).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_13/C4_resumen.png]]
+- Ursell ($Ur = (H_{m0}/h)/(kh)^2$, ya calculado en =atlas_puntos.json=): S1 0,22, S2 0,85, S3 7,8; zona interna de GLOBEX 2,0–101 (mediana 6,7). Es un número de Froude más (se arma con $H/h$ y $kh$): la cuba queda dentro del rango. A igual $Ur \approx 7{,}7$, la asimetría adelante–atrás coincide (cuba −0,88; GLOBEX −0,88 a −1,00) pero la de cresta–valle no (cuba 0,53; GLOBEX 1,2–1,5). A revisar: si es la dispersión capilar (crestas menos picudas) o el sensor.
+- Sin decidir: si la figura entra al manuscrito, y si Ursell entra como columna del Cuadro 1 o como panel Sk/As contra Ur.
