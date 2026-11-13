@@ -72,3 +72,11 @@
 ** [15:57] Pendiente (TODO): rótulos de las figuras en minúsculas
 - Decisión del usuario: en los gráficos, todas las palabras van en minúsculas (reemplaza la regla de Mayúscula Inicial del 26/10).
 - TODO: pasar a minúsculas los rótulos, leyendas y anotaciones de todas las figuras del PDF definitivo y de las alternativas de la Fig. 6 (A–I). A confirmar: si los nombres propios (Miche, JONSWAP, Tayfun) conservan la mayúscula; símbolos, unidades y S1–S3 no cambian.
+** [16:05] PDF definitivo: todas las figuras en minúsculas y Fig. 6 nueva (solo puntos)
+- El PDF definitivo pasa al Día 13: [[file:../../../Assets/2026/11/Day_13/manuscrito_definitivo.pdf][manuscrito_definitivo.pdf]] (44 p.; fuentes en =Tercera iteración/Día 13/Manuscrito/=, copia del Día 12).
+- Rótulos en minúsculas (decisión del usuario): hecho en un solo lugar, =Códigos/estilo.py=, que al guardar cada figura baja las palabras con mayúscula inicial. No toca símbolos, unidades entre corchetes, siglas ni S1–S3. A confirmar: dejé con mayúscula los nombres propios (Miche, Stokes, Rayleigh, Tayfun, Bonneton, Le Méhauté…); se cambia vaciando una lista. Se regeneraron las 26 figuras de matplotlib del PDF; el render de la Fig. 1a (rótulo "Video") no, porque lo va a rehacer el usuario en Fusion.
+- Fig. 6: entra la opción I (solo puntos, con Miche y la línea de asimetría de 2.º orden = 10 %), provisoria. Se reescribieron el epígrafe, los resultados, los pasos (con las fórmulas de la línea) y el recuadro para el texto; la versión del 12/11 queda guardada en =Día 13/Le Mehaute alternativas/Original guardada/=.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_13/F6_HT_puntos.png]]
+- Las alternativas A–I también quedaron en minúsculas ([[file:../../../Assets/2026/11/Day_13/alternativas_fig6.pdf][alternativas_fig6.pdf]]).
+- Pendientes: rótulo "asymmetry" (se confunde con la asimetría adelante–atrás), nombres propios, elegir la Fig. 6 final, cruces descendentes, Fig. 8.
