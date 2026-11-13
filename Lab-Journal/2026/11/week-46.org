@@ -69,3 +69,6 @@
 - En S3 el contorno del 90 % pasa apenas la línea de Miche abajo a la izquierda: son las 5 olas sobre Miche más el ancho del núcleo.
 ** [15:51] Fig. 6: opción I (la original con las líneas nuevas)
 - Pedido del usuario: la figura original, solo puntos, sin densidades ni contornos, con las líneas nuevas (Miche y asimetría de 2.º orden = 10 %). Hoja 10 de [[file:../../../Assets/2026/11/Day_13/alternativas_fig6.pdf][alternativas_fig6.pdf]] (=fig6_densidad.py I=). Los puntos van en orden aleatorio para que ningún sensor tape a otro; la leyenda conserva la profundidad bajo cada sensor.
+** [15:57] Pendiente (TODO): rótulos de las figuras en minúsculas
+- Decisión del usuario: en los gráficos, todas las palabras van en minúsculas (reemplaza la regla de Mayúscula Inicial del 26/10).
+- TODO: pasar a minúsculas los rótulos, leyendas y anotaciones de todas las figuras del PDF definitivo y de las alternativas de la Fig. 6 (A–I). A confirmar: si los nombres propios (Miche, JONSWAP, Tayfun) conservan la mayúscula; símbolos, unidades y S1–S3 no cambian.
