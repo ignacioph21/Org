@@ -87,3 +87,6 @@
 [[file:../../../Assets/2026/11/Day_13/C4_resumen.png]]
 - Ursell ($Ur = (H_{m0}/h)/(kh)^2$, ya calculado en =atlas_puntos.json=): S1 0,22, S2 0,85, S3 7,8; zona interna de GLOBEX 2,0–101 (mediana 6,7). Es un número de Froude más (se arma con $H/h$ y $kh$): la cuba queda dentro del rango. A igual $Ur \approx 7{,}7$, la asimetría adelante–atrás coincide (cuba −0,88; GLOBEX −0,88 a −1,00) pero la de cresta–valle no (cuba 0,53; GLOBEX 1,2–1,5). A revisar: si es la dispersión capilar (crestas menos picudas) o el sensor.
 - Sin decidir: si la figura entra al manuscrito, y si Ursell entra como columna del Cuadro 1 o como panel Sk/As contra Ur.
+** [17:40] Cierre de la sesión
+- Estado y preguntas abiertas para retomar: =Tercera iteración/Día 13/README.md= (sección "Estado al cerrar").
+- Abierto: si la figura resumen C4 entra al manuscrito; cómo entra Ursell; nombres propios en minúscula; rótulo "asymmetry" y elección final de la Fig. 6.
