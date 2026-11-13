@@ -90,3 +90,15 @@
 ** [17:40] Cierre de la sesión
 - Estado y preguntas abiertas para retomar: =Tercera iteración/Día 13/README.md= (sección "Estado al cerrar").
 - Abierto: si la figura resumen C4 entra al manuscrito; cómo entra Ursell; nombres propios en minúscula; rótulo "asymmetry" y elección final de la Fig. 6.
+** [17:45] Ursell y forma de la ola; C4 y C5 en el PDF de comparación
+- [[file:../../../Assets/2026/11/Day_13/comparacion_canales.pdf][comparacion_canales.pdf]] (10 p.) suma la sección "La forma de la ola: el número de Ursell" (Fig. C5, =Códigos/fig_ursell.py=), la figura resumen C4, una fila en el Cuadro 1 y un recuadro con los tres valores de Iribarren.
+- Resultado: a igual $Ur$ la cuba tiene la asimetría adelante–atrás de GLOBEX pero no la de cresta–valle, porque recorre otro camino en el plano $Sk$–$As$: no pasa por la etapa de asomeramiento (en GLOBEX, $Sk$ hasta 1,4–1,7 con $As \approx 0$) y se inclina desde S1 ($As = -0{,}13$ con $Ur = 0{,}22$). Llega a la forma de las sondas más someras de GLOBEX ($h$ = 2–3 cm) a un $Ur$ 10–80 veces menor. Candidata: la pendiente (1/28,6 contra 1/80), un efecto de Froude y no de escala; quedan abiertos el forzado y el filtro del lock-in.
+- Iribarren: 0,42 ($\xi_0$, $T_p$ medido en S1 = 0,69 s, $L_0$), mediana 0,35 en la Fig. 7 (ola por ola, $L$ local) y 0,65 en la tabla de escala ($T_p$ de diseño, 1,07 s). Propuesta: unificar con el $T_p$ medido.
+** [17:50] Iribarren: se adopta el local
+- Decisión: por ahora, el Iribarren local ola por ola de la Fig. 7 (mediana 0,35). Queda para más adelante chequear el $\xi_0 = 0{,}65$ de la tabla de escala ($T_p$ de diseño) contra el 0,42 de la comparación ($T_p$ medido en S1) y por qué el pico medido (0,69 s) difiere del de diseño (1,07 s).
+** [17:58] Forma de la ola en el plano Sk–As: para otro trabajo
+- La forma de "resonancia" de Sk contra Ur y el "ciclo" de la Fig. C5 salen de leer (Sk, As) en polares (B, ψ), que son el módulo y la fase del bispectro integrado (Elgar & Guza 1985). En GLOBEX, ψ gira de 0° a −58° y B crece hasta 1,5–1,8 y después baja; Sk = B cos ψ tiene entonces un máximo. La cuba arranca con ψ = −35° en S1.
+- La literatura es de parametrizaciones (Ruessink et al. 2012, velocidad, no recomendada en pendientes > 1:30; Rocha et al. 2017 agregan pendiente y peralte). Queda para otro trabajo: notas y bibliografía en =Día 13/Bibliografía/forma_ola_ursell.md=.
+** [18:15] Manuscrito: Figs. 6, 7 y propuesta 8+9
+- Fig. 6: etiquetas (a.i–a.iii) y (b) abajo a la derecha con fondo blanco; sensores arriba a la derecha. Fig. 7: parámetros del ajuste en el epígrafe, tests sin bins recalculados con dispersión de gravedad, umbral 0,5 con nota (≈ 0,40 con L local), cruces descendentes sin cambios en S1.
+- Figs. 8 y 9: propuesta de una sola figura 2×3 (crestas arriba, alturas abajo), todavía fuera del PDF. Detalle en =Día 13/Manuscrito/ESTADO.md=.
