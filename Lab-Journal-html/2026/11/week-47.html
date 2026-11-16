@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Journal Week 47</title>
+<meta name="generator" content="Org Mode" />
+<link rel='stylesheet' href='../../../style.css' />
+<script defer src='../../../script.js'></script><style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Journal Week 47</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgdd66da4">Referencias</a></li>
+<li><a href="#org7acedd2">2026-11-16</a>
+<ul>
+<li><a href="#org24e339f">[09:10] Día 14: seguimos con las figuras del manuscrito</a></li>
+<li><a href="#org8e7e34e">[09:40] Fases: de lo generado (aleatorio) a las olas triangulares</a></li>
+<li><a href="#orgbcb8b1f">[10:05] Asimetría y curtosis con signo de los incrementos (S3, JONSWAP)</a></li>
+<li><a href="#orgaebc0ed">[11:00] Mini presentación para la reunión de grupo</a></li>
+<li><a href="#orgd9934fd">[15:00] Prueba: ζ<sub>p</sub> de dos puntos promediado sobre las mediciones largas del Día 1 (solo Journal)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdd66da4" class="outline-2">
+<h2 id="orgdd66da4">Referencias</h2>
+<div class="outline-text-2" id="text-orgdd66da4">
+<div class="csl-bib-body">
+</div>
+</div>
+</div>
+<div id="outline-container-org7acedd2" class="outline-2">
+<h2 id="org7acedd2">2026-11-16</h2>
+<div class="outline-text-2" id="text-org7acedd2">
+</div>
+<div id="outline-container-org24e339f" class="outline-3">
+<h3 id="org24e339f">[09:10] Día 14: seguimos con las figuras del manuscrito</h3>
+<div class="outline-text-3" id="text-org24e339f">
+<ul class="org-ul">
+<li><code>Tercera iteración/Día 14/Manuscrito/</code> = copia del Día 13 (sin build/); el PDF definitivo compila ahora a <a href="../../../Assets/2026/11/Day_16/manuscrito_definitivo.pdf">Day<sub>16</sub>/manuscrito<sub>definitivo.pdf</sub></a>.</li>
+<li>Figs. 8+9 combinadas (propuesta, todavía fuera del PDF): se mantiene la normalización con \(\sqrt{m_0}\) y el eje x de las alturas es el doble que el de las crestas (0–5,5 y 0–11), así Rayleigh se ve igual en las dos filas. Eje y hasta \(3\times10^{-4}\) para que las etiquetas de panel no tapen las últimas olas. Falta el okay.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8e7e34e" class="outline-3">
+<h3 id="org8e7e34e">[09:40] Fases: de lo generado (aleatorio) a las olas triangulares</h3>
+<div class="outline-text-3" id="text-org8e7e34e">
+<ul class="org-ul">
+<li>Idea del usuario (fin de semana): PDFs de las fases, para mostrar que pasan de aleatorias (lo generado) a algo no aleatorio en las olas triangulares.</li>
+<li>Script <code>Día 14/Manuscrito/Códigos/extra_fases.py</code> → <code>Figuras/extra_fases.png</code> (exploración, fuera del PDF). Paleta (CSV del LinMot) y S1–S3 de JONSWAP<sub>BONNETON</sub><sub>395</sub>; tramos de 6,4 s con Hann y 50 % de solape, dentro de los bloques de 30 s del lock-in.</li>
+<li>La fase de cada modo, \(\varphi(f)\), es uniforme en todas las señales: no sirve, porque el origen de tiempo de cada tramo es arbitrario. Lo que mide el acople es la bifase \(\beta(f_1,f_2)=\arg[X(f_1)X(f_2)X^*(f_1+f_2)]\).</li>
+<li>Bifase ponderada por amplitud: la paleta es plana (fases aleatorias), S1 está cerca de 0 (tipo Stokes) y S2–S3 tienen un pico en \(-\pi/2\) (diente de sierra, Elgar &amp; Guza 1985). Bifase del biespectro: S1 −34°, S2 −81°, S3 −67° (todas las tríadas). Largo del vector medio R: paleta 0,02, S1 0,03, S2 0,06, S3 0,17 (ruido \(1/\sqrt{N}\approx 0,03\)).</li>
+<li>El usuario: queda solo en el Journal (no va al manuscrito).</li>
+</ul>
+
+<div id="org360ef76" class="figure">
+<p><img src="../../../Assets/2026/11/Day_16/extra_fases.png" alt="extra_fases.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbcb8b1f" class="outline-3">
+<h3 id="orgbcb8b1f">[10:05] Asimetría y curtosis con signo de los incrementos (S3, JONSWAP)</h3>
+<div class="outline-text-3" id="text-orgbcb8b1f">
+<ul class="org-ul">
+<li>Pedido del usuario: &ldquo;calcular como hicimos S<sub>p</sub>^± la kurtosis y skewness ±. ¿Debería ir como τ<sup>-1</sup> alguna?&rdquo;</li>
+<li><code>Día 14/Momentos con signo/Códigos/momentos_signo.py</code> (misma serie y definiciones que el apunte del Día 12). \(Sk^\pm = S_3^\pm/(S_2^\pm)^{3/2}\) y \(K^\pm = S_4^\pm/(S_2^\pm)^2\), promediando sobre todas las ventanas. Comparo con el esqueleto (diente de sierra con los J y T medidos) y con IAAFT. Números en <code>Resultados/momentos_signo.txt</code>.</li>
+<li>Teoría: si solo las ventanas que contienen un frente dan \(\delta^+\) grande (probabilidad \(f_b\tau\), \(\delta\approx J\)), entonces \(K^+ \approx \frac{\langle J^4\rangle}{\langle J^2\rangle^2}(f_b\tau)^{-1}\) y \(Sk^+ \approx \frac{\langle J^3\rangle}{\langle J^2\rangle^{3/2}}(f_b\tau)^{-1/2}\). El esqueleto cumple exactamente −1 y −1/2 entre 3 y ~90 ms.</li>
+<li>Dato: la pendiente local más empinada de \(K^+\) es −0,66 (en 118 ms) y la de \(Sk^+\) es −0,32 (en 136 ms). Nunca llega a −1: por debajo de ~10 ms el frente tiene ancho finito y \(K^+\) se aplana, y arriba de ~300 ms vuelve al valor gaussiano. El nivel sí sale sin parámetros libres: en \(1/2f_\nu\), \(K^+\) medido 9,4 contra 8,3 predicho y \(Sk^+\) 2,88 contra 2,79. IAAFT da pendiente ≈ 0.</li>
+<li>El usuario: queda solo en el Journal (no va al manuscrito).</li>
+<li>Lado −: tiene un máximo en 20–40 ms (\(K^-\) ≈ 9,6, por encima del gaussiano 6), que el esqueleto no tiene. Candidato: la caída rápida después de la punta solitaria (a confirmar).</li>
+</ul>
+
+<div id="org79634a7" class="figure">
+<p><img src="../../../Assets/2026/11/Day_16/momentos_signo.png" alt="momentos_signo.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaebc0ed" class="outline-3">
+<h3 id="orgaebc0ed">[11:00] Mini presentación para la reunión de grupo</h3>
+<div class="outline-text-3" id="text-orgaebc0ed">
+<ul class="org-ul">
+<li>5 min, 6 diapositivas, Beamer: montaje, rotura ola por ola (Fig. 6), espectro contra GLOBEX y \(f_\nu(h)\), intermitencia (Fig. 15), estado del manuscrito.</li>
+<li>Carpeta nueva para las reuniones (pedido del usuario): <code>~/Documentos/Reuniones de Labo/</code> (al lado de <code>Presentaciones/</code>), una subcarpeta autocontenida por reunión con copias de las figuras, más <code>Plantilla/</code> (estilo <code>labo.sty</code>) y README.</li>
+<li>Hoy: <code>Reuniones de Labo/2026-11-17/labo_2026-11-17.pdf</code> (la reunión es el 17/11).</li>
+<li>[09:35] Título: &ldquo;Rompimiento de olas en una playa a escala de laboratorio&rdquo;. Diapo 2 = GIF del video del Día 1 (13/10) + Fig. 1b + Fig. 3; diapo 3 = GIF del video de prueba del 24/08 (el de la Fig. 2) + Fig. 2b. Applet para elegir segmento y ROI y exportar GIF: <code>Reuniones de Labo/Herramientas/elegir_gif.py</code>. La carpeta se llama &ldquo;Reuniones de Labo&rdquo; (las reuniones de grupo más grandes irían aparte).</li>
+<li>[10:00] Videos que se reproducen solos en la diapositiva: <code>animate</code> no anduvo en xreader; se instaló pdfpc y los GIFs pasaron a clips webm (<code>\clip</code> con pdfpc-movie). Diapo del montaje: video + esquema a la izquierda; forzado JONSWAP (serie y espectro, eje a la izquierda) a la derecha.</li>
+<li>[10:30] Diapositivas nuevas: &ldquo;La evolución de la ola&rdquo; (video de la prueba → Fig. 2b + Fig. 4 apaisada con los recuadros), &ldquo;Ola por ola&rdquo; (Figs. 5 y 6) y &ldquo;El tipo de rompimiento&rdquo; (Fig. 7 + anatomía nueva).</li>
+<li>Anatomía nueva para el manuscrito: <code>Día 14/Manuscrito/Códigos/fig_anatomia_top10.py</code> → <code>AN_top10.pdf</code>. S3, 10 % de olas con mayor salto J (69 olas, J ≥ 5,9 mm), alineadas en el frente: promedio ± std y zonas valle / frente (≈ 80 ms) / punta (≈ 80 ms) / espalda (≈ 740 ms). J medio = 0,59 h.</li>
+<li>[11:00] Presentación completa (pedido del usuario): espectro (barrido con solo f<sub>ν</sub> libre + ecuación de Bonneton; clic: colapso, clic: GLOBEX), saturación y análisis dimensional (Fig. 11 b–c con ecuaciones), incrementos (Fig. 15, fila de arriba), S<sub>p</sub> con n = 2, separación de escalas (Fig. 18 + R<sub>B</sub>, t<sub>ν</sub>, T<sub>m</sub>/t<sub>ν</sub>) y S<sub>p</sub>^± + IAAFT (nueva: serie, espectro, PDF y ζ<sub>p</sub> dato contra IAAFT). Las diapositivas del primer borrador quedaron en <code>descartadas_2026-11-16.tex</code>. Falta reordenar con el usuario.</li>
+<li>[11:50] Anatomía de la ola (para la reunión y el manuscrito): promedio ± std del 10 % de olas más grandes (S3, 69 olas), zonas valle/frente/punta/espalda, frente tanh con t* = 22,8 ms (subida 10–90 % ≈ 50 ms, igual al t<sub>ν</sub> = 51 ms del espectro) y rectas en el valle y la espalda que muestran la concavidad. Reemplaza la sección de anatomía del manuscrito definitivo (Day<sub>16</sub>); la vieja quedó guardada.</li>
+<li>[12:40] Manuscrito definitivo podado a las figuras de la presentación (Day<sub>16</sub>/manuscrito<sub>definitivo.pdf</sub>); la versión completa quedó en Day<sub>16</sub>/manuscrito<sub>completo</sub><sub>16</sub>-11.pdf. Figuras nuevas: S<sub>p</sub> de dos puntos y ESS, S<sub>p</sub>± con ζ⁺/ζ⁻/total, IAAFT (series, espectro, PDF y exponentes). Sin la recta monofractal p/2 (un gaussiano da p ζ₂/2).</li>
+<li>[13:30] Cierre del día: (1) todo el análisis pasó a &ldquo;solo f<sub>ν</sub> libre&rdquo; (amplitud fijada por Ẽ): f<sub>ν</sub> = 4,35 Hz, R<sub>B</sub> = 127, 1/2f<sub>ν</sub> = 115 ms; barrido f<sub>ν</sub> ∝ h^−0,47±0,04, κ = 0,58 ± 0,09; intermitencia y GLOBEX recalculados (T<sub>m</sub>/t<sub>ν</sub>: cuba 14, GLOBEX 13). (2) Presentaciones de la reunión del 17/11 (larga, corta y una copia con todas las animaciones) en <code>~/Documentos/Reuniones de Labo/2026-11-17/</code>. (3) Manuscrito definitivo podado + copia del estado (Day<sub>16</sub>/manuscrito<sub>definitivo</sub><sub>estado</sub><sub>16</sub>-11.pdf) + versión final limpia (Day<sub>16</sub>/manuscrito<sub>final.pdf</sub>, 35 p.: solo figuras, resultados, procedimiento y notas para el texto). (4) Directorio autocontenido <code>Día 14/Figuras del manuscrito/</code> con un script por figura (<code>Por figura/</code>) y el texto final.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd9934fd" class="outline-3">
+<h3 id="orgd9934fd">[15:00] Prueba: ζ<sub>p</sub> de dos puntos promediado sobre las mediciones largas del Día 1 (solo Journal)</h3>
+<div class="outline-text-3" id="text-orgd9934fd">
+<ul class="org-ul">
+<li>Panel (c) de la Fig. 15b con las 8 mediciones largas del Día 1 (S3, ~510 s), cada una con su f<sub>m</sub>, su f<sub>ν</sub> (solo f<sub>ν</sub> libre) y su rango 1/2f<sub>ν</sub>–1/2f<sub>m</sub>. Script <code>Día 14/Manuscrito/Códigos/extra_zeta_largas.py</code>.</li>
+<li>Promedio ± desvío entre mediciones: ζ<sub>1</sub> 0,37 ± 0,06; ζ<sub>2</sub> 0,56 ± 0,13; ζ<sub>3</sub> 0,64 ± 0,21; ζ<sub>4</sub> 0,64 ± 0,27; ζ<sub>5</sub> 0,60 ± 0,32; ζ<sub>6</sub> 0,56 ± 0,37. Satura en ~0,6 (la principal, en ~0,5).</li>
+<li>Dos grupos: &ldquo;muchos forzados&rdquo; con ζ<sub>6</sub> ≈ 0,9–1,1 (cerca de Burgers) y Bonneton custom/h3<sub>5</sub> con ζ<sub>6</sub> ≈ 0,13–0,15 (f<sub>m</sub> ≈ 2,3 Hz, rango corto 133–219 ms, poco confiable). Promediar mezcla forzados y separaciones de escala distintos: mejor separar por familia o contra T<sub>m</sub>/t<sub>ν</sub>. Queda fuera del manuscrito por ahora.</li>
+</ul>
+
+<div id="orgb609c75" class="figure">
+<p><img src="../../../Assets/2026/11/Day_16/extra_F15b_c_largas.png" alt="extra_F15b_c_largas.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

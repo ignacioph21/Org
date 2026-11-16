@@ -1,0 +1,53 @@
+#+TITLE: Journal Week 47
+#+OPTIONS: toc:2
+#+BIBLIOGRAPHY: ../../../references.bib
+#+CITE_EXPORT: csl chicago-author-date.csl
+
+* Table of Contents :TOC:noexport:
+
+* Referencias
+#+PRINT_BIBLIOGRAPHY:
+
+* 2026-11-16
+** [09:10] Día 14: seguimos con las figuras del manuscrito
+- =Tercera iteración/Día 14/Manuscrito/= = copia del Día 13 (sin build/); el PDF definitivo compila ahora a [[file:../../../Assets/2026/11/Day_16/manuscrito_definitivo.pdf][Day_16/manuscrito_definitivo.pdf]].
+- Figs. 8+9 combinadas (propuesta, todavía fuera del PDF): se mantiene la normalización con $\sqrt{m_0}$ y el eje x de las alturas es el doble que el de las crestas (0–5,5 y 0–11), así Rayleigh se ve igual en las dos filas. Eje y hasta $3\times10^{-4}$ para que las etiquetas de panel no tapen las últimas olas. Falta el okay.
+
+** [09:40] Fases: de lo generado (aleatorio) a las olas triangulares
+- Idea del usuario (fin de semana): PDFs de las fases, para mostrar que pasan de aleatorias (lo generado) a algo no aleatorio en las olas triangulares.
+- Script =Día 14/Manuscrito/Códigos/extra_fases.py= → =Figuras/extra_fases.png= (exploración, fuera del PDF). Paleta (CSV del LinMot) y S1–S3 de JONSWAP_BONNETON_395; tramos de 6,4 s con Hann y 50 % de solape, dentro de los bloques de 30 s del lock-in.
+- La fase de cada modo, $\varphi(f)$, es uniforme en todas las señales: no sirve, porque el origen de tiempo de cada tramo es arbitrario. Lo que mide el acople es la bifase $\beta(f_1,f_2)=\arg[X(f_1)X(f_2)X^*(f_1+f_2)]$.
+- Bifase ponderada por amplitud: la paleta es plana (fases aleatorias), S1 está cerca de 0 (tipo Stokes) y S2–S3 tienen un pico en $-\pi/2$ (diente de sierra, Elgar & Guza 1985). Bifase del biespectro: S1 −34°, S2 −81°, S3 −67° (todas las tríadas). Largo del vector medio R: paleta 0,02, S1 0,03, S2 0,06, S3 0,17 (ruido $1/\sqrt{N}\approx 0,03$).
+- El usuario: queda solo en el Journal (no va al manuscrito).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_16/extra_fases.png]]
+
+** [10:05] Asimetría y curtosis con signo de los incrementos (S3, JONSWAP)
+- Pedido del usuario: "calcular como hicimos S_p^± la kurtosis y skewness ±. ¿Debería ir como τ^{-1} alguna?"
+- =Día 14/Momentos con signo/Códigos/momentos_signo.py= (misma serie y definiciones que el apunte del Día 12). $Sk^\pm = S_3^\pm/(S_2^\pm)^{3/2}$ y $K^\pm = S_4^\pm/(S_2^\pm)^2$, promediando sobre todas las ventanas. Comparo con el esqueleto (diente de sierra con los J y T medidos) y con IAAFT. Números en =Resultados/momentos_signo.txt=.
+- Teoría: si solo las ventanas que contienen un frente dan $\delta^+$ grande (probabilidad $f_b\tau$, $\delta\approx J$), entonces $K^+ \approx \frac{\langle J^4\rangle}{\langle J^2\rangle^2}(f_b\tau)^{-1}$ y $Sk^+ \approx \frac{\langle J^3\rangle}{\langle J^2\rangle^{3/2}}(f_b\tau)^{-1/2}$. El esqueleto cumple exactamente −1 y −1/2 entre 3 y ~90 ms.
+- Dato: la pendiente local más empinada de $K^+$ es −0,66 (en 118 ms) y la de $Sk^+$ es −0,32 (en 136 ms). Nunca llega a −1: por debajo de ~10 ms el frente tiene ancho finito y $K^+$ se aplana, y arriba de ~300 ms vuelve al valor gaussiano. El nivel sí sale sin parámetros libres: en $1/2f_\nu$, $K^+$ medido 9,4 contra 8,3 predicho y $Sk^+$ 2,88 contra 2,79. IAAFT da pendiente ≈ 0.
+- El usuario: queda solo en el Journal (no va al manuscrito).
+- Lado −: tiene un máximo en 20–40 ms ($K^-$ ≈ 9,6, por encima del gaussiano 6), que el esqueleto no tiene. Candidato: la caída rápida después de la punta solitaria (a confirmar).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_16/momentos_signo.png]]
+
+** [11:00] Mini presentación para la reunión de grupo
+- 5 min, 6 diapositivas, Beamer: montaje, rotura ola por ola (Fig. 6), espectro contra GLOBEX y $f_\nu(h)$, intermitencia (Fig. 15), estado del manuscrito.
+- Carpeta nueva para las reuniones (pedido del usuario): =~/Documentos/Reuniones de Labo/= (al lado de =Presentaciones/=), una subcarpeta autocontenida por reunión con copias de las figuras, más =Plantilla/= (estilo =labo.sty=) y README.
+- Hoy: =Reuniones de Labo/2026-11-17/labo_2026-11-17.pdf= (la reunión es el 17/11).
+- [09:35] Título: "Rompimiento de olas en una playa a escala de laboratorio". Diapo 2 = GIF del video del Día 1 (13/10) + Fig. 1b + Fig. 3; diapo 3 = GIF del video de prueba del 24/08 (el de la Fig. 2) + Fig. 2b. Applet para elegir segmento y ROI y exportar GIF: =Reuniones de Labo/Herramientas/elegir_gif.py=. La carpeta se llama "Reuniones de Labo" (las reuniones de grupo más grandes irían aparte).
+- [10:00] Videos que se reproducen solos en la diapositiva: =animate= no anduvo en xreader; se instaló pdfpc y los GIFs pasaron a clips webm (=\clip= con pdfpc-movie). Diapo del montaje: video + esquema a la izquierda; forzado JONSWAP (serie y espectro, eje a la izquierda) a la derecha.
+- [10:30] Diapositivas nuevas: "La evolución de la ola" (video de la prueba → Fig. 2b + Fig. 4 apaisada con los recuadros), "Ola por ola" (Figs. 5 y 6) y "El tipo de rompimiento" (Fig. 7 + anatomía nueva).
+- Anatomía nueva para el manuscrito: =Día 14/Manuscrito/Códigos/fig_anatomia_top10.py= → =AN_top10.pdf=. S3, 10 % de olas con mayor salto J (69 olas, J ≥ 5,9 mm), alineadas en el frente: promedio ± std y zonas valle / frente (≈ 80 ms) / punta (≈ 80 ms) / espalda (≈ 740 ms). J medio = 0,59 h.
+- [11:00] Presentación completa (pedido del usuario): espectro (barrido con solo f_ν libre + ecuación de Bonneton; clic: colapso, clic: GLOBEX), saturación y análisis dimensional (Fig. 11 b–c con ecuaciones), incrementos (Fig. 15, fila de arriba), S_p con n = 2, separación de escalas (Fig. 18 + R_B, t_ν, T_m/t_ν) y S_p^± + IAAFT (nueva: serie, espectro, PDF y ζ_p dato contra IAAFT). Las diapositivas del primer borrador quedaron en =descartadas_2026-11-16.tex=. Falta reordenar con el usuario.
+- [11:50] Anatomía de la ola (para la reunión y el manuscrito): promedio ± std del 10 % de olas más grandes (S3, 69 olas), zonas valle/frente/punta/espalda, frente tanh con t* = 22,8 ms (subida 10–90 % ≈ 50 ms, igual al t_ν = 51 ms del espectro) y rectas en el valle y la espalda que muestran la concavidad. Reemplaza la sección de anatomía del manuscrito definitivo (Day_16); la vieja quedó guardada.
+- [12:40] Manuscrito definitivo podado a las figuras de la presentación (Day_16/manuscrito_definitivo.pdf); la versión completa quedó en Day_16/manuscrito_completo_16-11.pdf. Figuras nuevas: S_p de dos puntos y ESS, S_p± con ζ⁺/ζ⁻/total, IAAFT (series, espectro, PDF y exponentes). Sin la recta monofractal p/2 (un gaussiano da p ζ₂/2).
+- [13:30] Cierre del día: (1) todo el análisis pasó a "solo f_ν libre" (amplitud fijada por Ẽ): f_ν = 4,35 Hz, R_B = 127, 1/2f_ν = 115 ms; barrido f_ν ∝ h^−0,47±0,04, κ = 0,58 ± 0,09; intermitencia y GLOBEX recalculados (T_m/t_ν: cuba 14, GLOBEX 13). (2) Presentaciones de la reunión del 17/11 (larga, corta y una copia con todas las animaciones) en =~/Documentos/Reuniones de Labo/2026-11-17/=. (3) Manuscrito definitivo podado + copia del estado (Day_16/manuscrito_definitivo_estado_16-11.pdf) + versión final limpia (Day_16/manuscrito_final.pdf, 35 p.: solo figuras, resultados, procedimiento y notas para el texto). (4) Directorio autocontenido =Día 14/Figuras del manuscrito/= con un script por figura (=Por figura/=) y el texto final.
+
+** [15:00] Prueba: ζ_p de dos puntos promediado sobre las mediciones largas del Día 1 (solo Journal)
+- Panel (c) de la Fig. 15b con las 8 mediciones largas del Día 1 (S3, ~510 s), cada una con su f_m, su f_ν (solo f_ν libre) y su rango 1/2f_ν–1/2f_m. Script =Día 14/Manuscrito/Códigos/extra_zeta_largas.py=.
+- Promedio ± desvío entre mediciones: ζ_1 0,37 ± 0,06; ζ_2 0,56 ± 0,13; ζ_3 0,64 ± 0,21; ζ_4 0,64 ± 0,27; ζ_5 0,60 ± 0,32; ζ_6 0,56 ± 0,37. Satura en ~0,6 (la principal, en ~0,5).
+- Dos grupos: "muchos forzados" con ζ_6 ≈ 0,9–1,1 (cerca de Burgers) y Bonneton custom/h3_5 con ζ_6 ≈ 0,13–0,15 (f_m ≈ 2,3 Hz, rango corto 133–219 ms, poco confiable). Promediar mezcla forzados y separaciones de escala distintos: mejor separar por familia o contra T_m/t_ν. Queda fuera del manuscrito por ahora.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_16/extra_F15b_c_largas.png]]
