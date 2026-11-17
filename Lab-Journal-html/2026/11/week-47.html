@@ -49,42 +49,49 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgdd66da4">Referencias</a></li>
-<li><a href="#org7acedd2">2026-11-16</a>
+<li><a href="#org6079200">Referencias</a></li>
+<li><a href="#org44caef8">2026-11-16</a>
 <ul>
-<li><a href="#org24e339f">[09:10] Día 14: seguimos con las figuras del manuscrito</a></li>
-<li><a href="#org8e7e34e">[09:40] Fases: de lo generado (aleatorio) a las olas triangulares</a></li>
-<li><a href="#orgbcb8b1f">[10:05] Asimetría y curtosis con signo de los incrementos (S3, JONSWAP)</a></li>
-<li><a href="#orgaebc0ed">[11:00] Mini presentación para la reunión de grupo</a></li>
-<li><a href="#orgd9934fd">[15:00] Prueba: ζ<sub>p</sub> de dos puntos promediado sobre las mediciones largas del Día 1 (solo Journal)</a></li>
+<li><a href="#org8099e5a">[09:10] Día 14: seguimos con las figuras del manuscrito</a></li>
+<li><a href="#org69b2a2b">[09:40] Fases: de lo generado (aleatorio) a las olas triangulares</a></li>
+<li><a href="#orgc12ae71">[10:05] Asimetría y curtosis con signo de los incrementos (S3, JONSWAP)</a></li>
+<li><a href="#org37d9587">[11:00] Mini presentación para la reunión de grupo</a></li>
+<li><a href="#org0c81914">[15:00] Prueba: ζ<sub>p</sub> de dos puntos promediado sobre las mediciones largas del Día 1 (solo Journal)</a></li>
+</ul>
+</li>
+<li><a href="#org3817376">2026-11-17</a>
+<ul>
+<li><a href="#org5ba81a5">[17:50] PDF de los incrementos pesadas por |δη|<sup>p</sup>: ¿está bien determinado S<sub>p</sub>?</a></li>
+<li><a href="#org6d0ee66">[19:30] Apéndice del manuscrito: respuesta y ruido del sensor (Parte V de manuscrito<sub>final.pdf</sub>, Día 14/Figuras del manuscrito)</a></li>
+<li><a href="#orgea44009">[20:45] Prueba (tiempo libre, NO va al manuscrito): Fig. 6 con H/h constante en lugar de la asimetría de 2.º orden = 10 %</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdd66da4" class="outline-2">
-<h2 id="orgdd66da4">Referencias</h2>
-<div class="outline-text-2" id="text-orgdd66da4">
+<div id="outline-container-org6079200" class="outline-2">
+<h2 id="org6079200">Referencias</h2>
+<div class="outline-text-2" id="text-org6079200">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org7acedd2" class="outline-2">
-<h2 id="org7acedd2">2026-11-16</h2>
-<div class="outline-text-2" id="text-org7acedd2">
+<div id="outline-container-org44caef8" class="outline-2">
+<h2 id="org44caef8">2026-11-16</h2>
+<div class="outline-text-2" id="text-org44caef8">
 </div>
-<div id="outline-container-org24e339f" class="outline-3">
-<h3 id="org24e339f">[09:10] Día 14: seguimos con las figuras del manuscrito</h3>
-<div class="outline-text-3" id="text-org24e339f">
+<div id="outline-container-org8099e5a" class="outline-3">
+<h3 id="org8099e5a">[09:10] Día 14: seguimos con las figuras del manuscrito</h3>
+<div class="outline-text-3" id="text-org8099e5a">
 <ul class="org-ul">
 <li><code>Tercera iteración/Día 14/Manuscrito/</code> = copia del Día 13 (sin build/); el PDF definitivo compila ahora a <a href="../../../Assets/2026/11/Day_16/manuscrito_definitivo.pdf">Day<sub>16</sub>/manuscrito<sub>definitivo.pdf</sub></a>.</li>
 <li>Figs. 8+9 combinadas (propuesta, todavía fuera del PDF): se mantiene la normalización con \(\sqrt{m_0}\) y el eje x de las alturas es el doble que el de las crestas (0–5,5 y 0–11), así Rayleigh se ve igual en las dos filas. Eje y hasta \(3\times10^{-4}\) para que las etiquetas de panel no tapen las últimas olas. Falta el okay.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8e7e34e" class="outline-3">
-<h3 id="org8e7e34e">[09:40] Fases: de lo generado (aleatorio) a las olas triangulares</h3>
-<div class="outline-text-3" id="text-org8e7e34e">
+<div id="outline-container-org69b2a2b" class="outline-3">
+<h3 id="org69b2a2b">[09:40] Fases: de lo generado (aleatorio) a las olas triangulares</h3>
+<div class="outline-text-3" id="text-org69b2a2b">
 <ul class="org-ul">
 <li>Idea del usuario (fin de semana): PDFs de las fases, para mostrar que pasan de aleatorias (lo generado) a algo no aleatorio en las olas triangulares.</li>
 <li>Script <code>Día 14/Manuscrito/Códigos/extra_fases.py</code> → <code>Figuras/extra_fases.png</code> (exploración, fuera del PDF). Paleta (CSV del LinMot) y S1–S3 de JONSWAP<sub>BONNETON</sub><sub>395</sub>; tramos de 6,4 s con Hann y 50 % de solape, dentro de los bloques de 30 s del lock-in.</li>
@@ -93,15 +100,15 @@
 <li>El usuario: queda solo en el Journal (no va al manuscrito).</li>
 </ul>
 
-<div id="org360ef76" class="figure">
+<div id="org74bcd0e" class="figure">
 <p><img src="../../../Assets/2026/11/Day_16/extra_fases.png" alt="extra_fases.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbcb8b1f" class="outline-3">
-<h3 id="orgbcb8b1f">[10:05] Asimetría y curtosis con signo de los incrementos (S3, JONSWAP)</h3>
-<div class="outline-text-3" id="text-orgbcb8b1f">
+<div id="outline-container-orgc12ae71" class="outline-3">
+<h3 id="orgc12ae71">[10:05] Asimetría y curtosis con signo de los incrementos (S3, JONSWAP)</h3>
+<div class="outline-text-3" id="text-orgc12ae71">
 <ul class="org-ul">
 <li>Pedido del usuario: &ldquo;calcular como hicimos S<sub>p</sub>^± la kurtosis y skewness ±. ¿Debería ir como τ<sup>-1</sup> alguna?&rdquo;</li>
 <li><code>Día 14/Momentos con signo/Códigos/momentos_signo.py</code> (misma serie y definiciones que el apunte del Día 12). \(Sk^\pm = S_3^\pm/(S_2^\pm)^{3/2}\) y \(K^\pm = S_4^\pm/(S_2^\pm)^2\), promediando sobre todas las ventanas. Comparo con el esqueleto (diente de sierra con los J y T medidos) y con IAAFT. Números en <code>Resultados/momentos_signo.txt</code>.</li>
@@ -111,15 +118,15 @@
 <li>Lado −: tiene un máximo en 20–40 ms (\(K^-\) ≈ 9,6, por encima del gaussiano 6), que el esqueleto no tiene. Candidato: la caída rápida después de la punta solitaria (a confirmar).</li>
 </ul>
 
-<div id="org79634a7" class="figure">
+<div id="org52e912f" class="figure">
 <p><img src="../../../Assets/2026/11/Day_16/momentos_signo.png" alt="momentos_signo.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgaebc0ed" class="outline-3">
-<h3 id="orgaebc0ed">[11:00] Mini presentación para la reunión de grupo</h3>
-<div class="outline-text-3" id="text-orgaebc0ed">
+<div id="outline-container-org37d9587" class="outline-3">
+<h3 id="org37d9587">[11:00] Mini presentación para la reunión de grupo</h3>
+<div class="outline-text-3" id="text-org37d9587">
 <ul class="org-ul">
 <li>5 min, 6 diapositivas, Beamer: montaje, rotura ola por ola (Fig. 6), espectro contra GLOBEX y \(f_\nu(h)\), intermitencia (Fig. 15), estado del manuscrito.</li>
 <li>Carpeta nueva para las reuniones (pedido del usuario): <code>~/Documentos/Reuniones de Labo/</code> (al lado de <code>Presentaciones/</code>), una subcarpeta autocontenida por reunión con copias de las figuras, más <code>Plantilla/</code> (estilo <code>labo.sty</code>) y README.</li>
@@ -135,19 +142,87 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd9934fd" class="outline-3">
-<h3 id="orgd9934fd">[15:00] Prueba: ζ<sub>p</sub> de dos puntos promediado sobre las mediciones largas del Día 1 (solo Journal)</h3>
-<div class="outline-text-3" id="text-orgd9934fd">
+<div id="outline-container-org0c81914" class="outline-3">
+<h3 id="org0c81914">[15:00] Prueba: ζ<sub>p</sub> de dos puntos promediado sobre las mediciones largas del Día 1 (solo Journal)</h3>
+<div class="outline-text-3" id="text-org0c81914">
 <ul class="org-ul">
 <li>Panel (c) de la Fig. 15b con las 8 mediciones largas del Día 1 (S3, ~510 s), cada una con su f<sub>m</sub>, su f<sub>ν</sub> (solo f<sub>ν</sub> libre) y su rango 1/2f<sub>ν</sub>–1/2f<sub>m</sub>. Script <code>Día 14/Manuscrito/Códigos/extra_zeta_largas.py</code>.</li>
 <li>Promedio ± desvío entre mediciones: ζ<sub>1</sub> 0,37 ± 0,06; ζ<sub>2</sub> 0,56 ± 0,13; ζ<sub>3</sub> 0,64 ± 0,21; ζ<sub>4</sub> 0,64 ± 0,27; ζ<sub>5</sub> 0,60 ± 0,32; ζ<sub>6</sub> 0,56 ± 0,37. Satura en ~0,6 (la principal, en ~0,5).</li>
 <li>Dos grupos: &ldquo;muchos forzados&rdquo; con ζ<sub>6</sub> ≈ 0,9–1,1 (cerca de Burgers) y Bonneton custom/h3<sub>5</sub> con ζ<sub>6</sub> ≈ 0,13–0,15 (f<sub>m</sub> ≈ 2,3 Hz, rango corto 133–219 ms, poco confiable). Promediar mezcla forzados y separaciones de escala distintos: mejor separar por familia o contra T<sub>m</sub>/t<sub>ν</sub>. Queda fuera del manuscrito por ahora.</li>
 </ul>
 
-<div id="orgb609c75" class="figure">
+<div id="orge2a3fca" class="figure">
 <p><img src="../../../Assets/2026/11/Day_16/extra_F15b_c_largas.png" alt="extra_F15b_c_largas.png" />
 </p>
 </div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3817376" class="outline-2">
+<h2 id="org3817376">2026-11-17</h2>
+<div class="outline-text-2" id="text-org3817376">
+</div>
+<div id="outline-container-org5ba81a5" class="outline-3">
+<h3 id="org5ba81a5">[17:50] PDF de los incrementos pesadas por |δη|<sup>p</sup>: ¿está bien determinado S<sub>p</sub>?</h3>
+<div class="outline-text-3" id="text-org5ba81a5">
+<ul class="org-ul">
+<li>Apunte: <a href="../../../Assets/2026/11/Day_17/pdf_pesadas.pdf">Day<sub>17</sub>/pdf<sub>pesadas.pdf</sub></a> (fuente en <code>Tercera iteración/Día 15/PDF pesadas/</code>; scripts <code>Día 14/Figuras del manuscrito/Códigos/extra_pdf_pesadas.py</code> y <code>extra_pdf_pesadas_error.py</code>).</li>
+<li>S3, filas p = 1–6, columnas τ = 115 / 206 / 371 ms (1/2f<sub>ν</sub>, centro, 1/2f<sub>m</sub>). El integrando |z|<sup>p</sup> P(z) tiene área ⟨|z|<sup>p</sup>⟩ y muestra qué incrementos ponen cada momento; versión en mm (área = S<sub>p</sub>).</li>
+<li>En 115 ms los momentos altos son los frentes: ⟨|z|<sup>6</sup>⟩ = 50 ± 5 contra 15 gaussiano, 96 % desde δη &gt; 0. En 371 ms, bimodal y casi gaussiano (12,3 ± 1,6 contra 15, marginal).</li>
+<li>Determinación: hasta p = 4 error ≲ 7 % y cola no medida &lt; 2 %; p = 5–6 al ±10–15 % (el 1 % de las ventanas pone la mitad del momento; cola no medida hasta 6 % hacia abajo). δζ<sub>6</sub> ≈ 0,09: no se distingue &ldquo;satura&rdquo; de &ldquo;decrece&rdquo; para p ≥ 4 sin un registro ~4 veces más largo.</li>
+</ul>
+
+<div id="org8c104f9" class="figure">
+<p><img src="../../../Assets/2026/11/Day_17/extra_pdf_pesadas.png" alt="extra_pdf_pesadas.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>[18:10] Mapas por p de |z|<sup>p</sup> P(z) en todo el rango 115–371 ms (sección nueva del apunte): el lóbulo de los frentes se corre al centro de forma continua (p = 6: z ≈ 3,3 → 2,7) y en mm queda en δη ≈ 3,6–6 mm (el salto del frente, no depende de τ); el cociente con la gaussiana cruza 1 en τ ≈ 250–265 ms (cerca de 1/f<sub>ν</sub> = 230 ms). Sin rango de forma invariante. Script <code>extra_pdf_pesadas_mapa.py</code>.</li>
+</ul>
+
+<div id="orga9e4a50" class="figure">
+<p><img src="../../../Assets/2026/11/Day_17/extra_pdf_pesadas_mapa.png" alt="extra_pdf_pesadas_mapa.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6d0ee66" class="outline-3">
+<h3 id="org6d0ee66">[19:30] Apéndice del manuscrito: respuesta y ruido del sensor (Parte V de manuscrito<sub>final.pdf</sub>, Día 14/Figuras del manuscrito)</h3>
+<div class="outline-text-3" id="text-org6d0ee66">
+<ul class="org-ul">
+<li>Fig. 20 (calibración del Día 1 + PDF del nivel instantáneo): recta con residuo 0,11–0,13 mm; el 11–18 % de las muestras (los valles) queda debajo del rango calibrado (37,9–44,1 mm); en todo el rango medido la fase cambia ≤ 40 mrad (S1) y 19 mrad (S2, S3), lejos de 0,1 rad (ángulos pequeños). Cuadro 3 (en inglés) con las fracciones.</li>
+<li>La curvatura de S1 (+1,5e-4 rad/mm² el Día 1) tiene signo opuesto el Día 2: deriva durante el vaciado, no no linealidad. Cota pesimista: S<sub>k</sub> de S1 0,18 → 0,45 si fuera real; S3 robusto.</li>
+<li>Fig. 21: el espectro de la Fig. 10 (S3) con el ruido medido con agua quieta (plateaus de la calibración): 3,3 décadas sobre el ruido en f<sub>m</sub>, 3,8 en f<sub>ν</sub>, 2,4 en 11 Hz; lo cruza en 40 Hz.</li>
+<li>PENDIENTE: calibración nueva con escalones en todo 33,4–48,6 mm o más (rango amarillo), bajando y subiendo, escalones cortos, incerteza horizontal bien estimada.</li>
+<li>[20:30] Apéndice cerrado por ahora (aprobado): Fig. 20 con PDF &gt; 1e-4 y banda amarilla ±4,5 mm (|Δφ| &lt; 40/19/19 mrad), Fig. 21 con panel señal/ruido (10³–10⁴ entre f<sub>m</sub> y f<sub>ν</sub>, 10 en ~20 Hz, 1 en 40 Hz).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgea44009" class="outline-3">
+<h3 id="orgea44009">[20:45] Prueba (tiempo libre, NO va al manuscrito): Fig. 6 con H/h constante en lugar de la asimetría de 2.º orden = 10 %</h3>
+<div class="outline-text-3" id="text-orgea44009">
+<ul class="org-ul">
+<li>Rectas H/h = 0,1, 0,3 y 0,78 (McCowan) en el plano de Le Méhauté (pendiente 1) y mediana de cada sensor con flechas S1 → S2 → S3. Script <code>Día 14/Figuras del manuscrito/Códigos/extra_f6_HsobreH.py</code> (importa el script único de la Fig. 6).</li>
+<li>H/h mediana [p25, p75]: S1 0,078 [0,057, 0,102]; S2 0,144 [0,100, 0,196]; S3 0,44 [0,31, 0,56] (máx 1,02; 77 % de las olas con H/h &gt; 0,3). La no linealidad crece ×2 de S1 a S2 y ×3 de S2 a S3, sin umbral elegido; S3 queda entre 0,3 y McCowan.</li>
+<li>Detalles a pulir si se adopta: en (a) las rectas horizontales necesitan rótulo propio (0,1 vs 0,3), y el rótulo de H/h = 0,1 choca con &ldquo;breaking (Miche)&rdquo;.</li>
+</ul>
+
+<div id="org0293dec" class="figure">
+<p><img src="../../../Assets/2026/11/Day_17/extra_F6_HsobreH.png" alt="extra_F6_HsobreH.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>[21:15] Versión 2 (le gusta al usuario; candidata a Fig. 6 definitiva con retoques): rectas H/h = 0,03, 0,1 y 0,3 (sin McCowan; 0,03 encierra la nube de S1 por abajo: 4 % de S1 debajo) y la saturación espectral H<sub>c</sub> = 0,49 h (violeta; κ del ajuste con solo f<sub>ν</sub> libre en S3). En (a) la saturación cae dentro del eje en S2 (8,7 √m0, justo en el techo de la nube) y en S3 (3,3 √m0, cerca de la mediana: H<sub>c</sub> es una altura típica de frente, no la de las olas más grandes). Rombos = medianas por sensor. Recuadros desde Resultados/insets<sub>seleccion.json</sub> (applet elegir<sub>insets.py</sub>; respaldo de la selección anterior en insets<sub>seleccion</sub><sub>respaldo</sub><sub>17</sub>-11.json); falta elegir un 7 que no choque con el rombo de S1.</li>
+<li>[21:15] GitHub Pages &ldquo;no carga&rdquo;: no es un commit (todos los builds OK). Uno de los cuatro servidores de Pages, 185.199.110.153, no responde desde la red de la casa (timeouts de 30–137 s cuando el DNS cae en él); los otros tres responden en &lt; 0,1 s.</li>
+</ul>
+
+<div id="org57d4d13" class="figure">
+<p><img src="../../../Assets/2026/11/Day_17/extra_F6_HsobreH.png" alt="extra_F6_HsobreH.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>[21:45] <b>Fig. 6 nueva en el manuscrito</b> (aprobada por el usuario): rectas H/h = 0,03 / 0,1 / 0,3 y medianas por sensor (rombos chicos, flechas S1 → S2 → S3) en lugar de la asimetría de 2.º orden del 10 %; recuadros originales. Script: <code>Por figura/F06_altura_periodo.py</code> (<code>Códigos/extra_f6_HsobreH.py</code>). Texto de la sección actualizado (versión anterior en <code>Texto/sec_f04_10_con_asimetria_17-11.tex.bak</code>). Applet nuevo para elegir recuadros: <code>Códigos/elegir_insets_v2.py</code> (diagrama actualizado, alternativas y cualquier punto). Manuscrito de hoy: <a href="../../../Assets/2026/11/Day_17/manuscrito_final.pdf">Day<sub>17</sub>/manuscrito<sub>final.pdf</sub></a> (36 p., con la Parte V del sensor).</li>
+</ul>
 </div>
 </div>
 </div>

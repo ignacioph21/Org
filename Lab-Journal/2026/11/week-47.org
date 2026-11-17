@@ -51,3 +51,32 @@
 - Dos grupos: "muchos forzados" con ζ_6 ≈ 0,9–1,1 (cerca de Burgers) y Bonneton custom/h3_5 con ζ_6 ≈ 0,13–0,15 (f_m ≈ 2,3 Hz, rango corto 133–219 ms, poco confiable). Promediar mezcla forzados y separaciones de escala distintos: mejor separar por familia o contra T_m/t_ν. Queda fuera del manuscrito por ahora.
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/11/Day_16/extra_F15b_c_largas.png]]
+
+* 2026-11-17
+** [17:50] PDF de los incrementos pesadas por |δη|^p: ¿está bien determinado S_p?
+- Apunte: [[file:../../../Assets/2026/11/Day_17/pdf_pesadas.pdf][Day_17/pdf_pesadas.pdf]] (fuente en =Tercera iteración/Día 15/PDF pesadas/=; scripts =Día 14/Figuras del manuscrito/Códigos/extra_pdf_pesadas.py= y =extra_pdf_pesadas_error.py=).
+- S3, filas p = 1–6, columnas τ = 115 / 206 / 371 ms (1/2f_ν, centro, 1/2f_m). El integrando |z|^p P(z) tiene área ⟨|z|^p⟩ y muestra qué incrementos ponen cada momento; versión en mm (área = S_p).
+- En 115 ms los momentos altos son los frentes: ⟨|z|^6⟩ = 50 ± 5 contra 15 gaussiano, 96 % desde δη > 0. En 371 ms, bimodal y casi gaussiano (12,3 ± 1,6 contra 15, marginal).
+- Determinación: hasta p = 4 error ≲ 7 % y cola no medida < 2 %; p = 5–6 al ±10–15 % (el 1 % de las ventanas pone la mitad del momento; cola no medida hasta 6 % hacia abajo). δζ_6 ≈ 0,09: no se distingue "satura" de "decrece" para p ≥ 4 sin un registro ~4 veces más largo.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_17/extra_pdf_pesadas.png]]
+- [18:10] Mapas por p de |z|^p P(z) en todo el rango 115–371 ms (sección nueva del apunte): el lóbulo de los frentes se corre al centro de forma continua (p = 6: z ≈ 3,3 → 2,7) y en mm queda en δη ≈ 3,6–6 mm (el salto del frente, no depende de τ); el cociente con la gaussiana cruza 1 en τ ≈ 250–265 ms (cerca de 1/f_ν = 230 ms). Sin rango de forma invariante. Script =extra_pdf_pesadas_mapa.py=.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_17/extra_pdf_pesadas_mapa.png]]
+** [19:30] Apéndice del manuscrito: respuesta y ruido del sensor (Parte V de manuscrito_final.pdf, Día 14/Figuras del manuscrito)
+- Fig. 20 (calibración del Día 1 + PDF del nivel instantáneo): recta con residuo 0,11–0,13 mm; el 11–18 % de las muestras (los valles) queda debajo del rango calibrado (37,9–44,1 mm); en todo el rango medido la fase cambia ≤ 40 mrad (S1) y 19 mrad (S2, S3), lejos de 0,1 rad (ángulos pequeños). Cuadro 3 (en inglés) con las fracciones.
+- La curvatura de S1 (+1,5e-4 rad/mm² el Día 1) tiene signo opuesto el Día 2: deriva durante el vaciado, no no linealidad. Cota pesimista: S_k de S1 0,18 → 0,45 si fuera real; S3 robusto.
+- Fig. 21: el espectro de la Fig. 10 (S3) con el ruido medido con agua quieta (plateaus de la calibración): 3,3 décadas sobre el ruido en f_m, 3,8 en f_ν, 2,4 en 11 Hz; lo cruza en 40 Hz.
+- PENDIENTE: calibración nueva con escalones en todo 33,4–48,6 mm o más (rango amarillo), bajando y subiendo, escalones cortos, incerteza horizontal bien estimada.
+- [20:30] Apéndice cerrado por ahora (aprobado): Fig. 20 con PDF > 1e-4 y banda amarilla ±4,5 mm (|Δφ| < 40/19/19 mrad), Fig. 21 con panel señal/ruido (10³–10⁴ entre f_m y f_ν, 10 en ~20 Hz, 1 en 40 Hz).
+** [20:45] Prueba (tiempo libre, NO va al manuscrito): Fig. 6 con H/h constante en lugar de la asimetría de 2.º orden = 10 %
+- Rectas H/h = 0,1, 0,3 y 0,78 (McCowan) en el plano de Le Méhauté (pendiente 1) y mediana de cada sensor con flechas S1 → S2 → S3. Script =Día 14/Figuras del manuscrito/Códigos/extra_f6_HsobreH.py= (importa el script único de la Fig. 6).
+- H/h mediana [p25, p75]: S1 0,078 [0,057, 0,102]; S2 0,144 [0,100, 0,196]; S3 0,44 [0,31, 0,56] (máx 1,02; 77 % de las olas con H/h > 0,3). La no linealidad crece ×2 de S1 a S2 y ×3 de S2 a S3, sin umbral elegido; S3 queda entre 0,3 y McCowan.
+- Detalles a pulir si se adopta: en (a) las rectas horizontales necesitan rótulo propio (0,1 vs 0,3), y el rótulo de H/h = 0,1 choca con "breaking (Miche)".
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_17/extra_F6_HsobreH.png]]
+- [21:15] Versión 2 (le gusta al usuario; candidata a Fig. 6 definitiva con retoques): rectas H/h = 0,03, 0,1 y 0,3 (sin McCowan; 0,03 encierra la nube de S1 por abajo: 4 % de S1 debajo) y la saturación espectral H_c = 0,49 h (violeta; κ del ajuste con solo f_ν libre en S3). En (a) la saturación cae dentro del eje en S2 (8,7 √m0, justo en el techo de la nube) y en S3 (3,3 √m0, cerca de la mediana: H_c es una altura típica de frente, no la de las olas más grandes). Rombos = medianas por sensor. Recuadros desde Resultados/insets_seleccion.json (applet elegir_insets.py; respaldo de la selección anterior en insets_seleccion_respaldo_17-11.json); falta elegir un 7 que no choque con el rombo de S1.
+- [21:15] GitHub Pages "no carga": no es un commit (todos los builds OK). Uno de los cuatro servidores de Pages, 185.199.110.153, no responde desde la red de la casa (timeouts de 30–137 s cuando el DNS cae en él); los otros tres responden en < 0,1 s.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_17/extra_F6_HsobreH.png]]
+- [21:45] *Fig. 6 nueva en el manuscrito* (aprobada por el usuario): rectas H/h = 0,03 / 0,1 / 0,3 y medianas por sensor (rombos chicos, flechas S1 → S2 → S3) en lugar de la asimetría de 2.º orden del 10 %; recuadros originales. Script: =Por figura/F06_altura_periodo.py= (=Códigos/extra_f6_HsobreH.py=). Texto de la sección actualizado (versión anterior en =Texto/sec_f04_10_con_asimetria_17-11.tex.bak=). Applet nuevo para elegir recuadros: =Códigos/elegir_insets_v2.py= (diagrama actualizado, alternativas y cualquier punto). Manuscrito de hoy: [[file:../../../Assets/2026/11/Day_17/manuscrito_final.pdf][Day_17/manuscrito_final.pdf]] (36 p., con la Parte V del sensor).
