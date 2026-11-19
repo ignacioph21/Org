@@ -109,3 +109,13 @@
 
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/11/Day_19/csch_n_preliminar.png]]
+
+** [16:25] Paper: revisión completa de las figuras del manuscrito (estilo único y ajustes)
+- *Estilo común* (=Códigos/comun/estilo.py=): toda la letra en 9 pt, como los epígrafes de PRF (excepciones explícitas de 8, 7,5 y 6 pt); S1–S3 siempre en negro; valores con incerteza como (a ± b) unidades.
+- *Tamaños*: cuadrados grandes de 43 mm, de columna de 68 mm; figuras de ancho completo de 179,2 mm con los bordes de ejes en 17,5 mm y a 16,5 mm del borde derecho (medido: lo máximo sin cortar rótulos). En =main.tex= las figuras van a tamaño natural.
+- *p máximo = 5* en todas las de intermitencia (=estilo.P_MAX=; un hook regenera esas figuras si cambia).
+- *Figuras unidas o quitadas*: la serie del IAAFT y las S_p son una sola figura (dato + IAAFT en los mismos paneles); la antigua Fig. 5 (ondas individuales) pasó a ser un zoom en la Fig. 4.
+- *Ajustes*: espectro principal y barrido de nivel con el ajuste partido (csch² + cola punteada); en el barrido f_ν ∝ h^(−0,48 ± 0,03) (con f_c ≥ 10 Hz; sin la cota, el nivel 3 caía en un mínimo espurio). El mínimo del ajuste principal es el absoluto (barrido en f_c).
+- *ζ_p cuba/GLOBEX*: desde p = 0,5 y con barras de error en todo, con el mismo criterio que las demás (mínimos cuadrados, 9 bloques, desvío entre bloques).
+- Recuadros de la figura de Le Méhauté: la ola 7 cambiada por una de S1 (t = 133,61 s) que no tapa la mediana.
+- *Pendiente*: recalcular (o sacar) las otras sondas de GLOBEX en la figura de ζ_p; decidir si la intermitencia pasa al f_ν nuevo (4,10 Hz); repensar la tabla de forzados; título; subir datos a Zenodo.
