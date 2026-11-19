@@ -80,3 +80,12 @@
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/11/Day_17/extra_F6_HsobreH.png]]
 - [21:45] *Fig. 6 nueva en el manuscrito* (aprobada por el usuario): rectas H/h = 0,03 / 0,1 / 0,3 y medianas por sensor (rombos chicos, flechas S1 → S2 → S3) en lugar de la asimetría de 2.º orden del 10 %; recuadros originales. Script: =Por figura/F06_altura_periodo.py= (=Códigos/extra_f6_HsobreH.py=). Texto de la sección actualizado (versión anterior en =Texto/sec_f04_10_con_asimetria_17-11.tex.bak=). Applet nuevo para elegir recuadros: =Códigos/elegir_insets_v2.py= (diagrama actualizado, alternativas y cualquier punto). Manuscrito de hoy: [[file:../../../Assets/2026/11/Day_17/manuscrito_final.pdf][Day_17/manuscrito_final.pdf]] (36 p., con la Parte V del sensor).
+* 2026-11-19
+** [09:30] Render nuevo de Fusion para la Fig. 1a (Día 16)
+- Dos renders de la cuba en Fusion (Wine; guarda en =drive_c/users/ignacio/Documents/<uuid>.PNG=, fondo transparente). v1 (agua clara): la zona de la rampa sale ruidosa (reflejos/refracción del agua sin converger). v2 (agua oscura, plástico gris): sin ruido, pero rampa y agua se funden en un bloque negro.
+- Elegida la v2: fondo blanco, recortada arriba y abajo (1919 × 328 px) → =Día 14/Figuras del manuscrito/Figuras/F1a_render.png= (el del póster queda como =F1a_render_poster.pdf=). Manuscrito recompilado. Re-renderizar desde el modelo 3D es fácil si hace falta.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_19/render_fusion_v1_v2.png]]
+- PENDIENTE (semana del 23/11): volver a filmar la ola rompiendo → rehacer Fig. 2a (collage sin fondo) y 2b (perfiles). Filmar también agua quieta, cámara en la misma posición.
+** [10:00] Papers: =~/Documentos/Papers/Olas rompientes en escala de laboratorio/=
+- Carpeta nueva para el paper, al nivel de Presentaciones; se comparte en el Nextcloud del DF solo esa carpeta (no Papers completa). =CLAUDE.md= con el traspaso para la sesión nueva que se abre desde ahí.
