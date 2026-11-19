@@ -99,3 +99,13 @@
 
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/11/Day_19/setup_rampa_nueva.jpg]]
+
+** [14:55] Paper: ajuste partido del espectro principal y prueba con csch^n (preliminar)
+- Fig. 10 del manuscrito (espectro de S3): el ajuste pasa a ser el *partido*: csch² hasta f_c y una recta en log-log después, continua en f_c, de f_m a 35 Hz, con la amplitud fijada por Ẽ (solo f_ν libre en la parte csch²). El fin del /fit range/ (f_c) y el exponente de la cola salen del mismo ajuste.
+  - csch² + recta: f_ν = 4,10 ± 0,03 Hz, f_c = 14,7 ± 0,2 Hz, β = −3,69 ± 0,05; R² = 0,9959, rms 0,085 déc., N = 404; R_B = 120.
+  - Antes (csch² de f_m a 11,1 Hz): f_ν = 4,35 ± 0,08 Hz, R_B = 127,5. *Pendiente decidir* si las figuras de intermitencia pasan al f_ν nuevo (1/2f_ν: 115 → 122 ms).
+- Prueba preliminar, csch^n + recta (n libre): *n = 1,37 ± 0,02* (en lugar de 2), f_ν = 2,36 ± 0,04 Hz, f_c = 13,3 ± 0,1 Hz, β = −3,78 ± 0,03; R² = 0,9979, rms 0,061 déc. Ajusta mejor (los residuos de csch² tienen una joroba sistemática de +0,2 déc. entre 3 y 8 Hz), pero f_ν cambia mucho (R_B = 69) y n no tiene justificación teórica.
+- Para pensar: por qué separar teóricamente el modelo (csch² + cola lineal) o dejar la amplitud libre en lugar de fijarla con Ẽ.
+
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_19/csch_n_preliminar.png]]
