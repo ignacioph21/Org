@@ -96,3 +96,6 @@
 - Formato: PRF no exige dos columnas para enviar; en =reprint= las figuras anchas van en =figure*= (APS: 8,6 cm una columna, 17,2 cm dos). PENDIENTE: reorganizar paneles de las figuras alargadas y bajar el ancho de 17,8 a 17,2 cm; bibliografía como colección de Zotero exportada con Better BibTeX.
 ** [12:35] Montaje: rampa nueva en el setup nuevo
 - Ya está montada la rampa nueva en el setup nuevo, para filmar videos más lindos de la ola rompiendo (rehacer Figs. 2a y 2b). Filmar también el agua quieta (fondo) con la cámara en la misma posición.
+
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_19/setup_rampa_nueva.jpg]]
