@@ -170,3 +170,11 @@
 - Orden máximo: el máximo del integrando está en z* ≈ √p para una gaussiana (≈ pλ para una cola exponencial), y el máximo muestreado en √(2 ln N_ef) (≈ λ ln N_ef). Entonces p_máx ≈ 2 ln N_ef (gaussiana) o ln N_ef (exponencial). Con 510 s y τ ≈ 0,1–0,4 s: N_ef ~ 10³–5×10³, p_máx ≈ 7–8 (exponencial).
 - Nuestro caso: la cola tiene corte duro (salto máximo del frente), y entonces todos los momentos existen. Lo que importa es *cuántos eventos independientes* definen el borde: en 1/2f_ν son 9–32 (bien); en 1/2f_m es 1 (p = 6 no está determinado ahí).
 - Chequeos prácticos: F_p(Z) llega a una meseta antes del |z| máximo; las dos mitades coinciden dentro del error; error por bloques < 10 %; muchos eventos (≫ 1) aportan la última fracción del momento.
+** [16:01] PDF del valor absoluto de los incrementos (Día 17)
+- Script =Tercera iteración/Día 17/Códigos/pdf_valor_absoluto.py=. Arriba: P(|z|) en log, separada en δη > 0 (frentes) y δη < 0; gaussiana plegada en gris. Abajo: integrandos |z|^p P(|z|)/⟨|z|^p⟩ superpuestos (área 1).
+- La cola de |z| son *solo frentes*: las bajadas (δη < 0) terminan en |z| ≈ 3,5 / 3,4 / 3,1 y todo lo que está más allá es δη > 0.
+- 115 ms: P(|z|) cae despacio (casi exponencial) y se corta en |z| ≈ 5. Para p = 4–6 el máximo del integrando está en |z| = 3,25 y cae a cero antes del |z| máximo (5,0): *convergida*.
+- 206 ms: los máximos están en |z| = 2,4–2,6 y caen a ≈ 0 en 4,3: convergida, aunque el borde lo definen pocos eventos.
+- 371 ms: hay un *pico aislado en |z| ≈ 4,5*, que es el evento único de las 15:50. El integrando de p = 6 vuelve a subir justo en el borde (0,25 contra un máximo de 0,58): *no convergida* para p ≥ 5 en 1/2f_m.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_20/pdf_valor_absoluto.png]]
