@@ -153,17 +153,18 @@
   |    371 | +0,264 ± 0,017 | −0,32 ± 0,09 | −0,59 ± 0,26 | +1,5 ± 0,4 |
   - La no gaussianidad (κ3, κ4) crece hacia τ chico. κ6 grande y negativo en 1/2f_ν: es la firma de una distribución de soporte acotado (los frentes tienen un salto máximo), no de colas pesadas.
   - El error por bloques de κ5 y κ6 probablemente subestima el real: en 371 ms un solo evento cambia el resultado.
-** [16:30] Cumulantes en función de τ y log-cumulantes (Día 17)
+** [15:55] Cumulantes en función de τ y log-cumulantes (Día 17)
 - Script =Tercera iteración/Día 17/Códigos/cumulantes_tau.py= (números en =Día 17/Resultados/cumulantes_tau.txt=). S3, τ = 10–600 ms; en gris, el IAAFT del Día 14.
 - (a) Cumulantes κ3–κ6 de z = δη/σ_τ. Crecen hacia τ chico (κ6 ≈ 245 en 10 ms). En el rango de ajuste κ6 cambia de signo (−20 en 1/2f_ν) y pasa por cero cerca de 1/2f_m. El IAAFT queda en |κ_n| ≲ 2.
 - (b) *Log-cumulantes* (Castaing; Delour, Muzy y Arneodo 2001): C_n(τ) = cumulantes de ln|δη|; ln S_p = Σ C_n p^n/n!, así que ζ_p = c1 p + c2 p²/2 + c3 p³/6 + …, con c_n = dC_n/d ln τ. En 115–371 ms:
   - dato: c1 = 0,58 ± 0,02, *c2 = −0,23 ± 0,02*, c3 = −0,24 ± 0,06 (R² = 0,96 / 0,79 / 0,81; χ²_ν = 5,8 / 3,0 / 0,6);
   - IAAFT: c1 = 0,30 ± 0,03, *c2 = 0,00 ± 0,02*, c3 = 0,04 ± 0,03.
   - c2 ≠ 0 en el dato y nulo en el IAAFT: otra medida de la intermitencia, sin elegir p.
+  - Referencia: en una gaussiana, ln|δη| tiene C2 = π²/8 = 1,234 y C3 = ψ''(1/2)/8 = −2,104, sin importar σ. El IAAFT da exactamente eso (1,26 y −2,1, planos). El dato se aparta: C2 ≈ 1,6 y C3 ≈ −1,7 a τ chico, y vuelve hacia los valores gaussianos en 1/2f_m.
 - (c) La serie de log-cumulantes reproduce ζ_p solo hasta p ≈ 1,5. Después diverge, mientras que el ζ_p directo satura en ≈ 0,5. La distribución de ln|δη| está lejos de ser gaussiana (los frentes acotados), así que el desarrollo en cumulantes no converge a p alto.
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/11/Day_20/cumulantes_tau.png]]
-** [16:30] ¿Qué tiene que pasar para que S_p esté convergida? Criterios de la bibliografía
+** [15:56] ¿Qué tiene que pasar para que S_p esté convergida? Criterios de la bibliografía
 - Dudok de Wit (2004, PRE 70, 055302): el integrando |z|^p P(z) tiene que tener su máximo y caer a ≈ 0 dentro del rango medido. Si al llegar al |z| máximo todavía crece o está en su máximo, el momento no está determinado. Es lo que usaron Anselmet et al. (1984, JFM) y lo que hicimos el 17/11.
 - Error estadístico (Tennekes y Wyngaard 1972; Lenschow, Mann y Kristensen 1994): var(Ŝ_p)/S_p² ≈ (S_2p/S_p² − 1)/N_ef, con N_ef = registros independientes (T/2T_int). Hace falta el momento de orden 2p: para p = 6, el de orden 12.
 - Orden máximo: el máximo del integrando está en z* ≈ √p para una gaussiana (≈ pλ para una cola exponencial), y el máximo muestreado en √(2 ln N_ef) (≈ λ ln N_ef). Entonces p_máx ≈ 2 ln N_ef (gaussiana) o ln N_ef (exponencial). Con 510 s y τ ≈ 0,1–0,4 s: N_ef ~ 10³–5×10³, p_máx ≈ 7–8 (exponencial).
