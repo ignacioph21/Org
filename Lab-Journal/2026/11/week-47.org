@@ -131,3 +131,5 @@
 ** [14:00] Paper, pendiente: espectro compensado = espectro de disipación
 - Idea del usuario: el espectro compensado E f² sería el espectro de disipación. En aguas someras (k = 2πf/√(gh)) y con disipación de tipo viscoso (Burgers), D(f) = 2ν k² E ∝ f² E(f). Es plano en el rango f^−2 (los frentes disipan en todas las escalas hasta su espesor) y cae pasando f_ν.
 - PENDIENTE para la Fig. del espectro principal (F11): en lugar del inset, *dos paneles cuadrados*: (a) E(f) y (b) D(f).
+** [14:10] Forzado copiado al pendrive
+- En el pendrive (KINGSTON), solo la curva de hoy, en una carpeta propia: =Posgrado/Pruebas rampa impresa 3D cuba grande/Cuarta iteración/Día 1 (20-11) Forzado JONSWAP principal/639960ms_bonneton_C3_h_20cm_Tp_1.07_Hm0_42.9mm_seed_1_una_curva.csv= (16 000 puntos, una columna, sin encabezado; verificada byte a byte contra el original).
