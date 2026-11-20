@@ -119,3 +119,15 @@
 - *ζ_p cuba/GLOBEX*: desde p = 0,5 y con barras de error en todo, con el mismo criterio que las demás (mínimos cuadrados, 9 bloques, desvío entre bloques).
 - Recuadros de la figura de Le Méhauté: la ola 7 cambiada por una de S1 (t = 133,61 s) que no tapa la mediana.
 - *Pendiente*: recalcular (o sacar) las otras sondas de GLOBEX en la figura de ζ_p; decidir si la intermitencia pasa al f_ν nuevo (4,10 Hz); repensar la tabla de forzados; título; subir datos a Zenodo.
+* 2026-11-20
+** [14:00] Cuarta iteración, Día 1: videos de la ola rompiendo (setup nuevo)
+- Carpeta nueva: =Cuarta iteración/Día 1/= (=Videos/=, =Códigos/=, =Figuras/=, =README.md=), al nivel de la Tercera iteración.
+- Setup nuevo con la rampa nueva, de la *misma inclinación* que la del manuscrito (ver entrada del 19/11). *Agua de la canilla.*
+- Solo videos: *50 fps, 3000 cuadros* (60 s) por toma.
+- Forzado: el JONSWAP principal del manuscrito (JONSWAP_BONNETON_395): =639960ms_bonneton_C3_h_20cm_Tp_1.07_Hm0_42.9mm_seed_1_una_curva.csv= (Tercera iteración/Día 1/Curvas forzado/Curvas_jonswap; T_p = 1,07 s, H_m0 = 42,9 mm, γ = 3,3, 640 s, rampa de 10 s).
+- Nivel: 3,95 cm como en la medición principal (a confirmar).
+- Tomas propuestas: agua quieta (fondo) y una escala en el plano de la pared, con la cámara fija; el JONSWAP filmado pasado el transitorio (el análisis del manuscrito arranca en t = 90 s).
+- Objetivos: (1) rehacer el collage de la ola rompiendo (Fig. 2a) y los perfiles (2b); (2) si da, espectro espacial E(k) desde η(x, t) promediado sobre cuadros y la anatomía de la ola cuadro a cuadro.
+** [14:00] Paper, pendiente: espectro compensado = espectro de disipación
+- Idea del usuario: el espectro compensado E f² sería el espectro de disipación. En aguas someras (k = 2πf/√(gh)) y con disipación de tipo viscoso (Burgers), D(f) = 2ν k² E ∝ f² E(f). Es plano en el rango f^−2 (los frentes disipan en todas las escalas hasta su espesor) y cae pasando f_ν.
+- PENDIENTE para la Fig. del espectro principal (F11): en lugar del inset, *dos paneles cuadrados*: (a) E(f) y (b) D(f).
