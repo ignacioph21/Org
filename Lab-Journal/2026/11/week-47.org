@@ -133,3 +133,23 @@
 - PENDIENTE para la Fig. del espectro principal (F11): en lugar del inset, *dos paneles cuadrados*: (a) E(f) y (b) D(f).
 ** [14:10] Forzado copiado al pendrive
 - En el pendrive (KINGSTON), solo la curva de hoy, en una carpeta propia: =Posgrado/Pruebas rampa impresa 3D cuba grande/Cuarta iteración/Día 1 (20-11) Forzado JONSWAP principal/639960ms_bonneton_C3_h_20cm_Tp_1.07_Hm0_42.9mm_seed_1_una_curva.csv= (16 000 puntos, una columna, sin encabezado; verificada byte a byte contra el original).
+** [15:50] Convergencia de S_p en JONSWAP: PDF pesadas en log, integral acumulada y cumulantes (Día 17)
+- Sigue a la entrada del 17/11 (17:50). Misma serie (S3, t = 90–600 s, sin empalmes del lock-in), z = δη/σ_τ, τ = 115 / 206 / 371 ms. Script: =Tercera iteración/Día 17/Códigos/pdf_pesadas_log_integral.py= (números en =Día 17/Resultados/cumulantes.txt=).
+- *PDF pesadas en log:* el integrando |z|^p P(z) no tiene una cola que decae despacio. Termina en un corte duro: z_máx = 5,0 / 4,3 / 4,6. En 115 ms, del lado de los frentes (z > 0) cae de golpe en z ≈ 5: el salto del frente está acotado. La gaussiana seguiría más allá.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_20/pdf_pesadas_log.png]]
+- *Integral acumulada* F_p(Z) = ∫_{|z|<Z} |z|^p P dz / ⟨|z|^p⟩ (arriba) y lo que falta, 1 − F_p (abajo, log). Gris: gaussiana exacta, Γ((p+1)/2, Z²/2).
+  - 115 ms: el 99 % del momento de p = 6 está en |z| < 4,72. Lo que hay por encima de 4,5 son 9 eventos independientes (235 ventanas) y aportan el 4,6 % de p = 6 (2,0 % de p = 4). Por encima de 4,0: 32 eventos, 21 % de p = 6.
+  - 206 ms: nada por encima de 4,5; por encima de 4,0 hay 3 eventos (3 % de p = 6).
+  - 371 ms: *un solo evento* (124 ventanas con |z| > 4) pone el 7 % de p = 6. Es el escalón de 1 − F_p en 1/2f_m.
+  - Lectura: hasta p = 4 converge en los tres τ. p = 6 converge bien en 1/2f_ν (muchos frentes, cola acotada) y mal en 1/2f_m (lo decide un evento). Coincide con el error del 17/11.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_20/integral_acumulada.png]]
+- *Cumulantes* de z (κ_n = 0 para n ≥ 3 en una gaussiana; error = desvío entre 9 bloques / 3):
+  | τ [ms] | κ3 | κ4 | κ5 | κ6 |
+  |--------+----------------+----------------+----------------+-----------------|
+  |    115 | +1,381 ± 0,021 | +2,44 ± 0,06 | +0,21 ± 0,14 | −20,5 ± 0,6 |
+  |    206 | +0,814 ± 0,017 | +0,43 ± 0,04 | −2,29 ± 0,11 | −8,0 ± 0,4 |
+  |    371 | +0,264 ± 0,017 | −0,32 ± 0,09 | −0,59 ± 0,26 | +1,5 ± 0,4 |
+  - La no gaussianidad (κ3, κ4) crece hacia τ chico. κ6 grande y negativo en 1/2f_ν: es la firma de una distribución de soporte acotado (los frentes tienen un salto máximo), no de colas pesadas.
+  - El error por bloques de κ5 y κ6 probablemente subestima el real: en 371 ms un solo evento cambia el resultado.
