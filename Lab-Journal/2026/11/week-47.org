@@ -178,3 +178,5 @@
 - 371 ms: hay un *pico aislado en |z| ≈ 4,5*, que es el evento único de las 15:50. El integrando de p = 6 vuelve a subir justo en el borde (0,25 contra un máximo de 0,58): *no convergida* para p ≥ 5 en 1/2f_m.
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/11/Day_20/pdf_valor_absoluto.png]]
+** [16:18] Videos: probablemente el martes 24/11
+- Por la hora, es muy probable que los videos de la ola rompiendo se filmen el *martes 24/11* (el lunes 23 es feriado). El forzado ya está en el pendrive y el plan de tomas en =Cuarta iteración/Día 1/README.md=. Si se filman ese día, van en =Cuarta iteración/Día 2/=.
