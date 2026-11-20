@@ -180,3 +180,7 @@
 [[file:../../../Assets/2026/11/Day_20/pdf_valor_absoluto.png]]
 ** [16:18] Videos: probablemente el martes 24/11
 - Por la hora, es muy probable que los videos de la ola rompiendo se filmen el *martes 24/11* (el lunes 23 es feriado). El forzado ya está en el pendrive y el plan de tomas en =Cuarta iteración/Día 1/README.md=. Si se filman ese día, van en =Cuarta iteración/Día 2/=.
+** [16:20] Cierre del día
+- Hecho: Cuarta iteración armada (plan de videos, forzado en el pendrive); convergencia de S_p en JONSWAP (PDF pesadas en log, integral acumulada, cumulantes y log-cumulantes, P(|z|)), en =Tercera iteración/Día 17/=; criterios de convergencia con bibliografía.
+- Conclusión: S_p convergida hasta p = 4 en todo el rango; p = 5–6 bien en 1/2f_ν, pero no en 1/2f_m (un solo evento en |z| ≈ 4,5). c2 = −0,23 ± 0,02 en el dato contra 0,00 ± 0,02 en el IAAFT.
+- Pendiente: filmar los videos (probablemente el martes 24/11, Cuarta iteración/Día 2); paper: paneles E(f) y D(f) en vez del inset del espectro.
