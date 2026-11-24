@@ -48,3 +48,14 @@
 - En el pendrive (=Cuarta iteración/Día 2 (24-11) Videos/=) reemplaza a la versión anterior. Generador: =generador_un_salto.py --meseta 3=.
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/11/Day_24/un_salto_meseta_control.png]]
+** [12:10] Montaje de la Cuarta iteración (lo que contó el usuario)
+- *Nivel:* faltaba llenar ~1 cm (iba en ~4,8–4,9 cm). El setup tiene una base de *1,5 cm* y encima la rampa con *2 mm* de piso, así que el nivel equivalente a 3,95 cm es *3,95 + 1,7 = 5,65 cm* desde el piso original. Lista en media hora a una hora.
+- *Paleta:* la del motor nuevo, de *4,5 cm de ancho*, entra adentro del canal (antes era la paleta grande). El canal ocupa casi todo el ancho de la cuba. Con la paleta lo más estirada posible queda al borde de la rampa. Queda a ~1 cm del piso nuevo, o sea a *2,5 cm del piso original*.
+- *Canal y playas:* hay una playa extra de *20 cm* y el canal llega hasta el otro extremo de la cuba (antes quedaba abierto). El final de la segunda playa queda a *~29,2–30 cm* de la pared opuesta.
+- *Cámara:* cuando se sepa dónde rompen las olas, el usuario pasa qué sección filma y la calibración: foto de un patrón de cuadrados blancos y negros de *4 mm*, pegado a la cara interna de la pared de acrílico más cercana a la cámara.
+** [12:20] JONSWAP con la profundidad correcta para este montaje
+- Con el piso nuevo a 1,7 cm y nivel 5,65 cm, la profundidad en la paleta es *3,95 cm* (a confirmar: si debajo de la paleta el piso está a 1,5 cm, serían 4,15 cm). La curva de 3,5 cm que estaba en el pendrive era la del montaje de octubre.
+- Nueva: =Cuarta iteración/Día 2/Curvas forzado/Curvas_jonswap/bonneton_C3_h_3.95cm_Tp_0.48_Hm0_8.5mm_seed_1_fhi_2.5fp_una_curva/599962ms_…csv= (escalada de vN03-C3: *T_p = 0,475 s, H_m0 = 8,5 mm*, k_p h = 0,951, ξ0 = 0,226; 600 s; x de 0 a 63 mm, |v| ≤ 109 mm/s). Generador copiado del Día 1 de la Tercera iteración, sin cambios.
+- *Falta copiarla al pendrive* (estaba desconectado); va en lugar de la de 3,5 cm.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_24/jonswap_h3.95_control.png]]
