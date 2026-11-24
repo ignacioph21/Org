@@ -193,3 +193,6 @@
 - Animación de la PSD a lo largo de x (pedido del usuario): =Día 2/Videos/control/psd_espacio_H20_1.mp4=.
 #+ATTR_ORG: :width 800
 [[file:../../../Assets/2026/11/Day_24/psd_espacio_H20_1_cuadro.png]]
+** [16:50] Tomas nuevas Ola_13, Ola_14 y Ola_15
+- Ola_13 (16:43), Ola_14 (16:45) y Ola_15 (16:46): tiras de 1024×128 (fila del sensor 448), 250 fps, 297, 256 y 444 cuadros. Copiadas a =Día 2/Videos/Una ola/= (verificadas por nombre y tamaño) y con su video crudo a 60 fps en =Día 2/Videos/crudo/=.
+- La varilla aparece en x ≈ 626, 621 y 596 px (en el encuadre A estaba en 775 y en el B en 652): la cámara cambió de lugar, así que es otro encuadre y *falta una foto del damero* en esta posición para calibrar.
