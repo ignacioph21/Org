@@ -248,3 +248,6 @@
 - Ojo: el paso del detector que fija el nivel quieto antes de que llegue la ola borraba detecciones de −0,6 a −1,1 mm al pie del frente que pueden venir de esto.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/valle_borde_Ola_9.png]]
+** [17:55] Estado al cierre del día
+- El usuario: todo lo de los videos es preliminar; la idea es seguir midiendo estas cosas y mejorar el método de medición. Lo principal era tener el *collage con la misma inclinación que el resto de los datos* y *algún espectro espacial*. Probablemente haya que *reorganizar la parte de resultados espectrales* del manuscrito para incluir algo de esto.
+- Pendientes: posición de la cámara sobre la rampa; foto del damero en el encuadre C (Ola_13–15); pared de atrás blanca; con el DEX5 (quedó en el Labo): video de control de la JONSWAP h20 y procesar h3_5 y muchos forzados; Ola_1 (falló el detector).
