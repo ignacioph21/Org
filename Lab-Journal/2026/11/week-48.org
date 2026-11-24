@@ -257,3 +257,9 @@
 - Seguir la rampa: debajo del agua se ve una línea tenue inclinada, pero el ajuste automático del quiebre todavía no es confiable (se engancha en una línea blanca horizontal). Queda pendiente.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/rampa_franja_Ola_6_Ola_9.png]]
+** [18:00] Calibración de todas las tomas: la cámara se movió 9 veces
+- El usuario pregunta si ya calibré con los cuadrados, y nota que tendría que haber sacado una foto cada vez que movió la cámara.
+- Con el damero (solo en las tomas de cuadro entero): Ola_1–6 *2,202 px/mm*; Ola_7 *3,625*; Ola_9 *3,604*; Ola_11 *2,051*. Ola_5 (tira) tiene el mismo encuadre que Ola_1–6.
+- La unión de los paneles de acrílico aparece en *9 posiciones distintas*: 775 px (Ola_1–6), 752 (Ola_7), 652 (Ola_9), 559 (Ola_10), 636 (Ola_11), 904 (Ola_12), 626 / 621 / 596 (Ola_13 / 14 / 15). Las tiras Ola_10, 12 y 13–15 no tienen damero: por el ancho de la unión (7–8 px contra 4–6 px), Ola_10 y 12 estarían cerca de 3,6 px/mm y Ola_13–15 cerca de 2,05–2,2.
+- Hasta ahora usé 2,20 en Ola_11 (es 2,05: los mm de esa toma están 7 % corridos) y supuse escalas en las tiras. Otras pistas para calibrar todo junto: el ancho de la unión, las formas repetidas de la franja oscura del canal (el período todavía no da consistente), los tornillos y la línea blanca (solo en cuadro entero).
+- Pendiente: calibración única por toma (escala y posición de la unión) y rehacer las figuras con eso; para la próxima, una foto del damero cada vez que se mueva la cámara.
