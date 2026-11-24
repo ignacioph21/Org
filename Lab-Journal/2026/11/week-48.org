@@ -196,3 +196,9 @@
 ** [16:49] Tomas nuevas Ola_13, Ola_14 y Ola_15
 - Ola_13 (16:43), Ola_14 (16:45) y Ola_15 (16:46): tiras de 1024×128 (fila del sensor 448), 250 fps, 297, 256 y 444 cuadros. Copiadas a =Día 2/Videos/Una ola/= (verificadas por nombre y tamaño) y con su video crudo a 60 fps en =Día 2/Videos/crudo/=.
 - La varilla aparece en x ≈ 626, 621 y 596 px (en el encuadre A estaba en 775 y en el B en 652): la cámara cambió de lugar, así que es otro encuadre y *falta una foto del damero* en esta posición para calibrar.
+** [17:25] Olas individuales sincronizadas, en dos columnas
+- Pedido del usuario: sincronizar las olas para que rompan en la misma posición y en el mismo momento, en dos columnas. =Día 2/Videos/control/olas_sincronizadas.mp4=: las 14 tomas con las imágenes originales, llevadas a 3 px/mm, τ = t − t_rotura de −150 a +600 ms, a 60 fps.
+- Rotura = cuadro en que el frente está más empinado (máximo de la pendiente de la envolvente de arriba de la ola, sin la varilla, que daba falsos), en los primeros 0,25 s desde que entra la ola; la rotura queda a 3/4 del ancho de cada celda (marca blanca). Tabla: =Día 2/Resultados/rotura_tomas.txt=.
+- Casi todas rompen apenas entran a la imagen. Dudosas: Ola_3 y Ola_4 (olas más chicas). Después de romper, las del encuadre C avanzan más rápido que las demás: puede ser la escala supuesta (2,20 px/mm) o que estén en otra profundidad; falta el damero en esa posición.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/olas_sincronizadas_tau0.png]]
