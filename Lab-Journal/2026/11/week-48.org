@@ -181,7 +181,7 @@
 - *Evolución del espectro*, rehecha a pedido del usuario ("hay que suavizarlo; zoom alrededor de la ola; un segundo eje arriba con la frecuencia de gravedad con profundidad finita"): ventana de 72 mm (256 px) que sigue a la ola (un poco más ancha que la franja roja del diagrama x–t), promedio de 10 cuadros (40 ms) y 12 bandas por década; eje de arriba f = √(g k tanh(k h))/2π con h = 20 mm. =Códigos/evolucion_espectro.py=.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/evolucion_espectro_Ola_9.png]]
-** [16:33] Encuadres, collage tipo Fig. 2a, videos crudos y JONSWAP h20
+** [16:31] Encuadres, collage tipo Fig. 2a, videos crudos y JONSWAP h20
 - *Dos encuadres de cámara* (por correlación del cuadro 1): A, más lejos (Ola_1–6, Ola_11, H20_1, muchos forzados, h3_5), *2,20 px/mm* (465 mm de ancho); B (Ola_7, 9, 10, 12), *3,56 px/mm* (288 mm). Ambos calibrados con el damero.
 - *Collage tipo Figura 2a con Ola_9* (pedido del usuario): misma receta que el del manuscrito (sin fondo, rotado 1,08° ≈ 1,047° del manuscrito, espejado, CLAHE). Replica el aspecto, pero en Ola_9 la ola no se da vuelta mientras está en cuadro: falta la etapa de rotura. Se limpió el grano y las manchas del parpadeo (el usuario: "¿por qué la resolución es tan fea?": la tira tiene 1024 px contra 1666 en el manuscrito y la resta deja grano).
 #+ATTR_ORG: :width 900
