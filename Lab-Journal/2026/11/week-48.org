@@ -370,3 +370,5 @@
 - El usuario: es lo último de hoy. El montaje queda como está hasta nuevo aviso; quizás mañana otra medición.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/F2a_crudo_Ola_14.png]]
+** [20:00] Collages crudos sin la unión de paneles
+- El usuario: borrar a mano la línea negra vertical (la unión de los paneles), "es horrible". Las columnas de la unión se rellenan interpolando entre las vecinas, con el ruido de fondo del cuadro. Es lo único que se le toca a los cuadros crudos. Regenerados todos los collages crudos (=Día 2/Figuras/collages/F2a_crudo_*=); la figura de las 19:53 ya es la nueva.
