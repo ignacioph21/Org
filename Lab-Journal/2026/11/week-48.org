@@ -78,3 +78,5 @@
   - La de 3,5 cm era la del montaje de octubre con nivel 3,60 (=Bonneton_bien_profundidad_360=). La de 3,95 cm suponía el piso de 2 mm de la rampa también debajo de la paleta (equivocado). ξ0 da 0,226 en todas porque H_m0 se elige para conservarlo; lo que cambia es k_p h.
   - La "h 20 cm" (la principal del manuscrito) es otro diseño: escalada como si la paleta estuviera en 20 cm de agua.
   - Salvedad: Biésel supone un pistón que llega al fondo. Acá la paleta deja 1 cm libre abajo, así que las olas salen algo más chicas que lo nominal (igual que en octubre).
+** [13:34] Llenado: faltan 0,25 cm
+- Nivel ≈ *5,40 cm* desde el piso original (4,0 cm en la paleta); el objetivo es 5,65 cm. A las 12:10 faltaba ~1 cm, así que sube ≈ 0,5 cm/h: llega hacia las *~14:05*.
