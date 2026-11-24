@@ -297,7 +297,7 @@
 - *Montaje completo* (16:47): el canal negro dentro de la cuba, el panel LED arriba, el damero blanco sostenido con pinzas, la cámara Photron sobre la mesa y el motor a la derecha.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/montaje_completo_16h47.jpg]]
-** [18:22] El valle detrás de la pared negra y las columnas: primeros intentos
+** [18:19] El valle detrás de la pared negra y las columnas: primeros intentos
 - El usuario: delante de la ola, el valle queda tapado por la pared negra del canal; con el realce adecuado se debería poder ver, y también ubicar las columnas para calibrar cada video por separado. Empezar por los últimos videos, que son los mejores.
 - *Valle:* promediando los cuadros alineados en la cresta (=Códigos/valle_comovil.py=; el fondo fijo se borronea y lo que viaja con la ola se refuerza), en la imagen sin fondo aparece delante del frente una franja clara justo debajo del nivel quieto (de ~50 mm antes a ~50 mm después de la cresta) y una línea oscura tenue en el nivel quieto más adelante. Es la señal de lo que pasa dentro de la zona negra; falta convertirla a altura.
 #+ATTR_ORG: :width 900
