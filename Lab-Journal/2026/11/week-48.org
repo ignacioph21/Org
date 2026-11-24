@@ -280,7 +280,7 @@
 - El usuario: el fondo debería ser constante (playa, salvo los 0,1° de la cuba) y después bajar hacia la derecha con tan α = 0,035 (rampa); promediar muchas imágenes, porque ese fondo no cambia, y jugar con la exposición y la saturación para que resalte.
 - Primer intento (=Día 2/Códigos/fondo_rampa.py=: media de 60 cuadros y un modelo de playa más rampa con esas pendientes): en Ola_7 y Ola_9 la rampa sigue bien una línea tenue inclinada, pero el resultado todavía *no es confiable*. En las tiras da ~12 mm de agua sobre el fondo en la unión, coherente entre tomas, con el quiebre casi siempre fuera de cuadro; en las de cuadro entero se engancha en otras estructuras.
 - Visor interactivo para que el usuario pruebe el realce: =Día 2/Códigos/ajustar_fondo.py [toma]= (negro, blanco, gamma, suavizado y cuatro modos de realce).
-** [18:15] Fondo encontrado en Ola_9 y Ola_7: la playa empieza ~24 cm antes de la unión de paneles
+** [18:12] Fondo encontrado en Ola_9 y Ola_7: la playa empieza ~24 cm antes de la unión de paneles
 - El usuario, con el visor: en Ola_9 la línea del fondo arranca en y ≈ 512 a la izquierda y lo que se ve es solo la rampa. Con eso: recta de pendiente tan α = 0,035 respecto del agua que mejor sigue la línea tenue en la media de 60 cuadros: y = 510 en x = 0 (Ola_9) y 504,5 (Ola_7). Sigue la línea en todo el ancho.
 - *Agua sobre la rampa:* 6,5 → 16,5 mm (Ola_9) y 5,3 → 15,2 mm (Ola_7); *en la unión de paneles 12,8 y 12,6 mm*, coherente con las tiras (~12 mm) y con la velocidad de la cresta (√(g(h + A)) ≈ 0,48 m/s).
 - Con 4,35 mm de agua sobre la playa plana, *la playa empezaría a ~24 cm de la unión hacia la playa* (243 y 236 mm; ±3 cm por la altura de la rampa). A verificar midiendo la distancia de la unión al inicio de la playa.
