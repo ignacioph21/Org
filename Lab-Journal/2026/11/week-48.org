@@ -306,7 +306,7 @@
 ** [18:31] Videos de la línea detectada, y refinar la detección
 - Para las 14 tomas: =Día 2/Videos/linea/= (solo la línea detectada en mm, con x desde la unión de paneles, la rampa y la playa de fondo y el nivel quieto y el medio de la toma) y =Día 2/Videos/crudo_linea/= (los videos crudos con el menisco detectado en rojo encima).
 - El usuario: antes de seguir con los análisis probablemente haya que *refinar la detección de la línea*.
-** [18:40] Búsqueda: cómo detectar bien la superficie libre en videos laterales
+** [18:36] Búsqueda: cómo detectar bien la superficie libre en videos laterales
 - Pedido del usuario: cada video tiene sus problemas; búsqueda intensiva de la mejor manera de detectar la línea.
 - *Procesamiento:*
   - El método más cercano al nuestro es el /continuous maximum gradient/ (CMG; Cao, Padilla, Callaghan et al., IEEE J. Oceanic Eng. 50, 2025): máximo del gradiente de intensidad en cada columna con una restricción de continuidad que descarta sensores, gotas en el vidrio, etc. Da R² = 0,997 contra sondas. Falla cuando la cresta se da vuelta; para esa parte, SDBW-I: región alrededor de la cresta, umbral de Otsu y borde de la región.
