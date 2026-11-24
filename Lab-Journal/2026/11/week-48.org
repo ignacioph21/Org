@@ -202,3 +202,15 @@
 - Casi todas rompen apenas entran a la imagen. Dudosas: Ola_3 y Ola_4 (olas más chicas). Después de romper, las del encuadre C avanzan más rápido que las demás: puede ser la escala supuesta (2,20 px/mm) o que estén en otra profundidad; falta el damero en esa posición.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/olas_sincronizadas_tau0.png]]
+** [17:31] Idea a hacer: FFT 2D en ventanas
+- El usuario: hacer la FFT 2D de η(x, t) en ventanas y ver a partir de qué punto las ondas son de agua somera, con velocidad de propagación constante √(g h_local), o si hace falta la relación de profundidad finita.
+- Plan: E(k, f) en ventanas de x que se corren a lo largo de la imagen; comparar la cresta del espectro con f = k √(g h)/2π y con f = √(g k tanh(k h))/2π, ajustando h en cada ventana y comparándolo con la pendiente de la rampa (0,035). La JONSWAP h20 (87 s, estacionaria) es la toma más limpia para esto.
+** [17:40] Todas las olas individuales analizadas
+- Detector de menisco en las 14 tomas, espacio-temporal con el gradiente debajo para cada una (pedido del usuario: x horizontal, t vertical; ★ = rotura = frente más empinado; ● = altura máxima) y video de control con la línea superpuesta para cada una (=Día 2/Videos/control/menisco_Ola_*.mp4=).
+- *Ola_1 falló* (imagen oscura: la línea no sigue el frente). Las demás salen bien.
+- Velocidad de la cresta (recta en el diagrama x–t, R² 0,98–0,998): *0,46–0,51 m/s* en los encuadres A y B. En el C (Ola_13–15) da 0,57–0,67 m/s: o la escala supuesta está mal o es otra profundidad (falta el damero).
+- La cresta más alta está casi siempre a la entrada de la imagen (la ola entra ya alta). El frente más empinado cae más adentro; en Ola_10 y Ola_12, cerca del borde izquierdo: el frente se sigue empinando al subir por la playa.
+#+ATTR_ORG: :width 1000
+[[file:../../../Assets/2026/11/Day_24/resumen_olas_xt.png]]
+- *FFT 2D / dispersión local de la JONSWAP h20* (idea de las 17:31): primer intento *no concluyente*. La onda del pico (~0,5 m) es más larga que la imagen entera (465 mm), el canal cerrado devuelve onda reflejada y en el último tercio ya no queda ola. Con un ajuste de onda incidente más reflejada por tramos sale h ≈ 12–25 mm y k_p h ≈ 0,2–0,3 (somera) entre 85 y 285 mm desde la entrada, pero con mucha dispersión. Haría falta un campo más largo (varias posiciones de cámara) o usar las frecuencias más altas.
+- JONSWAP: el borde del menisco de todas las imágenes está guardado en local; el video de control con la línea necesita las imágenes, y el disco quedó en el Labo.
