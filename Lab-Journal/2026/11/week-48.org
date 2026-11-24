@@ -96,3 +96,6 @@
 ** [14:04] Configuración del motor
 - Posición del homing: *−25 mm*. Distancias A/B del wizard: *20 / 168 mm*. Con el motor y la paleta anteriores el homing estaba en 130–140 mm (mayo y junio).
 - Recorrido de las curvas del pendrive, todas desde x = 0: muchos forzados 0–111 mm, salto único 0–96 mm, JONSWAP h20 0–96 mm, JONSWAP de 4,10 cm 0–63 mm.
+** [14:10] Cámara conectada
+- Cámara Photron por Ethernet, con IP fija en la compu de Windows. El LED *IF LINK/TRANS* está en rojo, pero *PFV4 la abrió e hizo el shading* (referencia de negro).
+- A chequear: velocidad del enlace (1 Gbps o 100 Mbps), que define cuánto tarda en bajar cada video al disco (DEX5).
