@@ -361,3 +361,12 @@
 - Archivos: =Día 2/Figuras/bonneton_temporal_Ola_15.png= y =Videos/espectro_temporal/Ola_15_corregido_bonneton.mp4=.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/bonneton_temporal_Ola_15.png]]
+** [19:53] Collages tipo Fig. 2a con las distintas olas; versión con los cuadros crudos
+- Pedido del usuario: opciones de collage como el de la Figura 2 con las distintas olas.
+  - Primero, la receta del collage de la Ola_9 (sin fondo, CLAHE) para todas las tomas, con la cresta recorriendo todo el ancho, y una variante con la proporción de las tiras del manuscrito. Además, un gadget con sliders para el contraste.
+  - Para Ola_13 y Ola_14, una versión que copia el collage del manuscrito: tamaño de tira, posición de la cresta en cada tira, fracción saturada, CLAHE y gris y grano del fondo (medidos en el manuscrito: gris 243, σ 5,9; aquí 244–247, σ 5,6–5,9).
+- *Pedido final del usuario:* los collages solo con los cuadros *sin procesar*, bien recortados. Cada tira es el cuadro original recortado y espejado, con el mismo estiramiento lineal de gris para las nueve; sin restar fondo, sin rotar ni filtrar (=Día 2/Figuras/collages/F2a_crudo_Ola_13.png=, =F2a_crudo_Ola_14.png= y =F2a_crudo_<toma>_recorte.png= para todas las tomas).
+- La red quedó entrenándose con la línea corregida de la Ola_15. Al terminar detecta Ola_10–15; se revisa mañana.
+- El usuario: es lo último de hoy. El montaje queda como está hasta nuevo aviso; quizás mañana otra medición.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/F2a_crudo_Ola_14.png]]
