@@ -205,7 +205,7 @@
 ** [17:31] Idea a hacer: FFT 2D en ventanas
 - El usuario: hacer la FFT 2D de η(x, t) en ventanas y ver a partir de qué punto las ondas son de agua somera, con velocidad de propagación constante √(g h_local), o si hace falta la relación de profundidad finita.
 - Plan: E(k, f) en ventanas de x que se corren a lo largo de la imagen; comparar la cresta del espectro con f = k √(g h)/2π y con f = √(g k tanh(k h))/2π, ajustando h en cada ventana y comparándolo con la pendiente de la rampa (0,035). La JONSWAP h20 (87 s, estacionaria) es la toma más limpia para esto.
-** [17:40] Todas las olas individuales analizadas
+** [17:38] Todas las olas individuales analizadas
 - Detector de menisco en las 14 tomas, espacio-temporal con el gradiente debajo para cada una (pedido del usuario: x horizontal, t vertical; ★ = rotura = frente más empinado; ● = altura máxima) y video de control con la línea superpuesta para cada una (=Día 2/Videos/control/menisco_Ola_*.mp4=).
 - *Ola_1 falló* (imagen oscura: la línea no sigue el frente). Las demás salen bien.
 - Velocidad de la cresta (recta en el diagrama x–t, R² 0,98–0,998): *0,46–0,51 m/s* en los encuadres A y B. En el C (Ola_13–15) da 0,57–0,67 m/s: o la escala supuesta está mal o es otra profundidad (falta el damero).
