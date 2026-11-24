@@ -287,3 +287,13 @@
 - *Columnas del canal* (otra regla que propuso el usuario): con damero, separadas ~40,6 mm (39,2–41,6 según la toma). A verificar en la cuba; serviría para calibrar las tiras.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/fondo_rampa_Ola_9_Ola_7.png]]
+** [18:18] Fotos: altura del agua y montaje completo
+- Fotos que pasó el usuario (originales en =Cuarta iteración/Día 2/Fotos/=).
+- *Altura del agua* (16:10): regla de acero contra la pared de acrílico, con el 0 hacia abajo. El agua la cruza en *~6,0 cm en los bordes de la regla* y ~6,3 cm en el medio, donde la capilaridad entre la regla y el acrílico la sube. Falta saber dónde apoya la regla para pasarlo a nivel desde el piso original (el usuario había dado 5,60 cm).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_24/regla_nivel_16h10.jpg]]
+#+ATTR_ORG: :width 400
+[[file:../../../Assets/2026/11/Day_24/regla_nivel_zoom.jpg]]
+- *Montaje completo* (16:47): el canal negro dentro de la cuba, el panel LED arriba, el damero blanco sostenido con pinzas, la cámara Photron sobre la mesa y el motor a la derecha.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/montaje_completo_16h47.jpg]]
