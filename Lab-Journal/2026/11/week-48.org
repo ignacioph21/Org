@@ -238,7 +238,7 @@
 - *La forma es casi la misma:* r = 0,96–0,99 en todas las tomas. La más parecida: Ola_2, t = 736 ms, cresta en x = 196 mm, η máx 6,4 mm: *r = 0,99, rms 0,04*. Lo que cambia es la escala: W½ = 39 mm en el video contra 119 mm en S3 (con c = 0,50 m/s), unas 3 veces más angosta.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/ola_s3_forma_normalizada.png]]
-** [17:58] Autosimilaridad tipo Cole–Hopf y el borde negro delante de la ola
+** [17:52] Autosimilaridad tipo Cole–Hopf y el borde negro delante de la ola
 - *Autosimilaridad* (pedido del usuario): una joroba de Burgers en fondo plano conserva el área y da η_máx ∝ t^−1/2 y ancho ∝ t^1/2 (onda triangular o difusiva). Entonces 1/η_máx² y W½² deberían ser lineales en t y η_máx·W½ constante.
   - La *forma* sí es autosimilar: los perfiles η/η_máx contra ξ/W½ colapsan.
   - Las *leyes de escala* no: 1/η_máx² y W½² no son lineales (la altura cae cada vez más rápido), η_máx·W½ baja y el área ∫η dx baja ~60 % en 700 ms. Esperable con la rampa (Burgers con coeficientes variables), la subida a la playa y la parte de la ola que queda fuera de la imagen.
