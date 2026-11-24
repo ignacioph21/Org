@@ -333,3 +333,17 @@
 - La oscilación espuria en el pico de η(t) cerca de la entrada (el usuario: "hasta 75 mm") viene de que, detrás de la cresta, hay dos barras oscuras (una tenue arriba, continua con la cresta, y otra muy oscura 4–8 px abajo; ¿el menisco en cada pared?) y el detector saltaba a la de abajo.
 - Probé tomar la primera barra desde arriba (v3c) y combinarla con la continuidad de la v4 (v4d): cada una arregla una parte y rompe otra. El usuario: "se rompió lo que estaba bien y viceversa; dejá que te dibuje yo esa línea para la Ola_15". Volví a la v3 original.
 - Herramienta para marcar la línea a mano (=Día 2/Códigos/etiquetar.py=): la v3 como guía, el usuario marca puntos donde hace falta corregir y la línea pasa por ellos; queda en =Resultados/etiquetas_Ola_15.json= y =menisco_manual_Ola_15.npz=. Servirá de referencia y de etiquetas para la red.
+** [19:20] Espectros de la Ola_15 con la línea corregida a mano
+- Antes de la corrección: animaciones del espectro de la ola, pedidas por el usuario.
+  - Espectro espacial E(k) en función del tiempo, en una ventana de 72 mm que sigue a la ola, para Ola_10–15. Eje de arriba: f con gravedad y profundidad finita (h = 12,7 mm, la de la unión de paneles).
+  - Espectro temporal E(f) en función del espacio para la Ola_15, columna por columna desde la entrada hacia la playa. Eje de arriba: k con la profundidad local de la rampa.
+  - Videos en =Día 2/Videos/espectro/= y =Día 2/Videos/espectro_temporal/=.
+- La red (U-Net, entrenada con la v3 de Ola_14 y Ola_15) la corté a mitad del entrenamiento: sus etiquetas tenían el mismo error de la cresta. Se reentrena con la línea dibujada por el usuario.
+- *Corrección:* la línea a mano (cuadros 35–68 cada 3, más el 89 y el 95) se pasó a los cuadros intermedios siguiendo a la ola. La diferencia con la v3 se interpola en el tiempo corriéndola con la velocidad de la cresta. Así quedan 49 cuadros corregidos; en el resto, la v3 (=Códigos/corregir_con_manual.py= → =Resultados/menisco_corr_Ola_15.npz=).
+- Videos corregidos: =Videos/espectro/Ola_15_corregido.mp4= y =Videos/espectro_temporal/Ola_15_corregido.mp4=.
+- *Efecto cerca de la entrada (x > 75 mm de la unión):*
+  - La oscilación en el pico de η(t) desaparece: la rugosidad del pico baja de 0,89 mm (v3) y 0,54 mm (v3 con filtros) a 0,21 mm.
+  - La energía entre 20 y 125 Hz baja entre 4 y 8 veces: era ruido de la línea.
+  - Entre 5 y 20 Hz sube 40–90 %: la cresta, ahora sobre la barra de arriba, es más alta y más aguda.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/espectro_temporal_Ola_15_corregido.png]]
