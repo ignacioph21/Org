@@ -110,7 +110,7 @@
   - Si se ve más chica que eso, el hueco de abajo no alcanza para explicarlo. A revisar: que el motor siga la curva (posición real contra consigna, en el osciloscopio del LinMot) y la fuga por los costados de la paleta, que es más angosta que el canal y afecta más a las ondas largas.
 #+ATTR_ORG: :width 800
 [[file:../../../Assets/2026/11/Day_24/esquema_montaje.png]]
-** [15:02] Condiciones por horario (para asignar cada video)
+** [15:10] Condiciones por horario (para asignar cada video)
 - Horas = cuando el usuario avisó del cambio (el cambio fue en ese momento o un poco antes). Alturas desde el piso original.
   | Desde   | Hasta     | Nivel                  | Borde inferior de la paleta | Libre abajo | Sumergida | Agua en la paleta |
   |---------+-----------+------------------------+-----------------------------+-------------+-----------+-------------------|
