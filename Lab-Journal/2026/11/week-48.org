@@ -136,3 +136,25 @@
   | Una ola/Ola_9         | 15:29    | 1024×1024  |     481 | 1,92 s   | 757 MB  | ~2,3 cm            |
 - "Una ola": 8 tomas, *3,76 GB* en total (no hay Ola_8). Un cuadro de 1024×1024 pesa 1,57 MB; uno de 1024×128, 0,20 MB.
 - H20_1 se empezó a copiar a las 15:00, así que se grabó entre ~14:58 y 15:00, justo alrededor del cambio de la paleta: a confirmar. =h3_5= sería el JONSWAP de 3,5 cm (el de 4,1 cm no llegó al pendrive): a confirmar.
+** [15:45] Todas las mediciones del día (videos)
+- Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. Originales en =DEX5:/Ignacio/Cuarta iteracion/=. Hora = la del =.cihx= (al guardar). Paleta: ver la tabla de condiciones por horario (14:58: cambio de 2,5 a ~2,3 cm). Nivel 5,60 cm en todas.
+  | Toma                  | Guardada | Forzado (curva)                      | Resolución | Cuadros | Duración | Peso   | Paleta  | Encuadre                  | Brillo medio | Parpadeo 100 Hz |
+  |-----------------------+----------+--------------------------------------+------------+---------+----------+--------+---------+---------------------------+--------------+-----------------|
+  | Una ola/Ola_1         | 14:38    | salto único con meseta (17920 ms)    | 1024×1024  |     312 | 1,25 s   | 491 MB | 2,5 cm  | patrón arriba al centro   |          339 | 1,9 %           |
+  | Una ola/Ola_2         | 14:41    | salto único con meseta               | 1024×1024  |     297 | 1,19 s   | 468 MB | 2,5 cm  | patrón arriba al centro   |          631 | 3,8 %           |
+  | Una ola/Ola_3         | 14:44    | salto único con meseta               | 1024×1024  |     325 | 1,30 s   | 512 MB | 2,5 cm  | patrón arriba al centro   |          624 | 4,0 %           |
+  | Una ola/Ola_4         | 14:49    | salto único con meseta               | 1024×1024  |     242 | 0,97 s   | 381 MB | 2,5 cm  | patrón arriba al centro   |          612 | 3,5 %           |
+  | Una ola/Ola_5         | 14:51    | salto único con meseta               | 1024×128   |     220 | 0,88 s   | 43 MB  | 2,5 cm  | franja sobre el frente    |          255 | 6,6 %           |
+  | JONSWAP/H20_1         | 15:05    | JONSWAP h20 (639960 ms)              | 1024×128   |   21813 | 87,3 s   | 4,3 GB | ~2,3 cm (confirmar) | franja        |              |                 |
+  | Muchos forazad/primer | 15:12    | muchos forzados (¿267740ms_quieto_90s_triangulares?) | 1024×128 | 21250 | 85,0 s | 4,2 GB | ~2,3 cm | franja        |              |                 |
+  | Una ola/Ola_6         | 15:17    | salto único con meseta               | 1024×1024  |     523 | 2,09 s   | 823 MB | ~2,3 cm | patrón arriba al centro   |          616 | 3,9 %           |
+  | JONSWAP/h3_5          | 15:20    | ¿JONSWAP de 3,5 cm? (a confirmar)    | 1024×128   |    2239 | 8,96 s   | 441 MB | ~2,3 cm | franja                    |              |                 |
+  | Una ola/Ola_7         | 15:27    | salto único con meseta               | 1024×1024  |     180 | 0,72 s   | 283 MB | ~2,3 cm | patrón arriba a la izq.   |          348 | 3,7 %           |
+  | Una ola/Ola_9         | 15:29    | salto único con meseta               | 1024×1024  |     481 | 1,92 s   | 757 MB | ~2,3 cm | patrón arriba a la izq.   |          356 | 3,4 %           |
+- No hay Ola_8. Forzado de las "Una ola": supuesto el salto único con meseta del pendrive (a confirmar).
+- *Copia local* de las de una ola (pedido del usuario, para procesar y refinar la técnica): =Cuarta iteración/Día 2/Videos/Una ola/= (2588 archivos, 3,76 GB, verificada por nombres y tamaños). Las JONSWAP y la de muchos forzados quedan solo en el DEX5.
+- *Iluminación:* según el usuario, algunas tomas tienen LED y otras incandescente, que parpadea. Medido (=Códigos/inventario_tomas.py=): *todas* parpadean a 100 Hz (red de 50 Hz), entre 2 y 7 % del brillo medio del cuadro. Hay dos grupos de brillo: ~340–360 (Ola_1, 7, 9) y ~610–630 (Ola_2, 3, 4, 6). Falta saber cuál es cuál. En el análisis se corrige normalizando cada cuadro por el brillo de una zona fija sin agua.
+- *Altura del agua:* se va a sacar de las propias fotos (el usuario).
+- Herramientas: =Códigos/photron.py= lee los TIFF de 12 bit; =~/.local/bin/visor-tif= es el visor con flechas (predeterminado para TIFF; xviewer no los abre).
+#+ATTR_ORG: :width 800
+[[file:../../../Assets/2026/11/Day_24/inventario_tomas.png]]
