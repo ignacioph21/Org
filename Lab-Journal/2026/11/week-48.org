@@ -59,11 +59,11 @@
 - *Falta copiarla al pendrive* (estaba desconectado); va en lugar de la de 3,5 cm.
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/11/Day_24/jonswap_h3.95_control.png]]
-** [12:30] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm
+** [12:24] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm
 - El usuario da las alturas desde el piso original, por consistencia, pero la paleta, adentro del canal, se mueve sobre la base de *1,5 cm* (no sobre el piso de 2 mm de la rampa). Con nivel 5,65 cm, la profundidad en la paleta es *4,15 cm*, no 3,95 (la entrada de las 12:20 queda corregida; esa curva se borró).
 - Curva: =bonneton_C3_h_4.15cm_Tp_0.49_Hm0_8.9mm_seed_1_fhi_2.5fp_una_curva= (*T_p = 0,487 s, H_m0 = 8,9 mm*, k_p h = 0,951, ξ0 = 0,226). Regenerada hoy en =Cuarta iteración/Día 2/Curvas forzado/=: es idéntica byte a byte a la de 4,15 cm del 13/10, que ya está en el pendrive en =Tercera iteración/Curvas forzado/Curvas_jonswap/= (la que en octubre quedó como "obsoleta" porque el punto de referencia estaba del otro lado).
 - Falta pasarla a =Cuarta iteración/Día 2 (24-11) Videos/= del pendrive, en lugar de la de 3,5 cm. Si el nivel final no es 5,65 cm, la profundidad en la paleta es nivel − 1,5 cm y hay que regenerarla.
-** [12:45] Esquema del montaje nuevo y por qué el JONSWAP de 4,15 cm
+** [12:32] Esquema del montaje nuevo y por qué el JONSWAP de 4,15 cm
 - Esquema (=Cuarta iteración/Día 2/Códigos/esquema_montaje.py=): vista lateral (escala vertical ×9, alturas desde el piso original) y planta (ancho ×3). En negro, lo que contó el usuario; en *naranja, lo supuesto o deducido, a confirmar*: cuba de 198 cm y 5 cm de ancho, rampa de 99 cm con tan β = 0,035 y primera playa plana de 18 cm (como en octubre), segunda playa plana. Con eso, el pie de la rampa (= paleta estirada al máximo) queda a ~31 cm de la pared del lado de la paleta.
 - Profundidades con nivel 5,65 cm: *4,15 cm en la paleta* (sumergida 3,15 cm, 1 cm libre abajo), 3,95 cm sobre el piso de la rampa (= el 3,95 de la Tercera iteración), ~0,5 cm sobre la playa, 4,15 cm entre el fin de la segunda playa y la pared.
 #+ATTR_ORG: :width 800
