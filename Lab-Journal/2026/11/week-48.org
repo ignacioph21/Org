@@ -31,3 +31,14 @@
 - Plan de tomas: un video por cada JONSWAP, uno de muchos forzados y después varios solo del rompimiento del salto único, a más resolución, para ahorrar espacio y tiempo.
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/11/Day_24/un_salto_control.png]]
+** [11:50] Disco externo para los videos: DEX5
+- Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escritura secuencial medida con 1 GB (=dd= con =conv=fdatasync=, archivo temporal borrado):
+  | Disco | Modelo                         | Libre   | Escritura [MB/s] |
+  |-------+--------------------------------+---------+------------------|
+  | DEX1  | Seagate Expansion 1 TB         | 170 GB  |             37,6 |
+  | DEX2  | Seagate Backup+ SL 1 TB        | 40 GB   |  no confiable    |
+  | DEX3  | Seagate Backup Plus Slim 2 TB  | 405 GB  |             46,6 |
+  | DEX5  | WD Elements 2 TB               | 1,3 TB  |             43,4 |
+- Los cuatro son HDD con NTFS y USB 3.0; ninguno informa la velocidad por sí mismo. DEX4 estaba en uso.
+- DEX2 se desconectó del USB durante la prueba (errores de escritura y reset). Se desmontó, se volvió a montar (limpio) y se borró el archivo de prueba; sin errores nuevos.
+- *Elegido: DEX5* (el que tiene más espacio; la velocidad es parecida a la de DEX3).
