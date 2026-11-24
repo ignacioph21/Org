@@ -372,3 +372,7 @@
 [[file:../../../Assets/2026/11/Day_24/F2a_crudo_Ola_14.png]]
 ** [19:56] Collages crudos sin la unión de paneles
 - El usuario: borrar a mano la línea negra vertical (la unión de los paneles), "es horrible". Las columnas de la unión se rellenan interpolando entre las vecinas, con el ruido de fondo del cuadro. Es lo único que se le toca a los cuadros crudos. Regenerados todos los collages crudos (=Día 2/Figuras/collages/F2a_crudo_*=); la figura de las 19:53 ya es la nueva.
+** [19:58] Collages crudos emprolijados; seguimos mañana
+- El usuario: falta rotar bien, eliminar lo negro y recortar mejor la ola (quedaba mucho espacio arriba). Ahora cada cuadro se rota para dejar horizontal la línea de agua (~1°). Abajo se corta donde empieza la franja negra del agua quieta y arriba a 1,25 veces la cresta más alta.
+- Ola_13 y Ola_14 quedan en 178 × 14,5 y 171 × 13,4 mm. Para revisar juntos el 25/11, junto con la red (si da algo coherente).
+- El usuario se quedó sin batería; seguimos mañana.
