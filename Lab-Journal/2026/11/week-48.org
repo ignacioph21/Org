@@ -221,3 +221,10 @@
 - Falta saber dónde estaba la cámara sobre la rampa para compararla con el sensor que esté en el mismo lugar.
 #+ATTR_ORG: :width 1000
 [[file:../../../Assets/2026/11/Day_24/ola_video_vs_sensor.png]]
+** [17:45] Video contra S3 con la hipótesis de Taylor
+- El usuario: hay que pasar de espacio a tiempo (o al revés) con la hipótesis de Taylor para comparar bien, y solo con el sensor 3. Ola congelada que va hacia x chico: ξ = x − x_cresta = c (t − t_pico), con c = 0,50 m/s, la velocidad de la cresta medida en el video. Las olas de S3 (13/10) se pasan al espacio y se comparan con perfiles instantáneos del video (Ola_9 y Ola_6).
+- *Control de Taylor dentro del video:* la serie en una columna de Ola_9 pasada al espacio coincide con el perfil instantáneo cuando la cresta pasa por esa columna. Taylor vale.
+- *Resultado:* la ola del video es unas 4 veces más angosta que la de S3. El frente sube en ~25 mm (S3: ~100 mm) y la espalda vuelve a 0 en ~100 mm (S3: ~400 mm, sin valle). Altura: 10,3 mm a la entrada de la imagen contra 12,9 mm en S3 (mediana de 31 olas).
+- Diferencias que pueden explicarlo: el forzado (hoy la paleta queda 3 s quieta arriba; el 13/10 volvía enseguida), el lugar (no se sabe dónde está la cámara respecto de S3) y que el sensor mide de lado a lado del canal y el video el menisco en la pared.
+#+ATTR_ORG: :width 1000
+[[file:../../../Assets/2026/11/Day_24/ola_taylor_s3.png]]
