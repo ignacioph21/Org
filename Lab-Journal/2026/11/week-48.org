@@ -176,3 +176,8 @@
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/espectros_menisco_Ola_9.png]]
 - Tomas nuevas: Ola_10 (1024×256, 500 fps, 15:49), Ola_11 (1024×1024, 250 fps, 15:52) y Ola_12 (1024×256, 250 fps, 15:54), copiadas a la carpeta local. "Medio horribles sin fondo": era sobre todo un error del visor (al abrir en el cuadro 1 el contraste quedaba en ±1 cuenta), corregido. La cámara no se movió (< 0,15 px). Lo que sí: parpadeo de 100 Hz de ±2,4 a ±5,4 % (más fuerte con obturador 1/500 s), distinto según la zona de la imagen. Sugerido: apagar la luz conectada a la red de 220 V y usar solo luz que no parpadee.
+** [16:25] Calibración con el damero y evolución del espectro en una ventana que sigue a la ola
+- *Calibración:* damero de 4 mm en la pared de adelante (mismo plano que el menisco), cuadro 1 de Ola_9: 2 cuadros = 28,78 px en x y 28,24 px en y → *3,56 px/mm* (0,281 mm/px). La imagen tiene 288 mm de ancho. η máx de Ola_9 ≈ 10,6 mm. La cresta avanza a 0,49 m/s, así que la profundidad en la zona filmada es de ~14–25 mm (√(g(h + A))). Se usa h = 20 mm hasta saber en qué parte de la rampa está la cámara.
+- *Evolución del espectro*, rehecha a pedido del usuario ("hay que suavizarlo; zoom alrededor de la ola; un segundo eje arriba con la frecuencia de gravedad con profundidad finita"): ventana de 72 mm (256 px) que sigue a la ola (un poco más ancha que la franja roja del diagrama x–t), promedio de 10 cuadros (40 ms) y 12 bandas por década; eje de arriba f = √(g k tanh(k h))/2π con h = 20 mm. =Códigos/evolucion_espectro.py=.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/evolucion_espectro_Ola_9.png]]
