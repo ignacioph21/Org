@@ -263,3 +263,16 @@
 - La unión de los paneles de acrílico aparece en *9 posiciones distintas*: 775 px (Ola_1–6), 752 (Ola_7), 652 (Ola_9), 559 (Ola_10), 636 (Ola_11), 904 (Ola_12), 626 / 621 / 596 (Ola_13 / 14 / 15). Las tiras Ola_10, 12 y 13–15 no tienen damero: por el ancho de la unión (7–8 px contra 4–6 px), Ola_10 y 12 estarían cerca de 3,6 px/mm y Ola_13–15 cerca de 2,05–2,2.
 - Hasta ahora usé 2,20 en Ola_11 (es 2,05: los mm de esa toma están 7 % corridos) y supuse escalas en las tiras. Otras pistas para calibrar todo junto: el ancho de la unión, las formas repetidas de la franja oscura del canal (el período todavía no da consistente), los tornillos y la línea blanca (solo en cuadro entero).
 - Pendiente: calibración única por toma (escala y posición de la unión) y rehacer las figuras con eso; para la próxima, una foto del damero cada vez que se mueva la cámara.
+** [18:03] Tiras calibradas con la ola de Ola_11
+- El usuario: el forzado es el mismo en todas las olas sueltas; las últimas seis (Ola_10–15) tienen que ser idénticas en todo sentido (en las demás pudo cambiar levemente la altura del agua o la posición de la rampa). Si alguna tiene damero, suponer la misma ola y calibrar con eso.
+- Referencia: Ola_11 (damero, 2,051 px/mm). En el cuadro en que la cresta pasa por la unión de los paneles (punto fijo de la cuba) se miden su altura y su velocidad en px; la escala de cada tira sale de comparar las dos con Ola_11. Las dos estimaciones coinciden entre 1 y 8 %.
+  | Toma   | Escala [px/mm] | Incerteza |
+  |--------+----------------+-----------|
+  | Ola_10 |           3,27 | ±1,8 %    |
+  | Ola_12 |           4,35 | ±3,3 %    |
+  | Ola_13 |           2,55 | ±0,8 %    |
+  | Ola_14 |           3,28 | ±4,1 %    |
+  | Ola_15 |           2,63 | ±3,8 %    |
+- Con eso las seis quedan coherentes en todo el cuadro: η máx 10,0–10,6 mm y velocidad de la cresta 0,48–0,52 m/s (con las escalas supuestas, Ola_12–15 daban 0,56–0,67 m/s). Todos los análisis usan ahora =Códigos/calibracion.py=; se rehicieron los espacio-temporales, el resumen, la autosimilaridad y las comparaciones con S3. Falta rehacer el video sincronizado.
+#+ATTR_ORG: :width 1000
+[[file:../../../Assets/2026/11/Day_24/resumen_olas_xt.png]]
