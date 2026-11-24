@@ -214,7 +214,7 @@
 [[file:../../../Assets/2026/11/Day_24/resumen_olas_xt.png]]
 - *FFT 2D / dispersión local de la JONSWAP h20* (idea de las 17:31): primer intento *no concluyente*. La onda del pico (~0,5 m) es más larga que la imagen entera (465 mm), el canal cerrado devuelve onda reflejada y en el último tercio ya no queda ola. Con un ajuste de onda incidente más reflejada por tramos sale h ≈ 12–25 mm y k_p h ≈ 0,2–0,3 (somera) entre 85 y 285 mm desde la entrada, pero con mucha dispersión. Haría falta un campo más largo (varias posiciones de cámara) o usar las frecuencias más altas.
 - JONSWAP: el borde del menisco de todas las imágenes está guardado en local; el video de control con la línea necesita las imágenes, y el disco quedó en el Labo.
-** [17:50] Forma de una ola: video contra sensor
+** [17:41] Forma de una ola: video contra sensor
 - Pedido del usuario: comparar la forma de una ola del video con la que se midió con el sensor. Sensor: medición "muchos forzados" del 13/10 (3,95 cm; los mismos saltos triangulares de donde sale el salto único de hoy), 31–37 olas por sensor alineadas en el pico. Video: Ola_9 y Ola_6 en tres columnas cada una.
 - *Misma altura:* η máx mediana 10,7 / 11,8 / 12,5 mm en S1 / S2 / S3, contra 10,5 mm a la entrada de la imagen en el video.
 - *Forma distinta:* la ola del video es mucho más angosta (la cresta dura ~100 ms contra ~200–300 ms en los sensores) y no tiene el valle de después (−5 a −7 mm en S1 y S2). En la medición vieja la paleta volvía enseguida (rampa lineal); hoy queda quieta 3 s arriba (meseta), y eso explica al menos el valle. Además el sensor mide a través de todo el ancho del canal y el video mira el menisco contra la pared.
