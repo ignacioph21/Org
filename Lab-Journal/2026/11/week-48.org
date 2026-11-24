@@ -326,6 +326,6 @@
 - Videos con las dos líneas (rojo v3, verde v4): =Día 2/Videos/crudo_linea_v3_v4/=.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/comparar_v3_v4.png]]
-** [18:52] v4 ruidosa antes de la ola; plan para hacerlo con una red
+** [18:50] v4 ruidosa antes de la ola; plan para hacerlo con una red
 - El usuario: la v4 tiene muchísimo ruido antes de que aparezca la ola. Pregunta cómo sería con una red, local y lo más estándar posible.
 - Plan propuesto: U-Net (PyTorch en CPU; esta máquina no tiene GPU utilizable) que segmenta agua/aire en recortes de la franja de la ola, con el cuadro crudo y la imagen sin fondo como entradas. La línea es el borde de la máscara en cada columna, y la continuidad la sigue poniendo la misma programación dinámica, ahora sobre la probabilidad de la red. Etiquetas: la v3 como punto de partida, corregida a mano en ~150–200 cuadros de distintas tomas y momentos con una herramienta propia; validación con dos tomas que la red no ve.
