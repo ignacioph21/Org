@@ -303,3 +303,6 @@
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/valle_comovil.png]]
 - *Columnas:* con el realce se ven, pero medir su separación por autocorrelación se confunde con las rayas fijas del sensor de la cámara (cada 64–128 px). Da coherente (~39–42 mm) en Ola_6, 10, 11 y 14 y no en las demás. Falta ubicar las columnas una por una.
+** [18:31] Videos de la línea detectada, y refinar la detección
+- Para las 14 tomas: =Día 2/Videos/linea/= (solo la línea detectada en mm, con x desde la unión de paneles, la rampa y la playa de fondo y el nivel quieto y el medio de la toma) y =Día 2/Videos/crudo_linea/= (los videos crudos con el menisco detectado en rojo encima).
+- El usuario: antes de seguir con los análisis probablemente haya que *refinar la detección de la línea*.
