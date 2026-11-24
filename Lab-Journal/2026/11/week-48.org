@@ -99,3 +99,14 @@
 ** [14:10] Cámara conectada
 - Cámara Photron por Ethernet, con IP fija en la compu de Windows. El LED *IF LINK/TRANS* está en rojo, pero *PFV4 la abrió e hizo el shading* (referencia de negro).
 - A chequear: velocidad del enlace (1 Gbps o 100 Mbps), que define cuánto tarda en bajar cada video al disco (DEX5).
+** [14:58] Paleta 2 mm más abajo; el JONSWAP h20 da poca amplitud
+- El usuario sumergió la paleta *~2 mm más*: borde inferior a ~2,3 cm del piso original, *~0,8 cm libre abajo*, ~3,3 cm sumergida. Esquema del montaje actualizado.
+- *JONSWAP h20: muy poca amplitud* (el usuario). Estimación lineal con Biésel para un pistón que no llega al fondo, aplicada a toda la curva, con h = 4,1 cm en la paleta:
+  | Curva            | diseño (pistón completo) | h 4,1, pistón completo | h 4,1, hueco 1 cm | h 4,1, hueco 0,8 cm |
+  |------------------+--------------------------+------------------------+-------------------+---------------------|
+  | h20 (T_p 1,07 s) | 42 mm                    | 17,5 mm                | 13,4 mm           | 14,2 mm             |
+  | h 4,1 (T_p 0,48 s) | 8,6 mm                 | 8,6 mm                 | 6,9 mm            | 7,3 mm              |
+  - El 42,9 mm del nombre de la h20 es para 20 cm de agua en la paleta; acá k_p h = 0,38 y la eficiencia de la paleta cae de 0,91 a ~0,3, así que daría ~14 mm (el doble que la de 4,1, en teoría).
+  - Si se ve más chica que eso, el hueco de abajo no alcanza para explicarlo. A revisar: que el motor siga la curva (posición real contra consigna, en el osciloscopio del LinMot) y la fuga por los costados de la paleta, que es más angosta que el canal y afecta más a las ondas largas.
+#+ATTR_ORG: :width 800
+[[file:../../../Assets/2026/11/Day_24/esquema_montaje.png]]
