@@ -319,3 +319,10 @@
   - Mirando por la pared, lo que se ve es la línea de contacto, que no es la superficie: el menisco, el anclaje y la histéresis la alteran. En canales angostos la línea de contacto aumenta la disipación y la velocidad de fase (Jiang et al., JFM 1996).
   - Luz de fondo difusa (LED detrás) o pared de atrás blanca, como planea el usuario; luz que no parpadee; cámara con el eje a la altura del agua para evitar paralaje; una foto del damero cada vez que se mueve la cámara; un objetivo telecéntrico evitaría la perspectiva.
 - *Plan propuesto para la v4 del detector:* (1) corregir el parpadeo y las rayas fijas del sensor; (2) mapa de costo con el gradiente vertical en el borde de abajo de la barra; (3) programación dinámica de izquierda a derecha, con penalidad por pendiente y por apartarse de la línea del cuadro anterior, sin la unión de paneles; (4) ajuste subpíxel con función error; (5) validar con algunos cuadros marcados a mano en cada toma.
+** [18:46] Detector v4 (programación dinámica) en las últimas seis tomas
+- Implementado lo que salió de la búsqueda (=Códigos/menisco_v4.py=): el borde de abajo de la barra oscura de la imagen sin fondo, buscado como el camino continuo de costo mínimo de izquierda a derecha (programación dinámica), con penalidad por pendiente, continuidad con el cuadro anterior y posición subpíxel. Donde la barra desaparece (la cresta, la unión de paneles) el camino sigue por continuidad; donde no hay ola, el nivel quieto.
+- Tres iteraciones: la primera deambulaba antes de que llegara la ola y en el frente se iba al borde de la franja clara de debajo; la segunda caía al nivel quieto en la cresta; la tercera sigue la ola igual que la v3, sin los parches de la v3.
+- *Diferencia con la v3:* delante del frente, por tramos, la v4 encuentra el borde 1,5–2,5 mm por debajo del nivel quieto, justo en la zona que tapa la pared negra (¿el valle?), con escalones donde aparece y desaparece. A decidir con el usuario.
+- Videos con las dos líneas (rojo v3, verde v4): =Día 2/Videos/crudo_linea_v3_v4/=.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/comparar_v3_v4.png]]
