@@ -251,3 +251,9 @@
 ** [17:53] Estado al cierre del día
 - El usuario: todo lo de los videos es preliminar; la idea es seguir midiendo estas cosas y mejorar el método de medición. Lo principal era tener el *collage con la misma inclinación que el resto de los datos* y *algún espectro espacial*. Probablemente haya que *reorganizar la parte de resultados espectrales* del manuscrito para incluir algo de esto.
 - Pendientes: posición de la cámara sobre la rampa; foto del damero en el encuadre C (Ola_13–15); pared de atrás blanca; con el DEX5 (quedó en el Labo): video de control de la JONSWAP h20 y procesar h3_5 y muchos forzados; Ola_1 (falló el detector).
+** [18:05] Cómo ubicar la cámara sobre la rampa
+- El usuario: la ubicación se puede sacar (1) siguiendo la rampa, porque el quiebre entre la rampa y la playa plana debería estar en cuadro, o (2) con la línea vertical donde se unen los dos paneles de acrílico (88 cm cada uno; el último queda a un par de cm del borde de la cuba). Él puede medir la distancia de esa unión al inicio de la playa.
+- La línea vertical que yo llamaba "varilla" es esa unión: una referencia fija en todas las tomas. Campo de cada encuadre respecto de la unión (negativo = hacia la playa): A de −352 a +113 mm; B de −183 a +104 mm; C (Ola_13–15, escala supuesta) de ~−285 a ~+190 mm. Con la distancia unión–playa queda ubicada cada toma.
+- Seguir la rampa: debajo del agua se ve una línea tenue inclinada, pero el ajuste automático del quiebre todavía no es confiable (se engancha en una línea blanca horizontal). Queda pendiente.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/rampa_franja_Ola_6_Ola_9.png]]
