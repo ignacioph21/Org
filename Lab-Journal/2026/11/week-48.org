@@ -87,3 +87,9 @@
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/11/Day_24/jonswap_h4.20_control.png]]
 - Esquema del montaje (entrada de las 12:32) actualizado con el nivel 5,70 cm.
+** [13:58] Nivel bajado 1 mm: 5,60 cm → JONSWAP de 4,10 cm
+- El usuario bajó el nivel 1 mm: *5,60 cm* desde el piso original. Profundidades: *4,10 cm en la paleta* (sumergida 3,10 cm), 3,90 cm sobre el piso de la rampa, ~0,43 cm sobre la playa.
+- JONSWAP para h = 4,10 cm: =Cuarta iteración/Día 2/Curvas forzado/Curvas_jonswap/bonneton_C3_h_4.1cm_Tp_0.48_Hm0_8.8mm_seed_1_fhi_2.5fp_una_curva/599962ms_…csv= (*T_p = 0,484 s, H_m0 = 8,8 mm*, k_p h = 0,951, ξ0 = 0,226; x de 0 a 63,2 mm). La de 4,20 cm (13:46) queda sin usar. Entre 4,10, 4,15 y 4,20 cm la diferencia es ≤ 1 %.
+- Falta copiarla al pendrive (desconectado). Esquema del montaje (entrada de las 12:32) actualizado con el nivel 5,60 cm.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_24/jonswap_h4.10_control.png]]
