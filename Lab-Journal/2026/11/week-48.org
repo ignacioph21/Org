@@ -93,6 +93,6 @@
 - Falta copiarla al pendrive (desconectado). Esquema del montaje (entrada de las 12:32) actualizado con el nivel 5,60 cm.
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/11/Day_24/jonswap_h4.10_control.png]]
-** [14:04] Homing del motor
-- Posición del homing: *−25 mm* (el mensaje del usuario sigue con "77", a aclarar). Con el motor y la paleta anteriores estaba en 130–140 mm (mayo y junio).
-- [14:05] El usuario agrega "Y 20/168" (¿límites de posición del motor, en mm? a aclarar junto con el "77"). Recorrido de las curvas del pendrive, todas desde x = 0: muchos forzados 0–111 mm, salto único 0–96 mm, JONSWAP h20 0–96 mm, JONSWAP de 4,10 cm 0–63 mm. Si 77 mm fuera el cero de las curvas y 168 mm el límite superior, quedarían 91 mm y solo entraría el JONSWAP de 4,10 cm.
+** [14:04] Configuración del motor
+- Posición del homing: *−25 mm*. Distancias A/B del wizard: *20 / 168 mm*. Con el motor y la paleta anteriores el homing estaba en 130–140 mm (mayo y junio).
+- Recorrido de las curvas del pendrive, todas desde x = 0: muchos forzados 0–111 mm, salto único 0–96 mm, JONSWAP h20 0–96 mm, JONSWAP de 4,10 cm 0–63 mm.
