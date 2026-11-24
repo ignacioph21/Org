@@ -347,3 +347,17 @@
   - Entre 5 y 20 Hz sube 40–90 %: la cresta, ahora sobre la barra de arriba, es más alta y más aguda.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/espectro_temporal_Ola_15_corregido.png]]
+** [19:29] Bonneton en el espectro temporal de la ola sola; los videos quedan solo para el collage
+- Pedido del usuario: ajustar el espectro temporal corregido de la Ola_15 con el modelo de Bonneton (2023), igual que la Fig. 11 del manuscrito: E/Ẽ = csch²(f/f_ν)/[f_ν(coth(f_m/f_ν) − 1)], con f_ν como único parámetro libre, en ln E entre f_m y 11,1 Hz.
+- Para una ola sola tomé f_m = 1/T, con T la duración de la ola en cada columna; un diente del tren de frentes de Bonneton dura el tiempo entre frentes.
+- *Resultado (bloques de 10 mm):*
+  - f_ν ≈ 4 Hz desde la entrada hasta x ≈ +50 mm. La rotura (frente más empinado) está en x ≈ +97 mm.
+  - Sube a 6–10 Hz entre x ≈ +30 y −110 mm y queda en 5–8 Hz cerca de la playa.
+  - R² 0,70–0,99 (mediana 0,91). χ²_ν mediana 14, con σ = dispersión entre columnas: el csch² no describe el espectro dentro de esa dispersión.
+  - f_ν = C h^a con a = −0,57 ± 0,08 (R² 0,61, χ²_ν 3,0, 35 g.l.). Se parece al ω_ν ∝ h^−0,53 del barrido del 14/10, pero acá es más un escalón entre antes y después de romper que una ley de potencias.
+- El usuario: a una ola sola le falta estadística; debería salir bien del JONSWAP.
+- *JONSWAP h20 (H20_1, la única en local):* no ajusta. El espectro va como f⁻² hasta ~30 Hz, sin corte, y f_ν se va al límite. Son olas de ~2 mm con armónicos marcados de 0,93 Hz.
+- *El usuario: para este paper, los videos quedan como anécdota, solo para el collage.* Se cortó acá.
+- Archivos: =Día 2/Figuras/bonneton_temporal_Ola_15.png= y =Videos/espectro_temporal/Ola_15_corregido_bonneton.mp4=.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/bonneton_temporal_Ola_15.png]]
