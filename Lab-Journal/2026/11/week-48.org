@@ -42,3 +42,9 @@
 - Los cuatro son HDD con NTFS y USB 3.0; ninguno informa la velocidad por sí mismo. DEX4 estaba en uso.
 - DEX2 se desconectó del USB durante la prueba (errores de escritura y reset). Se desmontó, se volvió a montar (limpio) y se borró el archivo de prueba; sin errores nuevos.
 - *Elegido: DEX5* (el que tiene más espacio; la velocidad es parecida a la de DEX3).
+** [11:58] Salto único con meseta y bajada lineal
+- Pedido del usuario: el frente tal cual, pero que una vez arriba la paleta quede quieta un rato y después baje linealmente, sin el ruido sumado. La interfaz periodiza sola, así que alcanza con un ciclo.
+- =17920ms_un_salto_random_3_curva_04_meseta_3s_bajada_lineal.csv=: frente de la curva 04 original (con su ruido) hasta su máximo (96,4 mm a los 0,68 s, donde la velocidad pasa por cero), *3 s quieta* y bajada lineal sin ruido hasta 0 en 13,92 s (6,9 mm/s, la misma pendiente que la original). Período 17,92 s; |v| ≤ 525 mm/s.
+- En el pendrive (=Cuarta iteración/Día 2 (24-11) Videos/=) reemplaza a la versión anterior. Generador: =generador_un_salto.py --meseta 3=.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_24/un_salto_meseta_control.png]]

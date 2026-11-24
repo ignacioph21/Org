@@ -17,33 +17,34 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org6d74915">Referencias</a></li>
-<li><a href="#orgf8fb8f0">2026-11-24</a>
+<li><a href="#org4a8ce8d">Referencias</a></li>
+<li><a href="#org2cc2d22">2026-11-24</a>
 <ul>
-<li><a href="#org9ed0bcc">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</a></li>
-<li><a href="#org6b833a0">[11:25] Integral parcial de la PDF pesada, sin normalizar</a></li>
-<li><a href="#org30c29e0">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</a></li>
-<li><a href="#org187572d">[11:35] Curvas de forzado para los videos, en el pendrive</a></li>
-<li><a href="#org633ec33">[11:50] Disco externo para los videos: DEX5</a></li>
+<li><a href="#org0912844">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</a></li>
+<li><a href="#orgf418bbb">[11:25] Integral parcial de la PDF pesada, sin normalizar</a></li>
+<li><a href="#orgf6846f4">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</a></li>
+<li><a href="#orgdf36a68">[11:35] Curvas de forzado para los videos, en el pendrive</a></li>
+<li><a href="#orga5073c7">[11:50] Disco externo para los videos: DEX5</a></li>
+<li><a href="#org5cae95d">[11:58] Salto único con meseta y bajada lineal</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6d74915" class="outline-2">
-<h2 id="org6d74915">Referencias</h2>
-<div class="outline-text-2" id="text-org6d74915">
+<div id="outline-container-org4a8ce8d" class="outline-2">
+<h2 id="org4a8ce8d">Referencias</h2>
+<div class="outline-text-2" id="text-org4a8ce8d">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-orgf8fb8f0" class="outline-2">
-<h2 id="orgf8fb8f0">2026-11-24</h2>
-<div class="outline-text-2" id="text-orgf8fb8f0">
+<div id="outline-container-org2cc2d22" class="outline-2">
+<h2 id="org2cc2d22">2026-11-24</h2>
+<div class="outline-text-2" id="text-org2cc2d22">
 </div>
-<div id="outline-container-org9ed0bcc" class="outline-3">
-<h3 id="org9ed0bcc">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</h3>
-<div class="outline-text-3" id="text-org9ed0bcc">
+<div id="outline-container-org0912844" class="outline-3">
+<h3 id="org0912844">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</h3>
+<div class="outline-text-3" id="text-org0912844">
 <ul class="org-ul">
 <li>Pedido del usuario: solo los gráficos de las PDF, prolijos, y lo de los cumulantes. Presentación en <code>~/Documentos/Reuniones de Labo/2026-11-24/labo_2026-11-24.pdf</code> (6 diapositivas).</li>
 <li>Paneles nuevos, hechos a la medida de la diapositiva, en <code>Códigos/</code> (<code>pdfs_panel.py</code>, <code>cumulantes_panel.py</code>). Son versiones limpias de las figuras del 17/11 (Día 15, PDF pesadas) y del 20/11 (Día 17), con los mismos datos (S3, JONSWAP principal) y los mismos números.</li>
@@ -51,33 +52,33 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org6b833a0" class="outline-3">
-<h3 id="org6b833a0">[11:25] Integral parcial de la PDF pesada, sin normalizar</h3>
-<div class="outline-text-3" id="text-org6b833a0">
+<div id="outline-container-orgf418bbb" class="outline-3">
+<h3 id="orgf418bbb">[11:25] Integral parcial de la PDF pesada, sin normalizar</h3>
+<div class="outline-text-3" id="text-orgf418bbb">
 <ul class="org-ul">
 <li>Pedido del usuario, sobre la integral acumulada del 20/11 (<code>Tercera iteración/Día 17/Figuras/integral_acumulada.pdf</code>): la misma integral, pero sin dividir por ⟨|z|<sup>p</sup>⟩. Script <code>~/Documentos/Reuniones de Labo/2026-11-24/Códigos/integral_panel.py</code> → <code>Figuras/P_integral_sin_normalizar.pdf</code> (todavía no está en la presentación).</li>
 <li>Arriba M<sub>p</sub>(Z) = ∫<sub>|z|&lt;Z</sub> |z|<sup>p</sup> P(z) dz, que llega a la meseta ⟨|z|<sup>p</sup>⟩ = S<sub>p</sub>/σ<sub>τ</sub><sup>p</sup>; abajo lo que falta, ⟨|z|<sup>p</sup>⟩ − M<sub>p</sub>(Z). Gris: la gaussiana exacta, ⟨|z|<sup>p</sup>⟩<sub>G</sub> · P((p+1)/2, Z²/2). Punteada: |z| máximo medido. S3, JONSWAP principal; τ = 115 / 206 / 371 ms.</li>
 <li>Así se ven directamente las mesetas contra la gaussiana. En 1/2f<sub>ν</sub>: p = 6 llega a 50 (gaussiana 15) y p = 4 a 5,5 (gaussiana 3). En 206 ms: 20 y 3,4. En 1/2f<sub>m</sub> quedan por debajo de la gaussiana (12 contra 15; 2,7 contra 3), con el escalón del evento único en |z| ≈ 4,5.</li>
 </ul>
 
-<div id="orge5a1f3c" class="figure">
+<div id="org20d056d" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/integral_sin_normalizar.png" alt="integral_sin_normalizar.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org30c29e0" class="outline-3">
-<h3 id="org30c29e0">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</h3>
-<div class="outline-text-3" id="text-org30c29e0">
+<div id="outline-container-orgf6846f4" class="outline-3">
+<h3 id="orgf6846f4">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</h3>
+<div class="outline-text-3" id="text-orgf6846f4">
 <ul class="org-ul">
 <li>Se está llenando la cuba con <b>agua destilada</b> (el plan del Día 1 decía agua de la canilla). Arrancamos temprano; el llenado tarda aproximadamente una hora más (lista hacia las 12:30).</li>
 <li>Hoy se filma la ola rompiendo con la rampa nueva (plan en <code>Cuarta iteración/Día 1/README.md</code>). Todo lo de hoy va en <code>Cuarta iteración/Día 2/</code> (<code>Videos/</code>, <code>Códigos/</code>, <code>Figuras/</code>; registro en el README).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org187572d" class="outline-3">
-<h3 id="org187572d">[11:35] Curvas de forzado para los videos, en el pendrive</h3>
-<div class="outline-text-3" id="text-org187572d">
+<div id="outline-container-orgdf36a68" class="outline-3">
+<h3 id="orgdf36a68">[11:35] Curvas de forzado para los videos, en el pendrive</h3>
+<div class="outline-text-3" id="text-orgdf36a68">
 <ul class="org-ul">
 <li>En <code>KINGSTON/Posgrado/Pruebas rampa impresa 3D cuba grande/Cuarta iteración/Día 2 (24-11) Videos/</code> (verificadas byte a byte; una columna en mm, sin encabezado):
 <ol class="org-ol">
@@ -89,15 +90,15 @@
 <li>Plan de tomas: un video por cada JONSWAP, uno de muchos forzados y después varios solo del rompimiento del salto único, a más resolución, para ahorrar espacio y tiempo.</li>
 </ul>
 
-<div id="org867cb3a" class="figure">
+<div id="org59eb023" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/un_salto_control.png" alt="un_salto_control.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org633ec33" class="outline-3">
-<h3 id="org633ec33">[11:50] Disco externo para los videos: DEX5</h3>
-<div class="outline-text-3" id="text-org633ec33">
+<div id="outline-container-orga5073c7" class="outline-3">
+<h3 id="orga5073c7">[11:50] Disco externo para los videos: DEX5</h3>
+<div class="outline-text-3" id="text-orga5073c7">
 <ul class="org-ul">
 <li><p>
 Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escritura secuencial medida con 1 GB (<code>dd</code> con <code>conv=fdatasync</code>, archivo temporal borrado):
@@ -156,6 +157,21 @@ Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escrit
 <li>DEX2 se desconectó del USB durante la prueba (errores de escritura y reset). Se desmontó, se volvió a montar (limpio) y se borró el archivo de prueba; sin errores nuevos.</li>
 <li><b>Elegido: DEX5</b> (el que tiene más espacio; la velocidad es parecida a la de DEX3).</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-org5cae95d" class="outline-3">
+<h3 id="org5cae95d">[11:58] Salto único con meseta y bajada lineal</h3>
+<div class="outline-text-3" id="text-org5cae95d">
+<ul class="org-ul">
+<li>Pedido del usuario: el frente tal cual, pero que una vez arriba la paleta quede quieta un rato y después baje linealmente, sin el ruido sumado. La interfaz periodiza sola, así que alcanza con un ciclo.</li>
+<li><code>17920ms_un_salto_random_3_curva_04_meseta_3s_bajada_lineal.csv</code>: frente de la curva 04 original (con su ruido) hasta su máximo (96,4 mm a los 0,68 s, donde la velocidad pasa por cero), <b>3 s quieta</b> y bajada lineal sin ruido hasta 0 en 13,92 s (6,9 mm/s, la misma pendiente que la original). Período 17,92 s; |v| ≤ 525 mm/s.</li>
+<li>En el pendrive (<code>Cuarta iteración/Día 2 (24-11) Videos/</code>) reemplaza a la versión anterior. Generador: <code>generador_un_salto.py --meseta 3</code>.</li>
+</ul>
+
+<div id="org3e75849" class="figure">
+<p><img src="../../../Assets/2026/11/Day_24/un_salto_meseta_control.png" alt="un_salto_meseta_control.png" />
+</p>
+</div>
 </div>
 </div>
 </div>
