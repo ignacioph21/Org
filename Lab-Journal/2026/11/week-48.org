@@ -80,3 +80,10 @@
   - Salvedad: Biésel supone un pistón que llega al fondo. Acá la paleta deja 1 cm libre abajo, así que las olas salen algo más chicas que lo nominal (igual que en octubre).
 ** [13:34] Llenado: faltan 0,25 cm
 - Nivel ≈ *5,40 cm* desde el piso original (4,0 cm en la paleta); el objetivo es 5,65 cm. A las 12:10 faltaba ~1 cm, así que sube ≈ 0,5 cm/h: llega hacia las *~14:05*.
+** [13:46] Cuba llena: nivel 5,70 cm → JONSWAP de 4,20 cm
+- Nivel final *5,70 cm* desde el piso original (el objetivo era 5,65). Profundidades: *4,20 cm en la paleta* (sumergida 3,20 cm), 4,00 cm sobre el piso de la rampa (en la Tercera iteración, 3,95 cm), ~0,54 cm sobre la playa.
+- JONSWAP regenerado con h = nivel − 1,5 = 4,20 cm: =Cuarta iteración/Día 2/Curvas forzado/Curvas_jonswap/bonneton_C3_h_4.2cm_Tp_0.49_Hm0_9.0mm_seed_1_fhi_2.5fp_una_curva/599962ms_…csv= (*T_p = 0,490 s, H_m0 = 9,0 mm*, k_p h = 0,951, ξ0 = 0,226; x de 0 a 63,4 mm). Frente a la de 4,15 cm cambia ~1 % (T_p 0,487 → 0,490 s, H_m0 8,9 → 9,0 mm), del orden de la precisión con que se lee el nivel.
+- Falta copiarla al pendrive (desconectado), en =Cuarta iteración/Día 2 (24-11) Videos/= en lugar de la de 3,5 cm.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_24/jonswap_h4.20_control.png]]
+- Esquema del montaje (entrada de las 12:32) actualizado con el nivel 5,70 cm.
