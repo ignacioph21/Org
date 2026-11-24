@@ -228,3 +228,8 @@
 - Diferencias que pueden explicarlo: el forzado (hoy la paleta queda 3 s quieta arriba; el 13/10 volvía enseguida), el lugar (no se sabe dónde está la cámara respecto de S3) y que el sensor mide de lado a lado del canal y el video el menisco en la pared.
 #+ATTR_ORG: :width 1000
 [[file:../../../Assets/2026/11/Day_24/ola_taylor_s3.png]]
+** [17:47] El instante del video más parecido a la ola de S3
+- Pedido del usuario: la forma normalizada por la altura y con Taylor, y la correlación del sensor con el espacio-temporal para encontrar el instante más parecido. Se compara la forma de S3 (mediana de 31 olas, Taylor con c = 0,50 m/s) con el perfil normalizado de cada cuadro de cada toma (todas menos Ola_1), con la correlación de Pearson en el tramo donde hay imagen.
+- *El más parecido:* Ola_7, t = 476 ms, con la cresta en x = 61 mm y η máx 4,3 mm: *r = 0,94*. El frente y la cresta coinciden bien, pero la espalda del video vuelve a 0 mucho antes (rms 0,32). En todas las tomas r sube a medida que la ola avanza y se achica: ~0,7–0,8 a la entrada de la imagen, ~0,9 al final.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/ola_s3_mejor_instante.png]]
