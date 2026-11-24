@@ -63,3 +63,18 @@
 - El usuario da las alturas desde el piso original, por consistencia, pero la paleta, adentro del canal, se mueve sobre la base de *1,5 cm* (no sobre el piso de 2 mm de la rampa). Con nivel 5,65 cm, la profundidad en la paleta es *4,15 cm*, no 3,95 (la entrada de las 12:20 queda corregida; esa curva se borró).
 - Curva: =bonneton_C3_h_4.15cm_Tp_0.49_Hm0_8.9mm_seed_1_fhi_2.5fp_una_curva= (*T_p = 0,487 s, H_m0 = 8,9 mm*, k_p h = 0,951, ξ0 = 0,226). Regenerada hoy en =Cuarta iteración/Día 2/Curvas forzado/=: es idéntica byte a byte a la de 4,15 cm del 13/10, que ya está en el pendrive en =Tercera iteración/Curvas forzado/Curvas_jonswap/= (la que en octubre quedó como "obsoleta" porque el punto de referencia estaba del otro lado).
 - Falta pasarla a =Cuarta iteración/Día 2 (24-11) Videos/= del pendrive, en lugar de la de 3,5 cm. Si el nivel final no es 5,65 cm, la profundidad en la paleta es nivel − 1,5 cm y hay que regenerarla.
+** [12:45] Esquema del montaje nuevo y por qué el JONSWAP de 4,15 cm
+- Esquema (=Cuarta iteración/Día 2/Códigos/esquema_montaje.py=): vista lateral (escala vertical ×9, alturas desde el piso original) y planta (ancho ×3). En negro, lo que contó el usuario; en *naranja, lo supuesto o deducido, a confirmar*: cuba de 198 cm y 5 cm de ancho, rampa de 99 cm con tan β = 0,035 y primera playa plana de 18 cm (como en octubre), segunda playa plana. Con eso, el pie de la rampa (= paleta estirada al máximo) queda a ~31 cm de la pared del lado de la paleta.
+- Profundidades con nivel 5,65 cm: *4,15 cm en la paleta* (sumergida 3,15 cm, 1 cm libre abajo), 3,95 cm sobre el piso de la rampa (= el 3,95 de la Tercera iteración), ~0,5 cm sobre la playa, 4,15 cm entre el fin de la segunda playa y la pared.
+#+ATTR_ORG: :width 800
+[[file:../../../Assets/2026/11/Day_24/esquema_montaje.png]]
+- *Por qué el JONSWAP "con h correcta" es el de 4,15 cm:* el generador escala vN03-C3 (h = 0,70 m en la paleta, T_p = 2 s) por Froude con la profundidad *en la paleta*: conserva k_p h = 0,951 (cuán somera es la ola donde se genera) y ξ0 = 0,226 (Iribarren con la pendiente). De ahí T_p = 2 s·√(h/0,70 m) y H_m0 sale de ξ0. Además, la carrera de la paleta se calcula con la transferencia de Biésel (pistón), que depende de k h en la paleta. La paleta se mueve sobre la base de 1,5 cm, así que h = 5,65 − 1,5 = 4,15 cm.
+  | Curva     | T_p [s] | H_m0 [mm] | k_p h con h = 4,15 cm | H_m0/h |
+  |-----------+---------+-----------+-----------------------+--------|
+  | h 3,5 cm  |   0,447 |       7,5 |                  1,06 |   0,18 |
+  | h 3,95 cm |   0,475 |       8,5 |                  0,98 |   0,21 |
+  | h 4,15 cm |   0,487 |       8,9 |              *0,951* |   0,21 |
+  | h 20 cm   |   1,069 |      42,9 |                  0,39 |   1,03 |
+  - La de 3,5 cm era la del montaje de octubre con nivel 3,60 (=Bonneton_bien_profundidad_360=). La de 3,95 cm suponía el piso de 2 mm de la rampa también debajo de la paleta (equivocado). ξ0 da 0,226 en todas porque H_m0 se elige para conservarlo; lo que cambia es k_p h.
+  - La "h 20 cm" (la principal del manuscrito) es otro diseño: escalada como si la paleta estuviera en 20 cm de agua.
+  - Salvedad: Biésel supone un pistón que llega al fondo. Acá la paleta deja 1 cm libre abajo, así que las olas salen algo más chicas que lo nominal (igual que en octubre).

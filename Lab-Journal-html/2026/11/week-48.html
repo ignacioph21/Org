@@ -17,37 +17,38 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5642bb1">Referencias</a></li>
-<li><a href="#org0b7429d">2026-11-24</a>
+<li><a href="#org505f1ad">Referencias</a></li>
+<li><a href="#org741708f">2026-11-24</a>
 <ul>
-<li><a href="#orge4e56d7">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</a></li>
-<li><a href="#org4c3c4fe">[11:25] Integral parcial de la PDF pesada, sin normalizar</a></li>
-<li><a href="#org912a90a">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</a></li>
-<li><a href="#orgb71ace0">[11:35] Curvas de forzado para los videos, en el pendrive</a></li>
-<li><a href="#orgfdb6b54">[11:50] Disco externo para los videos: DEX5</a></li>
-<li><a href="#org12d16aa">[11:58] Salto único con meseta y bajada lineal</a></li>
-<li><a href="#org538ea4b">[12:10] Montaje de la Cuarta iteración (lo que contó el usuario)</a></li>
-<li><a href="#org527f5ec">[12:20] JONSWAP con la profundidad correcta para este montaje</a></li>
-<li><a href="#org3060f45">[12:30] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm</a></li>
+<li><a href="#org26d1346">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</a></li>
+<li><a href="#org5d6541b">[11:25] Integral parcial de la PDF pesada, sin normalizar</a></li>
+<li><a href="#org6416c2b">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</a></li>
+<li><a href="#org054d469">[11:35] Curvas de forzado para los videos, en el pendrive</a></li>
+<li><a href="#org90782b6">[11:50] Disco externo para los videos: DEX5</a></li>
+<li><a href="#org9422bc2">[11:58] Salto único con meseta y bajada lineal</a></li>
+<li><a href="#orge2334fe">[12:10] Montaje de la Cuarta iteración (lo que contó el usuario)</a></li>
+<li><a href="#org3c3b669">[12:20] JONSWAP con la profundidad correcta para este montaje</a></li>
+<li><a href="#orgfbed24b">[12:30] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm</a></li>
+<li><a href="#orgf4fbead">[12:45] Esquema del montaje nuevo y por qué el JONSWAP de 4,15 cm</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5642bb1" class="outline-2">
-<h2 id="org5642bb1">Referencias</h2>
-<div class="outline-text-2" id="text-org5642bb1">
+<div id="outline-container-org505f1ad" class="outline-2">
+<h2 id="org505f1ad">Referencias</h2>
+<div class="outline-text-2" id="text-org505f1ad">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-org0b7429d" class="outline-2">
-<h2 id="org0b7429d">2026-11-24</h2>
-<div class="outline-text-2" id="text-org0b7429d">
+<div id="outline-container-org741708f" class="outline-2">
+<h2 id="org741708f">2026-11-24</h2>
+<div class="outline-text-2" id="text-org741708f">
 </div>
-<div id="outline-container-orge4e56d7" class="outline-3">
-<h3 id="orge4e56d7">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</h3>
-<div class="outline-text-3" id="text-orge4e56d7">
+<div id="outline-container-org26d1346" class="outline-3">
+<h3 id="org26d1346">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</h3>
+<div class="outline-text-3" id="text-org26d1346">
 <ul class="org-ul">
 <li>Pedido del usuario: solo los gráficos de las PDF, prolijos, y lo de los cumulantes. Presentación en <code>~/Documentos/Reuniones de Labo/2026-11-24/labo_2026-11-24.pdf</code> (6 diapositivas).</li>
 <li>Paneles nuevos, hechos a la medida de la diapositiva, en <code>Códigos/</code> (<code>pdfs_panel.py</code>, <code>cumulantes_panel.py</code>). Son versiones limpias de las figuras del 17/11 (Día 15, PDF pesadas) y del 20/11 (Día 17), con los mismos datos (S3, JONSWAP principal) y los mismos números.</li>
@@ -55,33 +56,33 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org4c3c4fe" class="outline-3">
-<h3 id="org4c3c4fe">[11:25] Integral parcial de la PDF pesada, sin normalizar</h3>
-<div class="outline-text-3" id="text-org4c3c4fe">
+<div id="outline-container-org5d6541b" class="outline-3">
+<h3 id="org5d6541b">[11:25] Integral parcial de la PDF pesada, sin normalizar</h3>
+<div class="outline-text-3" id="text-org5d6541b">
 <ul class="org-ul">
 <li>Pedido del usuario, sobre la integral acumulada del 20/11 (<code>Tercera iteración/Día 17/Figuras/integral_acumulada.pdf</code>): la misma integral, pero sin dividir por ⟨|z|<sup>p</sup>⟩. Script <code>~/Documentos/Reuniones de Labo/2026-11-24/Códigos/integral_panel.py</code> → <code>Figuras/P_integral_sin_normalizar.pdf</code> (todavía no está en la presentación).</li>
 <li>Arriba M<sub>p</sub>(Z) = ∫<sub>|z|&lt;Z</sub> |z|<sup>p</sup> P(z) dz, que llega a la meseta ⟨|z|<sup>p</sup>⟩ = S<sub>p</sub>/σ<sub>τ</sub><sup>p</sup>; abajo lo que falta, ⟨|z|<sup>p</sup>⟩ − M<sub>p</sub>(Z). Gris: la gaussiana exacta, ⟨|z|<sup>p</sup>⟩<sub>G</sub> · P((p+1)/2, Z²/2). Punteada: |z| máximo medido. S3, JONSWAP principal; τ = 115 / 206 / 371 ms.</li>
 <li>Así se ven directamente las mesetas contra la gaussiana. En 1/2f<sub>ν</sub>: p = 6 llega a 50 (gaussiana 15) y p = 4 a 5,5 (gaussiana 3). En 206 ms: 20 y 3,4. En 1/2f<sub>m</sub> quedan por debajo de la gaussiana (12 contra 15; 2,7 contra 3), con el escalón del evento único en |z| ≈ 4,5.</li>
 </ul>
 
-<div id="orgacfddf5" class="figure">
+<div id="org02fdfdf" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/integral_sin_normalizar.png" alt="integral_sin_normalizar.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org912a90a" class="outline-3">
-<h3 id="org912a90a">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</h3>
-<div class="outline-text-3" id="text-org912a90a">
+<div id="outline-container-org6416c2b" class="outline-3">
+<h3 id="org6416c2b">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</h3>
+<div class="outline-text-3" id="text-org6416c2b">
 <ul class="org-ul">
 <li>Se está llenando la cuba con <b>agua destilada</b> (el plan del Día 1 decía agua de la canilla). Arrancamos temprano; el llenado tarda aproximadamente una hora más (lista hacia las 12:30).</li>
 <li>Hoy se filma la ola rompiendo con la rampa nueva (plan en <code>Cuarta iteración/Día 1/README.md</code>). Todo lo de hoy va en <code>Cuarta iteración/Día 2/</code> (<code>Videos/</code>, <code>Códigos/</code>, <code>Figuras/</code>; registro en el README).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb71ace0" class="outline-3">
-<h3 id="orgb71ace0">[11:35] Curvas de forzado para los videos, en el pendrive</h3>
-<div class="outline-text-3" id="text-orgb71ace0">
+<div id="outline-container-org054d469" class="outline-3">
+<h3 id="org054d469">[11:35] Curvas de forzado para los videos, en el pendrive</h3>
+<div class="outline-text-3" id="text-org054d469">
 <ul class="org-ul">
 <li>En <code>KINGSTON/Posgrado/Pruebas rampa impresa 3D cuba grande/Cuarta iteración/Día 2 (24-11) Videos/</code> (verificadas byte a byte; una columna en mm, sin encabezado):
 <ol class="org-ol">
@@ -93,15 +94,15 @@
 <li>Plan de tomas: un video por cada JONSWAP, uno de muchos forzados y después varios solo del rompimiento del salto único, a más resolución, para ahorrar espacio y tiempo.</li>
 </ul>
 
-<div id="org260730c" class="figure">
+<div id="orgc7457e5" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/un_salto_control.png" alt="un_salto_control.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfdb6b54" class="outline-3">
-<h3 id="orgfdb6b54">[11:50] Disco externo para los videos: DEX5</h3>
-<div class="outline-text-3" id="text-orgfdb6b54">
+<div id="outline-container-org90782b6" class="outline-3">
+<h3 id="org90782b6">[11:50] Disco externo para los videos: DEX5</h3>
+<div class="outline-text-3" id="text-org90782b6">
 <ul class="org-ul">
 <li><p>
 Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escritura secuencial medida con 1 GB (<code>dd</code> con <code>conv=fdatasync</code>, archivo temporal borrado):
@@ -162,24 +163,24 @@ Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escrit
 </ul>
 </div>
 </div>
-<div id="outline-container-org12d16aa" class="outline-3">
-<h3 id="org12d16aa">[11:58] Salto único con meseta y bajada lineal</h3>
-<div class="outline-text-3" id="text-org12d16aa">
+<div id="outline-container-org9422bc2" class="outline-3">
+<h3 id="org9422bc2">[11:58] Salto único con meseta y bajada lineal</h3>
+<div class="outline-text-3" id="text-org9422bc2">
 <ul class="org-ul">
 <li>Pedido del usuario: el frente tal cual, pero que una vez arriba la paleta quede quieta un rato y después baje linealmente, sin el ruido sumado. La interfaz periodiza sola, así que alcanza con un ciclo.</li>
 <li><code>17920ms_un_salto_random_3_curva_04_meseta_3s_bajada_lineal.csv</code>: frente de la curva 04 original (con su ruido) hasta su máximo (96,4 mm a los 0,68 s, donde la velocidad pasa por cero), <b>3 s quieta</b> y bajada lineal sin ruido hasta 0 en 13,92 s (6,9 mm/s, la misma pendiente que la original). Período 17,92 s; |v| ≤ 525 mm/s.</li>
 <li>En el pendrive (<code>Cuarta iteración/Día 2 (24-11) Videos/</code>) reemplaza a la versión anterior. Generador: <code>generador_un_salto.py --meseta 3</code>.</li>
 </ul>
 
-<div id="org21e85ce" class="figure">
+<div id="orgebe4427" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/un_salto_meseta_control.png" alt="un_salto_meseta_control.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org538ea4b" class="outline-3">
-<h3 id="org538ea4b">[12:10] Montaje de la Cuarta iteración (lo que contó el usuario)</h3>
-<div class="outline-text-3" id="text-org538ea4b">
+<div id="outline-container-orge2334fe" class="outline-3">
+<h3 id="orge2334fe">[12:10] Montaje de la Cuarta iteración (lo que contó el usuario)</h3>
+<div class="outline-text-3" id="text-orge2334fe">
 <ul class="org-ul">
 <li><b>Nivel:</b> faltaba llenar ~1 cm (iba en ~4,8–4,9 cm). El setup tiene una base de <b>1,5 cm</b> y encima la rampa con <b>2 mm</b> de piso, así que el nivel equivalente a 3,95 cm es <b>3,95 + 1,7 = 5,65 cm</b> desde el piso original. Lista en media hora a una hora.</li>
 <li><b>Paleta:</b> la del motor nuevo, de <b>4,5 cm de ancho</b>, entra adentro del canal (antes era la paleta grande). El canal ocupa casi todo el ancho de la cuba. Con la paleta lo más estirada posible queda al borde de la rampa. Queda a ~1 cm del piso nuevo, o sea a <b>2,5 cm del piso original</b>.</li>
@@ -188,28 +189,109 @@ Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escrit
 </ul>
 </div>
 </div>
-<div id="outline-container-org527f5ec" class="outline-3">
-<h3 id="org527f5ec">[12:20] JONSWAP con la profundidad correcta para este montaje</h3>
-<div class="outline-text-3" id="text-org527f5ec">
+<div id="outline-container-org3c3b669" class="outline-3">
+<h3 id="org3c3b669">[12:20] JONSWAP con la profundidad correcta para este montaje</h3>
+<div class="outline-text-3" id="text-org3c3b669">
 <ul class="org-ul">
 <li>Con el piso nuevo a 1,7 cm y nivel 5,65 cm, la profundidad en la paleta es <b>3,95 cm</b> (a confirmar: si debajo de la paleta el piso está a 1,5 cm, serían 4,15 cm). La curva de 3,5 cm que estaba en el pendrive era la del montaje de octubre.</li>
 <li>Nueva: <code>Cuarta iteración/Día 2/Curvas forzado/Curvas_jonswap/bonneton_C3_h_3.95cm_Tp_0.48_Hm0_8.5mm_seed_1_fhi_2.5fp_una_curva/599962ms_…csv</code> (escalada de vN03-C3: <b>T<sub>p</sub> = 0,475 s, H<sub>m0</sub> = 8,5 mm</b>, k<sub>p</sub> h = 0,951, ξ0 = 0,226; 600 s; x de 0 a 63 mm, |v| ≤ 109 mm/s). Generador copiado del Día 1 de la Tercera iteración, sin cambios.</li>
 <li><b>Falta copiarla al pendrive</b> (estaba desconectado); va en lugar de la de 3,5 cm.</li>
 </ul>
 
-<div id="org45b0af3" class="figure">
+<div id="org243aa12" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/jonswap_h3.95_control.png" alt="jonswap_h3.95_control.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3060f45" class="outline-3">
-<h3 id="org3060f45">[12:30] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm</h3>
-<div class="outline-text-3" id="text-org3060f45">
+<div id="outline-container-orgfbed24b" class="outline-3">
+<h3 id="orgfbed24b">[12:30] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm</h3>
+<div class="outline-text-3" id="text-orgfbed24b">
 <ul class="org-ul">
 <li>El usuario da las alturas desde el piso original, por consistencia, pero la paleta, adentro del canal, se mueve sobre la base de <b>1,5 cm</b> (no sobre el piso de 2 mm de la rampa). Con nivel 5,65 cm, la profundidad en la paleta es <b>4,15 cm</b>, no 3,95 (la entrada de las 12:20 queda corregida; esa curva se borró).</li>
 <li>Curva: <code>bonneton_C3_h_4.15cm_Tp_0.49_Hm0_8.9mm_seed_1_fhi_2.5fp_una_curva</code> (<b>T<sub>p</sub> = 0,487 s, H<sub>m0</sub> = 8,9 mm</b>, k<sub>p</sub> h = 0,951, ξ0 = 0,226). Regenerada hoy en <code>Cuarta iteración/Día 2/Curvas forzado/</code>: es idéntica byte a byte a la de 4,15 cm del 13/10, que ya está en el pendrive en <code>Tercera iteración/Curvas forzado/Curvas_jonswap/</code> (la que en octubre quedó como &ldquo;obsoleta&rdquo; porque el punto de referencia estaba del otro lado).</li>
 <li>Falta pasarla a <code>Cuarta iteración/Día 2 (24-11) Videos/</code> del pendrive, en lugar de la de 3,5 cm. Si el nivel final no es 5,65 cm, la profundidad en la paleta es nivel − 1,5 cm y hay que regenerarla.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf4fbead" class="outline-3">
+<h3 id="orgf4fbead">[12:45] Esquema del montaje nuevo y por qué el JONSWAP de 4,15 cm</h3>
+<div class="outline-text-3" id="text-orgf4fbead">
+<ul class="org-ul">
+<li>Esquema (<code>Cuarta iteración/Día 2/Códigos/esquema_montaje.py</code>): vista lateral (escala vertical ×9, alturas desde el piso original) y planta (ancho ×3). En negro, lo que contó el usuario; en <b>naranja, lo supuesto o deducido, a confirmar</b>: cuba de 198 cm y 5 cm de ancho, rampa de 99 cm con tan β = 0,035 y primera playa plana de 18 cm (como en octubre), segunda playa plana. Con eso, el pie de la rampa (= paleta estirada al máximo) queda a ~31 cm de la pared del lado de la paleta.</li>
+<li>Profundidades con nivel 5,65 cm: <b>4,15 cm en la paleta</b> (sumergida 3,15 cm, 1 cm libre abajo), 3,95 cm sobre el piso de la rampa (= el 3,95 de la Tercera iteración), ~0,5 cm sobre la playa, 4,15 cm entre el fin de la segunda playa y la pared.</li>
+</ul>
+
+<div id="org8b21868" class="figure">
+<p><img src="../../../Assets/2026/11/Day_24/esquema_montaje.png" alt="esquema_montaje.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li><p>
+<b>Por qué el JONSWAP &ldquo;con h correcta&rdquo; es el de 4,15 cm:</b> el generador escala vN03-C3 (h = 0,70 m en la paleta, T<sub>p</sub> = 2 s) por Froude con la profundidad <b>en la paleta</b>: conserva k<sub>p</sub> h = 0,951 (cuán somera es la ola donde se genera) y ξ0 = 0,226 (Iribarren con la pendiente). De ahí T<sub>p</sub> = 2 s·√(h/0,70 m) y H<sub>m0</sub> sale de ξ0. Además, la carrera de la paleta se calcula con la transferencia de Biésel (pistón), que depende de k h en la paleta. La paleta se mueve sobre la base de 1,5 cm, así que h = 5,65 − 1,5 = 4,15 cm.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Curva</th>
+<th scope="col" class="org-left">T<sub>p</sub> [s]</th>
+<th scope="col" class="org-left">H<sub>m0</sub> [mm]</th>
+<th scope="col" class="org-left">k<sub>p</sub> h con h = 4,15 cm</th>
+<th scope="col" class="org-left">H<sub>m0</sub>/h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">h 3,5 cm</td>
+<td class="org-left">0,447</td>
+<td class="org-left">7,5</td>
+<td class="org-left">1,06</td>
+<td class="org-left">0,18</td>
+</tr>
+
+<tr>
+<td class="org-left">h 3,95 cm</td>
+<td class="org-left">0,475</td>
+<td class="org-left">8,5</td>
+<td class="org-left">0,98</td>
+<td class="org-left">0,21</td>
+</tr>
+
+<tr>
+<td class="org-left">h 4,15 cm</td>
+<td class="org-left">0,487</td>
+<td class="org-left">8,9</td>
+<td class="org-left"><b>0,951</b></td>
+<td class="org-left">0,21</td>
+</tr>
+
+<tr>
+<td class="org-left">h 20 cm</td>
+<td class="org-left">1,069</td>
+<td class="org-left">42,9</td>
+<td class="org-left">0,39</td>
+<td class="org-left">1,03</td>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li>La de 3,5 cm era la del montaje de octubre con nivel 3,60 (<code>Bonneton_bien_profundidad_360</code>). La de 3,95 cm suponía el piso de 2 mm de la rampa también debajo de la paleta (equivocado). ξ0 da 0,226 en todas porque H<sub>m0</sub> se elige para conservarlo; lo que cambia es k<sub>p</sub> h.</li>
+<li>La &ldquo;h 20 cm&rdquo; (la principal del manuscrito) es otro diseño: escalada como si la paleta estuviera en 20 cm de agua.</li>
+<li>Salvedad: Biésel supone un pistón que llega al fondo. Acá la paleta deja 1 cm libre abajo, así que las olas salen algo más chicas que lo nominal (igual que en octubre).</li>
+</ul></li>
 </ul>
 </div>
 </div>
