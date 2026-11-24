@@ -22,3 +22,12 @@
 ** [11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos
 - Se está llenando la cuba con *agua destilada* (el plan del Día 1 decía agua de la canilla). Arrancamos temprano; el llenado tarda aproximadamente una hora más (lista hacia las 12:30).
 - Hoy se filma la ola rompiendo con la rampa nueva (plan en =Cuarta iteración/Día 1/README.md=). Todo lo de hoy va en =Cuarta iteración/Día 2/= (=Videos/=, =Códigos/=, =Figuras/=; registro en el README).
+** [11:35] Curvas de forzado para los videos, en el pendrive
+- En =KINGSTON/Posgrado/Pruebas rampa impresa 3D cuba grande/Cuarta iteración/Día 2 (24-11) Videos/= (verificadas byte a byte; una columna en mm, sin encabezado):
+  1. =639960ms_bonneton_C3_h_20cm_Tp_1.07_Hm0_42.9mm_seed_1_una_curva.csv=: JONSWAP principal ("h20"), el mismo del 20/11.
+  2. =599962ms_bonneton_C3_h_3.5cm_Tp_0.45_Hm0_7.5mm_seed_1_fhi_2.5fp_una_curva.csv=: JONSWAP con la profundidad real (el de =Bonneton_bien_profundidad_360=, 13/10). Se escaló para h = 3,5 cm en la paleta, que era el nivel 3,60 cm en el punto de referencia de ese montaje. *A confirmar* con el nivel de hoy.
+  3. =14940ms_un_salto_random_3_curva_04.csv=: *un solo salto* de los muchos forzados (curva 04 de Curvas_random_3: A = 96,6 mm, subida en ~0,7 s, vuelta lineal). Empieza y termina en x = 0, así que se puede repetir en loop (período 14,94 s). =119520ms_…_x8.csv= es el mismo ciclo 8 veces (≈ 2 min). Generador: =Cuarta iteración/Día 2/Curvas forzado/generador_un_salto.py=.
+  4. =267740ms_quieto_90s_triangulares_random_3_177s.csv=: 90 s quieto (sirve de fondo para el video) + 177 s de muchos forzados (12 triangulares), la curva corta del 14/10.
+- Plan de tomas: un video por cada JONSWAP, uno de muchos forzados y después varios solo del rompimiento del salto único, a más resolución, para ahorrar espacio y tiempo.
+#+ATTR_ORG: :width 600
+[[file:../../../Assets/2026/11/Day_24/un_salto_control.png]]

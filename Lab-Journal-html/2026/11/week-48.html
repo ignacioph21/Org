@@ -17,31 +17,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org7aa651d">Referencias</a></li>
-<li><a href="#orgbf6b145">2026-11-24</a>
+<li><a href="#orgaa3aca3">Referencias</a></li>
+<li><a href="#org3b91267">2026-11-24</a>
 <ul>
-<li><a href="#org983a9ce">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</a></li>
-<li><a href="#orge0d0c7e">[11:25] Integral parcial de la PDF pesada, sin normalizar</a></li>
-<li><a href="#orgbad1240">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</a></li>
+<li><a href="#org2a63fc3">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</a></li>
+<li><a href="#orge012d73">[11:25] Integral parcial de la PDF pesada, sin normalizar</a></li>
+<li><a href="#org702aa96">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</a></li>
+<li><a href="#orgdd5c1b2">[11:35] Curvas de forzado para los videos, en el pendrive</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7aa651d" class="outline-2">
-<h2 id="org7aa651d">Referencias</h2>
-<div class="outline-text-2" id="text-org7aa651d">
+<div id="outline-container-orgaa3aca3" class="outline-2">
+<h2 id="orgaa3aca3">Referencias</h2>
+<div class="outline-text-2" id="text-orgaa3aca3">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-orgbf6b145" class="outline-2">
-<h2 id="orgbf6b145">2026-11-24</h2>
-<div class="outline-text-2" id="text-orgbf6b145">
+<div id="outline-container-org3b91267" class="outline-2">
+<h2 id="org3b91267">2026-11-24</h2>
+<div class="outline-text-2" id="text-org3b91267">
 </div>
-<div id="outline-container-org983a9ce" class="outline-3">
-<h3 id="org983a9ce">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</h3>
-<div class="outline-text-3" id="text-org983a9ce">
+<div id="outline-container-org2a63fc3" class="outline-3">
+<h3 id="org2a63fc3">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</h3>
+<div class="outline-text-3" id="text-org2a63fc3">
 <ul class="org-ul">
 <li>Pedido del usuario: solo los gráficos de las PDF, prolijos, y lo de los cumulantes. Presentación en <code>~/Documentos/Reuniones de Labo/2026-11-24/labo_2026-11-24.pdf</code> (6 diapositivas).</li>
 <li>Paneles nuevos, hechos a la medida de la diapositiva, en <code>Códigos/</code> (<code>pdfs_panel.py</code>, <code>cumulantes_panel.py</code>). Son versiones limpias de las figuras del 17/11 (Día 15, PDF pesadas) y del 20/11 (Día 17), con los mismos datos (S3, JONSWAP principal) y los mismos números.</li>
@@ -49,28 +50,48 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orge0d0c7e" class="outline-3">
-<h3 id="orge0d0c7e">[11:25] Integral parcial de la PDF pesada, sin normalizar</h3>
-<div class="outline-text-3" id="text-orge0d0c7e">
+<div id="outline-container-orge012d73" class="outline-3">
+<h3 id="orge012d73">[11:25] Integral parcial de la PDF pesada, sin normalizar</h3>
+<div class="outline-text-3" id="text-orge012d73">
 <ul class="org-ul">
 <li>Pedido del usuario, sobre la integral acumulada del 20/11 (<code>Tercera iteración/Día 17/Figuras/integral_acumulada.pdf</code>): la misma integral, pero sin dividir por ⟨|z|<sup>p</sup>⟩. Script <code>~/Documentos/Reuniones de Labo/2026-11-24/Códigos/integral_panel.py</code> → <code>Figuras/P_integral_sin_normalizar.pdf</code> (todavía no está en la presentación).</li>
 <li>Arriba M<sub>p</sub>(Z) = ∫<sub>|z|&lt;Z</sub> |z|<sup>p</sup> P(z) dz, que llega a la meseta ⟨|z|<sup>p</sup>⟩ = S<sub>p</sub>/σ<sub>τ</sub><sup>p</sup>; abajo lo que falta, ⟨|z|<sup>p</sup>⟩ − M<sub>p</sub>(Z). Gris: la gaussiana exacta, ⟨|z|<sup>p</sup>⟩<sub>G</sub> · P((p+1)/2, Z²/2). Punteada: |z| máximo medido. S3, JONSWAP principal; τ = 115 / 206 / 371 ms.</li>
 <li>Así se ven directamente las mesetas contra la gaussiana. En 1/2f<sub>ν</sub>: p = 6 llega a 50 (gaussiana 15) y p = 4 a 5,5 (gaussiana 3). En 206 ms: 20 y 3,4. En 1/2f<sub>m</sub> quedan por debajo de la gaussiana (12 contra 15; 2,7 contra 3), con el escalón del evento único en |z| ≈ 4,5.</li>
 </ul>
 
-<div id="orgc7ec2bc" class="figure">
+<div id="org47dd6a8" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/integral_sin_normalizar.png" alt="integral_sin_normalizar.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbad1240" class="outline-3">
-<h3 id="orgbad1240">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</h3>
-<div class="outline-text-3" id="text-orgbad1240">
+<div id="outline-container-org702aa96" class="outline-3">
+<h3 id="org702aa96">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</h3>
+<div class="outline-text-3" id="text-org702aa96">
 <ul class="org-ul">
 <li>Se está llenando la cuba con <b>agua destilada</b> (el plan del Día 1 decía agua de la canilla). Arrancamos temprano; el llenado tarda aproximadamente una hora más (lista hacia las 12:30).</li>
 <li>Hoy se filma la ola rompiendo con la rampa nueva (plan en <code>Cuarta iteración/Día 1/README.md</code>). Todo lo de hoy va en <code>Cuarta iteración/Día 2/</code> (<code>Videos/</code>, <code>Códigos/</code>, <code>Figuras/</code>; registro en el README).</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-orgdd5c1b2" class="outline-3">
+<h3 id="orgdd5c1b2">[11:35] Curvas de forzado para los videos, en el pendrive</h3>
+<div class="outline-text-3" id="text-orgdd5c1b2">
+<ul class="org-ul">
+<li>En <code>KINGSTON/Posgrado/Pruebas rampa impresa 3D cuba grande/Cuarta iteración/Día 2 (24-11) Videos/</code> (verificadas byte a byte; una columna en mm, sin encabezado):
+<ol class="org-ol">
+<li><code>639960ms_bonneton_C3_h_20cm_Tp_1.07_Hm0_42.9mm_seed_1_una_curva.csv</code>: JONSWAP principal (&ldquo;h20&rdquo;), el mismo del 20/11.</li>
+<li><code>599962ms_bonneton_C3_h_3.5cm_Tp_0.45_Hm0_7.5mm_seed_1_fhi_2.5fp_una_curva.csv</code>: JONSWAP con la profundidad real (el de <code>Bonneton_bien_profundidad_360</code>, 13/10). Se escaló para h = 3,5 cm en la paleta, que era el nivel 3,60 cm en el punto de referencia de ese montaje. <b>A confirmar</b> con el nivel de hoy.</li>
+<li><code>14940ms_un_salto_random_3_curva_04.csv</code>: <b>un solo salto</b> de los muchos forzados (curva 04 de Curvas<sub>random</sub><sub>3</sub>: A = 96,6 mm, subida en ~0,7 s, vuelta lineal). Empieza y termina en x = 0, así que se puede repetir en loop (período 14,94 s). <code>119520ms_…_x8.csv</code> es el mismo ciclo 8 veces (≈ 2 min). Generador: <code>Cuarta iteración/Día 2/Curvas forzado/generador_un_salto.py</code>.</li>
+<li><code>267740ms_quieto_90s_triangulares_random_3_177s.csv</code>: 90 s quieto (sirve de fondo para el video) + 177 s de muchos forzados (12 triangulares), la curva corta del 14/10.</li>
+</ol></li>
+<li>Plan de tomas: un video por cada JONSWAP, uno de muchos forzados y después varios solo del rompimiento del salto único, a más resolución, para ahorrar espacio y tiempo.</li>
+</ul>
+
+<div id="org6106dc7" class="figure">
+<p><img src="../../../Assets/2026/11/Day_24/un_salto_control.png" alt="un_salto_control.png" />
+</p>
+</div>
 </div>
 </div>
 </div>
