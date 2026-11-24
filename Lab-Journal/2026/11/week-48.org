@@ -158,3 +158,21 @@
 - Herramientas: =Códigos/photron.py= lee los TIFF de 12 bit; =~/.local/bin/visor-tif= es el visor con flechas (predeterminado para TIFF; xviewer no los abre).
 #+ATTR_ORG: :width 800
 [[file:../../../Assets/2026/11/Day_24/inventario_tomas.png]]
+** [16:10] Idea a verificar: ¿el frente roto se ensancha como √t?
+- El usuario: estaría bien verificar si el frente, una vez roto, se ensancha tipo √t, como un proceso difusivo. Aunque eso vale para su propagación a lo largo.
+- Con η(x, t) del detector de menisco: medir el ancho del frente en cada cuadro (p. ej. la distancia entre el 10 % y el 90 % de la altura local) y graficarlo contra el tiempo desde la rotura, en log-log, buscando pendiente 1/2.
+** [16:13] Detector de menisco (Ola_9), video de control y espectros
+- =Cuarta iteración/Día 2/Códigos/menisco.py= (v3). Se resta el cuadro 1, compensando el parpadeo *fila por fila* (la luz no cambia igual en toda la imagen), y el menisco es el *borde de abajo de la barra negra* de la imagen sin fondo (el usuario: "el mínimo de la barra negra ancha").
+- Agregados después de revisar con el usuario: relleno de la cresta (ahí la barra se afina), la varilla vertical interpolada, nivel quieto del cuadro 1 donde no hay ola, *continuidad y suavidad* de la línea (pedido del usuario), mediana de 3 cuadros en los puntos rellenados y nivel quieto antes de que llegue la ola.
+- Resultado: =Resultados/menisco_Ola_9.npz= (481 cuadros × 1024 px). La ola va de derecha a izquierda y η máx baja de ~38 a ~15 px. Cerca del nivel quieto, ±2 px.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/menisco_Ola_9_control.png]]
+#+ATTR_ORG: :width 800
+[[file:../../../Assets/2026/11/Day_24/menisco_Ola_9_xt.png]]
+- Video de control (pedido del usuario): =Día 2/Videos/control/menisco_Ola_9.mp4=, la franja de la ola con el menisco en rojo (escala vertical ×3) y abajo el diagrama x–t. El usuario: "dentro de todo bastante decente; alguna cosa en el punto de máxima amplitud" → se agregó la continuidad y suavidad.
+- *Evolución del espectro* (pedido del usuario): E(k) de η(x) un cuadro cada 10, coloreado por tiempo (Blues), y el mapa E(k, t). También E(f) en una columna cada 10 px. La energía en k chico cae a medida que la ola avanza y se achica. Por encima de k ≈ 0,1 ciclos/px manda el suavizado de la línea. Todo en px: falta calibrar con el patrón de 4 mm.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/evolucion_espectro_Ola_9.png]]
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_24/espectros_menisco_Ola_9.png]]
+- Tomas nuevas: Ola_10 (1024×256, 500 fps, 15:49), Ola_11 (1024×1024, 250 fps, 15:52) y Ola_12 (1024×256, 250 fps, 15:54), copiadas a la carpeta local. "Medio horribles sin fondo": era sobre todo un error del visor (al abrir en el cuadro 1 el contraste quedaba en ±1 cuenta), corregido. La cámara no se movió (< 0,15 px). Lo que sí: parpadeo de 100 Hz de ±2,4 a ±5,4 % (más fuerte con obturador 1/500 s), distinto según la zona de la imagen. Sugerido: apagar la luz conectada a la red de 220 V y usar solo luz que no parpadee.
