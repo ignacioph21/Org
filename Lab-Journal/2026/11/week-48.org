@@ -136,7 +136,7 @@
   | Una ola/Ola_9         | 15:29    | 1024×1024  |     481 | 1,92 s   | 757 MB  | ~2,3 cm            |
 - "Una ola": 8 tomas, *3,76 GB* en total (no hay Ola_8). Un cuadro de 1024×1024 pesa 1,57 MB; uno de 1024×128, 0,20 MB.
 - H20_1 se empezó a copiar a las 15:00, así que se grabó entre ~14:58 y 15:00, justo alrededor del cambio de la paleta: a confirmar. =h3_5= sería el JONSWAP de 3,5 cm (el de 4,1 cm no llegó al pendrive): a confirmar.
-** [15:45] Todas las mediciones del día (videos)
+** [15:40] Todas las mediciones del día (videos)
 - Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. Originales en =DEX5:/Ignacio/Cuarta iteracion/=. Hora = la del =.cihx= (al guardar). Paleta: ver la tabla de condiciones por horario (14:58: cambio de 2,5 a ~2,3 cm). Nivel 5,60 cm en todas.
   | Toma                  | Guardada | Forzado (curva)                      | Resolución | Cuadros | Duración | Peso   | Paleta  | Encuadre                  | Brillo medio | Parpadeo 100 Hz |
   |-----------------------+----------+--------------------------------------+------------+---------+----------+--------+---------+---------------------------+--------------+-----------------|
