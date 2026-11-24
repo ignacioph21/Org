@@ -233,7 +233,7 @@
 - *El más parecido:* Ola_7, t = 476 ms, con la cresta en x = 61 mm y η máx 4,3 mm: *r = 0,94*. El frente y la cresta coinciden bien, pero la espalda del video vuelve a 0 mucho antes (rms 0,32). En todas las tomas r sube a medida que la ola avanza y se achica: ~0,7–0,8 a la entrada de la imagen, ~0,9 al final.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_24/ola_s3_mejor_instante.png]]
-** [17:50] Forma normalizada en altura y en ancho: video y S3 tienen la misma forma
+** [17:48] Forma normalizada en altura y en ancho: video y S3 tienen la misma forma
 - El usuario: "también horizontalmente hay que compensar". Cada perfil se normaliza por su altura y por su ancho a media altura W½: u = ξ/W½ (en u ya no importa el c de Taylor).
 - *La forma es casi la misma:* r = 0,96–0,99 en todas las tomas. La más parecida: Ola_2, t = 736 ms, cresta en x = 196 mm, η máx 6,4 mm: *r = 0,99, rms 0,04*. Lo que cambia es la escala: W½ = 39 mm en el video contra 119 mm en S3 (con c = 0,50 m/s), unas 3 veces más angosta.
 #+ATTR_ORG: :width 900
