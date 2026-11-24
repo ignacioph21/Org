@@ -276,7 +276,7 @@
 - Con eso las seis quedan coherentes en todo el cuadro: η máx 10,0–10,6 mm y velocidad de la cresta 0,48–0,52 m/s (con las escalas supuestas, Ola_12–15 daban 0,56–0,67 m/s). Todos los análisis usan ahora =Códigos/calibracion.py=; se rehicieron los espacio-temporales, el resumen, la autosimilaridad y las comparaciones con S3. Falta rehacer el video sincronizado.
 #+ATTR_ORG: :width 1000
 [[file:../../../Assets/2026/11/Day_24/resumen_olas_xt.png]]
-** [18:12] Seguir el fondo (rampa → playa): primer intento y visor para ajustar el realce
+** [18:08] Seguir el fondo (rampa → playa): primer intento y visor para ajustar el realce
 - El usuario: el fondo debería ser constante (playa, salvo los 0,1° de la cuba) y después bajar hacia la derecha con tan α = 0,035 (rampa); promediar muchas imágenes, porque ese fondo no cambia, y jugar con la exposición y la saturación para que resalte.
 - Primer intento (=Día 2/Códigos/fondo_rampa.py=: media de 60 cuadros y un modelo de playa más rampa con esas pendientes): en Ola_7 y Ola_9 la rampa sigue bien una línea tenue inclinada, pero el resultado todavía *no es confiable*. En las tiras da ~12 mm de agua sobre el fondo en la unión, coherente entre tomas, con el quiebre casi siempre fuera de cuadro; en las de cuadro entero se engancha en otras estructuras.
 - Visor interactivo para que el usuario pruebe el realce: =Día 2/Códigos/ajustar_fondo.py [toma]= (negro, blanco, gamma, suavizado y cuatro modos de realce).
