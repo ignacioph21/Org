@@ -93,3 +93,5 @@
 - Falta copiarla al pendrive (desconectado). Esquema del montaje (entrada de las 12:32) actualizado con el nivel 5,60 cm.
 #+ATTR_ORG: :width 600
 [[file:../../../Assets/2026/11/Day_24/jonswap_h4.10_control.png]]
+** [14:04] Homing del motor
+- Posición del homing: *−25 mm* (el mensaje del usuario sigue con "77", a aclarar). Con el motor y la paleta anteriores estaba en 130–140 mm (mayo y junio).
