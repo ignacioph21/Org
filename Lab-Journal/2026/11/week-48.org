@@ -432,3 +432,13 @@
 - El usuario subió un poco el nivel del agua y mide con el wizard en −50 y el factor de tiempo al 80 % ("creo"). Nivel exacto, a confirmar.
 - En el disco aparecieron dos tomas nuevas, Dia_2_Ola_36 (10:36) y Dia_2_Ola_37 (10:40), las dos a 500 fps. Falta confirmar a cuál corresponde esta configuración; la nueva sería la 37.
 - Videos crudos a 60 fps en =Día 3/Videos/crudo/= (8,3 veces más lento). En las dos se ve la ola entera cruzando el cuadro.
+** [11:05] Fotos de los tres niveles de agua; cierre de las mediciones del día
+- El usuario mandó fotos de la regla en el agua para los tres niveles de hoy, para referencia futura. Están en =Día 3/Fotos/=.
+- Por la hora serían, a confirmar:
+  - 09:32: nivel ≈ 5,9 cm (tomas de la mañana).
+  - 10:30: nivel bajado, ≈ 5,5–5,6 cm.
+  - 10:33: nivel subido un poco (Ola_36 y Ola_37).
+- Falta la lectura en la regla. El menisco sube unos milímetros por la regla, así que hay que leer la superficie libre al costado.
+- El usuario: eso es todo por hoy; el análisis sigue más adelante. Los collages quedan pendientes.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_25/niveles_agua_25-11.jpg]]
