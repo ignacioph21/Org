@@ -398,3 +398,6 @@
 ** [09:50] Cámara más abajo
 - El usuario bajó la cámara del acrílico donde estaba apoyada, para que se vea mejor el menisco.
 - La cámara se movió: hace falta una toma del damero en la posición nueva para calibrar (px/mm e inclinación).
+** [09:55] Plan del resto de la mañana
+- Con el fondo blanco y todo como al principio (amplitud 100 %; wizard, a confirmar si vuelve a −25), el usuario toma un par de olas individuales más.
+- Después baja un poco el nivel y toma una más. Por ahora, eso sería todo.
