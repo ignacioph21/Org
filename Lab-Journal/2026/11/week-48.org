@@ -411,3 +411,7 @@
 - La última ola (Dia_2_Ola_35) se hizo con el factor de tiempo al 60 % y el wizard en −70.
 - En el disco (Elements, =Ignacio/Cuarta iteracion/=): =Una ola/Dia_2_Ola_16= … =Dia_2_Ola_35= (09:01–10:19, 20 tomas) y =JONSWAP/Dia_2_h20_2= (09:24). El usuario las nombró "Dia_2" (segundo día de filmación); acá van en =Cuarta iteración/Día 3/=.
 - Pedido del usuario: collage crudo de todas las olas individuales, sin copiar los cuadros a la compu; solo se guarda el render.
+** [10:35] Videos crudos a 60 fps de las tomas de una ola
+- Aclaración del usuario: el pedido de las 10:25 eran los *videos* crudos a 60 fps (como los del 24/11), no los collages. Los collages, más adelante.
+- Se leen los cuadros directo del disco y se guarda solo el .mp4 en =Día 3/Videos/crudo/=, con la ROI alrededor de la ola, sin compensar la luz.
+- Hoy cambian la altura del cuadro (256–1024 px) y los fps según la toma (60–1000 fps): Ola_29 y Ola_30 a 60 fps (tiempo real), Ola_31 a 125, Ola_27 y Ola_33 a 500, Ola_34 a 1000; el resto a 250.
