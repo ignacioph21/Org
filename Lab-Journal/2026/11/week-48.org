@@ -428,3 +428,7 @@
 - Hoja de control: un cuadro de cada video.
 #+ATTR_ORG: :width 900
 [[file:../../../Assets/2026/11/Day_25/videos_crudos_control.png]]
+** [10:55] Ola_36 y Ola_37: nivel un poco más alto, −50 y tiempo al 80 %
+- El usuario subió un poco el nivel del agua y mide con el wizard en −50 y el factor de tiempo al 80 % ("creo"). Nivel exacto, a confirmar.
+- En el disco aparecieron dos tomas nuevas, Dia_2_Ola_36 (10:36) y Dia_2_Ola_37 (10:40), las dos a 500 fps. Falta confirmar a cuál corresponde esta configuración; la nueva sería la 37.
+- Videos crudos a 60 fps en =Día 3/Videos/crudo/= (8,3 veces más lento). En las dos se ve la ola entera cruzando el cuadro.
