@@ -376,3 +376,9 @@
 - El usuario: falta rotar bien, eliminar lo negro y recortar mejor la ola (quedaba mucho espacio arriba). Ahora cada cuadro se rota para dejar horizontal la línea de agua (~1°). Abajo se corta donde empieza la franja negra del agua quieta y arriba a 1,25 veces la cresta más alta.
 - Ola_13 y Ola_14 quedan en 178 × 14,5 y 171 × 13,4 mm. Para revisar juntos el 25/11, junto con la red (si da algo coherente).
 - El usuario se quedó sin batería; seguimos mañana.
+* 2026-11-25
+** [09:10] Videos nuevos, mejor enfocados y con el damero; nivel 5,9 cm
+- El usuario filmó dos videos nuevos de la ola rompiendo, mejor enfocados y con el patrón de calibración (damero de 4 mm) en el cuadro.
+- Agregó un par de mm de agua: el nivel quedó en ≈ 5,9 cm desde el piso original (ayer, 5,60 cm). Eso da ≈ 4,4 cm en la paleta y ≈ 4,2 cm sobre el piso de la rampa (unidad y forzado a confirmar).
+- Todo lo de hoy va en =Cuarta iteración/Día 3/=.
+- La red del 24/11 se cortó en la iteración ~800 al quedarse la compu sin batería; no hay modelo guardado.
