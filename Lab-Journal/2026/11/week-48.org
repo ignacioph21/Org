@@ -415,3 +415,16 @@
 - Aclaración del usuario: el pedido de las 10:25 eran los *videos* crudos a 60 fps (como los del 24/11), no los collages. Los collages, más adelante.
 - Se leen los cuadros directo del disco y se guarda solo el .mp4 en =Día 3/Videos/crudo/=, con la ROI alrededor de la ola, sin compensar la luz.
 - Hoy cambian la altura del cuadro (256–1024 px) y los fps según la toma (60–1000 fps): Ola_29 y Ola_30 a 60 fps (tiempo real), Ola_31 a 125, Ola_27 y Ola_33 a 500, Ola_34 a 1000; el resto a 250.
+** [10:50] Videos crudos listos (20 tomas)
+- Las 20 tomas de una ola de hoy (Dia_2_Ola_16 a 35) ya están como videos crudos a 60 fps en =Día 3/Videos/crudo/= (110 MB en total). Los cuadros se leyeron del disco, sin copiarlos.
+- Cada video muestra una franja de 54–88 px alrededor de la ola, con los cuadros originales y sin compensar la luz.
+  - Primera versión: la franja agarraba también los rieles de abajo, que titilan con el parpadeo. Se corrigió tomando solo la franja continua alrededor de la ola.
+  - En la Ola_34 (1000 fps) no se encontró la ola sola; se usaron las mismas filas que en la Ola_33, que tiene la misma cámara.
+- *Qué hay en cada toma:*
+  - 16–27: encuadre como el de ayer, con el damero arriba.
+  - 28–30 y 35: planos generales de 1024 × 1024, con la placa del damero sostenida con pinzas.
+  - 31–34: cámara más abajo; la línea de agua queda en las últimas filas del cuadro.
+  - La Ola_19 dura 0,5 s y empieza con la ola ya en el cuadro. La Ola_27 (500 fps) sale oscura.
+- Hoja de control: un cuadro de cada video.
+#+ATTR_ORG: :width 900
+[[file:../../../Assets/2026/11/Day_25/videos_crudos_control.png]]
