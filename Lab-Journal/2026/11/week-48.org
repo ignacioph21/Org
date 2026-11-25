@@ -386,3 +386,6 @@
 - El usuario bajó el factor de amplitud del forzado al 75 %, para que las olas no rompan apenas las genera la paleta y pierdan energía ahí.
 - Cambió el wizard del LinMot a −50 (ayer: homing en −25 mm; a confirmar si es el homing o la distancia A).
 - Mide ahora con esa configuración.
+** [09:25] Ola_18: amplitud al 75 %, cambió poco
+- La toma con el factor de amplitud al 75 % y el wizard en −50 es la Ola_18. Según el usuario, la ola cambió poco.
+- Las dos tomas anteriores de hoy serían Ola_16 y Ola_17 (a confirmar).
