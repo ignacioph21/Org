@@ -382,3 +382,7 @@
 - Agregó un par de mm de agua: el nivel quedó en ≈ 5,9 cm desde el piso original (ayer, 5,60 cm). Eso da ≈ 4,4 cm en la paleta y ≈ 4,2 cm sobre el piso de la rampa (unidad y forzado a confirmar).
 - Todo lo de hoy va en =Cuarta iteración/Día 3/=.
 - La red del 24/11 se cortó en la iteración ~800 al quedarse la compu sin batería; no hay modelo guardado.
+** [09:15] Amplitud al 75 % y wizard a −50 mm
+- El usuario bajó el factor de amplitud del forzado al 75 %, para que las olas no rompan apenas las genera la paleta y pierdan energía ahí.
+- Cambió el wizard del LinMot a −50 (ayer: homing en −25 mm; a confirmar si es el homing o la distancia A).
+- Mide ahora con esa configuración.
