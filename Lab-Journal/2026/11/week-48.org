@@ -401,3 +401,7 @@
 ** [09:55] Plan del resto de la mañana
 - Con el fondo blanco y todo como al principio (amplitud 100 %; wizard, a confirmar si vuelve a −25), el usuario toma un par de olas individuales más.
 - Después baja un poco el nivel y toma una más. Por ahora, eso sería todo.
+** [10:05] Nivel bajado a ~5,5–5,6 cm, wizard en −25
+- El usuario bajó el nivel a ≈ 5,5–5,6 cm (desde el piso original): ≈ 4,0–4,1 cm en la paleta y ≈ 3,8–3,9 cm sobre el piso de la rampa.
+- Wizard de vuelta en −25 (como el 24/11).
+- Con eso mide la última toma de la mañana.
