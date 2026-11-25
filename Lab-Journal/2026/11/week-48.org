@@ -405,3 +405,5 @@
 - El usuario bajó el nivel a ≈ 5,5–5,6 cm (desde el piso original): ≈ 4,0–4,1 cm en la paleta y ≈ 3,8–3,9 cm sobre el piso de la rampa.
 - Wizard de vuelta en −25 (como el 24/11).
 - Con eso mide la última toma de la mañana.
+** [10:10] La toma con el nivel bajo fue con −50 y 75 %
+- *Corrige la entrada de las 10:05:* la toma con el nivel en ≈ 5,5–5,6 cm se hizo con el wizard en −50 y el factor de amplitud al 75 %, no con −25.
