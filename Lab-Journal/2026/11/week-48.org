@@ -393,3 +393,5 @@
 - El usuario volvió todo a lo original (amplitud 100 %, wizard como ayer) y mide con un forzado Bonneton (JONSWAP; cuál h, a confirmar: la curva de ayer es bonneton_C3_h_4.1cm y el nivel de hoy daría ≈ 4,4 cm en la paleta).
 ** [09:40] La Bonneton fue el JONSWAP h20, con el wizard en −50
 - *Corrige la entrada de las 09:30:* el forzado Bonneton que midió el usuario es el JONSWAP h20 (bonneton_C3_h_20cm, el principal, el mismo del 20/11), con amplitud al 100 % y el wizard en −50, para que la paleta quede bien adentro del canal.
+** [09:45] Fondo blanco de acrílico
+- El usuario puso un fondo blanco de acrílico detrás del canal (era un pendiente del 24/11: pared de atrás blanca). Desde qué toma, a confirmar (¿desde la h20?).
