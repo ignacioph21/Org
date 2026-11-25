@@ -407,3 +407,7 @@
 - Con eso mide la última toma de la mañana.
 ** [10:10] La toma con el nivel bajo fue con −50 y 75 %
 - *Corrige la entrada de las 10:05:* la toma con el nivel en ≈ 5,5–5,6 cm se hizo con el wizard en −50 y el factor de amplitud al 75 %, no con −25.
+** [10:25] Última ola: tiempo al 60 % y wizard en −70; tomas en el DEX
+- La última ola (Dia_2_Ola_35) se hizo con el factor de tiempo al 60 % y el wizard en −70.
+- En el disco (Elements, =Ignacio/Cuarta iteracion/=): =Una ola/Dia_2_Ola_16= … =Dia_2_Ola_35= (09:01–10:19, 20 tomas) y =JONSWAP/Dia_2_h20_2= (09:24). El usuario las nombró "Dia_2" (segundo día de filmación); acá van en =Cuarta iteración/Día 3/=.
+- Pedido del usuario: collage crudo de todas las olas individuales, sin copiar los cuadros a la compu; solo se guarda el render.
