@@ -544,3 +544,10 @@
   36/37, 58–95 % en 35, 54–97 % en 25/26. Reporte actualizado: [[file:../../../Assets/2026/11/Day_27/reporte_dia4.pdf][reporte_dia4.pdf]].
 - Pendientes para el usuario: ¿qué objetivo tenía la cámara? (perspectiva: k ≈ 0,9 → D ≈ 45 cm); foto del damero en la pared de ATRÁS
   para calibrar; ola chica sin rotura con la cámara a la altura del agua.
+** [15:35] Ola_27: rompe como spilling débil que el criterio de pendiente no ve; cierre de la tanda
+- Ola_27: desde ~470 ms H/h ≈ 0,7 constante (ola saturada) y desde 540 ms una cuña oscura al pie del frente que crece (pie turbulento):
+  spilling débil con el frente tendido (pendiente 0,9–1,0). Disipa ~2,7 veces lo del bore desde 430 ms: queda abierto.
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/11/Day_27/secuencia_Ola_27_pie_turbulento.png]]
+- Estado al cierre de la tanda: detección v2 en todas las tomas (Día 4/Resultados/superficie2_*.npz), balances energia2_*/energia_*_hib,
+  videos v2 (Día 4/Videos/crudo_linea2/, disipacion2/), reporte de 14 p. actualizado, README del Día 4 con todo el detalle.
