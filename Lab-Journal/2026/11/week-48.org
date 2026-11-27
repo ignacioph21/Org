@@ -551,3 +551,21 @@
 [[file:../../../Assets/2026/11/Day_27/secuencia_Ola_27_pie_turbulento.png]]
 - Estado al cierre de la tanda: detección v2 en todas las tomas (Día 4/Resultados/superficie2_*.npz), balances energia2_*/energia_*_hib,
   videos v2 (Día 4/Videos/crudo_linea2/, disipacion2/), reporte de 14 p. actualizado, README del Día 4 con todo el detalle.
+** [18:10] Cierre: papers de capilaridad en la rotura y micro-breaking; plan para replicar las DNS
+- Motivo: nuestras olas parecen spilling con pie capilar. Además (usuario), el video de la rampa más empinada del collage del póster
+  queda en el límite entre spilling y overturning: buen caso de referencia.
+- Notas completas: Cuarta iteración/Día 4/Bibliografía/capilaridad_rotura.md (PDFs en Bibliografía/PDFs/).
+- Bajados: Deike, Popinet & Melville 2015 (JFM 769; ya leído el Día 13) y Feddersen, Hanson, Mostert & Fincham 2024 (JFM 1000, A48;
+  ola solitaria que asoma y vuelca en Basilisk 2D, Re_w = 4×10⁴, Bo = 4000).
+- Falta bajar a mano (Cambridge y OAKTrust cortan a curl):
+  - Xu & Perlin 2023, JFM 962, A46: micro-breaking en canal convergente;
+  - la tesis de base: Chang Xu 2022, PhD Texas A&M, "Experiments on Instabilities and Energy Dissipation of Nonlinear
+    Gravity-Capillary Waves". Está abierta en OAKTrust, pero hay que bajarla desde el navegador;
+  - Mostert & Deike 2020, JFM 890, A12: disipación inercial de olas solitarias rompiendo en playa.
+- El código de Mostert & Deike 2020 ya está en Ubuntu WSL/fluids/Shallow-waters/Beach/wmostert_original.c: Basilisk 2D, BO 1000,
+  RE 4×10⁴, playa de 3°, a/h = 0,3, con balance de energía.
+- Nuestras olas en esa definición (Bo = ρgh₀²/σ, Re_w = √(gh₀³)/ν): Bo = 14–229 y Re_w = 3×10³–2,6×10⁴ para h₀ = 10–41 mm.
+  Bo queda 4–70 veces por debajo de las DNS: estamos en el régimen capilar, y la simulación sale barata.
+- Plan: instalar Basilisk (qcc no está en esta compu). Correr el caso original como control y después nuestros Bo, Re y pendiente
+  (2,07°), y la rampa empinada del collage. Comparar con el balance del Día 4 y con la forma del pie.
+- Sigue el lunes.
