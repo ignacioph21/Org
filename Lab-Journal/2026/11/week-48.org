@@ -488,3 +488,21 @@
 - Métrica de parpadeos (picos de un cuadro > 1 mm): en el frente 4–11 % de los puntos en Ola_31–34 y 3,6 % en Ola_37; ≤ 0,3 % en
   25/26/27/35/36. Detector v2 en marcha (superficie2.py): línea de adelante y silueta de arriba, cada una suave en x y en t, con la
   predicción del cuadro anterior trasladada a la velocidad global de la ola y limpieza a lo largo de las características.
+** [14:47] Procesado v2: menos parpadeos; la línea que se sigue es la de la pared de adelante (en foco)
+- superficie2.py: línea de adelante con predicción del cuadro anterior trasladada a la velocidad global de la ola (trayectoria del punto
+  medio del frente, ajuste polinomial: comparar perfiles cuadro a cuadro NO sirve porque el detector tiene un patrón de ruido fijo),
+  la detección v1 como segunda referencia solo cuando la ola llegó y la predicción no (Ola_37 entra por un borde sucio), y limpieza a lo
+  largo de las características. Parpadeos de un cuadro en el frente (ventana del balance): Ola_36 82 → 6, Ola_37 145 → 16,
+  Ola_33 272 → 49, Ola_35 41 → 12, Ola_32 23 → 12 (versión final corriendo). La energía de 36/37 no cambia (< 1 mJ/m).
+- ¿Cuál línea? Por foco: el damero (y el plano de foco) está en la pared de ADELANTE; su menisco es un mínimo NÍTIDO (1–2 px,
+  30–45 niveles). La pared de atrás aparece, si aparece, ancha y tenue (en el frente a la derecha del centro, por ENCIMA, como predice
+  la proyección); la línea detectada es la nítida. Los escalones cerca de la cresta (400–480 ms en Ola_36) son la misma línea nítida que se
+  empina, no un salto de línea. Calibrar k y z_c con una "segunda línea" no funcionó: la depresión ancha que aparece queda a 2,6 mm
+  fija debajo (estructura óptica del menisco, no sigue la proyección).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_27/linea_nitida_Dia_2_Ola_36.png]]
+- Ojo con la rotura de Ola_36: la "gorra plana" de la cresta (360–380 ms) cae justo en la franja que predice la proyección para la
+  rampa entre la cresta de atrás y la de adelante; hay que revisar el instante de rotura con la línea de adelante.
+#+ATTR_ORG: :width 500
+[[file:../../../Assets/2026/11/Day_27/gorra_perspectiva_Ola_36.png]]
+- Repetibilidad (Ola_32–34, la misma ola a 250/500/1000 c/s; Ola_31 resultó ser otra ola): v1 coincide a 0,24–0,26 mm rms (p99 0,7 mm).

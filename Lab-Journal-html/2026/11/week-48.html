@@ -17,105 +17,106 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgba3f8a5">Referencias</a></li>
-<li><a href="#orge4ae97b">2026-11-24</a>
+<li><a href="#orga5115ae">Referencias</a></li>
+<li><a href="#org9342207">2026-11-24</a>
 <ul>
-<li><a href="#org73bc7b7">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</a></li>
-<li><a href="#org6c54555">[11:25] Integral parcial de la PDF pesada, sin normalizar</a></li>
-<li><a href="#orge4242f4">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</a></li>
-<li><a href="#org45c6b13">[11:35] Curvas de forzado para los videos, en el pendrive</a></li>
-<li><a href="#org1fd2ba5">[11:50] Disco externo para los videos: DEX5</a></li>
-<li><a href="#org740372d">[11:58] Salto único con meseta y bajada lineal</a></li>
-<li><a href="#org6c298e6">[12:10] Montaje de la Cuarta iteración (lo que contó el usuario)</a></li>
-<li><a href="#orgf4ab36e">[12:20] JONSWAP con la profundidad correcta para este montaje</a></li>
-<li><a href="#org5480619">[12:24] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm</a></li>
-<li><a href="#org9114704">[12:32] Esquema del montaje nuevo y por qué el JONSWAP de 4,15 cm</a></li>
-<li><a href="#org0e20b97">[13:34] Llenado: faltan 0,25 cm</a></li>
-<li><a href="#org391becf">[13:46] Cuba llena: nivel 5,70 cm → JONSWAP de 4,20 cm</a></li>
-<li><a href="#org7c73ced">[13:58] Nivel bajado 1 mm: 5,60 cm → JONSWAP de 4,10 cm</a></li>
-<li><a href="#org4e962f3">[14:04] Configuración del motor</a></li>
-<li><a href="#org22ab3b2">[14:10] Cámara conectada</a></li>
-<li><a href="#orgd3f7095">[14:58] CAMBIO DE PROFUNDIDAD DE LA PALETA (~2 mm más sumergida); el JONSWAP h20 da poca amplitud</a></li>
-<li><a href="#org86709bd">[15:10] Condiciones por horario (para asignar cada video)</a></li>
-<li><a href="#org5fab06e">[15:31] Videos en el DEX5</a></li>
-<li><a href="#orga4175e4">[15:40] Todas las mediciones del día (videos)</a></li>
-<li><a href="#orgf4ef320">[16:10] Idea a verificar: ¿el frente roto se ensancha como √t?</a></li>
-<li><a href="#org59aaf2e">[16:13] Detector de menisco (Ola<sub>9</sub>), video de control y espectros</a></li>
-<li><a href="#orgb385be2">[16:17] Calibración con el damero y evolución del espectro en una ventana que sigue a la ola</a></li>
-<li><a href="#org42eea68">[16:31] Encuadres, collage tipo Fig. 2a, videos crudos y JONSWAP h20</a></li>
-<li><a href="#org8bc8955">[16:49] Tomas nuevas Ola<sub>13</sub>, Ola<sub>14</sub> y Ola<sub>15</sub></a></li>
-<li><a href="#orgb4439db">[17:24] Olas individuales sincronizadas, en dos columnas</a></li>
-<li><a href="#orga73cec4">[17:31] Idea a hacer: FFT 2D en ventanas</a></li>
-<li><a href="#orgc68cf71">[17:38] Todas las olas individuales analizadas</a></li>
-<li><a href="#org682a958">[17:41] Forma de una ola: video contra sensor</a></li>
-<li><a href="#orgeb3c2a5">[17:45] Video contra S3 con la hipótesis de Taylor</a></li>
-<li><a href="#org203b146">[17:47] El instante del video más parecido a la ola de S3</a></li>
-<li><a href="#org3fb6dd5">[17:48] Forma normalizada en altura y en ancho: video y S3 tienen la misma forma</a></li>
-<li><a href="#org798e915">[17:52] Autosimilaridad tipo Cole–Hopf y el borde negro delante de la ola</a></li>
-<li><a href="#orgbb0b5c9">[17:53] Estado al cierre del día</a></li>
-<li><a href="#orgeff76fb">[17:58] Cómo ubicar la cámara sobre la rampa</a></li>
-<li><a href="#org953e096">[18:00] Calibración de todas las tomas: la cámara se movió 9 veces</a></li>
-<li><a href="#orgb72c65d">[18:03] Tiras calibradas con la ola de Ola<sub>11</sub></a></li>
-<li><a href="#orgd06637f">[18:08] Seguir el fondo (rampa → playa): primer intento y visor para ajustar el realce</a></li>
-<li><a href="#org7a9af6c">[18:12] Fondo encontrado en Ola<sub>9</sub> y Ola<sub>7</sub>: la playa empieza ~24 cm antes de la unión de paneles</a></li>
-<li><a href="#orgde7e69e">[18:18] Fotos: altura del agua y montaje completo</a></li>
-<li><a href="#orga96f9c2">[18:19] El valle detrás de la pared negra y las columnas: primeros intentos</a></li>
-<li><a href="#org4f49229">[18:31] Videos de la línea detectada, y refinar la detección</a></li>
-<li><a href="#org0dc600d">[18:36] Búsqueda: cómo detectar bien la superficie libre en videos laterales</a></li>
-<li><a href="#org028bac0">[18:46] Detector v4 (programación dinámica) en las últimas seis tomas</a></li>
-<li><a href="#org88a7e7a">[18:50] v4 ruidosa antes de la ola; plan para hacerlo con una red</a></li>
-<li><a href="#org013f62b">[19:10] Muesca detrás de la cresta: dos barras; el usuario dibuja la línea a mano</a></li>
-<li><a href="#org55b8797">[19:20] Espectros de la Ola<sub>15</sub> con la línea corregida a mano</a></li>
-<li><a href="#org5cd2bc0">[19:29] Bonneton en el espectro temporal de la ola sola; los videos quedan solo para el collage</a></li>
-<li><a href="#org4f38d7f">[19:53] Collages tipo Fig. 2a con las distintas olas; versión con los cuadros crudos</a></li>
-<li><a href="#org2a593d2">[19:56] Collages crudos sin la unión de paneles</a></li>
-<li><a href="#org1754bcb">[19:58] Collages crudos emprolijados; seguimos mañana</a></li>
+<li><a href="#orgfd800b0">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</a></li>
+<li><a href="#org76f1c6e">[11:25] Integral parcial de la PDF pesada, sin normalizar</a></li>
+<li><a href="#org450a7eb">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</a></li>
+<li><a href="#orgcdcc4ed">[11:35] Curvas de forzado para los videos, en el pendrive</a></li>
+<li><a href="#org6745b44">[11:50] Disco externo para los videos: DEX5</a></li>
+<li><a href="#org3141050">[11:58] Salto único con meseta y bajada lineal</a></li>
+<li><a href="#org8ebe85d">[12:10] Montaje de la Cuarta iteración (lo que contó el usuario)</a></li>
+<li><a href="#orgf62ad4f">[12:20] JONSWAP con la profundidad correcta para este montaje</a></li>
+<li><a href="#org51c40d8">[12:24] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm</a></li>
+<li><a href="#org4a9d281">[12:32] Esquema del montaje nuevo y por qué el JONSWAP de 4,15 cm</a></li>
+<li><a href="#org630993d">[13:34] Llenado: faltan 0,25 cm</a></li>
+<li><a href="#orga5777d8">[13:46] Cuba llena: nivel 5,70 cm → JONSWAP de 4,20 cm</a></li>
+<li><a href="#org4b31578">[13:58] Nivel bajado 1 mm: 5,60 cm → JONSWAP de 4,10 cm</a></li>
+<li><a href="#orgbcc7f40">[14:04] Configuración del motor</a></li>
+<li><a href="#org0ea86fe">[14:10] Cámara conectada</a></li>
+<li><a href="#org7740ac6">[14:58] CAMBIO DE PROFUNDIDAD DE LA PALETA (~2 mm más sumergida); el JONSWAP h20 da poca amplitud</a></li>
+<li><a href="#orga8ca587">[15:10] Condiciones por horario (para asignar cada video)</a></li>
+<li><a href="#org2160296">[15:31] Videos en el DEX5</a></li>
+<li><a href="#org48ac82d">[15:40] Todas las mediciones del día (videos)</a></li>
+<li><a href="#org2daa696">[16:10] Idea a verificar: ¿el frente roto se ensancha como √t?</a></li>
+<li><a href="#org66cb9a5">[16:13] Detector de menisco (Ola<sub>9</sub>), video de control y espectros</a></li>
+<li><a href="#org883c86b">[16:17] Calibración con el damero y evolución del espectro en una ventana que sigue a la ola</a></li>
+<li><a href="#org1510076">[16:31] Encuadres, collage tipo Fig. 2a, videos crudos y JONSWAP h20</a></li>
+<li><a href="#org56fc832">[16:49] Tomas nuevas Ola<sub>13</sub>, Ola<sub>14</sub> y Ola<sub>15</sub></a></li>
+<li><a href="#org4efa889">[17:24] Olas individuales sincronizadas, en dos columnas</a></li>
+<li><a href="#org1a581c4">[17:31] Idea a hacer: FFT 2D en ventanas</a></li>
+<li><a href="#orgb900776">[17:38] Todas las olas individuales analizadas</a></li>
+<li><a href="#org4c33048">[17:41] Forma de una ola: video contra sensor</a></li>
+<li><a href="#orgde19352">[17:45] Video contra S3 con la hipótesis de Taylor</a></li>
+<li><a href="#org0af3cb6">[17:47] El instante del video más parecido a la ola de S3</a></li>
+<li><a href="#org20a87c6">[17:48] Forma normalizada en altura y en ancho: video y S3 tienen la misma forma</a></li>
+<li><a href="#org3fe8668">[17:52] Autosimilaridad tipo Cole–Hopf y el borde negro delante de la ola</a></li>
+<li><a href="#org1e88fe3">[17:53] Estado al cierre del día</a></li>
+<li><a href="#orgeb6093b">[17:58] Cómo ubicar la cámara sobre la rampa</a></li>
+<li><a href="#org4097e51">[18:00] Calibración de todas las tomas: la cámara se movió 9 veces</a></li>
+<li><a href="#org8163465">[18:03] Tiras calibradas con la ola de Ola<sub>11</sub></a></li>
+<li><a href="#org5794a99">[18:08] Seguir el fondo (rampa → playa): primer intento y visor para ajustar el realce</a></li>
+<li><a href="#orgf868c48">[18:12] Fondo encontrado en Ola<sub>9</sub> y Ola<sub>7</sub>: la playa empieza ~24 cm antes de la unión de paneles</a></li>
+<li><a href="#org2bd687c">[18:18] Fotos: altura del agua y montaje completo</a></li>
+<li><a href="#org2133fe2">[18:19] El valle detrás de la pared negra y las columnas: primeros intentos</a></li>
+<li><a href="#org88ebd68">[18:31] Videos de la línea detectada, y refinar la detección</a></li>
+<li><a href="#orgc904b60">[18:36] Búsqueda: cómo detectar bien la superficie libre en videos laterales</a></li>
+<li><a href="#orgda68bb0">[18:46] Detector v4 (programación dinámica) en las últimas seis tomas</a></li>
+<li><a href="#org34c646f">[18:50] v4 ruidosa antes de la ola; plan para hacerlo con una red</a></li>
+<li><a href="#org79c9ba1">[19:10] Muesca detrás de la cresta: dos barras; el usuario dibuja la línea a mano</a></li>
+<li><a href="#org0f924a8">[19:20] Espectros de la Ola<sub>15</sub> con la línea corregida a mano</a></li>
+<li><a href="#orgc610bea">[19:29] Bonneton en el espectro temporal de la ola sola; los videos quedan solo para el collage</a></li>
+<li><a href="#org40144ec">[19:53] Collages tipo Fig. 2a con las distintas olas; versión con los cuadros crudos</a></li>
+<li><a href="#orga1f39e2">[19:56] Collages crudos sin la unión de paneles</a></li>
+<li><a href="#org9efbead">[19:58] Collages crudos emprolijados; seguimos mañana</a></li>
 </ul>
 </li>
-<li><a href="#org4e0a593">2026-11-25</a>
+<li><a href="#org21ea2ad">2026-11-25</a>
 <ul>
-<li><a href="#orga29e83e">[09:10] Videos nuevos, mejor enfocados y con el damero; nivel 5,9 cm</a></li>
-<li><a href="#org7e80a01">[09:15] Amplitud al 75 % y wizard a −50 mm</a></li>
-<li><a href="#orgd9a36a0">[09:25] Ola<sub>18</sub>: amplitud al 75 %, cambió poco</a></li>
-<li><a href="#org0cfb3a1">[09:30] Vuelta a la configuración original; medición con un forzado Bonneton</a></li>
-<li><a href="#org36265e2">[09:40] La Bonneton fue el JONSWAP h20, con el wizard en −50</a></li>
-<li><a href="#org2f30854">[09:45] Fondo blanco de acrílico</a></li>
-<li><a href="#orge1d97b4">[09:50] Cámara más abajo</a></li>
-<li><a href="#orge43eb21">[09:55] Plan del resto de la mañana</a></li>
-<li><a href="#org4983ced">[10:05] Nivel bajado a ~5,5–5,6 cm, wizard en −25</a></li>
-<li><a href="#org24826ef">[10:10] La toma con el nivel bajo fue con −50 y 75 %</a></li>
-<li><a href="#orgd267775">[10:25] Última ola: tiempo al 60 % y wizard en −70; tomas en el DEX</a></li>
-<li><a href="#orgecd3988">[10:35] Videos crudos a 60 fps de las tomas de una ola</a></li>
-<li><a href="#org026d9c3">[10:50] Videos crudos listos (20 tomas)</a></li>
-<li><a href="#org3d3f380">[10:55] Ola<sub>36</sub> y Ola<sub>37</sub>: nivel un poco más alto, −50 y tiempo al 80 %</a></li>
-<li><a href="#org8e64fc5">[11:05] Fotos de los tres niveles de agua; cierre de las mediciones del día</a></li>
+<li><a href="#org1dd67ec">[09:10] Videos nuevos, mejor enfocados y con el damero; nivel 5,9 cm</a></li>
+<li><a href="#orgc228d84">[09:15] Amplitud al 75 % y wizard a −50 mm</a></li>
+<li><a href="#org27e9e1b">[09:25] Ola<sub>18</sub>: amplitud al 75 %, cambió poco</a></li>
+<li><a href="#org6f38dc9">[09:30] Vuelta a la configuración original; medición con un forzado Bonneton</a></li>
+<li><a href="#org6ab87f0">[09:40] La Bonneton fue el JONSWAP h20, con el wizard en −50</a></li>
+<li><a href="#org4bb9dbf">[09:45] Fondo blanco de acrílico</a></li>
+<li><a href="#org8f607a3">[09:50] Cámara más abajo</a></li>
+<li><a href="#orgeeb5b59">[09:55] Plan del resto de la mañana</a></li>
+<li><a href="#org88f007b">[10:05] Nivel bajado a ~5,5–5,6 cm, wizard en −25</a></li>
+<li><a href="#orga7dc2af">[10:10] La toma con el nivel bajo fue con −50 y 75 %</a></li>
+<li><a href="#orgb0bbfbe">[10:25] Última ola: tiempo al 60 % y wizard en −70; tomas en el DEX</a></li>
+<li><a href="#org1487f04">[10:35] Videos crudos a 60 fps de las tomas de una ola</a></li>
+<li><a href="#org5a11dda">[10:50] Videos crudos listos (20 tomas)</a></li>
+<li><a href="#org001e971">[10:55] Ola<sub>36</sub> y Ola<sub>37</sub>: nivel un poco más alto, −50 y tiempo al 80 %</a></li>
+<li><a href="#org80de465">[11:05] Fotos de los tres niveles de agua; cierre de las mediciones del día</a></li>
 </ul>
 </li>
-<li><a href="#orgfcaa538">2026-11-27</a>
+<li><a href="#orgf04eef1">2026-11-27</a>
 <ul>
-<li><a href="#org4ff0c85">[08:50] Superficie libre con fondo blanco y balance de energía (Cuarta iteración, Día 4)</a></li>
-<li><a href="#orgd60cd16">[09:45] Resultados: la disipación arranca con el rodillo; el JONSWAP chico se amortigua 10 veces más que lo laminar</a></li>
-<li><a href="#orgbc73e20">[13:56] Tarde: todas las olas con fondo blanco y revisión de errores</a></li>
-<li><a href="#org67a6553">[14:27] Perspectiva: la línea de la pared de atrás se mete en el frente (procesado de videos, en curso)</a></li>
+<li><a href="#orgd148b59">[08:50] Superficie libre con fondo blanco y balance de energía (Cuarta iteración, Día 4)</a></li>
+<li><a href="#org756b8ed">[09:45] Resultados: la disipación arranca con el rodillo; el JONSWAP chico se amortigua 10 veces más que lo laminar</a></li>
+<li><a href="#org85d3cba">[13:56] Tarde: todas las olas con fondo blanco y revisión de errores</a></li>
+<li><a href="#org656130f">[14:27] Perspectiva: la línea de la pared de atrás se mete en el frente (procesado de videos, en curso)</a></li>
+<li><a href="#org0447a72">[14:47] Procesado v2: menos parpadeos; la línea que se sigue es la de la pared de adelante (en foco)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgba3f8a5" class="outline-2">
-<h2 id="orgba3f8a5">Referencias</h2>
-<div class="outline-text-2" id="text-orgba3f8a5">
+<div id="outline-container-orga5115ae" class="outline-2">
+<h2 id="orga5115ae">Referencias</h2>
+<div class="outline-text-2" id="text-orga5115ae">
 <div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-orge4ae97b" class="outline-2">
-<h2 id="orge4ae97b">2026-11-24</h2>
-<div class="outline-text-2" id="text-orge4ae97b">
+<div id="outline-container-org9342207" class="outline-2">
+<h2 id="org9342207">2026-11-24</h2>
+<div class="outline-text-2" id="text-org9342207">
 </div>
-<div id="outline-container-org73bc7b7" class="outline-3">
-<h3 id="org73bc7b7">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</h3>
-<div class="outline-text-3" id="text-org73bc7b7">
+<div id="outline-container-orgfd800b0" class="outline-3">
+<h3 id="orgfd800b0">[09:45] Reunión de Labo de hoy: PDF de los incrementos y cumulantes</h3>
+<div class="outline-text-3" id="text-orgfd800b0">
 <ul class="org-ul">
 <li>Pedido del usuario: solo los gráficos de las PDF, prolijos, y lo de los cumulantes. Presentación en <code>~/Documentos/Reuniones de Labo/2026-11-24/labo_2026-11-24.pdf</code> (6 diapositivas).</li>
 <li>Paneles nuevos, hechos a la medida de la diapositiva, en <code>Códigos/</code> (<code>pdfs_panel.py</code>, <code>cumulantes_panel.py</code>). Son versiones limpias de las figuras del 17/11 (Día 15, PDF pesadas) y del 20/11 (Día 17), con los mismos datos (S3, JONSWAP principal) y los mismos números.</li>
@@ -123,33 +124,33 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org6c54555" class="outline-3">
-<h3 id="org6c54555">[11:25] Integral parcial de la PDF pesada, sin normalizar</h3>
-<div class="outline-text-3" id="text-org6c54555">
+<div id="outline-container-org76f1c6e" class="outline-3">
+<h3 id="org76f1c6e">[11:25] Integral parcial de la PDF pesada, sin normalizar</h3>
+<div class="outline-text-3" id="text-org76f1c6e">
 <ul class="org-ul">
 <li>Pedido del usuario, sobre la integral acumulada del 20/11 (<code>Tercera iteración/Día 17/Figuras/integral_acumulada.pdf</code>): la misma integral, pero sin dividir por ⟨|z|<sup>p</sup>⟩. Script <code>~/Documentos/Reuniones de Labo/2026-11-24/Códigos/integral_panel.py</code> → <code>Figuras/P_integral_sin_normalizar.pdf</code> (todavía no está en la presentación).</li>
 <li>Arriba M<sub>p</sub>(Z) = ∫<sub>|z|&lt;Z</sub> |z|<sup>p</sup> P(z) dz, que llega a la meseta ⟨|z|<sup>p</sup>⟩ = S<sub>p</sub>/σ<sub>τ</sub><sup>p</sup>; abajo lo que falta, ⟨|z|<sup>p</sup>⟩ − M<sub>p</sub>(Z). Gris: la gaussiana exacta, ⟨|z|<sup>p</sup>⟩<sub>G</sub> · P((p+1)/2, Z²/2). Punteada: |z| máximo medido. S3, JONSWAP principal; τ = 115 / 206 / 371 ms.</li>
 <li>Así se ven directamente las mesetas contra la gaussiana. En 1/2f<sub>ν</sub>: p = 6 llega a 50 (gaussiana 15) y p = 4 a 5,5 (gaussiana 3). En 206 ms: 20 y 3,4. En 1/2f<sub>m</sub> quedan por debajo de la gaussiana (12 contra 15; 2,7 contra 3), con el escalón del evento único en |z| ≈ 4,5.</li>
 </ul>
 
-<div id="org82b7673" class="figure">
+<div id="orgbbafa33" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/integral_sin_normalizar.png" alt="integral_sin_normalizar.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orge4242f4" class="outline-3">
-<h3 id="orge4242f4">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</h3>
-<div class="outline-text-3" id="text-orge4242f4">
+<div id="outline-container-org450a7eb" class="outline-3">
+<h3 id="org450a7eb">[11:27] Cuarta iteración, Día 2: llenado de la cuba para los videos</h3>
+<div class="outline-text-3" id="text-org450a7eb">
 <ul class="org-ul">
 <li>Se está llenando la cuba con <b>agua destilada</b> (el plan del Día 1 decía agua de la canilla). Arrancamos temprano; el llenado tarda aproximadamente una hora más (lista hacia las 12:30).</li>
 <li>Hoy se filma la ola rompiendo con la rampa nueva (plan en <code>Cuarta iteración/Día 1/README.md</code>). Todo lo de hoy va en <code>Cuarta iteración/Día 2/</code> (<code>Videos/</code>, <code>Códigos/</code>, <code>Figuras/</code>; registro en el README).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org45c6b13" class="outline-3">
-<h3 id="org45c6b13">[11:35] Curvas de forzado para los videos, en el pendrive</h3>
-<div class="outline-text-3" id="text-org45c6b13">
+<div id="outline-container-orgcdcc4ed" class="outline-3">
+<h3 id="orgcdcc4ed">[11:35] Curvas de forzado para los videos, en el pendrive</h3>
+<div class="outline-text-3" id="text-orgcdcc4ed">
 <ul class="org-ul">
 <li>En <code>KINGSTON/Posgrado/Pruebas rampa impresa 3D cuba grande/Cuarta iteración/Día 2 (24-11) Videos/</code> (verificadas byte a byte; una columna en mm, sin encabezado):
 <ol class="org-ol">
@@ -161,15 +162,15 @@
 <li>Plan de tomas: un video por cada JONSWAP, uno de muchos forzados y después varios solo del rompimiento del salto único, a más resolución, para ahorrar espacio y tiempo.</li>
 </ul>
 
-<div id="org8820e16" class="figure">
+<div id="orge26acb7" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/un_salto_control.png" alt="un_salto_control.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org1fd2ba5" class="outline-3">
-<h3 id="org1fd2ba5">[11:50] Disco externo para los videos: DEX5</h3>
-<div class="outline-text-3" id="text-org1fd2ba5">
+<div id="outline-container-org6745b44" class="outline-3">
+<h3 id="org6745b44">[11:50] Disco externo para los videos: DEX5</h3>
+<div class="outline-text-3" id="text-org6745b44">
 <ul class="org-ul">
 <li><p>
 Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escritura secuencial medida con 1 GB (<code>dd</code> con <code>conv=fdatasync</code>, archivo temporal borrado):
@@ -230,24 +231,24 @@ Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escrit
 </ul>
 </div>
 </div>
-<div id="outline-container-org740372d" class="outline-3">
-<h3 id="org740372d">[11:58] Salto único con meseta y bajada lineal</h3>
-<div class="outline-text-3" id="text-org740372d">
+<div id="outline-container-org3141050" class="outline-3">
+<h3 id="org3141050">[11:58] Salto único con meseta y bajada lineal</h3>
+<div class="outline-text-3" id="text-org3141050">
 <ul class="org-ul">
 <li>Pedido del usuario: el frente tal cual, pero que una vez arriba la paleta quede quieta un rato y después baje linealmente, sin el ruido sumado. La interfaz periodiza sola, así que alcanza con un ciclo.</li>
 <li><code>17920ms_un_salto_random_3_curva_04_meseta_3s_bajada_lineal.csv</code>: frente de la curva 04 original (con su ruido) hasta su máximo (96,4 mm a los 0,68 s, donde la velocidad pasa por cero), <b>3 s quieta</b> y bajada lineal sin ruido hasta 0 en 13,92 s (6,9 mm/s, la misma pendiente que la original). Período 17,92 s; |v| ≤ 525 mm/s.</li>
 <li>En el pendrive (<code>Cuarta iteración/Día 2 (24-11) Videos/</code>) reemplaza a la versión anterior. Generador: <code>generador_un_salto.py --meseta 3</code>.</li>
 </ul>
 
-<div id="orgfa4d938" class="figure">
+<div id="org903701d" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/un_salto_meseta_control.png" alt="un_salto_meseta_control.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org6c298e6" class="outline-3">
-<h3 id="org6c298e6">[12:10] Montaje de la Cuarta iteración (lo que contó el usuario)</h3>
-<div class="outline-text-3" id="text-org6c298e6">
+<div id="outline-container-org8ebe85d" class="outline-3">
+<h3 id="org8ebe85d">[12:10] Montaje de la Cuarta iteración (lo que contó el usuario)</h3>
+<div class="outline-text-3" id="text-org8ebe85d">
 <ul class="org-ul">
 <li><b>Nivel:</b> faltaba llenar ~1 cm (iba en ~4,8–4,9 cm). El setup tiene una base de <b>1,5 cm</b> y encima la rampa con <b>2 mm</b> de piso, así que el nivel equivalente a 3,95 cm es <b>3,95 + 1,7 = 5,65 cm</b> desde el piso original. Lista en media hora a una hora.</li>
 <li><b>Paleta:</b> la del motor nuevo, de <b>4,5 cm de ancho</b>, entra adentro del canal (antes era la paleta grande). El canal ocupa casi todo el ancho de la cuba. Con la paleta lo más estirada posible queda al borde de la rampa. Queda a ~1 cm del piso nuevo, o sea a <b>2,5 cm del piso original</b>.</li>
@@ -256,24 +257,24 @@ Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escrit
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf4ab36e" class="outline-3">
-<h3 id="orgf4ab36e">[12:20] JONSWAP con la profundidad correcta para este montaje</h3>
-<div class="outline-text-3" id="text-orgf4ab36e">
+<div id="outline-container-orgf62ad4f" class="outline-3">
+<h3 id="orgf62ad4f">[12:20] JONSWAP con la profundidad correcta para este montaje</h3>
+<div class="outline-text-3" id="text-orgf62ad4f">
 <ul class="org-ul">
 <li>Con el piso nuevo a 1,7 cm y nivel 5,65 cm, la profundidad en la paleta es <b>3,95 cm</b> (a confirmar: si debajo de la paleta el piso está a 1,5 cm, serían 4,15 cm). La curva de 3,5 cm que estaba en el pendrive era la del montaje de octubre.</li>
 <li>Nueva: <code>Cuarta iteración/Día 2/Curvas forzado/Curvas_jonswap/bonneton_C3_h_3.95cm_Tp_0.48_Hm0_8.5mm_seed_1_fhi_2.5fp_una_curva/599962ms_…csv</code> (escalada de vN03-C3: <b>T<sub>p</sub> = 0,475 s, H<sub>m0</sub> = 8,5 mm</b>, k<sub>p</sub> h = 0,951, ξ0 = 0,226; 600 s; x de 0 a 63 mm, |v| ≤ 109 mm/s). Generador copiado del Día 1 de la Tercera iteración, sin cambios.</li>
 <li><b>Falta copiarla al pendrive</b> (estaba desconectado); va en lugar de la de 3,5 cm.</li>
 </ul>
 
-<div id="orgf9da667" class="figure">
+<div id="orge9fb6c6" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/jonswap_h3.95_control.png" alt="jonswap_h3.95_control.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org5480619" class="outline-3">
-<h3 id="org5480619">[12:24] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm</h3>
-<div class="outline-text-3" id="text-org5480619">
+<div id="outline-container-org51c40d8" class="outline-3">
+<h3 id="org51c40d8">[12:24] Corrección: la paleta se mueve sobre la base de 1,5 cm → JONSWAP de 4,15 cm</h3>
+<div class="outline-text-3" id="text-org51c40d8">
 <ul class="org-ul">
 <li>El usuario da las alturas desde el piso original, por consistencia, pero la paleta, adentro del canal, se mueve sobre la base de <b>1,5 cm</b> (no sobre el piso de 2 mm de la rampa). Con nivel 5,65 cm, la profundidad en la paleta es <b>4,15 cm</b>, no 3,95 (la entrada de las 12:20 queda corregida; esa curva se borró).</li>
 <li>Curva: <code>bonneton_C3_h_4.15cm_Tp_0.49_Hm0_8.9mm_seed_1_fhi_2.5fp_una_curva</code> (<b>T<sub>p</sub> = 0,487 s, H<sub>m0</sub> = 8,9 mm</b>, k<sub>p</sub> h = 0,951, ξ0 = 0,226). Regenerada hoy en <code>Cuarta iteración/Día 2/Curvas forzado/</code>: es idéntica byte a byte a la de 4,15 cm del 13/10, que ya está en el pendrive en <code>Tercera iteración/Curvas forzado/Curvas_jonswap/</code> (la que en octubre quedó como &ldquo;obsoleta&rdquo; porque el punto de referencia estaba del otro lado).</li>
@@ -281,15 +282,15 @@ Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escrit
 </ul>
 </div>
 </div>
-<div id="outline-container-org9114704" class="outline-3">
-<h3 id="org9114704">[12:32] Esquema del montaje nuevo y por qué el JONSWAP de 4,15 cm</h3>
-<div class="outline-text-3" id="text-org9114704">
+<div id="outline-container-org4a9d281" class="outline-3">
+<h3 id="org4a9d281">[12:32] Esquema del montaje nuevo y por qué el JONSWAP de 4,15 cm</h3>
+<div class="outline-text-3" id="text-org4a9d281">
 <ul class="org-ul">
 <li>Esquema (<code>Cuarta iteración/Día 2/Códigos/esquema_montaje.py</code>): vista lateral (escala vertical ×9, alturas desde el piso original) y planta (ancho ×3). En negro, lo que contó el usuario; en <b>naranja, lo supuesto o deducido, a confirmar</b>: cuba de 198 cm y 5 cm de ancho, rampa de 99 cm con tan β = 0,035 y primera playa plana de 18 cm (como en octubre), segunda playa plana. Con eso, el pie de la rampa (= paleta estirada al máximo) queda a ~31 cm de la pared del lado de la paleta.</li>
 <li>Profundidades con nivel 5,65 cm: <b>4,15 cm en la paleta</b> (sumergida 3,15 cm, 1 cm libre abajo), 3,95 cm sobre el piso de la rampa (= el 3,95 de la Tercera iteración), ~0,5 cm sobre la playa, 4,15 cm entre el fin de la segunda playa y la pared.</li>
 </ul>
 
-<div id="org4b1fc27" class="figure">
+<div id="org09c973c" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/esquema_montaje.png" alt="esquema_montaje.png" />
 </p>
 </div>
@@ -362,24 +363,24 @@ Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escrit
 </ul>
 </div>
 </div>
-<div id="outline-container-org0e20b97" class="outline-3">
-<h3 id="org0e20b97">[13:34] Llenado: faltan 0,25 cm</h3>
-<div class="outline-text-3" id="text-org0e20b97">
+<div id="outline-container-org630993d" class="outline-3">
+<h3 id="org630993d">[13:34] Llenado: faltan 0,25 cm</h3>
+<div class="outline-text-3" id="text-org630993d">
 <ul class="org-ul">
 <li>Nivel ≈ <b>5,40 cm</b> desde el piso original (4,0 cm en la paleta); el objetivo es 5,65 cm. A las 12:10 faltaba ~1 cm, así que sube ≈ 0,5 cm/h: llega hacia las <b>~14:05</b>.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org391becf" class="outline-3">
-<h3 id="org391becf">[13:46] Cuba llena: nivel 5,70 cm → JONSWAP de 4,20 cm</h3>
-<div class="outline-text-3" id="text-org391becf">
+<div id="outline-container-orga5777d8" class="outline-3">
+<h3 id="orga5777d8">[13:46] Cuba llena: nivel 5,70 cm → JONSWAP de 4,20 cm</h3>
+<div class="outline-text-3" id="text-orga5777d8">
 <ul class="org-ul">
 <li>Nivel final <b>5,70 cm</b> desde el piso original (el objetivo era 5,65). Profundidades: <b>4,20 cm en la paleta</b> (sumergida 3,20 cm), 4,00 cm sobre el piso de la rampa (en la Tercera iteración, 3,95 cm), ~0,54 cm sobre la playa.</li>
 <li>JONSWAP regenerado con h = nivel − 1,5 = 4,20 cm: <code>Cuarta iteración/Día 2/Curvas forzado/Curvas_jonswap/bonneton_C3_h_4.2cm_Tp_0.49_Hm0_9.0mm_seed_1_fhi_2.5fp_una_curva/599962ms_…csv</code> (<b>T<sub>p</sub> = 0,490 s, H<sub>m0</sub> = 9,0 mm</b>, k<sub>p</sub> h = 0,951, ξ0 = 0,226; x de 0 a 63,4 mm). Frente a la de 4,15 cm cambia ~1 % (T<sub>p</sub> 0,487 → 0,490 s, H<sub>m0</sub> 8,9 → 9,0 mm), del orden de la precisión con que se lee el nivel.</li>
 <li>Falta copiarla al pendrive (desconectado), en <code>Cuarta iteración/Día 2 (24-11) Videos/</code> en lugar de la de 3,5 cm.</li>
 </ul>
 
-<div id="orgb40734a" class="figure">
+<div id="org5c5988a" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/jonswap_h4.20_control.png" alt="jonswap_h4.20_control.png" />
 </p>
 </div>
@@ -388,42 +389,42 @@ Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escrit
 </ul>
 </div>
 </div>
-<div id="outline-container-org7c73ced" class="outline-3">
-<h3 id="org7c73ced">[13:58] Nivel bajado 1 mm: 5,60 cm → JONSWAP de 4,10 cm</h3>
-<div class="outline-text-3" id="text-org7c73ced">
+<div id="outline-container-org4b31578" class="outline-3">
+<h3 id="org4b31578">[13:58] Nivel bajado 1 mm: 5,60 cm → JONSWAP de 4,10 cm</h3>
+<div class="outline-text-3" id="text-org4b31578">
 <ul class="org-ul">
 <li>El usuario bajó el nivel 1 mm: <b>5,60 cm</b> desde el piso original. Profundidades: <b>4,10 cm en la paleta</b> (sumergida 3,10 cm), 3,90 cm sobre el piso de la rampa, ~0,43 cm sobre la playa.</li>
 <li>JONSWAP para h = 4,10 cm: <code>Cuarta iteración/Día 2/Curvas forzado/Curvas_jonswap/bonneton_C3_h_4.1cm_Tp_0.48_Hm0_8.8mm_seed_1_fhi_2.5fp_una_curva/599962ms_…csv</code> (<b>T<sub>p</sub> = 0,484 s, H<sub>m0</sub> = 8,8 mm</b>, k<sub>p</sub> h = 0,951, ξ0 = 0,226; x de 0 a 63,2 mm). La de 4,20 cm (13:46) queda sin usar. Entre 4,10, 4,15 y 4,20 cm la diferencia es ≤ 1 %.</li>
 <li>Falta copiarla al pendrive (desconectado). Esquema del montaje (entrada de las 12:32) actualizado con el nivel 5,60 cm.</li>
 </ul>
 
-<div id="orgad3270e" class="figure">
+<div id="org950f35b" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/jonswap_h4.10_control.png" alt="jonswap_h4.10_control.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org4e962f3" class="outline-3">
-<h3 id="org4e962f3">[14:04] Configuración del motor</h3>
-<div class="outline-text-3" id="text-org4e962f3">
+<div id="outline-container-orgbcc7f40" class="outline-3">
+<h3 id="orgbcc7f40">[14:04] Configuración del motor</h3>
+<div class="outline-text-3" id="text-orgbcc7f40">
 <ul class="org-ul">
 <li>Posición del homing: <b>−25 mm</b>. Distancias A/B del wizard: <b>20 / 168 mm</b>. Con el motor y la paleta anteriores el homing estaba en 130–140 mm (mayo y junio).</li>
 <li>Recorrido de las curvas del pendrive, todas desde x = 0: muchos forzados 0–111 mm, salto único 0–96 mm, JONSWAP h20 0–96 mm, JONSWAP de 4,10 cm 0–63 mm.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org22ab3b2" class="outline-3">
-<h3 id="org22ab3b2">[14:10] Cámara conectada</h3>
-<div class="outline-text-3" id="text-org22ab3b2">
+<div id="outline-container-org0ea86fe" class="outline-3">
+<h3 id="org0ea86fe">[14:10] Cámara conectada</h3>
+<div class="outline-text-3" id="text-org0ea86fe">
 <ul class="org-ul">
 <li>Cámara Photron por Ethernet, con IP fija en la compu de Windows. El LED <b>IF LINK/TRANS</b> está en rojo, pero <b>PFV4 la abrió e hizo el shading</b> (referencia de negro).</li>
 <li>A chequear: velocidad del enlace (1 Gbps o 100 Mbps), que define cuánto tarda en bajar cada video al disco (DEX5).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd3f7095" class="outline-3">
-<h3 id="orgd3f7095">[14:58] CAMBIO DE PROFUNDIDAD DE LA PALETA (~2 mm más sumergida); el JONSWAP h20 da poca amplitud</h3>
-<div class="outline-text-3" id="text-orgd3f7095">
+<div id="outline-container-org7740ac6" class="outline-3">
+<h3 id="org7740ac6">[14:58] CAMBIO DE PROFUNDIDAD DE LA PALETA (~2 mm más sumergida); el JONSWAP h20 da poca amplitud</h3>
+<div class="outline-text-3" id="text-org7740ac6">
 <ul class="org-ul">
 <li>El usuario sumergió la paleta <b>~2 mm más</b>: borde inferior a ~2,3 cm del piso original, <b>~0,8 cm libre abajo</b>, ~3,3 cm sumergida. Esquema del montaje actualizado.</li>
 <li><p>
@@ -476,15 +477,15 @@ Se probaron los discos externos del Labo (catálogo DEX). Espacio libre y escrit
 </ul></li>
 </ul>
 
-<div id="org0bbb705" class="figure">
+<div id="orgd9306b5" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/esquema_montaje.png" alt="esquema_montaje.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org86709bd" class="outline-3">
-<h3 id="org86709bd">[15:10] Condiciones por horario (para asignar cada video)</h3>
-<div class="outline-text-3" id="text-org86709bd">
+<div id="outline-container-orga8ca587" class="outline-3">
+<h3 id="orga8ca587">[15:10] Condiciones por horario (para asignar cada video)</h3>
+<div class="outline-text-3" id="text-orga8ca587">
 <ul class="org-ul">
 <li><p>
 Horas = cuando el usuario avisó del cambio (el cambio fue en ese momento o un poco antes). Alturas desde el piso original.
@@ -564,9 +565,9 @@ Horas = cuando el usuario avisó del cambio (el cambio fue en ese momento o un p
 </ul>
 </div>
 </div>
-<div id="outline-container-org5fab06e" class="outline-3">
-<h3 id="org5fab06e">[15:31] Videos en el DEX5</h3>
-<div class="outline-text-3" id="text-org5fab06e">
+<div id="outline-container-org2160296" class="outline-3">
+<h3 id="org2160296">[15:31] Videos en el DEX5</h3>
+<div class="outline-text-3" id="text-org2160296">
 <ul class="org-ul">
 <li><p>
 Cámara: <b>Photron FASTCAM SA3 model 60K-M2</b> (IP 192.168.0.10), PFV 4.6. Secuencias TIFF de 12 bit + <code>.cihx</code>, en <code>DEX5:/Ignacio/Cuarta iteracion/</code>. Todas a <b>250 fps</b>, obturador 1/250 s (4 ms). Hora = la del <code>.cihx</code> (al guardar).
@@ -717,9 +718,9 @@ Cámara: <b>Photron FASTCAM SA3 model 60K-M2</b> (IP 192.168.0.10), PFV 4.6. Sec
 </ul>
 </div>
 </div>
-<div id="outline-container-orga4175e4" class="outline-3">
-<h3 id="orga4175e4">[15:40] Todas las mediciones del día (videos)</h3>
-<div class="outline-text-3" id="text-orga4175e4">
+<div id="outline-container-org48ac82d" class="outline-3">
+<h3 id="org48ac82d">[15:40] Todas las mediciones del día (videos)</h3>
+<div class="outline-text-3" id="text-org48ac82d">
 <ul class="org-ul">
 <li><p>
 Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. Originales en <code>DEX5:/Ignacio/Cuarta iteracion/</code>. Hora = la del <code>.cihx</code> (al guardar). Paleta: ver la tabla de condiciones por horario (14:58: cambio de 2,5 a ~2,3 cm). Nivel 5,60 cm en todas.
@@ -928,36 +929,36 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 <li>Herramientas: <code>Códigos/photron.py</code> lee los TIFF de 12 bit; <code>~/.local/bin/visor-tif</code> es el visor con flechas (predeterminado para TIFF; xviewer no los abre).</li>
 </ul>
 
-<div id="orgb1da034" class="figure">
+<div id="org6b504a7" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/inventario_tomas.png" alt="inventario_tomas.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf4ef320" class="outline-3">
-<h3 id="orgf4ef320">[16:10] Idea a verificar: ¿el frente roto se ensancha como √t?</h3>
-<div class="outline-text-3" id="text-orgf4ef320">
+<div id="outline-container-org2daa696" class="outline-3">
+<h3 id="org2daa696">[16:10] Idea a verificar: ¿el frente roto se ensancha como √t?</h3>
+<div class="outline-text-3" id="text-org2daa696">
 <ul class="org-ul">
 <li>El usuario: estaría bien verificar si el frente, una vez roto, se ensancha tipo √t, como un proceso difusivo. Aunque eso vale para su propagación a lo largo.</li>
 <li>Con η(x, t) del detector de menisco: medir el ancho del frente en cada cuadro (p. ej. la distancia entre el 10 % y el 90 % de la altura local) y graficarlo contra el tiempo desde la rotura, en log-log, buscando pendiente 1/2.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org59aaf2e" class="outline-3">
-<h3 id="org59aaf2e">[16:13] Detector de menisco (Ola<sub>9</sub>), video de control y espectros</h3>
-<div class="outline-text-3" id="text-org59aaf2e">
+<div id="outline-container-org66cb9a5" class="outline-3">
+<h3 id="org66cb9a5">[16:13] Detector de menisco (Ola<sub>9</sub>), video de control y espectros</h3>
+<div class="outline-text-3" id="text-org66cb9a5">
 <ul class="org-ul">
 <li><code>Cuarta iteración/Día 2/Códigos/menisco.py</code> (v3). Se resta el cuadro 1, compensando el parpadeo <b>fila por fila</b> (la luz no cambia igual en toda la imagen), y el menisco es el <b>borde de abajo de la barra negra</b> de la imagen sin fondo (el usuario: &ldquo;el mínimo de la barra negra ancha&rdquo;).</li>
 <li>Agregados después de revisar con el usuario: relleno de la cresta (ahí la barra se afina), la varilla vertical interpolada, nivel quieto del cuadro 1 donde no hay ola, <b>continuidad y suavidad</b> de la línea (pedido del usuario), mediana de 3 cuadros en los puntos rellenados y nivel quieto antes de que llegue la ola.</li>
 <li>Resultado: <code>Resultados/menisco_Ola_9.npz</code> (481 cuadros × 1024 px). La ola va de derecha a izquierda y η máx baja de ~38 a ~15 px. Cerca del nivel quieto, ±2 px.</li>
 </ul>
 
-<div id="org7eecba4" class="figure">
+<div id="orga6a529b" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/menisco_Ola_9_control.png" alt="menisco_Ola_9_control.png" />
 </p>
 </div>
 
-<div id="org4464f8f" class="figure">
+<div id="orgbb22d9e" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/menisco_Ola_9_xt.png" alt="menisco_Ola_9_xt.png" />
 </p>
 </div>
@@ -966,12 +967,12 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 <li><b>Evolución del espectro</b> (pedido del usuario): E(k) de η(x) un cuadro cada 10, coloreado por tiempo (Blues), y el mapa E(k, t). También E(f) en una columna cada 10 px. La energía en k chico cae a medida que la ola avanza y se achica. Por encima de k ≈ 0,1 ciclos/px manda el suavizado de la línea. Todo en px: falta calibrar con el patrón de 4 mm.</li>
 </ul>
 
-<div id="org69d6e83" class="figure">
+<div id="org3ac4123" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/evolucion_espectro_Ola_9.png" alt="evolucion_espectro_Ola_9.png" />
 </p>
 </div>
 
-<div id="org9dc1be8" class="figure">
+<div id="org5449b92" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/espectros_menisco_Ola_9.png" alt="espectros_menisco_Ola_9.png" />
 </p>
 </div>
@@ -980,29 +981,29 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb385be2" class="outline-3">
-<h3 id="orgb385be2">[16:17] Calibración con el damero y evolución del espectro en una ventana que sigue a la ola</h3>
-<div class="outline-text-3" id="text-orgb385be2">
+<div id="outline-container-org883c86b" class="outline-3">
+<h3 id="org883c86b">[16:17] Calibración con el damero y evolución del espectro en una ventana que sigue a la ola</h3>
+<div class="outline-text-3" id="text-org883c86b">
 <ul class="org-ul">
 <li><b>Calibración:</b> damero de 4 mm en la pared de adelante (mismo plano que el menisco), cuadro 1 de Ola<sub>9</sub>: 2 cuadros = 28,78 px en x y 28,24 px en y → <b>3,56 px/mm</b> (0,281 mm/px). La imagen tiene 288 mm de ancho. η máx de Ola<sub>9</sub> ≈ 10,6 mm. La cresta avanza a 0,49 m/s, así que la profundidad en la zona filmada es de ~14–25 mm (√(g(h + A))). Se usa h = 20 mm hasta saber en qué parte de la rampa está la cámara.</li>
 <li><b>Evolución del espectro</b>, rehecha a pedido del usuario (&ldquo;hay que suavizarlo; zoom alrededor de la ola; un segundo eje arriba con la frecuencia de gravedad con profundidad finita&rdquo;): ventana de 72 mm (256 px) que sigue a la ola (un poco más ancha que la franja roja del diagrama x–t), promedio de 10 cuadros (40 ms) y 12 bandas por década; eje de arriba f = √(g k tanh(k h))/2π con h = 20 mm. <code>Códigos/evolucion_espectro.py</code>.</li>
 </ul>
 
-<div id="orgefc1f85" class="figure">
+<div id="orgeae00d8" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/evolucion_espectro_Ola_9.png" alt="evolucion_espectro_Ola_9.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org42eea68" class="outline-3">
-<h3 id="org42eea68">[16:31] Encuadres, collage tipo Fig. 2a, videos crudos y JONSWAP h20</h3>
-<div class="outline-text-3" id="text-org42eea68">
+<div id="outline-container-org1510076" class="outline-3">
+<h3 id="org1510076">[16:31] Encuadres, collage tipo Fig. 2a, videos crudos y JONSWAP h20</h3>
+<div class="outline-text-3" id="text-org1510076">
 <ul class="org-ul">
 <li><b>Dos encuadres de cámara</b> (por correlación del cuadro 1): A, más lejos (Ola<sub>1</sub>–6, Ola<sub>11</sub>, H20<sub>1</sub>, muchos forzados, h3<sub>5</sub>), <b>2,20 px/mm</b> (465 mm de ancho); B (Ola<sub>7</sub>, 9, 10, 12), <b>3,56 px/mm</b> (288 mm). Ambos calibrados con el damero.</li>
 <li><b>Collage tipo Figura 2a con Ola<sub>9</sub></b> (pedido del usuario): misma receta que el del manuscrito (sin fondo, rotado 1,08° ≈ 1,047° del manuscrito, espejado, CLAHE). Replica el aspecto, pero en Ola<sub>9</sub> la ola no se da vuelta mientras está en cuadro: falta la etapa de rotura. Se limpió el grano y las manchas del parpadeo (el usuario: &ldquo;¿por qué la resolución es tan fea?&rdquo;: la tira tiene 1024 px contra 1666 en el manuscrito y la resta deja grano).</li>
 </ul>
 
-<div id="orgcc3bf8b" class="figure">
+<div id="orgdc31d04" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/F2a_collage_Ola_9.png" alt="F2a_collage_Ola_9.png" />
 </p>
 </div>
@@ -1011,7 +1012,7 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 <li><b>JONSWAP h20 (H20<sub>1</sub>)</b>: las olas acá son de décimas de mm, así que se sigue el borde claro→oscuro del menisco con precisión subpíxel (ruido ±0,03 mm) en las 21 813 imágenes. Welch como en el manuscrito (Hann 12 s, solapamiento 6 s), una columna cada 25 px: pico en <b>0,93 Hz</b> (T<sub>p</sub> de diseño 1,07 s) y armónico en ~1,9 Hz; <b>H<sub>m0</sub> ≈ 2,1 mm en la entrada y cae al ruido (~0,1 mm) a ~330 mm</b>: en el último tercio de la imagen ya no queda ola. La línea de 100 Hz es el parpadeo.</li>
 </ul>
 
-<div id="org0d16241" class="figure">
+<div id="orgd66a51f" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/welch_H20_1.png" alt="welch_H20_1.png" />
 </p>
 </div>
@@ -1019,48 +1020,48 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 <li>Animación de la PSD a lo largo de x (pedido del usuario): <code>Día 2/Videos/control/psd_espacio_H20_1.mp4</code>.</li>
 </ul>
 
-<div id="org6b902e6" class="figure">
+<div id="org14d6589" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/psd_espacio_H20_1_cuadro.png" alt="psd_espacio_H20_1_cuadro.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8bc8955" class="outline-3">
-<h3 id="org8bc8955">[16:49] Tomas nuevas Ola<sub>13</sub>, Ola<sub>14</sub> y Ola<sub>15</sub></h3>
-<div class="outline-text-3" id="text-org8bc8955">
+<div id="outline-container-org56fc832" class="outline-3">
+<h3 id="org56fc832">[16:49] Tomas nuevas Ola<sub>13</sub>, Ola<sub>14</sub> y Ola<sub>15</sub></h3>
+<div class="outline-text-3" id="text-org56fc832">
 <ul class="org-ul">
 <li>Ola<sub>13</sub> (16:43), Ola<sub>14</sub> (16:45) y Ola<sub>15</sub> (16:46): tiras de 1024×128 (fila del sensor 448), 250 fps, 297, 256 y 444 cuadros. Copiadas a <code>Día 2/Videos/Una ola/</code> (verificadas por nombre y tamaño) y con su video crudo a 60 fps en <code>Día 2/Videos/crudo/</code>.</li>
 <li>La varilla aparece en x ≈ 626, 621 y 596 px (en el encuadre A estaba en 775 y en el B en 652): la cámara cambió de lugar, así que es otro encuadre y <b>falta una foto del damero</b> en esta posición para calibrar.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb4439db" class="outline-3">
-<h3 id="orgb4439db">[17:24] Olas individuales sincronizadas, en dos columnas</h3>
-<div class="outline-text-3" id="text-orgb4439db">
+<div id="outline-container-org4efa889" class="outline-3">
+<h3 id="org4efa889">[17:24] Olas individuales sincronizadas, en dos columnas</h3>
+<div class="outline-text-3" id="text-org4efa889">
 <ul class="org-ul">
 <li>Pedido del usuario: sincronizar las olas para que rompan en la misma posición y en el mismo momento, en dos columnas. <code>Día 2/Videos/control/olas_sincronizadas.mp4</code>: las 14 tomas con las imágenes originales, llevadas a 3 px/mm, τ = t − t<sub>rotura</sub> de −150 a +600 ms, a 60 fps.</li>
 <li>Rotura = cuadro en que el frente está más empinado (máximo de la pendiente de la envolvente de arriba de la ola, sin la varilla, que daba falsos), en los primeros 0,25 s desde que entra la ola; la rotura queda a 3/4 del ancho de cada celda (marca blanca). Tabla: <code>Día 2/Resultados/rotura_tomas.txt</code>.</li>
 <li>Casi todas rompen apenas entran a la imagen. Dudosas: Ola<sub>3</sub> y Ola<sub>4</sub> (olas más chicas). Después de romper, las del encuadre C avanzan más rápido que las demás: puede ser la escala supuesta (2,20 px/mm) o que estén en otra profundidad; falta el damero en esa posición.</li>
 </ul>
 
-<div id="orgde09eec" class="figure">
+<div id="org9abc846" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/olas_sincronizadas_tau0.png" alt="olas_sincronizadas_tau0.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orga73cec4" class="outline-3">
-<h3 id="orga73cec4">[17:31] Idea a hacer: FFT 2D en ventanas</h3>
-<div class="outline-text-3" id="text-orga73cec4">
+<div id="outline-container-org1a581c4" class="outline-3">
+<h3 id="org1a581c4">[17:31] Idea a hacer: FFT 2D en ventanas</h3>
+<div class="outline-text-3" id="text-org1a581c4">
 <ul class="org-ul">
 <li>El usuario: hacer la FFT 2D de η(x, t) en ventanas y ver a partir de qué punto las ondas son de agua somera, con velocidad de propagación constante √(g h<sub>local</sub>), o si hace falta la relación de profundidad finita.</li>
 <li>Plan: E(k, f) en ventanas de x que se corren a lo largo de la imagen; comparar la cresta del espectro con f = k √(g h)/2π y con f = √(g k tanh(k h))/2π, ajustando h en cada ventana y comparándolo con la pendiente de la rampa (0,035). La JONSWAP h20 (87 s, estacionaria) es la toma más limpia para esto.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc68cf71" class="outline-3">
-<h3 id="orgc68cf71">[17:38] Todas las olas individuales analizadas</h3>
-<div class="outline-text-3" id="text-orgc68cf71">
+<div id="outline-container-orgb900776" class="outline-3">
+<h3 id="orgb900776">[17:38] Todas las olas individuales analizadas</h3>
+<div class="outline-text-3" id="text-orgb900776">
 <ul class="org-ul">
 <li>Detector de menisco en las 14 tomas, espacio-temporal con el gradiente debajo para cada una (pedido del usuario: x horizontal, t vertical; ★ = rotura = frente más empinado; ● = altura máxima) y video de control con la línea superpuesta para cada una (<code>Día 2/Videos/control/menisco_Ola_*.mp4</code>).</li>
 <li><b>Ola<sub>1</sub> falló</b> (imagen oscura: la línea no sigue el frente). Las demás salen bien.</li>
@@ -1068,7 +1069,7 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 <li>La cresta más alta está casi siempre a la entrada de la imagen (la ola entra ya alta). El frente más empinado cae más adentro; en Ola<sub>10</sub> y Ola<sub>12</sub>, cerca del borde izquierdo: el frente se sigue empinando al subir por la playa.</li>
 </ul>
 
-<div id="orgc55a3d0" class="figure">
+<div id="org326f5ab" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/resumen_olas_xt.png" alt="resumen_olas_xt.png" />
 </p>
 </div>
@@ -1078,9 +1079,9 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 </ul>
 </div>
 </div>
-<div id="outline-container-org682a958" class="outline-3">
-<h3 id="org682a958">[17:41] Forma de una ola: video contra sensor</h3>
-<div class="outline-text-3" id="text-org682a958">
+<div id="outline-container-org4c33048" class="outline-3">
+<h3 id="org4c33048">[17:41] Forma de una ola: video contra sensor</h3>
+<div class="outline-text-3" id="text-org4c33048">
 <ul class="org-ul">
 <li>Pedido del usuario: comparar la forma de una ola del video con la que se midió con el sensor. Sensor: medición &ldquo;muchos forzados&rdquo; del 13/10 (3,95 cm; los mismos saltos triangulares de donde sale el salto único de hoy), 31–37 olas por sensor alineadas en el pico. Video: Ola<sub>9</sub> y Ola<sub>6</sub> en tres columnas cada una.</li>
 <li><b>Misma altura:</b> η máx mediana 10,7 / 11,8 / 12,5 mm en S1 / S2 / S3, contra 10,5 mm a la entrada de la imagen en el video.</li>
@@ -1088,15 +1089,15 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 <li>Falta saber dónde estaba la cámara sobre la rampa para compararla con el sensor que esté en el mismo lugar.</li>
 </ul>
 
-<div id="orgfbecc18" class="figure">
+<div id="org9df896c" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/ola_video_vs_sensor.png" alt="ola_video_vs_sensor.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgeb3c2a5" class="outline-3">
-<h3 id="orgeb3c2a5">[17:45] Video contra S3 con la hipótesis de Taylor</h3>
-<div class="outline-text-3" id="text-orgeb3c2a5">
+<div id="outline-container-orgde19352" class="outline-3">
+<h3 id="orgde19352">[17:45] Video contra S3 con la hipótesis de Taylor</h3>
+<div class="outline-text-3" id="text-orgde19352">
 <ul class="org-ul">
 <li>El usuario: hay que pasar de espacio a tiempo (o al revés) con la hipótesis de Taylor para comparar bien, y solo con el sensor 3. Ola congelada que va hacia x chico: ξ = x − x<sub>cresta</sub> = c (t − t<sub>pico</sub>), con c = 0,50 m/s, la velocidad de la cresta medida en el video. Las olas de S3 (13/10) se pasan al espacio y se comparan con perfiles instantáneos del video (Ola<sub>9</sub> y Ola<sub>6</sub>).</li>
 <li><b>Control de Taylor dentro del video:</b> la serie en una columna de Ola<sub>9</sub> pasada al espacio coincide con el perfil instantáneo cuando la cresta pasa por esa columna. Taylor vale.</li>
@@ -1104,43 +1105,43 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 <li>Diferencias que pueden explicarlo: el forzado (hoy la paleta queda 3 s quieta arriba; el 13/10 volvía enseguida), el lugar (no se sabe dónde está la cámara respecto de S3) y que el sensor mide de lado a lado del canal y el video el menisco en la pared.</li>
 </ul>
 
-<div id="orgac7eb54" class="figure">
+<div id="org0993987" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/ola_taylor_s3.png" alt="ola_taylor_s3.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org203b146" class="outline-3">
-<h3 id="org203b146">[17:47] El instante del video más parecido a la ola de S3</h3>
-<div class="outline-text-3" id="text-org203b146">
+<div id="outline-container-org0af3cb6" class="outline-3">
+<h3 id="org0af3cb6">[17:47] El instante del video más parecido a la ola de S3</h3>
+<div class="outline-text-3" id="text-org0af3cb6">
 <ul class="org-ul">
 <li>Pedido del usuario: la forma normalizada por la altura y con Taylor, y la correlación del sensor con el espacio-temporal para encontrar el instante más parecido. Se compara la forma de S3 (mediana de 31 olas, Taylor con c = 0,50 m/s) con el perfil normalizado de cada cuadro de cada toma (todas menos Ola<sub>1</sub>), con la correlación de Pearson en el tramo donde hay imagen.</li>
 <li><b>El más parecido:</b> Ola<sub>7</sub>, t = 476 ms, con la cresta en x = 61 mm y η máx 4,3 mm: <b>r = 0,94</b>. El frente y la cresta coinciden bien, pero la espalda del video vuelve a 0 mucho antes (rms 0,32). En todas las tomas r sube a medida que la ola avanza y se achica: ~0,7–0,8 a la entrada de la imagen, ~0,9 al final.</li>
 </ul>
 
-<div id="org8efb942" class="figure">
+<div id="org509ac7a" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/ola_s3_mejor_instante.png" alt="ola_s3_mejor_instante.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3fb6dd5" class="outline-3">
-<h3 id="org3fb6dd5">[17:48] Forma normalizada en altura y en ancho: video y S3 tienen la misma forma</h3>
-<div class="outline-text-3" id="text-org3fb6dd5">
+<div id="outline-container-org20a87c6" class="outline-3">
+<h3 id="org20a87c6">[17:48] Forma normalizada en altura y en ancho: video y S3 tienen la misma forma</h3>
+<div class="outline-text-3" id="text-org20a87c6">
 <ul class="org-ul">
 <li>El usuario: &ldquo;también horizontalmente hay que compensar&rdquo;. Cada perfil se normaliza por su altura y por su ancho a media altura W½: u = ξ/W½ (en u ya no importa el c de Taylor).</li>
 <li><b>La forma es casi la misma:</b> r = 0,96–0,99 en todas las tomas. La más parecida: Ola<sub>2</sub>, t = 736 ms, cresta en x = 196 mm, η máx 6,4 mm: <b>r = 0,99, rms 0,04</b>. Lo que cambia es la escala: W½ = 39 mm en el video contra 119 mm en S3 (con c = 0,50 m/s), unas 3 veces más angosta.</li>
 </ul>
 
-<div id="org6643ed1" class="figure">
+<div id="orgec48885" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/ola_s3_forma_normalizada.png" alt="ola_s3_forma_normalizada.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org798e915" class="outline-3">
-<h3 id="org798e915">[17:52] Autosimilaridad tipo Cole–Hopf y el borde negro delante de la ola</h3>
-<div class="outline-text-3" id="text-org798e915">
+<div id="outline-container-org3fe8668" class="outline-3">
+<h3 id="org3fe8668">[17:52] Autosimilaridad tipo Cole–Hopf y el borde negro delante de la ola</h3>
+<div class="outline-text-3" id="text-org3fe8668">
 <ul class="org-ul">
 <li><b>Autosimilaridad</b> (pedido del usuario): una joroba de Burgers en fondo plano conserva el área y da η<sub>máx</sub> ∝ t^−1/2 y ancho ∝ t<sup>1</sup>/2 (onda triangular o difusiva). Entonces 1/η<sub>máx</sub>² y W½² deberían ser lineales en t y η<sub>máx</sub>·W½ constante.
 <ul class="org-ul">
@@ -1149,7 +1150,7 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 </ul></li>
 </ul>
 
-<div id="org6976256" class="figure">
+<div id="org45233ed" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/autosimilaridad.png" alt="autosimilaridad.png" />
 </p>
 </div>
@@ -1158,39 +1159,39 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 <li>Ojo: el paso del detector que fija el nivel quieto antes de que llegue la ola borraba detecciones de −0,6 a −1,1 mm al pie del frente que pueden venir de esto.</li>
 </ul>
 
-<div id="org28f213f" class="figure">
+<div id="org862b613" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/valle_borde_Ola_9.png" alt="valle_borde_Ola_9.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbb0b5c9" class="outline-3">
-<h3 id="orgbb0b5c9">[17:53] Estado al cierre del día</h3>
-<div class="outline-text-3" id="text-orgbb0b5c9">
+<div id="outline-container-org1e88fe3" class="outline-3">
+<h3 id="org1e88fe3">[17:53] Estado al cierre del día</h3>
+<div class="outline-text-3" id="text-org1e88fe3">
 <ul class="org-ul">
 <li>El usuario: todo lo de los videos es preliminar; la idea es seguir midiendo estas cosas y mejorar el método de medición. Lo principal era tener el <b>collage con la misma inclinación que el resto de los datos</b> y <b>algún espectro espacial</b>. Probablemente haya que <b>reorganizar la parte de resultados espectrales</b> del manuscrito para incluir algo de esto.</li>
 <li>Pendientes: posición de la cámara sobre la rampa; foto del damero en el encuadre C (Ola<sub>13</sub>–15); pared de atrás blanca; con el DEX5 (quedó en el Labo): video de control de la JONSWAP h20 y procesar h3<sub>5</sub> y muchos forzados; Ola<sub>1</sub> (falló el detector).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeff76fb" class="outline-3">
-<h3 id="orgeff76fb">[17:58] Cómo ubicar la cámara sobre la rampa</h3>
-<div class="outline-text-3" id="text-orgeff76fb">
+<div id="outline-container-orgeb6093b" class="outline-3">
+<h3 id="orgeb6093b">[17:58] Cómo ubicar la cámara sobre la rampa</h3>
+<div class="outline-text-3" id="text-orgeb6093b">
 <ul class="org-ul">
 <li>El usuario: la ubicación se puede sacar (1) siguiendo la rampa, porque el quiebre entre la rampa y la playa plana debería estar en cuadro, o (2) con la línea vertical donde se unen los dos paneles de acrílico (88 cm cada uno; el último queda a un par de cm del borde de la cuba). Él puede medir la distancia de esa unión al inicio de la playa.</li>
 <li>La línea vertical que yo llamaba &ldquo;varilla&rdquo; es esa unión: una referencia fija en todas las tomas. Campo de cada encuadre respecto de la unión (negativo = hacia la playa): A de −352 a +113 mm; B de −183 a +104 mm; C (Ola<sub>13</sub>–15, escala supuesta) de ~−285 a ~+190 mm. Con la distancia unión–playa queda ubicada cada toma.</li>
 <li>Seguir la rampa: debajo del agua se ve una línea tenue inclinada, pero el ajuste automático del quiebre todavía no es confiable (se engancha en una línea blanca horizontal). Queda pendiente.</li>
 </ul>
 
-<div id="org039fe9c" class="figure">
+<div id="org9ec95a7" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/rampa_franja_Ola_6_Ola_9.png" alt="rampa_franja_Ola_6_Ola_9.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org953e096" class="outline-3">
-<h3 id="org953e096">[18:00] Calibración de todas las tomas: la cámara se movió 9 veces</h3>
-<div class="outline-text-3" id="text-org953e096">
+<div id="outline-container-org4097e51" class="outline-3">
+<h3 id="org4097e51">[18:00] Calibración de todas las tomas: la cámara se movió 9 veces</h3>
+<div class="outline-text-3" id="text-org4097e51">
 <ul class="org-ul">
 <li>El usuario pregunta si ya calibré con los cuadrados, y nota que tendría que haber sacado una foto cada vez que movió la cámara.</li>
 <li>Con el damero (solo en las tomas de cuadro entero): Ola<sub>1</sub>–6 <b>2,202 px/mm</b>; Ola<sub>7</sub> <b>3,625</b>; Ola<sub>9</sub> <b>3,604</b>; Ola<sub>11</sub> <b>2,051</b>. Ola<sub>5</sub> (tira) tiene el mismo encuadre que Ola<sub>1</sub>–6.</li>
@@ -1200,9 +1201,9 @@ Cámara Photron FASTCAM SA3 60K-M2, 250 fps, obturador 1/250 s, TIFF de 12 bit. 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb72c65d" class="outline-3">
-<h3 id="orgb72c65d">[18:03] Tiras calibradas con la ola de Ola<sub>11</sub></h3>
-<div class="outline-text-3" id="text-orgb72c65d">
+<div id="outline-container-org8163465" class="outline-3">
+<h3 id="org8163465">[18:03] Tiras calibradas con la ola de Ola<sub>11</sub></h3>
+<div class="outline-text-3" id="text-org8163465">
 <ul class="org-ul">
 <li>El usuario: el forzado es el mismo en todas las olas sueltas; las últimas seis (Ola<sub>10</sub>–15) tienen que ser idénticas en todo sentido (en las demás pudo cambiar levemente la altura del agua o la posición de la rampa). Si alguna tiene damero, suponer la misma ola y calibrar con eso.</li>
 <li><p>
@@ -1260,15 +1261,15 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 <li>Con eso las seis quedan coherentes en todo el cuadro: η máx 10,0–10,6 mm y velocidad de la cresta 0,48–0,52 m/s (con las escalas supuestas, Ola<sub>12</sub>–15 daban 0,56–0,67 m/s). Todos los análisis usan ahora <code>Códigos/calibracion.py</code>; se rehicieron los espacio-temporales, el resumen, la autosimilaridad y las comparaciones con S3. Falta rehacer el video sincronizado.</li>
 </ul>
 
-<div id="org454f6b4" class="figure">
+<div id="org7d1233d" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/resumen_olas_xt.png" alt="resumen_olas_xt.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd06637f" class="outline-3">
-<h3 id="orgd06637f">[18:08] Seguir el fondo (rampa → playa): primer intento y visor para ajustar el realce</h3>
-<div class="outline-text-3" id="text-orgd06637f">
+<div id="outline-container-org5794a99" class="outline-3">
+<h3 id="org5794a99">[18:08] Seguir el fondo (rampa → playa): primer intento y visor para ajustar el realce</h3>
+<div class="outline-text-3" id="text-org5794a99">
 <ul class="org-ul">
 <li>El usuario: el fondo debería ser constante (playa, salvo los 0,1° de la cuba) y después bajar hacia la derecha con tan α = 0,035 (rampa); promediar muchas imágenes, porque ese fondo no cambia, y jugar con la exposición y la saturación para que resalte.</li>
 <li>Primer intento (<code>Día 2/Códigos/fondo_rampa.py</code>: media de 60 cuadros y un modelo de playa más rampa con esas pendientes): en Ola<sub>7</sub> y Ola<sub>9</sub> la rampa sigue bien una línea tenue inclinada, pero el resultado todavía <b>no es confiable</b>. En las tiras da ~12 mm de agua sobre el fondo en la unión, coherente entre tomas, con el quiebre casi siempre fuera de cuadro; en las de cuadro entero se engancha en otras estructuras.</li>
@@ -1276,9 +1277,9 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-org7a9af6c" class="outline-3">
-<h3 id="org7a9af6c">[18:12] Fondo encontrado en Ola<sub>9</sub> y Ola<sub>7</sub>: la playa empieza ~24 cm antes de la unión de paneles</h3>
-<div class="outline-text-3" id="text-org7a9af6c">
+<div id="outline-container-orgf868c48" class="outline-3">
+<h3 id="orgf868c48">[18:12] Fondo encontrado en Ola<sub>9</sub> y Ola<sub>7</sub>: la playa empieza ~24 cm antes de la unión de paneles</h3>
+<div class="outline-text-3" id="text-orgf868c48">
 <ul class="org-ul">
 <li>El usuario, con el visor: en Ola<sub>9</sub> la línea del fondo arranca en y ≈ 512 a la izquierda y lo que se ve es solo la rampa. Con eso: recta de pendiente tan α = 0,035 respecto del agua que mejor sigue la línea tenue en la media de 60 cuadros: y = 510 en x = 0 (Ola<sub>9</sub>) y 504,5 (Ola<sub>7</sub>). Sigue la línea en todo el ancho.</li>
 <li><b>Agua sobre la rampa:</b> 6,5 → 16,5 mm (Ola<sub>9</sub>) y 5,3 → 15,2 mm (Ola<sub>7</sub>); <b>en la unión de paneles 12,8 y 12,6 mm</b>, coherente con las tiras (~12 mm) y con la velocidad de la cresta (√(g(h + A)) ≈ 0,48 m/s).</li>
@@ -1286,26 +1287,26 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 <li><b>Columnas del canal</b> (otra regla que propuso el usuario): con damero, separadas ~40,6 mm (39,2–41,6 según la toma). A verificar en la cuba; serviría para calibrar las tiras.</li>
 </ul>
 
-<div id="orgcc6f321" class="figure">
+<div id="orgd752709" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/fondo_rampa_Ola_9_Ola_7.png" alt="fondo_rampa_Ola_9_Ola_7.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgde7e69e" class="outline-3">
-<h3 id="orgde7e69e">[18:18] Fotos: altura del agua y montaje completo</h3>
-<div class="outline-text-3" id="text-orgde7e69e">
+<div id="outline-container-org2bd687c" class="outline-3">
+<h3 id="org2bd687c">[18:18] Fotos: altura del agua y montaje completo</h3>
+<div class="outline-text-3" id="text-org2bd687c">
 <ul class="org-ul">
 <li>Fotos que pasó el usuario (originales en <code>Cuarta iteración/Día 2/Fotos/</code>).</li>
 <li><b>Altura del agua</b> (16:10): regla de acero contra la pared de acrílico, con el 0 hacia abajo. El agua la cruza en <b>~6,0 cm en los bordes de la regla</b> y ~6,3 cm en el medio, donde la capilaridad entre la regla y el acrílico la sube. Falta saber dónde apoya la regla para pasarlo a nivel desde el piso original (el usuario había dado 5,60 cm).</li>
 </ul>
 
-<div id="orgb8e71da" class="figure">
+<div id="org51929c4" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/regla_nivel_16h10.jpg" alt="regla_nivel_16h10.jpg" />
 </p>
 </div>
 
-<div id="org16b06e3" class="figure">
+<div id="org005c2e7" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/regla_nivel_zoom.jpg" alt="regla_nivel_zoom.jpg" />
 </p>
 </div>
@@ -1313,21 +1314,21 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 <li><b>Montaje completo</b> (16:47): el canal negro dentro de la cuba, el panel LED arriba, el damero blanco sostenido con pinzas, la cámara Photron sobre la mesa y el motor a la derecha.</li>
 </ul>
 
-<div id="orgf67aff1" class="figure">
+<div id="org97e503e" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/montaje_completo_16h47.jpg" alt="montaje_completo_16h47.jpg" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orga96f9c2" class="outline-3">
-<h3 id="orga96f9c2">[18:19] El valle detrás de la pared negra y las columnas: primeros intentos</h3>
-<div class="outline-text-3" id="text-orga96f9c2">
+<div id="outline-container-org2133fe2" class="outline-3">
+<h3 id="org2133fe2">[18:19] El valle detrás de la pared negra y las columnas: primeros intentos</h3>
+<div class="outline-text-3" id="text-org2133fe2">
 <ul class="org-ul">
 <li>El usuario: delante de la ola, el valle queda tapado por la pared negra del canal; con el realce adecuado se debería poder ver, y también ubicar las columnas para calibrar cada video por separado. Empezar por los últimos videos, que son los mejores.</li>
 <li><b>Valle:</b> promediando los cuadros alineados en la cresta (<code>Códigos/valle_comovil.py</code>; el fondo fijo se borronea y lo que viaja con la ola se refuerza), en la imagen sin fondo aparece delante del frente una franja clara justo debajo del nivel quieto (de ~50 mm antes a ~50 mm después de la cresta) y una línea oscura tenue en el nivel quieto más adelante. Es la señal de lo que pasa dentro de la zona negra; falta convertirla a altura.</li>
 </ul>
 
-<div id="org66a8aa4" class="figure">
+<div id="orgfe1d849" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/valle_comovil.png" alt="valle_comovil.png" />
 </p>
 </div>
@@ -1336,18 +1337,18 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-org4f49229" class="outline-3">
-<h3 id="org4f49229">[18:31] Videos de la línea detectada, y refinar la detección</h3>
-<div class="outline-text-3" id="text-org4f49229">
+<div id="outline-container-org88ebd68" class="outline-3">
+<h3 id="org88ebd68">[18:31] Videos de la línea detectada, y refinar la detección</h3>
+<div class="outline-text-3" id="text-org88ebd68">
 <ul class="org-ul">
 <li>Para las 14 tomas: <code>Día 2/Videos/linea/</code> (solo la línea detectada en mm, con x desde la unión de paneles, la rampa y la playa de fondo y el nivel quieto y el medio de la toma) y <code>Día 2/Videos/crudo_linea/</code> (los videos crudos con el menisco detectado en rojo encima).</li>
 <li>El usuario: antes de seguir con los análisis probablemente haya que <b>refinar la detección de la línea</b>.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0dc600d" class="outline-3">
-<h3 id="org0dc600d">[18:36] Búsqueda: cómo detectar bien la superficie libre en videos laterales</h3>
-<div class="outline-text-3" id="text-org0dc600d">
+<div id="outline-container-orgc904b60" class="outline-3">
+<h3 id="orgc904b60">[18:36] Búsqueda: cómo detectar bien la superficie libre en videos laterales</h3>
+<div class="outline-text-3" id="text-orgc904b60">
 <ul class="org-ul">
 <li>Pedido del usuario: cada video tiene sus problemas; búsqueda intensiva de la mejor manera de detectar la línea.</li>
 <li><b>Procesamiento:</b>
@@ -1368,9 +1369,9 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-org028bac0" class="outline-3">
-<h3 id="org028bac0">[18:46] Detector v4 (programación dinámica) en las últimas seis tomas</h3>
-<div class="outline-text-3" id="text-org028bac0">
+<div id="outline-container-orgda68bb0" class="outline-3">
+<h3 id="orgda68bb0">[18:46] Detector v4 (programación dinámica) en las últimas seis tomas</h3>
+<div class="outline-text-3" id="text-orgda68bb0">
 <ul class="org-ul">
 <li>Implementado lo que salió de la búsqueda (<code>Códigos/menisco_v4.py</code>): el borde de abajo de la barra oscura de la imagen sin fondo, buscado como el camino continuo de costo mínimo de izquierda a derecha (programación dinámica), con penalidad por pendiente, continuidad con el cuadro anterior y posición subpíxel. Donde la barra desaparece (la cresta, la unión de paneles) el camino sigue por continuidad; donde no hay ola, el nivel quieto.</li>
 <li>Tres iteraciones: la primera deambulaba antes de que llegara la ola y en el frente se iba al borde de la franja clara de debajo; la segunda caía al nivel quieto en la cresta; la tercera sigue la ola igual que la v3, sin los parches de la v3.</li>
@@ -1378,24 +1379,24 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 <li>Videos con las dos líneas (rojo v3, verde v4): <code>Día 2/Videos/crudo_linea_v3_v4/</code>.</li>
 </ul>
 
-<div id="orgd046177" class="figure">
+<div id="org5dfdda1" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/comparar_v3_v4.png" alt="comparar_v3_v4.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org88a7e7a" class="outline-3">
-<h3 id="org88a7e7a">[18:50] v4 ruidosa antes de la ola; plan para hacerlo con una red</h3>
-<div class="outline-text-3" id="text-org88a7e7a">
+<div id="outline-container-org34c646f" class="outline-3">
+<h3 id="org34c646f">[18:50] v4 ruidosa antes de la ola; plan para hacerlo con una red</h3>
+<div class="outline-text-3" id="text-org34c646f">
 <ul class="org-ul">
 <li>El usuario: la v4 tiene muchísimo ruido antes de que aparezca la ola. Pregunta cómo sería con una red, local y lo más estándar posible.</li>
 <li>Plan propuesto: U-Net (PyTorch en CPU; esta máquina no tiene GPU utilizable) que segmenta agua/aire en recortes de la franja de la ola, con el cuadro crudo y la imagen sin fondo como entradas. La línea es el borde de la máscara en cada columna, y la continuidad la sigue poniendo la misma programación dinámica, ahora sobre la probabilidad de la red. Etiquetas: la v3 como punto de partida, corregida a mano en ~150–200 cuadros de distintas tomas y momentos con una herramienta propia; validación con dos tomas que la red no ve.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org013f62b" class="outline-3">
-<h3 id="org013f62b">[19:10] Muesca detrás de la cresta: dos barras; el usuario dibuja la línea a mano</h3>
-<div class="outline-text-3" id="text-org013f62b">
+<div id="outline-container-org79c9ba1" class="outline-3">
+<h3 id="org79c9ba1">[19:10] Muesca detrás de la cresta: dos barras; el usuario dibuja la línea a mano</h3>
+<div class="outline-text-3" id="text-org79c9ba1">
 <ul class="org-ul">
 <li>La oscilación espuria en el pico de η(t) cerca de la entrada (el usuario: &ldquo;hasta 75 mm&rdquo;) viene de que, detrás de la cresta, hay dos barras oscuras (una tenue arriba, continua con la cresta, y otra muy oscura 4–8 px abajo; ¿el menisco en cada pared?) y el detector saltaba a la de abajo.</li>
 <li>Probé tomar la primera barra desde arriba (v3c) y combinarla con la continuidad de la v4 (v4d): cada una arregla una parte y rompe otra. El usuario: &ldquo;se rompió lo que estaba bien y viceversa; dejá que te dibuje yo esa línea para la Ola<sub>15</sub>&rdquo;. Volví a la v3 original.</li>
@@ -1403,9 +1404,9 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-org55b8797" class="outline-3">
-<h3 id="org55b8797">[19:20] Espectros de la Ola<sub>15</sub> con la línea corregida a mano</h3>
-<div class="outline-text-3" id="text-org55b8797">
+<div id="outline-container-org0f924a8" class="outline-3">
+<h3 id="org0f924a8">[19:20] Espectros de la Ola<sub>15</sub> con la línea corregida a mano</h3>
+<div class="outline-text-3" id="text-org0f924a8">
 <ul class="org-ul">
 <li>Antes de la corrección: animaciones del espectro de la ola, pedidas por el usuario.
 <ul class="org-ul">
@@ -1424,15 +1425,15 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul></li>
 </ul>
 
-<div id="orgd03c940" class="figure">
+<div id="org84ccff2" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/espectro_temporal_Ola_15_corregido.png" alt="espectro_temporal_Ola_15_corregido.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org5cd2bc0" class="outline-3">
-<h3 id="org5cd2bc0">[19:29] Bonneton en el espectro temporal de la ola sola; los videos quedan solo para el collage</h3>
-<div class="outline-text-3" id="text-org5cd2bc0">
+<div id="outline-container-orgc610bea" class="outline-3">
+<h3 id="orgc610bea">[19:29] Bonneton en el espectro temporal de la ola sola; los videos quedan solo para el collage</h3>
+<div class="outline-text-3" id="text-orgc610bea">
 <ul class="org-ul">
 <li>Pedido del usuario: ajustar el espectro temporal corregido de la Ola<sub>15</sub> con el modelo de Bonneton (2023), igual que la Fig. 11 del manuscrito: E/Ẽ = csch²(f/f<sub>ν</sub>)/[f<sub>ν</sub>(coth(f<sub>m</sub>/f<sub>ν</sub>) − 1)], con f<sub>ν</sub> como único parámetro libre, en ln E entre f<sub>m</sub> y 11,1 Hz.</li>
 <li>Para una ola sola tomé f<sub>m</sub> = 1/T, con T la duración de la ola en cada columna; un diente del tren de frentes de Bonneton dura el tiempo entre frentes.</li>
@@ -1449,15 +1450,15 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 <li>Archivos: <code>Día 2/Figuras/bonneton_temporal_Ola_15.png</code> y <code>Videos/espectro_temporal/Ola_15_corregido_bonneton.mp4</code>.</li>
 </ul>
 
-<div id="org0d57d13" class="figure">
+<div id="org0df9260" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/bonneton_temporal_Ola_15.png" alt="bonneton_temporal_Ola_15.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org4f38d7f" class="outline-3">
-<h3 id="org4f38d7f">[19:53] Collages tipo Fig. 2a con las distintas olas; versión con los cuadros crudos</h3>
-<div class="outline-text-3" id="text-org4f38d7f">
+<div id="outline-container-org40144ec" class="outline-3">
+<h3 id="org40144ec">[19:53] Collages tipo Fig. 2a con las distintas olas; versión con los cuadros crudos</h3>
+<div class="outline-text-3" id="text-org40144ec">
 <ul class="org-ul">
 <li>Pedido del usuario: opciones de collage como el de la Figura 2 con las distintas olas.
 <ul class="org-ul">
@@ -1469,23 +1470,23 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 <li>El usuario: es lo último de hoy. El montaje queda como está hasta nuevo aviso; quizás mañana otra medición.</li>
 </ul>
 
-<div id="org402cf97" class="figure">
+<div id="orge3f1ac7" class="figure">
 <p><img src="../../../Assets/2026/11/Day_24/F2a_crudo_Ola_14.png" alt="F2a_crudo_Ola_14.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org2a593d2" class="outline-3">
-<h3 id="org2a593d2">[19:56] Collages crudos sin la unión de paneles</h3>
-<div class="outline-text-3" id="text-org2a593d2">
+<div id="outline-container-orga1f39e2" class="outline-3">
+<h3 id="orga1f39e2">[19:56] Collages crudos sin la unión de paneles</h3>
+<div class="outline-text-3" id="text-orga1f39e2">
 <ul class="org-ul">
 <li>El usuario: borrar a mano la línea negra vertical (la unión de los paneles), &ldquo;es horrible&rdquo;. Las columnas de la unión se rellenan interpolando entre las vecinas, con el ruido de fondo del cuadro. Es lo único que se le toca a los cuadros crudos. Regenerados todos los collages crudos (<code>Día 2/Figuras/collages/F2a_crudo_*</code>); la figura de las 19:53 ya es la nueva.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1754bcb" class="outline-3">
-<h3 id="org1754bcb">[19:58] Collages crudos emprolijados; seguimos mañana</h3>
-<div class="outline-text-3" id="text-org1754bcb">
+<div id="outline-container-org9efbead" class="outline-3">
+<h3 id="org9efbead">[19:58] Collages crudos emprolijados; seguimos mañana</h3>
+<div class="outline-text-3" id="text-org9efbead">
 <ul class="org-ul">
 <li>El usuario: falta rotar bien, eliminar lo negro y recortar mejor la ola (quedaba mucho espacio arriba). Ahora cada cuadro se rota para dejar horizontal la línea de agua (~1°). Abajo se corta donde empieza la franja negra del agua quieta y arriba a 1,25 veces la cresta más alta.</li>
 <li>Ola<sub>13</sub> y Ola<sub>14</sub> quedan en 178 × 14,5 y 171 × 13,4 mm. Para revisar juntos el 25/11, junto con la red (si da algo coherente).</li>
@@ -1494,13 +1495,13 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </div>
 </div>
 </div>
-<div id="outline-container-org4e0a593" class="outline-2">
-<h2 id="org4e0a593">2026-11-25</h2>
-<div class="outline-text-2" id="text-org4e0a593">
+<div id="outline-container-org21ea2ad" class="outline-2">
+<h2 id="org21ea2ad">2026-11-25</h2>
+<div class="outline-text-2" id="text-org21ea2ad">
 </div>
-<div id="outline-container-orga29e83e" class="outline-3">
-<h3 id="orga29e83e">[09:10] Videos nuevos, mejor enfocados y con el damero; nivel 5,9 cm</h3>
-<div class="outline-text-3" id="text-orga29e83e">
+<div id="outline-container-org1dd67ec" class="outline-3">
+<h3 id="org1dd67ec">[09:10] Videos nuevos, mejor enfocados y con el damero; nivel 5,9 cm</h3>
+<div class="outline-text-3" id="text-org1dd67ec">
 <ul class="org-ul">
 <li>El usuario filmó dos videos nuevos de la ola rompiendo, mejor enfocados y con el patrón de calibración (damero de 4 mm) en el cuadro.</li>
 <li>Agregó un par de mm de agua: el nivel quedó en ≈ 5,9 cm desde el piso original (ayer, 5,60 cm). Eso da ≈ 4,4 cm en la paleta y ≈ 4,2 cm sobre el piso de la rampa (unidad y forzado a confirmar).</li>
@@ -1509,9 +1510,9 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-org7e80a01" class="outline-3">
-<h3 id="org7e80a01">[09:15] Amplitud al 75 % y wizard a −50 mm</h3>
-<div class="outline-text-3" id="text-org7e80a01">
+<div id="outline-container-orgc228d84" class="outline-3">
+<h3 id="orgc228d84">[09:15] Amplitud al 75 % y wizard a −50 mm</h3>
+<div class="outline-text-3" id="text-orgc228d84">
 <ul class="org-ul">
 <li>El usuario bajó el factor de amplitud del forzado al 75 %, para que las olas no rompan apenas las genera la paleta y pierdan energía ahí.</li>
 <li>Cambió el wizard del LinMot a −50 (ayer: homing en −25 mm; a confirmar si es el homing o la distancia A).</li>
@@ -1519,60 +1520,60 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd9a36a0" class="outline-3">
-<h3 id="orgd9a36a0">[09:25] Ola<sub>18</sub>: amplitud al 75 %, cambió poco</h3>
-<div class="outline-text-3" id="text-orgd9a36a0">
+<div id="outline-container-org27e9e1b" class="outline-3">
+<h3 id="org27e9e1b">[09:25] Ola<sub>18</sub>: amplitud al 75 %, cambió poco</h3>
+<div class="outline-text-3" id="text-org27e9e1b">
 <ul class="org-ul">
 <li>La toma con el factor de amplitud al 75 % y el wizard en −50 es la Ola<sub>18</sub>. Según el usuario, la ola cambió poco.</li>
 <li>Las dos tomas anteriores de hoy serían Ola<sub>16</sub> y Ola<sub>17</sub> (a confirmar).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0cfb3a1" class="outline-3">
-<h3 id="org0cfb3a1">[09:30] Vuelta a la configuración original; medición con un forzado Bonneton</h3>
-<div class="outline-text-3" id="text-org0cfb3a1">
+<div id="outline-container-org6f38dc9" class="outline-3">
+<h3 id="org6f38dc9">[09:30] Vuelta a la configuración original; medición con un forzado Bonneton</h3>
+<div class="outline-text-3" id="text-org6f38dc9">
 <ul class="org-ul">
 <li>El usuario volvió todo a lo original (amplitud 100 %, wizard como ayer) y mide con un forzado Bonneton (JONSWAP; cuál h, a confirmar: la curva de ayer es bonneton<sub>C3</sub><sub>h</sub><sub>4.1cm</sub> y el nivel de hoy daría ≈ 4,4 cm en la paleta).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org36265e2" class="outline-3">
-<h3 id="org36265e2">[09:40] La Bonneton fue el JONSWAP h20, con el wizard en −50</h3>
-<div class="outline-text-3" id="text-org36265e2">
+<div id="outline-container-org6ab87f0" class="outline-3">
+<h3 id="org6ab87f0">[09:40] La Bonneton fue el JONSWAP h20, con el wizard en −50</h3>
+<div class="outline-text-3" id="text-org6ab87f0">
 <ul class="org-ul">
 <li><b>Corrige la entrada de las 09:30:</b> el forzado Bonneton que midió el usuario es el JONSWAP h20 (bonneton<sub>C3</sub><sub>h</sub><sub>20cm</sub>, el principal, el mismo del 20/11), con amplitud al 100 % y el wizard en −50, para que la paleta quede bien adentro del canal.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2f30854" class="outline-3">
-<h3 id="org2f30854">[09:45] Fondo blanco de acrílico</h3>
-<div class="outline-text-3" id="text-org2f30854">
+<div id="outline-container-org4bb9dbf" class="outline-3">
+<h3 id="org4bb9dbf">[09:45] Fondo blanco de acrílico</h3>
+<div class="outline-text-3" id="text-org4bb9dbf">
 <ul class="org-ul">
 <li>El usuario puso un fondo blanco de acrílico detrás del canal (era un pendiente del 24/11: pared de atrás blanca). Desde qué toma, a confirmar (¿desde la h20?).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge1d97b4" class="outline-3">
-<h3 id="orge1d97b4">[09:50] Cámara más abajo</h3>
-<div class="outline-text-3" id="text-orge1d97b4">
+<div id="outline-container-org8f607a3" class="outline-3">
+<h3 id="org8f607a3">[09:50] Cámara más abajo</h3>
+<div class="outline-text-3" id="text-org8f607a3">
 <ul class="org-ul">
 <li>El usuario bajó la cámara del acrílico donde estaba apoyada, para que se vea mejor el menisco.</li>
 <li>La cámara se movió: hace falta una toma del damero en la posición nueva para calibrar (px/mm e inclinación).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge43eb21" class="outline-3">
-<h3 id="orge43eb21">[09:55] Plan del resto de la mañana</h3>
-<div class="outline-text-3" id="text-orge43eb21">
+<div id="outline-container-orgeeb5b59" class="outline-3">
+<h3 id="orgeeb5b59">[09:55] Plan del resto de la mañana</h3>
+<div class="outline-text-3" id="text-orgeeb5b59">
 <ul class="org-ul">
 <li>Con el fondo blanco y todo como al principio (amplitud 100 %; wizard, a confirmar si vuelve a −25), el usuario toma un par de olas individuales más.</li>
 <li>Después baja un poco el nivel y toma una más. Por ahora, eso sería todo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org4983ced" class="outline-3">
-<h3 id="org4983ced">[10:05] Nivel bajado a ~5,5–5,6 cm, wizard en −25</h3>
-<div class="outline-text-3" id="text-org4983ced">
+<div id="outline-container-org88f007b" class="outline-3">
+<h3 id="org88f007b">[10:05] Nivel bajado a ~5,5–5,6 cm, wizard en −25</h3>
+<div class="outline-text-3" id="text-org88f007b">
 <ul class="org-ul">
 <li>El usuario bajó el nivel a ≈ 5,5–5,6 cm (desde el piso original): ≈ 4,0–4,1 cm en la paleta y ≈ 3,8–3,9 cm sobre el piso de la rampa.</li>
 <li>Wizard de vuelta en −25 (como el 24/11).</li>
@@ -1580,17 +1581,17 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-org24826ef" class="outline-3">
-<h3 id="org24826ef">[10:10] La toma con el nivel bajo fue con −50 y 75 %</h3>
-<div class="outline-text-3" id="text-org24826ef">
+<div id="outline-container-orga7dc2af" class="outline-3">
+<h3 id="orga7dc2af">[10:10] La toma con el nivel bajo fue con −50 y 75 %</h3>
+<div class="outline-text-3" id="text-orga7dc2af">
 <ul class="org-ul">
 <li><b>Corrige la entrada de las 10:05:</b> la toma con el nivel en ≈ 5,5–5,6 cm se hizo con el wizard en −50 y el factor de amplitud al 75 %, no con −25.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd267775" class="outline-3">
-<h3 id="orgd267775">[10:25] Última ola: tiempo al 60 % y wizard en −70; tomas en el DEX</h3>
-<div class="outline-text-3" id="text-orgd267775">
+<div id="outline-container-orgb0bbfbe" class="outline-3">
+<h3 id="orgb0bbfbe">[10:25] Última ola: tiempo al 60 % y wizard en −70; tomas en el DEX</h3>
+<div class="outline-text-3" id="text-orgb0bbfbe">
 <ul class="org-ul">
 <li>La última ola (Dia<sub>2</sub><sub>Ola</sub><sub>35</sub>) se hizo con el factor de tiempo al 60 % y el wizard en −70.</li>
 <li>En el disco (Elements, <code>Ignacio/Cuarta iteracion/</code>): <code>Una ola/Dia_2_Ola_16</code> … <code>Dia_2_Ola_35</code> (09:01–10:19, 20 tomas) y <code>JONSWAP/Dia_2_h20_2</code> (09:24). El usuario las nombró &ldquo;Dia<sub>2</sub>&rdquo; (segundo día de filmación); acá van en <code>Cuarta iteración/Día 3/</code>.</li>
@@ -1598,9 +1599,9 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-orgecd3988" class="outline-3">
-<h3 id="orgecd3988">[10:35] Videos crudos a 60 fps de las tomas de una ola</h3>
-<div class="outline-text-3" id="text-orgecd3988">
+<div id="outline-container-org1487f04" class="outline-3">
+<h3 id="org1487f04">[10:35] Videos crudos a 60 fps de las tomas de una ola</h3>
+<div class="outline-text-3" id="text-org1487f04">
 <ul class="org-ul">
 <li>Aclaración del usuario: el pedido de las 10:25 eran los <b>videos</b> crudos a 60 fps (como los del 24/11), no los collages. Los collages, más adelante.</li>
 <li>Se leen los cuadros directo del disco y se guarda solo el .mp4 en <code>Día 3/Videos/crudo/</code>, con la ROI alrededor de la ola, sin compensar la luz.</li>
@@ -1608,9 +1609,9 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-org026d9c3" class="outline-3">
-<h3 id="org026d9c3">[10:50] Videos crudos listos (20 tomas)</h3>
-<div class="outline-text-3" id="text-org026d9c3">
+<div id="outline-container-org5a11dda" class="outline-3">
+<h3 id="org5a11dda">[10:50] Videos crudos listos (20 tomas)</h3>
+<div class="outline-text-3" id="text-org5a11dda">
 <ul class="org-ul">
 <li>Las 20 tomas de una ola de hoy (Dia<sub>2</sub><sub>Ola</sub><sub>16</sub> a 35) ya están como videos crudos a 60 fps en <code>Día 3/Videos/crudo/</code> (110 MB en total). Los cuadros se leyeron del disco, sin copiarlos.</li>
 <li>Cada video muestra una franja de 54–88 px alrededor de la ola, con los cuadros originales y sin compensar la luz.
@@ -1628,15 +1629,15 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 <li>Hoja de control: un cuadro de cada video.</li>
 </ul>
 
-<div id="org9f557ce" class="figure">
+<div id="org3728378" class="figure">
 <p><img src="../../../Assets/2026/11/Day_25/videos_crudos_control.png" alt="videos_crudos_control.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3d3f380" class="outline-3">
-<h3 id="org3d3f380">[10:55] Ola<sub>36</sub> y Ola<sub>37</sub>: nivel un poco más alto, −50 y tiempo al 80 %</h3>
-<div class="outline-text-3" id="text-org3d3f380">
+<div id="outline-container-org001e971" class="outline-3">
+<h3 id="org001e971">[10:55] Ola<sub>36</sub> y Ola<sub>37</sub>: nivel un poco más alto, −50 y tiempo al 80 %</h3>
+<div class="outline-text-3" id="text-org001e971">
 <ul class="org-ul">
 <li>El usuario subió un poco el nivel del agua y mide con el wizard en −50 y el factor de tiempo al 80 % (&ldquo;creo&rdquo;). Nivel exacto, a confirmar.</li>
 <li>En el disco aparecieron dos tomas nuevas, Dia<sub>2</sub><sub>Ola</sub><sub>36</sub> (10:36) y Dia<sub>2</sub><sub>Ola</sub><sub>37</sub> (10:40), las dos a 500 fps. Falta confirmar a cuál corresponde esta configuración; la nueva sería la 37.</li>
@@ -1644,9 +1645,9 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 </ul>
 </div>
 </div>
-<div id="outline-container-org8e64fc5" class="outline-3">
-<h3 id="org8e64fc5">[11:05] Fotos de los tres niveles de agua; cierre de las mediciones del día</h3>
-<div class="outline-text-3" id="text-org8e64fc5">
+<div id="outline-container-org80de465" class="outline-3">
+<h3 id="org80de465">[11:05] Fotos de los tres niveles de agua; cierre de las mediciones del día</h3>
+<div class="outline-text-3" id="text-org80de465">
 <ul class="org-ul">
 <li>El usuario mandó fotos de la regla en el agua para los tres niveles de hoy, para referencia futura. Están en <code>Día 3/Fotos/</code>.</li>
 <li>Por la hora serían, a confirmar:
@@ -1659,20 +1660,20 @@ Referencia: Ola<sub>11</sub> (damero, 2,051 px/mm). En el cuadro en que la crest
 <li>El usuario: eso es todo por hoy; el análisis sigue más adelante. Los collages quedan pendientes.</li>
 </ul>
 
-<div id="org24bb99b" class="figure">
+<div id="org02d108e" class="figure">
 <p><img src="../../../Assets/2026/11/Day_25/niveles_agua_25-11.jpg" alt="niveles_agua_25-11.jpg" />
 </p>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfcaa538" class="outline-2">
-<h2 id="orgfcaa538">2026-11-27</h2>
-<div class="outline-text-2" id="text-orgfcaa538">
+<div id="outline-container-orgf04eef1" class="outline-2">
+<h2 id="orgf04eef1">2026-11-27</h2>
+<div class="outline-text-2" id="text-orgf04eef1">
 </div>
-<div id="outline-container-org4ff0c85" class="outline-3">
-<h3 id="org4ff0c85">[08:50] Superficie libre con fondo blanco y balance de energía (Cuarta iteración, Día 4)</h3>
-<div class="outline-text-3" id="text-org4ff0c85">
+<div id="outline-container-orgd148b59" class="outline-3">
+<h3 id="orgd148b59">[08:50] Superficie libre con fondo blanco y balance de energía (Cuarta iteración, Día 4)</h3>
+<div class="outline-text-3" id="text-orgd148b59">
 <ul class="org-ul">
 <li>Pedido: reconstruir la superficie en los últimos videos (fondo blanco, 25/11); energía de la superficie libre con los flujos que
 entran y salen, y ver si hay una gran disipación en la rotura; con un JONSWAP que no rompa, disipación por fondo y separar las dos
@@ -1682,9 +1683,9 @@ contribuciones, comparando a igual nivel de agua.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd60cd16" class="outline-3">
-<h3 id="orgd60cd16">[09:45] Resultados: la disipación arranca con el rodillo; el JONSWAP chico se amortigua 10 veces más que lo laminar</h3>
-<div class="outline-text-3" id="text-orgd60cd16">
+<div id="outline-container-org756b8ed" class="outline-3">
+<h3 id="org756b8ed">[09:45] Resultados: la disipación arranca con el rodillo; el JONSWAP chico se amortigua 10 veces más que lo laminar</h3>
+<div class="outline-text-3" id="text-org756b8ed">
 <ul class="org-ul">
 <li>Reporte: <a href="../../../Assets/2026/11/Day_27/reporte_dia4.pdf">reporte<sub>dia4.pdf</sub></a> (11 p.).</li>
 <li>Con fondo blanco se ve la rampa en el mismo cuadro → h(x) medida (pendiente 0,036 contra 0,035). Escala del damero corregida
@@ -1695,15 +1696,15 @@ resalto hidráulico sin ajuste. Antes de romper, pérdidas del orden de las capa
 traslada a las olas grandes: con ese k<sub>i</sub> la fricción sola disiparía más energía de la que entra. Pendiente: ola suelta chica sin rotura.</li>
 </ul>
 
-<div id="org3d67d45" class="figure">
+<div id="orge1429fc" class="figure">
 <p><img src="../../../Assets/2026/11/Day_27/resumen_disipacion.png" alt="resumen_disipacion.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbc73e20" class="outline-3">
-<h3 id="orgbc73e20">[13:56] Tarde: todas las olas con fondo blanco y revisión de errores</h3>
-<div class="outline-text-3" id="text-orgbc73e20">
+<div id="outline-container-org85d3cba" class="outline-3">
+<h3 id="org85d3cba">[13:56] Tarde: todas las olas con fondo blanco y revisión de errores</h3>
+<div class="outline-text-3" id="text-org85d3cba">
 <ul class="org-ul">
 <li>El usuario (13:04): &ldquo;Vas a quedar sin supervisión un rato largo. Procesá todo y evitá que se suspenda la Compu&rdquo;; después:
 &ldquo;asegurate además luego del procesado de corregir cualquier cosa espuria que quede. Revisá con cuidado.&rdquo;</li>
@@ -1716,9 +1717,9 @@ las de 15 mm no. El amortiguamiento sin rotura va ≈ como 1/H (15 mm: ~1; 10 mm
 </ul>
 </div>
 </div>
-<div id="outline-container-org67a6553" class="outline-3">
-<h3 id="org67a6553">[14:27] Perspectiva: la línea de la pared de atrás se mete en el frente (procesado de videos, en curso)</h3>
-<div class="outline-text-3" id="text-org67a6553">
+<div id="outline-container-org656130f" class="outline-3">
+<h3 id="org656130f">[14:27] Perspectiva: la línea de la pared de atrás se mete en el frente (procesado de videos, en curso)</h3>
+<div class="outline-text-3" id="text-org656130f">
 <ul class="org-ul">
 <li>El usuario (14:00–14:25): en el frente se detecta la línea incorrecta y algunos frentes parecen entrar rotos; hay parpadeos (la altura
 del frente baja a 0 un cuadro y vuelve); pide considerar la perspectiva (la ola tiene 5 cm de ancho: según la cara y el lado del centro
@@ -1731,7 +1732,7 @@ en el resto. Entre las dos crestas la silueta forma una rampa plana de ancho (1 
 rodillo en Ola<sub>36</sub> puede ser perspectiva → el instante de rotura hay que revisarlo con la línea de adelante.</li>
 </ul>
 
-<div id="org32ce4b4" class="figure">
+<div id="org6615d77" class="figure">
 <p><img src="../../../Assets/2026/11/Day_27/perspectiva_modelo.png" alt="perspectiva_modelo.png" />
 </p>
 </div>
@@ -1740,7 +1741,7 @@ rodillo en Ola<sub>36</sub> puede ser perspectiva → el instante de rotura hay 
 Calibración de k y de la altura de la cámara z<sub>c</sub>: degenerada (k ≈ 0,86–0,92 con z<sub>c</sub> ≈ −15…0 mm); se resuelve detectando las dos líneas.</li>
 </ul>
 
-<div id="org6812ae9" class="figure">
+<div id="orgc4388d9" class="figure">
 <p><img src="../../../Assets/2026/11/Day_27/perspectiva_Ola_36_frente.png" alt="perspectiva_Ola_36_frente.png" />
 </p>
 </div>
@@ -1748,6 +1749,40 @@ Calibración de k y de la altura de la cámara z<sub>c</sub>: degenerada (k ≈ 
 <li>Métrica de parpadeos (picos de un cuadro &gt; 1 mm): en el frente 4–11 % de los puntos en Ola<sub>31</sub>–34 y 3,6 % en Ola<sub>37</sub>; ≤ 0,3 % en
 25/26/27/35/36. Detector v2 en marcha (superficie2.py): línea de adelante y silueta de arriba, cada una suave en x y en t, con la
 predicción del cuadro anterior trasladada a la velocidad global de la ola y limpieza a lo largo de las características.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0447a72" class="outline-3">
+<h3 id="org0447a72">[14:47] Procesado v2: menos parpadeos; la línea que se sigue es la de la pared de adelante (en foco)</h3>
+<div class="outline-text-3" id="text-org0447a72">
+<ul class="org-ul">
+<li>superficie2.py: línea de adelante con predicción del cuadro anterior trasladada a la velocidad global de la ola (trayectoria del punto
+medio del frente, ajuste polinomial: comparar perfiles cuadro a cuadro NO sirve porque el detector tiene un patrón de ruido fijo),
+la detección v1 como segunda referencia solo cuando la ola llegó y la predicción no (Ola<sub>37</sub> entra por un borde sucio), y limpieza a lo
+largo de las características. Parpadeos de un cuadro en el frente (ventana del balance): Ola<sub>36</sub> 82 → 6, Ola<sub>37</sub> 145 → 16,
+Ola<sub>33</sub> 272 → 49, Ola<sub>35</sub> 41 → 12, Ola<sub>32</sub> 23 → 12 (versión final corriendo). La energía de 36/37 no cambia (&lt; 1 mJ/m).</li>
+<li>¿Cuál línea? Por foco: el damero (y el plano de foco) está en la pared de ADELANTE; su menisco es un mínimo NÍTIDO (1–2 px,
+30–45 niveles). La pared de atrás aparece, si aparece, ancha y tenue (en el frente a la derecha del centro, por ENCIMA, como predice
+la proyección); la línea detectada es la nítida. Los escalones cerca de la cresta (400–480 ms en Ola<sub>36</sub>) son la misma línea nítida que se
+empina, no un salto de línea. Calibrar k y z<sub>c</sub> con una &ldquo;segunda línea&rdquo; no funcionó: la depresión ancha que aparece queda a 2,6 mm
+fija debajo (estructura óptica del menisco, no sigue la proyección).</li>
+</ul>
+
+<div id="org188536b" class="figure">
+<p><img src="../../../Assets/2026/11/Day_27/linea_nitida_Dia_2_Ola_36.png" alt="linea_nitida_Dia_2_Ola_36.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Ojo con la rotura de Ola<sub>36</sub>: la &ldquo;gorra plana&rdquo; de la cresta (360–380 ms) cae justo en la franja que predice la proyección para la
+rampa entre la cresta de atrás y la de adelante; hay que revisar el instante de rotura con la línea de adelante.</li>
+</ul>
+
+<div id="org7fe3ef3" class="figure">
+<p><img src="../../../Assets/2026/11/Day_27/gorra_perspectiva_Ola_36.png" alt="gorra_perspectiva_Ola_36.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Repetibilidad (Ola<sub>32</sub>–34, la misma ola a 250/500/1000 c/s; Ola<sub>31</sub> resultó ser otra ola): v1 coincide a 0,24–0,26 mm rms (p99 0,7 mm).</li>
 </ul>
 </div>
 </div>
