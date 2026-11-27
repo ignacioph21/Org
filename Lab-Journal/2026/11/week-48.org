@@ -506,3 +506,17 @@
 #+ATTR_ORG: :width 500
 [[file:../../../Assets/2026/11/Day_27/gorra_perspectiva_Ola_36.png]]
 - Repetibilidad (Ola_32–34, la misma ola a 250/500/1000 c/s; Ola_31 resultó ser otra ola): v1 coincide a 0,24–0,26 mm rms (p99 0,7 mm).
+** [15:06] Procesado v2 terminado en todas las olas; rotura por la geometría del frente
+- Revisión independiente (agente) y datos coinciden: la "gorra plana" de la cresta es la línea de contacto de la pared de adelante
+  anclada (histéresis), NO el comienzo de la rotura; la cuña negra de la espalda es el menisco en retroceso; el borde difuso (pared de
+  atrás) aparece solo en frentes a > 150 px a la derecha del centro, ~10 px arriba, y se mueve a ≈ 0,91 de la velocidad → k ≈ 0,9
+  (D ≈ 45 cm; con 30 cm haría falta un objetivo de 12 mm: ¿cuál se usó?). Calibración firme pendiente: foto del damero en la pared de atrás.
+- Debajo de la línea oscura, en el frente, hay una línea fina brillante; las muescas de un cuadro eran saltos a su borde inferior.
+- v2 (superficie2.py): parpadeos de un cuadro en el frente v1 → v2: 36: 82 → 6, 37: 145 → 16, 35: 41 → 12, 33: 272 → 49, 34: 2528 → 324,
+  25/26: 27/22 → 7/5. Repetibilidad (Ola_32–34, misma ola): 0,23 mm rms. Las crestas máximas de v1 en 31/33 eran picos espurios.
+- Rotura = pendiente de la línea de adelante > 1 sostenida delante de la cresta: Ola_36 390 ms, 37 588, 35 308 (la "gorra" aparecía a
+  520, cuando el frente ya se aplanaba), 31–33 al final de la ventana, 27 y 34 nunca. Con eso: Ola_36 antes de romper ≈ laminar
+  (2k = 0,77 ± 0,25 contra Hunt 0,72) y después el bore explica 88 %; 37: 73 %; 35: 58 %. Olas de 9–11 mm: 25–70 % de lo que entra
+  se disipa sin rotura identificable por la geometría del frente (2–3 veces Hunt). Videos: Día 4/Videos/disipacion2/ y crudo_linea2/.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_27/resumen_disipacion2.png]]
