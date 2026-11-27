@@ -536,3 +536,11 @@
   (R² 0,7–0,8). El amortiguamiento anómalo de las olas de mm sobrevive al sesgo de la línea de contacto, con un factor ~2 de incerteza.
 - h + 0,75 mm (el borde de la rampa sería la arista de atrás vista por el agua): el balance cambia < 1–2 mJ/m. Despreciable.
 - Videos v2 con zoom (Día 4/Videos/crudo_linea2/) y de disipación (Día 4/Videos/disipacion2/: 36, 37, 35, 27, 33).
+** [15:22] v2 con limpieza final: el frente queda sin parpadeos en 36/37
+- Paso final de v2: mediana de 5 cuadros a lo largo de las características (la ola trasladada a su velocidad) para los puntos que se
+  apartan > 1 mm. Parpadeos de un cuadro en el frente v1 → v2: 36: 82 → 0, 37: 145 → 1, 33: 272 → 11, 34: 2528 → 128, 32: 23 → 7,
+  35: 41 → 12, 25/26: 27/22 → 7/4. La misma ola filmada 3 veces (Ola_32–34) coincide a 0,21–0,22 mm rms.
+- Balance (rotura por pendiente > 1; dos cotas del sesgo de la línea de contacto): después de romper el resalto explica 73–111 % en
+  36/37, 58–95 % en 35, 54–97 % en 25/26. Reporte actualizado: [[file:../../../Assets/2026/11/Day_27/reporte_dia4.pdf][reporte_dia4.pdf]].
+- Pendientes para el usuario: ¿qué objetivo tenía la cámara? (perspectiva: k ≈ 0,9 → D ≈ 45 cm); foto del damero en la pared de ATRÁS
+  para calibrar; ola chica sin rotura con la cámara a la altura del agua.
