@@ -530,3 +530,9 @@
   y perspectiva; rotura por pendiente; cotas).
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/11/Day_27/cotas_disipacion.png]]
+** [15:15] JONSWAP con v2 y con η híbrida; sensibilidad a h
+- JONSWAP Dia_2_h20_2 con v2: igual que v1 (k_i 5,7–6,9 1/m = 8–14 veces Hunt); no tenía parpadeos.
+- Con η híbrida (borde de abajo de la banda donde la superficie baja y la banda se ensancha): k_i 3,6–6,1 1/m = 5–7 veces Hunt
+  (R² 0,7–0,8). El amortiguamiento anómalo de las olas de mm sobrevive al sesgo de la línea de contacto, con un factor ~2 de incerteza.
+- h + 0,75 mm (el borde de la rampa sería la arista de atrás vista por el agua): el balance cambia < 1–2 mJ/m. Despreciable.
+- Videos v2 con zoom (Día 4/Videos/crudo_linea2/) y de disipación (Día 4/Videos/disipacion2/: 36, 37, 35, 27, 33).
