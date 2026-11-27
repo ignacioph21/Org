@@ -520,3 +520,13 @@
   se disipa sin rotura identificable por la geometría del frente (2–3 veces Hunt). Videos: Día 4/Videos/disipacion2/ y crudo_linea2/.
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/11/Day_27/resumen_disipacion2.png]]
+** [15:16] Sesgo de la línea de contacto en la espalda: cambia la lectura de las olas chicas
+- En la espalda la línea de contacto queda anclada (banda oscura ensanchada) y sobrestima η ~1 mm (hasta 3). Otra cota: η híbrida =
+  borde de abajo de la banda en la espalda (antes de romper también conserva la energía, ±2 %).
+- Con la híbrida, el resalto hidráulico explica el 70–100 % de lo disipado DESPUÉS de romper en todas las olas (25: 70 %, 26: 97 %,
+  35: 96 %, 36: 98 %, 37: 102 %; con la línea de contacto: 54–88 %). El "exceso" de disipación de las olas de ~10 mm queda dentro de este
+  error sistemático. Lo que sigue sin explicar: Ola_27 cerca de la orilla (sin rotura geométrica) y 10–35 mJ/m antes de romper en 35/37.
+- Reporte actualizado (14 p.): [[file:../../../Assets/2026/11/Day_27/reporte_dia4.pdf][reporte_dia4.pdf]] (secciones nuevas: procesado v2
+  y perspectiva; rotura por pendiente; cotas).
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_27/cotas_disipacion.png]]
