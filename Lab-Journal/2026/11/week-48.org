@@ -442,3 +442,49 @@
 - El usuario: eso es todo por hoy; el análisis sigue más adelante. Los collages quedan pendientes.
 #+ATTR_ORG: :width 700
 [[file:../../../Assets/2026/11/Day_25/niveles_agua_25-11.jpg]]
+
+* 2026-11-27
+** [08:50] Superficie libre con fondo blanco y balance de energía (Cuarta iteración, Día 4)
+- Pedido: reconstruir la superficie en los últimos videos (fondo blanco, 25/11); energía de la superficie libre con los flujos que
+  entran y salen, y ver si hay una gran disipación en la rotura; con un JONSWAP que no rompa, disipación por fondo y separar las dos
+  contribuciones, comparando a igual nivel de agua.
+- El usuario: ancho interior del canal = 5 cm; cámara a ~30 cm, parcialmente elevada sobre un acrílico de un par de cm.
+- Disco Elements (DEX5) conectado; no hay tomas posteriores al 25/11. Análisis en `Cuarta iteración/Día 4/` (README con todo).
+** [09:45] Resultados: la disipación arranca con el rodillo; el JONSWAP chico se amortigua 10 veces más que lo laminar
+- Reporte: [[file:../../../Assets/2026/11/Day_27/reporte_dia4.pdf][reporte_dia4.pdf]] (11 p.).
+- Con fondo blanco se ve la rampa en el mismo cuadro → h(x) medida (pendiente 0,036 contra 0,035). Escala del damero corregida
+  (la FFT daba el doble; verificado contando cuadros).
+- Ola_36/37 (nivel 5,5–5,6+): rotura tipo spilling; la disipación pasa de ~0 a ~150 mW/m cuando aparece el rodillo y la sigue el
+  resalto hidráulico sin ajuste. Antes de romper, pérdidas del orden de las capas límite laminares (b = 5 cm).
+- JONSWAP sin rotura (H20_1 a 5,60 y Dia_2_h20_2 a 5,9): k_i ≈ 5–7 1/m, 8–15 veces Hunt, proporcional a H (0,3–4 mm). No se
+  traslada a las olas grandes: con ese k_i la fricción sola disiparía más energía de la que entra. Pendiente: ola suelta chica sin rotura.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_27/resumen_disipacion.png]]
+** [13:56] Tarde: todas las olas con fondo blanco y revisión de errores
+- El usuario (13:04): "Vas a quedar sin supervisión un rato largo. Procesá todo y evitá que se suspenda la Compu"; después:
+  "asegurate además luego del procesado de corregir cualquier cosa espuria que quede. Revisá con cuidado."
+- Reporte actualizado: [[file:../../../Assets/2026/11/Day_27/reporte_dia4.pdf][reporte_dia4.pdf]] (11 p.); detalle en el README del Día 4.
+- Nuevas: Ola_27 (5,9 cm) y Ola_31–35 (5,5–5,6 cm). Ola_28 (plano general desde arriba) no cierra el balance; Ola_29/30 son a 60 fps.
+- Corregido: una mota fija del sensor daba picos de 6 mm (era la "pendiente máxima" de Ola_36); línea base por columna; frente = η > 1,5 mm.
+  Probado el borde de abajo de la banda del menisco como superficie: no conserva la energía → se usa la línea de contacto.
+- Nuevo: las olas de ~10 mm pierden 25–60 % de lo que entra antes de que aparezca el rodillo (5–10 veces la fricción laminar);
+  las de 15 mm no. El amortiguamiento sin rotura va ≈ como 1/H (15 mm: ~1; 10 mm: 2–3; JONSWAP 1–4 mm: 9–14 1/m).
+** [14:27] Perspectiva: la línea de la pared de atrás se mete en el frente (procesado de videos, en curso)
+- El usuario (14:00–14:25): en el frente se detecta la línea incorrecta y algunos frentes parecen entrar rotos; hay parpadeos (la altura
+  del frente baja a 0 un cuadro y vuelve); pide considerar la perspectiva (la ola tiene 5 cm de ancho: según la cara y el lado del centro
+  de la cámara corresponde la línea de arriba o la de abajo), detectar ambas líneas, suaves, con información global del video, y que el
+  procesado quede muy bien ANTES de seguir con la energía. Videos nuevos: Día 4/Videos/crudo_linea/ (crudo + línea + zoom a la cresta /
+  al paquete) y Día 4/Videos/disipacion/Dia_2_Ola_36.mp4 (video + energía + disipación en simultáneo).
+- Modelo de proyección (cámara estenopeica, paredes en Y = D y D + b): la pared de atrás es el mismo perfil achicado por k = D/(D+b)
+  hacia el centro óptico. Pared de adelante = línea de abajo si z_c − η + u·η' > 0 (cara delantera a la derecha del centro), de arriba
+  en el resto. Entre las dos crestas la silueta forma una rampa plana de ancho (1 − k)·u: la "gorra plana" que tomé como inicio del
+  rodillo en Ola_36 puede ser perspectiva → el instante de rotura hay que revisarlo con la línea de adelante.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_27/perspectiva_modelo.png]]
+- En los cuadros de Ola_36 se ve: línea oscura nítida (pared de adelante) y, arriba, un borde gris tenue (pared de atrás) en el frente.
+  Calibración de k y de la altura de la cámara z_c: degenerada (k ≈ 0,86–0,92 con z_c ≈ −15…0 mm); se resuelve detectando las dos líneas.
+#+ATTR_ORG: :width 700
+[[file:../../../Assets/2026/11/Day_27/perspectiva_Ola_36_frente.png]]
+- Métrica de parpadeos (picos de un cuadro > 1 mm): en el frente 4–11 % de los puntos en Ola_31–34 y 3,6 % en Ola_37; ≤ 0,3 % en
+  25/26/27/35/36. Detector v2 en marcha (superficie2.py): línea de adelante y silueta de arriba, cada una suave en x y en t, con la
+  predicción del cuadro anterior trasladada a la velocidad global de la ola y limpieza a lo largo de las características.
